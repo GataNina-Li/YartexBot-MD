@@ -1,1 +1,16 @@
 [
+"name": "CuriosityBot-MD",
+"version": "1.0.0", 
+"description": "simple bot",
+"main": "index.js",
+"type": "module",
+    
+"directories": {
+"lib": "lib",
+"src": "src",
+"plugins": "plugins" },
+    
+"scripts": {
+"start": "node --no-warnings index.js",
+"test": "node test.js",
+"test2": "nodemon index.js" },
