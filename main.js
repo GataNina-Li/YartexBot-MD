@@ -219,11 +219,7 @@ throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
 console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)}
 } catch (e) {
 console.log(`Error: ${e.message}`)
-          }
-          
-          }
-        
-}
+}}}
  
 process.on('uncaughtException', console.error)
 
@@ -234,8 +230,7 @@ try {
 const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
 if (Object.keys(Handler || {}).length) handler = Handler
 } catch (e) {
-console.error(e)
-}
+console.error(e)}
 if (restatConn) {
 const oldChats = global.conn.chats
 try { global.conn.ws.close() } catch { }
@@ -253,14 +248,14 @@ conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
 }
   
- conn.welcome = '┏━━━━━━━━━━━━\n┃──〘 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
-  conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
-   conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
-    conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS!!*'
-     conn.sDesc = '📝 *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
-      conn.sSubject = '📝 *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
-       conn.sIcon = '🥏 *SE HA CAMBIADO LA FOTO DEL GRUPO!!*'
-        conn.sRevoke = '🥏 *SE HA ACTUALIZADO EL ENLACE DEL GRUPO!!*\n*NUEVO ENLACE:* @revoke'
+conn.welcome = '┏━━━━━━━━━━━━\n┃──〘 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
+conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
+conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
+conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS!!*'
+conn.sDesc = '📝 *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
+conn.sSubject = '📝 *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
+conn.sIcon = '🥏 *SE HA CAMBIADO LA FOTO DEL GRUPO!!*'
+conn.sRevoke = '🥏 *SE HA ACTUALIZADO EL ENLACE DEL GRUPO!!*\n*NUEVO ENLACE:* @revoke'
 
 conn.handler = handler.handler.bind(global.conn)
 conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
@@ -285,44 +280,39 @@ const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
 const pluginFilter = filename => /\.js$/.test(filename)
 global.plugins = {}
 async function filesInit() {
-  for (let filename of readdirSync(pluginFolder).filter(pluginFilter)) {
-    try {
-      let file = global.__filename(join(pluginFolder, filename))
-      const module = await import(file)
-      global.plugins[filename] = module.default || module
-    } catch (e) {
-      conn.logger.error(e)
-      delete global.plugins[filename]
-    }
-  }
-}
+for (let filename of readdirSync(pluginFolder).filter(pluginFilter)) {
+try {
+let file = global.__filename(join(pluginFolder, filename))
+const module = await import(file)
+global.plugins[filename] = module.default || module
+} catch (e) {
+conn.logger.error(e)
+delete global.plugins[filename]
+}}}
 filesInit().then(_ => console.log(Object.keys(global.plugins))).catch(console.error)
 
 global.reload = async (_ev, filename) => {
-  if (pluginFilter(filename)) {
-    let dir = global.__filename(join(pluginFolder, filename), true)
-    if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(` updated plugin - '${filename}'`)
-      else {
-        conn.logger.warn(`deleted plugin - '${filename}'`)
-        return delete global.plugins[filename]
-      }
-    } else conn.logger.info(`new plugin - '${filename}'`)
-    let err = syntaxerror(readFileSync(dir), filename, {
-      sourceType: 'module',
-      allowAwaitOutsideFunction: true
-    })
-    if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`)
-    else try {
-      const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
-      global.plugins[filename] = module.default || module
-    } catch (e) {
-      conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
-    } finally {
-      global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))
-    }
-  }
-}
+if (pluginFilter(filename)) {
+let dir = global.__filename(join(pluginFolder, filename), true)
+if (filename in global.plugins) {
+if (existsSync(dir)) conn.logger.info(` updated plugin - '${filename}'`)
+else {
+conn.logger.warn(`deleted plugin - '${filename}'`)
+return delete global.plugins[filename]}
+} else conn.logger.info(`new plugin - '${filename}'`)
+let err = syntaxerror(readFileSync(dir), filename, {
+sourceType: 'module',
+allowAwaitOutsideFunction: true
+})
+if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`)
+else try {
+const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
+global.plugins[filename] = module.default || module
+} catch (e) {
+conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
+} finally {
+global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))
+}}}
 Object.freeze(global.reload)
 watch(pluginFolder, global.reload)
 await global.reloadHandler()
@@ -346,137 +336,121 @@ p.on('error', _ => resolve(false))
 })])}))
 let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
 let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
-Object.freeze(global.support)
-}
+Object.freeze(global.support)}
 
 function clearTmp() {
-  const tmp = [tmpdir(), join(__dirname, 'tmp')]
-  const filename = []
-  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
-  return filename.map(file => {
-      const stats = statSync(file)
-      if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
-      return false })
-  }
+const tmp = [tmpdir(), join(__dirname, 'tmp')]
+const filename = []
+tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+return filename.map(file => {
+const stats = statSync(file)
+if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
+return false })}
   
-  function purgeSession() {
+function purgeSession() {
       
-      let prekey = []
-      let directorio = readdirSync(authFile)
-      let filesFolderPreKeys = directorio.filter((file) => {
-          if (file.startsWith('pre-key-')) {
-          return true 
-          }
-          const stats = statSync(path.join(join(__dirname, file)));
-          const mtime = new Date(stats.mtime)
-        const now = new Date()
-        const hourAgo = new Date(now - 60 * 60 * 1000)
-        return (
-          (file.startsWith('sender-key-') ||
-            file.startsWith('sender-key-memory-') ||
-            file.startsWith('sender-key-status@broadcast') ||
-            file.startsWith('session')) &&
-          mtime <= hourAgo
-        )
-      })
-      if (prekey.length === 0) {
-        console.log("Ningún archivo encontrado")
-      } else {
-      prekey = [...prekey, ...filesFolderPreKeys]
-      filesFolderPreKeys.forEach(files => {
-      unlinkSync(join(__dirname, files))
-      console.log(`${files} fueron eliminados`)
+let prekey = []
+let directorio = readdirSync(authFile)
+let filesFolderPreKeys = directorio.filter((file) => {
+if (file.startsWith('pre-key-')) {
+return true 
+}
+const stats = statSync(path.join(join(__dirname, file)));
+const mtime = new Date(stats.mtime)
+const now = new Date()
+const hourAgo = new Date(now - 60 * 60 * 1000)
+return (
+(file.startsWith('sender-key-') ||
+file.startsWith('sender-key-memory-') ||
+file.startsWith('sender-key-status@broadcast') ||
+file.startsWith('session')) &&
+mtime <= hourAgo
+)})
+if (prekey.length === 0) {
+console.log("Ningún archivo encontrado")
+} else {
+prekey = [...prekey, ...filesFolderPreKeys]
+filesFolderPreKeys.forEach(files => {
+unlinkSync(join(__dirname, files))
+console.log(`${files} fueron eliminados`)
+})}}  
   
-  })
-  }
-  }  
+function purgeSessionSB() {
+const listaDirectorios = readdirSync(join(__dirname, jadibts))
+console.log(listaDirectorios)
+let SBprekey = []
   
-  function purgeSessionSB() {
-    const listaDirectorios = readdirSync(join(__dirname, jadibts))
-    console.log(listaDirectorios)
-    let SBprekey = []
+listaDirectorios.forEach((filesInDir) => {
+const directorio = readdirSync(join(__dirname, jadibts+filesInDir))
+console.log(directorio);
+const DSBPreKeys = directorio.filter((fileInDir) => {
+if (fileInDir.startsWith('pre-key-')) {
+return true
+}
+const stats = statSync(path.join(join(__dirname, jadibts+filesInDir+'/'+fileInDir)))
+const mtime = new Date(stats.mtime)
+const now = new Date()
+const hourAgo = new Date(now - 60 * 60 * 1000)
+return (
+(fileInDir.startsWith('sender-key-') ||
+fileInDir.startsWith('sender-key-memory-') ||
+fileInDir.startsWith('sender-key-status@broadcast') ||
+fileInDir.startsWith('session')) &&
+mtime <= hourAgo
+)})
+if (DSBPreKeys.length === 0) {
+console.log('Ningún archivo encontrado')
+} else {
+SBprekey = [...SBprekey, ...DSBPreKeys]
+DSBPreKeys.forEach((fileInDir) => {
+unlinkSync(dirP+jadibts+filesInDir+'/'+fileInDir)
+console.log(`${fileInDir} fueron eliminados`)
+})}})}
   
-    listaDirectorios.forEach((filesInDir) => {
-      const directorio = readdirSync(join(__dirname, jadibts+filesInDir))
-      console.log(directorio);
-      const DSBPreKeys = directorio.filter((fileInDir) => {
-        if (fileInDir.startsWith('pre-key-')) {
-          return true
-        }
-        const stats = statSync(path.join(join(__dirname, jadibts+filesInDir+'/'+fileInDir)))
-        const mtime = new Date(stats.mtime)
-        const now = new Date()
-        const hourAgo = new Date(now - 60 * 60 * 1000)
-        return (
-          (fileInDir.startsWith('sender-key-') ||
-            fileInDir.startsWith('sender-key-memory-') ||
-            fileInDir.startsWith('sender-key-status@broadcast') ||
-            fileInDir.startsWith('session')) &&
-          mtime <= hourAgo
-        )
-      })
-      if (DSBPreKeys.length === 0) {
-        console.log('Ningún archivo encontrado')
-      } else {
-        SBprekey = [...SBprekey, ...DSBPreKeys]
-        DSBPreKeys.forEach((fileInDir) => {
-          unlinkSync(dirP+jadibts+filesInDir+'/'+fileInDir)
-          console.log(`${fileInDir} fueron eliminados`)
-        })
-      }
-    })
-  }
-  
-  function purgeOldFiles() {
-      const directories = [authFile, jadibts]
-      const oneHourAgo = new Date(Date.now() - (60 * 60 * 1000))
+function purgeOldFiles() {
+const directories = [authFile, jadibts]
+const oneHourAgo = new Date(Date.now() - (60 * 60 * 1000))
      
-      directories.forEach((dir) => {
-          readdirSync(dir, (err, files) => {
-          if (err) throw err
-          files.forEach((file) => {
-            const filePath = path.join(dir, file)
-            statSync(filePath, (err, stats) => {
-              if (err) throw err
-              const createTime = new Date(stats.birthtimeMs)
-              const modTime = new Date(stats.mtimeMs)
-              const isOld = createTime < oneHourAgo || modTime < oneHourAgo
-              const isCreds = file === 'creds.json'
-              if (stats.isFile() && isOld && !isCreds) {
-                  unlinkSync(filePath, (err) => {
-                  if (err) throw err
-                  console.log(`Archivos ${filePath} borrados con éxito`)
-                });
-              } else {
-                console.log(`Archivo ${filePath} no borrado`)
-              }
-            })
-          })
-        })
-      })
-    }
-    purgeOldFiles()
+directories.forEach((dir) => {
+readdirSync(dir, (err, files) => {
+if (err) throw err
+files.forEach((file) => {
+const filePath = path.join(dir, file)
+statSync(filePath, (err, stats) => {
+if (err) throw err
+const createTime = new Date(stats.birthtimeMs)
+const modTime = new Date(stats.mtimeMs)
+const isOld = createTime < oneHourAgo || modTime < oneHourAgo
+const isCreds = file === 'creds.json'
+if (stats.isFile() && isOld && !isCreds) {
+unlinkSync(filePath, (err) => {
+if (err) throw err
+console.log(`Archivos ${filePath} borrados con éxito`)})
+} else {
+console.log(`Archivo ${filePath} no borrado`)
+}})})})})}
+purgeOldFiles()
 
 setInterval(async () => {
-    backupCreds()
-    console.log(chalk.whiteBright(`BACKUP_CREDS │ RESPALDO EXITOSO`))
-    }, 15 * 60 * 1000)
+backupCreds()
+console.log(chalk.whiteBright(`BACKUP_CREDS │ RESPALDO EXITOSO`))
+}, 15 * 60 * 1000)
 setInterval(async () => {
-    clearTmp()
-    console.log(chalk.cyanBright(`AUTOCLEAR │ BASURA ELIMINADA`))
-    }, 1000 * 60 * 3)
+clearTmp()
+console.log(chalk.cyanBright(`AUTOCLEAR │ BASURA ELIMINADA`))
+}, 1000 * 60 * 3)
 setInterval(async () => {
-     purgeSession()
-    console.log(chalk.yellowBright(`AUTOPURGESESSIONS │ ARCHIVOS ELIMINADOS`))
-    }, 1000 * 60 * 60)
+purgeSession()
+console.log(chalk.yellowBright(`AUTOPURGESESSIONS │ ARCHIVOS ELIMINADOS`))
+}, 1000 * 60 * 60)
 setInterval(async () => {
-      purgeSessionSB()
-     console.log(chalk.yellowBright(`AUTO_PURGE_SESSIONS_SUB-BOTS │ ARCHIVOS ELIMINADOS`))
-    }, 1000 * 60 * 60)
+purgeSessionSB()
+console.log(chalk.yellowBright(`AUTO_PURGE_SESSIONS_SUB-BOTS │ ARCHIVOS ELIMINADOS`))
+}, 1000 * 60 * 60)
 setInterval(async () => {
-     purgeOldFiles()
-    console.log(chalk.yellowBright(`AUTO_PURGE_OLDFILES │ ARCHIVOS ELIMINADOS`))
-    }, 1000 * 60 * 60)
+purgeOldFiles()
+console.log(chalk.yellowBright(`AUTO_PURGE_OLDFILES │ ARCHIVOS ELIMINADOS`))
+}, 1000 * 60 * 60)
 
 _quickTest()
 .then(() => conn.logger.info(`\n\nC A R G A N D O ⚡\n`))
