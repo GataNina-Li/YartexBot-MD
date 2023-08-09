@@ -172,60 +172,53 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('🏁  ESCANEA ESTE CÓDIGO QR,\nEL CÓDIGO EXPIRA EN 45 SEGUNDOS'))
-      }
+console.log(chalk.yellow('🏁  ESCANEA ESTE CÓDIGO QR,\nEL CÓDIGO EXPIRA EN 45 SEGUNDOS'))}
 if (connection === 'open') {
 console.log(chalk.yellow('🚀  CONECTADO CORRECTAMENTE'))
 if (existsSync(global.authFile)) {
-    console.log(chalk.cyan('\n✓ ARCHIVO DE CREDENCIALES GUARDADO CORRECTAMENTE'))
-  } else {
-    console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES '))
-  }
-          backupCreds()
-          actualizarNumero()
-          credsStatus()
-          try {
-            // Leer la base de datos
-            await db.read()
-            const chats = db.data.chats
-            let successfulBans = 0
-            for (const [key, value] of Object.entries(chats)) {
-              if (value.isBanned === false) {
-                value.isBanned = true;
-                //console.log('Baneando chat:', key)
-                successfulBans++
-              }
-            }
-            await db.write()
+console.log(chalk.cyan('\n✓ ARCHIVO DE CREDENCIALES GUARDADO CORRECTAMENTE'))
+} else {
+console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES '))}
+backupCreds()
+actualizarNumero()
+credsStatus()
+try {
+// Leer la base de datos
+await db.read()
+const chats = db.data.chats
+let successfulBans = 0
+for (const [key, value] of Object.entries(chats)) {
+if (value.isBanned === false) {
+value.isBanned = true;
+//console.log('Baneando chat:', key)
+successfulBans++
+}}
+await db.write()
           
-            if (successfulBans === 0) {
-              throw new Error('NO SE PUDO BANEAR NINGÚN CHAT')
-            } else {
-              console.log(`SE BANEARON ${successfulBans} CHATS`)
-            }
-          } catch (e) {
-            console.log(`Error: ${e.message}`)
-          } 
-          await waitTwoMinutes()         
-          try {
-            await db.read()
-            const chats = db.data.chats
-            let successfulUnbans = 0
-            for (const [key, value] of Object.entries(chats)) {
-              if (value.isBanned === true) {
-                value.isBanned = false
-                //console.log('Desbaneando chat:', key)
-                successfulUnbans++
-              }
-            }
-            await db.write()
-            if (successfulUnbans === 0) {
-              throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
-            } else {
-              console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)
-            }
-          } catch (e) {
-            console.log(`Error: ${e.message}`)
+if (successfulBans === 0) {
+throw new Error('NO SE PUDO BANEAR NINGÚN CHAT')
+} else {
+console.log(`SE BANEARON ${successfulBans} CHATS`)}
+} catch (e) {
+console.log(`Error: ${e.message}`)} 
+await waitTwoMinutes()         
+try {
+await db.read()
+const chats = db.data.chats
+let successfulUnbans = 0
+for (const [key, value] of Object.entries(chats)) {
+if (value.isBanned === true) {
+value.isBanned = false
+//console.log('Desbaneando chat:', key)
+successfulUnbans++
+}}
+await db.write()
+if (successfulUnbans === 0) {
+throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
+} else {
+console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)}
+} catch (e) {
+console.log(`Error: ${e.message}`)
           }
           
           }
