@@ -4,16 +4,16 @@ import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 
 var handler = async (m, { conn, args, usedPrefix, command, text }) => {
-var stiker = false
-var q = m.quoted ? m.quoted : m
-var mime = (q.msg || q).mimetype || q.mediaType || ''
+let stiker = false
+let q = m.quoted ? m.quoted : m
+let mime = (q.msg || q).mimetype || q.mediaType || ''
 
 if (!/webp|image|video/g.test(mime) && !text) return m.reply(`*⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`)
 if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply('*⚠️ EL VÍDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*')
 
 if (/webp|image|video/g.test(mime)) {
-var img = await q.download?.()
-var out
+let img = await q.download?.()
+let out
 stiker = await sticker(img, false, global.packname, global.author)
 await conn.reply(m.chat, `_Calma crack estoy haciendo tu sticker 👏_\n\n_*Recuerda los stickersgif son de 6 segundos*_\n\n_*by CuriosityBot*_`, m)
   
