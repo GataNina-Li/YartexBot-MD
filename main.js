@@ -314,7 +314,7 @@ conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
 global.funciones = Object.fromEntries(Object.entries(global.funciones).sort(([a], [b]) => a.localeCompare(b)))
 }}}
 Object.freeze(global.reload)
-watch(pluginFolder, global.reload)
+watch(funcionFolder, global.reload)
 await global.reloadHandler()
 async function _quickTest() {
 let test = await Promise.all([
@@ -355,7 +355,7 @@ let filesFolderPreKeys = directorio.filter((file) => {
 if (file.startsWith('pre-key-')) {
 return true 
 }
-const stats = statSync(path.join(join(__dirname, file)));
+const stats = statSync(path.join(join(__dirname, file)))
 const mtime = new Date(stats.mtime)
 const now = new Date()
 const hourAgo = new Date(now - 60 * 60 * 1000)
@@ -382,7 +382,7 @@ let SBprekey = []
   
 listaDirectorios.forEach((filesInDir) => {
 const directorio = readdirSync(join(__dirname, jadibts+filesInDir))
-console.log(directorio);
+console.log(directorio)
 const DSBPreKeys = directorio.filter((fileInDir) => {
 if (fileInDir.startsWith('pre-key-')) {
 return true
