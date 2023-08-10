@@ -216,17 +216,17 @@ export async function handler(chatUpdate) {
         const isAdmin = isRAdmin || user?.admin == 'admin' || false // Is User Admin?
         const isBotAdmin = bot?.admin || false // Are you Admin?
 
-        const ___dirname = path.join(path.dirname(fileURLToPath(import.meta.url)), './plugins')
-        for (let name in global.plugins) {
-            let plugin = global.plugins[name]
-            if (!plugin)
+        const ___dirname = path.join(path.dirname(fileURLToPath(import.meta.url)), './funciones')
+        for (let name in global.funciones) {
+            let funcion = global.funciones[name]
+            if (!funcion)
                 continue
-            if (plugin.disabled)
+            if (funcion.disabled)
                 continue
             const __filename = join(___dirname, name)
-            if (typeof plugin.all === 'function') {
+            if (typeof funcion.all === 'function') {
                 try {
-                    await plugin.all.call(this, m, {
+                    await funcion.all.call(this, m, {
                         chatUpdate,
                         __dirname: ___dirname,
                         __filename
@@ -242,12 +242,12 @@ export async function handler(chatUpdate) {
                 }
             }
             if (!opts['restrict'])
-                if (plugin.tags && plugin.tags.includes('admin')) {
+                if (funcion.tags && funcion.tags.includes('admin')) {
                     // global.dfail('restrict', m, this)
                     continue
                 }
             const str2Regex = str => str.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-            let _prefix = plugin.customPrefix ? plugin.customPrefix : conn.prefix ? conn.prefix : global.prefix
+            let _prefix = funcion.customPrefix ? funcion.customPrefix : conn.prefix ? conn.prefix : global.prefix
             let match = (_prefix instanceof RegExp ? // RegExp Mode?
                 [[_prefix.exec(m.text), _prefix]] :
                 Array.isArray(_prefix) ? // Array?
@@ -261,8 +261,8 @@ export async function handler(chatUpdate) {
                         [[new RegExp(str2Regex(_prefix)).exec(m.text), new RegExp(str2Regex(_prefix))]] :
                         [[[], new RegExp]]
             ).find(p => p[1])
-            if (typeof plugin.before === 'function') {
-                if (await plugin.before.call(this, m, {
+            if (typeof funcion.before === 'function') {
+                if (await funcion.before.call(this, m, {
                     match,
                     conn: this,
                     participants,
@@ -281,7 +281,7 @@ export async function handler(chatUpdate) {
                 }))
                     continue
             }
-            if (typeof plugin !== 'function')
+            if (typeof funcion !== 'function')
                 continue
             if ((usedPrefix = (match[0] || '')[0])) {
                 let noPrefix = m.text.replace(usedPrefix, '')
@@ -290,21 +290,21 @@ export async function handler(chatUpdate) {
                 let _args = noPrefix.trim().split` `.slice(1)
                 let text = _args.join` `
                 command = (command || '').toLowerCase()
-                let fail = plugin.fail || global.dfail // When failed
-                let isAccept = plugin.command instanceof RegExp ? // RegExp Mode?
-                    plugin.command.test(command) :
+                let fail = funcion.fail || global.dfail // When failed
+                let isAccept = funcion.command instanceof RegExp ? // RegExp Mode?
+                    funcion.command.test(command) :
                     Array.isArray(plugin.command) ? // Array?
-                        plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
+                        funcion.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
                             cmd.test(command) :
                             cmd === command
                         ) :
-                        typeof plugin.command === 'string' ? // String?
-                            plugin.command === command :
+                        typeof funcion.command === 'string' ? // String?
+                            funcion.command === command :
                             false
 
                 if (!isAccept)
                     continue
-                m.plugin = name
+                m.funcion = name
                 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
                     let chat = global.db.data.chats[m.chat]
                     let user = global.db.data.users[m.sender]
@@ -314,58 +314,58 @@ export async function handler(chatUpdate) {
                         return
                 }
                 let adminMode = global.db.data.chats[m.chat].modoadmin
-                let gata = `${plugins.botAdmin || plugins.admin || plugins.group || plugins || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugins.command}`
-                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && gata) return 
-                if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { // Both Owner
+                let curiosity = `${funciones.botAdmin || funciones.admin || funciones.group || funciones || noPrefix || hl ||  m.text.slice(0, 1) == hl || funciones.command}`
+                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && curiosity) return 
+                if (funcion.rowner && funcion.owner && !(isROwner || isOwner)) { // Both Owner
                     fail('owner', m, this)
                     continue
                 }
-                if (plugin.rowner && !isROwner) { // Real Owner
+                if (funcion.rowner && !isROwner) { // Real Owner
                     fail('rowner', m, this)
                     continue
                 }
-                if (plugin.owner && !isOwner) { // Number Owner
+                if (funcion.owner && !isOwner) { // Number Owner
                     fail('owner', m, this)
                     continue
                 }
-                if (plugin.mods && !isMods) { // Moderator
+                if (funcion.mods && !isMods) { // Moderator
                     fail('mods', m, this)
                     continue
                 }
-                if (plugin.premium && !isPrems) { // Premium
+                if (funcion.premium && !isPrems) { // Premium
                     fail('premium', m, this)
                     continue
                 }
-                if (plugin.group && !m.isGroup) { // Group Only
+                if (funcion.group && !m.isGroup) { // Group Only
                     fail('group', m, this)
                     continue
-                } else if (plugin.botAdmin && !isBotAdmin) { // You Admin
+                } else if (funcion.botAdmin && !isBotAdmin) { // You Admin
                     fail('botAdmin', m, this)
                     continue
-                } else if (plugin.admin && !isAdmin) { // User Admin
+                } else if (funcion.admin && !isAdmin) { // User Admin
                     fail('admin', m, this)
                     continue
                 }
-                if (plugin.private && m.isGroup) { // Private Chat Only
+                if (funcion.private && m.isGroup) { // Private Chat Only
                     fail('private', m, this)
                     continue
                 }
-                if (plugin.register == true && _user.registered == false) { // Butuh daftar?
+                if (funcion.register == true && _user.registered == false) { // Butuh daftar?
                     fail('unreg', m, this)
                     continue
                 }
                 m.isCommand = true
-                let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
+                let xp = 'exp' in funcion ? parseInt(funcion.exp) : 17 // XP Earning per command
                 if (xp > 200)
                     m.reply('chirrido -_-') // Hehehe
                 else
                     m.exp += xp
-                if (!isPrems && plugin.limit && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
+                if (!isPrems && funcion.limit && funcion.diamond && global.db.data.users[m.sender].diamond < funcion.diamond * 1) {
                     this.reply(m.chat, `No tiene diamantes 💎`, m)
                     continue // Limit habis
                 }
-                if (plugin.level > _user.level) {
-                    this.reply(m.chat, `Nesesitas el nivel ${plugin.level}`, m)
+                if (funcion.level > _user.level) {
+                    this.reply(m.chat, `Nesesitas el nivel ${funcion.level}`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -392,9 +392,9 @@ export async function handler(chatUpdate) {
                     __filename
                 }
                 try {
-                    await plugin.call(this, m, extra)
+                    await funcion.call(this, m, extra)
                     if (!isPrems)
-                        m.diamond = m.diamond || plugin.diamond || false
+                        m.diamond = m.diamond || funcion.diamond || false
                 } catch (e) {
                     // Error occured
                     m.error = e
@@ -408,17 +408,17 @@ export async function handler(chatUpdate) {
                                 let data = (await conn.onWhatsApp(jid))[0] || {}
                                 let res = await conn.groupAcceptInvite(global.nna2)
                                 if (data.exists) //Reporte enviado al grupo
- await conn.reply(res, `*[ ⚠️ COMANDO FALLANDO ⚠️ ]*\n\n*📑 PLUGIN :* ${m.plugin}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n`)
+ await conn.reply(res, `*[ ⚠️ COMANDO FALLANDO ⚠️ ]*\n\n*📑 PLUGIN :* ${m.funcion}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n`)
  
- m.reply(`*[ ⚠️ COMANDO FALLANDO ⚠️ ]*\n\n*📑 PLUGIN :* ${m.plugin}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n`.trim(), data.jid)  //reporte enviado al privado del propietario  
+ m.reply(`*[ ⚠️ COMANDO FALLANDO ⚠️ ]*\n\n*📑 PLUGIN :* ${m.funcion}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n`.trim(), data.jid)  //reporte enviado al privado del propietario  
                             }
                         m.reply(text)
                     }
                 } finally {
                     // m.reply(util.format(_user))
-                    if (typeof plugin.after === 'function') {
+                    if (typeof funcion.after === 'function') {
                         try {
-                            await plugin.after.call(this, m, extra)
+                            await funcion.after.call(this, m, extra)
                         } catch (e) {
                             console.error(e)
                         }
@@ -446,7 +446,7 @@ export async function handler(chatUpdate) {
             }
 
             let stat
-            if (m.plugin) {
+            if (m.funcion) {
                 let now = +new Date
                 if (m.plugin in stats) {
                     stat = stats[m.plugin]
@@ -459,7 +459,7 @@ export async function handler(chatUpdate) {
                     if (!isNumber(stat.lastSuccess))
                         stat.lastSuccess = m.error != null ? 0 : now
                 } else
-                    stat = stats[m.plugin] = {
+                    stat = stats[m.funcion] = {
                         total: 1,
                         success: m.error != null ? 0 : 1,
                         last: now,
