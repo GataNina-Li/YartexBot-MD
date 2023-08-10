@@ -5,7 +5,7 @@ const { uploadImage } = require('.../lib/uploadImage.js')
 const { uploadFile } from '.../lib/uploadFile.js'
 const { uploadImage } from '.../lib/uploadImage.js'
 const { fetch } = require('node-fetch')
-const { fetch from } 'node-fetch'
+const { fetch from } 'node-fetch'*/
 
 let handler = async (m) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
@@ -42,9 +42,9 @@ export default handler
 async function shortUrl(url) {
 	let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
 	return await res.text()
-}*/
+}
 
-let handler = async (m) => {
+/*let handler = async (m) => {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ""
   if (!mime) throw "*⚠️ RESPONDA A UNA IMAGEN*"
@@ -56,4 +56,4 @@ let handler = async (m) => {
 handler.help = ["tourl <reply image>"]
 handler.tags = ["sticker"]
 handler.command = /^(upload|tourl)$/i
-export default handler
+export default handler*/
