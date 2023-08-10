@@ -47,13 +47,13 @@ export async function before(m, {conn, participants, groupMetadata}) {
   }
 
   if (chat.detect2 && m.messageStubType == 28) {
-    let txt4 = `*Recientemente se ha eliminado un miembro del grupo.*\n\n`;
-    txt4 += `*◦  Grupo:* ${groupName}\n`;
+    let txt4 = `┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃`;
     if (!m.sender.endsWith('@g.us')) {
-      txt4 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
+      txt4 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n┃`;
+      txt4 += `*◦ De grupo:* ${groupName}\n┃`;
       txt4 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
     } else {
-      txt4 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
+      txt4 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n┃No vuelva a agrega a esa sucia rata 🐁\n┗━━━━━━━━━━`;
     }
     await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt4, mentions: mentionsContentM}, {quoted: fkontak2});
   }
