@@ -29,5 +29,5 @@ handler.tags = ['internet']
 handler.command = /^googlef?$/i
 handler.exp = 40
 handler.exp = 3
-//handler.register = true
+handler.register = false
 export default handler
