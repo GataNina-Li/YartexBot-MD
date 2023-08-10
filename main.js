@@ -64,17 +64,15 @@ global.authFile = join(__dirname, `sessions/`)
 global.authFileRespald = join(__dirname, `sesionRespaldo/`)
 global.temp = join(__dirname, 'tmp')
 if (!existsSync(jadibts)) {
-  mkdirSync(jadibts)
-  console.log('DIRECTORIO jadibts CREADO EXITOSAMENTE')
+mkdirSync(jadibts)
+console.log('DIRECTORIO jadibts CREADO EXITOSAMENTE')
 }
 if (!existsSync(authFileRespald)) {
-  mkdirSync(authFileRespald)
-  console.log('DIRECTORIO sesionRespaldo CREADO EXITOSAMENTE')
-}
+mkdirSync(authFileRespald)
+console.log('DIRECTORIO sesionRespaldo CREADO EXITOSAMENTE')}
 if (!existsSync(temp)) {
-  mkdirSync(temp)
-  console.log('SE HA CREADO EL DIRECTORIO tmp CORRECTAMENTE')
-}
+mkdirSync(temp)
+console.log('SE HA CREADO EL DIRECTORIO tmp CORRECTAMENTE')}
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 
 const connectionOptions = {
@@ -82,7 +80,6 @@ logger: P({ level: 'silent' }),
 printQRInTerminal: true,
 auth: state,
 browser: ['CuriosityBot-MD','Edge','1.0.0'], 
-
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -94,69 +91,62 @@ if (global.db.data) await global.db.write()
 if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp'], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))}, 30 * 1000)}
 if (opts['server']) (await import(join(__dirname, 'server.js'))).default(global.conn, PORT)
 
-  const SESSION_DIR = authFile
-  const SESSION_BACKUP_DIR = authFileRespald
-  const CREDENTIALS_FILE = 'creds.json'
-  const CREDENTIALS_BACKUP_FILE = 'creds.json'
+const SESSION_DIR = authFile
+const SESSION_BACKUP_DIR = authFileRespald
+const CREDENTIALS_FILE = 'creds.json'
+const CREDENTIALS_BACKUP_FILE = 'creds.json'
   
 function backupCreds() {
 const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE)
-  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
+const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
   
 
-  copyFileSync(credsFilePath, backupFilePath)
-  console.log(`\nSE A CREADO EL ARCHIVO DE RESPALDO: ${backupFilePath}`)
+copyFileSync(credsFilePath, backupFilePath)
+console.log(`\nSE A CREADO EL ARCHIVO DE RESPALDO: ${backupFilePath}`)}
 
-}
- 
 function actualizarNumero() {
-  const configPath = path.join(__dirname, 'config.js')
-  const configData = readFileSync(configPath, 'utf8')
-  const updatedConfigData = configData.replace(/(global\.animxscans\s*=\s*\[\s*\[')[0-9]+'(,\s*'Bot principal\s*-\s*CuriosityBot-MD',\s*true\]\s*\])/, function(match) {
-    const archivoCreds = readFileSync(path.join(__dirname, 'sesionRespaldo/creds.json'))
-    const numero = JSON.parse(archivoCreds).me.id.split(':')[0]
-    return `global.animxscans = [['${numero}', 'CuriosityBot-MD', true]]`
-  });
-  writeFileSync(configPath, updatedConfigData)
-}
+const configPath = path.join(__dirname, 'config.js')
+const configData = readFileSync(configPath, 'utf8')
+const updatedConfigData = configData.replace(/(global\.animxscans\s*=\s*\[\s*\[')[0-9]+'(,\s*'Bot principal\s*-\s*CuriosityBot-MD',\s*true\]\s*\])/, function(match) {
+const archivoCreds = readFileSync(path.join(__dirname, 'sesionRespaldo/creds.json'))
+const numero = JSON.parse(archivoCreds).me.id.split(':')[0]
+return `global.animxscans = [['${numero}', 'CuriosityBot-MD', true]]`
+})
+writeFileSync(configPath, updatedConfigData)}
 
 function cleanupOnConnectionError() {
 
-  readdirSync(SESSION_DIR).forEach(file => {
-    const filePath = path.join(SESSION_DIR, file)
-    try {
-      unlinkSync(filePath)
-      console.log(`ARCHIVO ELIMINADO: ${filePath}`)
-    } catch (error) {
-      console.log(`NO DE PUDO ELIMINAR EL ARCHIVO: ${filePath}`)
-    }
-  })
+readdirSync(SESSION_DIR).forEach(file => {
+const filePath = path.join(SESSION_DIR, file)
+try {
+unlinkSync(filePath)
+console.log(`ARCHIVO ELIMINADO: ${filePath}`)
+} catch (error) {
+console.log(`NO DE PUDO ELIMINAR EL ARCHIVO: ${filePath}`)}})
 
-  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
-  try {
-    unlinkSync(backupFilePath);
-    console.log(`ARCHIVO DE COPIA DE SEGURIDAD ELIMINADO: ${backupFilePath}`)
-  } catch (error) {
-    console.log(`NO SE PUDO ELIMINAR EL ARCHIVO DE COPIA DE SEGURIDAD O NO EXISTE: ${backupFilePath}`)
-  }
-  process.send('reset')
+const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
+try {
+unlinkSync(backupFilePath);
+console.log(`ARCHIVO DE COPIA DE SEGURIDAD ELIMINADO: ${backupFilePath}`)
+} catch (error) {
+console.log(`NO SE PUDO ELIMINAR EL ARCHIVO DE COPIA DE SEGURIDAD O NO EXISTE: ${backupFilePath}`)}
+process.send('reset')
 } 
 
 function credsStatus() {
 
-  const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE)
-  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
+const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE)
+const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
   
-  // Comprobar si el archivo de credenciales originales existe y no es 0 bytes
-  let originalFileValid = false
-  try {
-    const stats = statSync(credsFilePath)
-    originalFileValid = stats.isFile() && stats.size > 0;
-  } catch (error) {
-    console.log(`EL ARCHIVO DE CREDENCIALES NO EXISTE. GENERANDO CÓDIGO QR...`)
-    connectionOptions
-      console.log(`ESCANEA EL CÓDIGO QR PARA CONTINUAR.`)
-  }
+// Comprobar si el archivo de credenciales originales existe y no es 0 bytes
+let originalFileValid = false
+try {
+const stats = statSync(credsFilePath)
+originalFileValid = stats.isFile() && stats.size > 0;
+} catch (error) {
+console.log(`EL ARCHIVO DE CREDENCIALES NO EXISTE. GENERANDO CÓDIGO QR...`)
+connectionOptions
+console.log(`ESCANEA EL CÓDIGO QR PARA CONTINUAR.`)}
   
   if (!originalFileValid) {
     // El archivo de credenciales originales no es válido o falta, así que copie el archivo de copia de seguridad y cambie el nombre
