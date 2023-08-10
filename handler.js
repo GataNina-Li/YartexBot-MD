@@ -112,8 +112,8 @@ export async function handler(chatUpdate) {
                     chat.sPromote = ''
                 if (!('sDemote' in chat))
                     chat.sDemote = ''
-                if (!('delete' in chat))
-                    chat.delete = true
+                if (!('detect' in chat)) chat.detect = true;
+                if (!('detect2' in chat)) chat.detect2 = true;
                 if (!('antiLink' in chat))
                     chat.antiLink = false
                 if (!('antiTraba' in chat))
@@ -134,6 +134,7 @@ export async function handler(chatUpdate) {
                     isBanned: false,
                     welcome: true,
                     detect: true,
+	            detect2: true, 
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
