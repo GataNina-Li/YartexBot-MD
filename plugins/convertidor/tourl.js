@@ -1,8 +1,8 @@
-/*Créditos a https://github.com/Undefined17*/
+/* Créditos a https://github.com/AzamiJs */
 
-import uploadFile from '../lib/uploadFile.js'
-import uploadImage from '../lib/uploadImage.js'
-import fetch from 'node-fetch'
+const require uploadFile from '../lib/uploadFile.js'
+const require uploadImage from '../lib/uploadImage.js'
+const require fetch from 'node-fetch'
 
 let handler = async (m) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
