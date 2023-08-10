@@ -1,11 +1,11 @@
 /* Créditos a https://github.com/AzamiJs */
 
-const { uploadFile } = require('../lib/uploadFile.js')
-const { uploadImage } = require('../lib/uploadImage.js')
-//const require { uploadFile } from '../lib/uploadFile.js'
-//const require { uploadImage } from '../lib/uploadImage.js'
-const { fetch } = require('node-fetch')
-//const require { fetch from } 'node-fetch'
+//const { uploadFile } = require('../lib/uploadFile.js')
+//const { uploadImage } = require('../lib/uploadImage.js')
+import { uploadFile } from '../lib/uploadFile.js'
+import { uploadImage } from '../lib/uploadImage.js'
+//const { fetch } = require('node-fetch')
+import { fetch from } 'node-fetch'
 
 let handler = async (m) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
