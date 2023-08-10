@@ -1,4 +1,5 @@
-import { sticker } from '../lib/sticker.js'
+const { sticker } = require("../lib/sticker.js")
+//import { sticker } from '../lib/sticker.js'
 import uploadFile from '../lib/uploadFile.js'
 import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
