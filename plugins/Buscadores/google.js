@@ -1,6 +1,6 @@
-const require {googleIt} from '@bochilteam/scraper'
-const require google from 'google-it'
-const require axios from 'axios'
+import {googleIt} from '@bochilteam/scraper'
+import google from 'google-it'
+import axios from 'axios'
 let handler = async (m, { conn, command, args, usedPrefix }) => {
 const fetch = (await import('node-fetch')).default
 const text = args.join` `
