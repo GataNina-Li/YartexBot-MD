@@ -1,7 +1,9 @@
 /* Créditos a https://github.com/AzamiJs */
 
-const require { uploadFile } from '../lib/uploadFile.js'
-const require { uploadImage } from '../lib/uploadImage.js'
+const { uploadFile }   = require('../lib/uploadFile.js')
+const { uploadImage }   = require('../lib/uploadImage.js')
+//const require { uploadFile } from '../lib/uploadFile.js'
+//const require { uploadImage } from '../lib/uploadImage.js'
 const require { fetch from } 'node-fetch'
 
 let handler = async (m) => {
