@@ -159,8 +159,7 @@ process.send('reset')
 console.log(`NO SE ENCONTRÓ EL ARCHIVO DE CREDENCIALES VÁLIDO Y LA COPIA DE SEGURIDAD ES INVALIDA O FALTA: ${credsFilePath}, ${backupFilePath}`)
 connectionOptions}
 } else {
-console.log('ARCHIVO DE RESPALDO CORRECTO, CONTINUANDO SESIÓN')
-}}
+console.log('ARCHIVO DE RESPALDO CORRECTO, CONTINUANDO SESIÓN')}}
 
 function waitTwoMinutes() {
 return new Promise(resolve => {
@@ -197,44 +196,31 @@ let successfulBans = 0
 for (const [key, value] of Object.entries(chats)) {
 if (value.isBanned === false) {
 value.isBanned = true
-//console.log('Baneando chat:', 
 successfulBans++
 }}
-            await db.write()
-          
-            if (successfulBans === 0) {
-              throw new Error('NO SE PUDO BANEAR NINGÚN CHAT')
-            } else {
-              console.log(`SE BANEARON ${successfulBans} CHATS`)
-            }
-          } catch (e) {
-            console.log(`Error: ${e.message}`)
-          } 
-          await waitTwoMinutes()         
-          try {
-            await db.read()
-            const chats = db.data.chats
-            let successfulUnbans = 0
-            for (const [key, value] of Object.entries(chats)) {
-              if (value.isBanned === true) {
-                value.isBanned = false
-                //console.log('Desbaneando chat:', key)
-                successfulUnbans++
-              }
-            }
-            await db.write()
-            if (successfulUnbans === 0) {
-              throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
-            } else {
-              console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)
-            }
-          } catch (e) {
-            console.log(`Error: ${e.message}`)
-          }
-          
-          }
-        
-}
+await db.write()
+ if (successfulBans === 0) {
+throw new Error('NO SE PUDO BANEAR NINGÚN CHAT')
+} else {
+console.log(`SE BANEARON ${successfulBans} CHATS`)}
+} catch (e) {
+console.log(`Error: ${e.message}`)} 
+await waitTwoMinutes()         
+try {
+await db.read()
+const chats = db.data.chats
+let successfulUnbans = 0
+for (const [key, value] of Object.entries(chats)) {
+if (value.isBanned === true) {
+value.isBanned = false
+successfulUnbans++}}
+await db.write()
+if (successfulUnbans === 0) {
+throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
+} else {
+console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)}
+} catch (e) {
+console.log(`Error: ${e.message}`)}}}
  
 process.on('uncaughtException', console.error)
 
@@ -245,8 +231,7 @@ try {
 const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
 if (Object.keys(Handler || {}).length) handler = Handler
 } catch (e) {
-console.error(e)
-}
+console.error(e)}
 if (restatConn) {
 const oldChats = global.conn.chats
 try { global.conn.ws.close() } catch { }
@@ -261,17 +246,16 @@ conn.ev.off('groups.update', conn.groupsUpdate)
 conn.ev.off('message.delete', conn.onDelete)
 conn.ev.off('call', conn.onCall)
 conn.ev.off('connection.update', conn.connectionUpdate)
-conn.ev.off('creds.update', conn.credsUpdate)
-}
+conn.ev.off('creds.update', conn.credsUpdate)}
   
- conn.welcome = '┏━━━━━━━━━━━━\n┃──〘 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
-  conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
-   conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
-    conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS!!*'
-     conn.sDesc = '📝 *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
-      conn.sSubject = '📝 *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
-       conn.sIcon = '🥏 *SE HA CAMBIADO LA FOTO DEL GRUPO!!*'
-        conn.sRevoke = '🥏 *SE HA ACTUALIZADO EL ENLACE DEL GRUPO!!*\n*NUEVO ENLACE:* @revoke'
+conn.welcome = '┏━━━━━━━━━━━━\n┃──〘 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
+conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
+conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
+conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS!!*'
+conn.sDesc = '📝 *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
+conn.sSubject = '📝 *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
+conn.sIcon = '🥏 *SE HA CAMBIADO LA FOTO DEL GRUPO!!*'
+conn.sRevoke = '🥏 *SE HA ACTUALIZADO EL ENLACE DEL GRUPO!!*\n*NUEVO ENLACE:* @revoke'
 
 conn.handler = handler.handler.bind(global.conn)
 conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
@@ -293,31 +277,27 @@ return true
 }
 
 //////////// Codigo para separar los plugin x carpeta
-const pluginFolder = join(__dirname, './plugins');
-const pluginFilter = filename => /\.js$/.test(filename);
-global.plugins = {};
+const pluginFolder = join(__dirname, './plugins')
+const pluginFilter = filename => /\.js$/.test(filename)
+global.plugins = {}
 
 async function filesInit(folder) {
-  for (let filename of readdirSync(folder).filter(pluginFilter)) {
-    try {
-      let file = join(folder, filename);
-      const module = await import(file);
-      global.plugins[file] = module.default || module;
-    } catch (e) {
-      console.error(e);
-      delete global.plugins[filename];
-    }
-  }
+for (let filename of readdirSync(folder).filter(pluginFilter)) {
+try {
+let file = join(folder, filename)
+const module = await import(file)
+global.plugins[file] = module.default || module
+} catch (e) {
+console.error(e)
+delete global.plugins[filename]
+}}
 
-  for (let subfolder of readdirSync(folder)) {
-    const subfolderPath = join(folder, subfolder);
-    if (statSync(subfolderPath).isDirectory()) {
-      await filesInit(subfolderPath);
-    }
-  }
-}
+for (let subfolder of readdirSync(folder)) {
+const subfolderPath = join(folder, subfolder);
+if (statSync(subfolderPath).isDirectory()) {
+await filesInit(subfolderPath)}}}
 
-await filesInit(pluginFolder).then(_ => Object.keys(global.plugins)).catch(console.error);
+await filesInit(pluginFolder).then(_ => Object.keys(global.plugins)).catch(console.error)
 
 /*const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
 const pluginFilter = filename => /\.js$/.test(filename)
