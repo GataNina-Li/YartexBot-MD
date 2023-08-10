@@ -1,7 +1,7 @@
-import { sticker } from '../lib/sticker.js'
-import uploadFile from '../lib/uploadFile.js'
-import uploadImage from '../lib/uploadImage.js'
-import { webp2png } from '../lib/webp2mp4.js'
+const require { sticker } from '../lib/sticker.js'
+const require uploadFile from '../lib/uploadFile.js'
+const require uploadImage from '../lib/uploadImage.js'
+const require { webp2png } from '../lib/webp2mp4.js'
 
 let handler = async (m, { conn, args, usedPrefix, command, text }) => {
 let stiker = false
