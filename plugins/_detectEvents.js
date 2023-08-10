@@ -33,15 +33,15 @@ export async function before(m, {conn, participants}) {
     txt2 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
     await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsString}, {quoted: fkontak2});
   }
-     
+   
   if (chat.detect2 && m.messageStubType == 27) {
     let txt3 = `┏━━━━━━━━━━━━\n┃──〘`;
-    txt3 += `*💛 ${groupName} 💛〙──\n┃━━━━━━━━━━━━\n┃`;
+    txt3 += ` 💛 *WELCOME* 💛〙──\n┃━━━━━━━━━━━━\n┃ *👀 @${m.messageStubParameters[0].split`@`[0]} bienvenid@✨_*`;
     if (!m.sender.endsWith('@g.us')) {
-      txt3 += `*👀 @${m.messageStubParameters[0].split`@`[0]} bienvenid@✨_*\n┃\n┃`;
-      txt3 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}\n┃ *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n┗━━━━━━━━━━━`;
+      txt3 += `\n┃ _*${groupName} ✨*_\n┃\n┃`;
+      txt3 += `*Fue acertado por:* @${m.sender.split`@`[0]}\n┃ *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━`;
     } else {
-      txt3 += `*👀 @${m.messageStubParameters[0].split`@`[0]} bienvenid@✨_*\n┃\n┃ *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n┗━━━━━━━━━━━`;
+      txt3 += `*_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━`;
     }
     await conn.sendMessage(m.chat, {image: img, caption: txt3, mentions: mentionsContentM}, {quoted: fkontak2});
   }
