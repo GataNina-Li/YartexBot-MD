@@ -1,5 +1,5 @@
-import PhoneNumber from 'awesome-phonenumber'
-import fetch from 'node-fetch'
+const require PhoneNumber from 'awesome-phonenumber'
+const require fetch from 'node-fetch'
 let handler = async (m, { conn }) => {
   let _pp = './storage/menus/Menu1.jpg'
   let user = db.data.users[m.sender]

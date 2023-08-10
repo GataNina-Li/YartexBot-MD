@@ -1,5 +1,5 @@
-import { canLevelUp, xpRange } from '../lib/levelling.js'
-import { levelup } from '../lib/canvas.js'
+const require { canLevelUp, xpRange } from '../lib/levelling.js'
+const require { levelup } from '../lib/canvas.js'
 
 let handler = async (m, { conn }) => {
 let { role } = global.db.data.users[m.sender]

@@ -1,5 +1,4 @@
-//import db from '../lib/database.js'
-const require from '../lib/database.js'
+const require db from '../lib/database.js'
 let handler = async (m, { conn, text }) => {
     let user = global.db.data.users[m.sender]
     if (!text) return m.reply(`*⚠️ POR FAVOR COLOQUE SU MOTIVO PARA ESTAR AFK*\n\n💡 EJEMPLO\n*#afk Voy a comer*`)

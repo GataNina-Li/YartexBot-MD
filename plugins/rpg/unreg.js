@@ -1,4 +1,4 @@
-import { createHash } from 'crypto'
+const require { createHash } from 'crypto'
 let handler = async function (m, { args }) {
 if (!args[0]) throw `*⚠️ INGRESE SU NÚMERO DR SÉRIE, SI NO SABE CUAL ES USE #myns*`
 let user = global.db.data.users[m.sender]
