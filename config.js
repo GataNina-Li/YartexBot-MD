@@ -39,8 +39,8 @@ global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 global.img1 = 'https://telegra.ph/file/fb67a56866c02ba02fa50.jpg'
 
 /*=========== STICKERS ===========*/
-global.packname = 'CuriosityBot-MD.js'
-global.author = '@1.0.2'
+global.packname = 'CuriosityBot-MD 🍧\n\n\n\n\n'
+global.author = '• WhatsApp Bot\nwa.me/994408582393'
 global.stickerAMX = fs.readFileSync('./src/Curiosity.webp')
 
 /*=========== LINKS ===========*/
