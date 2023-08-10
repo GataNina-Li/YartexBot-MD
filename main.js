@@ -148,29 +148,25 @@ console.log(`EL ARCHIVO DE CREDENCIALES NO EXISTE. GENERANDO CÓDIGO QR...`)
 connectionOptions
 console.log(`ESCANEA EL CÓDIGO QR PARA CONTINUAR.`)}
   
-  if (!originalFileValid) {
-    // El archivo de credenciales originales no es válido o falta, así que copie el archivo de copia de seguridad y cambie el nombre
-    const backupStats = statSync(backupFilePath)
-    if (backupStats.isFile() && backupStats.size > 0) {
-      copyFileSync(backupFilePath, credsFilePath)
-      console.log(`ARCHIVO DE CREDENCIALES RESTAURADO DESDE LA COPIA DE SEGURIDAD: ${backupFilePath} -> ${credsFilePath}`)
-        process.send('reset')
-    } else {
-      console.log(`NO SE ENCONTRÓ EL ARCHIVO DE CREDENCIALES VÁLIDO Y LA COPIA DE SEGURIDAD ES INVALIDA O FALTA: ${credsFilePath}, ${backupFilePath}`)
-      connectionOptions
-    }
-  } else {
-    console.log('ARCHIVO DE RESPALDO CORRECTO, CONTINUANDO SESIÓN')
-  }
-}
+if (!originalFileValid) {
+// El archivo de credenciales originales no es válido o falta, así que copie el archivo de copia de seguridad y cambie el nombre
+const backupStats = statSync(backupFilePath)
+if (backupStats.isFile() && backupStats.size > 0) {
+copyFileSync(backupFilePath, credsFilePath)
+console.log(`ARCHIVO DE CREDENCIALES RESTAURADO DESDE LA COPIA DE SEGURIDAD: ${backupFilePath} -> ${credsFilePath}`)
+process.send('reset')
+} else {
+console.log(`NO SE ENCONTRÓ EL ARCHIVO DE CREDENCIALES VÁLIDO Y LA COPIA DE SEGURIDAD ES INVALIDA O FALTA: ${credsFilePath}, ${backupFilePath}`)
+connectionOptions}
+} else {
+console.log('ARCHIVO DE RESPALDO CORRECTO, CONTINUANDO SESIÓN')
+}}
 
 function waitTwoMinutes() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve()
-    }, 2 * 60 * 1000)
-  });
-}
+return new Promise(resolve => {
+setTimeout(() => {
+resolve()
+}, 2 * 60 * 1000)})}
 
 async function connectionUpdate(update) {
 const { connection, lastDisconnect, isNewLogin } = update
@@ -183,29 +179,27 @@ global.timestamp.connect = new Date
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('🏁  ESCANEA ESTE CÓDIGO QR,\nEL CÓDIGO EXPIRA EN 45 SEGUNDOS'))
-      }
+}
 if (connection === 'open') {
 console.log(chalk.yellow('🚀  CONECTADO CORRECTAMENTE'))
 if (existsSync(global.authFile)) {
-    console.log(chalk.cyan('\n✓ ARCHIVO DE CREDENCIALES GUARDADO CORRECTAMENTE'))
-  } else {
-    console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES '))
-  }
-          backupCreds()
-          actualizarNumero()
-          credsStatus()
-          try {
-            // Leer la base de datos
-            await db.read()
-            const chats = db.data.chats
-            let successfulBans = 0
-            for (const [key, value] of Object.entries(chats)) {
-              if (value.isBanned === false) {
-                value.isBanned = true;
-                //console.log('Baneando chat:', key)
-                successfulBans++
-              }
-            }
+console.log(chalk.cyan('\n✓ ARCHIVO DE CREDENCIALES GUARDADO CORRECTAMENTE'))
+} else {
+console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES '))}
+backupCreds()
+actualizarNumero()
+credsStatus()
+try {
+// Leer la base de datos
+await db.read()
+const chats = db.data.chats
+let successfulBans = 0
+for (const [key, value] of Object.entries(chats)) {
+if (value.isBanned === false) {
+value.isBanned = true
+//console.log('Baneando chat:', 
+successfulBans++
+}}
             await db.write()
           
             if (successfulBans === 0) {
