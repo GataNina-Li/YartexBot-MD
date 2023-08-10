@@ -24,6 +24,11 @@ global.suittag = []
 global.mods = []
 global.prems = []
 
+/*=========== IMPORTS ===========*/
+global.uploadImage = uploadImage
+global.uploadFile = uploadFile
+global.fetch = fetch
+
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
 global.media = dirP + 'media/'
