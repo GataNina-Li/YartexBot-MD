@@ -1,4 +1,5 @@
 # CuriosityBot-MD
-no hay bot hasta el nuevo aviso 🪧
+⚠️ NO INSTALAR BOT ⚠️
+Motivo: Mantenimiento total
 
 
