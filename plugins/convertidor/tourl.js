@@ -1,6 +1,6 @@
 /* Créditos a https://github.com/AzamiJs */
 
-const { uploadFile } = require('.../lib/uploadFile.js')
+/*const { uploadFile } = require('.../lib/uploadFile.js')
 const { uploadImage } = require('.../lib/uploadImage.js')
 const { uploadFile } from '.../lib/uploadFile.js'
 const { uploadImage } from '.../lib/uploadImage.js'
@@ -42,4 +42,18 @@ export default handler
 async function shortUrl(url) {
 	let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
 	return await res.text()
+}*/
+
+let handler = async (m) => {
+  let q = m.quoted ? m.quoted : m
+  let mime = (q.msg || q).mimetype || ""
+  if (!mime) throw "*⚠️ RESPONDA A UNA IMAGEN*"
+  let media = await q.download()
+  let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
+  let link = await (isTele ? uploadImage : uploadFile)(media)
+  m.reply(`*LINK:* ${link}`)
 }
+handler.help = ["tourl <reply image>"]
+handler.tags = ["sticker"]
+handler.command = /^(upload|tourl)$/i
+export default handler
