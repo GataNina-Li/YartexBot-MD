@@ -24,9 +24,8 @@ global.mods = []
 global.prems = []
 
 /*=========== IMÁGENES ===========*/
-global.aniD = 'ANI_MX_SCANS/'
-global.dirP = aniD
-global.media = 'media/'
+global.dirP = './'
+global.media = dirP + 'media/'
 global.raiz = './storage/menus/Menu1.jpg'
 global.imagen1 = fs.readFileSync('./storage/menus/Menu1.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg')
