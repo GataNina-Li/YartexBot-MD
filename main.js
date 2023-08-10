@@ -276,29 +276,29 @@ isInit = false
 return true
 }
 
-const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
-const pluginFilter = filename => /\.js$/.test(filename)
-global.plugins = {}
+const funcionFolder = global.__dirname(join(__dirname, './funciones/index'))
+const funcionFilter = filename => /\.js$/.test(filename)
+global.funciones = {}
 async function filesInit() {
-for (let filename of readdirSync(pluginFolder).filter(pluginFilter)) {
+for (let filename of readdirSync(funcionFolder).filter(funcionFilter)) {
 try {
-let file = global.__filename(join(pluginFolder, filename))
+let file = global.__filename(join(funcionFolder, filename))
 const module = await import(file)
-global.plugins[filename] = module.default || module
+global.funciones[filename] = module.default || module
 } catch (e) {
 conn.logger.error(e)
-delete global.plugins[filename]
+delete global.funciones[filename]
 }}}
-filesInit().then(_ => console.log(Object.keys(global.plugins))).catch(console.error)
+filesInit().then(_ => console.log(Object.keys(global.funciones))).catch(console.error)
 
 global.reload = async (_ev, filename) => {
 if (pluginFilter(filename)) {
-let dir = global.__filename(join(pluginFolder, filename), true)
-if (filename in global.plugins) {
+let dir = global.__filename(join(funcionFolder, filename), true)
+if (filename in global.funciones) {
 if (existsSync(dir)) conn.logger.info(` updated plugin - '${filename}'`)
 else {
 conn.logger.warn(`deleted plugin - '${filename}'`)
-return delete global.plugins[filename]}
+return delete global.funciones[filename]}
 } else conn.logger.info(`new plugin - '${filename}'`)
 let err = syntaxerror(readFileSync(dir), filename, {
 sourceType: 'module',
@@ -307,11 +307,11 @@ allowAwaitOutsideFunction: true
 if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`)
 else try {
 const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
-global.plugins[filename] = module.default || module
+global.funciones[filename] = module.default || module
 } catch (e) {
 conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
 } finally {
-global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))
+global.funciones = Object.fromEntries(Object.entries(global.funciones).sort(([a], [b]) => a.localeCompare(b)))
 }}}
 Object.freeze(global.reload)
 watch(pluginFolder, global.reload)
