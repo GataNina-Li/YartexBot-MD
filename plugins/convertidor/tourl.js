@@ -1,11 +1,4 @@
-/* Créditos a https://github.com/AzamiJs */
-
-/*const { uploadFile } = require('.../lib/uploadFile.js')
-const { uploadImage } = require('.../lib/uploadImage.js')
-const { uploadFile } from '.../lib/uploadFile.js'
-const { uploadImage } from '.../lib/uploadImage.js'
-const { fetch } = require('node-fetch')
-const { fetch from } 'node-fetch'*/
+/* Créditos a https://github.com/AzamiJs | @Azami */
 
 let handler = async (m) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
