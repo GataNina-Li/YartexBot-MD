@@ -317,30 +317,25 @@ async function filesInit() {
 filesInit().then(_ => console.log(Object.keys(global.plugins))).catch(console.error)*/
 
 global.reload = async (_ev, filename) => {
-  if (pluginFilter(filename)) {
-    let dir = global.__filename(join(pluginFolder, filename), true)
-    if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(` updated plugin - '${filename}'`)
-      else {
-        conn.logger.warn(`deleted plugin - '${filename}'`)
-        return delete global.plugins[filename]
-      }
-    } else conn.logger.info(`new plugin - '${filename}'`)
-    let err = syntaxerror(readFileSync(dir), filename, {
-      sourceType: 'module',
-      allowAwaitOutsideFunction: true
-    })
-    if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`)
-    else try {
-      const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
-      global.plugins[filename] = module.default || module
-    } catch (e) {
-      conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
-    } finally {
-      global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))
-    }
-  }
-}
+if (pluginFilter(filename)) {
+let dir = global.__filename(join(pluginFolder, filename), true)
+if (filename in global.plugins) {
+if (existsSync(dir)) conn.logger.info(` updated plugin - '${filename}'`)
+else {
+conn.logger.warn(`deleted plugin - '${filename}'`)
+return delete global.plugins[filename]}
+} else conn.logger.info(`new plugin - '${filename}'`)
+let err = syntaxerror(readFileSync(dir), filename, {
+sourceType: 'module',
+allowAwaitOutsideFunction: true})
+if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`)
+else try {
+const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
+global.plugins[filename] = module.default || module
+} catch (e) {
+conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
+} finally {
+global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))}}}
 Object.freeze(global.reload)
 watch(pluginFolder, global.reload)
 await global.reloadHandler()
@@ -364,137 +359,118 @@ p.on('error', _ => resolve(false))
 })])}))
 let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
 let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
-Object.freeze(global.support)
-}
+Object.freeze(global.support)}
 
 function clearTmp() {
-  const tmp = [tmpdir(), join(__dirname, 'tmp')]
-  const filename = []
-  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
-  return filename.map(file => {
-      const stats = statSync(file)
-      if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
-      return false })
-  }
+const tmp = [tmpdir(), join(__dirname, 'tmp')]
+const filename = []
+tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+return filename.map(file => {
+const stats = statSync(file)
+if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
+return false })}
   
-  function purgeSession() {
+function purgeSession() {
       
-      let prekey = []
-      let directorio = readdirSync(authFile)
-      let filesFolderPreKeys = directorio.filter((file) => {
-          if (file.startsWith('pre-key-')) {
-          return true 
-          }
-          const stats = statSync(path.join(join(__dirname, file)));
-          const mtime = new Date(stats.mtime)
-        const now = new Date()
-        const hourAgo = new Date(now - 60 * 60 * 1000)
-        return (
-          (file.startsWith('sender-key-') ||
-            file.startsWith('sender-key-memory-') ||
-            file.startsWith('sender-key-status@broadcast') ||
-            file.startsWith('session')) &&
-          mtime <= hourAgo
-        )
-      })
-      if (prekey.length === 0) {
-        console.log("Ningún archivo encontrado")
-      } else {
-      prekey = [...prekey, ...filesFolderPreKeys]
-      filesFolderPreKeys.forEach(files => {
-      unlinkSync(join(__dirname, files))
-      console.log(`${files} fueron eliminados`)
+let prekey = []
+let directorio = readdirSync(authFile)
+let filesFolderPreKeys = directorio.filter((file) => {
+if (file.startsWith('pre-key-')) {
+return true 
+}
+const stats = statSync(path.join(join(__dirname, file)));
+const mtime = new Date(stats.mtime)
+const now = new Date()
+const hourAgo = new Date(now - 60 * 60 * 1000)
+return (
+(file.startsWith('sender-key-') ||
+file.startsWith('sender-key-memory-') ||
+file.startsWith('sender-key-status@broadcast') ||
+file.startsWith('session')) &&
+mtime <= hourAgo
+)})
+if (prekey.length === 0) {
+console.log("Ningún archivo encontrado")
+} else {
+prekey = [...prekey, ...filesFolderPreKeys]
+filesFolderPreKeys.forEach(files => {
+unlinkSync(join(__dirname, files))
+console.log(`${files} fueron eliminados`)})}}  
   
-  })
-  }
-  }  
+function purgeSessionSB() {
+const listaDirectorios = readdirSync(join(__dirname, jadibts))
+console.log(listaDirectorios)
+let SBprekey = []
   
-  function purgeSessionSB() {
-    const listaDirectorios = readdirSync(join(__dirname, jadibts))
-    console.log(listaDirectorios)
-    let SBprekey = []
+listaDirectorios.forEach((filesInDir) => {
+const directorio = readdirSync(join(__dirname, jadibts+filesInDir))
+console.log(directorio);
+const DSBPreKeys = directorio.filter((fileInDir) => {
+if (fileInDir.startsWith('pre-key-')) {
+return true
+}
+const stats = statSync(path.join(join(__dirname, jadibts+filesInDir+'/'+fileInDir)))
+const mtime = new Date(stats.mtime)
+const now = new Date()
+const hourAgo = new Date(now - 60 * 60 * 1000)
+return (
+(fileInDir.startsWith('sender-key-') ||
+fileInDir.startsWith('sender-key-memory-') ||
+fileInDir.startsWith('sender-key-status@broadcast') ||
+fileInDir.startsWith('session')) &&
+mtime <= hourAgo
+)})
+if (DSBPreKeys.length === 0) {
+console.log('Ningún archivo encontrado')
+} else {
+SBprekey = [...SBprekey, ...DSBPreKeys]
+DSBPreKeys.forEach((fileInDir) => {
+unlinkSync(dirP+jadibts+filesInDir+'/'+fileInDir)
+console.log(`${fileInDir} fueron eliminados`)})}})}
   
-    listaDirectorios.forEach((filesInDir) => {
-      const directorio = readdirSync(join(__dirname, jadibts+filesInDir))
-      console.log(directorio);
-      const DSBPreKeys = directorio.filter((fileInDir) => {
-        if (fileInDir.startsWith('pre-key-')) {
-          return true
-        }
-        const stats = statSync(path.join(join(__dirname, jadibts+filesInDir+'/'+fileInDir)))
-        const mtime = new Date(stats.mtime)
-        const now = new Date()
-        const hourAgo = new Date(now - 60 * 60 * 1000)
-        return (
-          (fileInDir.startsWith('sender-key-') ||
-            fileInDir.startsWith('sender-key-memory-') ||
-            fileInDir.startsWith('sender-key-status@broadcast') ||
-            fileInDir.startsWith('session')) &&
-          mtime <= hourAgo
-        )
-      })
-      if (DSBPreKeys.length === 0) {
-        console.log('Ningún archivo encontrado')
-      } else {
-        SBprekey = [...SBprekey, ...DSBPreKeys]
-        DSBPreKeys.forEach((fileInDir) => {
-          unlinkSync(dirP+jadibts+filesInDir+'/'+fileInDir)
-          console.log(`${fileInDir} fueron eliminados`)
-        })
-      }
-    })
-  }
-  
-  function purgeOldFiles() {
-      const directories = [authFile, jadibts]
-      const oneHourAgo = new Date(Date.now() - (60 * 60 * 1000))
+function purgeOldFiles() {
+const directories = [authFile, jadibts]
+const oneHourAgo = new Date(Date.now() - (60 * 60 * 1000))
      
-      directories.forEach((dir) => {
-          readdirSync(dir, (err, files) => {
-          if (err) throw err
-          files.forEach((file) => {
-            const filePath = path.join(dir, file)
-            statSync(filePath, (err, stats) => {
-              if (err) throw err
-              const createTime = new Date(stats.birthtimeMs)
-              const modTime = new Date(stats.mtimeMs)
-              const isOld = createTime < oneHourAgo || modTime < oneHourAgo
-              const isCreds = file === 'creds.json'
-              if (stats.isFile() && isOld && !isCreds) {
-                  unlinkSync(filePath, (err) => {
-                  if (err) throw err
-                  console.log(`Archivos ${filePath} borrados con éxito`)
-                });
-              } else {
-                console.log(`Archivo ${filePath} no borrado`)
-              }
-            })
-          })
-        })
-      })
-    }
-    purgeOldFiles()
+directories.forEach((dir) => {
+readdirSync(dir, (err, files) => {
+if (err) throw err
+files.forEach((file) => {
+const filePath = path.join(dir, file)
+statSync(filePath, (err, stats) => {
+if (err) throw err
+const createTime = new Date(stats.birthtimeMs)
+const modTime = new Date(stats.mtimeMs)
+const isOld = createTime < oneHourAgo || modTime < oneHourAgo
+const isCreds = file === 'creds.json'
+if (stats.isFile() && isOld && !isCreds) {
+unlinkSync(filePath, (err) => {
+if (err) throw err
+console.log(`Archivos ${filePath} borrados con éxito`)})
+} else {
+console.log(`Archivo ${filePath} no borrado`)}})})})})}
+purgeOldFiles()
 
 setInterval(async () => {
-    backupCreds()
-    console.log(chalk.whiteBright(`BACKUP_CREDS │ RESPALDO EXITOSO`))
-    }, 15 * 60 * 1000)
+backupCreds()
+console.log(chalk.whiteBright(`BACKUP_CREDS │ RESPALDO EXITOSO`))
+}, 15 * 60 * 1000)
 setInterval(async () => {
-    clearTmp()
-    console.log(chalk.cyanBright(`AUTOCLEAR │ BASURA ELIMINADA`))
-    }, 1000 * 60 * 3)
+clearTmp()
+console.log(chalk.cyanBright(`AUTOCLEAR │ BASURA ELIMINADA`))
+}, 1000 * 60 * 3)
 setInterval(async () => {
-     purgeSession()
-    console.log(chalk.yellowBright(`AUTOPURGESESSIONS │ ARCHIVOS ELIMINADOS`))
-    }, 1000 * 60 * 60)
+purgeSession()
+console.log(chalk.yellowBright(`AUTOPURGESESSIONS │ ARCHIVOS ELIMINADOS`))
+}, 1000 * 60 * 60)
 setInterval(async () => {
-      purgeSessionSB()
-     console.log(chalk.yellowBright(`AUTO_PURGE_SESSIONS_SUB-BOTS │ ARCHIVOS ELIMINADOS`))
-    }, 1000 * 60 * 60)
+purgeSessionSB()
+console.log(chalk.yellowBright(`AUTO_PURGE_SESSIONS_SUB-BOTS │ ARCHIVOS ELIMINADOS`))
+}, 1000 * 60 * 60)
 setInterval(async () => {
-     purgeOldFiles()
-    console.log(chalk.yellowBright(`AUTO_PURGE_OLDFILES │ ARCHIVOS ELIMINADOS`))
-    }, 1000 * 60 * 60)
+purgeOldFiles()
+console.log(chalk.yellowBright(`AUTO_PURGE_OLDFILES │ ARCHIVOS ELIMINADOS`))
+}, 1000 * 60 * 60)
 
 _quickTest()
 .then(() => conn.logger.info(`\n\nC A R G A N D O ⚡\n`))
