@@ -1,4 +1,5 @@
-import db from '../lib/database.js'
+//import db from '../lib/database.js'
+const require from '../lib/database.js'
 export function before(m) {
     let user = global.db.data.users[m.sender]
     if (user.afk > -1) {
