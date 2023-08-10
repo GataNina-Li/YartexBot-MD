@@ -9,7 +9,7 @@ const url = 'https://google.com/search?q=' + encodeURIComponent(text)
 google({'query': text}).then(res => {
 let teks = `*RESULTADOS DE : _${text}_*\n\n${url}\n\n`
 for (let g of res) {
-teks += `_*${g.title}*_\n_${g.link}_\n_${g.snippet}_\n\n`
+teks += `_🔍 *${g.title}*_\n_${g.link}_\n_${g.snippet}_\n\n`
 } 
 const ss = `https://image.thum.io/get/fullpage/${url}`
 conn.sendFile(m.chat, ss, 'error.png', teks, m)
@@ -53,4 +53,5 @@ handler.command = /^googlef?$/i
 handler.exp = 40
 handler.exp = 3
 handler.register = false
-export default handler
+export default handler*/
+
