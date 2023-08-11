@@ -1,9 +1,9 @@
 import {googleIt} from '@bochilteam/scraper'
 import google from 'google-it'
-let handler = async (m, { conn, command, args, usedPrefix }) => {
+var handler = async (m, { conn, command, args, usedPrefix }) => {
 const fetch = (await import('node-fetch')).default
 const text = args.join` `
-if (!text) return conn.reply(m.chat, '*⚠️ ESCRIBA LO QUE QUIERE BUSCAR*\n\n❕ EJEMPLO:\n*${usedPrefix + command} Curiosity', m)
+if (!text) return conn.reply(m.chat, '*⚠️ ESCRIBA LO QUE QUIERE BUSCAR*\n\n❕ EJEMPLO:\n*${usedPrefix}google* Curiosity', m)
 const url = 'https://google.com/search?q=' + encodeURIComponent(text)
 google({'query': text}).then(res => {
 let teks = `*RESULTADOS DE : _${text}_*\n\n${url}\n\n`
