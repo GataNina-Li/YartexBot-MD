@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix, command }) => {
+var handler = async (m, { conn, usedPrefix, command }) => {
 let q = m.quoted ? m.quoted : m
 let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
 if (!/video|audio/.test(mime)) throw `*⚠️ RESPONDA A UN VIDEO O NOTA DE VOS QUE DESEE CONVERTIR A AUDIO/MP3*`
