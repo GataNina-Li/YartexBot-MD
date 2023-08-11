@@ -1,5 +1,3 @@
-import { webp2mp4 } from '../lib/webp2mp4.js'
-import { ffmpeg } from '../lib/converter.js'
 let handler = async (m, { conn, usedPrefix, command }) => {
 if (!m.quoted) throw `*⚠️ RESPONDE CON ${usedPrefix + command} AL AUDIO QUE DESEEA CONVERTIR EN VIDEO*`
 let mime = m.quoted.mimetype || ''
