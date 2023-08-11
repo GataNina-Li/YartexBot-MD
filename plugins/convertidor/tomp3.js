@@ -1,4 +1,3 @@
-import { toAudio } from '../lib/converter.js'
 let handler = async (m, { conn, usedPrefix, command }) => {
 //let twa = {key: {participant: "0@s.whatsapp.net", "remoteJid": "0@s.whatsapp.net"}, "message": {"groupInviteMessage": {"groupJid": "51995386439-1616969743@g.us", "inviteCode": "m", "groupName": "P", "caption": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu3.jpg')}}}
 let q = m.quoted ? m.quoted : m
