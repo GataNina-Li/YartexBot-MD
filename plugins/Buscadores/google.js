@@ -1,5 +1,4 @@
 import {googleIt} from '@bochilteam/scraper'
-import google from 'google-it'
 var handler = async (m, { conn, command, args, usedPrefix }) => {
 const fetch = (await import('node-fetch')).default
 const text = args.join` `
