@@ -40,6 +40,7 @@ global.toPTT = toPTT
 global.ffmpeg = ffmpeg
 global.webp2mp4 = webp2mp4
 global.fs = fs
+global.axios = axios
 
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
