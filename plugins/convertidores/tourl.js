@@ -21,7 +21,7 @@ externalAdReply :{
 mediaUrl: ig,
 mediaType: 2,
 title: wm,
-body: AzamiJs,
+body: azami,
 thumbnail: await(await fetch(link)).buffer(),
 sourceUrl: link
 }}})}
@@ -30,7 +30,7 @@ handler.tags = ['convertidores']
 handler.command = /^(tourl|upload)$/i
 export default handler
 
-async function shortUrl(url) 
+async function shortUrl(url) {
 let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
 return await res.text()
 }
