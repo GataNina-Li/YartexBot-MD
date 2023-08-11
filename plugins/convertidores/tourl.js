@@ -24,15 +24,12 @@ title: wm,
 body: AzamiJs,
 thumbnail: await(await fetch(link)).buffer(),
 sourceUrl: link
-}}
-})
-}
+}}})}
 handler.help = ['tourl']
-handler.tags = ['convertido']
+handler.tags = ['convertidores']
 handler.command = /^(tourl|upload)$/i
 export default handler
 
-async function shortUrl(url) {
-	let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
-	return await res.text()
-}
+async function shortUrl(url) 
+let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
+return await res.text()
