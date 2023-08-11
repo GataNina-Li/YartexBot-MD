@@ -2,7 +2,7 @@ import { unlinkSync, readFileSync } from 'fs'
 import { join } from 'path'
 import { exec } from 'child_process'
 
-let handler = async (m, { conn, args, __dirname, usedPrefix, command }) => {
+var handler = async (m, { conn, args, __dirname, usedPrefix, command }) => {
 try { 
 let q = m.quoted ? m.quoted : m
 let mime = ((m.quoted ? m.quoted : m.msg).mimetype || '')
