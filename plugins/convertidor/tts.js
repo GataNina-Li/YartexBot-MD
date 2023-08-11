@@ -1,4 +1,4 @@
-
+import gtts from "node-gtts"
 
 const defaultLang = 'es'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
