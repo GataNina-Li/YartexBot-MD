@@ -41,6 +41,9 @@ global.toAudio = toAudio
 global.toPTT = toPTT
 global.ffmpeg = ffmpeg
 global.webp2mp4 = webp2mp4
+global.join = join
+global.gtts = gtts
+global.fs = fs
 
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
