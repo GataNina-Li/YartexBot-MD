@@ -11,6 +11,7 @@ import { platform } from 'process'
 import uploadFile from "./lib/uploadFile.js"
 import uploadImage from "./lib/uploadImage.js"
 import {webp2png} from "./lib/webp2mp4.js"
+import {toAudio} from "./lib/converter.js"
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
@@ -30,6 +31,7 @@ global.uploadImage = uploadImage
 global.uploadFile = uploadFile
 global.fetch = fetch
 global.webp2png = webp2png
+global.toAudio = toAudio
 
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
