@@ -23,7 +23,7 @@ res = await tts(text, defaultLang)
 if (res) conn.sendFile(m.chat, res, 'tts.opus', null, m, true)
 }}
 handler.help = ['tts <lang> <teks>']
-handler.tags = ['convertido']
+handler.tags = ['convertidores']
 handler.command = /^g?tts$/i
 export default handler
 
