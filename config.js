@@ -15,7 +15,6 @@ import { toAudio } from "./lib/converter.js"
 import { toPTT } from './lib/converter.js'
 import { webp2mp4 } from './lib/webp2mp4.js'
 import { ffmpeg } from './lib/converter.js'
-import gtts from 'node-gtts'
 import { readFileSync, unlinkSync } from 'fs'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
@@ -40,6 +39,7 @@ global.toAudio = toAudio
 global.toPTT = toPTT
 global.ffmpeg = ffmpeg
 global.webp2mp4 = webp2mp4
+global.fs = fs
 
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
