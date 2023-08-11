@@ -13,8 +13,8 @@ import uploadImage from "./lib/uploadImage.js"
 import { webp2png } from "./lib/webp2mp4.js"
 import { toAudio } from "./lib/converter.js"
 import { toPTT } from './lib/converter.js'
-import { webp2mp4 } from '../lib/webp2mp4.js'
-import { ffmpeg } from '../lib/converter.js'
+import { webp2mp4 } from './lib/webp2mp4.js'
+import { ffmpeg } from './lib/converter.js'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
