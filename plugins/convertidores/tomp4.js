@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix, command }) => {
+var handler = async (m, { conn, usedPrefix, command }) => {
 if (!m.quoted) throw `*⚠️ RESPONDE CON ${usedPrefix + command} AL AUDIO QUE DESEEA CONVERTIR EN VIDEO*`
 let mime = m.quoted.mimetype || ''
 if (!/webp|audio/.test(mime)) throw `*⚠️ RESPONDE CON ${usedPrefix + command} AL AUDIO QUE DESEEA CONVERTIR EN VIDEO*`
