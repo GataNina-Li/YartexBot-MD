@@ -18,3 +18,4 @@ handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
 handler.tags = ['internet']
 handler.command = /^playlist|ytbuscar|yts(earch)?$/i
 handler.register = true
+export default handler
