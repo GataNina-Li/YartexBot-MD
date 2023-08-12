@@ -3,7 +3,6 @@ import {join} from 'path'
 
 const defaultLang = 'es'
 var handler = async (m, { conn, args, usedPrefix, command }) => {
-
 let lang = args[0]
 let text = args.slice(1).join(' ')
 if ((args[0] || '').length !== 2) {
@@ -19,12 +18,13 @@ m.reply(e + '')
 text = args.join(' ')
 if (!text) throw `*⚠️ INGRESE EL TEXTO QUE QUIERA CONVERTIR EN NOTA DE VOZ*\n\n❕ EJEMPLO:\n*${usedPrefix + command} es Hola Mundo*`
 res = await tts(text, defaultLang)
-} finally { 
+} finally {
 if (res) conn.sendFile(m.chat, res, 'tts.opus', null, m, true)
 }}
 handler.help = ['tts <lang> <teks>']
 handler.tags = ['convertidores']
 handler.command = /^g?tts$/i
+handler.diamond = true
 export default handler
 
 function tts(text, lang = 'es') {
