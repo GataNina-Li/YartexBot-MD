@@ -1,6 +1,4 @@
-import axios from 'axios' 
-  
-let handler = async (m, {
+var handler = async (m, {
 conn, text, command, usedPrefix
 }) => {
 if (!text) return m.reply(`*⚠️ USO DE FORMA CORRECTA* ${usedPrefix + command} <url>\n\n❕ EJEMPLO:\n*${usedPrefix + command}* https://github.com/AzamiJs`)
