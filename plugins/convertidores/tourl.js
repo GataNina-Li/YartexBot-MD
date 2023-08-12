@@ -29,6 +29,7 @@ handler.help = ['tourl']
 handler.tags = ['convertidores']
 handler.command = /^(tourl|upload)$/i
 handler.diamond = true
+handler.register = true
 export default handler
 
 async function shortUrl(url) {
