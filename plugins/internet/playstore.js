@@ -10,10 +10,10 @@ let ps = await playstore(text)
 if (!ps.length) throw '*⚠️ INGRESA EL NOMBRE DE UNA APP*\n\n❕ EJEMPLO:\n${usedPrefix}${command} WhatsApp\v'
 let msg = '\t\t\t\t*• PLAYSTORE •*\n\n'
 for (let x of ps)
-msg += `*Nombre:* ${x.name}\n*Desarollador:* ${x.dev}\n*Tasa:* ${x.rate}\n*Link:*\n${x.link}\n`
+msg += `*Nombre:* ${x.name}\n*Desarollador:* ${x.dev}\n*Tasa:* ${x.rate}\n*Link:*\n${x.link}\n•••••••••••••••••••••••••\n`
 m.reply(msg)
 } catch (e) {
-if (!text) throw '*⚠️ INGRESA EL NOMBRE DE LA APP*\v'
+if (!text) throw '*⚠️ INGRESA EL NOMBRE DE ALGUNA APP*\v'
 let f = await hxz.playstore(text)
 let v = await f.json()
 let teks = v.map(v => {
