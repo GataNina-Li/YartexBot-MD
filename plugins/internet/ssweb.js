@@ -63,8 +63,8 @@ import axios from 'axios'
  let handler = async (m, {  
  conn, text, command, usedPrefix 
  }) => { 
- if (!text) return m.reply(`Gunakan format ${usedPrefix + command} <url>\n\n*Contoh :* ${usedPrefix + command} https://github.com/ShirokamiRyzen`) 
- m.reply("_Loading. . ._") 
+ if (!text) return m.reply(`*⚠️ USO DE FORMA CORRECTA* ${usedPrefix + command} <url>\n\n❕ EJEMPLO:\n*${usedPrefix + command}* https://github.com/AzamiJs`) 
+ m.reply("*🚀 C A R G A N D O*") 
  var phone = await ssweb(text, 'phone') 
  var desktop = await ssweb(text, 'desktop') 
  var tablet = await ssweb(text, 'tablet') 
