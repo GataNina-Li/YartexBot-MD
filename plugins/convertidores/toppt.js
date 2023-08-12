@@ -15,4 +15,5 @@ handler.help = ['tovn (reply)']
 handler.tags = ['convertidores']
 handler.command = /^to(vn|(ptt)?)$/i
 handler.diamond = true
+handler.register
 export default handler
