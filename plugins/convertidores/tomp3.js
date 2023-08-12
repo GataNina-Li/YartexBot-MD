@@ -14,4 +14,5 @@ handler.help = ['tomp3 (reply)']
 handler.tags = ['convertidores']
 handler.command = /^to(mp3|a(udio)?)$/i
 handler.diamond = true
+handler.register = true
 export default handler
