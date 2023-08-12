@@ -21,4 +21,5 @@ handler.help = ['tovideo']
 handler.tags = ['convertidores']
 handler.command = /^to(mp4|v(ideo)?)$/i
 handler.diamond = true
+handler.register = true
 export default handler
