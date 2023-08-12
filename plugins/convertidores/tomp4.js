@@ -3,7 +3,7 @@ if (!m.quoted) throw `*⚠️ RESPONDE CON ${usedPrefix + command} AL AUDIO QUE 
 let mime = m.quoted.mimetype || ''
 if (!/webp|audio/.test(mime)) throw `*⚠️ RESPONDE CON ${usedPrefix + command} AL AUDIO QUE DESEEA CONVERTIR EN VIDEO*`
 let media = await m.quoted.download()
-let out = Buffer.alloc(0) 
+let out = Buffer.alloc(0)
 if (/webp/.test(mime)) {
 out = await webp2mp4(media)
 } else if (/audio/.test(mime)) {
@@ -20,4 +20,5 @@ await conn.sendFile(m.chat, out, 'error.mp4', '*AQUI ESTA TU VIDEO ✨*', m, 0, 
 handler.help = ['tovideo']
 handler.tags = ['convertidores']
 handler.command = /^to(mp4|v(ideo)?)$/i
+handler.diamond = true
 export default handler
