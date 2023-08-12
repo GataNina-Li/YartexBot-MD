@@ -13,4 +13,5 @@ handler.help = ['toimg (reply)']
 handler.tags = ['convertidores']
 handler.command = ['toimg', 'jpg', 'png']
 handler.diamond = true
+handler.register = true
 export default handler
