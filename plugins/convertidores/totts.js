@@ -25,6 +25,7 @@ handler.help = ['tts <lang> <teks>']
 handler.tags = ['convertidores']
 handler.command = /^g?tts$/i
 handler.diamond = true
+handler.register = true
 export default handler
 
 function tts(text, lang = 'es') {
