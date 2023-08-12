@@ -5,15 +5,15 @@ import cheerio from 'cheerio'
   
 var handler = async (m, { conn, command, text }) => {
 try {
-if (!text) throw `*⚠️ INGRESA EL NOMBRE DE UNA APP*\n\n❕ EJEMPLO:\n${usedPrefix}${command} WhatsApp\v`
+if (!text) throw `*⚠️ INGRESA EL NOMBRE DE UNA APP*\n\n❕ EJEMPLO:\n${usedPrefix}${command} WhatsApp`
 let ps = await playstore(text)
-if (!ps.length) throw '*⚠️ INGRESA EL NOMBRE DE UNA APP*\n\n❕ EJEMPLO:\n${usedPrefix}${command} WhatsApp\v'
+if (!ps.length) throw '*⚠️ INGRESA EL NOMBRE DE UNA APP*\n\n❕ EJEMPLO:\n${usedPrefix}${command} WhatsApp'
 let msg = '\t\t\t\t*• PLAYSTORE •*\n\n'
 for (let x of ps)
 msg += `*Nombre:* ${x.name}\n*Desarollador:* ${x.dev}\n*Tasa:* ${x.rate}\n*Link:*\n${x.link}\n•••••••••••••••••••••••••\n`
 m.reply(msg)
 } catch (e) {
-if (!text) throw '*⚠️ INGRESA EL NOMBRE DE ALGUNA APP*\v'
+if (!text) throw '*⚠️ INGRESA EL NOMBRE DE ALGUNA APP*'
 let f = await hxz.playstore(text)
 let v = await f.json()
 let teks = v.map(v => {
