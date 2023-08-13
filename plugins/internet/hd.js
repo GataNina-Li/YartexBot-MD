@@ -17,7 +17,7 @@ let img = await q.download?.()
 let error
 try {
 const This = await processing(img, "enhance")
-conn.sendFile(m.chat, This, "", "*🚀 Foto en hd*\n\n_Si la foto no sale en hd vuelva a intentar_", m)
+conn.sendFile(m.chat, This, "", "_Si la foto no sale en HD responda a esta imagen con el mismo comando_", m)
 } catch (er) {
 error = true
 } finally {
