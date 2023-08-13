@@ -17,6 +17,7 @@ import { webp2mp4 } from './lib/webp2mp4.js'
 import { ffmpeg } from './lib/converter.js'
 import { readFileSync, unlinkSync } from 'fs'
 import { xpRange } from './lib/levelling.js'
+import db from './lib/database.js'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
@@ -42,7 +43,8 @@ global.ffmpeg = ffmpeg
 global.webp2mp4 = webp2mp4
 global.fs = fs
 global.axios = axios
-globla.levelling = levelling
+global.levelling = levelling
+global.database = database
 
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
