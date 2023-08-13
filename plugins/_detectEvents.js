@@ -23,7 +23,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     txt1 += `*◦  GRUPO:* ${groupName}\n`;
     txt1 += `*◦  AHORA ERES ADMINS:* @${m.messageStubParameters[0].split`@`[0]}\n`;
     txt1 += `*◦  EJECUTADO POR:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: img, caption: txt1, mentions: mentionsString}, {quoted: m});
+    await conn.sendMessage(m.chat, {image: img, caption: txt1, mentions: mentionsString}, {quoted: fkontak2});
   }
 
   if (chat.detect2 && m.messageStubType == 30) {
@@ -31,7 +31,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     txt2 += `*◦  GRUPO:* ${groupName}\n`;
     txt2 += `*◦  SE QUITO ADMINS A:* @${m.messageStubParameters[0].split`@`[0]}\n`;
     txt2 += `*◦  EJECUTADO POR:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsString}, {quoted: m});
+    await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsString}, {quoted: fkontak2});
   }
    
   if (chat.detect2 && m.messageStubType == 27) {
@@ -55,7 +55,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     } else {
       txt4 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n┃No vuelva a agrega a esa sucia rata 🐁\n┗━━━━━━━━━━`;
     }
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt4, mentions: mentionsContentM}, {quoted: m});
+    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt4, mentions: mentionsContentM});
   }
 
   if (chat.detect2 && m.messageStubType == 32) {
@@ -73,7 +73,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     } else {
       txt5 += `*◦ ☠ Se fue:* @${m.messageStubParameters[0].split`@`[0]}\n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━`;
     }
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt5, mentions: mentionsContentM}, {quoted: m});
+    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt5, mentions: mentionsContentM});
   }
 
   if (chat.detect2 && m.messageStubType == 26) {
@@ -87,7 +87,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     txt6 += `*◦  Grupo:* ${groupName}\n`;
     txt6 += `*◦  El grupo se ha:* ${'```' + accion + '```'}\n`;
     txt6 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt6, mentions: mentionsContentM}, {quoted: m});
+    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt6, mentions: mentionsContentM});
   }
 
   if (chat.detect2 && m.messageStubType == 21) {
