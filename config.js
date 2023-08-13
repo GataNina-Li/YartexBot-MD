@@ -10,7 +10,7 @@ import moment from 'moment-timezone'
 import { platform } from 'process'
 import uploadFile from './lib/uploadFile.js'
 import uploadImage from './lib/uploadImage.js'
-import { webp2png } from './lib/webp2mp4.js"
+import { webp2png } from './lib/webp2mp4.js'
 import { toAudio } from './lib/converter.js'
 import { toPTT } from './lib/converter.js'
 import { webp2mp4 } from './lib/webp2mp4.js'
