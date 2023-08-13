@@ -2,8 +2,6 @@
 
 import fs from 'fs'
 import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
-const { levelling } = '../lib/levelling.js'
 import PhoneNumber from 'awesome-phonenumber'
 import { promises } from 'fs'
 import { join } from 'path'
