@@ -9,12 +9,11 @@ m.reply(`
 
 *• Autor:* ${result.author}
 
+*• Url* ${result.link}
+
 *• Letra:*
 ${result.lyrics}
-
-
-*🔗 Url* ${result.link}
- `.trim())
+`.trim())
  }
   
  handler.help = ['lirik'].map(v => v + ' <Apa>')
