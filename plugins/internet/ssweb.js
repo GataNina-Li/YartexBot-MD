@@ -1,4 +1,6 @@
-/*var handler = async (m, {
+import axios from 'axios'
+
+var handler = async (m, {
 conn, text, command, usedPrefix
 }) => {
 if (!text) return m.reply(`*⚠️ USO DE FORMA CORRECTA* ${usedPrefix + command} <url>\n\n❕ EJEMPLO:\n*${usedPrefix + command}* https://github.com/AzamiJs`)
@@ -55,10 +57,10 @@ result: data
 }
 resolve(result)})
 } else {
-reject({ status: 404, author: 'AzamiJs', message: data.data })}}
-}).catch(reject) })}*/
+reject({ status: 404, author: 'AzamiJs', message: data.data })}
+}).catch(reject) })}
 
-import axios from 'axios' 
+/*import axios from 'axios' 
   
  let handler = async (m, {  
  conn, text, command, usedPrefix 
@@ -123,3 +125,4 @@ import axios from 'axios'
            }).catch(reject) 
       }) 
  }
+*/
