@@ -16,7 +16,7 @@ import { toPTT } from './lib/converter.js'
 import { webp2mp4 } from './lib/webp2mp4.js'
 import { ffmpeg } from './lib/converter.js'
 import { readFileSync, unlinkSync } from 'fs'
-import { sandroid1 } from './lib/scrape.js'
+import { sandroid1 } from './lib/scraper.js'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
@@ -42,7 +42,7 @@ global.ffmpeg = ffmpeg
 global.webp2mp4 = webp2mp4
 global.fs = fs
 global.axios = axios
-global.scrape = scrape
+global.scraper = scraper
 
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
