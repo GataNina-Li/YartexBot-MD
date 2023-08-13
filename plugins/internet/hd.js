@@ -16,7 +16,7 @@ m.reply("*🚀 P R O C E S A N D O*")
 let img = await q.download?.()
 let error
 try {
-const This = await processing(img, "enhance")
+const This = await processing(img, "enlace")
 conn.sendFile(m.chat, This, "", "_Si la foto no sale en HD responda a esta imagen con el mismo comando_", m)
 } catch (er) {
 error = true
