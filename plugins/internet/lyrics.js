@@ -5,13 +5,13 @@ let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''
 if (!teks) throw `*⚠️ INGRESE EL NOMBRE DE UNA CANCIÓN*\n\n❕ EJEMPLO:\n*${usedPrefix + command}* another love`
 const result = await lyricsv2(teks).catch(async _ => await lyrics(teks))
 m.reply(`
-*⬠ 📑 Título:* ${result.title}
+*📑 Título:* ${result.title}
 
-*⬠ 👤 Autor:* ${result.author}
+*👤 Autor:* ${result.author}
 
-*⬠ 📍 Url* ${result.link}
+*📍 Url* ${result.link}
 
-*⬠ 📝 Letra:*
+*📝 Letra:*
 ${result.lyrics}
 `.trim())
  }
