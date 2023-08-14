@@ -16,16 +16,14 @@ import { toPTT } from './lib/converter.js'
 import { webp2mp4 } from './lib/webp2mp4.js'
 import { ffmpeg } from './lib/converter.js'
 import { readFileSync, unlinkSync } from 'fs'
-//import { xpRange } from './lib/levelling.js'
-//import db from './lib/database.js'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
 /*=========== OWNER ===========*/
 global.owner = [
 ['593993684821', 'Creador 🎨', true], 
-['593980586516', 'Colaborador', true],, ['573106040746']
-['5492266466080'], ['51918299647'], ['5492266613038']]
+['593980586516', 'Colaborador', true],
+['5492266466080'], ['51918299647'], ['5492266613038'], ['573106040746']]
 
 global.animxscans = ['56962237366']
 global.suittag = []
