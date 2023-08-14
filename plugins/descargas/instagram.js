@@ -27,7 +27,7 @@ conn.sendFile(m.chat,  media, '','', global.wm, m) } finally {
 
 
 
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 import axios from 'axios'
 import cheerio from 'cheerio'
 import instagramGetUrl from 'instagram-url-direct'
@@ -91,4 +91,4 @@ const context = {'scriptResult': '', 'i': 0}
 vm.createContext(context)
 new vm.Script(data).runInContext(context)
 return JSON.parse(context.scriptResult.split('window.parent.sf.videoResult.show(')?.[1].split(');')?.[0])
-}
+}*/
