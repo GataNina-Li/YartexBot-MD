@@ -1,5 +1,6 @@
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
 const grupo = `https://chat.whatsapp.com/B8RJAm16U2EISSDETrPivq`
+const grupo2 = `https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU`
 let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
   let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'CuriosityBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unirte a mi grupo ^~^', 'jpegThumbnail': false }}}
