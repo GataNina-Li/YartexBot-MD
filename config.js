@@ -24,7 +24,7 @@ const __dirname = global.__dirname(import.meta.url)
 /*=========== OWNER ===========*/
 global.owner = [
 ['593993684821', 'Creador 🎨', true], 
-['593980586516', 'Colaborador', true],
+['593980586516', 'Colaborador', true],, ['573106040746']
 ['5492266466080'], ['51918299647'], ['5492266613038']]
 
 global.animxscans = ['56962237366']
