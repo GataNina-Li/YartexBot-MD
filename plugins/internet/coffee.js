@@ -7,7 +7,8 @@ await conn.sendFile(m.chat, cofe, "", "*☕ Café ☕*", m)
 throw eror
 }}
 handler.help = ["coffee"]
-handler.tags = ["search"]
+handler.tags = ["internet"]
 handler.command = /^(coffee|cafe)$/i
+handler.register = true
 
 export default handler
