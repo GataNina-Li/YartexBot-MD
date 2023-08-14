@@ -2,7 +2,8 @@ import fetch from 'node-fetch'
 import { format } from 'util'
   
 var handler = async (m, { text, conn }) => { 
-if (!/^https?:\/\//.test(text)) throw '*⚠️ INGRESA EL ENLACE DE UNA PÁGINA https://*' 
+if (!/^https?:\/\//.test(text)) throw '*⚠️ INGRESA EL ENLACE DE UNA PÁGINA https://*'
+await m.reply(wait)
 let _url = new URL(text)
 let url = global.API(_url.origin, _url.pathname, Object.fromEntries(_url.searchParams.entries()), 'APIKEY')
 let res = await fetch(url) 
