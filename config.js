@@ -107,7 +107,7 @@ global.cmoji = '🚀'
 global.dmoji = '☠️'
 
 /*=========== TEXTOS ===========*/
-global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
+global.wait = '*🚀 C A R G A N D O ▬▬▬▭*'
 global.waitt = '*_ P R E P A R A N D O_*'
 global.waittt = '*_CASI LISTO 🚀_*'
 
