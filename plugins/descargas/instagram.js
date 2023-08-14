@@ -1,3 +1,32 @@
+import { instagramdl } from '@bochilteam/scraper' 
+var handler = async (m, { args }) => { 
+if (!args[0]) throw '*⚠️ INGRESA UN ENLACE DE INSTAGRAM*\n\n❕ EJEMPLO:\n*${usedPrefix + command}* https://www.instagram.com/p/CYHeKxyMj-J/?igshid=YmMyMTA2M2Y='
+try {
+let curiosity = await bochil.snapsave(args[0])  
+let media = await curiosity[0].url 
+if (!curiosity) throw 'Can\'t download the post' 
+m.reply(global.wait) 
+conn.sendMessage(m.chat, { video : { url : media }}, global.wm, m)  
+} catch { 
+try { 
+let curiosity2 = await instagramdl(args[0])  
+let media2 = curiosity2.url 
+return conn.sendFile(m.chat, media2, 'instagram.mp4', global.wm, m) 
+} catch { 
+conn.sendFile(m.chat,  media, '','', global.wm, m) } finally { 
+}}} 
+  
+ handler.help = ['ig'].map(v => v + ' <url>')
+ handler.tags = ['descargas']
+ handler.command = /^(ig(dl)?)$/i
+ handler.limit = true
+ handler.register = true
+  
+ export default handler
+
+
+
+
 import fetch from 'node-fetch'
 import axios from 'axios'
 import cheerio from 'cheerio'
