@@ -5,6 +5,8 @@ import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import axios from 'axios'
 import path, { join } from 'path'
+import './lib/levelling.js'
+import db from './lib/database.js'
 import { fileURLToPath, pathToFileURL } from 'url'
 import moment from 'moment-timezone'
 import { platform } from 'process'
@@ -41,8 +43,8 @@ global.ffmpeg = ffmpeg
 global.webp2mp4 = webp2mp4
 global.fs = fs
 global.axios = axios
-//global.levelling = levelling
-//global.database = database
+global.levelling = levelling
+global.database = database
 
 /*=========== IMÁGENES ===========*/
 global.dirP = './'
