@@ -10,7 +10,7 @@ let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
   let res = await conn.groupAcceptInvite(code)
   
   await m.reply(`*Haciendo cositas malas >:) . . .*`)
- await conn.relayMessage(res, {extendedTextMessage:{text: 'https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU', contextInfo: { externalAdReply: { showAdAttribution: true, title: `𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨 𝐚 𝐞𝐬𝐭𝐨𝐬 𝐠𝐫𝐮𝐩𝐨𝐬`, body: wm2, sourceUrl: yt, thumbnail: imagen1 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: fakegif })
+ await conn.relayMessage(res, {extendedTextMessage:{text: 'https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU', contextInfo: { externalAdReply: { showAdAttribution: true, title: `𖥔.🌺 𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨 𝐚 𝐞𝐬𝐭𝐨𝐬 𝐠𝐫𝐮𝐩𝐨𝐬❞`, body: packname, sourceUrl: yt, thumbnail: imagen1 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: fakegif })
   
   await conn.groupLeave(res)
   
