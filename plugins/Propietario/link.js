@@ -9,9 +9,9 @@ try {
   let [_, code, expired] = text.match(linkRegex) || []
   if (!code) throw '❎ El link es invalido'
   let res = await conn.groupAcceptInvite(code)
-  //await m.reply(`${JSON.stringify(res, null, 1)}`)
+ await m.reply(`${JSON.stringify(res, null, 1)}`)
   await m.reply(`*Haciendo cositas malas >:) . . .*`)
-  await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fliveLoc })
+ // await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fliveLoc })
   //await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fliveLoc })
   await conn.groupLeave(res)
   await m.reply(`*Ya se spameo el grupo :D*`)
