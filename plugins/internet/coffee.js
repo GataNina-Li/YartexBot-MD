@@ -1,10 +1,4 @@
-let handler = async (m, {
-conn,
-isOwner,
-usedPrefix,
-command,
-args
-}) => {
+let handler = async (m, { conn, isOwner, usedPrefix, command, args }) => {
 try {
 await m.reply(wait)
 let cofe = "https://coffee.alexflipnote.dev/random"
@@ -14,6 +8,6 @@ throw eror
 }}
 handler.help = ["coffee"]
 handler.tags = ["search"]
-handler.command = /^(coffee)$/i
+handler.command = /^(coffee|cafe)$/i
 
 export default handler
