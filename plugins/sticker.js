@@ -18,7 +18,7 @@ let handler = async (m, {conn, args, usedPrefix, command}) => {
       if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply("*⚠️ EL VÍDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*");
       let img = await q.download?.();
       if (!img)
-        throw `*⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`;
+        throw `*azami no le sabe ⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`;
       let out;
       try {
         stiker = await sticker(img, false, global.packname, global.author);
