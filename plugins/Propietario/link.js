@@ -3,7 +3,7 @@ let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
 let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
   let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'Curiosity', "h": `Hmm`,'seconds': '99999', 'ig': 'true', 'caption': '𖥔.𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨❞ ✨', 'jpegThumbnail': imagen1 }}}
-
+try {
   if (!text) throw `⚠️ *Ingrese el link de un grupo de WhatsApp.*`
   let [_, code, expired] = text.match(linkRegex) || []
   if (!code) throw '❎ El link es invalido'
@@ -15,8 +15,9 @@ let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
   await conn.groupLeave(res)
   
   await m.reply(`*Ya se spameo el grupo :D*`)
-}
-
+} catch (e) {
+await m.reply(`ERROR 404 :v`) 
+}}
 handler.help = ['spam']
 handler.tags = ['owner']
 handler.command = ['spamgp'] 
