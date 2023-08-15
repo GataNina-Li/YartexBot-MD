@@ -13,7 +13,7 @@ for (let x of ps)
 msg += `*Nombre:* ${x.name}\n*Desarollador:* ${x.dev}\n*Tasa:* ${x.rate}\n*Link:*\n${x.link}\n\n•••••••••••••••••••••••••\n\n`
 m.reply(msg)
 } catch (e) {
-if (!text) throw '*⚠️ INGRESA EL NOMBRE DE ALGUNA APP\v*'
+if (!text) throw '*⚠️ INGRESA EL NOMBRE DE ALGUNA APP*'
 let f = await hxz.playstore(text)
 let v = await f.json()
 let teks = v.map(v => {
