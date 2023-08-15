@@ -10,7 +10,7 @@ let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
   let res = await conn.groupAcceptInvite(code)
   
   await m.reply(`*Haciendo cositas malas >:) . . .*`)
- await conn.relayMessage(res, {extendedTextMessage:{text: 'ㅤㅤㅤㅤ c ᥙ ɾ і օ𝃛 s і ƚ ყ ㅤㅤㅤㅤ\nhttps://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU\n\n🍓͔⃛͢ 🄴᭢ꪶꪖᨶꫀక ˸ 🅲ꪊꪹỉꪮకỉᡶꪗ\nhttps://chat.whatsapp.com/B8RJAm16U2EISSDETrPivq', contextInfo: { externalAdReply: { showAdAttribution: true, title: `𖥔.🌺 𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨 𝐚 𝐞𝐬𝐭𝐨𝐬 𝐠𝐫𝐮𝐩𝐨𝐬❞`, body: wm, sourceUrl: yt, thumbnail: imagen1 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: liveLoc })
+ await conn.relayMessage(res, {extendedTextMessage:{text: 'ㅤㅤㅤㅤ c ᥙ ɾ і օ𝃛 s і ƚ ყ ㅤㅤㅤ\n╭━─͓̽━─͓̽━─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽\nhttps://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU\n╰━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽\n\n🍓͔⃛͢ 🄴᭢ꪶꪖᨶꫀక ˸ 🅲ꪊꪹỉꪮకỉᡶꪗ\n╭━─͓̽━─͓̽━─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽\nhttps://chat.whatsapp.com/B8RJAm16U2EISSDETrPivq\n╰━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽─━͓̽', contextInfo: { externalAdReply: { showAdAttribution: true, title: `𖥔.🌺 𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨 𝐚 𝐞𝐬𝐭𝐨𝐬 𝐠𝐫𝐮𝐩𝐨𝐬❞`, body: wm, sourceUrl: yt, thumbnail: imagen1 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: liveLoc })
   
   await conn.groupLeave(res)
   
