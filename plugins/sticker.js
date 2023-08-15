@@ -18,7 +18,7 @@ let handler = async (m, {conn, args, usedPrefix, command}) => {
       if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply("*⚠️ EL VÍDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*");
       let img = await q.download?.();
       if (!img)
-        throw `*azami no le sabe ⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`;
+        throw `*⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`;
       let out;
       try {
         stiker = await sticker(img, false, global.packname, global.author);
@@ -45,7 +45,7 @@ let handler = async (m, {conn, args, usedPrefix, command}) => {
     if (stiker)
       conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
     else
-      throw "❌ Error";
+      throw "❌ Error esta todo re mal (azami no le sabes)";
   }
 };
 handler.help = ["sticker"];
