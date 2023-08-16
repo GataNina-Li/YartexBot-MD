@@ -45,7 +45,7 @@ let handler = async (m, {conn, args, usedPrefix, command}) => {
     if (stiker)
       conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
     else
-      throw "❌ Error esta todo re mal (azami no le sabes)";
+      throw "❌ Error esta todo re mal";
   }
 };
 handler.help = ["sticker"];
