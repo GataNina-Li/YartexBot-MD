@@ -31,12 +31,11 @@ export default async function (m, conn = { user: {} }) {
     : m.text ? m.text.length : 0) || 0
   let user = global.DATABASE.data.users[m.sender]
   let me = PhoneNumber('+' + (conn.user?.jid).replace('@s.whatsapp.net', '')).getNumber('international')
-  console.log(`╭──────────────────────◉
-│ ${chalk.redBright('%s')}\n│「 ⏰ 」${chalk.black(chalk.bgYellow('%s'))}\n│「 📑 」${chalk.black(chalk.bgGreen('%s'))}\n│「 📊 」${chalk.magenta('%s [%s %sB]')}
-│「 📥 」${chalk.green('%s')}\n│「 📃 」${chalk.yellow('%s%s')}\n│「 📥 」${chalk.green('%s')}\n│「 💬 」${chalk.black(chalk.bgYellow('%s'))}
-╰──────────────────────◉
+  console.log(`
+${chalk.redBright('%s')} ${chalk.black(chalk.bgYellow('%s'))} ${chalk.black(chalk.bgGreen('%s'))} ${chalk.magenta('%s [%s %sB]')}
+${chalk.green('%s')} ${chalk.yellow('%s%s')} ${chalk.blueBright('to')} ${chalk.green('%s')} ${chalk.black(chalk.bgYellow('%s'))}
 `.trim(),
-    me + ' ~' + conn.user.name + `${conn.user.jid == global.conn.user.jid ? '' : ' (Sub Bot)'}`,
+    me + ' ~' + conn.user.name,
     (m.messageTimestamp ? new Date(1000 * (m.messageTimestamp.low || m.messageTimestamp)) : new Date).toTimeString(),
     m.messageStubType ? WAMessageStubType[m.messageStubType] : '',
     filesize,
