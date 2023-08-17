@@ -22,9 +22,14 @@ global.mods = ['59894808483']
 global.prems = ['59894808483']
 
 /*=========== IMÁGENES ===========*/
-global.aniD = 'ANI_MX_SCANS/'
-global.dirP = aniD
-global.media = 'media/'
+global.raiz = './'
+global.aniD = 'sessions/'
+global.dirP = raiz//+aniD
+global.authFile = join(__dirname, `sessions/`)
+global.authFileRespald = join(__dirname, `sesionRespaldo/`)
+global.temp = join(__dirname, 'tmp')
+global.media = raiz+'media/'
+global.jadibts = join(__dirname, 'jadibts/')
 global.raiz = './storage/menus/Menu1.jpg'
 global.imagen1 = fs.readFileSync('./storage/menus/Menu1.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg')
