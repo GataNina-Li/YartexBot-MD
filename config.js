@@ -24,7 +24,6 @@ global.owner = [
 ['593980586516', 'Colaborador', true],
 ['5492266466080'], ['51918299647'], ['593968585383'], ['5492266613038'], ['573106040746'], ['50576390682']
 
-global.animxscans = [['56962237366']]
 global.suittag = []
 global.prems = []
 
@@ -90,6 +89,7 @@ global.library = 'Baileys'
 global.lenguaje = 'Español'
 global.jadibts = join(__dirname, 'jadibts/')
 global.menudi = ['⛶','❏','⫹⫺']
+global.animxscans = [['56962237366']]
 
 /*=========== REACCIONES ===========*/
 global.rwait = '⌛'
