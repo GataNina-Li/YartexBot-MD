@@ -8,40 +8,23 @@ import path, { join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
 import moment from 'moment-timezone' 
 import { platform } from 'process'
-import uploadFile from './lib/uploadFile.js'
-import uploadImage from './lib/uploadImage.js'
-import { webp2png } from './lib/webp2mp4.js'
-import { toAudio } from './lib/converter.js'
-import { toPTT } from './lib/converter.js'
-import { webp2mp4 } from './lib/webp2mp4.js'
-import { ffmpeg } from './lib/converter.js'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
 /*=========== OWNER ===========*/
 global.owner = [
-['5217294889938', 'Creador 🎨', true], 
-['593980586516', 'Colaborador', true],
-['5492266466080'], ['51918299647'], ['593968585383'], ['5492266613038'], ['573106040746'], ['50576390682']]
+ ['59894808483', 'Creador 🎨', true],
+ ['5214531106422'], ['50258115623'], ['593968585383'], ['5492266613038'], ['5492266466080'], ['240222036871'], ['573106040746']]  
 
-global.suittag = []
-global.prems = []
-
-/*=========== IMPORTS ===========*/
-global.uploadImage = uploadImage
-global.uploadFile = uploadFile
-global.fetch = fetch
-global.webp2png = webp2png
-global.toAudio = toAudio
-global.toPTT = toPTT
-global.ffmpeg = ffmpeg
-global.webp2mp4 = webp2mp4
-global.fs = fs
-global.axios = axios
+global.animxscans = ['56962237366']
+global.suittag = ['59894808483'] 
+global.mods = ['59894808483'] 
+global.prems = ['59894808483']
 
 /*=========== IMÁGENES ===========*/
-global.dirP = './'
-global.media = dirP + 'media/'
+global.aniD = 'ANI_MX_SCANS/'
+global.dirP = aniD
+global.media = 'media/'
 global.raiz = './storage/menus/Menu1.jpg'
 global.imagen1 = fs.readFileSync('./storage/menus/Menu1.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg')
@@ -57,8 +40,8 @@ global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 global.img1 = 'https://telegra.ph/file/fb67a56866c02ba02fa50.jpg'
 
 /*=========== STICKERS ===========*/
-global.packname = ''
-global.author = '𝘾𝙪𝙧𝙞𝙤𝙨𝙞𝙩𝙮𝘽𝙤𝙩-𝙈𝘿 🍓'
+global.packname = 'CuriosityBot-MD.js'
+global.author = '@1.0.2'
 global.stickerAMX = fs.readFileSync('./src/Curiosity.webp')
 
 /*=========== LINKS ===========*/
@@ -77,7 +60,7 @@ global.nna2 = 'J1R402WH1N0Hdl3S0NDEYu'
 global.wm = '© CuriosityBot-MD'
 global.wm2 = '᭥𐨏𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫᭢ꪲ'
 global.wm3 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
-global.wm4 = '🚀 𝘊𝘶𝘳𝘪𝘰𝘴𝘪𝘵𝘺𝘉𝘰𝘵-𝘔𝘋'
+global.wm4 = '🚀 𝘊𝘶𝘳𝘪𝘰𝘴𝘪𝘵𝘺𝘉𝘰𝘵-𝘔𝘋' 
 global.wm5 = '『 CuriosityBot-MD 』'
 global.wm6 = 'CuriosityBot-MD • Azami'
 global.azami = '*🍓 Azami*'
@@ -89,21 +72,20 @@ global.library = 'Baileys'
 global.lenguaje = 'Español'
 global.jadibts = join(__dirname, 'jadibts/')
 global.menudi = ['⛶','❏','⫹⫺']
-global.animxscans = [['56962237366']]
 
 /*=========== REACCIONES ===========*/
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
-global.error = '❌'
-global.xmoji = '🔥'
+global.error = '❌' 
+global.xmoji = '🔥' 
 global.amoji = '👀'
 global.bmoji = '🍀'
 global.cmoji = '🚀'
 global.dmoji = '☠️'
 
 /*=========== TEXTOS ===========*/
-global.wait = '*🚀 C A R G A N D O ▬▬▬▭*'
+global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
 global.waitt = '*_ P R E P A R A N D O_*'
 global.waittt = '*_CASI LISTO 🚀_*'
 
@@ -111,25 +93,26 @@ global.waittt = '*_CASI LISTO 🚀_*'
 global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
 
-global.multiplier = 100
+global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 
 global.rpg = {
-emoticon(string) {
-string = string.toLowerCase()
-let emot = {
-level: '🏆',
-limit: '💎',
-exp: '🕹️'
+  emoticon(string) {
+    string = string.toLowerCase()
+    let emot = {
+      level: '🏆',
+      limit: '💎',
+      exp: '🕹️'
+    }
+    let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
+    if (!results.length) return ''
+    else return emot[results[0][0]]
+  }
 }
-let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
-if (!results.length) return ''
-else return emot[results[0][0]]
-}}
 
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
-unwatchFile(file)
-console.log(chalk.redBright("Update 'config.js'"))
-import(`${file}?update=${Date.now()}`)
+  unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  import(`${file}?update=${Date.now()}`)
 })

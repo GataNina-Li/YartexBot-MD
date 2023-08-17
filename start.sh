@@ -1,9 +1,9 @@
 #!bin/bash
 GREEN='\033[0;32m'
-while :
+while : 
 do
 echo ""
-npm start
-sleep 1
+    npm start
+    sleep 1
 
 done

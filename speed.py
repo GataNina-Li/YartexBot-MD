@@ -44,7 +44,7 @@ class FakeShutdownEvent(object):
     are not required to register their own threading.Event()
     """
 
-    @staticmethod
+    @staticmethod 
     def isSet():
         "Dummy method to always return false"""
         return False
