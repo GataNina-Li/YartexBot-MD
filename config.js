@@ -24,7 +24,7 @@ global.owner = [
 ['593980586516', 'Colaborador', true],
 ['5492266466080'], ['51918299647'], ['593968585383'], ['5492266613038'], ['573106040746'], ['50576390682']
 
-global.curiosity = [['56962237366']]
+global.animxscans = [['56962237366']]
 global.suittag = []
 global.prems = []
 
