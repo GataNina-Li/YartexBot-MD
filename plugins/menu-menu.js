@@ -12,10 +12,10 @@ const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/b
 let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
 try {
 let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-let d = new Date(new Date + 3600000)
-let locale = 'es'
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+const d = new Date(new Date + 3600000);
+    const locale = 'es';
+    const week = d.toLocaleDateString(locale, {weekday: 'long'});
+    const date = d.toLocaleDateString(locale, {day: 'numeric', month: 'long', year: 'numeric'});
 let name = conn.getName(m.sender)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let { exp, diamond, level, role, money } = global.db.data.users[m.sender]
@@ -71,7 +71,30 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
 m.react('🚀')     
-let menu = `╔══「 I N F O R M A C I Ó N 」═╗
+let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
+║╭──────────────
+║├⫹⫺ *Nombre :* ${name}
+║├⫹⫺ *Limite :* ${diamond}
+║├⫹⫺ *Nivel :* ${level}
+〬║├⫹⫺ *Rango :* ${role}
+║├⫹⫺ *Exp :* ${exp}
+║╰──────────────
+╚══════════════════⋆
+
+╔═══[ ＩＮＦＯＢＯＴ ]═══╗
+║╭──────────────
+║├⫹⫺ *Creador :* Azami 
+║├⫹⫺ *Numero:* wa.me/59894808483
+║├⫹⫺ *Tiempo Activo:* ${uptime}
+║├⫹⫺ *Registrado :* ${rtotalreg} de ${totalreg} usuarios
+║╰────────────── 
+╚══════════════════⋆
+
+╔═════「 ＨＯＹ 」════╗
+║⫹⫺ *Fecha :* ${date}
+〬╚═════ ≪ •❈• ≫ ═════╝
+
+╔══「 I N F O R M A C I Ó N 」═╗
 〬║ႌ〬⫹⫺ ${usedPrefix}estado
 ║ႌ〬⫹⫺ ${usedPrefix}owner
 〬║ႌ〬⫹⫺ ${usedPrefix}grouplist
