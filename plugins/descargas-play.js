@@ -23,7 +23,7 @@ ${yt_play[0].ago}
 ${secondString(yt_play[0].duration.seconds)}
 
  *∘ 👀 VISTAS*
-${`${MilesNumber(yt_play[0].views)}`}
+${MilesNumber(yt_play[0].views)}
 
 *∘ 👤 AUTOR*
 ${yt_play[0].author.name}
@@ -41,7 +41,18 @@ ${yt_play[0].type}
 ${yt_play[0].url}
 
 *⌚ ENVIANDO ${additionalText}, POR FAVOR ESPERE.*`.trim()
-conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
+await conn.sendMessage(m.chat, {
+text: texto1,
+contextInfo: {
+externalAdReply: {
+title: yt_play[0].title,
+body: packname,
+thumbnailUrl: yt_play[0].thumbnail, 
+mediaType: 1,
+showAdAttribution: true,
+renderLargerThumbnail: true
+}}} , { quoted: m })
+//conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
 if (command == 'play') {
 try {
 let q = '128kbps'
