@@ -1,4 +1,4 @@
-/*import fs from 'fs'
+import fs from 'fs'
 import fetch from 'node-fetch'
 import axios from 'axios'
 import moment from 'moment-timezone'
@@ -166,7 +166,7 @@ handler.all = async function (m) {
 					mediaUrl: yt,
 					description: wm2,
 					previewType: "PHOTO",
-					thumbnail: await (await fetch(pic)).buffer(),
+					thumbnail: imagen1,
 					sourceUrl: "https://github.com/AzamiJs"			
 				}
 			}
@@ -174,5 +174,5 @@ handler.all = async function (m) {
 
 	
 } 
-export default handler*/
+export default handler
 
