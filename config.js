@@ -53,7 +53,7 @@ global.stickerAMX = fs.readFileSync('./src/Curiosity.webp')
 /*=========== LINKS ===========*/
 global.yt = 'https://www.youtube.com/@Azami_Mods'
 global.ig = 'https://instagram.com/azami_ofc'
-global.md = 'https://github.com/Undefined17/CuriosityBot-MD'
+global.md = 'https://github.com/AzamiJs/CuriosityBot-MD'
 global.paypal = 'https://paypal.me/Azami19'
 global.git = 'https://github.com/Undefined17'
 global.nn = 'https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU' //Grupo ofc
