@@ -19,4 +19,10 @@ await m.reply(start)
 await m.reply(sorteo)
 catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝚄𝚂𝙾 𝙼𝙰𝙻 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙴𝚂𝚃𝙴 𝙴𝚂 𝚄𝙽 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix}sorteo un número virtual *', m)
+
+handler.help =['sorteo']
+handler.tags = ['sorteo']
+handler.command = /^sorteo/i
+
+
 }}
