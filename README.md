@@ -90,7 +90,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://wa.me/59894808483"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 ### EDITOR & PROPIETARIO DEL BOT
-<a href="https://github.com/Undefined17"><img src="https://github.com/Undefined17.png" width="250" height="250" alt="Azami19"/></a>
+<a href="https://github.com/AzamiJs"><img src="https://github.com/AzamiJs.png" width="250" height="250" alt="Azami19"/></a>
 
 #### COLABORADORES 
 <!--[![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21)
