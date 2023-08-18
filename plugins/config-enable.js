@@ -48,6 +48,17 @@ throw false
 }
 chat.detect = isEnable
 break
+case 'detect2':
+if (!m.isGroup) {
+      if (!isOwner) {
+  global.dfail('group', m, conn);
+    throw false;
+    }} else if (!isAdmin) {
+  global.dfail('admin', m, conn);
+   throw false;
+ }
+chat.detect2 = isEnable;
+  break;
 case 'delete':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
