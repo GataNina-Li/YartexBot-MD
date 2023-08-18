@@ -6,7 +6,7 @@
 
 import {WAMessageStubType} from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
-
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 export async function before(m, {conn, participants, groupMetadata}) {
   if (!m.messageStubType || !m.isGroup) return !0
   const groupName = (await conn.groupMetadata(m.chat)).subject
@@ -22,6 +22,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     let txt1 = `╔═══[ ${groupName} ]═══╗\n║╭──────────────\n║├⫹⫺ *NUEVO ADMINS*\n`
     txt1 += `║├⫹⫺ *AHORA ERES ADMINS:* @${m.messageStubParameters[0].split`@`[0]}\n`
     txt1 += `║├⫹⫺ *EJECUTADO POR:* @${m.sender.split`@`[0]}\n║├⫹⫺ Felicidades te uner al grupo del admins\n║╰──────────────\n╚══════════════════⋆`
+    await delay(1000 * 2);
     await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": md, "sourceUrl": yt}}});
   }
 
@@ -29,6 +30,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     let txt2 = `╔═══[ ${groupName} ]═══╗\n║╭──────────────\n║├⫹⫺ *UN ADMINS MENOR*\n`
     txt2 += `║├⫹⫺ *SE QUITO ADMINS A:* @${m.messageStubParameters[0].split`@`[0]}\n`
     txt2 += `║├⫹⫺ *EJECUTADO POR:* @${m.sender.split`@`[0]}\n║├⫹⫺ Ya no eres admins 🚮 vete a llorar maldita puta\n║╰──────────────\n╚══════════════════⋆`
+    await delay(1000 * 2);
     await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": md, "sourceUrl": yt}}});
    // await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsString}, {quoted: fliveLoc})
   }
@@ -42,7 +44,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     } else {
       txt3 += `\n┃*_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n${groupMetadata.desc?.toString() || '⚠️ No hay descripción!!'}\n\n┗━━━━━━━━━━━`
     }
-    await conn.sendMessage(m.chat, {image: img, caption: txt3, mentions: mentionsContentM}, {quoted: fliveLoc})
+    await conn.sendMessage(m.chat, {image: pp, caption: txt3, mentions: mentionsContentM}, {quoted: fliveLoc})
   }
 
   if (chat.detect2 && m.messageStubType == 28) {
