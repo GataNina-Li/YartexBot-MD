@@ -156,6 +156,22 @@ handler.all = async function (m) {
             message: { "liveLocationMessage": { "title": "Azami","h": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}		
            }
 
+	global.adReply = {
+			contextInfo: {
+				forwardingScore: 9999,
+				externalAdReply: {
+                                        showAdAttribution: true,
+					title: global.cb,
+					body: wm,
+					mediaUrl: yt,
+					description: wm2,
+					previewType: "PHOTO",
+					thumbnail: await (await fetch(pic)).buffer(),
+					sourceUrl: "https://github.com/AzamiJs"			
+				}
+			}
+		}>
+
 	
 } 
 export default handler
