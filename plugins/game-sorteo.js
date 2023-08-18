@@ -5,7 +5,7 @@ function handler(m, { groupMetadata, command, conn, participants }) {
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
 
-if (command == 'topgays') {
+if (command == 'sorteo') {
 let top = `*INICIANDO SORTEO*
     
 *_El gandor del sorteo ${text} es:.- ${user(a)}_*`
@@ -15,5 +15,5 @@ m.reply(top, null, { mentions: [a]})
 handler.help = handler.command = ['sorteo']
 handler.tags = ['game']
 handler.group = true
-handler.register = false
+handler.register = true
 export default handler  
