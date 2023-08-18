@@ -145,7 +145,7 @@ handler.all = async function (m) {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat  ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "caption":"By: " + global.wm 🚀,"h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}
+            message: { "liveLocationMessage": { "caption":"By: " + global.wm2 ,"h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}
            }
                
                   global.fliveLoc2 = {
