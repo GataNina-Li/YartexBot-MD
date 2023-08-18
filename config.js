@@ -64,12 +64,8 @@ global.nna2 = 'J1R402WH1N0Hdl3S0NDEYu'
 
 /*=========== NOMBRES ===========*/
 global.wm = '© CuriosityBot-MD'
-global.wm2 = '᭥𐨏𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫᭢ꪲ'
-global.wm3 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
-global.wm4 = '🚀 𝘊𝘶𝘳𝘪𝘰𝘴𝘪𝘵𝘺𝘉𝘰𝘵-𝘔𝘋' 
-global.wm5 = '『 CuriosityBot-MD 』'
-global.wm6 = 'CuriosityBot-MD • Azami'
-global.azami = '*🍓 Azami*'
+global.wm2 = 'CuriosityBot-MD 🚀'
+global.azami = '🍓 Azami'
 global.cb = 'CuriosityBot-MD'
 
 /*=========== INFO ===========*/
