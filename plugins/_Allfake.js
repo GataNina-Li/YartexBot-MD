@@ -170,7 +170,7 @@ handler.all = async function (m) {
 					sourceUrl: "https://github.com/AzamiJs"			
 				}
 			}
-		}>
+		}
 
 	
 } 
