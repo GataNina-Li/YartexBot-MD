@@ -106,9 +106,9 @@ remove or modify this section -->
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png?size=100" width="100px;" alt=""/><br /><sub><b>Mario</b></sub></a><br /><sub><i>Desarollador oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/GataNina-Li"><img src="https://github.com/gatanina-li?size=100" width="100px;" alt=""/><br /><sub><b>Gata Dios</b></sub></a><br /><sub><i>Desarolladora oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/Keshav-Pahwa"><img src="https://avatars.githubusercontent.com/u/83963387?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Keshav Pahwa</b></sub></a><br /><sub><i>Core Developer</i></sub></td>
+    <td align="center"><a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png?size=100" width="100px;" alt=""/><br /><sub><b>Mario</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
+    <td align="center"><a href="https://github.com/GataNina-Li"><img src="https://github.com/gatanina-li?size=100" width="100px;" alt=""/><br /><sub><b>Gata Dios</b></sub></a><br /><sub><i>Desarolladora Oficial</i></sub></td>
+    <td align="center"><a href="https://github.com/ReyEndymion"><img src="https://github.com/ReyEndymion?size=100" width="100px;" alt=""/><br /><sub><b>Rey Endymion</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
     <td align="center"><a href="https://github.com/j0h4nn1410"><img src="https://avatars.githubusercontent.com/u/72455289?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Johann Jose</b></sub></a><br /><sub><i>Core Developer</i></sub></td>
     <td align="center"><a href="https://github.com/Mohit161220"><img src="https://avatars.githubusercontent.com/u/83974093?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohit Singh Rana</b></sub></a><br /><sub><i>Core Developer</i></sub></td>
     <td align="center"><a href="https://github.com/thegeek-dev"><img src="https://avatars.githubusercontent.com/u/70193222?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neeraj Patel</b></sub></a><br /><sub><i>Moderator</i></sub></td>
