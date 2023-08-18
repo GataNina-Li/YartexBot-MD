@@ -1,4 +1,4 @@
-let handler = async (m, { conn,usedPrefix, text }) => {
+let handler = async (m, { conn,usedPrefix, command, text }) => {
 if(isNaN(text) && !text.match(/@/g)){
 	
 }else if(isNaN(text)) {
@@ -6,9 +6,8 @@ var number = text.split`@`[1]
 }else if(!isNaN(text)) {
 var number = text
 }
-	
 if(!text && !m.quoted) return conn.reply(m.chat, `*⚠️ EJEMPLO DE USO*\n\n*${usedPrefix}demote @tag*\n*${usedPrefix}demote responder a un mensaje*`, m)
-if(number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `*⚠️ NÚMERO ERRÓNEO, INTENTO DE NUEVO*`, m)
+if(number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `⚠️ Numero incorrecto`, m)
   
 try {
 if(text) {
@@ -17,16 +16,19 @@ var user = number + '@s.whatsapp.net'
 var user = m.quoted.sender
 } else if(m.mentionedJid) {
 var user = number + '@s.whatsapp.net'
-}
+} 
 } catch (e) {
+} finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
-conn.reply(m.chat, link, m, {detectLink: true})
-}}
-handler.help = ['*521xxx*','*@usuario*','*responder chat*'].map(v => 'demote ' + v)
+m.reply(`✅ Usuario degradado`)
+}
+}
+handler.help = ['demote (@tag)']
 handler.tags = ['group']
-handler.command = /^(demote|quitarpoder|quitaradmin)$/i
+handler.command = ['demote', 'degradar'] 
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
 handler.fail = null
+
 export default handler
