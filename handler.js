@@ -103,7 +103,9 @@ export async function handler(chatUpdate) {
                 if (!('welcome' in chat))
                     chat.welcome = true
                 if (!('detect' in chat))
-                    chat.detect = true
+                    chat.detect = false
+                if (!('detect2' in chat))
+                 chat.detect2 = true
                 if (!('sWelcome' in chat))
                     chat.sWelcome = ''
                 if (!('sBye' in chat))
@@ -133,7 +135,8 @@ export async function handler(chatUpdate) {
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
                     welcome: true,
-                    detect: true,
+                    detect: false, 
+                    detect2: true, 
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
