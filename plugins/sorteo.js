@@ -8,7 +8,7 @@ let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
 
 if (command == 'sorteo') {
-let start = `*❥𝗜𝗡𝗜𝗖𝗜𝗔𝗡𝗗𝗢 𝗦𝗢𝗘𝗧𝗘𝗢☙*
+let start = *❥𝗜𝗡𝗜𝗖𝗜𝗔𝗡𝗗𝗢 𝗦𝗢𝗘𝗧𝗘𝗢☙*
     
 let sorteo = *_➳❥𝙴𝙻 𝙶𝙰𝙽𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝚂𝙾𝚁𝚃𝙴𝙾 𝙴𝚂: ${user(a)} ✦_*`
 m.reply(start,sorteo, null, { mentions: [a]})
