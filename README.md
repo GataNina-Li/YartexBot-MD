@@ -93,15 +93,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/AzamiJs"><img src="https://github.com/AzamiJs.png" width="250" height="250" alt="Azami19"/></a>
 
 #### COLABORADORES 
-<!--[![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21)
-[![Gata Dios](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
-[![ReyEndymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion)-->
-<a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png?size=100" width="100" height="100"></a> | [![Gata Dios](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
----|---
-[Mario](https://github.com/elrebelde21) [Gata Dios](https://github.com/GataNina-Li) 
-El rebelde | Gata dios | 
-
-remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
