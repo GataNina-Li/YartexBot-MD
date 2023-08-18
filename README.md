@@ -110,7 +110,7 @@ remove or modify this section -->
     <td align="center"><a href="https://github.com/GataNina-Li"><img src="https://github.com/gatanina-li.png?size=100" width="100px;" alt=""/><br /><sub><b>Gata Dios</b></sub></a><br /><sub><i>Desarolladora Oficial</i></sub></td>
     <td align="center"><a href="https://github.com/ReyEndymion"><img src="https://github.com/ReyEndymion.png?size=100" width="100px;" alt=""/><br /><sub><b>Endymion</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
     <td align="center"><a href="https://github.com/HACHEJOTA"><img src="https://github.com/HACHEJOTA.png?size=100" width="100px;" alt=""/><br /><sub><b>HJ</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/Mohit161220"><img src="https://avatars.githubusercontent.com/u/83974093?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohit Singh Rana</b></sub></a><br /><sub><i>Core Developer</i></sub></td>
+    <td align="center"><a href="https://github.com/Aleixon127271"><img src="https://github.com/Aleixon127271.png?size=100" width="100px;" alt=""/><br /><sub><b>Aleixon</b></sub></a><br /><sub><i>Moderador</i></sub></td>
     <td align="center"><a href="https://github.com/thegeek-dev"><img src="https://avatars.githubusercontent.com/u/70193222?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neeraj Patel</b></sub></a><br /><sub><i>Moderator</i></sub></td>
   </tr>
 </table>
