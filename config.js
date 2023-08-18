@@ -1,4 +1,4 @@
-import { watchFile, unwatchFile } from 'fs'
+eimport { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import fs from 'fs'
 import cheerio from 'cheerio'
@@ -14,7 +14,7 @@ const __dirname = global.__dirname(import.meta.url)
 /*=========== OWNER ===========*/
 global.owner = [
  ['5217294888993', 'Creador 🎨', true],
- ['5214531106422'], ['50258115623'], ['593968585383'], ['5492266613038'], ['5492266466080'], ['240222036871'], ['573106040746'], ['50576390682']]
+ ['5214531106422'], ['50258115623'], ['593968585383'], ['5492266613038'], ['5492266466080'], ['51918299647'], ['573106040746'], ['50576390682']]
 
 global.animxscans = ['56962237366']
 global.suittag = ['59894808483'] 
