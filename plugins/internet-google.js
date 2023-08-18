@@ -2,8 +2,8 @@ import { googleIt } from '@bochilteam/scraper'
 let handler = async (m, { conn, command, args, usedPrefix }) => {
 const fetch = (await import('node-fetch')).default
 let full = /f$/i.test(command)
-let text = args.join` ` 
-if (!text) return conn.reply(m.chat, `*⚠️ ESCRIBA LO QUE QUIERE BUSCAR*\n\n💡 EJEMPLO:\n*${usedPrefix + command} Curiosity*`, m)
+let text = args.join` `
+if (!text) return conn.reply(m.chat, `*⚠️ ESCRIBA LO QUE QUIERE BUSCAR*\n\n❕ EJEMPLO:\n*${usedPrefix + command} Curiosity*`, m)
 let pp = './media/menus/Menu1.jpg'
 let url = 'https://google.com/search?q=' + encodeURIComponent(text)
 let search = await googleIt(text)
@@ -27,7 +27,6 @@ m.reply(msg)
 handler.help = ['google', 'googlef'].map(v => v + ' <pencarian>')
 handler.tags = ['internet']
 handler.command = /^googlef?$/i
-handler.exp = 40
-handler.exp = 3
 handler.register = true
+
 export default handler
