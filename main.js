@@ -250,8 +250,8 @@ conn.ev.off('creds.update', conn.credsUpdate)}
   
 conn.welcome = '┏━━━━━━━━━━━━\n┃──〘 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
 conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
-conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
-conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS!!*'
+conn.spromote = '⚠️ *@user AHORA ERES ADMIN DEL GRUPO!!*'
+conn.sdemote = '⚠️ *@user YA NO ERES ADMIN DEL GRUPO!!*'
 conn.sDesc = '📝 *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
 conn.sSubject = '📝 *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
 conn.sIcon = '🥏 *SE HA CAMBIADO LA FOTO DEL GRUPO!!*'
