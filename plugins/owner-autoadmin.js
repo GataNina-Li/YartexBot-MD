@@ -1,6 +1,6 @@
 let handler = async (m, { conn, isAdmin }) => {  
 if (m.fromMe) return
-if (isAdmin) throw '*HOLA CREADOR, USTED YA ES ADMIN EN ESTE GRUPO*'
+if (isAdmin) throw '*🍓HOLA CREADOR, USTED YA TIENE PODER EN ESTE GRUPO🍓*'
 try {  
 await conn.groupParticipantsUpdate(m.chat, [m.sender], "promote")
 } catch {
