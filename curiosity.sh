@@ -136,7 +136,7 @@ echo -e "\e[35m
 ╚═╝░░╚═╝░░╚═╝░░  ╚═╝╚═╝░░╚══╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝\n\e[0m"
 
 echo -e "\033[1;35m"
-git clone https://github.com/Undefined17/CuriosityBot-MD.git
+git clone https://github.com/AzamiJs/CuriosityBot-MD.git
 echo -e "\033[01;32m\033[01m✅ La clonación se ha descargado e instalado correctamente.\n\033[0m"
 
 echo -e "\033[01;32m\033[01m🟢 Cambiando al directorio del repositorio!!\n\033[0m" 
