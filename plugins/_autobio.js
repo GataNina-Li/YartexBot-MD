@@ -7,8 +7,8 @@ if (process.send) {
 process.send('uptime')
 _muptime = await new Promise(resolve => {
 process.once('message', resolve)
-setTimeout(resolve, 1000)
-}) * 1000
+setTimeout(resolve, 300000)
+}) * 300000
 }
 let muptime = clockString(_muptime)
 let bio = `🥏 Soy ${cb} | ⏰ Activo durante: ${muptime}\n\n | 🎨 Creado por Azami `
