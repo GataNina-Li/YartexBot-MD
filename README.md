@@ -50,7 +50,7 @@ para usuarios del heroku
 | **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
 
 ***
-### `ACTIVA EN TERMUX`
+### `ACTIVAR EN TERMUX`
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 termux-setup-storage
@@ -74,6 +74,16 @@ ls
 
 ```bash
 npm start
+```
+
+### INSTALACIÓN AUTOMÁTICA POR TERMUX
+
+> **Note** Comandos para instalar de forma automática en Termux  
+```bash
+termux-setup-storage
+```
+```bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
 ### `OBTENER OTRO CODIGO QR`
