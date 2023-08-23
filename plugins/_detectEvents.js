@@ -1,8 +1,8 @@
 // Creditos del codigo a @Gatito-kw //
 
-/* GitHub: https://github.com/Gatito-kw */
+/* GitHub: https://github.com/Gatito-kw 
 
-/* Bot: https://github.com/Gatito-kw/nekobot-md */
+ Bot: https://github.com/Gatito-kw/nekobot-md 
 
 import {WAMessageStubType} from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
@@ -97,4 +97,4 @@ export async function before(m, {conn, participants, groupMetadata}) {
     await conn.sendMessage(m.chat, {text: txt7, mentions: [...txt7.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt7.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": md, "sourceUrl": yt}}});
     //await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt7, mentions: mentionsContentM}, {quoted: fliveLoc})
   }
-} /* Cierre del comando */
+} Cierre del comando */
