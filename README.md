@@ -51,7 +51,7 @@ para usuarios del heroku
 
 ***
 ### `ACTIVAR EN TERMUX`
-- ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> **Note** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 termux-setup-storage
 ```
@@ -65,7 +65,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/Undefined17/CuriosityBot-MD && cd CuriosityBot-MD && yarn install && npm install
+git clone https://github.com/AzamiJs/CuriosityBot-MD && cd CuriosityBot-MD && yarn install && npm install
 ```
 
 ```bash
