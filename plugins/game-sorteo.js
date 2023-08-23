@@ -1,4 +1,4 @@
-import util from 'util'
+/*import util from 'util'
 import path from 'path'
 let user = a => '@' + a.split('@')[0]
 let handler = async (m, { groupMetadata, command, conn, participants }) => {
@@ -16,4 +16,4 @@ handler.help = handler.command = ['sorteo']
 handler.tags = ['game']
 handler.group = true
 handler.register = true
-export default handler  
+export default handler  */
