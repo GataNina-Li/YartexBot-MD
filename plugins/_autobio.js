@@ -1,5 +1,6 @@
 let handler = m => m
 handler.all = async function (m) {
+if (stopped === 'close' || !conn || !conn.user) return
 let setting = global.db.data.settings[this.user.jid]
 	
 let _muptime
