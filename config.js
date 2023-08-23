@@ -1,6 +1,6 @@
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
-const fs = require('fs')
+import fs from 'fs'
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import axios from 'axios'
