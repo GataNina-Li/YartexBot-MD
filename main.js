@@ -221,7 +221,7 @@ throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
 console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)}
 } catch (e) {
 console.log(`Error: ${e.message}`)}}}*/
- 
+  }}
 process.on('uncaughtException', console.error)
 
 let isInit = true
