@@ -13,29 +13,17 @@ if (command === 'play') {
 additionalText = 'AUDIO'
 } else if (command === 'play2') {
 additionalText = 'VIDEO'}
-let texto1 = `*∘ 📑 TÍTULO*
+let texto1 = `*∘ 📑 DESCARGANDO*
 ${yt_play[0].title}
-
-*∘ 📆 PUBLICADO:*
-${yt_play[0].ago}
 
 *∘ ⏰ DURACIÓN:* 
 ${secondString(yt_play[0].duration.seconds)}
-
- *∘ 👀 VISTAS*
-${MilesNumber(yt_play[0].views)}
 
 *∘ 👤 AUTOR*
 ${yt_play[0].author.name}
 
 *∘ 📍 CANAL*
 ${yt_play[0].author.url}
-
-*∘ 🗳️ ID*
-${yt_play[0].videoId}
-
-*∘ 🗂️ TIPO* 
-${yt_play[0].type}
 
 *∘ 📎 LINK*
 ${yt_play[0].url}
