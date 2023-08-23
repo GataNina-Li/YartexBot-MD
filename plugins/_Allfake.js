@@ -1,4 +1,4 @@
-/*import fs from 'fs'
+import fs from 'fs'
 import fetch from 'node-fetch'
 import axios from 'axios'
 import moment from 'moment-timezone'
@@ -160,5 +160,5 @@ handler.all = async function (m) {
 
 	
 } 
-export default handler*/
+export default handler
 
