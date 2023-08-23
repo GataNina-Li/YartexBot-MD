@@ -188,7 +188,7 @@ console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES ')
 backupCreds()
 actualizarNumero()
 credsStatus()
-try {
+/*try {
 // Leer la base de datos
 await db.read()
 const chats = db.data.chats
@@ -220,7 +220,7 @@ throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
 } else {
 console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)}
 } catch (e) {
-console.log(`Error: ${e.message}`)}}}
+console.log(`Error: ${e.message}`)}}}*/
  
 process.on('uncaughtException', console.error)
 
