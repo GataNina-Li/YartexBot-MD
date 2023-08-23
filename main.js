@@ -221,7 +221,7 @@ throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
 console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)}
 } catch (e) {
 console.log(`Error: ${e.message}`)}}}
-
+ 
 process.on('uncaughtException', console.error)
 
 let isInit = true
@@ -472,4 +472,6 @@ purgeOldFiles()
 console.log(chalk.yellowBright(`AUTO_PURGE_OLDFILES │ ARCHIVOS ELIMINADOS`))
 }, 1000 * 60 * 60)
 
-_quickTest().catch(console.error)
+_quickTest()
+.then(() => conn.logger.info(`\n\nC A R G A N D O ⚡\n`))
+.catch(console.error)
