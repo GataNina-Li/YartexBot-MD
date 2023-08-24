@@ -517,7 +517,7 @@ export async function participantsUpdate({ id, participants, action }) {
                     let apii = await this.getFile(pp)
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
          (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])		    
-this.sendFile(id, 'pp.jpg', pp, Message, fake)                             
+this.sendFile(id, apii.data, 'pp.jpg', Message, null, false, { mentions: [user] })                       
                    }
                 }
             }
