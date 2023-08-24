@@ -532,10 +532,10 @@ sellerJid: '0@s.whatsapp.net' }}}}
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]
 let Message = {
-document: imagen1, 
+document: pp, 
 fileName: `𝙚𝙡 𝙢𝙚𝙟𝙤𝙧 𝙗𝙤𝙩 𝙙𝙚 𝙬𝙝𝙖𝙩𝙨𝙖𝙥𝙥⁩`, 
 mimetype: `application/${document}`,
-jpegThumbnail: imagen1,
+jpegThumbnail: pp,
 caption: text,
 fileLength: "99999999999999",
 mentions: [user],
