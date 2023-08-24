@@ -601,7 +601,7 @@ global.dfail = (type, m, conn) => {
         mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES*',
         premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
         group: '⚠️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS!!!*',
-        private: '⚠️️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT!!!*',
+        private: '⚠️️ *LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT*',
         admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
         botAdmin: '⚠️️ *¡¡¡PARA USAR ESTA FUNCIÓN DEBO SER ADMIN!!!*',
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Undefined.17*',
