@@ -529,7 +529,7 @@ message: wm,
 orderTitle: 'WaBot',
 thumbnail: imagen1, 
 sellerJid: '0@s.whatsapp.net' }}}}      
-this.sendFile(id, apii.data, 'pp.jpg', text, fake, null, false, { mentions: [user] })                             
+this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user], fake })                             
                    }
 	
 
