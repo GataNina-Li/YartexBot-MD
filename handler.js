@@ -509,7 +509,17 @@ export async function participantsUpdate({ id, participants, action }) {
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-			let pp = './src/sinfoto.jpg'
+			 let pp = './src/avatar_contact.png'
+                    try {
+                        pp = await this.profilePictureUrl(user, 'image')
+                    } catch (e) {
+                    } finally {
+                    let apii = await this.getFile(pp)
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
+                              (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })                             
+                   }
+	/*		let pp = './src/sinfoto.jpg'
 try {
 pp = await this.profilePictureUrl(user, 'image')
 } catch (e) {
@@ -557,7 +567,7 @@ contextInfo: {
 "mediaUrl": 'https://youtu.be/EaXoIuT3UQ0',
 "sourceUrl": 'https://www.xvideos.com' }}} 
 this.sendMessage(id, buttonMessage, fake)                          
-}}}
+}}}*/
                 }
             }
             break
