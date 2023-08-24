@@ -608,8 +608,11 @@ global.dfail = (type, m, conn) => {
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Undefined.17*',
         restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
     }[type]
-    if (msg) return m.reply(msg)
+    if (msg) return m.reply(msg), {
+        mentions: conn.parseMention(msg)
+    }
 }
+
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
