@@ -608,7 +608,7 @@ global.dfail = (type, m, conn) => {
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Undefined.17*',
         restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: img1 }}})
+    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: imagen4 }}})
 
 }
 
