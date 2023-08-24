@@ -13,7 +13,7 @@ if (command === 'play') {
 additionalText = 'AUDIO'
 } else if (command === 'play2') {
 additionalText = 'VIDEO'}
-let texto1 = `*∘ 📑 DESCARGANDO*
+let texto1 = `*∘ 📩 DESCARGANDO*
 ${yt_play[0].title}
 
 *∘ ⏰ DURACIÓN:* 
