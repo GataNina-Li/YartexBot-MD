@@ -5,7 +5,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 	if (!(text.includes('http://') || text.includes('https://'))) return m.reply(`url invalid, please input a valid url. Try with add http:// or https://`)
 	if (!text.includes('tiktok.com')) return m.reply(`Invalid Tiktok URL.`)
 	try {
-		let res = await fetch(`https://api.lolhuman.xyz/api/tiktokslide?apikey=${global.lolkey}&url=${text}`)
+		let res = await fetch(`https://api.lolhuman.xyz/api/tiktokslide?apikey=${global.lolkeysapi}&url=${text}`)
 		let anu = await res.json()
 		if (anu.status != '200') throw Error(anu.message)
 		anu = anu.result
