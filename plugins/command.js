@@ -1,6 +1,7 @@
-/* 
-* No es mio el plugin pero deja créditos 
+/*
+
 * https://github.com/AzamiJs/CuriosityBot-MD 
+
 */
 
 import fetch from 'node-fetch'
