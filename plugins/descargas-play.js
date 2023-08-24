@@ -6,7 +6,7 @@ import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 if (!text) throw `*𓊈🍓𓊉 𝙄𝙉𝙂𝙍𝙀𝙎𝘼 𝙀𝙇 𝙉𝙊𝙈𝘽𝙍𝙀 𝘿𝙀 𝙇𝘼 𝘾𝘼𝙉𝘾𝙄𝙊́𝙉 𝙌𝙐𝙀 𝙀𝙎𝙏𝘼𝙎 𝘽𝙐𝙎𝘾𝘼𝙉𝘿𝙊*\n\n*𓊈🍓𓊉 ✪⃟🍓─────────────────╮
 𝐄𝐣𝐞𝐦𝐩𝐥𝐨: Play Another Love 
-           ✪⃟🍓─────────────────╯\n*${usedPrefix + command}* Another love`
+             ✪⃟🍓─────────────────╯\n*${usedPrefix + command}* Another love`
 m.react(done) 
 try {
 const yt_play = await search(args.join(" "))
