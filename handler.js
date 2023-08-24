@@ -554,7 +554,7 @@ contextInfo: {
 "mediaUrl": 'https://youtu.be/EaXoIuT3UQ0',
 "sourceUrl": 'https://www.xvideos.com' }}}
 //this.sendMessage(id, Message, fake)			    
-this.sendFile(id, 'pp.jpg', Message, fake)                             
+this.sendFile(id, 'pp.jpg', pp, Message, fake)                             
                    }
 	
 
