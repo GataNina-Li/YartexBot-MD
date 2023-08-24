@@ -595,9 +595,6 @@ export async function deleteUpdate(message) {
 }
 
 global.dfail = (type, m, conn) => {
-    let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-    let nombre = conn.getName(who)
-    let sity = '👋 Hola, ${nombre}'
     let msg = {
         rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
         owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
