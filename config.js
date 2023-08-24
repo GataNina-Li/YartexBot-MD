@@ -36,8 +36,6 @@ global.imagen1 = fs.readFileSync('./storage/menus/Menu1.jpg')
 global.imagen2 = fs.readFileSync('./storage/menus/Menu2.jpg')
 global.imagen3 = fs.readFileSync('./storage/menus/Menu3.jpg')
 global.imagen4 = fs.readFileSync('./storage/menus/Menu4.jpg')
-global.imagen7 = fs.readFileSync('./storage/menus/Menu3.jpg')
-global.imagen8 = fs.readFileSync('./storage/menus/Menu4.jpg')
 global.nuevobot = fs.readFileSync('./src/nuevobot.jpg')
 global.prebot = fs.readFileSync('./src/Pre Bot Publi.png')
 
@@ -46,7 +44,7 @@ global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 global.img1 = 'https://telegra.ph/file/fb67a56866c02ba02fa50.jpg'
 
 /*=========== Total Imagenes ============*/
-global.sityImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13]
+global.sityImg = [imagen1, imagen2, imagen3, imagen4]
 
 /*=========== STICKERS ===========*/
 global.packname = 'CuriosityBot-MD.js'
