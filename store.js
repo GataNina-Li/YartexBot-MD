@@ -33,6 +33,7 @@ global.APIs = {
   LeysCoder: 'https://leyscoders-api.herokuapp.com',
   adiisus: 'https://adiixyzapi.herokuapp.com',
   lol: 'https://api.lolhuman.xyz',
+  fgmods: 'https://api-fgmods.ddns.net',
   pencarikode: 'https://pencarikode.xyz',
   Velgrynd: 'https://velgrynd.herokuapp.com',
   rey: 'https://server-api-rey.herokuapp.com',
@@ -44,7 +45,6 @@ global.APIs = {
   ana: 'https://anabotofc.herokuapp.com/',
   kanx: 'https://kannxapi.herokuapp.com/',
   dhnjing: 'https://dhnjing.xyz'
-  fgmods: 'https://api-fgmods.ddns.net'
 },
 
 global.APIKeys = {  
