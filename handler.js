@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url'
 import path, { join } from 'path'
 import { unwatchFile, watchFile } from 'fs'
 import chalk from 'chalk'
-import moment from 'moment-timezone'
 
 /**
  * @type {import('@whiskeysockets/baileys')}
@@ -509,15 +508,15 @@ export async function participantsUpdate({ id, participants, action }) {
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-			 let pp = './src/avatar_contact.png'
+                    let pp = './src/avatar_contact.png'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
                     } finally {
                     let apii = await this.getFile(pp)
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
-         (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])		    
-this.sendFile(id, apii.data, 'pp.jpg', Message, null, false, { mentions: [user] })                       
+                              (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })                             
                    }
                 }
             }
@@ -596,44 +595,20 @@ export async function deleteUpdate(message) {
 }
 
 global.dfail = (type, m, conn) => {
-    let foto = sityImg.getRandom()
     let msg = {
         rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
         owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
         mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES*',
         premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
         group: '⚠️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS!!!*',
-        private: '⚠️️ *LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT*',
+        private: '⚠️️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT!!!*',
         admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
         botAdmin: '⚠️️ *¡¡¡PARA USAR ESTA FUNCIÓN DEBO SER ADMIN!!!*',
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Undefined.17*',
         restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: foto }}})
-
+    if (msg) return m.reply(msg)
 }
-
-function ucapan() {
-  const time = moment.tz('America/Los_Angeles').format('HH')
-  let res = "¿por qué no has dormido todavía?? 🥱"
-  if (time >= 4) {
-    res = "Buenos Días 🌄"
-  }
-  if (time >= 10) {
-    res = "Buenas Tardes ☀️"
-  }
-  if (time >= 15) {
-    res = "Buenas Noches 🌌"
-  }
-  if (time >= 18) {
-    res = "Buenas Madrugadas 🪐"
-  }
-  return res
-}
-function pickRandom(list) {
-     return list[Math.floor(Math.random() * list.length)]
-}
-
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
