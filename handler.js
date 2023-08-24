@@ -528,8 +528,32 @@ surface : 1,
 message: wm, 
 orderTitle: 'WaBot',
 thumbnail: imagen1, 
-sellerJid: '0@s.whatsapp.net' }}}}      
-this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user], fake })                             
+sellerJid: '0@s.whatsapp.net' }}}}
+var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
+var document = doc[Math.floor(Math.random() * doc.length)]
+let Message = {
+document: imagen1, 
+fileName: `𝙚𝙡 𝙢𝙚𝙟𝙤𝙧 𝙗𝙤𝙩 𝙙𝙚 𝙬𝙝𝙖𝙩𝙨𝙖𝙥𝙥⁩`, 
+mimetype: `application/${document}`,
+jpegThumbnail: imagen1,
+caption: text,
+fileLength: "99999999999999",
+mentions: [user],
+footer: groupMetadata.subject,
+headerType: 4,   
+contextInfo: {
+'forwardingScore': 200,
+'isForwarded': false,
+"mentionedJid": [user],
+"externalAdReply": {
+"showAdAttribution": false,
+"title": `𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝙳𝙴 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾𝙽`,
+"mediaType": 2, 
+"previewType": "VIDEO",
+"thumbnail": apii.data,
+"mediaUrl": 'https://youtu.be/EaXoIuT3UQ0',
+"sourceUrl": 'https://www.xvideos.com' }}}			    
+this.sendFile(id, apii.data, 'pp.jpg', Message, null, false, { mentions: [user], fake })                             
                    }
 	
 
