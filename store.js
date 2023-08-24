@@ -44,6 +44,7 @@ global.APIs = {
   ana: 'https://anabotofc.herokuapp.com/',
   kanx: 'https://kannxapi.herokuapp.com/',
   dhnjing: 'https://dhnjing.xyz'
+  fgmods: 'https://api-fgmods.ddns.net'
 },
 
 global.APIKeys = {  
