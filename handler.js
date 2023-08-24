@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 import path, { join } from 'path'
 import { unwatchFile, watchFile } from 'fs'
 import chalk from 'chalk'
+import moment from 'moment-timezone'
 
 /**
  * @type {import('@whiskeysockets/baileys')}
@@ -595,19 +596,42 @@ export async function deleteUpdate(message) {
 }
 
 global.dfail = (type, m, conn) => {
+let foto = sityImg.getRandom()
     let msg = {
         rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
         owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
         mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES*',
         premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
-        group: '⚠️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS!!!*',
-        private: '⚠️️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT!!!*',
+        group: '⚠️ *LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS*',
+        private: '⚠️️ *LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT*',
         admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
-        botAdmin: '⚠️️ *¡¡¡PARA USAR ESTA FUNCIÓN DEBO SER ADMIN!!!*',
-        unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Undefined.17*',
-        restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
+        botAdmin: '⚠️️ *PARA USAR ESTA FUNCIÓN DEBO SER ADMIN*',
+        unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Azami.25*',
+        restrict: '⚠️ *ESTA CARACTERÍSTICA ESTA DESACTIVADA*'
     }[type]
-    if (msg) return m.reply(msg)
+    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: foto }}})
+
+}
+
+function ucapan() {
+  const time = moment.tz('America/Los_Angeles').format('HH')
+  let res = "¿por qué no has dormido todavía?? 🥱"
+  if (time >= 4) {
+    res = "Buenos Días 🌄"
+  }
+  if (time >= 10) {
+    res = "Buenas Tardes ☀️"
+  }
+  if (time >= 15) {
+    res = "Buenas Noches 🌌"
+  }
+  if (time >= 18) {
+    res = "Buenas Madrugadas 🪐"
+  }
+  return res
+}
+function pickRandom(list) {
+     return list[Math.floor(Math.random() * list.length)]
 }
 
 let file = global.__filename(import.meta.url, true)
