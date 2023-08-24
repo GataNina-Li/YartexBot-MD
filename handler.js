@@ -596,6 +596,7 @@ export async function deleteUpdate(message) {
 }
 
 global.dfail = (type, m, conn) => {
+    let foto = sityImg.getRandom()
     let msg = {
         rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
         owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
@@ -608,7 +609,7 @@ global.dfail = (type, m, conn) => {
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Undefined.17*',
         restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: imagen4 }}})
+    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: foto }}})
 
 }
 
