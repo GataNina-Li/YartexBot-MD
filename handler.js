@@ -613,7 +613,7 @@ global.dfail = (type, m, conn) => {
 }
 
 function ucapan() {
-  const time = moment.tz('America/Cdmx').format('HH')
+  const time = moment.tz('America/Los_Angeles').format('HH')
   let res = "Es temprano en la mañana, ¿por qué no has dormido todavía?? 🥱"
   if (time >= 4) {
     res = "Buenos Días 🌄"
