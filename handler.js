@@ -596,7 +596,8 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-    let nmsr = conn.getName(who)
+    let nombre = conn.getName(who)
+    let sity = '👋 Hola, ${name}'
     let msg = {
         rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
         owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
@@ -609,7 +610,7 @@ global.dfail = (type, m, conn) => {
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Undefined.17*',
         restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola ${nmsr}', body: 'CuriosityBot-MD', sourceUrl: global.paypal, thumbnail: imagen1, mentions: [who] }}})
+    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: sity, body: 'CuriosityBot-MD', sourceUrl: global.paypal, thumbnail: imagen1, mentions: [who] }}})
 
 }
 
