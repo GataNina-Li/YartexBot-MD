@@ -552,8 +552,9 @@ contextInfo: {
 "previewType": "VIDEO",
 "thumbnail": apii.data,
 "mediaUrl": 'https://youtu.be/EaXoIuT3UQ0',
-"sourceUrl": 'https://www.xvideos.com' }}}			    
-this.sendFile(id, apii.data, 'pp.jpg', Message, null, false, { mentions: [user], fake })                             
+"sourceUrl": 'https://www.xvideos.com' }}}
+this.sendMessage(id, Message, fake)			    
+//this.sendFile(id, apii.data, 'pp.jpg', Message, null, false, { mentions: [user], fake })                             
                    }
 	
 
