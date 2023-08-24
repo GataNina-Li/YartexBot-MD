@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 	if (!text) throw `Example: ${usedPrefix + command} https://vt.tiktok.com/ZS81qJD5v/`
@@ -30,16 +30,16 @@ handler.premium = true
 handler.limit = true
 
 export default handler
+*/
 
-
-/*import fetch from 'node-fetch' 
+import fetch from 'node-fetch' 
  let handler = async (m, { args, usedPrefix, command }) => { 
      if (!args[0]) throw `✳️ Ingresa el link de Tiktok qué contenga images` 
      if (!args[0].match(/tiktok/gi)) throw `❎ El enlace debe ser de TikTok` 
   
      m.react(rwait)    
      try { 
-         let res = await fetch(global.API('fgmods', '/api/downloader/tiktok2', { url: args[0] }, 'apikey')) 
+         let res = await fetch(`https://api.lolhuman.xyz/api/tiktokslide?apikey=${global.lolkeysapi}&url=${text}`) 
          let data = await res.json() 
   
          let title = data.result.title 
@@ -64,4 +64,4 @@ export default handler
  handler.diamond = true 
   
  export default handler
-*/
+
