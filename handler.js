@@ -509,7 +509,56 @@ export async function participantsUpdate({ id, participants, action }) {
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-                    let pp = './src/avatar_contact.png'
+			let pp = './src/sinfoto.jpg'
+try {
+pp = await this.profilePictureUrl(user, 'image')
+} catch (e) {
+} finally {
+text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*Sin descripción*') :
+(chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+let apii = await this.getFile(pp)
+const fake = { quoted: {
+key : {
+participant : '0@s.whatsapp.net' },
+message: {
+orderMessage: {
+itemCount : 999999,
+status: 1,
+surface : 1,
+message: wm, 
+orderTitle: 'WaBot',
+thumbnail: imagen1, 
+sellerJid: '0@s.whatsapp.net' }}}}      
+var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
+var document = doc[Math.floor(Math.random() * doc.length)]
+//const buttons = [
+//{buttonId: (action == 'add' ? '.bienvenido' : '.despedida'), buttonText: {displayText: (action == 'add' ? '🌻 𝗕𝗜𝗘𝗡𝗩𝗘𝗡𝗜𝗗𝗢 🌻' : '🗑️ 𝗔𝗗𝗜𝗢𝗦 🗑️')}, type: 1},
+//{buttonId: `#menu`, buttonText: {displayText: '𝗠 𝗘 𝗡 𝗨 ☘️'}, type: 1}, ]
+let buttonMessage = {
+document: imagen1, 
+fileName: `𝙚𝙡 𝙢𝙚𝙟𝙤𝙧 𝙗𝙤𝙩 𝙙𝙚 𝙬𝙝𝙖𝙩𝙨𝙖𝙥𝙥⁩`, 
+mimetype: `application/${document}`,
+jpegThumbnail: imagen1,
+caption: text,
+fileLength: "99999999999999",
+mentions: [user],
+footer: groupMetadata.subject,
+headerType: 4,   
+contextInfo: {
+'forwardingScore': 200,
+'isForwarded': false,
+"mentionedJid": [user],
+"externalAdReply": {
+"showAdAttribution": false,
+"title": `𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝙳𝙴 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾𝙽`,
+"mediaType": 2, 
+"previewType": "VIDEO",
+"thumbnail": apii.data,
+"mediaUrl": 'https://youtu.be/EaXoIuT3UQ0',
+"sourceUrl": 'https://www.xvideos.com' }}} 
+this.sendMessage(id, buttonMessage, fake)                          
+}}}
+                   /* let pp = './src/avatar_contact.png'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
@@ -518,7 +567,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
 this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })                             
-                   }
+                   }*/
                 }
             }
             break
