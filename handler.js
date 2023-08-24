@@ -595,12 +595,13 @@ export async function deleteUpdate(message) {
 }
 
 global.dfail = (type, m, conn) => {
+    let nmsr = `👋 Hola *@${m.sender.split("@")[0]}*,`
     let msg = {
         rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
         owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
         mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES*',
         premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
-        group: '⚠️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS!!!*',
+        group: '${nmsr}\n\n⚠️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS!!!*',
         private: '⚠️️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT!!!*',
         admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
         botAdmin: '⚠️️ *¡¡¡PARA USAR ESTA FUNCIÓN DEBO SER ADMIN!!!*',
