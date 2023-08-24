@@ -22,7 +22,7 @@ global.suittag = ['59894808483']
 global.mods = ['59894808483'] 
 global.prems = ['59894808483']
 
-/*=========== IMÁGENES ===========*/
+/*=========== IMÁGENES MENU ===========*/
 global.raiz = './'
 global.aniD = 'sessions/'
 global.dirP = raiz//+aniD
@@ -39,8 +39,8 @@ global.imagen4 = fs.readFileSync('./storage/menus/Menu4.jpg')
 global.nuevobot = fs.readFileSync('./src/nuevobot.jpg')
 global.prebot = fs.readFileSync('./src/Pre Bot Publi.png')
 
-/*=========== IMÁGENES EN LINKS ===========*/
-global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
+/*=========== IMÁGENES ===========*/
+global.img = 'https://telegra.ph/file/814e64f578d98e4244a3d.jpg'
 global.img1 = 'https://telegra.ph/file/fb67a56866c02ba02fa50.jpg'
 
 /*=========== Total Imagenes ============*/
