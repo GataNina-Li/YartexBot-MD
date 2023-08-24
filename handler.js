@@ -522,12 +522,12 @@ key : {
 participant : '0@s.whatsapp.net' },
 message: {
 orderMessage: {
-itemCount : 999999,
+itemCount : 2023,
 status: 1,
 surface : 1,
 message: wm, 
 orderTitle: 'WaBot',
-thumbnail: imagen1, 
+thumbnail: pp, 
 sellerJid: '0@s.whatsapp.net' }}}}
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]
