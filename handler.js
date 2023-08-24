@@ -608,7 +608,7 @@ global.dfail = (type, m, conn) => {
         restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{
-forwardingScore: 9999999, isForwarded: true, externalAdReply: {title: global.wm, body: 'CuriosityBot-MD', sourceUrl: global.ig, thumbnail: imagen1 }}})
+forwardingScore: 9999999, isForwarded: true, externalAdReply: {title: global.wm, body: 'CuriosityBot-MD', sourceUrl: global.nn, thumbnail: imagen1 }}})
 
 }
 
