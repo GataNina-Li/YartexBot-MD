@@ -41,10 +41,16 @@ global.prebot = fs.readFileSync('./src/Pre Bot Publi.png')
 
 /*=========== IMÁGENES ===========*/
 global.img = 'https://telegra.ph/file/814e64f578d98e4244a3d.jpg'
-global.img1 = 'https://telegra.ph/file/fb67a56866c02ba02fa50.jpg'
+global.img1 = 'https://telegra.ph/file/74b7c003d04dec5875ba0.jpg'
+global.img2 = 'https://telegra.ph/file/9223caecc3e7b731073e2.jpg'
+global.img3 = 'https://telegra.ph/file/7deef65f6a53ecdd51cdd.jpg'
+global.img4 = 'https://telegra.ph/file/4f023f918af2bde72c839.jpg'
+global.img5 = 'https://telegra.ph/file/a34ebad4c9b5963c82f1a.jpg'
+global.img6 = 'https://telegra.ph/file/4e69f6c48d99f6c1174a9.jpg'
+global.img7 = 'https://telegra.ph/file/951275803faa754aff010.jpg'
 
 /*=========== Total Imagenes ============*/
-global.sityImg = [imagen1, imagen2, imagen3, imagen4]
+global.sityImg = [img, img1, img2, img3, img4, img5, img6, img7]
 
 /*=========== STICKERS ===========*/
 global.packname = 'CuriosityBot-MD.js'
