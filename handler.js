@@ -520,7 +520,7 @@ export async function participantsUpdate({ id, participants, action }) {
                     let apii = await this.getFile(pp)
 			    text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@date', global.fecha).replace('@time', global.tiempo).replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]).replace('@date', global.fecha).replace('@time', global.tiempo)
-                this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { contextInfo: { externalAdReply: { showAdAttribution: false, title: 'CuriosityBot-MD', body: global.wm, sourceUrl: global.nn, thumbnail: imagen1 }}, mentions: this.parseMention(text) })                        
+                this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { contextInfo: { externalAdReply: { showAdAttribution: false, title: 'CuriosityBot-MD', body: global.wm, sourceUrl: global.ig, thumbnail: imagen3 }}, mentions: this.parseMention(text) })                        
                    }
                 }
             }
