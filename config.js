@@ -62,13 +62,13 @@ global.yt = 'https://www.youtube.com/@Azami_Mods'
 global.ig = 'https://instagram.com/azami_ofc'
 global.md = 'https://github.com/AzamiJs/CuriosityBot-MD'
 global.paypal = 'https://paypal.me/Azami19'
-global.git = 'https://github.com/Undefined17'
+global.git = 'https://github.com/GataNina-Li'
 global.nn = 'https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU' //Grupo ofc
 global.nnn = 'https://chat.whatsapp.com/J1R402WH1N0Hdl3S0NDEYu' //Curiosity global
 global.nnnn = 'https://chat.whatsapp.com/KLpYFsitkgzJ15YQxZrBqO' //colaboración multi bots
 global.nnnnn = 'https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A' //enlace curiosity
 global.nna2 = 'J1R402WH1N0Hdl3S0NDEYu' 
-
+global.linkSity = [yt, ig, md, paypal, git, nn]
 /*=========== NOMBRES ===========*/
 global.wm = '© CuriosityBot-MD'
 global.wm2 = 'CuriosityBot-MD 🚀'
