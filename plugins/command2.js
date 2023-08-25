@@ -1,12 +1,12 @@
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-let str = '🍧 CuriosityBot-MD'
+let str = '*🍧 CuriosityBot-MD*'
  await conn.sendUrl(m.chat, str, m, { 
    externalAdReply: { 
       mediaType: 1, 
       renderLargerThumbnail: true, 
-      thumbnail: img1, 
-      thumbnailUrl: img1, 
+      thumbnail: imagen1, 
+      thumbnailUrl: imagen2, 
       title: '🍓 Azami', 
    }})
 }
