@@ -5,7 +5,7 @@ let str = '🍧 CuriosityBot-MD'
    externalAdReply: { 
       mediaType: 1, 
       renderLargerThumbnail: true, 
-      thumbnail: imagen1, 
+      thumbnail: img1, 
       thumbnailUrl: img1, 
       title: '🍓 Azami', 
    }})
