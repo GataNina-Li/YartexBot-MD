@@ -4,7 +4,7 @@ let handler = async (m, {conn, text}) => {
   try {
     if (global.conn.user.jid == conn.user.jid) {
       let stdout = execSync("git pull" + (m.fromMe && text ? " " + text : ""))
-      await await await conn.reply(m.chat, stdout.toString(), m)
+      await await await m.reply(update.toString())
     }
   } catch {
     var update = execSync("git remote set-url origin https://github.com/AzamiJs/CuriosityBot-MD.git && git pull")
