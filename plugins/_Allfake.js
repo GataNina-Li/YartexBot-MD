@@ -7,7 +7,7 @@ let handler = m => m
 handler.all = async function (m) {
 
 global.getBuffer = async function getBuffer(url, options) {
-	try {
+ try {
 		options ? options : {}
 		var res = await axios({
 			method: "get",
