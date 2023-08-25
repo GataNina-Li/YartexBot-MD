@@ -2,7 +2,7 @@
 
 * https://github.com/AzamiJs/CuriosityBot-MD 
 
-
+*/
 
 import fetch from 'node-fetch'
 
@@ -34,4 +34,4 @@ handler.command = /^((tt|tiktok)slide)$/i
 handler.premium = true
 handler.limit = true
 
-export default handler*/
+export default handler
