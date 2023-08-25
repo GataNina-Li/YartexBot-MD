@@ -6,7 +6,7 @@ import moment from 'moment-timezone'
 let handler = m => m
 handler.all = async function (m) {
 
-	global.getBuffer = async function getBuffer(url, options) {
+global.getBuffer = async function getBuffer(url, options) {
 	try {
 		options ? options : {}
 		var res = await axios({
