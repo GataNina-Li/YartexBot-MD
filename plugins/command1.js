@@ -2,7 +2,7 @@ import MessageType from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
 import fs from 'fs'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw `⚠️ *INGRESE EL NOMBRE DE UN REPOSITORIO DE GITHUB*\n\n❕ EJEMPLO: ${usedPrefix + command} CuriosityBot-MD`
+if (!text) throw `⚠️ *INGRESE EL NOMBRE DE UN REPOSITORIO DE GITHUB*\n\n❕ EJEMPLO:\n*${usedPrefix + command}* CuriosityBot-MD`
 try {
 //if (!text) throw `⚠️ *INGRESE EL NOMBRE DE UN REPOSITORIO DE GITHUB*\n\n❕ EJEMPLO: ${usedPrefix + command} CuriosityBot-MD`
 let res = await fetch(global.API('https://api.github.com', '/search/repositories', { q: text }))
