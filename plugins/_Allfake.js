@@ -167,6 +167,8 @@ global.faketick = { "key": { "participant": `0@s.whatsapp.net`, "remoteJid": "62
 global.fakeimg = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"imageMessage": { "title":`*${azami}*`, "h": `Hmm`,'seconds': '99999', 'imagePlayback': 'true', 'caption': `${wm2}\n          ${azami}`, 'jpegThumbnail': imagen1 }}}
 
 global.fakemsg = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "17608914335-1625305606@g.us" } : {}) }, message: { "extendedTextMessage": { "text":`${wm2}\n${azami}`, "title": `${wm2}`, 'jpegThumbnail': imagen1}}}
+
+global.flocation = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `${wm}\n   ${azami}`,jpegThumbnail: imagen1}}}
 	
 global.estiloaudio = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "15075705205-1625305606@g.us" } : {}) }, message: { "audioMessage": { "mimetype":"audio/ogg; codecs=opus", "seconds": "99569", "ptt": "true"   }}}	
 	
