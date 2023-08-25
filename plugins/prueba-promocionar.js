@@ -47,7 +47,7 @@ message = text
 url = false
 }
 
-let message2
+let message2 = ''
 message = text
 const linkRegex2 = /['"()]*(https:\/\/chat.whatsapp.com\/[0-9A-Za-z]{20,24}|\S+\.(jpg|jpeg|png|gif|mp4))['"()]*(?=\s|$)/ig;
 const enlacesConSignos = text.match(linkRegex2) || []
