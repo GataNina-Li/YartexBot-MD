@@ -26,7 +26,8 @@ let uptime = clockString(_uptime)
 
 let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu3.jpg'), thumbnail: fs.readFileSync('./storage/menus/Menu3.jpg'),sendEphemeral: true}}}
-const ftrol = {
+let links = linkSity.getRandom()
+    const ftrol = {
     key : {
     remoteJid: 'status@broadcast',
     participant : '0@s.whatsapp.net'
@@ -298,7 +299,7 @@ return _0x1a2b8a;
 }
 let buttonMessage = {
     'document': {
-        'url': yt,
+        'url': links,
     },
     'mimetype': td,
     'fileName': 'D A S H B O A R D',
@@ -312,7 +313,7 @@ let buttonMessage = {
             'title': 'Hola!!',
             'thumbnail': fs.readFileSync('./storage/menus/Menu1.jpg'),
             'renderLargerThumbnail': !![],
-            'sourceUrl': yt
+            'sourceUrl': links
         }
     },
   'caption': menu['trim']()
