@@ -1,5 +1,5 @@
 let handler = async (m, {conn, text}) => {
-  if (!text) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
+  if (!text) throw "**⏤͟͟͞͞🍓ESTE USUARIO @TAG FUE BANEADO CON ÉXITO, YA NO PUEDE  USAR CURIOSITYBOT-MD*"
   let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
