@@ -525,12 +525,12 @@ export async function participantsUpdate({ id, participants, action }) {
  mentionedJid:[user],
  "externalAdReply": {"showAdAttribution": true,
  "containsAutoReply": true,
- "title": ` Welcome`,
+ "title": `Welcome`,
 "body": `${wm}`,
  "previewType": "PHOTO",
 "thumbnailUrl": ``,
 "thumbnail": apii.data,
-"sourceUrl": md}}})
+"sourceUrl": nn}}})
 			    //this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })          
                    }
                 }
