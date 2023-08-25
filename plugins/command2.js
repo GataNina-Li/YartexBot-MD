@@ -5,11 +5,8 @@ let str = '*🍧 CuriosityBot-MD*'
  }})
 }
 
-handler.menu = ['tiktokslide <url>']
-handler.tags = ['search']
 handler.command = /^((a|a)a)$/i
+handler.owner = true
 
-handler.premium = true
-handler.limit = true
 
 export default handler
