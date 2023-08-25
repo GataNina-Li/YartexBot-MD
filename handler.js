@@ -518,8 +518,6 @@ export async function participantsUpdate({ id, participants, action }) {
                     } catch (e) {
                     } finally {
                     let apii = await this.getFile(pp)
-		let biot = await conn.fetchStatus(user).catch(_ => 'undefined') 
-                let bio = biot.status?.toString() || 'Sin Info'
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
 this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })                             
