@@ -6,12 +6,7 @@ const messageWithButtons = {
         <button class="baileys-button" data-id="1">Botón 1</button>
         <button class="baileys-button" data-id="2">Botón 2</button>
       </div>
-    `,
-    footer: 'Elige una opción',
-    buttons: [
-      { buttonId: '1', buttonText: 'Botón 1' },
-      { buttonId: '2', buttonText: 'Botón 2' },
-    ],
+    `
   };
 
     conn.sendMessage(m.chat, messageWithButtons)
