@@ -156,7 +156,7 @@ handler.all = async function (m) {
             message: { "liveLocationMessage": { "title": "Azami","h": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}		
            }
 
-
+global.fpoll = {"key": {"fromMe": false,"participant": "0@s.whatsapp.net","remoteJid": "status@broadcast" }, "message": {"pollCreationMessage": {"name": wm, "selectableOptionsCount": 1}}}
 
 	
 } 
