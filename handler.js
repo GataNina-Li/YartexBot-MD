@@ -529,7 +529,7 @@ export async function participantsUpdate({ id, participants, action }) {
 "body": `${wm}`,
  "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": pp,
+"thumbnail": apii.data,
 "sourceUrl": md}}})
 			    //this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })          
                    }
