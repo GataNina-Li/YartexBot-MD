@@ -24,7 +24,7 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
  'headerType': 6 }
  conn.sendMessage(m.chat, texto)}
  // m.reply('a')
-}
+
 handler.tags =['info'] 
 handler.help = ['script'] 
 handler.command = ['sc', 'script'] 
