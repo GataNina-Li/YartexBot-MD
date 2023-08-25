@@ -18,6 +18,6 @@ handler.tags = ['internet']
 handler.command = /^playlist|ytbuscar|yts(earch)?$/i
 handler.exp = 70
 handler.limit = 1
-handler.level = 4
+handler.level = 3
 export default handler
       
