@@ -522,7 +522,7 @@ export async function participantsUpdate({ id, participants, action }) {
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]).replace('@date', global.fecha).replace('@time', global.tiempo)
                             this.sendMessage(id, { text: text,
  contextInfo:{
- mentions:[user],
+ mentionedJid:[user],
  "externalAdReply": {"showAdAttribution": true,
  "containsAutoReply": true,
  "title": ` Welcome`,
