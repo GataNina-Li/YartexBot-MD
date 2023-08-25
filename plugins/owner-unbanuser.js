@@ -6,7 +6,7 @@ let handler = async (m, {conn, text}) => {
   if (!who) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
   let users = global.db.data.users
   users[who].banned = false
-  conn.reply(m.chat, `*✨EL USUARIO FUE DESBANEADO CON ÉXITO✨*\n🔰EL USUARIO YA PUEDE USAR CURIOSITY BOT🔓`, m)
+  conn.reply(m.chat, `*⏤͟͟͞͞🍓ESTE USUARIO FUE DESBANEADO CON ÉXITO*\n* YA PUEDE USAR CURIOSITYBOT-MD`, m)
 }
 handler.help = ["unbanuser"]
 handler.tags = ["owner"]
