@@ -98,8 +98,7 @@ const res = await conn.groupAcceptInvite(code)
 await delay(url ? 3000 : 2000) // Esperar 3 segundos antes de continuar
 totalTime += url ? 3000 : 2000
 
-let chat = global.db.data.chats[m.chat]
-chat.welcome = false
+
 
 let users = (await conn.groupMetadata(res)).participants.map(v => v.id)
 if (url) {
@@ -109,6 +108,8 @@ await conn.sendMessage(res, { video: url, mimetype: 'video/mp4', caption: messag
 } else {
 await conn.sendMessage(res, sendOptions, { quoted: fkontak })
 }} else {
+let chat = global.db.data.chats[m.chat]
+chat.welcome = false
 await conn.sendMessage(res, { text: message /*mentions: users */ }, { quoted: fkontak }) //, mentions: users
 }
 chat.welcome = false
