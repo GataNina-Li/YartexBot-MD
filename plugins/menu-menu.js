@@ -52,8 +52,20 @@ let d4 = 'application/pdf'
 let d5 = 'application/vnd.android.package-archive'
 let d6 = 'application/zip'
 let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
- 
- const fload = {
+
+    const fload = {
+key :{
+ mentionedJid:[user],
+ "externalAdReply": {"showAdAttribution": true,
+ "containsAutoReply": true,
+ "title": `W E L C O M E`,
+"body": `${wm}`,
+ "previewType": "PHOTO",
+"thumbnailUrl": ``,
+"thumbnail": apii.data,
+"sourceUrl": links}}}
+    
+    /*const fload = {
     key : {
     remoteJid: 'status@broadcast',
     participant : '0@s.whatsapp.net' 
@@ -69,7 +81,7 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     sellerJid: '0@s.whatsapp.net' 
     }
     }
-    }
+    }*/
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
 m.react('🚀')     
 let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
