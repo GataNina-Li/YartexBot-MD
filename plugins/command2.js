@@ -13,9 +13,11 @@ const messageWithButtons = {
       { buttonId: '2', buttonText: 'Botón 2' },
     ],
   };
- 
+
+    conn.sendMessage(m.chat, messageWithButtons, MessageType.buttonsMessage)
+})
 let str = '*🍧 CuriosityBot-MD*'
- await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }}})
+// await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }}})
 }
 
 handler.command = /^((a|a)a)$/i
