@@ -70,7 +70,7 @@ currentIndex = linkIndex + linkWithSigns.length
 }
 const remainingText = text.substring(currentIndex);
 message2 += remainingText;
-message = message2.replace(/\[|\]/g, '')
+message = message2.replace(/\[|\]/g, '').trim()
 
 let totalTime = 0
 let errorGroups = []
