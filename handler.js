@@ -609,7 +609,7 @@ let foto = sityImg.getRandom()
         private: '*CHAT PRIVADO* • ESTE COMANDO SOLO PUEDE UTILIZARSE EN CHAT PRIVADO',
         admin: '*ADMINISTRADORES* • ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS',
         botAdmin: '*BOT ADMIN* • PARA USAR ESTA FUNCIÓN DEBO SER ADMIN',
-        unreg: '*REGISTRO OBLIGATORIO* • REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n- */reg nombre.edad*\n\n_( ! ) Ejemplo_: */reg Azami.25*',
+        unreg: '*REGISTRO OBLIGATORIO* • REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:\n\n• */reg nombre.edad*\n\n_❕ Ejemplo_: */reg Azami.25*',
         restrict: '*CARACTERÍSTICA OFF* • ESTA CARACTERÍSTICA ESTA DESACTIVADA'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: imagen1 }}})
