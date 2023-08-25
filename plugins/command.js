@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import fs from 'fs'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 try {
-if (!text) throw `⚠️ Ingrese el nombre de un repositorio de github\n\n📌 Ejemplo: ${usedPrefix + command} CuriosityBot-MD`
+if (!text) throw `⚠️ *INGRESE EL NOMBRE DE UN REPOSITORIO DE GITHUB*\n\n❕ EJEMPLO: ${usedPrefix + command} CuriosityBot-MD`
 let res = await fetch(global.API('https://api.github.com', '/search/repositories', { q: text }))
 let json = await res.json()
 if (res.status !== 200) throw json
@@ -34,7 +34,7 @@ await conn.sendUrl(m.chat, str, m, {
   }
 })
 } catch {
-    m.reply('⚠️ *_Resultados no encontrados._*')
+    m.reply('⚠️ *RESULTADOS NO ENCONTRADOS.*')
   }
 }
 handler.help = ['githubsearch'].map(v => v + '')
