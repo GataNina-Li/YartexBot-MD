@@ -606,7 +606,7 @@ let foto = sityImg.getRandom()
         mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES*',
         premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
         group: '⚠️ *LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS*',
-        private: '*SOLO PRIVADO •* ESTA FUNCION SOLO PUEDE SER USADA EN EL CHAT PRIVADO',
+        private: '*⚠️ 𝐄𝐬𝐭𝐚 𝐟𝐮𝐧𝐜𝐢𝐨́𝐧 𝐬𝐨𝐥𝐨 𝐩𝐮𝐞𝐝𝐞 𝐬𝐞𝐫 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐝𝐚 𝐞𝐧 𝐞𝐥 𝐜𝐡𝐚𝐭 𝐩𝐫𝐢𝐯𝐚𝐝𝐨*',
         admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
         botAdmin: '⚠️️ *PARA USAR ESTA FUNCIÓN DEBO SER ADMIN*',
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Azami.25*',
