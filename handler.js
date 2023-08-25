@@ -600,8 +600,66 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
 let foto = sityImg.getRandom()
-var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
-var document = doc[Math.floor(Math.random() * doc.length)]
+function _0x2daf() {
+    const _0x4c1076 = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/menus/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat'];
+    _0x2daf = function() {
+        return _0x4c1076;
+    };
+    return _0x2daf();
+}
+const _0x110137 = _0x13bb; 
+(function(_0x14d3d7, _0x67b65e) {
+    const _0x3a56bf = {
+            _0x2e964c: 0x1b0,
+            _0x4fc539: 0x1bd,
+            _0x2a1845: 0x1b1,
+            _0x2b6724: 0x1b3,
+            _0x4293cc: 0x1b8,
+            _0x59080a: 0x1b9
+        },
+        _0x30692c = _0x13bb,
+        _0x119b1c = _0x14d3d7();
+    while (!![]) {
+        try {
+            const _0x181128 = parseInt(_0x30692c(0x1bb)) / 0x1 * (parseInt(_0x30692c(_0x3a56bf._0x2e964c)) / 0x2) + parseInt(_0x30692c(_0x3a56bf._0x4fc539)) / 0x3 + parseInt(_0x30692c(_0x3a56bf._0x2a1845)) / 0x4 + parseInt(_0x30692c(_0x3a56bf._0x2b6724)) / 0x5 * (parseInt(_0x30692c(0x1bc)) / 0x6) + -parseInt(_0x30692c(0x1ad)) / 0x7 + -parseInt(_0x30692c(0x1be)) / 0x8 + parseInt(_0x30692c(_0x3a56bf._0x4293cc)) / 0x9 * (-parseInt(_0x30692c(_0x3a56bf._0x59080a)) / 0xa);
+            if (_0x181128 === _0x67b65e) break;
+            else _0x119b1c['push'](_0x119b1c['shift']());
+        } catch (_0x1caf7d) {
+            _0x119b1c['push'](_0x119b1c['shift']());
+        }
+    }
+}(_0x2daf, 0x235d2));
+
+function _0x13bb(_0x16c7de, _0x1a27b8) {
+const _0x2dafbc = _0x2daf();
+return _0x13bb = function(_0x13bbaf, _0x156d41) {
+_0x13bbaf = _0x13bbaf - 0x1ad;
+let _0x1a2b8a = _0x2dafbc[_0x13bbaf];
+return _0x1a2b8a;
+}, _0x13bb(_0x16c7de, _0x1a27b8);
+}
+let buttonMessage = {
+    'document': {
+        'url': ig
+    },
+    'mimetype': td,
+    'fileName': 'D A S H B O A R D',
+    'fileLength': '99999999999999',
+    'pageCount': '999',
+    'contextInfo': {
+    'externalAdReply': {
+    'showAdAttribution': !![],
+            'mediaType': 0x1,
+            'previewType': "PHOTO",
+            'title': 'Hola!!',
+            'thumbnail': fs.readFileSync('./storage/menus/Menu1.jpg'),
+            'renderLargerThumbnail': !![],
+            'sourceUrl': ig
+        }
+    },
+  'caption': msg['trim']()
+}
+if (msg) return await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)], buttonMessage)
     let msg = {
         rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
         owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
@@ -614,7 +672,7 @@ var document = doc[Math.floor(Math.random() * doc.length)]
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Azami.25*',
         restrict: '⚠️ *ESTA CARACTERÍSTICA ESTA DESACTIVADA*'
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, document: imagen1, fileName: `Curiosity⁩`, mimetype: `application/${document}`, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: imagen1 }}})
+    //if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, document: imagen1, fileName: `Curiosity⁩`, mimetype: `application/${document}`, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: imagen1 }}})
 
 }
 
