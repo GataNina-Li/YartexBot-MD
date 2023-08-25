@@ -280,7 +280,7 @@ conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
 }
   
- conn.welcome = '┏━━━━━━━━━━━━\n┃──〘 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
+ conn.welcome = '🍓 @user Gracias por unirte al grupo\n\n                *W E L C O M E*\n⫹⫺ @subject\n\n⫹⫺ leer la *Descripción*\n@desc'
   conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
    conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
     conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS!!*'
@@ -504,21 +504,7 @@ setInterval(async () => {
      purgeOldFiles()
     console.log(chalk.yellowBright(`AUTO_PURGE_OLDFILES │ ARCHIVOS ELIMINADOS`))
     }, 1000 * 60 * 60)
-setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
-  const status = global.db.data.settings[conn.user.jid] || {};
-  const _uptime = process.uptime() * 1000;
-  const uptime = clockString(_uptime);
-  const bio = `🥏 Soy ${cb} | ⏰ Activo durante: ${uptime}\n\n | 🎨 Creado por Azami `;
-  await conn.updateProfileStatus(bio).catch((_) => _);
-}, 60000);
-function clockString(ms) {
-  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
-  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
-  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [d, ' Día(s) ️', h, ' Hora(s) ', m, ' Minuto(s) ', s, ' Segundo(s) '].map((v) => v.toString().padStart(2, 0)).join('');
-            }
+
 _quickTest()
 .then(() => conn.logger.info(`\n\nC A R G A N D O ⚡\n`))
 .catch(console.error)
