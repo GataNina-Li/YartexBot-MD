@@ -113,7 +113,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
     <td align="center"><a href="https://github.com/HACHEJOTA"><img src="https://github.com/HACHEJOTA.png?size=100" width="100px;" alt=""/><br /><sub><b>HJ</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
    <td align="center"><a 
   href="https://github.com/Aleixon127271"><img src="https://github.com/Aleixon127271.png?size=100" width="100px;" alt=""/><br /><sub><b>Aleixon</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/Ender-GB-Isis777"><img src="https://github.com/Ender-GB-Isis777.png?size=100" width="100px;" alt=""/><br /><sub><b>Ender GB</b></sub></a><br /><sub><i>Desarrollador Oficial</i>
+    <td align="center"><a href="https://github.com/Ender-GB-Isis777"><img src="https://github.com/Ender-GB-Isis777.png?size=100" width="100px;" alt=""/><br /><sub><b>Ender Gay</b></sub></a><br /><sub><i>Desarrollador Oficial</i>
     <td align="center"><a 
     href="https://github.com/Aleixon127271"><img src="https://github.com/KimdanBot-MD.png?size=100" width="100px;" alt=""/><br /><sub><b>Jose.Ofc</b></sub></a><br /><sub><i>Desarollador oficial</i></sub></td> 
     <td align="center"><a 
