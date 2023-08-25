@@ -45,5 +45,6 @@ async function handler(m, { conn, groupMetadata }) {
 handler.command = ['ruleta'];
 handler.group = true
 handler.admin = true
+handle.owner = true
 espadmins = true
 export default handler;
