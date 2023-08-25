@@ -520,7 +520,18 @@ export async function participantsUpdate({ id, participants, action }) {
                     let apii = await this.getFile(pp)
 			    text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@date', global.fecha).replace('@time', global.tiempo).replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]).replace('@date', global.fecha).replace('@time', global.tiempo)
-               this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })          
+                            conn.sendMessage(id, { text: text,
+ contextInfo:{
+ mentions:[user],
+ "externalAdReply": {"showAdAttribution": true,
+ "containsAutoReply": true,
+ "title": ` Welcome`,
+"body": `${wm}`,
+ "previewType": "PHOTO",
+"thumbnailUrl": ``,
+"thumbnail": pp,
+"sourceUrl": md}}})
+			    //this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })          
                    }
                 }
             }
