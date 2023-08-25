@@ -36,13 +36,11 @@ export async function before(m, {conn, participants, groupMetadata}) {
   }
    
   if (chat.detect2 && m.messageStubType == 27) {
-    let txt3 = `┏━━━━━━━━━━━━\n┃──〘`
-    txt3 += ` 💛 *WELCOME* 💛〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @${m.messageStubParameters[0].split`@`[0]} bienvenid@ a_* `
+    let txt3 = `*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n`
+    txt3 += `🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time\n\n*`
     if (!m.sender.endsWith('@g.us')) {
-      txt3 += `\n┃ _*${groupName} ✨*_\n┃\n┃`
-      txt3 += ` *Fue aprobado por:* @${m.sender.split`@`[0]}\n┃ *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n${groupMetadata.desc?.toString() || '⚠️ No hay descripción!!'}\n\n┗━━━━━━━━━━━`
+      txt3 += `❕ *• Fue aprobado por:* @${m.sender.split`@`[0]}\n`
     } else {
-      txt3 += `\n┃*_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n${groupMetadata.desc?.toString() || '⚠️ No hay descripción!!'}\n\n┗━━━━━━━━━━━`
     }
     await conn.sendMessage(m.chat, {image: pp, caption: txt3, mentions: mentionsContentM}, {quoted: fliveLoc})
   }
