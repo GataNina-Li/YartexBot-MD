@@ -102,6 +102,16 @@ global.waittt = '*_CASI LISTO 🚀_*'
 global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
 
+/*=========== HORARIO ==========*/
+global.d = new Date(new Date + 3600000) 
+ global.locale = 'es' 
+ global.dia = d.toLocaleDateString(locale, { weekday: 'long' }) 
+ global.fecha = d.toLocaleDateString('es', { day: 'numeric', month: 'numeric', year: 'numeric' }) 
+ global.mes = d.toLocaleDateString('es', { month: 'long' }) 
+ global.año = d.toLocaleDateString('es', { year: 'numeric' }) 
+ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+
+
 global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 
 global.rpg = {
