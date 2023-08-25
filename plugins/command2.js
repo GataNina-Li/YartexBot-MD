@@ -5,7 +5,7 @@ let str = 'a'
    externalAdReply: { 
       mediaType: 1, 
       renderLargerThumbnail: true, 
-      thumbnail: img2, 
+      thumbnail: imagen1, 
       thumbnailUrl: imagen1, 
       title: 'A', 
    }})
