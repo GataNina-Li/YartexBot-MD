@@ -526,7 +526,7 @@ export async function participantsUpdate({ id, participants, action }) {
  mentionedJid:[user],
  "externalAdReply": {"showAdAttribution": true,
  "containsAutoReply": true,
- "title": `Welcome`,
+ "title": `W E L C O M E`,
 "body": `${wm}`,
  "previewType": "PHOTO",
 "thumbnailUrl": ``,
