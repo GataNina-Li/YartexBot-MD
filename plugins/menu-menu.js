@@ -38,7 +38,7 @@ const ftrol = {
     surface : 1,
     message: `Hola ${name}!`, 
     orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch(pp)).buffer(), //Gambarnye
+    thumbnail: await (await fetch(pp)).buffer(),
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -298,7 +298,7 @@ return _0x1a2b8a;
 }
 let buttonMessage = {
     'document': {
-        'url': ig
+        'url': yt,
     },
     'mimetype': td,
     'fileName': 'D A S H B O A R D',
@@ -319,7 +319,7 @@ let buttonMessage = {
 }
 await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)], buttonMessage, { 'quoted': fkontak })
 } catch {
-conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENUCOMPLETO: (.menucompleto)*', m)
+conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENU COMPLETO: (.menucompleto)*', fpoll, m)
 }}
 handler.tags = ['main']
 handler.command = /^(menu)$/i
