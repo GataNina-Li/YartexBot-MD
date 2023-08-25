@@ -55,7 +55,6 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
 
     const fload = {
 key :{
- mentionedJid:[user],
  "externalAdReply": {"showAdAttribution": true,
  "containsAutoReply": true,
  "title": `W E L C O M E`,
