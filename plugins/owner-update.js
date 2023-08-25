@@ -1,4 +1,4 @@
-import {execSync} from "child_process"
+/*import {execSync} from "child_process"
 let handler = async (m, {conn, text}) => {
   await conn.reply(m.chat, '❕ *A C T U A L I Z A N D O* ❕', fkontak, m)
   try {
@@ -17,4 +17,23 @@ handler.help = ["update"]
 handler.tags = ["owner"]
 handler.command = /^update|actualizar$/i
 handler.rowner = true
-export default handler
+export default handler*/
+
+
+import { execSync } from 'child_process'
+let handler = async (m, { conn, text }) => {
+try {  
+if (global.conn.user.jid == conn.user.jid) {
+let stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : ''))
+conn.reply(m.chat, stdout.toString(), m)}
+//} catch {
+var update = execSync('git remote set-url origin https://github.com/GataNina-Li/GataBot-MD.git && git pull')
+await m.reply(update.toString())
+} catch {
+await m.reply(`*⚠️ ERROR*`) 
+}}
+handler.help = ['update']
+handler.tags = ['owner']
+handler.command = /^update|actualizar$/i
+handler.rowner = true
+export default handler 
