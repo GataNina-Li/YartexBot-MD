@@ -1,7 +1,7 @@
 let handler = async (m, {conn, text}) => {
   if (!text) throw "*⏤͟͟͞͞🍓ESTE USUARIO @TAG FUE BANEADO CON ÉXITO, YA NO PUEDE  USAR CURIOSITYBOT-MD*"
   let who
-  if (m.isGroup) who = m.mentionedJid[0]
+  if (m.isGroup) who = m.mentionedJid[0]}`
   else who = m.chat
   if (!who) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
   let users = global.db.data.users
