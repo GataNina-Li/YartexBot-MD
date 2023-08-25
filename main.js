@@ -280,7 +280,7 @@ conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
 }
 
-  conn.welcome = '*• Holaa :D Bienvenido/a al grupo!!*\n*━━━━━━━━━━━━━━━━*\n\n🌺 *• Nombre:* @user\n🌿 *• Bio:* @bio\n\n- *recuerda leer las reglas del grupo* -'
+  conn.welcome = '*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n\n🍓 *• Descripción:*\n@desc'
 // conn.welcome = '\t\t\t\t\t\t\t\t\t\t\t*W E L C O M E*\n\n*@user*\nGracias por unirte al *grupo*\n\*Descripción:*\n@desc'
   conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
    conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
