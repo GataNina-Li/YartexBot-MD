@@ -64,7 +64,7 @@ message2 = message2.trim()
 currentIndex = linkIndex + linkWithSigns.length
 }
 
-const remainingText = message2.substring(currentIndex)
+const remainingText = text.substring(currentIndex)
 message2 += remainingText
 message = message2
 
