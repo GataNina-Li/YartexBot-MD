@@ -25,7 +25,6 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
  conn.sendMessage(m.chat, texto, { quoted: m })}
  // m.reply('a')
   
-}
 handler.tags =['info'] 
 handler.help = ['script'] 
 handler.command = ['sc', 'script'] 
