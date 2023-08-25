@@ -3,8 +3,8 @@ const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './
 const groupAdmins = participants.filter(p => p.admin)
 const listaAdmins = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-if (!text) return m.reply(`*⚠️ POR FAVOR COLOQUE SU MOTIVO PARA INVOCAR A LOS ADMINS*`)
-if (text.length < 10) return m.reply(`*⚠️ EL MOTIVO ES MUY CORTO, MINIMO 10 CARÁCTERES*`)
+if (!text) return m.reply(`*[⚠️] POR FAVOR COLOQUE SU MOTIVO PARA INVOCAR A LOS ADMINS*`)
+if (text.length < 10) return m.reply(`*[⚠️] EL MOTIVO ES MUY CORTO, MINIMO 10 CARÁCTERES*`)
 let mensaje = args.join` `
 let yo = `*✉️ MENSAJE:* ${text}`
 let texto = `*⬡ 🔰 INVOCANDO ADMINS*
