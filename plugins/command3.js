@@ -8,7 +8,7 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
  'fileName': `CuriosityBot-MD`, 
  'fileLength': 99999999999999, 
  'pageCount': 200, 
- 'contextInfo': { 
+ 'contextInfo': {
  'forwardingScore': 200, 
  'isForwarded': true, 
  'externalAdReply': { 
@@ -22,9 +22,9 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
  'caption': texto1, 
  'footer': '\n🍧😸', 
  'headerType': 6 }
- conn.sendMessage(m.chat, texto, { quoted: m })}
+ conn.sendMessage(m.chat, texto)}
  // m.reply('a')
-  
+}
 handler.tags =['info'] 
 handler.help = ['script'] 
 handler.command = ['sc', 'script'] 
