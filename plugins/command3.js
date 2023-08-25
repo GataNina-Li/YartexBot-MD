@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   let git = '🗿'
   let fake = { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '😾 Script', }}
   m.reply('a')
-  await conn.sendUrl(m.chat, git, fpay, m)
+  await conn.sendUrl(m.chat, git, fake, m, { quoted: fpay, })
  
 }
 
