@@ -601,16 +601,16 @@ export async function deleteUpdate(message) {
 global.dfail = (type, m, conn) => {
 let foto = sityImg.getRandom()
     let msg = {
-        rowner: '*SOLO DESARROLLADOR* • ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR',
-        owner: '*SOLO PROPIETARIO* •ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR',
-        mods: '*MODERADORES* • ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES',
-        premium: '*PREMIUM* •ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
-        group: '*CHAT GRUPAL* • LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS',
-        private: '*CHAT PRIVADO* • ESTE COMANDO SOLO PUEDE UTILIZARSE EN CHAT PRIVADO',
-        admin: '*ADMINISTRADORES* • ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS',
-        botAdmin: '*BOT ADMIN* • PARA USAR ESTA FUNCIÓN DEBO SER ADMIN',
-        unreg: '*REGISTRO OBLIGATORIO* • REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:\n\n• */reg nombre.edad*\n\n_❕ Ejemplo_: */reg Azami.25*',
-        restrict: '*CARACTERÍSTICA OFF* • ESTA CARACTERÍSTICA ESTA DESACTIVADA'
+        rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
+        owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
+        mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES*',
+        premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
+        group: '⚠️ *LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS*',
+        private: '*SOLO PRIVADO •* ESTA FUNCION SOLO PUEDE SER USADA EN EL CHAT PRIVADO',
+        admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
+        botAdmin: '⚠️️ *PARA USAR ESTA FUNCIÓN DEBO SER ADMIN*',
+        unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Azami.25*',
+        restrict: '⚠️ *ESTA CARACTERÍSTICA ESTA DESACTIVADA*'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: imagen1 }}})
 
