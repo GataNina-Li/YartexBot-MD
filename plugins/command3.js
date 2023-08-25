@@ -16,7 +16,7 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
  'mediaType': 2, 
  'previewType': 'pdf', 
  'title': ``, 
- 'body': global.author, 
+ 'body': global.azami, 
  'thumbnail': global.img3, 
  'sourceUrl': 'https://wa.me/593' }}, 
  'caption': texto1, 
