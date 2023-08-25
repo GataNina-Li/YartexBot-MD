@@ -520,7 +520,9 @@ export async function participantsUpdate({ id, participants, action }) {
                     let apii = await this.getFile(pp)
 			    text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@date', global.fecha).replace('@time', global.tiempo).replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]).replace('@date', global.fecha).replace('@time', global.tiempo)
-			    this.sendUrl(m.chat, text, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: pp, thumbnailUrl: pp, title: 'Curiosity', }})
+			   conn.sendMessage(m.chat, { text: text, contextInfo:{ forwardingScore: 9999999, isForwarded: true, mentionedJid:[m.sender], "externalAdReply": { "showAdAttribution": true, "renderLargerThumbnail": true, "thumbnail": pp, "title": `CuriosityBot-MD`, "containsAutoReply": true, "mediaType": 1, "mediaUrl": nn, "sourceUrl": nn }}})
+				
+			    //this.sendUrl(m.chat, text, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: pp, thumbnailUrl: pp, title: 'Curiosity', }})
                // this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { contextInfo: { externalAdReply: { showAdAttribution: false, title: 'CuriosityBot-MD', body: global.wm, sourceUrl: global.ig, thumbnail: imagen3 }}, { mentions: [user] }})                      
                    }
                 }
