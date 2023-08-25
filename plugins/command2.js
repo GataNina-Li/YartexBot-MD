@@ -6,7 +6,7 @@ let str = '*🍧 CuriosityBot-MD*'
       mediaType: 1, 
       renderLargerThumbnail: true, 
       thumbnail: imagen1, 
-      thumbnailUrl: imagen2, 
+      thumbnailUrl: imagen1, 
       title: '🍓 Azami', 
    }})
 }
