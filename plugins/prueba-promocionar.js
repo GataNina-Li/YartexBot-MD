@@ -49,23 +49,27 @@ url = false
 
 let message2 = ''
 message = text
-const linkRegex2 = /['"()]*(https:\/\/chat.whatsapp.com\/[0-9A-Za-z]{20,24}|\S+\.(jpg|jpeg|png|gif|mp4))['"()]*(?=\s|$)/ig;
+const linkRegex2 = /['"()]*(https:\/\/chat.whatsapp.com\/[0-9A-Za-z]{20,24}|\S+\.(jpg|jpeg|png|gif|mp4))['"()]*(?=\s|$)/ig
 const enlacesConSignos = text.match(linkRegex2) || []
 let currentIndex = 0
 for (const linkWithSigns of enlacesConSignos) {
 const linkWithoutSigns = linkWithSigns.replace(/['"()]/g, '')
 const linkIndex = text.indexOf(linkWithSigns, currentIndex)
+const isImageLink = linkWithSigns.match(/\.(jpg|jpeg|png|gif|mp4)/i)
+if (isImageLink && linkWithSigns.includes('[') && linkWithSigns.includes(']')) {
+message2 += text.substring(currentIndex, linkIndex + linkWithSigns.length)
+} else {
 message2 += text.substring(currentIndex, linkIndex)
 if ((linkWithoutSigns !== linkWithSigns) && linkWithSigns.match(/['"()]/)) {
 message2 += linkWithoutSigns
 } else if (!linkWithSigns.match(/['"()]/)) {
-message2 = message2.trim()
-}
+message2 = message2.trim();
+}}
 currentIndex = linkIndex + linkWithSigns.length
 }
-const remainingText = text.substring(currentIndex)
-message2 += remainingText
-message = message2  
+const remainingText = text.substring(currentIndex);
+message2 += remainingText;
+message = message2.replace(/\[|\]/g, '')
 
 let totalTime = 0
 let errorGroups = []
