@@ -158,6 +158,7 @@ handler.all = async function (m) {
 
 global.fpoll = {"key": {"fromMe": false,"participant": "0@s.whatsapp.net","remoteJid": "status@broadcast" }, "message": {"pollCreationMessage": {"name": wm, "selectableOptionsCount": 1}}}
 
+global.fdocument = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${wm}\n   ${azami}`,jpegThumbnail: catalogo}}}
 	
 } 
 export default handler
