@@ -23,7 +23,7 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
  'footer': '\n🍧😸', 
  'headerType': 6 }
  conn.sendMessage(m.chat, texto, { quoted: m })}
-  m.reply('a')
+ // m.reply('a')
   
 }
 handler.tags =['info'] 
