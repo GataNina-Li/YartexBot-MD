@@ -20,7 +20,7 @@ var user = number + '@s.whatsapp.net'
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'promote')
-conn.reply(m.chat, `*[🔰]AHORA TIENE PODER EN EL GRUPO*`, m)
+conn.reply(m.chat, `[🔰]AHORA TIENE PODER EN EL GRUPO`, m)
 	
 }}
 handler.help = ['*521xxx*','*@usuario*','*responder chat*'].map(v => 'promote ' + v)
