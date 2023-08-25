@@ -1,5 +1,19 @@
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
+const messageWithButtons = {
+    content: `
+      <div class="baileys-buttons-container">
+        <button class="baileys-button" data-id="1">Botón 1</button>
+        <button class="baileys-button" data-id="2">Botón 2</button>
+      </div>
+    `,
+    footer: 'Elige una opción',
+    buttons: [
+      { buttonId: '1', buttonText: 'Botón 1' },
+      { buttonId: '2', buttonText: 'Botón 2' },
+    ],
+  };
+ 
 let str = '*🍧 CuriosityBot-MD*'
  await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }}})
 }
