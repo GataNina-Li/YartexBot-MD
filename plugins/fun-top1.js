@@ -46,7 +46,7 @@ for (const c of top) {
 }
     await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100} );
 //m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
-conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
+conn.sendFile(m.chat, vn, 'menu1.jpg', null, m, true, {
 type: 'audioMessage',
 ptt: true })}
 handler.help = handler.command = ['los10']
