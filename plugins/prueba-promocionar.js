@@ -49,32 +49,22 @@ url = false
 
 let message2
 message = text
-const linkRegex2 = /['"()]*(https:\/\/chat.whatsapp.com\/[0-9A-Za-z]{20,24}|\S+\.(jpg|jpeg|png|gif|mp4))['"()]*(?=\s|$)/ig;
+const linkRegex2 = /['"()]*(https:\/\/chat.whatsapp.com\/[0-9A-Za-z]{20,24}|\S+\.(jpg|jpeg|png|gif|mp4))['"()]*(?=\s|$)/ig
 const enlacesConSignos = text.match(linkRegex2) || []
-
-let currentIndex = 0; // Para rastrear la posición actual en el texto
-
+let currentIndex = 0
 for (const linkWithSigns of enlacesConSignos) {
-  const linkWithoutSigns = linkWithSigns.replace(/['"()]/g, '')
-  const linkIndex = text.indexOf(linkWithSigns, currentIndex)
-  
-  // Agregar el texto entre los enlaces al mensaje final
-  message2 += text.substring(currentIndex, linkIndex)
-  
-  // Agregar el enlace corregido al mensaje final
-  if (
-    (linkWithoutSigns !== linkWithSigns) &&
-    linkWithSigns.match(/['"()]/)
-  ) {
-    message2 += linkWithoutSigns
-  } else if (!linkWithSigns.match(/['"()]/)) {
-    message2 = message2.trim(); // Eliminar espacio adicional si se elimina un enlace sin símbolos
-  }
-  
-  currentIndex = linkIndex + linkWithSigns.length
+const linkWithoutSigns = linkWithSigns.replace(/['"()]/g, '')
+const linkIndex = text.indexOf(linkWithSigns, currentIndex)
+message2 += text.substring(currentIndex, linkIndex)
+if ((linkWithoutSigns !== linkWithSigns) && linkWithSigns.match(/['"()]/)) {
+message2 += linkWithoutSigns
+} else if (!linkWithSigns.match(/['"()]/)) {
+message2 = message2.trim()
+}
+currentIndex = linkIndex + linkWithSigns.length
 }
 
-const remainingText = text.substring(currentIndex)
+const remainingText = message2.substring(currentIndex)
 message2 += remainingText
 message = message2
 
