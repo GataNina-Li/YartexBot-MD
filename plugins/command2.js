@@ -16,7 +16,25 @@ const ftrol = {
     }
     }
 }
-    conn.sendMessage(m.chat, ftrol, { quoted: a })}
+
+    const fload = {
+    key : {
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net' 
+    },
+    message: {
+    orderMessage: {
+    itemCount : 2023,
+    status: 1,
+    surface : 1,
+    message: 'Menú...' + '\n🚀 Cargando ^ω^', 
+    orderTitle: `▮Menu ▸`,
+    thumbnail: imagen1, 
+    sellerJid: '0@s.whatsapp.net' 
+    }
+    }
+    }
+    conn.sendMessage(m.chat, ftrol, { quoted: fload })}
  //await conn.reply(m.chat, '*Prueba . . .*', ftrol) 
 let str = '*🍧 CuriosityBot-MD*'
 await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }})
