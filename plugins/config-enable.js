@@ -35,7 +35,7 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.simi = isEnable
-break   
+break
 case 'detect':
 if (!m.isGroup) {
 if (!isOwner) {
@@ -50,15 +50,15 @@ chat.detect = isEnable
 break
 case 'detect2':
 if (!m.isGroup) {
-      if (!isOwner) {
-  global.dfail('group', m, conn);
-    throw false;
-    }} else if (!isAdmin) {
-  global.dfail('admin', m, conn);
-   throw false;
- }
-chat.detect2 = isEnable;
-  break;
+if (!isOwner) {
+global.dfail('group', m, conn)
+throw false
+}} else if (!isAdmin) {
+global.dfail('admin', m, conn)
+throw false
+}
+chat.detect2 = isEnable
+ break
 case 'delete':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -105,7 +105,7 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.antiLink2 = isEnable 
+chat.antiLink2 = isEnable
 break
 case 'antitraba':
 if (m.isGroup) {
@@ -114,7 +114,7 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.antitraba = isEnable
-break 
+break
 case 'antitoxic':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -129,7 +129,7 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.modohorny = isEnable          
+chat.modohorny = isEnable
 break
 case 'autosticker':
 if (m.isGroup) {
@@ -137,7 +137,7 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.autosticker = isEnable          
+chat.autosticker = isEnable
 break
 case 'audios':
 if (m.isGroup) {
@@ -145,7 +145,7 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.audios = isEnable          
+chat.audios = isEnable
 break
 case 'restrict':
 isAll = true
@@ -198,8 +198,8 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.modoadmin = isEnable          
-break    
+chat.modoadmin = isEnable
+break
 case 'pconly':
 case 'privateonly':
 isAll = true
@@ -225,7 +225,7 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.nsfw = isEnable          
+chat.nsfw = isEnable
 break
 case 'antiprivado':
 isAll = true
@@ -290,7 +290,7 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╔───𖥻 LIS
 throw false
 }
 conn.reply(m.chat, `╔───𖥻 ON-OFF 𖥻───╗
-│ *OPCIÓN:* ${type} 
+│ *OPCIÓN:* ${type}
 │ *ESTADO*: ${isEnable ? 'Activado' : 'Desactivado'}
 │ *PARA*: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
 ╚───𖥻 ON-OFF 𖥻───╝`, fliveLoc, m)
@@ -299,4 +299,5 @@ conn.reply(m.chat, `╔───𖥻 ON-OFF 𖥻───╗
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['nable', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
+
 export default handler

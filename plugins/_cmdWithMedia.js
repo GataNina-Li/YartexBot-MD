@@ -1,4 +1,4 @@
-const { 
+const {
 proto,
 generateWAMessage,
 areJidsSameUser

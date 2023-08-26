@@ -31,7 +31,7 @@ conn.sendFile(m.chat, buff, ran, null, m, true, {
 type: 'audioMessage',
 ptt: true
 })})
-} else throw `*⚠️ RESPONDA CON ${usedPrefix + command} Al AUDIO O NOTA DE VOS QUE SERA MODIFICADO*`
+} else throw `*⚠️ RESPONDA CON ${usedPrefix + command} Al AUDIO O NOTA DE VOS QUE DESEA MODIFICAR*`
 } catch (e) {
 throw e
 }}
