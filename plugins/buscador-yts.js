@@ -1,7 +1,7 @@
 import yts from "yt-search"
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-if (!text) return conn.reply(m.chat, `*⚠️ ESCRIBA EL NOMBRE DE UN VIDEO O UN CANAL DE YOUTUBE*`, fpay,  m)
+if (!text) return conn.reply(m.chat, `*⚠️ ESCRIBA EL NOMBRE DE UN VIDEO O UN CANAL DE YOUTUBE*`, fakeimg,  m)
 let results = await yts(text)
 let tes = results.all
 let teks = results.all.map(v => {
@@ -14,7 +14,7 @@ case 'video': return `📑 *TÍTULO:* ${v.title}
 conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, fkontak, m)
 }
 handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
-handler.tags = ['internet']
+handler.tags = ['internet:']
 handler.command = /^playlist|ytbuscar|yts(earch)?$/i
 handler.exp = 70
 handler.limit = 1
