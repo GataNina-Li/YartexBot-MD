@@ -53,8 +53,8 @@ global.img7 = 'https://telegra.ph/file/951275803faa754aff010.jpg'
 global.sityImg = [img, img1, img2, img3, img4, img5, img6, img7]
 
 /*=========== STICKERS ===========*/
-global.packname = 'CuriosityBot-MD.js'
-global.author = '@1.0.2'
+global.packname = 'CuriosityBot-MD'
+global.author = '1.0.2'
 global.stickerAMX = fs.readFileSync('./src/Curiosity.webp')
 
 /*=========== LINKS ===========*/
