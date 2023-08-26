@@ -27,7 +27,7 @@ const ftrol = {
     itemCount : 2023,
     status: 1,
     surface : 1,
-    message: 'Menú...' + '\n🚀 Cargando ^ω^', 
+    message: 'Menú..............' + '\n🚀 Cargando ^ω^', 
     orderTitle: `▮Menu ▸`,
     thumbnail: imagen1, 
     sellerJid: '0@s.whatsapp.net' 
@@ -35,7 +35,7 @@ const ftrol = {
     }
     }
    // conn.sendMessage(m.chat, ftrol, { quoted: fload })}
- await conn.reply(m.chat, '*Prueba . . .*', fload) 
+ await conn.reply(m.chat, '*Pruebaaaaaaaaaaaa . . .*', fload) 
 let str = '*🍧 CuriosityBot-MD*'
 await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }})
  
