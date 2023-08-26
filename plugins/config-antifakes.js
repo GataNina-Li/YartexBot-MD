@@ -1,6 +1,6 @@
 let handler = m => m
 
-handler.before = async function (m, { conn, isAdmin, isBotAdmin, isOwner } ) {
+handler.before = async function (m, { conn, isAdmin, isBotAdmin, isOwner }) {
 if (!m.isGroup) return !1
 let chat = global.db.data.chats[m.chat]
   
