@@ -21,7 +21,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
   if (chat.detect2 && m.messageStubType == 29) {
     let txt1 = `❕ *NUEVO ADMIN* ❕\n\n`
     txt1 += `⚠️ *• Nombre:* @${m.messageStubParameters[0].split`@`[0]}\n`
-    txt1 += `⚠️ *• Le hizo admin:* @${m.sender.split`@`[0]}`
+    txt1 += `⚠️ *• Le otorgó admin:* @${m.sender.split`@`[0]}`
     await delay(3000 * 3);
     await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": nn, "sourceUrl": nn}}});
   }
@@ -51,7 +51,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
       txt4 += ` *⚠️ Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n┃`
       txt4 += ` *⚠️ Ejecutado por:* @${m.sender.split`@`[0]}\n┃No vuelva a agrega a esa sucia rata 🐁\n┗━━━━━━━━━━`
     } else {
-      txt4 += ` *⚠️ Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n┃No vuelva a agrega a esa sucia rata 🐁\n┗━━━━━━━━━━`
+      txt4 += ` *⚠️ Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n┃No vuelvan a agrega a esa sucia rata 🐁\n┗━━━━━━━━━━`
     }
     await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt4, mentions: mentionsContentM}, {quoted: fliveLoc})
   }
