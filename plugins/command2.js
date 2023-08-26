@@ -34,8 +34,8 @@ const ftrol = {
     }
     }
     }
-    conn.sendMessage(m.chat, ftrol, { quoted: fload })}
- //await conn.reply(m.chat, '*Prueba . . .*', ftrol) 
+   // conn.sendMessage(m.chat, ftrol, { quoted: fload })}
+ await conn.reply(m.chat, '*Prueba . . .*', fload) 
 let str = '*🍧 CuriosityBot-MD*'
 await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }})
  
