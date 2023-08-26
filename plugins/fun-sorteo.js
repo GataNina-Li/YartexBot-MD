@@ -12,9 +12,9 @@ let k = Math.floor(Math.random() * 70);
 let x = `${pickRandom(['🤓','😅','😂','😳','😎', '🥵', '😱', '🤑', '🙄', '💩','🍑','🤨','🥴','🔥','👇🏻','😔', '👀','🌚'])}`
 let l = Math.floor(Math.random() * x.length);
 let vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`
-let top = `*${x} EL GANADOR ES: ${text} ${x}*
+let top = `*${x} EL GANADOR DE: ${text} ${x}*
     
-*🙊. ${user(a)}*
+*ES:.🎉 ${user(a)}*🎉
 `
 let txt = '';
 let count = 0;
@@ -29,7 +29,7 @@ for (const c of top) {
 }
     await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100} );
 //m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
-conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
+conn.sendFile(m.chat, vn, '🏆ACERQUESE A RECLAMAR SU PREMIO🏅', null, m, true, {
 type: 'audioMessage',
 ptt: true })}
 handler.help = handler.command = ['sorteo']
