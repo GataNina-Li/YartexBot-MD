@@ -11,7 +11,7 @@ let hasil = Math.floor(Math.random() * 5000)
  ♡∩_∩
  （„• ֊ •„)♡
 *┏━∪∪━━━━┓*
-*➳"${pickRandom(global.refran)}"*\n\n\t➳ *_By ${hj}_*\n*
+*➳"${pickRandom(global.refran)}"*\n\n\t➳ *_By ${hj}_*
 ┗━━━━━━━┛
 
 `)
