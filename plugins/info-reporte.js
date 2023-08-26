@@ -7,7 +7,7 @@ conn.reply('5214531173598@s.whatsapp.net', m.quoted ? teks + m.quoted.text : tek
 contextInfo: {
 mentionedJid: [m.sender]
 }})
-  m.reply(`*[⚠️] Exito el reporte ha sido enviado a mí Creadora. Tendrá una respuesta pronto. De ser Falso será Ignorado el reporte.*`)
+  m.reply(`*[⚠️] Exito el reporte ha sido enviado a mí Creadora. Tendrá una respuesta pronto. Si se detecta que el reporte es Falso será Ignorado el reporte.*`)
 
 }
 
