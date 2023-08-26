@@ -8,8 +8,8 @@ let handler = async (m, { conn, text}) => {
 let hasil = Math.floor(Math.random() * 5000)
 
   m.reply(`
-*┏━߷߷߷✪߷߷߷✪߷߷߷━┓*\n
-*➳"${pickRandom(global.consejo)}"*\n\n\t➳ *_By ${hj}_*\n*┗━߷߷߷✪߷߷߷✪߷߷߷━┛*
+*┏━߷߷߷𖣔߷߷߷𖣔߷߷߷━┓*\n
+*➳"${pickRandom(global.consejo)}"*\n\n\t➳ *_By ${hj}_*\n*┗━߷߷߷𖣔߷߷߷𖣔߷߷߷━┛*
 `)
 }
 handler.tags = ['frases']
