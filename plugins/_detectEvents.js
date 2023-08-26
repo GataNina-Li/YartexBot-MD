@@ -29,7 +29,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
   if (chat.detect2 && m.messageStubType == 30) {
     let txt2 = `❗ *UN ADMIN MENOS* ❗\n\n`
     txt2 += `⚠️ *• Nombre:* @${m.messageStubParameters[0].split`@`[0]}\n`
-    txt2 += `⚠️ *• Le quito admin:* @${m.sender.split`@`[0]}`
+    txt2 += `⚠️ *• Le quitó admin:* @${m.sender.split`@`[0]}`
     await delay(3000 * 3);
     await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": md, "sourceUrl": yt}}});
    // await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsString}, {quoted: fliveLoc})
@@ -66,7 +66,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     let txt5 = `┏━━━━━━━━━━━━\n┃──〘  ${groupName} 〙───\n┃━━━━━━━━━━━━\n┃`
     if (ax === 'eliminado') {
       txt5 += ` *⚠️ Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n┃`
-      txt5 += ` *⚠️ Ejecutado por:* @${m.sender.split`@`[0]}\n┃No vuelva a agrega a esa sucia rata 🐁\n┗━━━━━━━━━━`;
+      txt5 += ` *⚠️ Ejecutado por:* @${m.sender.split`@`[0]}\n┃No vuelvan a agrega a esa sucia rata 🐁\n┗━━━━━━━━━━`;
     } else {
       txt5 += ` *😿 Se fue:* @${m.messageStubParameters[0].split`@`[0]}\n┃ *_Que dios lo bendiga️_*\n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━`
     }
