@@ -3,7 +3,7 @@ import { join } from 'path'
 import { exec } from 'child_process'
 
 let handler = async (m, { conn, args, __dirname, usedPrefix, command }) => {
-try { 
+try {
 let q = m.quoted ? m.quoted : m
 let mime = ((m.quoted ? m.quoted : m.msg).mimetype || '')
 let set
@@ -28,8 +28,8 @@ await unlinkSync(media)
 if (err) throw `*⚠️ 404 ERROR ⚠️*`
 let buff = await readFileSync(filename)
 conn.sendFile(m.chat, buff, ran, null, m, true, {
-type: 'audioMessage', 
-ptt: true 
+type: 'audioMessage',
+ptt: true
 })})
 } else throw `*⚠️ RESPONDA CON ${usedPrefix + command} Al AUDIO O NOTA DE VOS QUE SERA MODIFICADO*`
 } catch (e) {
@@ -38,6 +38,7 @@ throw e
 handler.help = ['bass', 'blown', 'deep', 'earrape', 'fast', 'fat', 'nightcore', 'reverse', 'robot', 'slow', 'smooth', 'tupai'].map(v => v + ' [vn]')
 handler.tags = ['audio']
 handler.command = /^(bass|blown|deep|earrape|fas?t|nightcore|reverse|robot|slow|smooth|tupai|squirrel|chipmunk)$/i
+
 export default handler
 
 const getRandom = (ext) => {
