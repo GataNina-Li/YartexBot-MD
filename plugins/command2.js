@@ -23,7 +23,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
    // conn.sendMessage(m.chat, ftrol, { quoted: fload })}
  await conn.reply(m.chat, '*Pruebaaaaaaaaaaaa . . .*', fload) 
 let str = `*🍧 CuriosityBot-MD*`.trim()
-await conn.sendMessage(m.chat, { image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}, { quoted: fkontak }) 
+await conn.sendMessage(m.chat, { image: imagen4, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}, { quoted: fkontak }) 
     //await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }})
  
 }
