@@ -12,7 +12,7 @@ let hasil = Math.floor(Math.random() * 5000)
  （„• ֊ •„)♡
 ┏━∪∪━━━━┓
 \n
-➳*"${pickRandom(global.refrab)}"*\n\n\t➳ *_By ${namere}_*\n*
+➳*"${pickRandom(global.refran)}"*\n\n\t➳ *_By ${hj}_*\n*
 ┗━━━━━━━┛
 
 `)
