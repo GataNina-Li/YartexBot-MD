@@ -20,7 +20,7 @@ var user = number + '@s.whatsapp.net'
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
-m.reply(`[🔰]YA NO TIENE PODER EN EL GRUPO`)
+m.reply(`[🔰] EXITO YA NO TIENE PODER EN ESTE GRUPO`)
 }
 }
 handler.help = ['demote (@tag)']
