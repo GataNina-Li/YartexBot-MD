@@ -14,7 +14,7 @@ let l = Math.floor(Math.random() * x.length);
 let vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`
 let top = `*${x} EL GANADOR DEL SORTEO: ${text} ${x}*
     
-*ES:🎉 ${user(a)}*🎉
+🎉*ES:${user(a)}*🎉
 `
 let txt = '';
 let count = 0;
