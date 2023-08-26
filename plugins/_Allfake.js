@@ -39,8 +39,7 @@ global.youtube = { contextInfo: { externalAdReply: { showAdAttribution: true, me
 
 global.fgif = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6285736178354-1625305606@g.us" } : {})}, message: { "videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': wm,  'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}}
 
-global.fgclink = {
-"key": { "fromMe": false, "participant": "0@s.whatsapp.net", "remoteJid": "0@s.whatsapp.net" }, "message": { "groupInviteMessage": { "groupJid": "6285736178354-1625305606@g.us", "inviteCode": "null", "groupName": "CuriosityBot-MD",  "caption": wm2, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}}
+global.fgclink = { "key": { "fromMe": false, "participant": "0@s.whatsapp.net", "remoteJid": "0@s.whatsapp.net" }, "message": { "groupInviteMessage": { "groupJid": "6285736178354-1625305606@g.us", "inviteCode": "null", "groupName": "CuriosityBot-MD",  "caption": wm2, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}}
 
 global.fdocs = { key : { participant : '0@s.whatsapp.net' }, message: { "documentMessage": { "title": wm,  "jpegThumbnail": fs.readFileSync('./storage/menus/Menu1.jpg')}}}
 
