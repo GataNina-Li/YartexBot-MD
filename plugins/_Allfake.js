@@ -1,4 +1,4 @@
-/*import fs from 'fs'
+import fs from 'fs'
 import fetch from 'node-fetch'
 import axios from 'axios'
 import moment from 'moment-timezone'
@@ -7,7 +7,7 @@ let handler = m => m
 handler.all = async function (m) {
 
 global.getBuffer = async function getBuffer(url, options) {
- try {
+try {
 options ? options : {}
 var res = await axios({
 method: "get",
@@ -37,15 +37,15 @@ let pp = await this.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.
 
 global.youtube = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: 'ˢᵘˢᶜʳᶦᵇᵉᵗᵉ ᵃ ⁿᵘᵉˢᵗʳᵒ ᶜᵃⁿᵃˡ ᵈᵉˡ ʸᵒᵘᵀᵘᵇᵉ : ' + yt, title: 'YouTube', body: 'CuriosityBot-MD', thumbnailUrl: pp, sourceUrl: yt }}}
 
-global.fgif = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6285736178354-1625305606@g.us" } : {})}, message: { "videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': wm,  'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}}
+global.fgif = { key: { fromMe: false, participant: "0@s.whatsapp.net", ...(m.chat ? { remoteJid: "6285736178354-1625305606@g.us" } : {})}, message: { videoMessage: { title: wm, "h": `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': wm,  'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}}
 
-global.fgclink = { "key": { "fromMe": false, "participant": "0@s.whatsapp.net", "remoteJid": "0@s.whatsapp.net" }, "message": { "groupInviteMessage": { "groupJid": "6285736178354-1625305606@g.us", "inviteCode": "null", "groupName": "CuriosityBot-MD",  "caption": wm2, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}}
+global.fgclink = { key: { fromMe: false, participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net" }, message: { groupInviteMessage: { groupJid: "6285736178354-1625305606@g.us", inviteCode: null, groupName: "CuriosityBot-MD", caption: wm2, jpegThumbnail: fs.readFileSync('./storage/menus/Menu1.jpg')}}}
 
-global.fdocs = { key : { participant : '0@s.whatsapp.net' }, message: { "documentMessage": { "title": wm,  "jpegThumbnail": fs.readFileSync('./storage/menus/Menu1.jpg')}}}
+global.fdocs = { key : { participant : "0@s.whatsapp.net" }, message: { documentMessage: { title: wm, jpegThumbnail: fs.readFileSync('./storage/menus/Menu1.jpg')}}}
 
-global.ftoko = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "17608914335@s.whatsapp.net" } : {})}, message: { "productMessage": { "product": { "productImage":{ "mimetype": "image/jpeg", "jpegThumbnail": fs.readFileSync('./storage/menus/Menu1.jpg')}, "title": wm,  "description": azami,  "currencyCode": "USD", "priceAmount1000": "99999999", "retailerId": "Ghost", "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net`}}}
+global.ftoko = { key: { fromMe: false, participant: "0@s.whatsapp.net", ...(m.chat ? { remoteJid: "17608914335@s.whatsapp.net" } : {})}, message: { productMessage: { product: { productImage: { mimetype: "image/jpeg", jpegThumbnail: fs.readFileSync('./storage/menus/Menu1.jpg')}, title: wm,  description: azami, currencyCode: "USD", priceAmount1000: "99999999", retailerId: "Ghost", productImageCount: 1 }, businessOwnerJid: "0@s.whatsapp.net" }}}
 
-global.fimg = { key: { participant: '0@s.whatsapp.net' } message: { imageMessage: { url: ig, mimetype: 'image/jpeg', fileLength: fsizedoc, height: 306, width: 366, jpegThumbnail: fs.readFileSync('./storage/menus/Menu1.jpg')}}}
+global.fimg = { key: { participant: "0@s.whatsapp.net" }, message: { imageMessage: { url: ig, mimetype: "image/jpeg", fileLength: fsizedoc, height: 306, width: 366, jpegThumbnail: fs.readFileSync('./storage/menus/Menu1.jpg')}}}
 
 global.ftextt = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6285736178354-1625305606@g.us" } : {})}, message: {  "extendedTextMessage": { "text":wm, "title": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}}
                
@@ -87,5 +87,5 @@ global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(fa
 	
 }
 
-export default handler*/
+export default handler
 
