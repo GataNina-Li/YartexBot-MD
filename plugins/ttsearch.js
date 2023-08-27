@@ -13,7 +13,7 @@ title,
 url,
 description
 }) => {
-return `*🔰 ${title}*\n\n📎 ${url}\n\n📒 _${description}_\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈`
+return `*✏️ ${title}*\n\n📎 ${url}\n\n📒 _${description}_\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈`
 }).join('\n\n')
 
 try {
