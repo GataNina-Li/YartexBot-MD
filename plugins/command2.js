@@ -1,5 +1,13 @@
+import fs from 'fs'
+import fetch from 'node-fetch'
+import { xpRange } from '../lib/levelling.js'
+const { levelling } = '../lib/levelling.js'
+import PhoneNumber from 'awesome-phonenumber'
+import { promises } from 'fs'
+import { join } from 'path'
+const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
+
 let handler = async(m, { conn, text, usedPrefix, command }) => {
-    const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 let name = conn.getName(m.sender)
     let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 
