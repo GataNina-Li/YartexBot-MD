@@ -20,7 +20,7 @@ import fetch from 'node-fetch'
    const sentMsg = await conn.sendContactArray(m.chat, [
      [`${dev}`, `${await conn.getName(dev+'@s.whatsapp.net')}`, `💌 Developer Bot`, `No famoso`, `alexismaldonado90700@gmail.com`, `🇲🇽 México`, `📍 https://github.com/AzamiJs`, `👤 Creador de CuriosityBot-MD`], 
      [`${conn.user.jid.split('@')[0]}`, `${await conn.getName(conn.user.jid)}`, `🎈 Whatsapp Bot`, `📵 No hagas spam`, `Nada`, `🇨🇦 Canadá`, `📍 https://github.com/CuriosityBot-MD`, `🍧 Soy Curiosity Bot` ]], fkontak) 
-  // await m.reply(`Hola @${m.sender.split(`@`)[0]}`) 
+  await m.reply(`Hola @${m.sender.split(`@`)[0]}`) 
    }  
   
  handler.help = ['owner', 'creator'] 
