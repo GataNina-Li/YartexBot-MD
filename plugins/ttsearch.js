@@ -1,4 +1,4 @@
-import { googleIt } from '@bochilteam/scraper'
+import { tiktokIt } from '@bochilteam/scraper'
 
 var handler = async (m, { conn, command, args, usedPrefix }) => {
 const fetch = (await import('node-fetch')).default
@@ -7,7 +7,7 @@ let text = args.join` `
 if (!text) return conn.reply(m.chat, `*⚠️ ESCRIBA LO QUE QUIERE BUSCAR*\n\n❕ EJEMPLO:\n*${usedPrefix + command} Miracle*`, m)
 let pp = './media/menus/Menu1.jpg'
 let url = 'https://tiktok.com/search?q=' + encodeURIComponent(text)
-let search = await googleIt(text)
+let search = await tiktokIt(text)
 let msg = search.articles.map(({
 title,
 url,
