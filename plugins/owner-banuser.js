@@ -6,7 +6,7 @@ if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
 else who = m.chat
 let users = global.db.data.users
 users[who].banned = true
-m.reply('*⏤͟͟͞͞🍓ESTE USUARIO FUE BANEADO CON ÉXITO*\n\n[🛑] YA NO PUEDE USAR CURIOSITY BOT-MD')    }
+m.reply('*⏤͟͟͞͞🍓ESTE USUARIO FUE BANEADO CON ÉXITO*\n\n*[🛑] YA NO PUEDE USAR CURIOSITY BOT-MD*')    }
 handler.tags = ['owner']
 handler.command = /^banuser$/i
 handler.rowner = true
