@@ -284,7 +284,7 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╔───𖥻 LIS
 │➵ _${usedPrefix}disable *modoadmin*_
 │➵ _${usedPrefix}enable *modoadmin*_
 │➵ _${usedPrefix}disable *modejadibot*_
-╚───𖥻 LISTA 𖥻───╝`, fkontak, m)
+╚───𖥻 LISTA 𖥻───╝`, fpay, m)
 throw false
 }
 conn.reply(m.chat, `╔───𖥻 ON-OFF 𖥻───╗
