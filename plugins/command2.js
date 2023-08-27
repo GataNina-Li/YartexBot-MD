@@ -1,7 +1,7 @@
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 let name = conn.getName(m.sender)
     let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-    const ftrol = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 2023, status: 1, surface : 1, message: `Hola! ${name}`, orderTitle: `▮Menu ▸`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp' }}}
+    const ftrol = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 2023, status: 1, surface : 1, message: `Hola! ${name}`, orderTitle: `▮Menu ▸`, thumbnail: imagen1, sellerJid: '0@s.whatsapp' }}}
 
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol)
    // conn.sendMessage(m.chat, ftrol, { quoted: fload })}
