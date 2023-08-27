@@ -82,6 +82,7 @@ global.library = 'Baileys'
 global.lenguaje = 'Español'
 global.jadibts = join(__dirname, 'jadibts/')
 global.menudi = ['⛶','❏','⫹⫺']
+global.dev = ''
 
 /*=========== REACCIONES ===========*/
 global.rwait = '⌛'
