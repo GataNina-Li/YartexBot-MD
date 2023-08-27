@@ -624,7 +624,7 @@ let foto = sityImg.getRandom()
         unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_❕ Ejemplo_* : */reg Azami.25*',
         restrict: '⚠️ *ESTA CARACTERÍSTICA ESTA DESACTIVADA*'
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: imagen1 }}})
+    if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: ucapan(), sourceUrl: global.paypal, thumbnail: await (await fetch(foto)).buffer() }}})
 
 }
 
