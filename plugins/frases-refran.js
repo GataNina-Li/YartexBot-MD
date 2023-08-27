@@ -9,7 +9,7 @@ let hasil = Math.floor(Math.random() * 5000)
 
   m.reply(`
  *┏━ꙬꙬꙬ᯽ꙬꙬꙬ᯽︎ꙬꙬꙬ┓*\n
-*➳ "${pickRandom(global.refran)}"*\n\n\t*➳ _By ${hj}_*\n*┗━ꙬꙬꙬ᯽ꙬꙬꙬ᯽ꙬꙬꙬ━┛*
+➳ *"${pickRandom(global.refran)}"*\n\n\t➳ *_By ${hj}_*\n*┗━ꙬꙬꙬ᯽ꙬꙬꙬ᯽ꙬꙬꙬ━┛*
 
 `)
 }
