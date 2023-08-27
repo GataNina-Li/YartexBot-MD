@@ -486,7 +486,7 @@ export async function handler(chatUpdate) {
 	let settingsREAD = global.db.data.settings[this.user.jid] || {}  
         if (opts['autoread']) await this.readMessages([m.key])
 	if (settingsREAD.autoread2) await this.readMessages([m.key])  
-	//this.sendPresenceUpdate('composing', m.chat)  
+	this.sendPresenceUpdate('composing', m.chat)  
 	//if (settingsREAD.autoread2 == 'true') await this.readMessages([m.key])    
         
     }
