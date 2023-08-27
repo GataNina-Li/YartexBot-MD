@@ -1,5 +1,5 @@
 import fs from 'fs'
-let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) =>
+let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 let isEnable = /true|enable|(turn)?on|1/i.test(command)
 let chat = global.db.data.chats[m.chat]
 let user = global.db.data.users[m.sender]
