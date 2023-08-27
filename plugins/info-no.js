@@ -7,6 +7,6 @@ await conn.sendMessage(m.chat, { contacts: { displayName: '𝗔𝘇𝗮𝗺𝗶 
 }
 handler.tags =['info']
 handler.help = ['script']
-handler.customPrefix = /^(@527294888993)$/i
+handler.customPrefix = /^(@⁨~‧₊˚ 𝐀𝐥𝐞𝐱𝐢𝐬 ☽∘∙⊱⋅•⋅ 🍓⁩)$/i
 handler.command = new RegExp
 export default handler
