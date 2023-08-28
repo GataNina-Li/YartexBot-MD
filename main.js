@@ -226,7 +226,7 @@ if (connection === 'close') {
     } else {
         conn.logger.warn(`[ ⚠ ] Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
         //process.exit();
-    }
+    }}}
   /*if (connection == 'close') {
     console.log(chalk.yellow(`🚩ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
   }*/
