@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 import moment from 'moment-timezone'
 
-let handler = m => m
+var handler = m => m
 handler.all = async function (m) {
 
 global.getBuffer = async function getBuffer(url, options) {

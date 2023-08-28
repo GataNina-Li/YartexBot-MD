@@ -1,6 +1,6 @@
-let handler = m => m
-
+var handler = m => m
 handler.all = async function (m, { isBotAdmin }) {
+
 // Borrado automático cuando hay mensajes que no se pueden ver en el escritorio
 if (m.messageStubType === 68) {
 let log = {

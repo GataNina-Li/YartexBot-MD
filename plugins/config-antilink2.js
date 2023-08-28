@@ -1,4 +1,5 @@
 let linkRegex = /https:/i
+
 export async function before(m, { isAdmin, isBotAdmin,text }) {
 
 if (m.isBaileys && m.fromMe)
