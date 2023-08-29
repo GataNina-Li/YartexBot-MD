@@ -1,3 +1,5 @@
 <?php
-jadints
+
+$short_options = "p:";
+
 ?>
