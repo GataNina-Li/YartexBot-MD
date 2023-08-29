@@ -277,9 +277,8 @@ if (connection === 'close') {
             console.log(`Error: ${e.message}`)
           }
           
-          }
-        
-}
+          
+    
  
 process.on('uncaughtException', console.error)
 
@@ -517,22 +516,22 @@ setInterval(async () => {
     console.log(chalk.whiteBright(`BACKUP_CREDS │ RESPALDO EXITOSO`))
     }, 15 * 60 * 1000)
 setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
+//  if (stopped === 'close' || !conn || !conn.user) return;
   const a = await clearTmp();
   console.log(chalk.cyanBright(`AUTOCLEAR │ BASURA ELIMINADA`))
 }, 180000);
 setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
+ // if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSession();
   console.log(chalk.yellowBright(`AUTOPURGESESSIONS │ ARCHIVOS ELIMINADOS`))
 }, 1000 * 60 * 60);
 setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
+ // if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSessionSB();
   console.log(chalk.yellowBright(`AUTO_PURGE_SESSIONS_SUB-BOTS │ ARCHIVOS ELIMINADOS`))
 }, 1000 * 60 * 60);
 setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
+  //if (stopped === 'close' || !conn || !conn.user) return;
   await purgeOldFiles();
   console.log(chalk.yellowBright(`AUTO_PURGE_OLDFILES │ ARCHIVOS ELIMINADOS`))
 }, 1000 * 60 * 60);
