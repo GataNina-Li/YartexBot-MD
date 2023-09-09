@@ -1,7 +1,11 @@
 /**
 [ By @HACHEJOTA || https://github.com/HACHEJOTA/ ]
 **/
-let handler=async(e,{conn:i,args:o})=>{if(!o[0])return e.reply("*[ ! ] Introduzca una direcci\xf3n IP*");if(!o[0].includes("19"))return e.reply('*[ ! ] Use una direcci\xf3n IP valida de clase "C" !*');let n=e.mentionedJid&&e.mentionedJid[0]?e.mentionedJid[0]:e.fromMe?i.user.jid:e.sender,t;await e.reply(MultiNK.Bsqd(await i.getName(e.sender)));try{let r=await fetchJson(`https://latam-api.vercel.app/api/verip?apikey=${MyApiKey}&q=${o[0]}`);if(!r.continente.nombre)return e.reply("No pude encontrar ninguna informaci\xf3n para esta direcci\xf3n IP ;-;");i.sendMessage(e.chat,{caption:`🗺️ INFO DE DIRECCION IP
+var handler = async ( e, {conn:i,args:o}) => 
+{if(!o[0])return m.reply("*[ ! ] Introduzca una direccion IP*");
+if(!o[0].includes("19"))return e.reply('*[ ! ] Use una direcci\xf3n IP valida de clase "C" !*');
+ let n=e.mentionedJid && e.mentionedJid[0]? e.mentionedJid[0]: e.fromMe? i.user.jid:e.sender,t
+  await m.reply((await i.getName(e.sender)));try{let r=await fetchJson(`https://latam-api.vercel.app/api/verip?apikey=${MyApiKey}&q=${o[0]}`);if(!r.continente.nombre)return e.reply("No pude encontrar ninguna informaci\xf3n para esta direcci\xf3n IP ;-;");i.sendMessage(e.chat,{caption:`🗺️ INFO DE DIRECCION IP
 🔖 Solicitado por : @${n.replace(/@.+/,"")}`,footer:`${cb} 🔥`,location:{degreesLatitude:r.latitud,degreesLongitude:r.longitud},buttons:[{buttonId:"</bromita>",buttonText:{displayText:`[ INFORMACI\xd3N ]
 \`\`\`
 ➢ Direcci\xf3n IP : ${r.ip}
