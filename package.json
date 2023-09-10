@@ -1,7 +1,7 @@
 {
 "name": "CuriosityBot-MD",
 "version": "1.0.0", 
-"description": "simple bot",
+"description": "WhatsApp Bot - Node.Js",
 "main": "index.js",
 "type": "module",
     
@@ -15,16 +15,16 @@
 "test": "node test.js",
 "test2": "nodemon index.js" },
     
-"homepage": "https://github.com/Undefined17/CuriosityBot-MD",
+"homepage": "https://github.com/AzamiJs/CuriosityBot-MD",
 "author": {
 "name": "Undefined17" }, 
     
 "repository": {
 "type": "git",
- "url": "git+https://github.com/Undefined17/CuriosityBot-MD.git" },
+ "url": "git+https://github.com/AzamiJs/CuriosityBot-MD.git" },
  
 "bugs": {
-"url": "https://github.com/Undefined17/CuriosityBot-MD/issues" },
+"url": "https://github.com/AzamiJs/CuriosityBot-MD/issues" },
 "license": "GPL-3.0-or-later",
 "dependencies": {
 "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys@6.3.1",

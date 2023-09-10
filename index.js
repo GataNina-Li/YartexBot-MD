@@ -25,6 +25,11 @@ say(`${name} By @Azami`, {
   align: 'center',
   colors: ['blueBright']
 })
+console.log(` 
+ CuriosityBot-MD
+ Autor  : Azami 
+ Base   : BochilTeam 
+ `)
 
 var isRunning = false
 /**
