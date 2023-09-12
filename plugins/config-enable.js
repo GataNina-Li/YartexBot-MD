@@ -248,7 +248,7 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╔───𖥻 LIS
 │ H O L A 😸❤️
 │⚌⚌⚌⚌⚌⚌⚌⚌⚌
 │
-│ *LISTA DE OPCIONES* 📄
+│ *LISTA DE OPCIONES ENABLE Y DISABLE* 📄
 │
 │➵ _${usedPrefix}enable *welcome*_
 │➵ _${usedPrefix}disable *welcome*_
@@ -288,9 +288,9 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╔───𖥻 LIS
 throw false
 }
 conn.reply(m.chat, `╔───𖥻 ON-OFF 𖥻───╗
-│ *OPCIÓN:* ${type}
-│ *ESTADO*: ${isEnable ? 'Activado' : 'Desactivado'}
-│ *PARA*: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
+│ *OPCIÓN🗒️:* ${type}
+│ *ESTADO🗯️*: ${isEnable ? 'Activado' : 'Desactivado'}
+│ *PARA🎐*: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
 ╚───𖥻 ON-OFF 𖥻───╝`, fliveLoc, m)
 
 }
