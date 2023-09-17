@@ -4,6 +4,7 @@
 <img src="https://telegra.ph/file/847bdd9005d7e75eb2373.jpg" alt="CuriosityBot-MD" width="900"/>
 </p>
 
+**Warning**
 > Se estan actualizando todos los archivos, muy pronto se subieran los nuevos archivos
 
 <a href="https://www.youtube.com/@Azami_19">
