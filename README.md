@@ -3,6 +3,8 @@
 <p align="center">
 <img src="https://telegra.ph/file/847bdd9005d7e75eb2373.jpg" alt="CuriosityBot-MD" width="900"/>
 </p>
+> <b> Se estan actualizando todos los archivos, muy pronto se subieran los nuevos archivos </b>
+
 <a href="https://www.youtube.com/@Azami_19">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
 </a>
