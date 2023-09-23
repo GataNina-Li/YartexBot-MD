@@ -5,7 +5,7 @@
 </p>
 
 ## **Warning**
-> Se estan actualizando todos los archivos, muy pronto se subieran los nuevos archivos
+> Se estan actualizando todos los archivos, muy pronto se subirán los nuevos archivos
 
 <a href="https://www.youtube.com/@Azami_19">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
