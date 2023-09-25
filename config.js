@@ -13,7 +13,8 @@ const __dirname = global.__dirname(import.meta.url)
 
 /*=========== OWNER ===========*/
 global.owner = [
- ['5217294888993', 'Creador Azami🎨',true]]
+ ['5217294888993', 'Creador Azami🎨',true],
+ ['50576390682', 'Colaborador Ender🐺',true]]
 
 global.animxscans = ['56962237366']
 global.suittag = ['59894808483'] 
