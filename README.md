@@ -3,10 +3,6 @@
 <p align="center">
 <img src="https://telegra.ph/file/847bdd9005d7e75eb2373.jpg" alt="CuriosityBot-MD" width="900"/>
 </p>
-
-## **Warning**
-> Se estan actualizando todos los archivos, muy pronto se subirán los nuevos archivos
-
 <a href="https://www.youtube.com/@Azami_19">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
 </a>
@@ -31,9 +27,9 @@
 | Más funciones en adelante|⚡|
 
 ### `⚙️ AJUSTES ⚙️`
-- CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/Undefined17/CuriosityBot-MD/blob/main/config.js#L6)
-- CLONAR EL REPOSITORIO [Aqui](https://github.com/Undefined17/CuriosityBot-MD/fork)
-- Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/Undefined17/CuriosityBot-MD/blob/main/package.json#L42)
+- CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
+- CLONAR EL REPOSITORIO [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
+- Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 
 ### Ejemplo 
 En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
@@ -75,6 +71,9 @@ git clone https://github.com/AzamiJs/CuriosityBot-MD && cd CuriosityBot-MD && ya
 ```bash
 ls
 ```
+```bash
+npm update
+```
 
 ```bash
 npm start
@@ -93,8 +92,7 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 ### `OBTENER OTRO CODIGO QR`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd 
-> cd CuriosityBot-MD1
+> cd CuriosityBot-MD
 > rm -rf sessions
 > npm start
 ```
@@ -119,7 +117,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
   href="https://github.com/Aleixon127271"><img src="https://github.com/Aleixon127271.png?size=100" width="100px;" alt=""/><br /><sub><b>Aleixon</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
     <td align="center"><a href="https://github.com/Ender-GB-Isis777"><img src="https://github.com/Ender-GB-Isis777.png?size=100" width="100px;" alt=""/><br /><sub><b>Ender GB</b></sub></a><br /><sub><i>Desarrollador Oficial</i>
     <td align="center"><a 
-    href="https://github.com/Aleixon127271"><img src="https://github.com/KimdanBot-MD.png?size=100" width="100px;" alt=""/><br /><sub><b>Jose.Ofc</b></sub></a><br /><sub><i>Desarollador oficial</i></sub></td> 
+    href="https://github.com/Aleixon127271"><img src="https://github.com/KimdanBot-MD.png?size=100" width="100px;" alt=""/><br /><sub><b>Jose Ofc</b></sub></a><br /><sub><i>Desarollador oficial</i></sub></td> 
     <td align="center"><a 
     </sub></td>
   </tr>
