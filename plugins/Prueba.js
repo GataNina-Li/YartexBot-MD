@@ -58,7 +58,7 @@ import { youtubedl, youtubedlv2, youtubeSearch } from '@bochilteam/scraper'
   
  handler.help = ['play'].map((v) => v + ' <pencarian>') 
  handler.tags = ['downloader'] 
- handler.command = /^play$/i 
+ handler.command = /^playl$/i 
   
  handler.exp = 0 
  handler.register = true 
