@@ -1,9 +1,4 @@
  import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
-const { levelling } = '../lib/levelling.js'
-import PhoneNumber from 'awesome-phonenumber'
-import { promises } from 'fs'
-import { join } from 'path'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
@@ -21,7 +16,7 @@ let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
   speedInMps: 0,
   degreesClockwiseFromMagneticNorth: 2,
   comment: 'Hola',
-  jpegThumbnail: await conn.reSize(perfil_sc, 200, 150)
+  jpegThumbnail: imagen1
 }}, { quoted: m })
 conn.relayMessage(m.chat, msg.message, {})
 }
