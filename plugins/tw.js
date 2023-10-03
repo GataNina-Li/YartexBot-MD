@@ -7,8 +7,8 @@ const perfil_sc = await conn.profilePictureUrl(m.sender, "image").catch(_ => "ht
 let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
   degreesLatitude: 0,
   degreesLongitude: 0,
-  name: 'Pagina web de Delirius',
-  address: 'Created by Sareth',
+  name: 'Github del bot',
+  address: 'By Azami',
   url: md,
   isLive: true,
   accuracyInMeters: 0,
