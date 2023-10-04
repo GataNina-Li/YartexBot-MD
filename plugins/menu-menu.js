@@ -316,7 +316,7 @@ let buttonMessage = {
     },
   'caption': menu['trim']()
 }
-await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)], buttonMessage, { 'quoted': fkontak })
+await conn.SendMessage(m.chat, buttonMessage, { 'quoted': fkontak })
 } catch {
 conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENU COMPLETO: (.menucompleto)*', fpoll, m)
 }}
