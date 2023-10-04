@@ -1,4 +1,4 @@
-console.log('🚀 Iniciando...')
+console.info('🚀 Iniciando...')
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
 import { fileURLToPath } from 'url'
