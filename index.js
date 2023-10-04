@@ -25,9 +25,12 @@ font: 'console',
 align: 'center',
 colors: ['blueBright']
 })
-console.log('WhatsApp bot
-By     : Azami
-Número : +994 ')
+console.log(` 
+ Curiosity Bot V2
+ Author: Azami
+ WA    : +994 
+ Base  : BochilTeam
+ `)
 
 var isRunning = false
 /**
