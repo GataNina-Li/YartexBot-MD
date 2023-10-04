@@ -25,6 +25,9 @@ font: 'console',
 align: 'center',
 colors: ['blueBright']
 })
+console.log('WhatsApp bot
+By     : Azami
+Número : +994 ')
 
 var isRunning = false
 /**
