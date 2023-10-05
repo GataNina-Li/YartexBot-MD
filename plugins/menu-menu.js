@@ -316,7 +316,7 @@ let buttonMessage = {
     },
   'caption': menu['trim']()
 }
-await conn.sendFile(m.chat, imagen1, 'error.jpg', buttonMessage, fkontak)
+await conn.sendFile(m.chat, imagen1, 'error.jpg', buttonMessage)
 } catch {
 conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENU COMPLETO: (.menucompleto)*', fpoll, m)
 }}
