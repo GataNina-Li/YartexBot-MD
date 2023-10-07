@@ -1,10 +1,5 @@
 <p align="center"> 
-<a href="https://github.com/GataNina-Li"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=E6E6FA&center=falso&vCenter=falso&lines=CuriosityBot-MD++;Gracias+por+visitar+este+repositorio" height="90px"></a> 
-</p>
 
-<p align="center">
-<img src="https://telegra.ph/file/696221afcda68a5f13ca8.jpg" alt="CuriosityBot-MD" width="900"/>
-</p>
 <a href="https://www.youtube.com/@Azami_19">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
 </a>
