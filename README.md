@@ -86,7 +86,7 @@ termux-setup-storage
 apt update -y && yes | apt upgrade && pkg install yarn && pkg install -y
 ```
 ```bash
-bash wget mpv wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
+wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
 ### `OBTENER OTRO CODIGO QR`
