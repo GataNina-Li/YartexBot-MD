@@ -163,6 +163,23 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
+if(usePairingCode && !conn.authState.creds.registered) {
+		if(useMobile) throw new Error('Cannot use pairing code with mobile api')
+		const { registration } = { registration: {} }
+		let phoneNumber = ''
+		do {
+			phoneNumber = await question(chalk.blueBright('Input a Valid number start with region code. Example : 62xxx:\n'))
+		} while (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v)))
+		rl.close()
+		phoneNumber = phoneNumber.replace(/\D/g,'')
+		console.log(chalk.bgWhite(chalk.blue('Generating code...')))
+		setTimeout(async () => {
+			let code = await conn.requestPairingCode(phoneNumber)
+			code = code?.match(/.{1,4}/g)?.join('-') || code
+			console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.black(chalk.white(code)))
+		}, 3000)
+}
+
 function clearTmp() {
 const tmp = [tmpdir(), join(__dirname, './tmp')]
 const filename = []
