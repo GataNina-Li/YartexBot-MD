@@ -23,7 +23,6 @@ import {mongoDB, mongoDBV2} from './lib/mongoDB.js';
 import store from './lib/store.js'
 const {proto} = (await import('@whiskeysockets/baileys')).default
 const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeInMemoryStore, makeCacheableSignalKeyStore, PHONENUMBER_MCC } = await import('@whiskeysockets/baileys')
-const {CONNECTING} = ws
 const {chain} = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
@@ -77,6 +76,17 @@ settings: {},
 global.db.chain = chain(global.db.data)
 }
 loadDatabase()
+
+const useStore = !process.argv.includes('--use-store')
+const usePairingCode = !process.argv.includes('--use-pairing-code')
+const useMobile = process.argv.includes('--mobile')
+
+var question = function(text) {
+            return new Promise(function(resolve) {
+                rl.question(text, resolve);
+            });
+        };
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 
 global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')))
 global.loadChatgptDB = async function loadChatgptDB() {
