@@ -114,10 +114,10 @@ loadChatgptDB()
 global.authFile = `sessions`
 const store = useStore ? makeInMemoryStore({ level: 'silent' }) : undefined
 
-store?.readFromFile('./nao_store.json')
+store?.readFromFile('./curiosity_store.json')
 // save every 10s
 setInterval(() => {
-	store?.writeToFile('./nao_store.json')
+	store?.writeToFile('./curiosity_store.json')
 }, 10_000)
 
 const { version, isLatest} = await fetchLatestBaileysVersion()
