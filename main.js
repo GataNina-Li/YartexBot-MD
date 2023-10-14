@@ -165,19 +165,19 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
 if(usePairingCode && !conn.authState.creds.registered) {
-		if(useMobile) throw new Error('Cannot use pairing code with mobile api')
+		if(useMobile) throw new Error('No se puede utilizar el código de emparejamiento con la API móvil')
 		const { registration } = { registration: {} }
 		let phoneNumber = ''
 		do {
-			phoneNumber = await question(chalk.blueBright('Input a Valid number start with region code. Example : 62xxx:\n'))
+			phoneNumber = await question(chalk.blueBright('Ingrese el número de su bot. Ejemplo: 52xxxx:\n'))
 		} while (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v)))
 		rl.close()
 		phoneNumber = phoneNumber.replace(/\D/g,'')
-		console.log(chalk.bgWhite(chalk.blue('Generating code...')))
+		console.log(chalk.bgWhite(chalk.blue('Generando código...')))
 		setTimeout(async () => {
 			let code = await conn.requestPairingCode(phoneNumber)
 			code = code?.match(/.{1,4}/g)?.join('-') || code
-			console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.black(chalk.white(code)))
+			console.log(chalk.black(chalk.bgGreen(`Tu código : `)), chalk.black(chalk.white(code)))
 		}, 3000)
 }
 
