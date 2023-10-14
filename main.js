@@ -250,10 +250,10 @@ if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
 await global.reloadHandler(true).catch(console.error)
 global.timestamp.connect = new Date
 }
-if (global.db.data == null) loadDatabase()
+/*if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
-}
+}*/
 if (connection == 'open') {
 console.log(chalk.greenBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))
 }
@@ -295,9 +295,9 @@ console.error(e)
 }
 if (restatConn) {
 const oldChats = global.conn.chats
-try {
+/*try {
 global.conn.ws.close()
-} catch { }
+} catch { }*/
 conn.ev.removeAllListeners()
 global.conn = makeWASocket(connectionOptions, {chats: oldChats})
 isInit = true
