@@ -113,12 +113,12 @@ global.chatgpt.chain = lodash.chain(global.chatgpt.data)
 loadChatgptDB()
 
 global.authFile = `sessions`
-const store = useStore ? makeInMemoryStore({ level: 'silent' }) : undefined
+const stores = useStore ? makeInMemoryStore({ level: 'silent' }) : undefined
 
-store?.readFromFile('./curiosity_store.json')
+stores?.readFromFile('./curiosity_store.json')
 // save every 10s
 setInterval(() => {
-	store?.writeToFile('./curiosity_store.json')
+	stores?.writeToFile('./curiosity_store.json')
 }, 10_000)
 
 const { version, isLatest} = await fetchLatestBaileysVersion()
