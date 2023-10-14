@@ -112,9 +112,16 @@ global.chatgpt.chain = lodash.chain(global.chatgpt.data)
 loadChatgptDB()
 
 global.authFile = `sessions`
-const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
-const msgRetryCounterMap = (MessageRetryMap) => { }
-const {version} = await fetchLatestBaileysVersion()
+const store = useStore ? makeInMemoryStore({ level: 'silent' }) : undefined
+
+store?.readFromFile('./nao_store.json')
+// save every 10s
+setInterval(() => {
+	store?.writeToFile('./nao_store.json')
+}, 10_000)
+
+const { version, isLatest} = await fetchLatestBaileysVersion()
+const { state, saveCreds } = await useMultiFileAuthState('./sessions')
 
 const connectionOptions = { printQRInTerminal: true,patchMessageBeforeSending: (message) => {
 const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage )
