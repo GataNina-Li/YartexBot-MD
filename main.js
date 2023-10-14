@@ -138,7 +138,7 @@ return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ?
 }
 return proto.Message.fromObject({})
 },
-msgRetryCounterMap,
+MessageRetryMap,
 logger: pino({level: 'silent'}),
 auth: {
 creds: state.creds,
