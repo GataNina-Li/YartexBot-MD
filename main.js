@@ -5,6 +5,7 @@ import {createRequire} from 'module'
 import path, {join} from 'path'
 import {fileURLToPath, pathToFileURL} from 'url'
 import {platform} from 'process'
+import * as ws from 'ws'
 import {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} from 'fs'
 import yargs from 'yargs'
 import {spawn} from 'child_process'
@@ -15,14 +16,14 @@ import {tmpdir} from 'os'
 import {format} from 'util'
 import P from 'pino'
 import pino from 'pino'
-import readline from 'readline'
 import {Boom} from '@hapi/boom'
 import {makeWASocket, protoType, serialize} from './lib/simple.js'
 import {Low, JSONFile} from 'lowdb'
 import {mongoDB, mongoDBV2} from './lib/mongoDB.js';
 import store from './lib/store.js'
 const {proto} = (await import('@whiskeysockets/baileys')).default
-const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeInMemoryStore, makeCacheableSignalKeyStore, PHONENUMBER_MCC } = await import('@whiskeysockets/baileys')
+const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = await import('@whiskeysockets/baileys')
+const {CONNECTING} = ws
 const {chain} = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
@@ -77,17 +78,6 @@ global.db.chain = chain(global.db.data)
 }
 loadDatabase()
 
-const useStore = !process.argv.includes('--use-store')
-const usePairingCode = !process.argv.includes('--use-pairing-code')
-const useMobile = process.argv.includes('--mobile')
-
-var question = function(text) {
-            return new Promise(function(resolve) {
-                rl.question(text, resolve);
-            });
-        };
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
-
 global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')))
 global.loadChatgptDB = async function loadChatgptDB() {
 if (global.chatgpt.READ) {
@@ -112,16 +102,9 @@ global.chatgpt.chain = lodash.chain(global.chatgpt.data)
 loadChatgptDB()
 
 global.authFile = `sessions`
-const stores = useStore ? makeInMemoryStore({ level: 'silent' }) : undefined
-
-stores?.readFromFile('./curiosity_store.json')
-// save every 10s
-setInterval(() => {
-	stores?.writeToFile('./curiosity_store.json')
-}, 10_000)
-
-const { version, isLatest} = await fetchLatestBaileysVersion()
-const { state, saveCreds } = await useMultiFileAuthState('./sessions')
+const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
+const msgRetryCounterMap = (MessageRetryMap) => { }
+const {version} = await fetchLatestBaileysVersion()
 
 const connectionOptions = { printQRInTerminal: true,patchMessageBeforeSending: (message) => {
 const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage )
@@ -137,7 +120,7 @@ return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ?
 }
 return proto.Message.fromObject({})
 },
-MessageRetryMap,
+msgRetryCounterMap,
 logger: pino({level: 'silent'}),
 auth: {
 creds: state.creds,
@@ -162,23 +145,6 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 }}
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
-
-if(usePairingCode && !conn.authState.creds.registered) {
-		if(useMobile) throw new Error('No se puede utilizar el código de emparejamiento con la API móvil')
-		const { registration } = { registration: {} }
-		let phoneNumber = ''
-		do {
-			phoneNumber = await question(chalk.blueBright('Ingrese el número de su bot. Ejemplo: 52xxxx:\n'))
-		} while (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v)))
-		rl.close()
-		phoneNumber = phoneNumber.replace(/\D/g,'')
-		console.log(chalk.bgWhite(chalk.blue('Generando código...')))
-		setTimeout(async () => {
-			let code = await conn.requestPairingCode(phoneNumber)
-			code = code?.match(/.{1,4}/g)?.join('-') || code
-			console.log(chalk.black(chalk.bgGreen(`Tu código : `)), chalk.black(chalk.white(code)))
-		}, 3000)
-}
 
 function clearTmp() {
 const tmp = [tmpdir(), join(__dirname, './tmp')]
@@ -250,10 +216,10 @@ if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
 await global.reloadHandler(true).catch(console.error)
 global.timestamp.connect = new Date
 }
-/*if (global.db.data == null) loadDatabase()
+if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
-}*/
+}
 if (connection == 'open') {
 console.log(chalk.greenBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))
 }
@@ -295,9 +261,9 @@ console.error(e)
 }
 if (restatConn) {
 const oldChats = global.conn.chats
-/*try {
+try {
 global.conn.ws.close()
-} catch { }*/
+} catch { }
 conn.ev.removeAllListeners()
 global.conn = makeWASocket(connectionOptions, {chats: oldChats})
 isInit = true
