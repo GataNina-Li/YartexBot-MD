@@ -7,8 +7,8 @@ var number = text.split`@`[1]
 }else if(!isNaN(text)) {
 var number = text
 }
-if(!text && !m.quoted) return conn.reply(m.chat, `*⚠️ EJEMPLO DE USO*\n\n*${usedPrefix}demote @tag*\n*${usedPrefix}demote responder a un mensaje*`, m)
-if(number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `⚠️ NUMERO INCORRECTO`, m)
+if(!text && !m.quoted) return m.reply(`*⚠️ EJEMPLO DE USO*\n\n*${usedPrefix}demote @tag*\n*${usedPrefix}demote responder a un mensaje*`)
+if(number.length > 13 || (number.length < 11 && number.length > 0)) return m.reply(`⚠️ NUMERO INCORRECTO`)
   
 try {
 if(text) {
