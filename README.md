@@ -30,7 +30,7 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 
 ***
 
-#### `ACTIVA EN HEROKU`
+#### `☂️ ACTIVA EN HEROKU ☂️`
 para usuarios del heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
@@ -42,7 +42,7 @@ para usuarios del heroku
 | **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
 
 ***
-### `ACTIVAR EN TERMUX`
+### `🕷️ ACTIVAR EN TERMUX 🕷️`
 > **Note** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 termux-setup-storage
