@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://telegra.ph/file/dbfe42b5830b3bd95342b.jpg" alt="GataBot-MD" width="900"/>
+<img src="https://telegra.ph/file/ade3646326440877de52a.jpg" alt="CuriosityBot-MD" width="900"/>
 </p>
 
 <a href="https://github.com/azamijs/CuriosityBot-MD"><img title="Stars" src="https://img.shields.io/github/stars/azamijs/CuriosityBot-MD?color=54aeff&style=flat-square" /></a>
