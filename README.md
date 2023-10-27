@@ -1,4 +1,8 @@
-<a href="https://github.com/zhwzein/Killua-Zoldyck"><img title="Stars" src="https://img.shields.io/github/stars/azamijs/CuriosityBot-MD?color=54aeff&style=flat-square" /></a>
+<p align="center">
+<img src="https://telegra.ph/file/dbfe42b5830b3bd95342b.jpg" alt="GataBot-MD" width="900"/>
+</p>
+
+<a href="https://github.com/azamijs/CuriosityBot-MD"><img title="Stars" src="https://img.shields.io/github/stars/azamijs/CuriosityBot-MD?color=54aeff&style=flat-square" /></a>
 <a href="https://github.com/zhwzein/Killua-Zoldyck/network/members"><img title="Forks" src="https://img.shields.io/github/forks/azamijs/CuriosityBot-MD?color=54aeff&style=flat-square" /></a>
 <a href="https://github.com/zhwzein/Killua-Zoldyck/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/azamijs/CuriosityBot-MD?label=watchers&color=54aeff&style=flat-square" /></a> <br>
 
