@@ -34,7 +34,9 @@
 ### Ejemplo 
 En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 
-[![Grupos](https://img.shields.io/badge/CuriosityBot-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/JiCOqSlcPVfEDu8WroH6ed) 
+<a href="https://chat.whatsapp.com/IDXPYkGVTjw6GbSnMbVNcK">
+  <img src="https://img.shields.io/badge/Support_Group-0a0a0a?style=for-the-badge&logo=whatsapp&logoColor=white">
+</a>
 
 ***
 
