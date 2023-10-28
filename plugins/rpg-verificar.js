@@ -28,12 +28,13 @@ ${sn}
 
  *${usedPrefix}menu* para ver el Menu
 `.trim())*/
+  
   await conn.reply(m.chat, `
 🗃️ *R E G I S T R A D O* 🗃️
 🪁 *Nombre:* ${name}
 🎨 *Edad* : ${age} años
 🥏 *Numero de serie*:
-${sn}`, estilo, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: pp }}})
+${sn}`, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: pp }}})
 m.react('📩')  
 }
 handler.help = ['reg'].map(v => v + ' <nombre.edad>')
