@@ -17,7 +17,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
-  m.reply(`
+/*  m.reply(`
 🗃️ *R E G I S T R A D O* 🗃️
 🪁 *Nombre:* ${name}
 🎨 *Edad* : ${age} años
@@ -25,7 +25,14 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 ${sn}
 
  *${usedPrefix}menu* para ver el Menu
-`.trim())
+`.trim())*/
+  await conn.reply(m.chat, `
+🗃️ *R E G I S T R A D O* 🗃️
+🪁 *Nombre:* ${name}
+🎨 *Edad* : ${age} años
+🥏 *Numero de serie*:
+${sn}`, estilo, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: pp }}})
+m.react('📩')  
 }
 handler.help = ['reg'].map(v => v + ' <nombre.edad>')
 handler.tags = ['rg']
