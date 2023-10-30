@@ -5,6 +5,8 @@ import { webp2png } from '../lib/webp2mp4.js'
 
 let handler = async (m, { conn, args, usedPrefix, command, text }) => {
 let stiker = false
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let autor = await conn.getName(who)
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 
@@ -14,7 +16,7 @@ if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply('*⚠️ 
 if (/webp|image|video/g.test(mime)) {
 let img = await q.download?.()
 let out
-stiker = await sticker(img, false, global.packname, global.author)
+stiker = await sticker(img, false, global.packname, global.autor)
 await conn.reply(m.chat, `_Calma crack estoy haciendo tu sticker 👏_\n\n_*Recuerda los stickersgif son de 6 segundos*_\n\n_*by CuriosityBot*_`, m)
   
 if (!stiker) {
@@ -26,7 +28,7 @@ stiker = await sticker(false, out, global.packname, global.author)
   
 if (!stiker) errorMessage = 'ERROR'
 }} else if (args[0]) {
-if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
+if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.autor)
 else return m.reply('*⚠️ EL ENLACE / URL / LINK NO ES VÁLIDO*')}
 
 if (stiker) {
