@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text, command, args, usedPrefix }) => {
 
-if (!text) throw `*⚠️ INGRESE UN TEXTO PATA HABLAR CONMIGO*\n\n❕ EJEMPLO:\n*${usedPrefix + command}* Hola curiosity`
+if (!text) throw `*⚠️ INGRESE UN TEXTO PARA HABLAR CONMIGO*\n\n❕ EJEMPLO:\n*${usedPrefix + command}* Hola curiosity`
 m.react('🗣️') 
 try {
 let api = await fetch("https://api.simsimi.net/v2/?text=" + text + "&lc=es")
