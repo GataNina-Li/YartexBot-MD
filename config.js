@@ -18,8 +18,8 @@ global.suittag = ['994400359205']
 global.mods = []
 global.prems = []
 
-global.packname = '× Stickers V2\ngithub.com/CuriosityBot-MD\n\n× Script:\ngithub.com/AzamiJs/CuriosityBot-MD'
-global.author = ' C\n U\n R\n  I\n O\n S\n  I\n T\n Y'
+global.packname = 'Prueba'
+global.author = ''
 global.wm = '© CuriosityBot-MD'
 global.wm2 = '𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍'
 global.azami = 'Azami'
