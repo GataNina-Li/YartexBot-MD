@@ -112,13 +112,15 @@ const msgRetryCounterCache = new NodeCache()
 const {version} = await fetchLatestBaileysVersion();
 let phoneNumber = global.botNumberCode
 
-const methodCode = !!phoneNumber //|| process.argv.includes("code")
+const methodCodeQR = process.argv.includes("qr")
+const methodCode = !!phoneNumber || process.argv.includes("code")
 const MethodMobile = process.argv.includes("mobile")
+
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
 let opcion
-if (!fs.existsSync(`./${authFile}/creds.json`)) {
+if (!fs.existsSync(`./${authFile}/creds.json`) && !methodCodeQR && !methodCode) {
 while (true) {
 opcion = await question('Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n--> ')
 if (opcion === '1' || opcion === '2') {
@@ -156,7 +158,7 @@ version
 // Hecho por: GataNina-Li (Gata Dios) 💞
 
 global.conn = makeWASocket(connectionOptions)
-if (opcion === '2') {
+if (opcion === '2' || methodCode) {
 if (!conn.authState.creds.registered) {  
 if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
 
@@ -272,7 +274,7 @@ await global.reloadHandler(true).catch(console.error)
 global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
-if (update.qr != 0 && update.qr != undefined) {
+if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
 if (opcion == '1') {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
 }}
