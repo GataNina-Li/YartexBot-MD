@@ -5,7 +5,7 @@ if (!global.db.data.chats[m.chat].nsfw) throw `🚫 El grupo no admite contenido
     if (user < 15) throw m.reply(`😐 ᴇʀᴇs ᴍᴇɴᴏʀ ᴅᴇ ᴇᴅᴀᴅ! ᴠᴜᴇʟᴠᴇ ᴄᴜᴀɴᴅᴏ ᴛᴇɴɢᴀs ᴍᴀs ᴅᴇ 15 ᴀñᴏs`)
    
 m.react('🥵') 
-let res = (await axios.get(`https://raw.githubusercontent.com/Undefinido17/CuriosityBot-MD/master/src/hades/+18-${command}.json`)).data  
+let res = (await axios.get(`https://nekobot.xyz/api/image?type=yaoi`)).data  
 let haha = await res[Math.floor(res.length * Math.random())]    
 conn.sendFile(m.chat, haha, 'error.jpg', `_${command}_`, m)
 //conn.sendButton(m.chat, `_${command}_`.trim(), author, haha, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `${usedPrefix + command}`]], m)    
