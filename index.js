@@ -52,7 +52,6 @@ args: args.slice(1),
 })
 let p = fork()
 p.on('message', data => {
-console.log('[RECEIVED]', data)
 switch (data) {
 case 'reset':
 p.process.kill()
