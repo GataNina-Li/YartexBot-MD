@@ -136,6 +136,29 @@ version
 }
 
 global.conn = makeWASocket(connectionOptions)
+if (methodCode && !conn.authState.creds.registered) {
+if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
+
+let addNumber
+if (!!phoneNumber) {
+addNumber = phoneNumber.replace(/[^0-9]/g, '')
+
+if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+console.log(chalk.bgBlack(chalk.redBright("Asegúrese de agregar el código de país. Ejemplo: +593090909090")))
+process.exit(0)
+}} else {
+addNumber = await question(chalk.bgBlack(chalk.greenBright(`Escriba su númerode WhatsApp. Ejemplo: +593090909090: `)))
+addNumber = addNumber.replace(/[^0-9]/g, '')
+rl.close()
+}
+
+setTimeout(async () => {
+let codeBot = await conn.requestPairingCode(addNumber)
+codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
+console.log(chalk.black(chalk.bgGreen(`Código de emparejamiento: `)), chalk.black(chalk.white(codeBot)))
+}, 3000)
+}
+
 conn.isInit = false
 conn.well = false
 conn.logger.info(`🔵 H E C H O\n`)
