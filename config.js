@@ -13,6 +13,11 @@ const __dirname = global.__dirname(import.meta.url)
 
 global.owner = [['527294888993', 'Creador', true], ['5492266466080', 'Colaborador', true], ['593968585383'], ['51992004117'], ['5492266613038'], ['573106040746'], ['50576390682'], ['5217294888993'], ['50558124470'], ['929972576']]
 
+//BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
+//Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
+global.botNumberCode = "" //Ejemplo: +59309090909
+global.confirmCode = ""
+
 global.animxscans = ['400359205']
 global.suittag = ['994400359205']
 global.mods = []
