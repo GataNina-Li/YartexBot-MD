@@ -137,19 +137,6 @@ else
 echo -e "\033[38;5;229\033[01mYarn se ha actualizado correctamente.\n\033[0m" 
 fi
 
-echo -e "\e[38;5;206m
-█ █▄░█ █▀ ▀█▀ ▄▀█ █░░ █░░   █▄░█ █▀█ █▀▄▀█
-█ █░▀█ ▄█ ░█░ █▀█ █▄▄ █▄▄   █░▀█ █▀▀ █░▀░█\n\e[0m"
-
-echo -e "\033[38;5;205mSe instalará NPM automáticamente. Espere un momento por favor.\n\033[0m"
-if npm install 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
-error=$(npm install 2>&1 >/dev/null)
-echo -e "\033[0;31mError: $error\033[0m" 
-echo -e "\033[0;34mNo se pudo instalar NPM. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de manualmente.\033[0m" 
-else
-echo -e "\033[38;5;204m\033[01mNPM se ha instalado correctamente..\n\033[0m" 
-fi
-
 clear
 echo -e "\e[38;38;5;183m
 ░█▀▀█ ░█▀▀█ ─█▀▀█ ░█▀▀█ ▀█▀ ─█▀▀█ ░█▀▀▀█ 　 ░█▀▀█ ░█▀▀▀█ ░█▀▀█ 　 ░█▀▀▀█ ░█─░█ 
