@@ -151,6 +151,10 @@ defaultQueryTimeoutMs: undefined,
 version
 }
 
+// Código adaptado para la compatibilidad de
+// ser bot con el código de texto de 8 digitos
+// Hecho por: GataNina-Li (Gata Dios) 💞
+
 global.conn = makeWASocket(connectionOptions)
 if (opcion === '2') {
 if (!conn.authState.creds.registered) {  
