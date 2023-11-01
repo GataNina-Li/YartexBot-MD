@@ -103,8 +103,15 @@ loadChatgptDB()
 
 global.authFile = `sessions`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
-const msgRetryCounterMap = (MessageRetryMap) => { }
-const {version} = await fetchLatestBaileysVersion()
+const msgRetryCounterMap = (MessageRetryMap) => { };
+const msgRetryCounterCache = new NodeCache()
+const {version} = await fetchLatestBaileysVersion();
+let phoneNumber = global.botNumberCode
+
+const methodCode = !!phoneNumber || process.argv.includes("code")
+const MethodMobile = process.argv.includes("mobile")
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
 const connectionOptions = { printQRInTerminal: true,patchMessageBeforeSending: (message) => {
 const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage )
