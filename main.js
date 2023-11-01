@@ -113,29 +113,26 @@ const MethodMobile = process.argv.includes("mobile")
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
-const connectionOptions = { printQRInTerminal: true,patchMessageBeforeSending: (message) => {
-const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage )
-if (requiresPatch) {
-message = {viewOnceMessage: {message: {messageContextInfo: {deviceListMetadataVersion: 2, deviceListMetadata: {}}, ...message}}}
-}
-return message
-},
-getMessage: async (key) => {
-if (store) {
-const msg = await store.loadMessage(key.remoteJid, key.id)
-return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined
-}
-return proto.Message.fromObject({})
-},
-msgRetryCounterMap,
-logger: pino({level: 'silent'}),
+const connectionOptions = { 
+logger: pino({ level: 'silent' }),
+printQRInTerminal: !methodCode, 
+mobile: MethodMobile, 
+browser: ['Chrome (Linux)', '', ''],
 auth: {
 creds: state.creds,
-keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
+keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
 },
-browser: ['CuriosityBot-MD', 'Edge', '1.0.0'],
-version,
-defaultQueryTimeoutMs: undefined,
+markOnlineOnConnect: true, 
+generateHighQualityLinkPreview: true, 
+getMessage: async (clave) => {
+let jid = jidNormalizedUser(clave.remoteJid)
+let msg = await store.loadMessage(jid, clave.id)
+return msg?.message || ""
+},
+msgRetryCounterCache,
+msgRetryCounterMap,
+defaultQueryTimeoutMs: undefined,   
+version
 }
 
 global.conn = makeWASocket(connectionOptions)
