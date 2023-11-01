@@ -1,4 +1,4 @@
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
 import './config.js'
 import './store.js'
 import {createRequire} from 'module'
@@ -150,7 +150,7 @@ if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
 console.log(chalk.bgBlack(chalk.redBright("Asegúrese de agregar el código de país. Ejemplo: +593090909090")))
 process.exit(0)
 }} else {
-addNumber = await question(chalk.bgBlack(chalk.greenBright(`Escriba su númerode WhatsApp. Ejemplo: +593090909090: `)))
+addNumber = await question(chalk.bgBlack(chalk.greenBright(`Escriba su número de WhatsApp. Ejemplo: +593090909090 --> `)))
 addNumber = addNumber.replace(/[^0-9]/g, '')
 rl.close()
 }
