@@ -1,7 +1,7 @@
-## CuriosityBot-MD 🎃🕷️
+## CuriosityBot-MD 🕯️🌼
 
 <p align="center">
-<img src="https://telegra.ph/file/d8de6aecc4e02b4fdf459.jpg" alt="CuriosityBot-MD" width="900"/>
+<img src="https://telegra.ph/file/cb5c3dcb6c19144ab13fd.jpg" alt="CuriosityBot-MD" width="900"/>
 </p>
 
 <a href="https://github.com/azamijs/CuriosityBot-MD"><img title="Stars" src="https://img.shields.io/github/stars/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
