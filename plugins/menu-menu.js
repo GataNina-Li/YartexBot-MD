@@ -69,180 +69,194 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', fload, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnail: await (await fetch(pp)).buffer() }}})
-m.react('👻')     
-let menu = `╭━〔 U S U A R I OS 〕━◉
-┃╭━━━━━━━━━━━━━━◉
-┃┃🎃 *Nombre :* ${name}
-┃┃🎃 *Limite :* ${diamond}
-┃┃🎃 *Nivel :* ${level}
-┃┃🎃 *Rango :* ${role}
-┃┃🎃 *Exp :* ${exp}
-┃╰━━━━━━━━━━━━━◉
-┠┌─⭓『 I N F O B O T 』
-┃┃🎃 *Creador :* Azami 
-┃┃🎃 *Numero:* wa.me/59894808483
-┃┃🎃 *Tiempo Activo:* ${uptime}
-┃┃🎃 *Registrado :* ${rtotalreg} de ${totalreg} usuarios
-┃└──────────⭓
-┠┌─⭓『 I N F O R M A C I Ó N  』
-┃│🎃 ${usedPrefix}estado
-┃│🎃 ${usedPrefix}owner
-┃│🎃 ${usedPrefix}grouplist
-┃│🎃 ${usedPrefix}donar
-┃│🎃 ${usedPrefix}grupos
-┃│🎃 ${usedPrefix}infobot
-┃│🎃 ${usedPrefix}cuenta
-┃│🎃 ${usedPrefix}reporte
-┃│🎃 ${usedPrefix}join
-┃│🎃 ${usedPrefix}bot
-┃└──────────⭓
-┠┌─⭓『 J A D I B O T 』
-┃│🎃 ${usedPrefix}Serbot 
-┃│🎃 ${usedPrefix}jadibot
-┃│🎃 ${usedPrefix}bots
-┃│🎃 ${usedPrefix}deletesesion
-┃│🎃 ${usedPrefix}stop
-┃└──────────⭓
-┠┌─⭓『D E S C A R G A S 』
-┃│🎃 ${usedPrefix}play
-┃│🎃 ${usedPrefix}play2
-┃│🎃 ${usedPrefix}yta
-┃│🎃 ${usedPrefix}ytv
-┃│🎃 ${usedPrefix}facebook
-┃│🎃 ${usedPrefix}tiktok
-┃│🎃 ${usedPrefix}instagram
-┃│🎃 ${usedPrefix}gitclone
-┃│🎃 ${usedPrefix}pinterest
-┃│🎃 ${usedPrefix}imagen
-┃│🎃 ${usedPrefix}mediafire
-┃└──────────⭓
-┠┌─⭓『B U S C A D O R E S 』
-┃│🎃 ${usedPrefix}google
-┃│🎃 ${usedPrefix}yts
-┃└──────────⭓
-┠┌─⭓『C O N V E R T I D O R E S 』
-┃│🎃 ${usedPrefix}toimg
-┃│🎃 ${usedPrefix}tomp3
-┃│🎃 ${usedPrefix}toptt
-┃│🎃 ${usedPrefix}tourl
-┃│🎃 ${usedPrefix}tovideo
-┃│🎃 ${usedPrefix}tts
-┃└──────────⭓
-┠┌─⭓『A U D I O S   E F E C T O S 』
-┃│🎃 ${usedPrefix}bass
-┃│🎃 ${usedPrefix}blown
-┃│🎃 ${usedPrefix}deep
-┃│🎃 ${usedPrefix}earrape
-┃│🎃 ${usedPrefix}fas
-┃│🎃 ${usedPrefix}fast
-┃│🎃 ${usedPrefix}nightcore
-┃│🎃 ${usedPrefix}reverse
-┃│🎃 ${usedPrefix}robot
-┃│🎃 ${usedPrefix}slow
-┃│🎃 ${usedPrefix}smooth
-┃│🎃 ${usedPrefix}tupai
-┃│🎃 ${usedPrefix}squirrel
-┃│🎃 ${usedPrefix}chipmunk
-┃└──────────⭓
-┠┌─⭓『H E R R A M I E N T A S 』
-┃│🎃 ${usedPrefix}acortar
-┃│🎃 ${usedPrefix}qr
-┃│🎃 ${usedPrefix}delete
-┃│🎃 ${usedPrefix}readmore
-┃│🎃 ${usedPrefix}styletext
-┃└──────────⭓
-┠┌─⭓『J U E G O S 』
-┃│🎃 ${usedPrefix}mates
-┃│🎃 ${usedPrefix}math
-┃│🎃 ${usedPrefix}simi
-┃│🎃 ${usedPrefix}suerte
-┃│🎃 ${usedPrefix}ppt
-┃│🎃 ${usedPrefix}tictactoe
-┃│🎃 ${usedPrefix}deltictactoe
-┃│🎃 ${usedPrefix}topgays
-┃│🎃 ${usedPrefix}topotakus
-┃│🎃 ${usedPrefix}gay
-┃│🎃 ${usedPrefix}doxear
-┃│🎃 ${usedPrefix}pregunta
-┃│🎃 ${usedPrefix}apostar
-┃│🎃 ${usedPrefix}slot
-┃│🎃 ${usedPrefix}dado
-┃│🎃 ${usedPrefix}sorteo
-┃└──────────⭓
-┠┌─⭓『G R U P O S 』
-┃│🎃 ${usedPrefix}grupo
-┃│🎃 ${usedPrefix}kick
-┃│🎃 ${usedPrefix}add
-┃│🎃 ${usedPrefix}banchat
-┃│🎃 ${usedPrefix}unbanchat
-┃│🎃 ${usedPrefix}admins
-┃│🎃 ${usedPrefix}infogroup
-┃│🎃 ${usedPrefix}promote
-┃│🎃 ${usedPrefix}demote
-┃│🎃 ${usedPrefix}hidetag
-┃│🎃 ${usedPrefix}tagall
-┃│🎃 ${usedPrefix}link
-┃│🎃 ${usedPrefix}banchat
-┃│🎃 ${usedPrefix}unbanchat
-┃└──────────⭓
-┠┌─⭓『F R A S E S 』
-┃│🎃 ${usedPrefix}consejo
-┃│🎃 ${usedPrefix}piropo
-┃│🎃 ${usedPrefix}refran
-┃└──────────⭓
-┠┌─⭓『E N A B L E / D I S A B L E 』
-┃│🎃 ${usedPrefix}enable welcome
-┃│🎃 ${usedPrefix}disable welcome
-┃│🎃 ${usedPrefix}enable public
-┃│🎃 ${usedPrefix}disable public
-┃│🎃 ${usedPrefix}enble antilink
-┃│🎃 ${usedPrefix}disable antilink
-┃│🎃 ${usedPrefix}enable antilink2
-┃│🎃 ${usedPrefix}disable antilink2
-┃│🎃 ${usedPrefix}enable restrict
-┃│🎃 ${usedPrefix}disable restrict
-┃│🎃 ${usedPrefix}enable autoread
-┃│🎃 ${usedPrefix}disable autoread
-┃│🎃 ${usedPrefix}enable detect
-┃│🎃 ${usedPrefix}disable detect
-┃│🎃 ${usedPrefix}enable pconly
-┃│🎃 ${usedPrefix}disable pconly
-┃│🎃 ${usedPrefix}enable gconly
-┃│🎃 ${usedPrefix}disable gconly
-┃└──────────⭓
-┠┌─⭓『R P G 』
-┃│🎃 ${usedPrefix}minar
-┃│🎃 ${usedPrefix}minar3
-┃│🎃 ${usedPrefix}minardiamantes
-┃│🎃 ${usedPrefix}daily
-┃│🎃 ${usedPrefix}work
-┃│🎃 ${usedPrefix}afk
-┃│🎃 ${usedPrefix}rob
-┃│🎃 ${usedPrefix}limit
-┃│🎃 ${usedPrefix}reg
-┃│🎃 ${usedPrefix}unreg
-┃│🎃 ${usedPrefix}myns
-┃│🎃 ${usedPrefix}perfil
-┃│🎃 ${usedPrefix}levelup
-┃└──────────⭓
-┠┌─⭓『STICKER 』
-┃│🎃 ${usedPrefix}s
-┃│🎃 ${usedPrefix}wm
-┃└──────────⭓
-┠┌─⭓『O W N E R 』
-┃│🎃 ${usedPrefix}update
-┃│🎃 ${usedPrefix}restart
-┃│🎃 ${usedPrefix}autoadmin
-┃│🎃 ${usedPrefix}leave
-┃│🎃 ${usedPrefix}salir
-┃│🎃 ${usedPrefix}cleartpm
-┃│🎃 ${usedPrefix}bc
-┃│🎃 ${usedPrefix}bcgc
-┃│🎃 ${usedPrefix}bcc
-┃│🎃 ${usedPrefix}banuser
-┃│🎃 ${usedPrefix}unbanuser
-┃└──────────⭓
-╰━━━━━━━━━━━━━◉`
+m.react('🚀')     
+let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
+║╭──────────────
+║├⫹⫺ *Nombre :* ${name}
+║├⫹⫺ *Limite :* ${diamond}
+║├⫹⫺ *Nivel :* ${level}
+〬║├⫹⫺ *Rango :* ${role}
+║├⫹⫺ *Exp :* ${exp}
+║╰──────────────
+╚══════════════════⋆
+
+╔═══[ ＩＮＦＯＢＯＴ ]═══╗
+║╭──────────────
+║├⫹⫺ *Creador :* Azami 
+║├⫹⫺ *Numero:* wa.me/59894808483
+║├⫹⫺ *Tiempo Activo:* ${uptime}
+║├⫹⫺ *Registrado :* ${rtotalreg} de ${totalreg} usuarios
+║╰────────────── 
+╚══════════════════⋆
+
+╔═════「 ＨＯＹ 」════╗
+║⫹⫺ *Fecha :* ${date}
+〬╚═════ ≪ •❈• ≫ ═════╝
+
+╔══「 I N F O R M A C I Ó N 」═╗
+〬║ႌ〬⫹⫺ ${usedPrefix}estado
+║ႌ〬⫹⫺ ${usedPrefix}owner
+〬║ႌ〬⫹⫺ ${usedPrefix}grouplist
+║ႌ〬⫹⫺ ${usedPrefix}donar
+║ႌ〬⫹⫺ ${usedPrefix}grupos
+〬║ႌ〬⫹⫺ ${usedPrefix}infobot
+〬║ႌ〬⫹⫺ ${usedPrefix}cuentas
+〬║ႌ〬⫹⫺ ${usedPrefix}reporte
+║ႌ〬⫹⫺ ${usedPrefix}join
+║ႌ〬⫹⫺ ${usedPrefix}bot
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「  J A D I B O T 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}Serbot 
+║ႌ〬⫹⫺ ${usedPrefix}jadibot
+║ႌ〬⫹⫺ ${usedPrefix}bots
+║ႌ〬⫹⫺ ${usedPrefix}deletesesion
+║ႌ〬⫹⫺ ${usedPrefix}stop
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 D E S C A R G A S 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}play
+║ႌ〬⫹⫺ ${usedPrefix}play2
+║ႌ〬⫹⫺ ${usedPrefix}yta
+║ႌ〬⫹⫺ ${usedPrefix}ytv
+║ႌ〬⫹⫺ ${usedPrefix}facebook
+║ႌ〬⫹⫺ ${usedPrefix}tiktok
+║ႌ〬⫹⫺ ${usedPrefix}instagram
+║ႌ〬⫹⫺ ${usedPrefix}gitclone
+║ႌ〬⫹⫺ ${usedPrefix}pinterest
+║ႌ〬⫹⫺ ${usedPrefix}imagen
+║ႌ〬⫹⫺ ${usedPrefix}mediafire
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 B U S C A D O R E S 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}google
+║ႌ〬⫹⫺ ${usedPrefix}yts
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 C O N V E R T I D O R E S 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}toimg
+║ႌ〬⫹⫺ ${usedPrefix}tomp3
+║ႌ〬⫹⫺ ${usedPrefix}toptt
+║ႌ〬⫹⫺ ${usedPrefix}tourl
+║ႌ〬⫹⫺ ${usedPrefix}tovideo
+║ႌ〬⫹⫺ ${usedPrefix}tts
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 A U D I O S   E F E C T O S 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}bass
+║ႌ〬⫹⫺ ${usedPrefix}blown
+║ႌ〬⫹⫺ ${usedPrefix}deep
+║ႌ〬⫹⫺ ${usedPrefix}earrape
+║ႌ〬⫹⫺ ${usedPrefix}fas
+║ႌ〬⫹⫺ ${usedPrefix}fast
+║ႌ〬⫹⫺ ${usedPrefix}nightcore
+║ႌ〬⫹⫺ ${usedPrefix}reverse
+║ႌ〬⫹⫺ ${usedPrefix}robot
+║ႌ〬⫹⫺ ${usedPrefix}slow
+║ႌ〬⫹⫺ ${usedPrefix}smooth
+║ႌ〬⫹⫺ ${usedPrefix}tupai
+║ႌ〬⫹⫺ ${usedPrefix}squirrel
+║ႌ〬⫹⫺ ${usedPrefix}chipmunk
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 H E R R A M I E N T A S 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}acortar
+║ႌ〬⫹⫺ ${usedPrefix}qr
+║ႌ〬⫹⫺ ${usedPrefix}delete
+║ႌ〬⫹⫺ ${usedPrefix}readmore
+║ႌ〬⫹⫺ ${usedPrefix}styletext
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 J U E G O S 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}mates
+║ႌ〬⫹⫺ ${usedPrefix}math
+║ႌ〬⫹⫺ ${usedPrefix}simi
+║ႌ〬⫹⫺ ${usedPrefix}suerte
+║ႌ〬⫹⫺ ${usedPrefix}ppt
+║ႌ〬⫹⫺ ${usedPrefix}tictactoe
+║ႌ〬⫹⫺ ${usedPrefix}deltictactoe
+║ႌ〬⫹⫺ ${usedPrefix}topgays
+║ႌ〬⫹⫺ ${usedPrefix}topotakus
+║ႌ〬⫹⫺ ${usedPrefix}gay
+║ႌ〬⫹⫺ ${usedPrefix}doxear
+║ႌ〬⫹⫺ ${usedPrefix}pregunta
+║ႌ〬⫹⫺ ${usedPrefix}apostar
+║ႌ〬⫹⫺ ${usedPrefix}slot
+║ႌ〬⫹⫺ ${usedPrefix}dado
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 G R U P O S 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}grupo
+║ႌ〬⫹⫺ ${usedPrefix}kick
+║ႌ〬⫹⫺ ${usedPrefix}add
+║ႌ〬⫹⫺ ${usedPrefix}banchat
+║ႌ〬⫹⫺ ${usedPrefix}unbanchat
+║ႌ〬⫹⫺ ${usedPrefix}admins
+║ႌ〬⫹⫺ ${usedPrefix}infogroup
+║ႌ〬⫹⫺ ${usedPrefix}promote
+║ႌ〬⫹⫺ ${usedPrefix}demote
+║ႌ〬⫹⫺ ${usedPrefix}hidetag
+║ႌ〬⫹⫺ ${usedPrefix}tagall
+║ႌ〬⫹⫺ ${usedPrefix}link
+║ႌ〬⫹⫺ ${usedPrefix}banchat
+║ႌ〬⫹⫺ ${usedPrefix}unbanchat
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 E N A B L E / D I S A B L E 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}enable welcome
+║ႌ〬⫹⫺ ${usedPrefix}disable welcome
+║ႌ〬⫹⫺ ${usedPrefix}enable public
+║ႌ〬⫹⫺ ${usedPrefix}disable public
+║ႌ〬⫹⫺ ${usedPrefix}enble antilink
+║ႌ〬⫹⫺ ${usedPrefix}disable antilink
+║ႌ〬⫹⫺ ${usedPrefix}enable antilink2
+║ႌ〬⫹⫺ ${usedPrefix}disable antilink2
+║ႌ〬⫹⫺ ${usedPrefix}enable restrict
+║ႌ〬⫹⫺ ${usedPrefix}disable restrict
+║ႌ〬⫹⫺ ${usedPrefix}enable autoread
+║ႌ〬⫹⫺ ${usedPrefix}disable autoread
+║ႌ〬⫹⫺ ${usedPrefix}enable detect
+║ႌ〬⫹⫺ ${usedPrefix}disable detect
+║ႌ〬⫹⫺ ${usedPrefix}enable pconly
+║ႌ〬⫹⫺ ${usedPrefix}disable pconly
+║ႌ〬⫹⫺ ${usedPrefix}enable gconly
+║ႌ〬⫹⫺ ${usedPrefix}disable gconly
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 R P G 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}minar
+║ႌ〬⫹⫺ ${usedPrefix}minar3
+║ႌ〬⫹⫺ ${usedPrefix}minardiamantes
+║ႌ〬⫹⫺ ${usedPrefix}daily
+║ႌ〬⫹⫺ ${usedPrefix}work
+║ႌ〬⫹⫺ ${usedPrefix}afk
+║ႌ〬⫹⫺ ${usedPrefix}rob
+║ႌ〬⫹⫺ ${usedPrefix}limit
+║ႌ〬⫹⫺ ${usedPrefix}reg
+║ႌ〬⫹⫺ ${usedPrefix}unreg
+║ႌ〬⫹⫺ ${usedPrefix}myns
+║ႌ〬⫹⫺ ${usedPrefix}perfil
+║ႌ〬⫹⫺ ${usedPrefix}levelup
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 STICKER 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}s
+║ႌ〬⫹⫺ ${usedPrefix}wm
+〬╚════ ≪ •❈• ≫ ════╝
+
+╔══「 O W N E R 」═╗
+║ႌ〬⫹⫺ ${usedPrefix}update
+║ႌ〬⫹⫺ ${usedPrefix}restart
+║ႌ〬⫹⫺ ${usedPrefix}autoadmin
+║ႌ〬⫹⫺ ${usedPrefix}leave
+║ႌ〬⫹⫺ ${usedPrefix}salir
+║ႌ〬⫹⫺ ${usedPrefix}cleartpm
+║ႌ〬⫹⫺ ${usedPrefix}bc
+║ႌ〬⫹⫺ ${usedPrefix}bcgc
+║ႌ〬⫹⫺ ${usedPrefix}bcc
+║ႌ〬⫹⫺ ${usedPrefix}banuser
+║ႌ〬⫹⫺ ${usedPrefix}unbanuser
+〬╚════ ≪ •❈• ≫ ════╝`
 function _0x2daf() {
     const _0x4c1076 = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/MenuJS.jpg', '1019845zOpQQK', 'pdf', 'chat'];
     _0x2daf = function() {
@@ -337,4 +351,4 @@ function ucapan() {
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
-}
+    }
