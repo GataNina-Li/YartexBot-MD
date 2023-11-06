@@ -100,23 +100,9 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/AzamiJs"><img src="https://github.com/AzamiJs.png" width="250" height="250" alt="Azami19"/></a>
 
 #### COLABORADORES 
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png?size=100" width="100px;" alt=""/><br /><sub><b>Mario</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/GataNina-Li"><img src="https://github.com/gatanina-li.png?size=100" width="100px;" alt=""/><br /><sub><b>Gata Dios</b></sub></a><br /><sub><i>Desarolladora Oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/ReyEndymion"><img src="https://github.com/ReyEndymion.png?size=100" width="100px;" alt=""/><br /><sub><b>Endymion</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/HACHEJOTA"><img src="https://github.com/HACHEJOTA.png?size=100" width="100px;" alt=""/><br /><sub><b>HJ</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
-   <td align="center"><a 
-  href="https://github.com/Aleixon127271"><img src="https://github.com/Aleixon127271.png?size=100" width="100px;" alt=""/><br /><sub><b>Aleixon</b></sub></a><br /><sub><i>Desarollador Oficial</i></sub></td>
-    <td align="center"><a href="https://github.com/Ender-GB-Isis777"><img src="https://github.com/Ender-GB-Isis777.png?size=100" width="100px;" alt=""/><br /><sub><b>Ender GB</b></sub></a><br /><sub><i>Desarrollador Oficial</i>
-    <td align="center"><a 
-    href="https://github.com/Aleixon127271"><img src="https://github.com/KimdanBot-MD.png?size=100" width="100px;" alt=""/><br /><sub><b>Jose Ofc</b></sub></a><br /><sub><i>Desarollador oficial</i></sub></td> 
-    <td align="center"><a 
-    </sub></td>
-  </tr>
-</table>
+<a href="https://github.com/AzamiJs/CuriosityBot-MD/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=AzamiJs/CuriosityBot-MD" /> 
+</a>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
