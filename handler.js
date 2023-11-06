@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 import path, { join } from 'path'
 import { unwatchFile, watchFile } from 'fs'
 import chalk from 'chalk'
+import fs from 'fs'
 import moment from 'moment-timezone'
 
 /**
@@ -173,6 +174,7 @@ if (!('restrict' in settings)) settings.restrict = false
 if (!('antiCall' in settings)) settings.antiCall = false
 if (!('antiPrivate' in settings)) settings.antiPrivate = false
 if (!('modejadibot' in settings)) settings.modejadibot = true  
+if (!('muto' in user)) user.muto = false
 if (!('status' in settings)) settings.status = 0
 } else global.db.data.settings[this.user.jid] = {
 self: false,
@@ -182,6 +184,7 @@ restrict: false,
 antiCall: false,
 antiPrivate: false,
 modejadibot: true,
+muto: false,
 status: 0
 }
 } catch (e) {
@@ -410,7 +413,15 @@ this.msgqueque.splice(quequeIndex, 1)
 }
 
 let user, stats = global.db.data.stats
-if (m) {
+if (m) { let utente = global.db.data.users[m.sender]
+if (utente.muto == true) {
+let bang = m.key.id
+let cancellazzione = m.key.participant
+await conn.sendMessage(m.chat, {
+delete: {
+remoteJid: m.chat, fromMe: false, id: bang, participant: cancellazzione
+}})
+}
 if (m.sender && (user = global.db.data.users[m.sender])) {
 user.exp += m.exp
 user.diamond -= m.diamond * 1
@@ -589,4 +600,4 @@ watchFile(file, async () => {
 unwatchFile(file)
 console.log(chalk.magenta('Se actualizo el archivo handler.js'))
 if (global.reloadHandler) console.log(await global.reloadHandler())
-}) 
+})
