@@ -27,7 +27,7 @@ global.packname = 'CuriosityBot-MD'
 global.author = ''
 global.wm = '© CuriosityBot-MD'
 global.wm2 = '𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍'
-global.azami = 'Azami'
+global.Azami = 'Azami'
 global.cb = 'CuriosityBot-MD'
 
 global.vs = '1.0.2'
