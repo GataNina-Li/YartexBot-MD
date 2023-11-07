@@ -33,8 +33,8 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 
 > <h3>📲 TIPOS DE INSTALACIONES</h3>
 **Nota** *CuriosityBot-MD es compatible con los siguientes alojamientos:*
-- **Termux** - **Replit**
-- **Heroku**
+- **Termux** • **Replit** • **Heroku**
+- Panel Peterodactyl
 - **Boxmine**
 - **Zipponodes**
 - **Nexuortexus**
