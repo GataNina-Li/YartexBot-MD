@@ -189,6 +189,8 @@ let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
 ║ႌ〬⫹⫺ ${usedPrefix}grupo
 ║ႌ〬⫹⫺ ${usedPrefix}kick
 ║ႌ〬⫹⫺ ${usedPrefix}add
+║ႌ〬⫹⫺ ${usedPrefix}mute
+║ႌ〬⫹⫺ ${usedPrefix}unmute
 ║ႌ〬⫹⫺ ${usedPrefix}banchat
 ║ႌ〬⫹⫺ ${usedPrefix}unbanchat
 ║ႌ〬⫹⫺ ${usedPrefix}admins
