@@ -16,11 +16,6 @@
 <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
 </a>
 
-### `⚙️ AJUSTES ⚙️`
-- CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
-- CLONAR EL REPOSITORIO [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
-- Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
-
 ### Ejemplo 
 En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 
@@ -29,6 +24,11 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 </a>
 
 ***
+
+### `⚙️ AJUSTES ⚙️`
+- CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
+- CLONAR EL REPOSITORIO [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
+- Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 
 #### `☂️ ACTIVA EN HEROKU ☂️`
 para usuarios del heroku
