@@ -74,7 +74,6 @@ npm start
 
 ### INSTALACIÓN AUTOMÁTICA POR TERMUX
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
-[![blog](https://img.shields.io/badge/Instalacion-Automatica2-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/shorts/RpaEVFH1wFM?si=ybcL0t_Qx04_ujFQ?feature=share)
 
 > **Note** Comandos para instalar de forma automática en Termux  
 ```bash
