@@ -122,13 +122,29 @@ const question = (texto) => new Promise((resolver) => rl.question(texto, resolve
 let opcion
 if (!fs.existsSync(`./${authFile}/creds.json`) && !methodCodeQR && !methodCode) {
 while (true) {
-opcion = await question('Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n--> ')
-if (opcion === '1' || opcion === '2') {
-break
-} else {
-console.log('Por favor, seleccione solo 1 o 2.')
-}}
-opcion = opcion
+let lineM = '⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ 》'
+opcion = await question(`╭${lineM}  
+┊ ${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}
+┊ ${chalk.blueBright('┊')} ${chalk.blue.bgBlue.bold.cyan('MÉTODO DE VINCULACIÓN')}
+┊ ${chalk.blueBright('╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}   
+┊ ${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}     
+┊ ${chalk.blueBright('┊')} ${chalk.green.bgMagenta.bold.yellow('¿CÓMO DESEA CONECTARSE?')}
+┊ ${chalk.blueBright('┊')} ${chalk.bold.redBright('⇢  Opción 1:')} ${chalk.greenBright('Código QR.')}
+┊ ${chalk.blueBright('┊')} ${chalk.bold.redBright('⇢  Opción 2:')} ${chalk.greenBright('Código de 8 digitos.')}
+┊ ${chalk.blueBright('╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}
+┊ ${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}     
+┊ ${chalk.blueBright('┊')} ${chalk.italic.magenta('Escriba sólo el número de')}
+┊ ${chalk.blueBright('┊')} ${chalk.italic.magenta('la opción para conectarse.')}
+┊ ${chalk.blueBright('╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
+┊ ${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}    
+┊ ${chalk.blueBright('┊')} ${chalk.red.bgRed.bold.green('CONSEJO:')}
+┊ ${chalk.blueBright('┊')} ${chalk.italic.cyan('Si usa Termux, Replit, Linux, o Windows')}
+┊ ${chalk.blueBright('┊')} ${chalk.italic.cyan('Use estos comandos para una ejecución directa:')}
+┊ ${chalk.blueBright('┊')} ${chalk.bold.yellow(`npm run qr ${chalk.italic.magenta('(Inicia con código QR)')}`)}
+┊ ${chalk.blueBright('┊')} ${chalk.bold.yellow(`npm run code ${chalk.italic.magenta('(Inicia con código de 8 dígitos)')}`)}
+┊ ${chalk.blueBright('┊')} ${chalk.bold.yellow(`npm start ${chalk.italic.magenta('(Inicio predeterminado con opciones)')}`)}
+┊ ${chalk.blueBright('╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
+╰${lineM}\n${chalk.bold.magentaBright('---> ')}`)
 }
 
 const connectionOptions = {
