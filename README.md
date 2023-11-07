@@ -33,7 +33,7 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 
 > <h3>📲 TIPOS DE INSTALACIONES</h3>
 
-#### INSTALACIÓN AUTOMÁTICA POR TERMUX
+#### `INSTALACIÓN AUTOMÁTICA POR TERMUX`
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
 > **Note** Comandos para instalar de forma automática en Termux  
