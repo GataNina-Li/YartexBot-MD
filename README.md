@@ -30,6 +30,7 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 
+> <b>📲 TIPOS DE INSTALACIONES</b>
 #### `☂️ ACTIVA EN HEROKU ☂️`
 para usuarios del heroku
 
