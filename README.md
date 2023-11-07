@@ -43,6 +43,7 @@ para usuarios del heroku
 
 ***
 ### `🕷️ ACTIVAR EN TERMUX 🕷️`
+[![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
 > **Note** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 termux-setup-storage
@@ -72,6 +73,7 @@ npm start
 ```
 
 ### INSTALACIÓN AUTOMÁTICA POR TERMUX
+[![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/shorts/PESW8LXXlOI?feature=share)
 
 > **Note** Comandos para instalar de forma automática en Termux  
 ```bash
