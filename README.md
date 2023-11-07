@@ -30,14 +30,13 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
-
-> <h3>📲 TIPOS DE INSTALACIONES</h3>
-
-
 **Nota** *CuriosityBot-MD es compatible con los siguientes alojamientos:*
 - **Termux • Replit • Heroku**
 > <hb> ***Pterodactyl*** </b>
 - **Boxmine • Zipponodes • Nexuortexus**
+***
+
+> <h3>📲 TIPOS DE INSTALACIONES</h3>
 
 
 #### `☂️ ACTIVA EN HEROKU ☂️`
