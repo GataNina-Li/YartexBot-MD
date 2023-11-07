@@ -30,14 +30,19 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
-**Nota** *CuriosityBot-MD es compatible con los siguientes alojamientos:*
-- **Termux • Replit • Heroku**
-> <hb> ***Pterodactyl*** </b>
-- **Boxmine • Zipponodes • Nexuortexus**
-***
 
 > <h3>📲 TIPOS DE INSTALACIONES</h3>
 
+### INSTALACIÓN AUTOMÁTICA POR TERMUX
+[![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
+
+> **Note** Comandos para instalar de forma automática en Termux  
+```bash
+termux-setup-storage
+```
+```bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
+```
 
 #### `☂️ ACTIVA EN HEROKU ☂️`
 para usuarios del heroku
@@ -79,17 +84,6 @@ npm update
 
 ```bash
 npm start
-```
-
-### INSTALACIÓN AUTOMÁTICA POR TERMUX
-[![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
-
-> **Note** Comandos para instalar de forma automática en Termux  
-```bash
-termux-setup-storage
-```
-```bash
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
 ### `OBTENER OTRO CODIGO QR`
