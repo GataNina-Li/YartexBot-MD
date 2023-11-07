@@ -31,12 +31,10 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
-> <h3>📲 TIPOS DE INSTALACIONES</h3>
-
 #### INSTALACIÓN AUTOMÁTICA POR TERMUX
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
-> **Nota** Comandos para instalar de forma automática en Termux  
+> **Nota:** Comandos para instalar de forma automática en Termux  
 ```bash
 termux-setup-storage
 ```
@@ -44,21 +42,9 @@ termux-setup-storage
 apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
-#### `☂️ ACTIVA EN HEROKU ☂️`
-para usuarios del heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
-
-#### Heroku Buildpack
-| BuildPack | LINK |
-|--------|--------|
-| **FFMPEG** |[click](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
-| **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
-
-***
-### `🕷️ ACTIVAR EN TERMUX 🕷️`
+#### ACTIVAR EN TERMUX
 [![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
-> **Note** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> **Nota:** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 termux-setup-storage
 ```
@@ -85,6 +71,20 @@ npm update
 ```bash
 npm start
 ```
+
+
+#### `☂️ ACTIVA EN HEROKU ☂️`
+para usuarios del heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
+
+#### Heroku Buildpack
+| BuildPack | LINK |
+|--------|--------|
+| **FFMPEG** |[click](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
+| **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
+
+***
 
 ### `OBTENER OTRO CODIGO QR`
 ```bash
