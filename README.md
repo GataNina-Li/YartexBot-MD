@@ -31,7 +31,7 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
-> <h2>📲 TIPOS DE INSTALACIONES</h2>
+> <h1>📲 TIPOS DE INSTALACIONES</h1>
 
 
 #### `☂️ ACTIVA EN HEROKU ☂️`
