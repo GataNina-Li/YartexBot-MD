@@ -1,15 +1,7 @@
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import fs from 'fs'
-import cheerio from 'cheerio'
-import fetch from 'node-fetch'
-import axios from 'axios'
-import path, { join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
-import moment from 'moment-timezone' 
-import { platform } from 'process'
-global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
-const __dirname = global.__dirname(import.meta.url)
 
 //Imagenes
 global.imagen1 = fs.readFileSync('./storage/logos/Menu1.jpg')
@@ -40,11 +32,11 @@ global.img7 = 'https://telegra.ph/file/951275803faa754aff010.jpg'
 global.sityImg = [img, img1, img2, img3, img4, img5, img6, img7]
 
 //Enlaces
-global.yt = 'https://www.youtube.com/@Azami_Mods'
-global.ig = 'https://instagram.com/azami_ofc'
+global.yt = 'https://www.youtube.com/@Azami_YT'
+global.ig = 'https://instagram.com/azami_dev'
 global.md = 'https://github.com/AzamiJs/CuriosityBot-MD'
 global.paypal = 'https://paypal.me/Azami19'
-global.git = 'https://github.com/GataNina-Li'
+global.git = 'https://github.com/AzamiJs'
 global.nn = 'https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU' //Grupo ofc
 global.nnn = 'https://chat.whatsapp.com/J1R402WH1N0Hdl3S0NDEYu' //Curiosity global
 global.nnnn = 'https://chat.whatsapp.com/KLpYFsitkgzJ15YQxZrBqO' //colaboración multi bots
@@ -76,7 +68,7 @@ global.waitttt = '*■■■■■ 100%*'
 
 //fake
 global.fsizedoc = '999999'
-global.fpagedoc = '999'
+global.fpagedoc = '9999'
 
 //Apis
 global.keysZens = ['LuOlangNgentot', 'c2459db922', '37CC845916', '6fb0eff124', 'hdiiofficial', 'fiktod', 'BF39D349845E', '675e34de8a', '0b917b905e6f']
@@ -140,7 +132,7 @@ global.APIKeys = {
 }
 
 //Rpg
-global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel
+global.multiplier = 200 // Cuanto más alto, más difícil subir de nivel
 
 global.rpg = {
 emoticon(string) {
@@ -150,19 +142,11 @@ level: '🏆',
 limit: '💎',
 exp: '🕹️'
 }
+
 let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
 if (!results.length) return ''
 else return emot[results[0][0]]
 }}
-
-//Tiempo
-global.d = new Date(new Date + 3600000) 
-global.locale = 'es' 
-global.dia = d.toLocaleDateString(locale, { weekday: 'long' }) 
-global.fecha = d.toLocaleDateString('es', { day: 'numeric', month: 'numeric', year: 'numeric' }) 
-global.mes = d.toLocaleDateString('es', { month: 'long' }) 
-global.año = d.toLocaleDateString('es', { year: 'numeric' }) 
-global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 
 
 //No muevas nada de aqui
