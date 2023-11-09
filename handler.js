@@ -18,11 +18,6 @@ const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(function (
 clearTimeout(this)
 resolve()
 }, ms))
-
-/**
- * Handle messages upsert
- * @param {import('@whiskeysockets/baileys').BaileysEventMap<unknown>['messages.upsert']} groupsUpdate 
- */
  
 export async function handler(chatUpdate) {
 
@@ -97,7 +92,7 @@ regTime: -1,
 afk: -1,
 afkReason: '',
 banned: false,
-warn: 0,
+ warn: 0,
 level: 0,
 role: 'Novato',
 autolevelup: true,
@@ -186,6 +181,7 @@ antiPrivate: false,
 modejadibot: true,
 muto: false,
 status: 0
+
 }
 } catch (e) {
 console.error(e)
@@ -353,7 +349,7 @@ continue
 m.isCommand = true
 let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
 if (xp > 200)
-m.reply('chirrido -_-')
+m.reply('Chirrido -_-')
 else
 m.exp += xp
 if (!isPrems && plugin.limit && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
@@ -361,7 +357,7 @@ this.reply(m.chat, `*⚠️ NO TIENE DIAMANTES*`, m)
 continue
 }
 if (plugin.level > _user.level) {
-this.reply(m.chat, `*⚠️ NESESITAS EL NIVEL ${plugin.level}*`, m)
+this.reply(m.chat, `*⚠️ REQUIRE EL NIVEL ${plugin.level}*`, m)
 continue
 }
 let extra = {match, usedPrefix, noPrefix, _args, args, command, text, conn: this, participants, groupMetadata, user, bot, isROwner, isOwner, isRAdmin, isAdmin, isBotAdmin, isPrems, chatUpdate, __dirname: ___dirname, __filename }
@@ -398,7 +394,7 @@ console.error(e)
 }
 }
 if (m.diamond)
-m.reply(`*${+m.diamond}* Diamante usado`)
+m.reply(`*⚠️ UTILIZÓ ${+m.diamond} DIAMANTE*`)
 }
 break
 }
@@ -417,11 +413,9 @@ if (m) { let utente = global.db.data.users[m.sender]
 if (utente.muto == true) {
 let bang = m.key.id
 let cancellazzione = m.key.participant
-await conn.sendMessage(m.chat, {
-delete: {
-remoteJid: m.chat, fromMe: false, id: bang, participant: cancellazzione
-}})
+await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: cancellazzione }})
 }
+
 if (m.sender && (user = global.db.data.users[m.sender])) {
 user.exp += m.exp
 user.diamond -= m.diamond * 1
@@ -462,15 +456,10 @@ console.log(m, m.quoted, e)
 let settingsREAD = global.db.data.settings[this.user.jid] || {}  
 if (opts['autoread']) await this.readMessages([m.key])
 if (settingsREAD.autoread2) await this.readMessages([m.key])  
-
-      
+     
 }
 } 
 
-/**
- * Handle groups participants update
- * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate 
- */
 export async function participantsUpdate({ id, participants, action }) {
 
 if (opts['self'])
@@ -499,13 +488,12 @@ let links = linkSity.getRandom()
 
 this.sendMessage(id, { text: text, contextInfo:{ mentionedJid:[user], "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "title": 'W E L C O M E', "body": `${wm}`, "previewType": "PHOTO", "thumbnailUrl": ``, "thumbnail": apii.data, "sourceUrl": links}}})
       
-}
-}
-}
+}}}
+
 break
 case 'promote':
 case 'promover':
-            text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
+text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
 case 'demote':
 case 'degradar':
 if (!text)
@@ -514,13 +502,8 @@ text = text.replace('@user', '@' + participants[0].split('@')[0])
 if (chat.detect)
 this.sendMessage(id, { text, mentions: this.parseMention(text) })
 break
-}
-}
+}}
 
-/**
- * Handle groups update
- * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['groups.update']} groupsUpdate 
- */
 export async function groupsUpdate(groupsUpdate) {
 
 if (opts['self'])
@@ -536,8 +519,7 @@ if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || 'El ico
 if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || 'El enlace del grupo cambia a\n@revoke').replace('@revoke', groupUpdate.revoke)
 if (!text) continue
 await this.sendMessage(id, { text, mentions: this.parseMention(text) })
-}
-}
+}}
 
 export async function callUpdate(callUpdate) {
 
@@ -577,8 +559,6 @@ console.error(e)
 
 global.dfail = (type, m, conn) => {
 
-let foto = sityImg.getRandom()
-
 let msg = {
 rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
 owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
@@ -591,13 +571,10 @@ botAdmin: '⚠️️ *PARA USAR ESTA FUNCIÓN DEBO SER ADMIN*',
 unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_❕ Ejemplo_* : */reg Azami.25*',
 restrict: '⚠️ *ESTA CARACTERÍSTICA ESTA DESACTIVADA*'
 }[type]
-if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.paypal, thumbnail: imagen1 }}})
+if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.channel, thumbnail: imagen1 }}})
 
 }
-
-let file = global.__filename(import.meta.url, true)
-watchFile(file, async () => {
-unwatchFile(file)
+watchFile(file, async () => { unwatchFile(file)
 console.log(chalk.magenta('Se actualizo el archivo handler.js'))
 if (global.reloadHandler) console.log(await global.reloadHandler())
 })
