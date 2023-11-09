@@ -11,8 +11,8 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   return conn.sendMessage(m.chat, { text: `Oh ${text} se corrió!😋💦`.trim() , edit: key, mentions: [m.sender] }, { quoted: m });
 };
 
-handler.help = ['sega', 'fap'];
-handler.tags = ['sega', 'fap'];
+handler.help = ['fun', 'fap'];
+handler.tags = ['fun', 'sega'];
 handler.command = /^(sega|sierra|fap)$/i;
 
 export default handler;
