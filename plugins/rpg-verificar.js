@@ -29,8 +29,7 @@ ${sn}
  *${usedPrefix}menu* para ver el Menu
 `
   
-await conn.reply(m.chat, `
-🗃️ *R E G I S T R A D O* 🗃️
+await conn.reply(m.chat, `🗃️ *R E G I S T R A D O* 🗃️
 🪁 *Nombre:* ${name}
 🎨 *Edad* : ${age} años
 🥏 *Numero de serie*:
