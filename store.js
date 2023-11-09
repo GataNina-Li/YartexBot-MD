@@ -3,6 +3,7 @@ import chalk from 'chalk'
 import fs from 'fs'
 import path, { join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
+const __dirname = global.__dirname(import.meta.url)
 
 //Imagenes
 global.imagen1 = fs.readFileSync('./storage/logos/Menu1.jpg')
