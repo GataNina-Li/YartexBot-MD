@@ -18,7 +18,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.age = age
   user.regTime = + new Date
   user.registered = true
-  let sn = createHash('md5').update(m.sender).digest('hex')
+let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
 let regbot = `
 🗃️ *R E G I S T R A D O* 🗃️
 🪁 *Nombre:* ${name}
