@@ -9,9 +9,12 @@ import { spawn, exec, execSync } from 'child_process'
 const format = sizeFormatter({ std: 'JEDEC', decimalPlaces: 2, keepTrailingZeroes: false, render: (literal, symbol) => `${literal} ${symbol}B` })
 
 var handler = async (m, { conn }) => {
-      
+
 let timestamp = speed()
 let latensi = speed() - timestamp
+
+let _muptime; if (process.send) { process.send('uptime') _muptime = await new Promise(resolve => { process.once('message', resolve) setTimeout(resolve, 1000)}) * 1000}
+let muptime = clockString(_muptime)
 
 let chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
