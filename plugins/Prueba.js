@@ -2,11 +2,12 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 	
-let cek = await(await fetch("https://api.myip.com")).json().catch(_ => 'error')
+let curiosity = await(await fetch("https://api.myip.com")).json().catch(_ => 'error')
         
-let ip = (cek == 'error' ? 'Fallo' : cek.ip)
-let cr = (cek == 'error' ? 'Fallo' : cek.country)
-await m.reply(`${cr}`)
+let ip = (curiosity == 'error' ? 'Fallo' : curiosity.ip)
+let cr = (curiosity == 'error' ? 'Fallo' : curiosity.country)
+await m.reply(`Ip: ${ip}
+País: ${cr}`)
     
 }
 handler.help = ['agedetect']
