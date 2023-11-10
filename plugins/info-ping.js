@@ -19,7 +19,9 @@ let groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
 exec(`neofetch --stdout`, (error, stdout, stderr) => {
 let child = stdout.toString('utf-8')
 let ssd = child.replace(/Memory:/, 'Ram:')
-m.reply(`*🏓 Pong  ${latensi.toFixed(4)}*`)})
+m.reply(`*🏓 Pong  ${latensi.toFixed(4)}*
+
+Grupos: ${groupsIn}`)})
 
 }
 handler.help = ['ping']
