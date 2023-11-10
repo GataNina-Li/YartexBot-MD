@@ -1,17 +1,12 @@
 import fetch from 'node-fetch'
-import uploadFile from '../lib/uploadFile.js'
-import uploadImage from '../lib/uploadImage.js'
 
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 	
-let q = m.quoted ? m.quoted : m
-let mime = (q.msg || q).mimetype || ''
-let img = await q.download?.()
-let url = await uploadImage(img)
-
-let js = await fetch(`https://api.lolhuman.xyz/api/agedetect?apikey=${lolkeysapi}&img=${encodeURIComponent(url)}`)
-let has = await js.json()
-await m.reply('El resultado de la detección de edad de la imagen es ' + has.result + ' años')
+let cek = await(await fetch("https://api.myip.com")).json().catch(_ => 'error')
+        
+let ip = (cek == 'error' ? 'Fallo' : cek.ip)
+let cr = (cek == 'error' ? 'Fallo' : cek.country)
+await m.reply(`${cr}`)
     
 }
 handler.help = ['agedetect']
