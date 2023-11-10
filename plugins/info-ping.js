@@ -13,6 +13,9 @@ var handler = async (m, { conn }) => {
 let timestamp = speed()
 let latensi = speed() - timestamp
 
+let chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
+let groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
+
 exec(`neofetch --stdout`, (error, stdout, stderr) => {
 let child = stdout.toString('utf-8')
 let ssd = child.replace(/Memory:/, 'Ram:')
