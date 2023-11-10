@@ -19,10 +19,8 @@ let muptime = clockString(_muptime)
 let chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
 
-exec(`neofetch --stdout`, (error, stdout, stderr) => {
-let child = stdout.toString('utf-8')
-let ssd = child.replace(/Memory:/, 'Ram:')
-m.reply(`*• V E L O C I D A D*
+
+let texto`*• V E L O C I D A D*
 ${latensi.toFixed(4)}
 
 *• A C T I V I D A D*
@@ -30,7 +28,19 @@ ${muptime}
 
 *• C H A T S*
 *Chats Privados:* ${chats.length}
-*Grupos:* ${groups.length}`)})
+*Grupos:* ${groups.length}`.trim()
+
+conn.sendMessage(m.chat, {
+text: texto,
+contextInfo: {
+externalAdReply: {
+title: "",
+body: muptime,
+thumbnailUrl: 'https://telegra.ph/file/dc5a67d724b016574129b.jpg',
+sourceUrl: '',
+mediaType: 1,
+renderLargerThumbnail: true
+}}})
 
 }
 handler.help = ['ping']
