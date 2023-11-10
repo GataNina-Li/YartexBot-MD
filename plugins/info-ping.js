@@ -21,17 +21,17 @@ let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g
 
 
 let texto = `*V E L O C I D A D*
-• _${latensi.toFixed(4)}_
+🚄 ${latensi.toFixed(4)}_
 
 *A C T I V I D A D*
-• _${muptime}_
+• ${muptime}
 
 *C H A T S*
-• *Chats Privados:* _${chats.length}_
-• *Grupos:* _${groups.length}_
+• ${chats.length} *Chats privados*
+• ${groups.length} *Grupos*
 
 *S E R V I D O R*
-• 🛑 *Ram:* _${format(totalmem() - freemem())} / ${format(totalmem())}_`.trim()
+• 🟡 *Ram:* _${format(totalmem() - freemem())} / ${format(totalmem())}_`.trim()
 
 conn.sendMessage(m.chat, { text: texto, contextInfo: { externalAdReply: { title: '', body: 'CURIOSITY - BOT - MD', thumbnailUrl: 'https://telegra.ph/file/6cbf9148b572711e9b000.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 
