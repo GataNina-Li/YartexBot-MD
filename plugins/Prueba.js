@@ -11,10 +11,6 @@ await m.reply(`${cr}`)
 }
 handler.help = ['agedetect']
 handler.tags = ['implementos']
-handler.command = /^(agedetect|años)$/i
+handler.command = /^(agedetect|country)$/i
 
 export default handler
-
-const isUrl = (text) => {
-return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))
-}
