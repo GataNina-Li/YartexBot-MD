@@ -22,13 +22,15 @@ let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g
 exec(`neofetch --stdout`, (error, stdout, stderr) => {
 let child = stdout.toString('utf-8')
 let ssd = child.replace(/Memory:/, 'Ram:')
-m.reply(`*🏓 Pong  ${latensi.toFixed(4)}*
+m.reply(`*🧃 V E L O C I D A D*
+${latensi.toFixed(4)}
 
 *🚀 A C T I V I D A D*
 ${muptime}
 
-Chats Privados: ${chats.length}
-Grupos: ${groups.length}`)})
+*🥏 C H A T S*
+*Chats Privados:* ${chats.length}
+*Grupos:* ${groups.length}`)})
 
 }
 handler.help = ['ping']
