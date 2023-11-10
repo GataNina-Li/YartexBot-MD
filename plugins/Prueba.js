@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import axios from 'axios'
+//import axios from 'axios'
 
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 	
@@ -7,10 +7,12 @@ let curiosity = await(await fetch("https://api.myip.com")).json().catch(_ => 'er
 let ip = (curiosity == 'error' ? 'Fallo' : curiosity.ip)
 let cr = (curiosity == 'error' ? 'Fallo' : curiosity.country)
 let cc = (curiosity == 'error' ? 'Fallo' : curiosity.cc)
-
+let js = await(await fetch("http://ip-api.com/json/${ip}")
 await m.reply(`Ip: ${ip}
 País: ${cr}
-Model: ${cc}`)
+Model: ${cc}
+
+${js}`)
     
 }
 handler.help = ['agedetect']
