@@ -19,24 +19,15 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.regTime = + new Date
   user.registered = true
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
+m.react('📩') 
 let regbot = `
 🗃️ *R E G I S T R A D O* 🗃️
 🪁 *Nombre:* ${name}
 🎨 *Edad* : ${age} años
 🥏 *Numero de serie*:
-${sn}
-
- *${usedPrefix}menu* para ver el Menu
-`
-  
-await conn.reply(m.chat, `🗃️ *R E G I S T R A D O* 🗃️
-🪁 *Nombre:* ${name}
-🎨 *Edad* : ${age} años
-🥏 *Numero de serie*:
-${sn}`).trim()
-m.react('📩') 
-  
- // await conn.sendUrl(m.chat, regbot, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: pp, thumbnailUrl: pp, title: 'Registrado 📩', }})
+${sn}`
+await m.reply(regbot)
+// await conn.sendUrl(m.chat, regbot, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: pp, thumbnailUrl: pp, title: 'Registrado 📩', }})
 
 }
 handler.help = ['reg'].map(v => v + ' <nombre.edad>')
