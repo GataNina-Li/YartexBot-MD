@@ -21,6 +21,7 @@ let child = stdout.toString('utf-8')
 let ssd = child.replace(/Memory:/, 'Ram:')
 m.reply(`*🏓 Pong  ${latensi.toFixed(4)}*
 
+Chats Privados: ${chats.length}
 Grupos: ${groups.length}`)})
 
 }
