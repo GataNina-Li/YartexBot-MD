@@ -30,21 +30,11 @@ ${muptime}
 *Chats Privados:* ${chats.length}
 *Grupos:* ${groups.length}`.trim()
 
-conn.sendMessage(m.chat, {
-text: texto,
-contextInfo: {
-externalAdReply: {
-title: "",
-body: muptime,
-thumbnailUrl: 'https://telegra.ph/file/dc5a67d724b016574129b.jpg',
-sourceUrl: '',
-mediaType: 1,
-renderLargerThumbnail: true
-}}})
+conn.sendMessage(m.chat, { text: texto, contextInfo: { externalAdReply: { title: '', body: 'CURIOSITY - BOT - MD', thumbnailUrl: 'https://telegra.ph/file/6cbf9148b572711e9b000.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 
 }
 handler.help = ['ping']
-handler.tags = ['main']
+handler.tags = ['info']
 handler.command = ['ping', 'speed']
 handler.register = true
 
