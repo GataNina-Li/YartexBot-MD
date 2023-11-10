@@ -7,12 +7,9 @@ let curiosity = await(await fetch("https://api.myip.com")).json().catch(_ => 'er
 let ip = (curiosity == 'error' ? 'Fallo' : curiosity.ip)
 let cr = (curiosity == 'error' ? 'Fallo' : curiosity.country)
 let cc = (curiosity == 'error' ? 'Fallo' : curiosity.cc)
-let js = await(await fetch("http://ip-api.com/json/${ip}")
 await m.reply(`Ip: ${ip}
 País: ${cr}
-Model: ${cc}
-
-${js}`)
+Siglas: ${cc}`)
     
 }
 handler.help = ['agedetect']
