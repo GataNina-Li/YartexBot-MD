@@ -14,6 +14,6 @@ Siglas: ${cc}`)
 }
 handler.help = ['agedetect']
 handler.tags = ['implementos']
-handler.command = /^(agedetect|country)$/i
+handler.command = /^(mario|country)$/i
 
 export default handler
