@@ -1,5 +1,5 @@
 
-import speed from 'performance-now'
+/*import speed from 'performance-now'
 import { spawn, exec, execSync } from 'child_process'
 
 let handler = async (m, { conn }) => {
@@ -15,9 +15,9 @@ handler.help = ['ping']
 handler.tags = ['main']
 handler.command = ['ping', 'speed']
 handler.register = true
-export default handler
+export default handler*/
 
-/*import { cpus as _cpus, totalmem, freemem } from 'os'
+import { cpus as _cpus, totalmem, freemem } from 'os'
 import util from 'util'
 import { performance } from 'perf_hooks'
 import { sizeFormatter } from 'human-readable'
@@ -73,10 +73,6 @@ let infobt = `╭─╮─᤻─᳒─᤻᳒「 ${wm} 」
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `
 m.reply(infobt)
-conn.sendButton(m.chat, infobt, fgig, null, [
-  ['Menu', `${usedPrefix}menu`],
-   ['Grupos', `${usedPrefix}grupos`]
- ], m)
 
 }
 handler.help = ['info']
@@ -84,4 +80,4 @@ handler.tags = ['main']
 handler.command = ['info', 'ping', 'botinfo']
 handler.register = true
 
-export default handler*/
+export default handler
