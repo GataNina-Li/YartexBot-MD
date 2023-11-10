@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 	
-let curiosity = await(await fetch("https://api.myip.com")).json().catch(_ => 'error')
+let curiosity = await(await fetch("https://api.myip.com")).html().catch(_ => 'error')
         
 let ip = (curiosity == 'error' ? 'Fallo' : curiosity.ip)
 let cr = (curiosity == 'error' ? 'Fallo' : curiosity.country)
