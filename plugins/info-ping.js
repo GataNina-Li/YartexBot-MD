@@ -28,7 +28,10 @@ let texto = `*V E L O C I D A D*
 
 *• C H A T S*
 • *Chats Privados:* ${chats.length}
-• *Grupos:* ${groups.length}`.trim()
+• *Grupos:* ${groups.length}
+
+* S E R V I D O R*
+*• 🔴 Ram:*  ${format(totalmem() - freemem())} / ${format(totalmem())}`.trim()
 
 conn.sendMessage(m.chat, { text: texto, contextInfo: { externalAdReply: { title: '', body: 'CURIOSITY - BOT - MD', thumbnailUrl: 'https://telegra.ph/file/6cbf9148b572711e9b000.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 
