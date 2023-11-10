@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 var handler = async (m, { conn, usedPrefix }) => {
 
  let res = await fetch('https://api.github.com/repos/AzamiJs/CuriosityBot-MD')
