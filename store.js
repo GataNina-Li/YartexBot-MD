@@ -1,6 +1,7 @@
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import fs from 'fs'
+import moment from 'moment-timezone'
 import path, { join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
@@ -151,6 +152,14 @@ let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v
 if (!results.length) return ''
 else return emot[results[0][0]]
 }}
+
+global.d = new Date(new Date + 3600000)
+global.locale = 'es'
+global.dia = d.toLocaleDateString(locale, {weekday: 'long'})
+global.fecha = d.toLocaleDateString('es', {day: 'numeric', month: 'numeric', year: 'numeric'})
+global.mes = d.toLocaleDateString('es', {month: 'long'})
+global.año = d.toLocaleDateString('es', {year: 'numeric'})
+global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
 
 //No muevas nada de aqui
