@@ -19,7 +19,7 @@ keepTrailingZeroes: false,
 render: (literal, symbol) => `${literal} ${symbol}B`,
 })
 let handler = async (m, { conn, command, usedPrefix }) => {
-let picture = './storage/menus/Menu1.jpg'
+let picture = './storage/logos/Menu1.jpg'
 let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
 let _muptime
