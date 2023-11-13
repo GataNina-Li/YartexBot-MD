@@ -575,8 +575,17 @@ restrict: '⚠️ *ESTA CARACTERÍSTICA ESTA DESACTIVADA*'
 if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.channel, thumbnail: imagen1 }}})
 
 }
-let file = global.__filename(import.meta.url, true)
-watchFile(file, async () => { unwatchFile(file)
-console.log(chalk.magenta('Se actualizo el archivo handler.js'))
-if (global.reloadHandler) console.log(await global.reloadHandler())
-})
+const file = global.__filename(import.meta.url, true);
+watchFile(file, async () => {
+  unwatchFile(file);
+  console.log(chalk.redBright('Update \'handler.js\''));
+  if (global.reloadHandler) console.log(await global.reloadHandler());
+  
+  if (global.conns && global.conns.length > 0 ) {
+    const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
+    for (const userr of users) {
+      userr.subreloadHandler(false)
+    }
+  }
+  
+});
