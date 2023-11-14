@@ -17,7 +17,7 @@ const { restrict, antiCall, antiprivado, modejadibot } = global.db.data.settings
 const { autoread, gconly, pconly, self } = global.opts || {}
 let old = performance.now()
 let neww = performance.now()
-let pp = './storage/menus/Menu1.jpg'
+let pp = './storage/logos/Menu1.jpg'
 let speed = neww - old
 let info = `
 *📑 INFO CURIOSITY BOT MD*
