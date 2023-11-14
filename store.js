@@ -161,6 +161,9 @@ global.mes = d.toLocaleDateString('es', {month: 'long'})
 global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
+var more = String.fromCharCode(8206)
+global.readMore = more.repeat(850)
+  
 
 //No muevas nada de aqui
 let file = fileURLToPath(import.meta.url)
