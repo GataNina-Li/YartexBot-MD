@@ -326,8 +326,6 @@ conn.ev.removeAllListeners()
 global.conn = makeWASocket(connectionOptions, {chats: oldChats})
 isInit = true
 }
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(850)
 if (!isInit) {
 conn.ev.off('messages.upsert', conn.handler)
 conn.ev.off('group-participants.update', conn.participantsUpdate)
@@ -338,7 +336,7 @@ conn.ev.off('connection.update', conn.connectionUpdate);
 conn.ev.off('creds.update', conn.credsUpdate)
 }
 
-conn.welcome = '*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time\n\n*⚠️  Recuerda leer la descripción*\n${readMore}\n@desc'
+conn.welcome = '*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time\n\n*⚠️  Recuerda leer la descripción*\n@readMore\n@desc'
 conn.bye = '*• Gracias por haber sido parte del grupo*\n*━━━━━━━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time'
 conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS*'
 conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS*'
