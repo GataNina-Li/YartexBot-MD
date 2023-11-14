@@ -14,13 +14,22 @@ let handler = async (m, {conn, command, text, usedPrefix}) => {
       let aud = await jsonn.result.audio;
       let capt = `➢ *TITULO:* ${title}\n➢ *PUBLICADO:* ${published}\n➢ *VISTAS:* ${views}\n➢ 🔗 *LINK:* ${url}`;
       const buttons = [{buttonId: `#playlist ${title}`, buttonText: {displayText: "📋 𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋"}, type: 1}];
-      const buttonMessage = {
-        image: {url: thumbnail},
-        caption: capt,
-        footer: "*ᴇɴᴠɪᴀɴᴅᴏ ᴀᴜᴅɪᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*",
-        buttons: buttons,
-        headerType: 4,
-      };
+      const buttonMessage = `*∘ 📩 DESCARGANDO*
+${yt_play[0].title}
+
+*∘ ⏰ DURACIÓN* 
+${secondString(yt_play[0].duration.seconds)}
+
+*∘ 👤 AUTOR*
+${yt_play[0].author.name}
+
+*∘ 📍 CANAL*
+${yt_play[0].author.url}
+
+*∘ 📎 LINK*
+${yt_play[0].url}
+
+*⌚ ENVIANDO ${additionalText}, POR FAVOR ESPERE.*`.trim()
       let msg = await conn.sendMessage(m.chat, buttonMessage, {quoted: m});
       conn.sendMessage(m.chat, {document: {url: aud}, mimetype: "audio/mpeg", fileName: `${title}.mp3`}, {quoted: msg});
     } catch {
