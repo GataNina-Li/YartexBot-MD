@@ -9,6 +9,6 @@ conn.sendMessage(m.chat, { [mtype.replace(/Message/, '')]: buffer, caption }, { 
 }
 handler.help = ['readviewonce']
 handler.tags = ['implementos']
-handler.command = /^retrieve|readviewonce|ver/i
+handler.command = /^retrieve|readviewonce|mirar/i
 
 export default handler
