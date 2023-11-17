@@ -19,7 +19,7 @@ export function before(m) {
             continue
         let reason = user.afkReason || ''
         m.reply(`
-️⚠️ *EL USUARIO QUR MENCIONASTE ESTA AFK*
+️⚠️ *EL USUARIO QUE MENCIONASTE ESTA AFK*
 ${reason ? '👀 *Razón* : ' + reason : '*Sin razón*'}
 ⏱️ *Durante* : ${clockString(new Date - afkTime)}
   `.trim())
