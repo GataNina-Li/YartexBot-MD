@@ -244,7 +244,7 @@ throw false
 global.opts['swonly'] = isEnable
 break
 default:
-if (!/[01]/.test(command)) return await conn.reply(m.chat, `*🧃 OPCIONES DE GRUPOS*
+if (!/[01]/.test(command)) return await conn.reply(m.chat, `*🧃 OPCIONES DE ADMINS*
 
 _${usedPrefix + command} *welcome*_
 _${usedPrefix + command} *antilink*_
@@ -258,7 +258,7 @@ _${usedPrefix + command} *simi*_
 _${usedPrefix + command} *detect*_
 _${usedPrefix + command} *modoadmin*_
 
-*🍧 OPCIONES DE PROPIETARIO*
+*🍧 OPCIONES DE PROPIETARIOS*
 
 _${usedPrefix + command} *restrict*_
 _${usedPrefix + command} *public*_
@@ -268,7 +268,7 @@ _${usedPrefix + command} *autoread*_
 _${usedPrefix + command} *modejadibot*_`, fkontak, m)
 throw false
 }
-conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'este bot' : isUser ? '' : 'este chat'}*`, fkontak, m)
+conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'curiosityBot' : isUser ? '' : 'este chat.'}*`, fkontak, m)
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able')
