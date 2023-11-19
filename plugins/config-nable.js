@@ -75,10 +75,10 @@ throw false
 }}
 chat.delete = !isEnable
 break
-case "antiviewonce":
+case 'antiviewonce':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
-global.dfail("admin", m, conn)
+global.dfail('admin', m, conn)
 throw false
 }}
 chat.viewonce = isEnable
