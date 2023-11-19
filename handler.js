@@ -22,7 +22,7 @@ resolve()
 export async function handler(chatUpdate) {
 
 this.msgqueque = this.msgqueque || [];
-  this.uptime = this.uptime || Date.now();
+this.uptime = this.uptime || Date.now();
 if (!chatUpdate)
 return
 this.pushMessage(chatUpdate.messages).catch(console.error)
@@ -57,6 +57,8 @@ user[property] = 0
 if (!('registered' in user)) {
 user.registered = false
 }
+
+} else {
 
 //--Usuario registrado
 if (!user.registered) {
