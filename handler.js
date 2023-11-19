@@ -41,17 +41,22 @@ try {
 
 // TODO: Usa un bucle para insertar datos en lugar de esto.
 let user = global.db.data.users[m.sender]
-if (typeof user !== 'object')
+
+if (typeof user !== 'object') {
 global.db.data.users[m.sender] = {}
-if (user) {
-if (!isNumber(user.exp))
-user.exp = 0
-if (!isNumber(user.diamond))
-user.diamond = 20
-if (!isNumber(user.lastclaim))
-user.lastclaim = 0
-if (!('registered' in user))
+}
+
+const properties = ['exp', 'diamond', 'lastclaim', 'registered'];
+properties.forEach(property => {
+if (!isNumber(user[property])) {
+user[property] = 0
+
+}
+})
+
+if (!('registered' in user)) {
 user.registered = false
+}
 
 //--Usuario registrado
 if (!user.registered) {
