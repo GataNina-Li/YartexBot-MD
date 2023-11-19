@@ -24,5 +24,5 @@ Según mi sistema esa función no existe pero se parece a las siguientes funcion
 	    if (mean) conn.reply(m.chat, caption, m, { mentions: [who]})
 	    }
 }
-export const disabled = false
+export const disabled = true
       
