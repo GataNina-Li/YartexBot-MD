@@ -135,6 +135,8 @@ chat.onlyLatinos = false
 if (!('modoadmin' in chat)) chat.modoadmin = false   
 if (!('nsfw' in chat))
 chat.nsfw = true
+if (!('antiSticker' in chat))
+chat.antiSticker = false 
 if (!isNumber(chat.expired))
 chat.expired = 0
 } else
@@ -156,7 +158,8 @@ viewonce: true,
 useDocument: false,
 onlyLatinos: false,
 modoadmin: false,
-nsfw: false, 
+nsfw: false,
+antiSticker: false,
 expired: 0,
 }
 
