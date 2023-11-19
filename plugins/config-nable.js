@@ -1,6 +1,7 @@
 import fs from 'fs'
 
 var handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
+
 let isEnable = /true|enable|(turn)?on|1/i.test(command)
 let chat = global.db.data.chats[m.chat]
 let user = global.db.data.users[m.sender]
@@ -199,6 +200,15 @@ throw false
 }}
 chat.modoadmin = isEnable
 break
+case 'antistickers':
+case 'antisticker':
+case 'antipegatina':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+throw false
+}}
+chat.antiSticker = isEnable
+break
 case 'pconly':
 case 'privateonly':
 isAll = true
@@ -244,7 +254,7 @@ throw false
 global.opts['swonly'] = isEnable
 break
 default:
-if (!/[01]/.test(command)) return await conn.reply(m.chat, `*🧃 OPCIONES DE ADMINS*
+if (!/[01]/.test(command)) return await conn.reply(m.chat, `*🧃 OPCIONES PARA GRUPO*
 
 _${usedPrefix + command} *welcome*_
 _${usedPrefix + command} *antilink*_
@@ -257,8 +267,9 @@ _${usedPrefix + command} *nsfw*_
 _${usedPrefix + command} *simi*_
 _${usedPrefix + command} *detect*_
 _${usedPrefix + command} *modoadmin*_
+_${usedPrefix + command} *antisticker*_
 
-*🍧 OPCIONES DE PROPIETARIOS*
+*🍧 OPCIONES DE PROPIETARIO*
 
 _${usedPrefix + command} *restrict*_
 _${usedPrefix + command} *public*_
