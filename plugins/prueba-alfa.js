@@ -1,4 +1,4 @@
-const yaoiImages = require('module-gatadios')
+import yaoiImages from 'module-gatadios'
 
 var handler = async (m, {conn, args, command, usedPrefix}) => {
   
