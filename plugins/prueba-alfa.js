@@ -2,7 +2,7 @@ import yaoiImages from 'module-gatadios'
 
 var handler = async (m, {conn, args, command, usedPrefix}) => {
   
-const result1 = yaoiImages.getRandomImage('yaoi-hard.json', ['link'])
+const result1 = yaoiImages.getRandomImage('hard', ['link'])
 m.reply(result1)
 
 }
