@@ -63,3 +63,4 @@ const link = element.attr('href')
 resultSearch.push({title: title, link: link})
 })
 return resultSearch
+}
