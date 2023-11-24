@@ -4,7 +4,7 @@ import {load} from 'cheerio'
 
 var handler = async (m, {text, usedPrefix, command, conn}) => {
 
-if (!text) throw '*⚠️ INGRESE EL NOMBRE DE UNA PELÍCULA**'
+if (!text) throw '*⚠️ INGRESE EL NOMBRE DE UNA PELÍCULA*'
 let aaaa
 let img
 
