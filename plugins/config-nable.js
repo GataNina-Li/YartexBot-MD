@@ -279,7 +279,7 @@ _${usedPrefix + command} *autoread*_
 _${usedPrefix + command} *modejadibot*_`, fkontak, m)
 throw false
 }
-conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'curiosityBot' : isUser ? '' : 'este chat.'}*`, fkontak, m)
+conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'Bot' : isUser ? '' : 'este chat.'}*`, fkontak, m)
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able')
