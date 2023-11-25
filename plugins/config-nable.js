@@ -268,6 +268,7 @@ _${usedPrefix + command} *simi*_
 _${usedPrefix + command} *detect*_
 _${usedPrefix + command} *modoadmin*_
 _${usedPrefix + command} *antisticker*_
+_${usedPrefix + command} *autosticker*_
 
 *🍧 OPCIONES DE PROPIETARIO*
 
@@ -279,7 +280,7 @@ _${usedPrefix + command} *autoread*_
 _${usedPrefix + command} *modejadibot*_`, fkontak, m)
 throw false
 }
-conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'Bot' : isUser ? '' : 'este chat.'}*`, fkontak, m)
+conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'bot' : isUser ? '' : 'este chat.'}*`, fkontak, m)
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able')
