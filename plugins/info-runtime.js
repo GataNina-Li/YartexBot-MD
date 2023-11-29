@@ -79,7 +79,7 @@ let info = `┏━━━━❰･𝐄𝐒𝐓𝐀𝐃𝐎 𝐃𝐄𝐋 𝐁𝐎�
 ┃➢ 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 𝚃𝙾𝚃𝙰𝙻𝙴𝚂: ${Object.keys(global.db.data.users).length} 
 ┃
 ┗━━━━━━━━━━━━━`
-conn.sendMessage(m.chat, {image: picture, caption: info, contextInfo:{ mentionedJid:[sender]}}, { quoted: fkontak})
+conn.sendMessage(m.chat, {image: picture, caption: info, contextInfo:{ mentioned:[sender]}}, { quoted: fkontak})
 //conn.sendFile(m.chat, picture, 'curiosity.jpg', info, fkontak, m)
 //conn.sendButton(m.chat, info, `${wm}`, pp, [['MENU', '.menu']], fkontak, m)
 }
