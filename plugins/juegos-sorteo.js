@@ -28,6 +28,7 @@ handler.help = ['sorteo']
 handler.command = ['sorteo']
 handler.tags = ['juegos']
 handler.group = true
+handker.admin = true
 
 export default handler
 
