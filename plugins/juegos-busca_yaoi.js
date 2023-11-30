@@ -1,4 +1,4 @@
-var handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) => {
+/*var handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) => {
 
 let em = ['😀','😂','🍑','😍','🤤','🥵','😐','🙂','😎','👻','💩','🥴','🤑','🤓']
 
@@ -13,4 +13,4 @@ handler.customPrefix = /^Yaoi|bl/i
 handler.command = new RegExp
 handler.tags = ['fun']
 
-export default handler
+export default handler*/
