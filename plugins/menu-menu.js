@@ -70,12 +70,12 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', fload, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnail: await (await fetch(pp)).buffer() }}})
 m.react('🚀')     
-let menu = `┌─〔 U S U A R I O 〕
-├ *Nombre :* ${name}
-├ *Limite :* ${diamond}
-├ *Nivel :* ${level}
-├ *Rango :* ${role}
-├ *Exp :* ${exp}
+let menu = `┌───〔 U S U A R I O 〕───
+├ 🌲 *Nombre :* ${name}
+├ 🌲 *Limite :* ${diamond}
+├ 🌲 *Nivel :* ${level}
+├ 🌲 *Rango :* ${role}
+├ 🌲 *Exp :* ${exp}
 ╰──────────────
 
 ╔═══[ ＩＮＦＯＢＯＴ ]═══╗
