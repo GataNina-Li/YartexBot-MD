@@ -109,7 +109,7 @@ chat.isBanned = false
 if (!('welcome' in chat))
 chat.welcome = true
 if (!('detect' in chat))
-chat.detect = false
+chat.detect = true
 if (!('detect2' in chat))
 chat.detect2 = true
 if (!('sWelcome' in chat))
@@ -146,7 +146,7 @@ chat.expired = 0
 global.db.data.chats[m.chat] = {
 isBanned: false,
 welcome: true,
-detect: false,
+detect: true,
 detect2: true, 
 sWelcome: '',
 sBye: '',
@@ -154,13 +154,13 @@ sPromote: '',
 sDemote: '',
 delete: true,
 antiTraba: true,
-antiToxic: false,
-antiLink: true,
+antiToxic: true,
+antiLink: false,
 viewonce: true,
 useDocument: false,
 onlyLatinos: false,
 modoadmin: false,
-nsfw: false,
+nsfw: true,
 antiSticker: false,
 antibule: false,
 expired: 0,
