@@ -1,7 +1,7 @@
 import util from 'util'
 import path from 'path'
 
-var handler = async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
+async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 
 let user = a => '@' + a.split('@')[0]
 if (!text) throw `*⚠️ EJEMPLO DE USO:*\n${usedPrefix + command} texto`
@@ -28,7 +28,7 @@ handler.help = ['sorteo']
 handler.command = ['sorteo']
 handler.tags = ['juegos']
 handler.group = true
-handker.admin = true
+handler.admin = true
 
 export default handler
 
