@@ -93,7 +93,7 @@ regTime: -1,
 afk: -1,
 afkReason: '',
 banned: false,
- warn: 0,
+warn: 0,
 level: 0,
 role: 'Novato',
 autolevelup: true,
@@ -137,6 +137,8 @@ if (!('nsfw' in chat))
 chat.nsfw = true
 if (!('antiSticker' in chat))
 chat.antiSticker = false 
+if (!('antibule' in chat))
+chat.antibule = false 
 if (!isNumber(chat.expired))
 chat.expired = 0
 } else
@@ -160,6 +162,7 @@ onlyLatinos: false,
 modoadmin: false,
 nsfw: false,
 antiSticker: false,
+antibule: false,
 expired: 0,
 }
 
