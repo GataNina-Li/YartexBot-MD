@@ -1,4 +1,4 @@
-import yaoiImages from 'module-gatadios'
+/*import yaoiImages from 'module-gatadios'
 
 var handler = async (m, {conn, args, command, usedPrefix}) => {
   
@@ -10,4 +10,4 @@ Enlace: ${result.link}`)
 
 }
 handler.command = /^(prueba23)$/i
-export default handler
+export default handler*/
