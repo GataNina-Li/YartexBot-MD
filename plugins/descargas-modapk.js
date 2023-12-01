@@ -1,4 +1,4 @@
-import {search, download} from 'aptoide-scraper';
+/*import {search, download} from 'aptoide-scraper';
 const handler = async (m, {conn, usedPrefix: prefix, command, text}) => {
  if (!text) throw `*❗ ɪɴɢʀᴇsᴇ ᴇʟ ɴᴏᴍʙʀᴇ ᴅᴇ ʟᴀ ᴀᴘᴋ ǫᴜᴇ ǫᴜɪᴇʀᴀ ʙᴜsᴄᴀʀ.*`;
   try {    
@@ -28,4 +28,4 @@ renderLargerThumbnail: true
   }    
 };
 handler.command = /^(apkmod|modapk|dapk2|aptoide|aptoidedl)$/i;
-export default handler;
+export default handler;*/
