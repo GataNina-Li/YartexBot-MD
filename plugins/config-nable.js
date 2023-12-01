@@ -58,7 +58,7 @@ global.dfail('admin', m, conn)
 throw false
 }
 chat.detect2 = isEnable
- break
+break
 case 'delete':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -66,6 +66,14 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.delete = isEnable
+break
+case 'antibule':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.antibule = !isEnable
 break
 case 'antidelete':
 if (m.isGroup) {
