@@ -70,30 +70,21 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', fload, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnail: await (await fetch(pp)).buffer() }}})
 m.react('🚀')     
-let menu = `┌─〔 CuriosityBot-MD 〕─
-├ 👋 Hola ${name}
+let menu = `┌───〔 CuriosityBot-MD 〕──
+├ 👋 ${name}
 │
 ├ 🌲 *Limite:* ${diamond}
-│
 ├ 🌲 *Nivel :* ${level}
-│
 ├ 🌲 *Rango :* ${role}
-│
 ├ 🌲 *Exp :* ${exp}
+│
+├ 🎅 *Creador :* Azami 
+├ 🎅 *Numero:* wa.me/59894808483
+├ 🎅 *Tiempo Activo:* ${uptime}
+├ 🎅 *Registrado :* ${rtotalreg} de ${totalreg} usuarios
+│
+├ ⛄ *Fecha :* ${date}
 ╰───────────────────
-
-╔═══[ ＩＮＦＯＢＯＴ ]═══╗
-║╭──────────────
-║├⫹⫺ *Creador :* Azami 
-║├⫹⫺ *Numero:* wa.me/59894808483
-║├⫹⫺ *Tiempo Activo:* ${uptime}
-║├⫹⫺ *Registrado :* ${rtotalreg} de ${totalreg} usuarios
-║╰────────────── 
-╚══════════════════⋆
-
-╔═════「 ＨＯＹ 」════╗
-║⫹⫺ *Fecha :* ${date}
-〬╚═════ ≪ •❈• ≫ ═════╝
 
 ╔══「 I N F O R M A C I Ó N 」═╗
 〬║ႌ〬⫹⫺ ${usedPrefix}estado
