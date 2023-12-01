@@ -74,14 +74,14 @@ let menu = `┌───〔 CuriosityBot-MD 〕──
 ├ 👋 ${name}
 │
 ├ 🌲 *Limite:* ${diamond}
-├ 🌲 *Nivel :* ${level}
-├ 🌲 *Rango :* ${role}
-├ 🌲 *Exp :* ${exp}
+├ 🌲 *Nivel:* ${level}
+├ 🌲 *Rango:* ${role}
+├ 🌲 *Exp:* ${exp}
 │
-├ 🎅 *Creador :* Azami 
-├ 🎅 *Numero:* wa.me/59894808483
+├ 🎅 *Creador:* Azami 
 ├ 🎅 *Tiempo Activo:* ${uptime}
-├ 🎅 *Registrado :* ${rtotalreg} de ${totalreg} usuarios
+├ 🎅 *Usuarios Reg:* ${rtotalreg}
+├ 🎅 *Usuarios:* {totalreg}
 │
 ├ ⛄ *Fecha :* ${date}
 ╰───────────────────
