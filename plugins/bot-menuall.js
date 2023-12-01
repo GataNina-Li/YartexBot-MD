@@ -104,6 +104,8 @@ enabled: !plugin.disabled,
 }
 })
 
+const fload = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : -99999999, status: 1, surface : 1, message: `CuriosityBot-MD 🍧` + `\nAzami`, orderTitle: `▮Menu ▸`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp.net' }}}
+
 for (let plugin of help)
 if (plugin && 'tags' in plugin)
 for (let tag of plugin.tags)
