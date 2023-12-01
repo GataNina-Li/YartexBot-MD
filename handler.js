@@ -175,7 +175,8 @@ if (!('autoread2' in settings)) settings.autoread2 = false
 if (!('restrict' in settings)) settings.restrict = false
 if (!('antiCall' in settings)) settings.antiCall = false
 if (!('antiPrivate' in settings)) settings.antiPrivate = false
-if (!('modejadibot' in settings)) settings.modejadibot = true  
+if (!('modejadibot' in settings)) settings.modejadibot = true
+if (!('autoBio' in settings)) settings.autoBio = false
 if (!('muto' in user)) user.muto = false
 if (!('status' in settings)) settings.status = 0
 } else global.db.data.settings[this.user.jid] = {
@@ -187,6 +188,7 @@ antiCall: false,
 antiPrivate: false,
 modejadibot: true,
 muto: false,
+autoBio,
 status: 0
 
 }
