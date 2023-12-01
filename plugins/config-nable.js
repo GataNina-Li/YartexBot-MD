@@ -155,6 +155,14 @@ throw false
 }}
 chat.audios = isEnable
 break
+case 'autoBio':
+isAll = true
+if (!(isOwner)) {
+global.dfail('rowner', m, conn)
+throw false
+}
+chat.autoBio = isEnable
+break
 case 'restrict':
 isAll = true
 if (!isOwner) {
