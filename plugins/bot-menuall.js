@@ -43,7 +43,9 @@ before: `╭━━━〔 U S U A R I O 〕━━━◉
 ┃╭──────────────
 ┃┃ *Fecha:* %date
 ┃╰──────────────
-╰━━━━━━━━━━━━━━◉`.trimStart(),
+╰━━━━━━━━━━━━━━◉
+
+%readMore`.trimStart(),
 
 header: '╭━━━〔 %category 〕━━━◉\n┃╭───────────',
 body: '┃┃  %cmd',
@@ -154,7 +156,7 @@ const fload = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsa
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 
-await conn.reply(m.chat, '*Próximamente se remitirá el menú.*', fload, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnail: await (await fetch(pp)).buffer() }}})
+await conn.reply(m.chat, '*Próximamente se remitirá el menú.*', fload, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnail: imagen2 }}})
 
 conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": global.nn, "sourceUrl": global.nn}}}, {quoted: estilo});
 m.react('🚀') 
