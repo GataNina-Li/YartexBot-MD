@@ -161,7 +161,7 @@ if (!(isOwner)) {
 global.dfail('rowner', m, conn)
 throw false
 }
-chat.autoBio = isEnable
+bot.autoBio = isEnable
 break
 case 'restrict':
 isAll = true
