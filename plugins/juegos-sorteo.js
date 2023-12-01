@@ -1,7 +1,7 @@
 import util from 'util'
 import path from 'path'
 
-async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
+var handler = async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 
 let user = a => '@' + a.split('@')[0]
 if (!text) throw `*⚠️ EJEMPLO DE USO:*\n${usedPrefix + command} texto`
