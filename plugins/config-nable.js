@@ -277,6 +277,7 @@ _${usedPrefix + command} *detect*_
 _${usedPrefix + command} *modoadmin*_
 _${usedPrefix + command} *antisticker*_
 _${usedPrefix + command} *autosticker*_
+_${usedPrefix + command} *antibule*_
 
 *🍧 OPCIONES DE PROPIETARIO*
 
