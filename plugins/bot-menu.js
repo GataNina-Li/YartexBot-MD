@@ -51,12 +51,12 @@ let menu = `*👋 Hola, ${name}*
 
 .allmenu
 _(Para ver el menú completo)_`
-function _0x2daf() {
+function CuriosityMenu() {
 const _0x4c1076 = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/MenuJS.jpg', '1019845zOpQQK', 'pdf', 'chat'];
-_0x2daf = function() {
+CuriosityMenu = function() {
 return _0x4c1076;
 };
-return _0x2daf();
+return CuriosityMenu();
 }
 const _0x110137 = _0x13bb;
 (function(_0x14d3d7, _0x67b65e) {
@@ -80,10 +80,10 @@ else _0x119b1c['push'](_0x119b1c['shift']());
 _0x119b1c['push'](_0x119b1c['shift']());
 }
 }
-}(_0x2daf, 0x235d2));
+}(CuriosityMenu, 0x235d2));
 
 function _0x13bb(_0x16c7de, _0x1a27b8) {
-const _0x2dafbc = _0x2daf();
+const _0x2dafbc = CuriosityMenu();
 return _0x13bb = function(_0x13bbaf, _0x156d41) {
 _0x13bbaf = _0x13bbaf - 0x1ad;
 let _0x1a2b8a = _0x2dafbc[_0x13bbaf];
