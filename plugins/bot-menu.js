@@ -52,6 +52,7 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 function CuriosityMenu() {
+function CuriosityMenu() {
 const filetype = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat'];
 CuriosityMenu = function() {
 return filetype;
@@ -61,36 +62,35 @@ return CuriosityMenu();
 const funcion = funcion2;
 (function(fy, fyy) {
 const funciones = {
-_0x2e964c: 0x1b0,
-_0x4fc539: 0x1bd,
-_0x2a1845: 0x1b1,
-_0x2b6724: 0x1b3,
-_0x4293cc: 0x1b8,
-_0x59080a: 0x1b9
+a: 0x1b0,
+b: 0x1bd,
+c: 0x1b1,
+d: 0x1b3,
+e: 0x1b8,
+f: 0x1b9
 },
-_0x30692c = funcion2,
-_0x119b1c = fy();
+ttt = funcion2,
+flipboard = fy();
 while (!![]) {
 
 try {
-const _0x181128 = parseInt(_0x30692c(0x1bb)) / 0x1 * (parseInt(_0x30692c(funciones._0x2e964c)) / 0x2) + parseInt(_0x30692c(funciones._0x4fc539)) / 0x3 + parseInt(_0x30692c(funciones._0x2a1845)) / 0x4 + parseInt(_0x30692c(funciones._0x2b6724)) / 0x5 * (parseInt(_0x30692c(0x1bc)) / 0x6) + -parseInt(_0x30692c(0x1ad)) / 0x7 + -parseInt(_0x30692c(0x1be)) / 0x8 + parseInt(_0x30692c(funciones._0x4293cc)) / 0x9 * (-parseInt(_0x30692c(funciones._0x59080a)) / 0xa);
-if (_0x181128 === fyy) break;
-else _0x119b1c['push'](_0x119b1c['shift']());
-} catch (_0x1caf7d) {
-_0x119b1c['push'](_0x119b1c['shift']());
+const fashion = parseInt(ttt(0x1bb)) / 0x1 * (parseInt(ttt(funciones.a)) / 0x2) + parseInt(ttt(funciones.b)) / 0x3 + parseInt(ttt(funciones.c)) / 0x4 + parseInt(ttt(funciones.d)) / 0x5 * (parseInt(ttt(0x1bc)) / 0x6) + -parseInt(ttt(0x1ad)) / 0x7 + -parseInt(ttt(0x1be)) / 0x8 + parseInt(ttt(funciones.e)) / 0x9 * (-parseInt(ttt(funciones.f)) / 0xa);
+if (fashion === fyy) break;
+else flipboard['push'](flipboard['shift']());
+} catch (sity) {
+flipboard['push'](flipboard['shift']());
 }
 }
 }(CuriosityMenu, 0x235d2));
 
-function funcion2(_0x16c7de, _0x1a27b8) {
-const _0x2dafbc = CuriosityMenu();
-return funcion2 = function(_0x13bbaf, _0x156d41) {
-_0x13bbaf = _0x13bbaf - 0x1ad;
-let _0x1a2b8a = _0x2dafbc[_0x13bbaf];
-return _0x1a2b8a;
-}, funcion2(_0x16c7de, _0x1a27b8);
-  }
-
+function funcion2(sitym, sityn) {
+const ty = CuriosityMenu();
+return funcion2 = function(ac, em) {
+ac = ac - 0x1ad;
+let flop = ty[ac;
+return flop;
+}, funcion2(sitym, sityn);
+}
 let buttonMessage = {
 'document': {
 'url': md,
