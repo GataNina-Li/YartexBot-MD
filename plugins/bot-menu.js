@@ -52,13 +52,13 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 function CuriosityMenu() {
-const filetype = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/MenuJS.jpg', '1019845zOpQQK', 'pdf', 'chat'];
+const filetype = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat'];
 CuriosityMenu = function() {
 return filetype;
 };
 return CuriosityMenu();
 }
-const _0x110137 = _0x13bb;
+const funcion = funcion2;
 (function(_0x14d3d7, _0x67b65e) {
 const _0x3a56bf = {
 _0x2e964c: 0x1b0,
@@ -68,7 +68,7 @@ _0x2b6724: 0x1b3,
 _0x4293cc: 0x1b8,
 _0x59080a: 0x1b9
 },
-_0x30692c = _0x13bb,
+_0x30692c = funcion2,
 _0x119b1c = _0x14d3d7();
 while (!![]) {
 
@@ -82,13 +82,13 @@ _0x119b1c['push'](_0x119b1c['shift']());
 }
 }(CuriosityMenu, 0x235d2));
 
-function _0x13bb(_0x16c7de, _0x1a27b8) {
+function funcion2(_0x16c7de, _0x1a27b8) {
 const _0x2dafbc = CuriosityMenu();
-return _0x13bb = function(_0x13bbaf, _0x156d41) {
+return funcion2 = function(_0x13bbaf, _0x156d41) {
 _0x13bbaf = _0x13bbaf - 0x1ad;
 let _0x1a2b8a = _0x2dafbc[_0x13bbaf];
 return _0x1a2b8a;
-}, _0x13bb(_0x16c7de, _0x1a27b8);
+}, funcion2(_0x16c7de, _0x1a27b8);
 }
 
 let buttonMessage = {
