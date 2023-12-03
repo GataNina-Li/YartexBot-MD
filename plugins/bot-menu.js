@@ -133,4 +133,4 @@ let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 
 function pickRandom(list) {
-return list[Math.floor(Math.random() * list.length)]
+return list[Math.floor(Math.random() * list.length)]}
