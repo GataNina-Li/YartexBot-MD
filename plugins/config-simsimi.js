@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 const handler = (m) => m;
 
-export async function before (m) => {
+handler.before = async (m) => {
   const chat = global.db.data.chats[m.chat];
   if (chat.simi) {
     if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return;
