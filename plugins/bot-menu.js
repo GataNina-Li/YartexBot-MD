@@ -1,6 +1,6 @@
 //CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios & https://github.com/AzamiJs | @Azami
 
-import fs from 'fs'
+/*import fs from 'fs'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
@@ -133,4 +133,4 @@ return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]
                                                                                                                                                              }
-  
+  */
