@@ -58,7 +58,7 @@ return filetype
 }
 return CuriosityMenu()
 }
-const funcion = funcion2
+const funcion = funcion2;
 (function(fy, fyy) {
 const funciones = {
 a: 0x1b0,
