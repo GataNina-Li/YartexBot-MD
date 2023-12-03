@@ -146,7 +146,7 @@ chat.expired = 0
 global.db.data.chats[m.chat] = {
 isBanned: false,
 welcome: true,
-detect: true,
+detect: false,
 detect2: true, 
 sWelcome: '',
 sBye: '',
