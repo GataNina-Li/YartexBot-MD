@@ -1,6 +1,6 @@
 //CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios & https://github.com/AzamiJs | @Azami
 
-/*import fs from 'fs'
+import fs from 'fs'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
@@ -52,13 +52,13 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 function CuriosityMenu() {
-const filetype = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat'];
+const filetype = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat']
 CuriosityMenu = function() {
-return filetype;
-};
-return CuriosityMenu();
+return filetype
 }
-const funcion = funcion2;
+return CuriosityMenu()
+}
+const funcion = funcion2
 (function(fy, fyy) {
 const funciones = {
 a: 0x1b0,
@@ -69,27 +69,28 @@ e: 0x1b8,
 f: 0x1b9
 },
 ttt = funcion2,
-flipboard = fy();
+flipboard = fy()
 while (!![]) {
 
 try {
-const fashion = parseInt(ttt(0x1bb)) / 0x1 * (parseInt(ttt(funciones.a)) / 0x2) + parseInt(ttt(funciones.b)) / 0x3 + parseInt(ttt(funciones.c)) / 0x4 + parseInt(ttt(funciones.d)) / 0x5 * (parseInt(ttt(0x1bc)) / 0x6) + -parseInt(ttt(0x1ad)) / 0x7 + -parseInt(ttt(0x1be)) / 0x8 + parseInt(ttt(funciones.e)) / 0x9 * (-parseInt(ttt(funciones.f)) / 0xa);
-if (fashion === fyy) break;
-else flipboard['push'](flipboard['shift']());
+const fashion = parseInt(ttt(0x1bb)) / 0x1 * (parseInt(ttt(funciones.a)) / 0x2) + parseInt(ttt(funciones.b)) / 0x3 + parseInt(ttt(funciones.c)) / 0x4 + parseInt(ttt(funciones.d)) / 0x5 * (parseInt(ttt(0x1bc)) / 0x6) + -parseInt(ttt(0x1ad)) / 0x7 + -parseInt(ttt(0x1be)) / 0x8 + parseInt(ttt(funciones.e)) / 0x9 * (-parseInt(ttt(funciones.f)) / 0xa)
+if (fashion === fyy) break
+else flipboard['push'](flipboard['shift']())
 } catch (sity) {
-flipboard['push'](flipboard['shift']());
+flipboard['push'](flipboard['shift']())
 }
 }
-}(CuriosityMenu, 0x235d2));
+}(CuriosityMenu, 0x235d2))
 
 function funcion2(sitym, sityn) {
-const ty = CuriosityMenu();
+const ty = CuriosityMenu()
 return funcion2 = function(ac, em) {
-ac = ac - 0x1ad;
-let flop = ty[ac;
+ac = ac - 0x1ad
+let flop = ty[ac
 return flop;
-}, funcion2(sitym, sityn);
+}, funcion2(sitym, sityn)
 }
+
 let buttonMessage = {
 'document': {
 'url': md,
