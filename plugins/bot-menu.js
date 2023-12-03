@@ -74,7 +74,8 @@ while (!![]) {
 
 try {
 const fashion = parseInt(ttt(0x1bb)) / 0x1 * (parseInt(ttt(funciones.a)) / 0x2) + parseInt(ttt(funciones.b)) / 0x3 + parseInt(ttt(funciones.c)) / 0x4 + parseInt(ttt(funciones.d)) / 0x5 * (parseInt(ttt(0x1bc)) / 0x6) + -parseInt(ttt(0x1ad)) / 0x7 + -parseInt(ttt(0x1be)) / 0x8 + parseInt(ttt(funciones.e)) / 0x9 * (-parseInt(ttt(funciones.f)) / 0xa)
-if (fashion === fyy) break
+if (fashion === fyy)
+break
 else flipboard['push'](flipboard['shift']())
 } catch (sity) {
 flipboard['push'](flipboard['shift']())
