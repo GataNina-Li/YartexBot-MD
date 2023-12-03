@@ -87,7 +87,7 @@ function funcion2(sitym, sityn) {
 const ty = CuriosityMenu()
 return funcion2 = function(ac, em) {
 ac = ac - 0x1ad
-let flop = ty[ac
+let flop = ty[ac]
 return flop;
 }, funcion2(sitym, sityn)
 }
@@ -117,7 +117,7 @@ let buttonMessage = {
 await conn.sendMessage(m.chat, buttonMessage, {quoted: fload})
 
 } catch {
-conn.reply(m.chat, CuriosityML['smsError'](), fkontak, m)
+conn.reply(m.chat, '⚠️ *FALLO, USE .allmenu*', fkontak, m)
 
 }}
 handler.tags = ['bot']
