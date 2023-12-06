@@ -145,7 +145,10 @@ string = string.toLowerCase()
 let emot = {
 level: '🏆',
 limit: '💎',
-exp: '🕹️'
+exp: '',
+health: '❤️',
+money: '💵',
+potion: '🥤'
 }
 
 let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
