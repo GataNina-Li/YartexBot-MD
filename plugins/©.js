@@ -1,4 +1,4 @@
-const { MessageType, useMultiFileAuthState, DisconnectReason, Browsers } = await import("@adiwajshing/baileys")
+const { MessageType, useMultiFileAuthState, DisconnectReason, Browsers } = await import("@whiskeysockets/baileys")
 import qrcode from "qrcode"
 import fs from "fs"
 import P from 'pino';
