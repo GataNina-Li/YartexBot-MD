@@ -80,6 +80,10 @@ if (!('autolevelup' in user))
 user.autolevelup = true
 if (!('simi' in user))
 user.simi = false
+if (!isNumber(user.health))
+user.health = 100
+if (!isNumber(user.potion))
+user.potion = 0
 } else
 
 global.db.data.users[m.sender] = {
@@ -98,6 +102,8 @@ level: 0,
 role: 'Novato',
 autolevelup: true,
 simi: false,
+health: 100,
+potion: 0,
 }
 
 let chat = global.db.data.chats[m.chat]
