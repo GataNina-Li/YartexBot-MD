@@ -20,7 +20,7 @@ let crm3 = "SBpbmZvLWRvbmFyLmpz"
 let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = "CkphZGlib3QsIEhlY2hv"
 let drm2 = "IHBvciBAQWlkZW5fTm90TG9naWM"
-let rtx= `*Bot Tiburón🦈*\nㅤㅤㅤㅤ*Ser sub bot*\n\n*Con otro telefono que tengas o en la PC escanea este QR para convertirte en un sub bot*`
+let rtx= `*${wm}*`
 if (global.conns instanceof Array) console.log()// for (let i of global.conns) global.conns[i] && global.conns[i].user ? global.conns[i].close().then(() => delete global.conns[id] && global.conns.splice(i, 1)).catch(global.conn.logger.error) : delete global.conns[i] && global.conns.splice(i, 1)
 else global.conns = []
 
@@ -127,7 +127,7 @@ const connectionOptions = {
 printQRInTerminal: true,
 auth: state,
 logger: P({ level: 'silent'}),
-browser: ["Bot Tigurón-SerBot", "Safari", "5.0"],
+browser: ["Bot", "Safari", "5.0"],
 }
 
 let conn = makeWASocket(connectionOptions)
