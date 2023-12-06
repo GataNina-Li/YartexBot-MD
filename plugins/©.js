@@ -1,6 +1,6 @@
 var handler = async (m) => {
 
-function ajaj() {
+function observar() {
 let numeros = global.owner[0]
 }
 
