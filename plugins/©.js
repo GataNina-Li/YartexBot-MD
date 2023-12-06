@@ -137,7 +137,7 @@ let isInit = true
 async function connectionUpdate(update) {
     const { connection, lastDisconnect, isNewLogin, qr } = update
     if (isNewLogin) conn.isInit = true
-    if (qr) parentw.sendMessage(m.chat, {image: await qrcode.toBuffer(qr, { scale: 8 }) , caption : rtx + drmer.toString("utf-8")}, { quoted: m })
+    if (qr) parentw.sendMessage(m.chat, {image: await qrcode.toBuffer(qr, { scale: 8 }) , caption : rtx }, { quoted: m })
     const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
     console.log(code)
     if (code && code !== DisconnectReason.loggedOut && conn?.ws.readyState !== CONNECTING) {
