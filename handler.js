@@ -80,10 +80,6 @@ if (!('autolevelup' in user))
 user.autolevelup = true
 if (!('simi' in user))
 user.simi = false
-if (!isNumber(user.health))
-user.health = 100
-if (!isNumber(user.potion))
-user.potion = 0
 } else
 
 global.db.data.users[m.sender] = {
@@ -102,8 +98,6 @@ level: 0,
 role: 'Novato',
 autolevelup: true,
 simi: false,
-health: 100,
-potion: 0,
 }
 
 let chat = global.db.data.chats[m.chat]
@@ -169,7 +163,7 @@ modoadmin: false,
 nsfw: true,
 antiSticker: false,
 antibule: false,
-expired: 0,
+expired: 0
 }
 
 let settings = global.db.data.settings[this.user.jid]
@@ -182,7 +176,6 @@ if (!('restrict' in settings)) settings.restrict = false
 if (!('antiCall' in settings)) settings.antiCall = false
 if (!('antiPrivate' in settings)) settings.antiPrivate = false
 if (!('modejadibot' in settings)) settings.modejadibot = true
-if (!('autoBio' in settings)) settings.autoBio = false
 if (!('muto' in user)) user.muto = false
 if (!('status' in settings)) settings.status = 0
 } else global.db.data.settings[this.user.jid] = {
@@ -194,7 +187,6 @@ antiCall: false,
 antiPrivate: false,
 modejadibot: true,
 muto: false,
-autoBio,
 status: 0
 
 }
