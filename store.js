@@ -13,10 +13,6 @@ global.imagen2 = fs.readFileSync('./storage/logos/Menu2.jpg')
 global.imagen3 = fs.readFileSync('./storage/logos/Menu3.jpg')
 global.imagen4 = fs.readFileSync('./storage/logos/Menu4.jpg')
 
-global.nuevobot = fs.readFileSync('./src/nuevobot.jpg')
-global.prebot = fs.readFileSync('./src/Pre Bot Publi.png')
-global.stickerAMX = fs.readFileSync('./src/Curiosity.webp')
-
 global.config = fs.readFileSync('./storage/imagenes/configuraciones.jpg')
 global.suerte = fs.readFileSync('./storage/imagenes/suerte.jpg')
 global.oracion = fs.readFileSync('./storage/imagenes/oracion.jpg')
