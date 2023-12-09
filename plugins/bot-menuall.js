@@ -43,7 +43,8 @@ before: `╭━━━〔 U S U A R I O 〕━━━◉
 ┃╭──────────────
 ┃┃ *Fecha:* %date
 ┃╰──────────────
-╰━━━━━━━━━━━━━━◉`.trimStart(),
+╰━━━━━━━━━━━━━━◉
+%readmore`.trimStart(),
 
 header: '╭━━━〔 %category 〕━━━◉\n┃╭───────────',
 body: '┃┃  %cmd',
