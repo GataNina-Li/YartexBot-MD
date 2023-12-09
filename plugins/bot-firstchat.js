@@ -1,4 +1,4 @@
-/*import moment from 'moment-timezone'
+import moment from 'moment-timezone'
   
 export async function before(m) {
 
@@ -19,4 +19,4 @@ await m.reply(`👋 Hola ${nombre}!!
 📝 ¿Quieres apoyar este proyecto para que siga actualizándose? enviar a través de: 
 *https://paypal.me/azami.19*`) 
 user.pc = new Date * 1
-}*/
+}
