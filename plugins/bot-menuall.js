@@ -4,21 +4,21 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-/* 'info': 'I N F O R M A C I Ó N ',
-  'group': 'G R U P O S',
-  'game': 'J U E G O S',
-  'dl': ' D E S C A R G A S',
-  'jadibot': 'J A D I B O T', 
-  'nable': 'E N A B L E / D I S A B L E', 
-  'internet': 'B U S C A D O R E S',
-  'convertido': 'C O N V E R T I D O R E S', 
-  'sticker': 'S T I C K E R',
-  'rg': 'R P G',
-  'audio': 'A U D I O S   E F E C T O S', 
-  'tools': 'H E R R A M I E N T A S', 
-  'anime': 'A N I M E', 
-  'nsfw': 'N S F W +18', 
-  'owner': 'O W N E R',*/
+'info': 'I N F O R M A C I Ó N ',
+'grupo': 'G R U P O S',
+'juegos': 'J U E G O S',
+'descargas': ' D E S C A R G A S',
+'jadibot': 'J A D I B O T', 
+'nable': 'E N A B L E / D I S A B L E', 
+'internet': 'B U S C A D O R E S',
+'transformador': 'C O N V E R T I D O R E S', 
+'sticker': 'S T I C K E R',
+'rg': 'R P G',
+'audio': 'A U D I O S   E F E C T O S', 
+'implementos': 'H E R R A M I E N T A S', 
+'anime': 'A N I M E', 
+'nsfw': 'N S F W +18', 
+'owner': 'O W N E R',
 }
 const defaultMenu = {
 before: `╭━━━〔 U S U A R I O 〕━━━◉
