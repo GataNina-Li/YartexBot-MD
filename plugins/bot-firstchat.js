@@ -5,11 +5,8 @@ export async function before(m) {
 if (m.chat.endsWith('broadcast') || m.fromMe || m.isGroup) return
   
 let user = global.db.data.users[m.sender]
-let chat = global.db.data.chats[m.chat]
-chat.banchat = true
 
-try{
-if (new Date() - user.pc < 1) return
+if (new Date() - user.pc < 21600000) return
 await m.reply(`👋 Hola ${nombre}!!
  *${saludo}*
 
@@ -20,10 +17,7 @@ await m.reply(`👋 Hola ${nombre}!!
 🧃 Escriba *.menu* para mostrar el menú 
   
 📝 ¿Quieres apoyar este proyecto para que siga actualizándose? enviar a través de: 
-*https://paypal.me/azami.19*`) 
-} finally{
-chat.banchat = false
-}
+*https://paypal.me/azami.19*`)
 
 user.pc = new Date * 1
 }
