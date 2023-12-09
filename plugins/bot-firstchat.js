@@ -9,7 +9,7 @@ let chat = global.db.data.chats[m.chat]
 chat.banchat = true
 
 try{
-if (new Date() - user.pc < 21600000) return
+if (new Date() - user.pc < 1) return
 await m.reply(`👋 Hola ${nombre}!!
  *${saludo}*
 
