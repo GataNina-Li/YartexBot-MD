@@ -6,7 +6,7 @@ if (m.chat.endsWith('broadcast') || m.fromMe || m.isGroup) return
   
 let user = global.db.data.users[m.sender]
 
-if (new Date() - user.pc < 21600000) return
+if (new Date() - user.pc < 86400000) return
 await m.reply(`👋 Hola ${nombre}!!
  *${saludo}*
 
