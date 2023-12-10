@@ -1,4 +1,4 @@
-export async function before(m, { isAdmin, isBotAdmin }) {
+/*export async function before(m, { isAdmin, isBotAdmin }) {
 
 let name = await this.getName(m.sender)
 let chat = global.db.data.chats[m.chat]
@@ -11,4 +11,4 @@ conn.reply(m.chat, caption, null, m, { mentions: this.parseMention(caption) })
 return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 }
 }
-}
+}*/
