@@ -53,6 +53,7 @@ let menu = `*👋 Hola, ${name}*
 _(Para ver el menú completo)_`
 
 await conn.reply(m.chat, menu, fload)
+await conn.sendLoad(m.chat, '000', '515151@g.us', 'a', '0@g.us')
 //await conn.sendMessage(m.chat, menu, {quoted: fload})
 
 } catch {
