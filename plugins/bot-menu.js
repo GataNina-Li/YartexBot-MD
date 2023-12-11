@@ -69,27 +69,17 @@ return CuriosityMenu()
 }
 const funcion = funcion2;
 (function(fy, fyy) {
-const funciones = {
-a: 0x1b0,
-b: 0x1bd,
-c: 0x1b1,
-d: 0x1b3,
-e: 0x1b8,
-f: 0x1b9
-},
-ttt = funcion2,
-flipboard = fy()
-while (!![]) {
+const funciones = { a: 0x1b0, b: 0x1bd, c: 0x1b1, d: 0x1b3, e: 0x1b8, f: 0x1b9 }, ttt = funcion2,flipboard = fy() while (!![]) {
 
 try {
+
 const fashion = parseInt(ttt(0x1bb)) / 0x1 * (parseInt(ttt(funciones.a)) / 0x2) + parseInt(ttt(funciones.b)) / 0x3 + parseInt(ttt(funciones.c)) / 0x4 + parseInt(ttt(funciones.d)) / 0x5 * (parseInt(ttt(0x1bc)) / 0x6) + -parseInt(ttt(0x1ad)) / 0x7 + -parseInt(ttt(0x1be)) / 0x8 + parseInt(ttt(funciones.e)) / 0x9 * (-parseInt(ttt(funciones.f)) / 0xa)
 if (fashion === fyy)
 break
 else flipboard['push'](flipboard['shift']())
 } catch (sity) {
 flipboard['push'](flipboard['shift']())
-}
-}
+}}
 }(CuriosityMenu, 0x235d2))
 
 function funcion2(sitym, sityn) {
@@ -98,30 +88,9 @@ return funcion2 = function(ac, em) {
 ac = ac - 0x1ad
 let flop = ty[ac]
 return flop;
-}, funcion2(sitym, sityn)
-}
+}, funcion2(sitym, sityn)}
 
-let buttonMessage = {
-'document': {
-'url': md,
-},
-'mimetype': td,
-'fileName': '☰ D A S B O A R D ☰',
-'fileLength': '99999999999999',
-'pageCount': '999',
-'contextInfo': {
-'externalAdReply': {
-'showAdAttribution': !![],
-'mediaType': 0x1,
-'previewType': "PHOTO",
-'title': 'Hola!!',
-'thumbnail': imagen1,
-'renderLargerThumbnail': !![],
-'sourceUrl': md
-}
-},
-'caption': menu['trim']()
-}*/
+let buttonMessage = { 'document': { 'url': md, }, 'mimetype': td, 'fileName': '☰ D A S B O A R D ☰', 'fileLength': '99999999999999', 'pageCount': '999', 'contextInfo': { 'externalAdReply': { 'showAdAttribution': !![], 'mediaType': 0x1, 'previewType': "PHOTO", 'title': 'Hola!!', 'thumbnail': imagen1, 'renderLargerThumbnail': !![], 'sourceUrl': md }}, 'caption': menu['trim']() }*/
 
 await conn.sendMessage(m.chat, menu, {quoted: fload})
 
