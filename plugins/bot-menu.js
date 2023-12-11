@@ -53,7 +53,7 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 
-await conn.reply(m.chat, menu, gitHub, )
+await conn.reply(m.chat, menu, fkontak, m)
 
 //await conn.sendMessage(m.chat, menu, {quoted: fload})
 
