@@ -51,7 +51,16 @@ let menu = `*👋 Hola, ${name}*
 
 .allmenu
 _(Para ver el menú completo)_`
-function CuriosityMenu() {
+
+/////////////////////////////
+// ESTE MENSAJE FAKE FUE REMOVIDO
+// DEBIDO A QUE NO SE VE EN COMPUTADORA
+// 
+// CRÉDITOS:
+// @GataNina-Li • @AzamiJs
+////////////////////////////
+  
+/*function CuriosityMenu() {
 const filetype = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/logos/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat']
 CuriosityMenu = function() {
 return filetype
@@ -112,9 +121,9 @@ let buttonMessage = {
 }
 },
 'caption': menu['trim']()
-}
+}*/
 
-await conn.sendMessage(m.chat, buttonMessage, {quoted: fload})
+await conn.sendMessage(m.chat, menu, {quoted: fload})
 
 } catch {
 conn.reply(m.chat, '⚠️ *FALLO, USE .allmenu*', fkontak, m)
