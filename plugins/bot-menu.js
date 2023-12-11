@@ -53,8 +53,8 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 
-//await conn.reply(m.chat, menu, a)
-await conn.sendLoad(m.chat, menu, '0@s.whatsapp.net', '*Menu Principal ⛄*')
+await conn.reply(m.chat, menu, gitHub, )
+
 //await conn.sendMessage(m.chat, menu, {quoted: fload})
 
 } catch {
