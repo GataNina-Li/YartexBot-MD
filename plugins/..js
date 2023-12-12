@@ -4,7 +4,7 @@ let nombre = 0, edad = 0, genero = 0, bio = 0, identidad = 0, pasatiempo = 0, re
 let pas1 = 0, pas2 = 0, pas3 = 0, pas4 = 0, pas5 = 0  
 let pruebas = {}
 
-let handler = async function (m, { conn, text, command, usedPrefix }) {
+let handler = async function (m, { conn, args, text, command, usedPrefix }) {
 if (pruebas[m.sender]) return m.reply('')
 let key 
 let sinDefinir = '😿 No encontrada'
