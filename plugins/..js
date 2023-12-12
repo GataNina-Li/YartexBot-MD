@@ -118,6 +118,9 @@ intervalId = setInterval(mensajeRegistro, 3 * 60 * 1000) //3 min
 setTimeout(() => {
 clearInterval(intervalId)}, 186000) //3.1 min
 }
+if (m.isBaileys) return
+    if (!m.text) return
+	    let { timeout, sender, message, to, type, count } = pruebas[m.sender]
 if (m.id === message.id) return
 if (verificar.test(text) == false || text.length <= 1) return conn.reply(m.chat, `👉 *PERSONALICE SU NOMBRE PARA REGISTRAR, EJEMPLO:*\n${usedPrefix}nombre ${azami}`, fkontak, m)
 if (/^\d+$/.test(text)) return conn.sendMessage(m.chat, {text: `*SU NOMBRE NO DEBE DE TENER SÓLO NÚMEROS, EJEMPLO:*\n${usedPrefix}nombre ${azami}\n\n🌟 _Si quiere usar su nombre registrado en su WhatsApp, escriba:_\n*${usedPrefix}nombre2*`}, {quoted: fkontak})
