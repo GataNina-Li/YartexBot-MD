@@ -59,7 +59,7 @@ await conn.reply(m.chat, menu, a, m)
 
 } catch {
 conn.reply(m.chat, '⚠️ *FALLO, USE .allmenu*', fkontak, m)
-
+console.log(e)
 }}
 handler.tags = ['bot']
 handler.command = /^(menu)$/i
