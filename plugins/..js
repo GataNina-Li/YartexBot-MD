@@ -22,7 +22,7 @@ minute: 'numeric',
 second: 'numeric'
 }) 
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let pp = await conn.profilePictureUrl(who, 'image').catch((_) => gataMenu.getRandom())
+let pp = await conn.profilePictureUrl(who, 'image').catch((_) => imagen1)
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}
 let nombreWA = await usedPrefix + conn.getName(m.sender) //'@' + m.sender.split("@s.whatsapp.net")[0]
@@ -138,7 +138,7 @@ if (isNaN(text)) return conn.reply(m.chat, `*INGRESE SOLO NÚMEROS*`, fkontak, m
 if (text > 90) return conn.reply(m.chat, `*DEMASIADO MAYOR PARA SER REGISTRADO*`, fkontak, m)
 if (text < 10) return conn.reply(m.chat, `*DEMASIADO MENOR PARA SER REGISTRADO*`, fkontak, m)
 user.age = text.replace(/[.,\/#!$%\^&\*;:{}@=\-_`~()\s\a-z]/gi, "")
-if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoEG']()}🌟 *GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${user.name === 0 ? sinDefinir : user.name}\n\n*❖ EDAD:*\n${user.age === 0 ? sinDefinir : user.age + ' años'}\n\n🧬 *AHORA PUEDE REGISTRAR SU GÉNERO, EJEMPLO:*\n\`\`\`${usedPrefix}genero\`\`\``}, {quoted: fkontak})
+if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: `🌟 *GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${user.name === 0 ? sinDefinir : user.name}\n\n*❖ EDAD:*\n${user.age === 0 ? sinDefinir : user.age + ' años'}\n\n🧬 *AHORA PUEDE REGISTRAR SU GÉNERO, EJEMPLO:*\n\`\`\`${usedPrefix}genero\`\`\``}, {quoted: fkontak})
 }
 	
 if (command == 'genero' || command == 'género' || command == 'gender') {
