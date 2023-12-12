@@ -118,6 +118,7 @@ intervalId = setInterval(mensajeRegistro, 3 * 60 * 1000) //3 min
 setTimeout(() => {
 clearInterval(intervalId)}, 186000) //3.1 min
 }
+pruebas[m.sender] = { sender: m.sender, to: who, message: m, type, count}
 if (m.isBaileys) return
     if (!m.text) return
 	    let { timeout, sender, message, to, type, count } = pruebas[m.sender]
