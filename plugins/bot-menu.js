@@ -55,7 +55,7 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 
-await conn.reply(m.chat, menu, a, m)
+await conn.reply(m.chat, menu, a, m, { contextInfo:{ externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnailUrl: imagen1 }}})
 
 //await conn.sendMessage(m.chat, menu, {quoted: fload})
 
