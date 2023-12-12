@@ -22,7 +22,8 @@ let time = d.toLocaleTimeString(locale, {
 hour: 'numeric',
 minute: 'numeric',
 second: 'numeric'
-}) 
+})
+	const type = (args[0] || '').toLowerCase()
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who, 'image').catch((_) => imagen1)
 function pickRandom(list) {
