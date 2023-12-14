@@ -8,7 +8,7 @@ try {
 
 await m.reply('*🚀 C A R G A N D O*')
 var apii = await fetch(`https://aemt.me/bard?text=${text}`)
-var res = await apii.json()
+var res = await result.json()
 await m.reply(res.message)
 
 } catch (error) {
