@@ -53,9 +53,9 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 
-await conn.reply(m.chat, menu, a, m)
+//await conn.reply(m.chat, menu, a, m)
 
-//await conn.sendMessage(m.chat, menu, {quoted: fload})
+await conn.sendMessage(m.chat, menu, {quoted: m})
 
 } catch {
 conn.reply(m.chat, '⚠️ *FALLO, USE .allmenu*', fkontak, m)
