@@ -53,9 +53,9 @@ let menu = `*👋 Hola, ${name}*
 .allmenu
 _(Para ver el menú completo)_`
 
-//await conn.reply(m.chat, menu, a, m)
+await conn.reply(m.chat, menu, a, { contextInfo: { externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}})
 
-await conn.sendMessage(m.chat, { text: menu, { contextInfo: { externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}}}, {quoted: a})
+//await conn.sendMessage(m.chat, { text: menu, { contextInfo: { externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}}}, {quoted: a})
 
 } catch {
 conn.reply(m.chat, '⚠️ *FALLO, USE .allmenu*', fkontak, m)
