@@ -15,7 +15,7 @@ let json = await (await fetch(`https://aemt.me/bardimg?url=${media}&text=${text}
 
 conn.sendMessage(m.chat, { text: json.result }, { quoted: m })
 
-} else throw `*⚠️ RESPONDE A UNA IMAGEN*`
+} else throw `*⚠️ RESPONDE A UNA IMAGEN CON UN TEXTO*\n\n❕ EJEMPLO\n${usedPrefix + command} dame información`
   
 }
 handler.help = ['bardimg']
