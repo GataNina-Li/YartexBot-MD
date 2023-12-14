@@ -55,7 +55,7 @@ _(Para ver el menú completo)_`
 
 //await conn.reply(m.chat, menu, a, m)
 
-await conn.sendMessage(m.chat, { text: menu }, {quoted: m})
+await conn.sendMessage(m.chat, { text: menu }, {quoted: a})
 
 } catch {
 conn.reply(m.chat, '⚠️ *FALLO, USE .allmenu*', fkontak, m)
