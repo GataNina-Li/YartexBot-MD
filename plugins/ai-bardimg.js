@@ -10,7 +10,7 @@ let buffer = await q.download()
 
 await m.reply('*🚀 C A R G A N D O*')
 
-let media = await (uploader)(media)
+let media = await (uploader)(buffer)
 let json = await (await fetch(`https://aemt.me/bardimg?url=${media}&text=${text}`)).json()
 
 conn.sendMessage(m.chat, { text: json.result }, { quoted: m })
