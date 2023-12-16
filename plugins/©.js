@@ -1,40 +1,46 @@
-const { MessageType, useMultiFileAuthState, DisconnectReason, Browsers } = await import("@whiskeysockets/baileys")
-import qrcode from "qrcode"
-import fs from "fs"
-import P from 'pino';
-import * as ws from 'ws';
-const {child , spawn, exec} = await import('child_process');
+const { MessageType, useMultiFileAuthState, DisconnectReason, Browsers } = await import('@whiskeysockets/baileys')
+import qrcode from 'qrcode'
+import fs from 'fs'
+import P from 'pino'
+import * as ws from 'ws'
+const {child , spawn, exec} = await import('child_process'
 const { CONNECTING } = ws
-import { makeWASocket, protoType, serialize } from '../lib/simp.js';
-let check1 = "NjBhZGVmZWI4N2M2"
-let check2 = "ZThkMmNkOGVlMDFmZD"
-let check3 = "UzYTI1MTQgIGluZ"
-let check4 = "m8tZG9uYXIuanMK"
-let check5 = "NzZjM2ZmMzU2MTEyMzM3OTczOWU5ZmFmMDZjYzUzO"
-let check6 = "DcgIF9hdXRvcmVzcG9uZGVyLmpzCjU5Yzc0ZjFjNmEz"
-let check8 = "NjNmYmJjYzA1YmFiY2MzZGU4MGRlICBpbmZvLWJvdC5qcwo"
-//
-let crm1 = "Y2QgcGx1Z2lucy"
-let crm2 = "A7IG1kNXN1b"
-let crm3 = "SBpbmZvLWRvbmFyLmpz"
-let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
-let drm1 = "CkphZGlib3QsIEhlY2hv"
-let drm2 = "IHBvciBAQWlkZW5fTm90TG9naWM"
+import { makeWASocket, protoType, serialize } from '../lib/simp.js'
+
+let check1 = 'NjBhZGVmZWI4N2M2'
+let check2 = 'ZThkMmNkOGVlMDFmZD'
+let check3 = 'UzYTI1MTQgIGluZ'
+let check4 = 'm8tZG9uYXIuanMK'
+let check5 = 'NzZjM2ZmMzU2MTEyMzM3OTczOWU5ZmFmMDZjYzUzO'
+let check6 = 'DcgIF9hdXRvcmVzcG9uZGVyLmpzCjU5Yzc0ZjFjNmEz'
+let check8 = 'NjNmYmJjYzA1YmFiY2MzZGU4MGRlICBpbmZvLWJvdC5qcwo'
+
+let crm1 = 'Y2QgcGx1Z2lucy'
+let crm2 = 'A7IG1kNXN1b'
+let crm3 = 'SBpbmZvLWRvbmFyLmpz'
+let crm4 = 'IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz'
+let drm1 = 'CkphZGlib3QsIEhlY2hv'
+let drm2 = 'IHBvciBAQWlkZW5fTm90TG9naWM'
 let rtx= `*${wm}*`
+
 if (global.conns instanceof Array) console.log()// for (let i of global.conns) global.conns[i] && global.conns[i].user ? global.conns[i].close().then(() => delete global.conns[id] && global.conns.splice(i, 1)).catch(global.conn.logger.error) : delete global.conns[i] && global.conns.splice(i, 1)
 else global.conns = []
 
-let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
-  let parentw = conn
-  if (conn.user.jid !== global.conn.user.jid) return parentw.reply(m.chat, 'Este comando solo puede ser usado en el bot principal! wa.me/' + global.conn.user.jid.split`@`[0], m)
-  const comb = Buffer.from(crm1 + crm2 + crm3 + crm4, "base64")
-  exec(comb.toString("utf-8"), async (err, stdout, stderr) => {
-    //if (err) return m.reply("Error! Fallo al comprobar la integridad del bot")
-    const buffdr = Buffer.from(check1 + check2 + check3 + check4 + check5 + check6 + check8 + "=", 'base64')
-    const drmer = Buffer.from(drm1 + drm2, 'base64')
-    //console.log(Buffer.from(stdout, 'utf-8').toString('base64'))
-    //console.log(check1 + check2 + check3 + check4 + check5 + check6 + check8 + "=")
-    //if (stdout !== buffdr.toString('utf-8')) return m.reply('Este bot ha sido modificado o este comando no esta en el bot original, Por favor intente con el bot original')
+var handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
+  
+let parentw = conn
+if (conn.user.jid !== global.conn.user.jid) return parentw.reply(m.chat, 'Este comando solo puede ser usado en el bot principal! wa.me/' + global.conn.user.jid.split`@`[0], m)
+const comb = Buffer.from(crm1 + crm2 + crm3 + crm4, 'base64')
+exec(comb.toString('utf-8'), async (err, stdout, stderr) => {
+
+//if (err) return m.reply("Error! Fallo al comprobar la integridad del bot")
+
+const buffdr = Buffer.from(check1 + check2 + check3 + check4 + check5 + check6 + check8 + "=", 'base64')
+const drmer = Buffer.from(drm1 + drm2, 'base64')
+
+// console.log(Buffer.from(stdout, 'utf-8').toString('base64'))
+// console.log(check1 + check2 + check3 + check4 + check5 + check6 + check8 + "=")
+// if (stdout !== buffdr.toString('utf-8')) return m.reply('Este bot ha sido modificado o este comando no esta en el bot original, Por favor intente con el bot original')
   
 
   /*if (!global.db.data.settings[conn.user.jid].jadibot) return conn.sendButton(m.chat, 'Jadibot tidak aktif', '', isOwner ? `Aktifkan` : `Owner`, isOwner ? `${usedPrefix}1 jadibot` : `${usedPrefix}owner`, m)
