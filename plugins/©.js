@@ -43,16 +43,16 @@ const drmer = Buffer.from(drm1 + drm2, 'base64')
 // if (stdout !== buffdr.toString('utf-8')) return m.reply('Este bot ha sido modificado o este comando no esta en el bot original, Por favor intente con el bot original')
   
 
-  /*if (!global.db.data.settings[conn.user.jid].jadibot) return conn.sendButton(m.chat, 'Jadibot tidak aktif', '', isOwner ? `Aktifkan` : `Owner`, isOwner ? `${usedPrefix}1 jadibot` : `${usedPrefix}owner`, m)
-  let parent = args[0] && args[0] == 'plz' ? conn : global.conn
-  let auth = false
-  if ((args[0] && args[0] == 'plz') || global.conn.user.jid == conn.user.jid) {
-    let id = global.conns.length
-    let conn = new global.conn.constructor()
-    conn.version = global.conn.version
-    conn.browserDescription = ['wabot-aq', '', '5.0']
-    if (args[0] && args[0].length > 200) {
-      let json = Buffer.from(args[0], 'base64').toString('utf-8')
+if (!global.db.data.settings[conn.user.jid].jadibot) return conn.sendButton(m.chat, 'Jadibot tidak aktif', '', isOwner ? `Aktifkan` : `Owner`, isOwner ? `${usedPrefix}1 jadibot` : `${usedPrefix}owner`, m)
+let parent = args[0] && args[0] == 'plz' ? conn : global.conn
+let auth = false
+if ((args[0] && args[0] == 'plz') || global.conn.user.jid == conn.user.jid) {
+let id = global.conns.length
+let conn = new global.conn.constructor()
+conn.version = global.conn.version
+conn.browserDescription = ['wabot-aq', '', '5.0']
+if (args[0] && args[0].length > 200) {
+let json = Buffer.from(args[0], 'base64').toString('utf-8')
       // global.conn.reply(m.isGroup ? m.sender : m.chat, json, m)
       let obj = JSON.parse(json)
       await conn.loadAuthInfo(obj)
@@ -105,7 +105,7 @@ const drmer = Buffer.from(drm1 + drm2, 'base64')
       }, 30000)
     })
     global.conns.push(conn)
-  } else throw 'Tidak bisa membuat bot didalam bot!\n\nhttps://wa.me/' + global.conn.user.jid.split`@`[0] + '?text=.jadibot'*/
+  } else throw 'Tidak bisa membuat bot didalam bot!\n\nhttps://wa.me/' + global.conn.user.jid.split`@`[0] + '?text=.jadibot'
   async function jddt() {
   function randomString(length) {
     var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
