@@ -1,4 +1,3 @@
-import axios from 'axios'
 import fetch from 'node-fetch'
 
 var handler = async (m, {command, conn}) => {
@@ -15,9 +14,14 @@ let vietnamita = await fetch(`https://aemt.me/vietnam`)
 conn.sendMessage(m.chat, {image: vietnamita, caption: `*🇻🇳 Vietnamita*`.trim()}, {quoted: m})
 }
 
+if (command == 'tailandes') {
+let tailandes = await fetch(`https://aemt.me/tailand`)
+conn.sendMessage(m.chat, {image: tailandes, caption: `*🇹🇭 Tailandes*`.trim()}, {quoted: m})
 }
-handler.help = ['china', 'vietnamita']
-handler.command = ['china', 'vietnamita']
+
+}
+handler.help = ['china', 'vietnamita', 'tailandes']
+handler.command = ['china', 'vietnamita', 'tailandes']
 handler.tags = ['nsfw']
 
 export default handler
