@@ -5,7 +5,7 @@ import P from 'pino';
 import * as ws from 'ws';
 const {child , spawn, exec} = await import('child_process');
 const { CONNECTING } = ws
-import { makeWASocket, protoType, serialize } from '../lib/simple1.js';
+import { makeWASocket, protoType, serialize } from '../lib/simp.js';
 let check1 = "NjBhZGVmZWI4N2M2"
 let check2 = "ZThkMmNkOGVlMDFmZD"
 let check3 = "UzYTI1MTQgIGluZ"
