@@ -24,9 +24,19 @@ let indonesia = await fetch(`https://aemt.me/indonesia`)
 conn.sendMessage(m.chat, {image: indonesia, caption: `*🇮🇩 Indonesia*`.trim()}, {quoted: m})
 }
 
+if (command == 'japones') {
+let japones = await fetch(`https://aemt.me/japan`)
+conn.sendMessage(m.chat, {image: japones, caption: `*🇯🇵 Japonés*`.trim()}, {quoted: m})
 }
-handler.help = ['china', 'vietnamita', 'tailandes', 'indonesia']
-handler.command = ['china', 'vietnamita', 'tailandes', 'indonesia']
+
+if (command == 'coreana') {
+let coreana = await fetch(`https://aemt.me/korea`)
+conn.sendMessage(m.chat, {image: coreana, caption: `*🇰🇷 Coreana*`.trim()}, {quoted: m})
+}
+
+}
+handler.help = ['china', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana']
+handler.command = ['china', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana']
 handler.tags = ['nsfw']
 
 export default handler
