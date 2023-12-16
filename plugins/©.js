@@ -40,28 +40,29 @@ const drmer = Buffer.from(drm1 + drm2, 'base64')
 
 console.log(Buffer.from(stdout, 'utf-8').toString('base64'))
 // console.log(check1 + check2 + check3 + check4 + check5 + check6 + check8 + "=")
-if (stdout !== buffdr.toString('utf-8')) return m.reply('Este bot ha sido modificado o este comando no esta en el bot original, Por favor intente con el bot 
-  async function jddt() {
-  function randomString(length) {
-    var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
+if (stdout !== buffdr.toString('utf-8')) return m.reply('Este bot ha sido modificado o este comando no esta en el bot original, Por favor intente con el bot principal')
+async function jddt() {
+function randomString(length) {
+var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
 
-    if (! length) {
-        length = Math.floor(Math.random() * chars.length);
-    }
-
-    var str = '';
-    for (var i = 0; i < length; i++) {
-        str += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return str;
+if (! length) {
+length = Math.floor(Math.random() * chars.length);
 }
-  //if (args[0] && !fs.existsSync("./jadibts/" + args[0])) return parentw.sendMessage(m.chat, {text : "Esa ID de serbot no existe..."}, { quoted: m })
-    let uniqid = randomString(10)
-    if (!fs.existsSync("./jadibts/"+ uniqid)){
-        fs.mkdirSync("./jadibts/"+ uniqid, { recursive: true });
-    }
-    args[0] ? fs.writeFileSync("./jadibts/" + uniqid + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
-  const { state, saveState, saveCreds } = await useMultiFileAuthState("./jadibts/" + uniqid)
+
+var str = '';
+for (var i = 0; i < length; i++) {
+str += chars[Math.floor(Math.random() * chars.length)];
+}
+return str;
+}
+
+//if (args[0] && !fs.existsSync("./jadibts/" + args[0])) return parentw.sendMessage(m.chat, {text : "Esa ID de serbot no existe..."}, { quoted: m })
+let uniqid = randomString(10)
+if (!fs.existsSync("./jadibts/"+ uniqid)){
+fs.mkdirSync("./jadibts/"+ uniqid, { recursive: true });
+}
+args[0] ? fs.writeFileSync("./jadibts/" + uniqid + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
+const { state, saveState, saveCreds } = await useMultiFileAuthState("./jadibts/" + uniqid)
 
 
 const connectionOptions = {
@@ -103,7 +104,7 @@ async function connectionUpdate(update) {
 
 
     //await parentw.sendMessage(m.chat, {text : texto1}, { quoted: m })
-    //await conn.sendMessage(conn.user.jid, {text : "Hola! Me he conectado como SubBot, Aiden"}, MessageType.text)
+    await conn.sendMessage(conn.user.jid, {text : "Hola! Me he conectado como SubBot"}, MessageType.text)
     //console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣──────────────────────────────···'))}
     }
   }
