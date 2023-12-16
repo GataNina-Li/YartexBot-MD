@@ -14,11 +14,11 @@ let res = await gpt.ChatGpt(text, syms)
 await m.reply(res.text)
 } catch {
 try {   
-let ia2 = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`) //fetch(`https://api.ibeng.tech/api/info/openai?text=${text}&apikey=tamvan`)
+let ia2 = await fetch(`https://aemt.me/openai?text=${text}`) //fetch(`https://api.ibeng.tech/api/info/openai?text=${text}&apikey=tamvan`)
 let resu2 = await ia2.json()
-m.reply(resu2.response.trim())    
-} catch {        
-try {    
+m.reply(resu2.result)    
+} catch {       
+try {
 let tioress = await fetch(`https://api.lolhuman.xyz/api/openai-turbo?apikey=${lolkeysapi}&text=${text}`)
 let hasill = await tioress.json()
 m.reply(`${hasill.result}`.trim())   
