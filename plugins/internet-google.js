@@ -33,7 +33,7 @@ export default handler
 
 */
 
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 import googleIt from 'google-it'
 let handler = async (m, { conn, command, args }) => {
   let full = /f$/i.test(command)
@@ -55,5 +55,31 @@ handler.help = ['google', 'googlef'].map(v => v + ' <pencarian>')
 handler.tags = ['internet']
 handler.command = /^googlef?$/i
 handler.fail = null
+
+export default handler*/
+
+import { googleIt } from '@bochilteam/scraper'
+let handler = async (m, { conn, command, args }) => {
+    const fetch = (await import('node-fetch')).default
+    let full = /f$/i.test(command)
+    let text = args.join` `
+    if (!text) return conn.reply(m.chat, 'Tidak ada teks untuk di cari', m)
+    let url = 'https://google.com/search?q=' + encodeURIComponent(text)
+    let search = await googleIt(text)
+    let msg = search.articles.map(({
+        // header,
+        title,
+        url,
+        description
+    }) => {
+        return `*${title}*\n_${url}_\n_${description}_`
+    }).join('\n\n')
+    m.reply(msg)
+}
+
+handler.help = ['google'].map(v => v + ' <search>')
+handler.tags = ['internet']
+handler.command = /^google?$/i
+
 
 export default handler
