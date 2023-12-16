@@ -15,7 +15,7 @@ conn.sendMessage(m.chat, {image: vietnamita, caption: `*🇻🇳 Vietnamita*`.tr
 }
 
 if (command == 'tailandes') {
-let tailandes = await fetch(`https://aemt.me/tailand`)
+let tailandes = await fetch(`https://aemt.me/thailand`)
 conn.sendMessage(m.chat, {image: tailandes, caption: `*🇹🇭 Tailandes*`.trim()}, {quoted: m})
 }
 
