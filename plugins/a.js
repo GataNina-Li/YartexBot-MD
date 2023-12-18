@@ -17,8 +17,6 @@ let res = await api.json()
 
 await m.reply(res.result)}
 
-return true
-
 }
 export default handler
 
