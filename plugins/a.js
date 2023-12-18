@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 const handler = (m, { text }) => m
 
-handler.before = async (m) => {
+handler.before = async (m, { text }) => {
   let Prefijo = false;
   const prefixRegex = global.prefix;
   if (prefixRegex.test(m.text)) Prefijo = true
