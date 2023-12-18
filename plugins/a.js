@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 var handler = (m, { text }) => m
 handler.before = async (m, { text }) => {
 
-let bot = global.db.data.settings[mconn.conn.user.jid]
+let bot = global.db.data.settings[conn.conn.user.jid]
 let Prefijo = false
 const prefixRegex = global.prefix
 if (prefixRegex.test(m.text)) Prefijo = true
