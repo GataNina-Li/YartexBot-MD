@@ -8,6 +8,8 @@ const prefixRegex = global.prefix
 if (prefixRegex.test(m.text)) Prefijo = true
 
 if (bot.bard && !m.isGroup && !Prefijo && !m.fromMe && m.text !== '') {
+if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return
+
 let api = await fetch(`https://aemt.me/bard?text=${text}`)
 let res = await api.json()
 
