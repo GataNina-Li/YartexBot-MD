@@ -80,10 +80,6 @@ if (!('autolevelup' in user))
 user.autolevelup = true
 if (!('simi' in user))
 user.simi = false
-if (!isNumber(user.ticket))
-user.ticket = 5
-if (!isNumber(user.goldenticket))
-user.goldenticket = 0
 } else
 
 global.db.data.users[m.sender] = {
@@ -101,9 +97,7 @@ warn: 0,
 level: 0,
 role: 'Novato',
 autolevelup: true,
-simi: false,
-ticket: 5,
-goldenticket: 0,
+simi: false
 }
 
 let chat = global.db.data.chats[m.chat]
@@ -147,6 +141,8 @@ if (!('antibule' in chat))
 chat.antibule = false 
 if (!isNumber(chat.expired))
 chat.expired = 0
+if (!isNumber(chat.bard))
+chat.bard = false
 } else
             
 global.db.data.chats[m.chat] = {
@@ -169,7 +165,8 @@ modoadmin: false,
 nsfw: true,
 antiSticker: false,
 antibule: false,
-expired: 0
+expired: 0,
+bard: false
 }
 
 let settings = global.db.data.settings[this.user.jid]
