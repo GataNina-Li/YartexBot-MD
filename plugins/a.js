@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 
 var handler = (m, { text }) => m
 handler.before = async (m, { text }) => {
@@ -17,5 +17,5 @@ let res = await api.json()
 await m.reply(res.result)}
 
 }
-export default handler
+export default handler*/
 
