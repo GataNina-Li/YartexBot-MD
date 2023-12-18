@@ -53,7 +53,7 @@ m.react('🍚')
 }
 handler.command = /^(fanart|husbu|kanna|megumin|neko|shota|waifu|elaina)$/i
 handler.tags = ['anime']
-handler.help = ['fanart', 'husbu', 'kanna', 'megumin', 'neko', 'shota', 'waifu', 'elain']
+handler.help = ['fanart', 'husbu', 'kanna', 'megumin', 'neko', 'shota', 'waifu', 'elaina']
 
 handler.limit = true
 
