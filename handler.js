@@ -80,6 +80,8 @@ if (!('autolevelup' in user))
 user.autolevelup = true
 if (!('simi' in user))
 user.simi = false
+if (!isNumber(user.ticket))
+user.ticket = 5
 } else
 
 global.db.data.users[m.sender] = {
@@ -98,6 +100,7 @@ level: 0,
 role: 'Novato',
 autolevelup: true,
 simi: false,
+ticket: 5,
 }
 
 let chat = global.db.data.chats[m.chat]
