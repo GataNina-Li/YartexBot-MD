@@ -68,7 +68,10 @@ throw false
 chat.delete = isEnable
 break
 case 'bard':
+if (m.isChat) {
 isUser = true
+throw false
+}
 user.bard = isEnable
 break
 case 'antibule':
