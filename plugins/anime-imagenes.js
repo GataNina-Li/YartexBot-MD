@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 let handler = async (m, { conn, command }) => {
 
-let url = 'https://api.lolhuman.xyz/api/random/art?apikey=${lolkeysapi}'
+let url = await fetch(`https://api.lolhuman.xyz/api/random/art?apikey=${lolkeysapi}`)
 conn.sendMessage(m.chat, {image: url, caption: `*🧧 Fanart*`.trim()}, {quoted: m})
 
 }
