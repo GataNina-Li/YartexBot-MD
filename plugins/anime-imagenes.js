@@ -7,8 +7,13 @@ let url = await fetch(`https://api.lolhuman.xyz/api/random/art?apikey=${lolkeysa
 conn.sendMessage(m.chat, {image: url, caption: `*🧧 Fanart*`.trim()}, {quoted: m})
 }
 
+if (command == 'husbu') {
+let url2 = await fetch(`https://api.lolhuman.xyz/api/random/husbu?apikey=${lolkeysapi}`)
+conn.sendMessage(m.chat, {image: url2, caption: `*Bojone Gepenk 🐦*`.trim()}, {quoted: m})
 }
-handler.command = /^(fanart)$/i
+
+}
+handler.command = /^(fanart')$/i
 handler.tags = ['anime']
 handler.help = ['fanart']
 
