@@ -82,6 +82,8 @@ if (!('simi' in user))
 user.simi = false
 if (!isNumber(user.ticket))
 user.ticket = 5
+if (!isNumber(user.goldenticket))
+user.goldenticket = 0
 } else
 
 global.db.data.users[m.sender] = {
@@ -101,6 +103,7 @@ role: 'Novato',
 autolevelup: true,
 simi: false,
 ticket: 5,
+goldenticket: 0,
 }
 
 let chat = global.db.data.chats[m.chat]
