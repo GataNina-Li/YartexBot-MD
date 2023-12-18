@@ -67,6 +67,10 @@ throw false
 }}
 chat.delete = isEnable
 break
+case 'bard':
+isUser = true
+user.bard = isEnable
+break
 case 'antibule':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
