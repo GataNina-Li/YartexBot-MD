@@ -20,32 +20,18 @@ font: 'block',
 align: 'center',
 colors: ['magenta', 'cyan']
 })
-say(`${name} By @Azami`, {
-font: 'console',
-align: 'center',
-colors: ['blueBright']
-})
-console.log(` 
- Curiosity Bot V2
- Author: Azami
- WA    : +994 
- Base  : BochilTeam
- `)
-
-var isRunning = false
-/**
- * Start a js file
- * @param {String} file `path/to/file`
- */
-function start(file) {
-if (isRunning) return
-isRunning = true
-let args = [join(__dirname, file), ...process.argv.slice(2)]
-say([process.argv[0], ...args].join(' '), {
+say(`Bot: ${name}\nVersión: ${vs}\nCreador: ${dev}\nNumero: ${devnum}\nEmail: ${email}`, {
 font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
 })
+
+var isRunning = false
+
+function start(file) {
+if (isRunning) return
+isRunning = true
+let args = [join(__dirname, file), ...process.argv.slice(2)]
 setupMaster({
 exec: args[0],
 args: args.slice(1),
