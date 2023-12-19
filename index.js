@@ -12,8 +12,6 @@ import yargs from 'yargs'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname) // Bring in the ability to create the 'require' method
 const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
-const { dev, devnum, vs } = require(join(__dirname, './config.js'))
-const { email } = require(join(__dirname, './store.js'))
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
