@@ -14,8 +14,8 @@ global.suittag = ['5214531287294']
 global.mods = []
 global.prems = []
 
-global.packname = 'CuriosityBot-MD'
-global.author = ''
+global.packname = '© CuriosityBot'
+global.author = 'Created By Azami'
 global.wm = '© CuriosityBot-MD'
 global.wm2 = '𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍'
 global.azami = 'Azami'
