@@ -22,7 +22,6 @@ colors: ['magenta', 'cyan']
 })
 say(`Bot: ${name}\nVersión: 1.0.5\nCreador: Azami ~ Zam\nNumero: +52 1 729 488 8993\nEmail: thecuriositybot@gmail.com`, {
 font: 'console',
-align: 'center',
 gradient: ['blue', 'magenta']
 })
 
