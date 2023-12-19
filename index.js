@@ -20,18 +20,7 @@ font: 'block',
 align: 'center',
 colors: ['magenta', 'cyan']
 })
-say(`${name} By @Azami`, {
-font: 'console',
-align: 'center',
-colors: ['blueBright']
-})
-/*console.log(` 
- Curiosity Bot V2
- Author: Azami
- WA    : +994 
- Base  : BochilTeam
- `)*/
-say(`Bot: ${name}\nVersión: ${vs}\nCreador: ${dev}\nNumero: ${devnum}\nEmail: ${email}`, {
+say(`Bot: ${name}\nVersión: 1.0.5\nCreador: Azami ~ Zam\nNumero: +52 1 729 488 8993\nEmail: thecuriositybot@gmail.com`, {
 font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
