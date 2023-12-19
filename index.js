@@ -25,12 +25,17 @@ font: 'console',
 align: 'center',
 colors: ['blueBright']
 })
-console.log(` 
+/*console.log(` 
  Curiosity Bot V2
  Author: Azami
  WA    : +994 
  Base  : BochilTeam
- `)
+ `)*/
+say(`Bot: ${name}\nVersión: ${vs}\nCreador: ${dev}\nNumero: ${devnum}\nEmail: ${email}`, {
+font: 'console',
+align: 'center',
+gradient: ['blue', 'magenta']
+})
 
 var isRunning = false
 /**
