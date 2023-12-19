@@ -32,10 +32,7 @@ function start(file) {
 if (isRunning) return
 isRunning = true
 let args = [join(__dirname, file), ...process.argv.slice(2)]
-setupMaster({
-exec: args[0],
-args: args.slice(1),
-})
+
 let p = fork()
 p.on('message', data => {
 switch (data) {
