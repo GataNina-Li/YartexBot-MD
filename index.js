@@ -11,7 +11,7 @@ import yargs from 'yargs'
 // https://stackoverflow.com/a/50052194
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname) // Bring in the ability to create the 'require' method
-const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
+//const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
@@ -20,7 +20,7 @@ font: 'block',
 align: 'center',
 colors: ['magenta', 'cyan']
 })
-say(`Bot: ${name}\nVersion: ${vs}\nCreador: ${dev}\nNumero: ${devnum}\nEmail: ${email}`, {
+say(`Bot: ${wm}\nVersion: ${vs}\nCreador: ${dev}\nNumero: ${devnum}\nEmail: ${email}`, {
 font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
