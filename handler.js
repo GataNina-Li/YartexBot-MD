@@ -560,7 +560,7 @@ this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 console.error(e)
 }}
 
-let ft = 'https://telegra.ph/file/65f9c1850cace093c857f.jpg'
+let fotos = sityImg.getRandom()
 
 global.dfail = (type, m, conn) => {
 
@@ -576,7 +576,7 @@ botAdmin: '*¡Para realizar la función debo ser admin!*',
 unreg: '*¡Para continuar con esta función debera registrarse!*\n\n*!reg nombre.edad*\n\n*Uso correcto* : *!reg Azami.21*',
 restrict: '*¡Esta característica esta desactivada!*'
 }[type]
-if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: saludo + nombre, body: dev, sourceUrl: global.channel, thumbnailUrl: ft }}})
+if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: saludo + nombre, body: dev, sourceUrl: global.channel, thumbnail: imagen1 }}})
 
 }
 const file = global.__filename(import.meta.url, true);
