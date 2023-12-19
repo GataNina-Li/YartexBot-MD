@@ -560,8 +560,6 @@ this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 console.error(e)
 }}
 
-var username = conn.getName(m.sender)
-
 global.dfail = (type, m, conn) => {
 
 let msg = {
@@ -576,7 +574,7 @@ botAdmin: '*¡Para realizar la función debo ser admin!*',
 unreg: '*¡Para continuar con esta función debera registrarse!*\n\n*!reg nombre.edad*\n\n*Uso correcto* : *!reg Azami.21*',
 restrict: '*¡Esta característica esta desactivada!*'
 }[type]
-if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: saludo + username, body: dev, sourceUrl: global.channel, thumbnail: imagen1 }}})
+if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: saludo + nombre, body: dev, sourceUrl: global.channel, thumbnail: imagen1 }}})
 
 }
 const file = global.__filename(import.meta.url, true);
