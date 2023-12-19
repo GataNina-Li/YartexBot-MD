@@ -7,10 +7,6 @@ import { unwatchFile, watchFile } from 'fs'
 import chalk from 'chalk'
 import fs from 'fs'
 import moment from 'moment-timezone'
-
-/**
- * @type {import('@whiskeysockets/baileys')}
- */
  
 const { proto } = (await import('@whiskeysockets/baileys')).default
 const isNumber = x => typeof x === 'number' && !isNaN(x)
@@ -97,7 +93,7 @@ warn: 0,
 level: 0,
 role: 'Novato',
 autolevelup: true,
-simi: false
+simi: false,
 }
 
 let chat = global.db.data.chats[m.chat]
@@ -141,8 +137,6 @@ if (!('antibule' in chat))
 chat.antibule = false 
 if (!isNumber(chat.expired))
 chat.expired = 0
-if (!isNumber(chat.bard))
-chat.bard = false
 } else
             
 global.db.data.chats[m.chat] = {
@@ -165,8 +159,7 @@ modoadmin: false,
 nsfw: true,
 antiSticker: false,
 antibule: false,
-expired: 0,
-bard: false
+expired: 0
 }
 
 let settings = global.db.data.settings[this.user.jid]
@@ -363,11 +356,11 @@ m.reply('Chirrido -_-')
 else
 m.exp += xp
 if (!isPrems && plugin.limit && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
-this.reply(m.chat, `*⚠️ NO TIENE DIAMANTES*`, m)
+this.reply(m.chat, `Tus diamantes de hoy se han agotado ⚠️\n\nPor favor compre diamantes escribiendo ${usedPrefix}buy o ${usedPrefix}buyall`, m)
 continue
 }
 if (plugin.level > _user.level) {
-this.reply(m.chat, `*⚠️ REQUIRE EL NIVEL ${plugin.level}*`, m)
+this.reply(m.chat, `Requiere el nivel *${plugin.level}*`, m)
 continue
 }
 let extra = {match, usedPrefix, noPrefix, _args, args, command, text, conn: this, participants, groupMetadata, user, bot, isROwner, isOwner, isRAdmin, isAdmin, isBotAdmin, isPrems, chatUpdate, __dirname: ___dirname, __filename }
@@ -404,7 +397,7 @@ console.error(e)
 }
 }
 if (m.diamond)
-m.reply(`*⚠️ UTILIZÓ ${+m.diamond} DIAMANTE*`)
+m.reply(`「 💎 」Se a utilizado un ${+m.diamond} diamante*`)
 }
 break
 }
@@ -567,21 +560,23 @@ this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 console.error(e)
 }}
 
+var username = conn.getName(m.sender)
+
 global.dfail = (type, m, conn) => {
 
 let msg = {
-rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
-owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
-mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MIS MODERADORES*',
-premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
-group: '⚠️ *LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS*',
-private: '⚠️ *ESTA FUNCION SOLO PUEDE SER USADA EN EL CHAT PRIVADO*',
-admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
-botAdmin: '⚠️️ *PARA USAR ESTA FUNCIÓN DEBO SER ADMIN*',
-unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_❕ Ejemplo_* : */reg Azami.25*',
-restrict: '⚠️ *ESTA CARACTERÍSTICA ESTA DESACTIVADA*'
+rowner: '*¡Este comando es exclusivo para mi desarrollador!*',
+owner: '*¡Esta función solo puede ser usada por mis propietarios!*',
+mods: '*¡Solo mis moderadores pueden hacer uso de este comando!*',
+premium: '*¡Solo usuarios premium pueden usar esta función!*',
+group: '*¡Este comando solo se puede usar en grupos!*',
+private: '*¡Esta función solo se puede utilizar en chat privado!*',
+admin: '*¡Este comando solo puede ser utilizado por admins!*',
+botAdmin: '*¡Para realizar la función debo ser admin!*',
+unreg: '*¡Para continuar con esta función debera registrarse!*\n\n*!reg nombre.edad*\n\n*Uso correcto* : *!reg Azami.21*',
+restrict: '*¡Esta característica esta desactivada!*'
 }[type]
-if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.channel, thumbnail: imagen1 }}})
+if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: saludo + username, body: dev, sourceUrl: global.channel, thumbnail: imagen1 }}})
 
 }
 const file = global.__filename(import.meta.url, true);
