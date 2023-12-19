@@ -166,11 +166,11 @@ let addNumber
 if (!!phoneNumber) {
 addNumber = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +593090909090")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +593xxxx")))
 process.exit(0)
 }} else {
 while (true) {
-addNumber = await question(chalk.bgBlack(chalk.bold.greenBright('Escriba su número de WhatsApp.\nEjemplo: +593090909090\n--> ')))
+addNumber = await question(chalk.bgBlack(chalk.bold.yellowBright('Escriba su número de WhatsApp.\nEjemplo: +593xxx\n')))
 addNumber = addNumber.replace(/[^0-9]/g, '')
 
 if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
@@ -338,12 +338,12 @@ conn.ev.off('creds.update', conn.credsUpdate)
 
 conn.welcome = '*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time\n\n*⚠️  Recuerda leer la descripción*\n@readMore\n@desc'
 conn.bye = '*• Gracias por haber sido parte del grupo*\n*━━━━━━━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time'
-conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS*'
-conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS*'
-conn.sDesc = '⚠️ *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
-conn.sSubject = '⚠️ *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
-conn.sIcon = '⚠️ *SE HA CAMBIADO LA FOTO DEL GRUPO*'
-conn.sRevoke = '⚠️ *SE HA ACTUALIZADO EL ENLACE DEL GRUPO!!*\n*NUEVO ENLACE:* @revoke'
+conn.spromote = '*@user* ¡Se suma al grupo de admins¡'
+conn.sdemote = '*@user* ¡Abandona el grupo!'
+conn.sDesc = '¡Se ha modificado la descripción!\n\n*Nueva descripción:* @desc'
+conn.sSubject = '¡Se ha modificado el título del grupo!'
+conn.sIcon = '¡Se ha cambiado la foto del grupo!'
+conn.sRevoke = '¡Se ha actualizado el enlace del grupo!*\n*Nuevo enlace:* @revoke'
         
 
 conn.handler = handler.handler.bind(global.conn)
