@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-if (!text) throw conn.reply(m.chat, `*⚠️ INGRESE UN TEXTO*`, fake, )
+if (!text) throw conn.reply(m.chat, `*⚠️ INGRESE UN TEXTO*`, m, fake, )
 
 try {
 
