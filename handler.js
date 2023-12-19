@@ -397,7 +397,7 @@ console.error(e)
 }
 }
 if (m.diamond)
-m.reply(`「 💎 」Se a utilizado un ${+m.diamond} diamante*`)
+m.reply(`「 💎 」Se a utilizado un *${+m.diamond}* diamante`)
 }
 break
 }
@@ -576,7 +576,7 @@ botAdmin: '*¡Para realizar la función debo ser admin!*',
 unreg: '*¡Para continuar con esta función debera registrarse!*\n\n!reg nombre.edad\n\n*Uso correcto* : !reg Azami.21',
 restrict: '*¡Esta característica esta desactivada!*'
 }[type]
-if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: saludo +  nombre, body: dev, sourceUrl: global.channel, thumbnailUrl: fotos }}})
+if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '🎄'  + saludo +  nombre, body: dev, sourceUrl: global.channel, thumbnailUrl: fotos }}})
 
 }
 const file = global.__filename(import.meta.url, true);
