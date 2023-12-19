@@ -2,12 +2,11 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-if (!text) throw `*⚠️ INGRESE UN TEXTO* `
+if (!text) throw conn.reply(m.chat, `*⚠️ INGRESE UN TEXTO*`, fake, )
 
 try {
 
-//await m.reply('*🚀 C A R G A N D O*')
-conn.sendPresenceUpdate('composing', m.chat)
+await m.reply('*🚀 C A R G A N D O*')
 var apii = await fetch(`https://aemt.me/bard?text=${text}`)
 var res = await apii.json()
 await m.reply(res.result)

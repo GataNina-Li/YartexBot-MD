@@ -29,10 +29,13 @@ console.log(`Error : ${e}`)
 	
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
 let pp = await this.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/1861aab98389b13db8588.jpg')
-	
+let fotos = sityImg.getRandom()
+
 /* 
 Mensajes Fakes
 */
+
+global.fake = { contextInfo:{ externalAdReply: {title: '🎄'  + saludo +  nombre, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}})
 
 global.n2 = { contextInfo: { externalAdReply: { mediaUrl: nn, mediaType: 'VIDEO', description: 'CuriosityBot-MD', title: packname, body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
   
