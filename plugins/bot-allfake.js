@@ -35,11 +35,11 @@ let fotos = sityImg.getRandom()
 Mensajes Fakes
 */
 
-global.fake = { contextInfo:{ externalAdReply: {title: `${saludo}`, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}
+//global.fake = { contextInfo:{ externalAdReply: {title: `${saludo}`, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}
 
-global.n2 = { contextInfo: { externalAdReply: { mediaUrl: nn, mediaType: 'VIDEO', description: 'CuriosityBot-MD', title: packname, body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
+//global.fake = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: dev, title: , body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
   
-global.gitHub = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: 'GitHub', title: 'GitHub', body: 'ˢᶦ ᵗᵉ ᵃᵍʳᵃᵈᵃ ᵉˡ ᴮᵒᵗ ᵃᵖᵒʸᵃᵐᵉ ᶜᵒⁿ ᵘⁿᵃ 🌟', thumbnailUrl: pp, sourceUrl: md }}}
+global.fake = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: saludo, title: saludo, body: dev, thumbnailUrl: pp, sourceUrl: md }}}
 
 global.youtube = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: 'ˢᵘˢᶜʳᶦᵇᵉᵗᵉ ᵃ ⁿᵘᵉˢᵗʳᵒ ᶜᵃⁿᵃˡ ᵈᵉˡ ʸᵒᵘᵀᵘᵇᵉ : ' + yt, title: 'YouTube', body: 'CuriosityBot-MD', thumbnailUrl: pp, sourceUrl: yt }}}
 
