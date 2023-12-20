@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-if (!text) return conn.reply(m.chat, `Ingrese una petición`, m, { contextInfo:{ externalAdReply: {title: saludo + nombre, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}})
+if (!text) return conn.reply(m.chat, `Ingrese una petición`, m, fake, )
 
 try {
 
