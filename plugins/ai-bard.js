@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-if (!text) throw `Ingrese una petición`, { contextInfo:{ externalAdReply: {title: saludo + nombre, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}, { quoted: m }
+if (!text) throw `Ingrese una petición`
 
 try {
 
