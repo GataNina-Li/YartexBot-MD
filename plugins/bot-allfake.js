@@ -36,7 +36,7 @@ let fotos = sityImg.getRandom()
 Mensajes Fakes
 */
 
-global.fake = { contextInfo:{ externalAdReply: {title: '🎄'  + saludo, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}
+global.fake = { contextInfo:{ externalAdReply: {title: '🎄'  + saludo, body: '🚩' + dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}
 
 global.n2 = { contextInfo: { externalAdReply: { mediaUrl: nn, mediaType: 'VIDEO', description: 'CuriosityBot-MD', title: packname, body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
   
