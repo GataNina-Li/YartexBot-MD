@@ -16,7 +16,7 @@ if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply('*⚠️ 
 if (/webp|image|video/g.test(mime)) {
 let img = await q.download?.()
 let out
-stiker = await sticker(img, false, global.packname, global.autor)
+stiker = await sticker(img, false, global.packname, global.author)
 await conn.reply(m.chat, `_Calma crack estoy haciendo tu sticker 👏_\n\n_*Recuerda los stickersgif son de 6 segundos*_\n\n_*by CuriosityBot*_`, m)
   
 if (!stiker) {
@@ -28,7 +28,7 @@ stiker = await sticker(false, out, global.packname, global.author)
   
 if (!stiker) errorMessage = 'ERROR'
 }} else if (args[0]) {
-if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.autor)
+if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
 else return m.reply('*⚠️ EL ENLACE / URL / LINK NO ES VÁLIDO*')}
 
 if (stiker) {
