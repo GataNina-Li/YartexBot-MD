@@ -36,7 +36,7 @@ global.enlaces = linkSity.getRandom()
 Mensajes Fakes
 */
 
-//global.fake = { contextInfo:{ externalAdReply: {title: `${saludo}`, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}
+global.fake = { contextInfo: { externalAdReply: {title: saludo + nombre, body: dev, sourceUrl: ig, thumbnailUrl: fotos }}}
 
 //global.fake = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: dev, title: , body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
   
