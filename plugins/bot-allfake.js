@@ -35,7 +35,7 @@ let fotos = sityImg.getRandom()
 Mensajes Fakes
 */
 
-global.fake = { contextInfo:{ externalAdReply: {title: '🎄' + ` ${saludo}`, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}
+global.fake = { contextInfo:{ externalAdReply: {title: `${saludo}`, body: dev, sourceUrl: global.ig, thumbnailUrl: fotos }}}
 
 global.n2 = { contextInfo: { externalAdReply: { mediaUrl: nn, mediaType: 'VIDEO', description: 'CuriosityBot-MD', title: packname, body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
   
@@ -98,7 +98,7 @@ global.twa = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.ne
 global.fakemek = {key: {participant: "0@s.whatsapp.net",remoteJid: "0@s.whatsapp.net"}, message: {groupInviteMessage: {groupJid: "51995386439-1616969743@g.us", inviteCode: "m",groupName: "P", caption: 'CuriosityBot-MD', jpegThumbnail: null}}}
 
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Linda noche'; break; case 1: hour = 'Linda noche'; break; case 2: hour = 'Linda noche'; break; case 3: hour = 'Linda mañana'; break; case 4: hour = 'Linda mañana'; break; case 5: hour = 'Linda mañana'; break; case 6: hour = 'Linda mañana'; break; case 7: hour = 'Linda mañana'; break; case 8: hour = 'Linda mañana'; break; case 9: hour = 'Linda mañana'; break; case 10: hour = 'Buen dia'; break; case 11: hour = 'Buen dia'; break; case 12: hour = 'Buen dia'; break; case 13: hour = 'Buen dia'; break; case 14: hour = 'Bonita tarde'; break; case 15: hour = 'Bonita tarde'; break; case 16: hour = 'Bonita tarde'; break; case 17: hour = 'Bonito anochecer'; break; case 18: hour = 'Linda noche'; break; case 19: hour = 'Linda noche'; break; case 20: hour = 'Linda noche'; break; case 21: hour = 'Linda noche'; break; case 22: hour = 'Linda noche'; break; case 23: hour = 'Linda noche'; break;}
-global.saludo = '🎄' + hour;
+global.saludo = '🎄 ' + hour;
 
 global.d = new Date(new Date + 3600000)
 global.locale = 'es'
