@@ -20,17 +20,17 @@ let chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats
 let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
 
 
-let texto = `*🚀 V E L O C I D A D*
-☯︎ ${latensi.toFixed(4)}
+let texto = `*🚀 Velocidad*
+• ${latensi.toFixed(4)}
 
-*⏰ A C T I V I D A D*
+*⏰ Actividad*
 • ${muptime}
 
-*💌 C H A T S*
+*💌 Chats*
 • ${chats.length} *Chats privados*
 • ${groups.length} *Grupos*
 
-*💻 S E R V I D O R*
+*💻 Servidor*
 • *Ram:* ${format(totalmem() - freemem())} / ${format(totalmem())}`.trim()
 
 conn.sendMessage(m.chat, { text: texto, contextInfo: { externalAdReply: { title: '', body: 'CURIOSITY - BOT - MD', thumbnailUrl: 'https://telegra.ph/file/6cbf9148b572711e9b000.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})

@@ -16,17 +16,17 @@ const mentionsContentM = [m.sender, m.messageStubParameters[0]]
 const links = linkSity.getRandom()
 
 if (chat.detect2 && m.messageStubType == 29) {
-let txt1 = `❕ *NUEVO ADMIN* ❕\n\n`
-txt1 += `⚠️ *• Nombre:* @${m.messageStubParameters[0].split`@`[0]}\n`
-txt1 += `⚠️ *• Le otorgó admin:* @${m.sender.split`@`[0]}`
+let txt1 = `🚩 *Nuevo admin*\n\n`
+txt1 += `Nombre: @${m.messageStubParameters[0].split`@`[0]}\n`
+txt1 += `Le otorgó admin: @${m.sender.split`@`[0]}`
 await delay(3000 * 3)
 await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
 }
 
 if (chat.detect2 && m.messageStubType == 30) {
-let txt2 = `❗ *UN ADMIN MENOS* ❗\n\n`
-txt2 += `⚠️ *• Nombre:* @${m.messageStubParameters[0].split`@`[0]}\n`
-txt2 += `⚠️ *• Le quitó admin:* @${m.sender.split`@`[0]}`
+let txt2 = `🚩 *Un admin menos*\n\n`
+txt2 += `Nombre: @${m.messageStubParameters[0].split`@`[0]}\n`
+txt2 += `Le quitó admin: @${m.sender.split`@`[0]}`
 await delay(3000 * 3)
 await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
 }}
