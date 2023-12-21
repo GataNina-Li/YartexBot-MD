@@ -8,15 +8,15 @@ let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/image/g.test(mime) && !/webp/g.test(mime)) {
 let buffer = await q.download()
 
-await m.reply('*🚀 C A R G A N D O*')
+conn.sendPresenceUpdate('composing', m.chat)
 
 let media = await (uploader)(buffer)
 let json = await (await fetch(`https://aemt.me/bardimg?url=${media}&text=${text}`)).json()
 
 conn.sendMessage(m.chat, { text: json.result }, { quoted: m })
 
-} else throw `*⚠️ RESPONDE A UNA IMAGEN CON UN TEXTO*\n\n❕ EJEMPLO\n${usedPrefix + command} dame información`
-  
+} else return conn.reply(m.chat, `*🎌 Manda una imagen con el comando y el texto a buscar*\n\nEjemplo, !bardimg dame información sobre lo que aparece en la imagen`, m, fake, )
+
 }
 handler.help = ['bardimg']
 handler.tags = ['ai']

@@ -1,22 +1,23 @@
-import fetch from "node-fetch" 
+import fetch from 'node-fetch'
   
 var handler = async (m, { conn, isOwner, usedPrefix, command, args }) => {
- 
-let query = '*⚠️ ESTE COMANDO GENERA IMAGENES APARTIR DE TEXTOS*.\n\n❕ EJEMPLO\n*.fotoai* Universo azul con estrellas verdes'
+
 let text
 if (args.length >= 1) {
-text = args.slice(0).join(" ")
+text = args.slice(0).join(' ')
 } else if (m.quoted && m.quoted.text) {
 text = m.quoted.text
-} else throw query
+} else return conn.reply(m.chat, `*🎌 Este comando genera imagenes apartir de textos*\n\nEjemplo, !dalle Estrella naciente`, m, fake, )
+
 try {
-conn.reply(m.chat, '*🚀 C A R G A N D O*', fkontak, m)
+
+conn.reply(m.chat, '⏰ Espere un momento', m, fake, )
 await Draw(text).then((img) => {
-conn.sendFile(m.chat, img, text, '*🍧 Resultado de* ' + text, m)
+conn.sendFile(m.chat, img, text, '*🍧 Resultado de* ' + text + '\n\n' + cred.toString('utf-8'), m)
 })
 } catch (e) {
-throw eror
-} 
+return conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
+}
 
 }
 handler.help = ['dalle']
@@ -27,12 +28,12 @@ export default handler
   
 async function Draw(propmt) {
 const Blobs = await fetch(
-"https://api-inference.huggingface.co/models/prompthero/openjourney-v2",
+'https://api-inference.huggingface.co/models/prompthero/openjourney-v2',
 {
-method: "POST",
+method: 'POST',
 headers: {
-"content-type": "application/json",
-Authorization: "Bearer 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",
+'content-type': 'application/json',
+Authorization: 'Bearer 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',
 },
 body: JSON.stringify({ inputs: propmt }),
 })
