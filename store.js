@@ -20,9 +20,11 @@ global.rosas = fs.readFileSync('./storage/imagenes/rosas.jpg')
 global.refran = fs.readFileSync('./storage/imagenes/refran.jpg')
 global.linksjpg = fs.readFileSync('./storage/imagenes/Links.jpg')
 
-var img = 'https://telegra.ph/file/139a1dd3560cd4a6bffe9.jpg'; var img1 = 'https://telegra.ph/file/8b89a9bc901b84006d948.jpg'; var img2 = 'https://telegra.ph/file/8375ccca45134047d764f.jpg'; var img3 = 'https://telegra.ph/file/5b92c191893dde27b5311.jpg'
+var img = 'https://telegra.ph/file/139a1dd3560cd4a6bffe9.jpg'; var img1 = 'https://telegra.ph/file/8b89a9bc901b84006d948.jpg'
+//Navideñas
+var img2 = 'https://telegra.ph/file/b9b4821c3f78b7ce6d3aa.jpg'
 
-global.sityImg = [img, img1, img2, img3]
+global.sityImg = [img, img1, img2]
 
 //Enlaces
 global.yt = 'https://www.youtube.com/@Azami_YT'
