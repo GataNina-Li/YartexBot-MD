@@ -26,13 +26,13 @@ let filename = join(__dirname, '../tmp/' + ran)
 let media = await q.download(true)
 exec(`ffmpeg -i ${media} ${set} ${filename}`, async (err, stderr, stdout) => {
 await unlinkSync(media)
-if (err) throw `*⚠️ 404 ERROR ⚠️*`
+if (err) return conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 let buff = await readFileSync(filename)
 conn.sendFile(m.chat, buff, ran, null, m, true, {
 type: 'audioMessage',
 ptt: true
 })})
-} else throw `*⚠️ RESPONDA CON ${usedPrefix + command} Al AUDIO O NOTA DE VOS QUE DESEA MODIFICAR*`
+} else return conn.reply(m.chat, `*🎌 Responda al audio con  ${usedPrefix + command} para modificar*`, m, fake, )
 } catch (e) {
 throw e
 }

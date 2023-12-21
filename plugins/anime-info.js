@@ -2,9 +2,10 @@ import fetch from 'node-fetch'
   
 var handler = async (m, { conn, text }) => {
  
-if (!text) throw `*⚠️ INGRESE EL NOMBRE DE ALGÚN ANIME*`
+if (!text) return conn.reply(m.chat, `*🎌 Ingrese el nombre de algun anime*\n\nEjemplo, !animeinfo miku`, m, fake, )
 let res = await fetch('https://api.jikan.moe/v4/manga?q=' + text)
-if (!res.ok) throw '*⚠️ ERROR*'
+if (!res.ok) return conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
+
 let json = await res.json()
 let { chapters, title_japanese, url, type, score, members, background, status, volumes, synopsis, favorites } = json.data[0]
 let author = json.data[0].authors[0].name
