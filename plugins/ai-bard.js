@@ -2,12 +2,12 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-if (!text) return conn.reply(m.chat, `🎌 *Ingrese una petición*\n\nEjemplo, .bard Conoces CuriosityBot-MD?`, m, fake, )
+if (!text) return conn.reply(m.chat, `🎌 *Ingrese una petición*\n\nEjemplo, !bard Conoces CuriosityBot-MD?`, m, fake, )
 
 try {
 
 conn.sendPresenceUpdate('composing', m.chat)
-var apii = await fetch(`https://aemt.m/bard?text=${text}`)
+var apii = await fetch(`https://aemt.me/bard?text=${text}`)
 var res = await apii.json()
 await m.reply(res.result)
 
