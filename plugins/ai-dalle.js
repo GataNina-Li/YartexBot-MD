@@ -13,7 +13,7 @@ try {
 
 conn.reply(m.chat, '⏰ Espere un momento', m, fake, )
 await Draw(text).then((img) => {
-conn.sendFile(m.chat, img, text, `*🍧 Resultado de* ${text}` + '\n\n' + cred.toString('utf-8'), m)
+conn.sendFile(m.chat, img, text, `*🍧 Resultado de* ${text}\n\n` + cred.toString('utf-8'), m)
 })
 } catch (e) {
 return conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
