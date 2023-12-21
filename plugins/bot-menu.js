@@ -28,8 +28,6 @@ m.react('🏷️')
   
 let menu = `*👋 Hola, ${name}*
 
-*_${saludo}_*
-
 .allmenu
 _(Para ver el menú completo)_`
 
