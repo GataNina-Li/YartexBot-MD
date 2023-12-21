@@ -10,6 +10,7 @@ conn.sendPresenceUpdate('composing', m.chat)
 conn.reply(m.chat, bot, fake, )
 
 return !0
+}
 
 }
 export default handler
