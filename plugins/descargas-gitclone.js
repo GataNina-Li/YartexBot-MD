@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
 var handler = async (m, { args, usedPrefix, command }) => {
 
-if (!args[0]) return conn.reply(m.chat, `🎌 *Enviar comando:*\n!Consulta gitclone\n\nEjemplo, !gitclone ${md}`, m, fake, )
+if (!args[0]) return conn.reply(m.chat, `🎌 *Enviar comando:*\n!gitclone repositorio\n\nEjemplo, !gitclone ${md}`, m, fake, )
 if (!regex.test(args[0])) conn.reply(m.chat, `🚩 *No es un enlace válido*`, m, fake, )
 
 let [_, user, repo] = args[0].match(regex) || []
