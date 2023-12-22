@@ -14,7 +14,7 @@ let { linkdl, size } = json.respon
     
 conn.sendMessage(m.chat, { document: { url: linkdl }, mimetype: 'application/videos.android.package-archive', fileName: `Apk modlatest.apk` }, { quoted: m })
 } catch {
-return conn.reply(m.chat, '🚩 *Ocurrió un falló*', m, fake, )}
+return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
 
 }
 handler.help = ['dlmodlatest']
