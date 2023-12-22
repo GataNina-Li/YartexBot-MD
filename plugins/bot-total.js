@@ -1,13 +1,14 @@
-let handler = async (m, { conn }) => {
-let totalf = Object.values(global.plugins).filter(
-    (v) => v.help && v.tags
-  ).length;
-conn.reply(m.chat, `• Total de Funciones: ${totalf}`,m)
-}
+var handler = async (m, { conn }) => {
 
-handler.help = ['totalfunciones']
-handler.tags = ['info']
+let totalf = Object.values(global.plugins).filter( (v) => v.help && v.tags ).length
+
+conn.reply(m.chat, `*🎌 Total de Funciones:* ${totalf}`, m, fake, )
+
+}
+handler.help = ['totalf']
+handler.tags = ['bot']
 handler.command = ['totalf']
+
 handler.register = true
-handler.limit = false
+
 export default handler 
