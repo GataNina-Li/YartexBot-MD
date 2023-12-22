@@ -51,6 +51,7 @@
 "fluent-ffmpeg": "^2.1.2",
 "fs": "^0.0.1-security",
 "formdata-node": "^5.0.1",
+"firebase-admin": "12.0.0",
 "glob-fs": "^0.1.7",
 "human-readable": "^0.2.1",
 "hispamemes": "^1.0.7",
