@@ -3,7 +3,7 @@ import { mediafiredl } from '@bochilteam/scraper'
 
 var handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) => {
 
-var limit
+let limit
 if((isOwner || isPrems)) limit = 1000
 else limit = 600
 
@@ -25,7 +25,7 @@ await conn.reply(m.chat, `💌 *Nombre:* ${filename}\n📊 *Peso:*  ${filesizeH}
 if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
 m.react(done)
 } catch (e) {
-conn.reply(m.chat, `🚩 *Ocurrió un falló*`, m, fake, )
+conn.reply(m.chat, `🚩 *Ocurrió un fallo*`, m, fake, )
 console.log(e)}
 
 }
