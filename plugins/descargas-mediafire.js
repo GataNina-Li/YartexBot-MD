@@ -8,7 +8,7 @@ if((isOwner || isPrems)) limit = 1000
 else limit = 600
 
 if (!args[0]) return conn.reply(m.chat, `🎌 *Ingrese un enlace de mediafire*\n\nEjemplo, !mediafire https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`
-if (!args[0].match(/mediafire/gi)) return conn.reply(m.chat, `🚩 *Enlace incorrecto*`, m, fake, )
+if (!args[0].match(/mediafire/gi)) throw `🚩 *Enlace incorrecto*`
 
 try {
 
