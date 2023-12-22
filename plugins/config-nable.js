@@ -1,5 +1,3 @@
-import fs from 'fs'
-
 var handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 
 let isEnable = /true|enable|(turn)?on|1/i.test(command)
@@ -294,7 +292,7 @@ _${usedPrefix + command} *public*_
 _${usedPrefix + command} *pconly*_
 _${usedPrefix + command} *gconly*_
 _${usedPrefix + command} *autoread*_
-_${usedPrefix + command} *modejadibot*_`, fkontak, m)
+_${usedPrefix + command} *modejadibot*_`, m, fake, )
 throw false
 }
 conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'bot' : isUser ? '' : 'este chat.'}*`, m, fake, )
