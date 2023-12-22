@@ -5,7 +5,7 @@ import path from 'path'
 var handler = async (m, { text, conn, usedPrefix, command }) => {
 
 if (!text) {
-return m.reply(`*⚠️ INGRESA EL ENLACE DE UNA PÁGINA*`)
+return conn.reply(m.chat, `🎌 *Ingresa el enlace de una página*\n\nEjemplo, !get https://github.com`, m, fakes, )
 }
 
 if (!/^https?:\/\//.test(text)) {
@@ -37,12 +37,12 @@ if (/^image\//.test(contentType)) {
 conn.sendFile(m.chat, redirectUrl, filename, text, m)
 } else if (/^text\//.test(contentType)) {
 let txt = await res.text()
-m.reply(txt.slice(0, 65536) + '')
+conn.reply(m.chat, txt.slice(0, 65536) + '', m, fake, )
 conn.sendFile(m.chat, Buffer.from(txt), 'file.txt', null, m)
 } else if (/^application\/json/.test(contentType)) {
 let txt = await res.json()
 txt = format(JSON.stringify(txt, null, 2))
-m.reply(txt.slice(0, 65536) + '')
+conn.reply(m.chat, txt.slice(0, 65536) + '', m, fake, )
 conn.sendFile(m.chat, Buffer.from(txt), 'file.json', null, m)
 } else if (/^text\/html/.test(contentType)) {
 let html = await res.text()
@@ -64,12 +64,14 @@ break
 }
 }
 if (redirectCount >= maxRedirects) {
-throw `*⚠️ DEMASIADAS REDIRECCIONES* (máx: ${maxRedirects})`;
+return conn.reply(m.chat, `🚩 *Demasiadas redirecciones*\n_(máx: ${maxRedirects})_`, m, fake, )
 }
 
 }
 handler.help = ['fetch', 'get']
 handler.tags = ['internet']
 handler.command = /^(fetch|get)$/i
+
+handler.register = true
 
 export default handler

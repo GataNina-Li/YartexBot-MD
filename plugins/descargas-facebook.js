@@ -7,34 +7,34 @@ let vid
 const isCommand7 = /^(facebook|fb|facebookdl|fbdl)$/i.test(command)
 
 async function reportError(e) {
-await m.reply(`⚠️ *ERROR!!*` + usedPrefix + command)
-console.log(`⚠️ *ERROR EN:* ${usedPrefix + command} ⚠️\n`)
+await conn.reply(m.chat, `🚩 *Ocurrió un fallo*`, m, fake, )
+console.log(`🚩 ERROR EN: ${usedPrefix + command} ⚠️\n`)
 console.log(e)
 }
   
 switch (true) {   
 case isCommand7:
-if (!text) throw `*⚠️ INGRESE UN ENLACE DE FACEBOOK*\n\n❕ EJEMPLO\n*${usedPrefix}${command}* https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`
-if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) throw '*⚠️ NO ES UN ENLACE VÁLIDO*'
-await conn.reply(m.chat, '*🚀 D E S C A R G A N D O*', fkontak, m)
+if (!text) return conn.reply(m.chat, `🎌 *Ingrese un enlace de facebook*\n\nEjemplo, !fb https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`
+if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) return conn.reply(m.chat, '🎌 *No es un enlace válido*', m, fake, )
+await conn.reply(m.chat, '⏰ Espere un momento, m, fake, )
 m.react(done)
 let messageType = checkMessageType(args[0])
 let message = ''
 switch (messageType) {
-case "groups":
-message = 'VÍDEO DE GRUPO DE FACEBOOK 🚀'
+case 'groups':
+message = 'Vídeo de grupo de facebook 🚀'
 break
-case "reel":
-message = 'VÍDEO DE REELS DE FACEBOOK 🚀'
+case 'reel':
+message = 'Vídeo de reels de facebook 🚀'
 break
-case "stories":
-message = 'VÍDEO DE HISTORIAS DE FACEBOOK 🚀'
+case 'stories':
+message = 'Vídeo de historias de facebook 🚀'
 break
-case "posts":
-message = 'VÍDEO DE PUBLICACIONES DE FACEBOOK 🚀'
+case 'posts':
+message = 'Vídeo de publicaciones de facebook 🚀'
 break
 default:
-message = 'VÍDEO DE FACEBOOK 🚀'
+message = 'Vídeo de facebook 🚀'
 break
 }
 try {
@@ -64,20 +64,22 @@ reportError(e)}
 handler.help = ['fb']
 handler.tags = ['descargas']
 handler.command = /^(facebook|fb|facebookdl|fbdl)$/i
+
+handler.register = true
 handler.diamond = true
 
 export default handler
   
 function checkMessageType(url) {
-if (url.includes("www.facebook.com")) {
-if (url.includes("/groups/")) {
-return "groups"
-} else if (url.includes("/reel/")) {
-return "reel"
-} else if (url.includes("/stories/")) {
-return "stories"
-} else if (url.includes("/posts/")) {
-return "posts"
+if (url.includes('www.facebook.com')) {
+if (url.includes('/groups/')) {
+return 'groups'
+} else if (url.includes('/reel/')) {
+return 'reel'
+} else if (url.includes('/stories/')) {
+return 'stories'
+} else if (url.includes('/posts/')) {
+return 'posts'
 }}
-return "default"
+return 'default'
 }
