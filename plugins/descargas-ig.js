@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
 import axios from 'axios'
 import instagramGetUrl from 'instagram-url-direct'
-import {instagram} from '@xct007/frieren-scraper'
-import {instagramdl} from '@bochilteam/scraper'
+import { instagram } from '@xct007/frieren-scraper'
+import { instagramdl } from '@bochilteam/scraper'
  
 var handler = async (m, {conn, args, command, usedPrefix}) => {
  
@@ -50,7 +50,7 @@ let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${arg
 let txt1 = `🍧 *Url:* ${shortUrl1}`.trim()
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m)
 } catch {
-return conn.reply(m.chat, '🚩 *Ocurrió un falló*', m, fake, )
+return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 }}}}} 
 
 }
