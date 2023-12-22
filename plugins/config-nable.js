@@ -67,13 +67,6 @@ throw false
 }}
 chat.delete = isEnable
 break
-case 'bard':
-if (m.isChat) {
-isUser = true
-throw false
-}
-user.bard = isEnable
-break
 case 'antibule':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -304,7 +297,7 @@ _${usedPrefix + command} *autoread*_
 _${usedPrefix + command} *modejadibot*_`, fkontak, m)
 throw false
 }
-conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'bot' : isUser ? '' : 'este chat.'}*`, fkontak, m)
+conn.reply(m.chat, `*${isEnable ? '❕' : '❗'} La función ${type} se a ${isEnable ? 'activado' : 'desactivado'} en ${isAll ? 'bot' : isUser ? '' : 'este chat.'}*`, fkontak, m, fake, )
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able')
