@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 import PDFDocument from "pdfkit"
 import { extractImageThumb } from "@whiskeysockets/baileys"
 let handler = async (m, { conn, text, usedPrefix, command, args }) => {
@@ -46,7 +46,7 @@ doc.on('data', (chunk) => buffs.push(chunk))
 doc.on('end', () => resolve(Buffer.concat(buffs)))
 doc.on('error', (err) => reject(err))
 doc.end()})}
-
+*/
 
 
 /*import fetch from 'node-fetch'
