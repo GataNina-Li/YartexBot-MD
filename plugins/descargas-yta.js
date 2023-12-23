@@ -5,7 +5,9 @@ import ytdl from 'ytdl-core'
 
 var handler = async (m, { text, conn, args, usedPrefix, command }) => {
 
-if (!args[0]) throw '*⚠️ INGRESE EL COMANDO MAS UN ENLACE DE YOUTUBE*'
+if (!args[0]) conn.reply(m.chat, '🎌 *Ingrese el comando mas un enlace de youtube*',  m, fake, )
+m.react(rwait)
+
 let youtubeLink = ''
 if (args[0].includes('you')) {
 youtubeLink = args[0]
@@ -18,14 +20,16 @@ if (matchingItem) {
 if (index < matchingItem.urls.length) {
 youtubeLink = matchingItem.urls[index]
 } else {
-throw `*⚠️ NO SE ENCONTRO UN ENLACE PARA ESE NUMERO INGRESA UN NUMERO DEL 1 AL ${matchingItem.urls.length}*`
+return conn.reply(m.chat, `🚩 *No se encontro un enlace para ese numero ingresa un numero del 1 al ${matchingItem.urls.length}*`,  m, fake, )
 }} else {
-throw `*🧃 PARA PODER USAR ESTE COMANDO DE LA MANERA (${usedPrefix + command} <numero>), REALIZA LA BUSQUEDA DE VIDEOS CON ${usedPrefix}playlist <texto>*`
+return conn.reply(m.chat, `🎌 *Para poder usar este comando de la manera (${usedPrefix + command} <numero>), realiza la busqueda de videos con ${usedPrefix}playlist <texto>*`,  m, fake, )
 }} else {
-throw `*🧃 PARA PODER USAR ESTE COMANDO DE LA MANERA (${usedPrefix + command} <numero>), REALIZA LA BUSQUEDA DE VIDEOS CON ${usedPrefix}playlist <texto>*`
+return conn.reply(m.chat, `🎌 *Para poder usar este comando de la manera (${usedPrefix + command} <numero>), realiza la busqueda de videos con ${usedPrefix}playlist <texto>*`,  m, fake, )
 }}} 
-await conn.sendMessage(m.chat, {text: `*🚀 D E S C A R G A N D O*`}, {quoted: m})
+await conn.reply(m.chat, `⏰ Espere un momento`, m, fake, )
+
 try {
+
 let q = '128kbps'
 let v = youtubeLink
 const yt = await youtubedl(v).catch(async _ => await youtubedlv2(v))
@@ -41,19 +45,26 @@ let lolh = await lolhuman.json()
 let n = lolh.result.title || 'error'
 await conn.sendMessage(m.chat, { audio: { url: lolh.result.link }, fileName: `${n}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
 } catch {
+
 try {
+
 let searchh = await yts(youtubeLink)
 let __res = searchh.all.map(v => v).filter(v => v.type == "video")
 let infoo = await ytdl.getInfo('https://youtu.be/' + __res[0].videoId)
 let ress = await ytdl.chooseFormat(infoo.formats, { filter: 'audioonly' })
+m.react(done)
 conn.sendMessage(m.chat, { audio: { url: ress.url }, fileName: __res[0].title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
 } catch {
-await conn.reply(m.chat, '*⚠️ NO PUDE ENVIAR EL AUDIO*', m)}
+m.react(error)
+await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
 }}
 
 }
 handler.help = ['yta']
 handler.tags = ['descargas']
 handler.command = /^audio|fgmp3|dlmp3|getaud|yt(a|mp3)$/i
+
+handler.register = true
+handler.limit = true
 
 export default handler
