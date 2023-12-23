@@ -6,7 +6,6 @@ import ytdl from 'ytdl-core'
 var handler = async (m, { text, conn, args, usedPrefix, command }) => {
 
 if (!args[0]) conn.reply(m.chat, '🎌 *Ingrese el comando mas un enlace de youtube*',  m, fake, )
-m.react(rwait)
 
 let youtubeLink = ''
 if (args[0].includes('you')) {
