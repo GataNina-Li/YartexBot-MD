@@ -6,6 +6,7 @@ import ytdl from 'ytdl-core'
 var handler = async (m, { text, conn, args, usedPrefix, command }) => {
 
 if (!args[0]) conn.reply(m.chat, '🎌 *Ingrese el comando mas un enlace de youtube*',  m, fake, )
+m.react(rwait)
 
 let youtubeLink = ''
 if (args[0].includes('you')) {
@@ -37,10 +38,10 @@ const ttl = await yt.title
 const size = await yt.audio[q].fileSizeH
 await conn.sendFile(m.chat, dl_url, ttl + '.mp3', null, m, false, { mimetype: 'audio/mp4' })
 } catch {
-try {
-m.react(rwait)
-let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkeysapi}&url=${youtubeLink}`)   
   
+try {
+
+let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkeysapi}&url=${youtubeLink}`)
 let lolh = await lolhuman.json()
 let n = lolh.result.title || 'error'
 m.react(done)
