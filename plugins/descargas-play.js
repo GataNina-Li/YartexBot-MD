@@ -14,9 +14,10 @@ try {
 const yt_play = await search(args.join(' '))
 let additionalText = ''
 if (command === 'play') {
-additionalText = 'AUDIO'
+additionalText = 'audio'
 } else if (command === 'play2') {
-additionalText = 'VIDEO'}
+additionalText = 'video'}
+
 let texto1 = `*∘ Título*
 ${yt_play[0].title}
 
