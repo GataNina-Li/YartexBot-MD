@@ -1,4 +1,4 @@
-/*import fetch from 'node-fetch'
+import fetch from 'node-fetch'
 
 let handler = async (m, { text }) => {
 	if (!text) throw 'Input Query'
@@ -15,4 +15,4 @@ handler.tags = ['tools']
 handler.command = /^npmjs|npmsearch?$/i
 
 export default handler
-*/
+
