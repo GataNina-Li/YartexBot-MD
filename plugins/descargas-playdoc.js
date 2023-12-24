@@ -36,7 +36,7 @@ ${yt_play[0].url}
 ⏰ Espere un momento`.trim()
 await conn.sendMessage(m.chat, { text: texto1, contextInfo: { externalAdReply: { title: yt_play[0].title, body: dev, thumbnailUrl: yt_play[0].thumbnail, mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}} , { quoted: m })
 
-if (command == 'play') {	
+if (command === 'play3' || command == 'playdoc') {	
 try {
 let q = '128kbps'
 let v = yt_play[0].url
