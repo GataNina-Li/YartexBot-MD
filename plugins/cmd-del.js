@@ -14,4 +14,6 @@ handler.tags = ['database']
 handler.help = ['delcmd']
 handler.command = ['delcmd']
 
+handler.rowner = true
+
 export default handler
