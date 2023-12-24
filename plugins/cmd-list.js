@@ -8,5 +8,8 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
 }
 handler.tags = ['database']
 handler.help = ['listcmd']
-handler.command = ['listcmd', 'cmdlist'];
+handler.command = ['listcmd', 'cmdlist']
+
+handler.rowner = true
+
 export default handler
