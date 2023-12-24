@@ -17,4 +17,6 @@ handler.tags = ['database']
 handler.help = ['setcmd']
 handler.command = ['setcmd', 'addcmd', 'cmdadd', 'cmdset']
 
+handler.rowner = true
+
 export default handler
