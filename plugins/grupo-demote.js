@@ -8,7 +8,7 @@ var number = text.split`@`[1]
 var number = text
 }
 
-if (!text && !m.quoted) return conn.reply(m.chat, `🎌 *Etiqueta al admin. que desea degradar*\n\mEjemplo, !demote @tag\n!demote *responde a un mensaje*`, m, fake, )
+if (!text && !m.quoted) return conn.reply(m.chat, `🎌 *Etiqueta al admin. que desea degradar*\n\nEjemplo, !demote @tag\n!demote *responde a un mensaje*`, m, fake, )
 if (number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `🚩 *Número erróneo*`, m, fake, )
   
 try {
