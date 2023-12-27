@@ -20,7 +20,7 @@ font: 'block',
 align: 'center',
 colors: ['magenta', 'cyan']
 })
-say(`Bot: ${name}\nVersión: ${vs}\nCreador: ${dev}\nNumero: ${devnum}\nEmail: ${email}`, {
+say(`Bot: CuriosityBot-MD\nVersión: 1.0.5\nCreador: Azami\nNumero: null\nEmail: thecuriositybot@gmail.com`, {
 font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
