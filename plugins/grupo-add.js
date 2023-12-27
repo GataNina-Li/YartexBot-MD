@@ -12,8 +12,8 @@ if (text.includes('+')) return conn.reply(m.chat, `🚩 *Ingrese todo el número
 let group = m.chat
 let link = 'https://chat.whatsapp.com/' + await conn.groupInviteCode(group)
  
-await conn.reply(text+'@s.whatsapp.net', `🎌 *Hola! soy CuriosityBot-MD, Una persona te a invitado a su grupo*\n\nEnlace\n${link}`, m, {mentions: [who]})
-m.reply(`🎌 *La invitación fue enviada al privado de*\n${nom}`) 
+await conn.reply(text+'@s.whatsapp.net', `🎌 *Hola! soy CuriosityBot-MD, Una persona te a invitado a su grupo*\n\nEnlace\n${link}`, m, {mentions: [m.sender]}, fake, )
+conn.reply(m.chat, `🎌 *La invitación fue enviada al privado de*\n${nom}`, m, fake, ) 
 
 }
 handler.help = ['add']
