@@ -14,7 +14,7 @@ degreesClockwiseFromMagneticNorth: 0,
 caption: info,
 sequenceNumber: 0,
 timeOffset: 8600,
-JpegThumbnailUrl: imagen1, 
+JpegThumbnailUrl: imagen3, 
 contextInfo: { mentionedJid: [m.sender] }
 }}, { quoted: m })
 
