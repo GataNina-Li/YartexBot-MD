@@ -8,13 +8,12 @@ let owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin
 if (!text) return conn.reply(m.chat, `🎌 *Por favor coloque su motivo para invocar a los admins*`, m, fake, )
 if (text.length < 10) return conn.reply(m.chat, `🚩 *El motivo es muy corto, minimo 10 carácteres*`, m, fake, )
 let mensaje = args.join` `
-let yo = `*📢 Mensaje:* ${text}`
-let texto = `🚩 Invocando admins
+let yo = `*Mensaje:* ${text}`
+let texto = `${yo}
 
-${yo}
-
-*🎌 Staff Del Grupo*
+🚩 *Staff Del Grupo*
 ${listaAdmins}`.trim()
+
 conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 
 }
