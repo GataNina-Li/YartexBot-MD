@@ -2,7 +2,8 @@ import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
 
 var handler  = async (m, { conn, usedPrefix }) => {
 
-var info = `Sí, estoy aquí Azami`
+let img = sityImg.getRandom()
+let info = `Sí, estoy aquí Azami`
 
 const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
 degreesLatitude: 0,
