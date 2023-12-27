@@ -6,14 +6,14 @@ else who = m.chat
 let name = await conn.getName(m.sender)	
 let user = global.db.data.users[who]
 let nom = conn.getName(m.sender)
-if (!global.db.data.settings[conn.user.jid].restrict) return conn.reply(m.chat, `*⚠️ ESTE COMANDO ESTA RESTRINGIDO POR MI PROPIETARIO*`, fkontak, m) 
-if (!text) throw `*⚠️ INGRESE EL NÚMERO DE LA PERSONA QUE QUIERE AÑADIR*\n\n💡 EJEMPLO\n*${usedPrefix + command}* 52999999999`
-if (text.includes('+')) throw  `*⚠️ INGRESE EL NÚMERO TODO JUNTO SIN EL (+)*`
+if (!global.db.data.settings[conn.user.jid].restrict) return conn.reply(m.chat, `🚩 *Esta característica esta deshabilitada*`, m, fake, )
+if (!text) return conn.reply(m.chat, `🎌 *Ingrese el número de la persona que quiere añadir*\n\nEjemplo, !${command}* 5217299999999`, m, fake, )
+if (text.includes('+')) return conn.reply(m.chat, `🚩 *Ingrese todo el número junto sin el (+)*`, m, fake, )
 let group = m.chat
 let link = 'https://chat.whatsapp.com/' + await conn.groupInviteCode(group)
  
-await conn.reply(text+'@s.whatsapp.net', `*💌 Hola! soy CuriosityBot-MD, Una persona te a invitado a su grupo.*\n\n*🪀 LINK*\n${link}`, m, {mentions: [m.sender]})
-m.reply(`*⚠️ ENVIANDO INVITACION AL PRIVADO DE ${nom}*\n\n*📅 ${fecha}*\n⏰ *${tiempo}*`) 
+await conn.reply(text+'@s.whatsapp.net', `🎌 *Hola! soy CuriosityBot-MD, Una persona te a invitado a su grupo*\n\nEnlace\n${link}`, m, {mentions: [who]})
+m.reply(`🎌 *La invitación fue enviada al privado de ${nom}*\n\n📅 ${fecha}\n⏰ ${tiempo}`) 
 
 }
 handler.help = ['add']
