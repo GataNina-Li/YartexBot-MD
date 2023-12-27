@@ -1,4 +1,4 @@
-console.log('🚀 Iniciando...')
+console.log(' Iniciando...')
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
 import { fileURLToPath } from 'url'
@@ -20,32 +20,33 @@ font: 'block',
 align: 'center',
 colors: ['magenta', 'cyan']
 })
-say(`Bot: ${name}\nVersion: 1.0.5\nCreador: Azami ~ Zam\nNumero: +52 1 729 488 8993\nEmail: thecuriositybot@gmail.com`, {
-font: 'console',
-gradient: ['blue', 'magenta']
-})
-
-var isRunning = false
-/**
- * Start a js file
- * @param {String} file `path/to/file`
- */
-function start(file) {
-if (isRunning) return
-isRunning = true
-let args = [join(__dirname, file), ...process.argv.slice(2)]
-say([process.argv[0], ...args].join(' '), {
+say(`Bot: ${name}\nVersión: ${vs}\nCreador: ${dev}\nNumero: ${devnum}\nEmail: ${email}`, {
 font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
 })
+
+var isRunning = false
+
+function start(file) {
+if (isRunning) return
+isRunning = true
+let args = [join(__dirname, file), ...process.argv.slice(2)]
 setupMaster({
 exec: args[0],
 args: args.slice(1),
 })
 let p = fork()
+
+// Manejador de señales SIGKILL
+process.on('SIGKILL', () => {
+console.log('SIGKILL detectado, reiniciando...');
+p.process.kill(); // Cierra el proceso actual
+isRunning = false;
+start.apply(this, arguments); // Reinicia el bot
+})
+
 p.on('message', data => {
-console.log('[RECEIVED]', data)
 switch (data) {
 case 'reset':
 p.process.kill()
