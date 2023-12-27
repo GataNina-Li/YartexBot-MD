@@ -16,7 +16,7 @@ sequenceNumber: 0,
 timeOffset: 8600,
 JpegThumbnailUrl: imagen1, 
 contextInfo: { mentionedJid: [m.sender] }
-}}, { quoted: fake })
+}}, { quoted: m })
 
 return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })
 
