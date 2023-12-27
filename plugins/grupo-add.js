@@ -19,10 +19,10 @@ conn.reply(m.chat, `🎌 *La invitación fue enviada al privado de*\n${nom}`, m,
 handler.help = ['add']
 handler.tags = ['grupo']
 handler.command = /^(add|agregar|invitar|invite|añadir|\+)$/i
+
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
 handler.fail = null
 
 export default handler
- 
