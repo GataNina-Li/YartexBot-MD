@@ -37,13 +37,6 @@ let malaya = await fetch(`https://aemt.me/malaysia`)
 conn.sendMessage(m.chat, {image: malaya, caption: `*🇲🇾 Malaya*`.trim()}, {quoted: m})
 }
 
-if (command == 'mexicana') {
-let m = 'https://telegra.ph/file/30e33124729bb2d935d4a.jpg'; let me = 'https://telegra.ph/file/a2f34504b9e5887e7a145.jpg'; let mex = 'https://telegra.ph/file/088a10b71a7d64e210383.jpg'; let mexi = 'https://telegra.ph/file/adccecdbf1498ac480442.jpg'; let mexic = 'https://telegra.ph/file/e0cf7b92178fe644bbbfb.jpg'
-var mexicanas = [m, me, mex, mexi, mexic]
-let aa = mexicanas.getRandom
-conn.sendMessage(m.chat, {image: {url: aa}, caption: `*🇲🇽 Mexicana*`.trim()}, {quoted: m})
-}
-
 }
 handler.help = ['china', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana', 'malaya']
 handler.command = ['china', 'mexicana', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana', 'malaya']
