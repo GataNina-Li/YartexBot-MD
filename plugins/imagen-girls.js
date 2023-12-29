@@ -37,9 +37,13 @@ let malaya = await fetch(`https://aemt.me/malaysia`)
 conn.sendMessage(m.chat, {image: malaya, caption: `*🇲🇾 Malaya*`.trim()}, {quoted: m})
 }
 
+if (command == 'mexicana') {
+conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/9545f4db9f2ec128d5377.jpg'}, caption: `*🇲🇽 Mexicana*`.trim()}, {quoted: m})
+}
+
 }
 handler.help = ['china', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana', 'malaya']
-handler.command = ['china', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana', 'malaya']
+handler.command = ['china', 'mexicana', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana', 'malaya']
 handler.tags = ['nsfw']
 
 export default handler
