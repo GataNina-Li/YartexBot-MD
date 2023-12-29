@@ -34,7 +34,6 @@ await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimet
 } catch {*/
 await conn.reply(m.chat, `🚩 *Ocurrió un error*`, m, fake, )
 m.react(error)}
-}
 
 }
 handler.help = ['ytv']
