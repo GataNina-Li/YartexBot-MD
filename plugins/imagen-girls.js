@@ -38,7 +38,8 @@ conn.sendMessage(m.chat, {image: malaya, caption: `*🇲🇾 Malaya*`.trim()}, {
 }
 
 if (command == 'mexicana') {
-conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/9545f4db9f2ec128d5377.jpg'}, caption: `*🇲🇽 Mexicana*`.trim()}, {quoted: m})
+let mexicana = ['https://telegra.ph/file/30e33124729bb2d935d4a.jpg', 'https://telegra.ph/file/a2f34504b9e5887e7a145.jpg', 'https://telegra.ph/file/088a10b71a7d64e210383.jpg', 'https://telegra.ph/file/adccecdbf1498ac480442.jpg', 'https://telegra.ph/file/e0cf7b92178fe644bbbfb.jpg'].getRandom
+conn.sendMessage(m.chat, {image: {url: mexicana}, caption: `*🇲🇽 Mexicana*`.trim()}, {quoted: m})
 }
 
 }
