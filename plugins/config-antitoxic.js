@@ -9,11 +9,11 @@ const isToxic = toxicRegex.exec(m.text)
 
 if (isToxic && chat.antiToxic && !isOwner && !isAdmin) {
 user.warn += 1
-if (!(user.warn >= 6))
+if (!(user.warn >= 4))
 await m.reply(`${user.warn == 1 ? `NOO 😠 *@${m.sender.split`@`[0]}*` : `*@${m.sender.split`@`[0]}*`}, decir la palabra (${isToxic}) está prohibido *${user.warn}/6* Advertencia(s)`, false, {mentions: [m.sender]})
 }
 
-if (user.warn >= 6) {
+if (user.warn >= 4) {
 user.warn = 0;
 await m.reply(`🚩 Te lo dije *@${m.sender.split`@`[0]}*, Superaste las 6 advertencias por lo tanto serás eliminado de este grupo`, false, { mentions: [m.sender], })
 user.banned = false
