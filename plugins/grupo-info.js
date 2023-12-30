@@ -1,5 +1,5 @@
 var handler = async (m, { conn, participants, groupMetadata }) => {
-
+ 
 const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './storage/logos/Menu1.jpg' 
 const { isBanned, welcome, detect, sWelcome, sBye, sPromote, sDemote, antiLink, antiLink2, modohorny, autosticker, audios, delete: del } = global.db.data.chats[m.chat]
 const groupAdmins = participants.filter(p => p.admin) 
