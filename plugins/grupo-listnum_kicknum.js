@@ -1,7 +1,7 @@
 var handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, command, isBotAdmin, isSuperAdmin}) => {
 
-if (!args[0]) return m.reply(`*⚠️ INGRESE EL PREFIJO DE UN PAÍS*`)
-if (isNaN(args[0])) return m.reply(`*⚠️ INGRESA EL PREFIJO DE UN PAÍS*`)
+if (!args[0]) return conn.reply(m.chat, `🎌 *Debera ingresar el prefijo de un país*\n\nEjemplo, !${command} +52`, m, fake, )
+if (isNaN(args[0])) return conn.reply(m.chat, `🚩 *Ingresa el prefijo del país*`, m, fake, )
  
 let lol = args[0].replace(/[+]/g, '')
 let ps = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol))
