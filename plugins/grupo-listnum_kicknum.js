@@ -7,13 +7,13 @@ let lol = args[0].replace(/[+]/g, '')
 let ps = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol))
 let bot = global.db.data.settings[conn.user.jid] || {}
 
-if (ps == '') return conn.reply(m.chat, `🚩 *No hay números ${lol}*`)
+if (ps == '') return conn.reply(m.chat, `🚩 *No hay números ${lol}*`, m, fake, )
 let numeros = ps.map((v)=> '• @' + v.replace(/@.+/, ''))
 let delay = (time) => new Promise((res)=>setTimeout(res, time))
 switch (command) {
 
 case 'listanum':
-conn.reply(m.chat, `*📑 LISTA DE NÚMEROS +${lol}*\n\n` + numeros.join`\n`, m, {mentions: ps})
+conn.reply(m.chat, `🚩 *Lista de números ${lol}*\n\n` + numeros.join`\n`, m, {mentions: ps}, fake, )
 break
 
 case 'kicknum':
