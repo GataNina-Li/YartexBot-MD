@@ -7,7 +7,7 @@ let lol = args[0].replace(/[+]/g, '')
 let ps = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol))
 let bot = global.db.data.settings[conn.user.jid] || {}
 
-if (ps == '') return m.reply(`*⚠️ EN ESTE GRUPO NO HAY NINGÚN NÚMERO CON EL PREFIJO +${lol}*`)
+if (ps == '') return conn.reply(m.chat, `🚩 *No hay números ${lol}*`)
 let numeros = ps.map((v)=> '• @' + v.replace(/@.+/, ''))
 let delay = (time) => new Promise((res)=>setTimeout(res, time))
 switch (command) {
