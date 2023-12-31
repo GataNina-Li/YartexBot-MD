@@ -21,8 +21,8 @@ var user = number + '@s.whatsapp.net'
 } 
 } catch (e) {
 } finally {
-conn.groupParticipantsUpdate(m.chat, [user], 'prompte')
-conn.reply(m.chat, `✅ *Se promovió de admin con éxito*`, m, fake, )
+conn.groupParticipantsUpdate(m.chat, [user], 'promote')
+conn.reply(m.chat, `✅ *Se promovió a admin con éxito*`, m, fake, )
 }
 
 }
