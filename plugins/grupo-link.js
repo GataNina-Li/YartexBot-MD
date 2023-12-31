@@ -2,7 +2,7 @@ var handler = async (m, { conn, args }) => {
 
 let group = m.chat
 let link = 'https://chat.whatsapp.com/' + await conn.groupInviteCode(group)
-conn.reply(m.chat, link, fkontak, m, { detectLink: true }, fake, )
+conn.reply(m.chat, link, fproducto, m, { detectLink: true })
 
 }
 handler.help = ['link']
