@@ -32,8 +32,8 @@ antilink 2 ${antiLink2 ? '✅' : '❌'}
 • *Descripción*
 ${groupMetadata.desc?.toString() || '⚠️ No hay descripción!!'}
 `.trim()
-conn.sendMessage(m.chat, {text: text, mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), 'externalAdReply': {'showAdAttribution': true, 'containsAutoReply': true, 'renderLargerThumbnail': true, 'title': wm, 'containsAutoReply': true, 'mediaType': 1, 'thumbnail': pp, 'mediaUrl': global.ig, 'sourceUrl': global.ig}}}, {quoted: fkontak});
-//conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
+//conn.sendMessage(m.chat, {text: text, mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), 'externalAdReply': {'showAdAttribution': true, 'containsAutoReply': true, 'renderLargerThumbnail': true, 'title': wm, 'containsAutoReply': true, 'mediaType': 1, 'thumbnail': pp, 'mediaUrl': global.ig, 'sourceUrl': global.ig}}}, {quoted: fkontak});
+conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 
 }
 handler.help = ['infogrupo']
