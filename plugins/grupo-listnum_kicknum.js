@@ -13,29 +13,32 @@ let delay = (time) => new Promise((res)=>setTimeout(res, time))
 switch (command) {
 
 case 'listanum':
-conn.reply(m.chat, `🚩 *Lista de números ${lol}*\n\n` + numeros.join`\n`, m, {mentions: ps}, fake, )
+conn.reply(m.chat, `🚩 *Lista de números ${lol}*\n\n` + numeros.join`\n`, m, {mentions: ps})
 break
 
 case 'kicknum':
-if (!bot.restrict) return m.reply('*⚠️ ESTA FUNCIÓN ESTA DESACTIVADA*')
-if (!isBotAdmin) return m.reply('*⚠️ NO SOY ADMIN*');
-conn.reply(m.chat, `*⚠️ SE ELIMINARAN A LOS NÚMEROS +${lol} CADA 10 SEGUNDOS*`, m)
+if (!bot.restrict) return conn.reply(m.chat, '🚩 *Esta función esta restringida por mi propietario*', m, fake, )
+if (!isBotAdmin) return conn.reply(m.chat, '🚩 *No soy administrador*', m, fake, )
+conn.reply(m.chat, `🚩 *Se eliminaran los números ${lol} cada 10 segundos*`, m, fake, )
 const ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
 const users = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol))
 for (const user of users) {
-const error = `⚠️ @${user.split('@')[0]} YA HA SIDO ELIMINADO A ABANDONADO DEL GRUPO*`
+const error = `🚩 @${user.split('@')[0]} *Ya ha sido eliminado o abandonó el grupo*`
 if (user !== ownerGroup + '@s.whatsapp.net' && user !== global.conn.user.jid && user !== global.owner + '@s.whatsapp.net' && user.startsWith(lol || lol) && user !== isSuperAdmin && isBotAdmin && bot.restrict) {
 await delay(2000)
 const responseb = await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
 if (responseb[0].status === '404') m.reply(error, m.chat, {mentions: conn.parseMention(error)})
 await delay(10000)
-} else return m.reply('404')
+} else return conn.reply(m.chat, '🚩 *Ocurrió un error*', m, fake, )
 }
 break
 }
 
 }
+handler.tags = ['grupo']
+handler.help = ['listanum', 'kicknum']
 handler.command = /^(listanum|kicknum)$/i
+
 handler.group = true
 handler.botAdmin = true
 handler.admin = true
