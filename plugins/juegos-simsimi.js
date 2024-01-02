@@ -8,7 +8,8 @@ m.react('🗣️')
 try {
 let api = await fetch("https://api.simsimi.net/v2/?text=" + text + "&lc=es")
 let resSimi = await api.json()
-m.reply(resSimi.success)      
+//m.reply(resSimi.success)      
+conn.reply(m.chat, resSimi.success, m, fake, )
 } catch {
 try {
 if (text.includes('Hola')) text = text.replace('Hola', 'Hello')
@@ -21,7 +22,8 @@ let api = await fetch("http://api.brainshop.ai/get?bid=153868&key=rcKonOgrUFmn5u
 let res = await api.json()
 let reis2 = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=es&dt=t&q=" + res.cnt)
 let resu2 = await reis2.json()
-m.reply(resu2[0][0][0])      
+//m.reply(resu2[0][0][0])      
+  conn.reply(m.chat, resu2[0][0][0], m, fake, )
 } catch {  
 let reisss = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=id&dt=t&q=" + text)
 let resuuu = await reisss.json()      
@@ -29,7 +31,8 @@ let res222 = await fetch(`https://violetics.pw/api/utility/simsimi?apikey=beta&t
 let json222 = await res222.json()
 let resulttt = json222.result
 let lolll = await translate(`${resulttt}`, { to: 'es', autoCorrect: true })
-m.reply(lolll.text)      
+//m.reply(lolll.text)      
+conn.reply(m.chat, lolll.text, m, fake, )
 }}
 
 }
