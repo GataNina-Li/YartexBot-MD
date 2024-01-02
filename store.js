@@ -40,7 +40,7 @@ global.nnnnn = 'https://chat.whatsapp.com/E9qJfvlLjENKAxnhII9rao' //Colaboració
 global.nnnnnn = 'https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A' //enlace curiosity
 global.channel = 'https://whatsapp.com/channel/0029VaB4w2ZFHWpwgyEe3w2k'
 global.email = 'thecuriositybot@gmail.com'
-global.linkSity = [yt, ig, md, paypal, git, nn, channel, email]
+global.linkSity = [yt, ig, md, paypal, git, channel]
 
 //Raíz
 global.raiz = './'
