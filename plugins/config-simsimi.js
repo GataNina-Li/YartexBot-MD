@@ -27,7 +27,7 @@ let api = await fetch('http://api.brainshop.ai/get?bid=153868&key=rcKonOgrUFmn5u
 let res = await api.json()
 let reis2 = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=es&dt=t&q=' + res.cnt)
 let resu2 = await reis2.json()
-await conn.reply(m.chat, resu2[0][0][0], m, fake, )
+await conn.reply(m.chat, resu2[0][0][0], m, )
 
 }
 return !0
