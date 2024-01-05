@@ -1,7 +1,7 @@
 var handler = async (m) => {
 
     const authorizedUsers = ['id_del_creador', 'id_del_desarrollador'];
-
+m.reply('Test')
 function esUsuarioAutorizado(senderId) {
     return authorizedUsers.includes(senderId);
 }
