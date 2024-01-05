@@ -17,6 +17,8 @@ function intentarRealizarCambio(senderId) {
     }
 }
 
-// Ejemplo de uso
+export default handler
+
+
 const senderId = 'id_del_desarrollador'; // Cambiar esto con el ID del remitente real
 intentarRealizarCambio(senderId);
