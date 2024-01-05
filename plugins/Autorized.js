@@ -1,4 +1,5 @@
-var handler = m => m
+var handler = async (m) => {
+
     const authorizedUsers = ['id_del_creador', 'id_del_desarrollador'];
 
 function esUsuarioAutorizado(senderId) {
@@ -17,7 +18,7 @@ function intentarRealizarCambio(senderId) {
         console.log('Usuario no autorizado para realizar cambios en el bot.');
     }
 }
-
+}
 handler.tags = ['autorized']
 handler.command = /^(Autorizar)$/i
 handler.register = false
