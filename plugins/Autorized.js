@@ -21,7 +21,7 @@ function intentarRealizarCambio(m.sender) {
 }
 
 const senderId = 'id_del_desarrollador'; // Cambiar esto con el ID del remitente real
-intentarRealizarCambio(senderId);
+intentarRealizarCambio(m.sender);
 
 handler.tags = ['autorized'];
 handler.command = /^(Autorizar)$/i;
