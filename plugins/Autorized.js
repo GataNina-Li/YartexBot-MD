@@ -2,8 +2,8 @@ var handler = async (m) => {
 
     const authorizedUsers = ['id_del_creador', 'id_del_desarrollador'];
 m.reply('Test')
-function esUsuarioAutorizado(senderId) {
-    return authorizedUsers.includes(senderId);
+function esUsuarioAutorizado(m.sender) {
+    return authorizedUsers.includes(m.sender);
 }
 
 function realizarCambioEnElBot() {
@@ -11,8 +11,8 @@ function realizarCambioEnElBot() {
     console.log('Cambio en el bot realizado con éxito.');
 }
 
-function intentarRealizarCambio(senderId) {
-    if (esUsuarioAutorizado(senderId)) {
+function intentarRealizarCambio(m.sender) {
+    if (esUsuarioAutorizado(m.sender)) {
         realizarCambioEnElBot();
     } else {
         console.log('Usuario no autorizado para realizar cambios en el bot.');
