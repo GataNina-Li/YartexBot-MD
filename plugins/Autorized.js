@@ -1,4 +1,5 @@
-const authorizedUsers = ['id_del_creador', 'id_del_desarrollador'];
+var handler = m => m
+    const authorizedUsers = ['id_del_creador', 'id_del_desarrollador'];
 
 function esUsuarioAutorizado(senderId) {
     return authorizedUsers.includes(senderId);
@@ -17,7 +18,12 @@ function intentarRealizarCambio(senderId) {
     }
 }
 
+handler.tags = ['autorized']
+handler.command = /^(Autorizar)$/i
+handler.register = false
+
 export default handler
+
 
 
 const senderId = 'id_del_desarrollador'; // Cambiar esto con el ID del remitente real
