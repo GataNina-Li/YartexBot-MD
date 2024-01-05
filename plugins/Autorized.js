@@ -19,13 +19,12 @@ function intentarRealizarCambio(m.sender) {
     }
 }
 }
-handler.tags = ['autorized']
-handler.command = /^(Autorizar)$/i
-handler.register = false
-
-export default handler
-
-
 
 const senderId = 'id_del_desarrollador'; // Cambiar esto con el ID del remitente real
 intentarRealizarCambio(senderId);
+
+handler.tags = ['autorized'];
+handler.command = /^(Autorizar)$/i;
+handler.register = false;
+
+export default handler;
