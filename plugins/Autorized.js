@@ -1,30 +1,33 @@
-var handler = async (m) => {
+const express = require('express');
+const app = express();
+const port = 3000;
+const bodyParser = require('body-parser');
 
-    const authorizedUsers = ['id_del_creador', 'id_del_desarrollador'];
-m.reply('Test')
-function esUsuarioAutorizado(m.sender) {
-    return authorizedUsers.includes(m.sender);
-}
+app.use(bodyParser.json());
 
-function realizarCambioEnElBot() {
-    // Realizar aquí la lógica para el cambio en el bot
-    console.log('Cambio en el bot realizado con éxito.');
-}
+app.post('/change', async (req, res) => {
+    const { handler, command, tag } = req.body;
+    const user = req.user; // Asegúrate de que este valor proviene de un middleware de autenticación y autorización
 
-function intentarRealizarCambio(m.sender) {
-    if (esUsuarioAutorizado(m.sender)) {
-        realizarCambioEnElBot();
-    } else {
-        console.log('Usuario no autorizado para realizar cambios en el bot.');
+    if (!user.isAuthorized) {
+        return res.status(403).json({ error: 'No tienes permiso para realizar cambios en el bot o código.' });
     }
-}
-}
 
-const senderId = 'id_del_desarrollador'; // Cambiar esto con el ID del remitente real
-intentarRealizarCambio(m.sender);
+    const handlerRecord = await handlersDatabase.getHandler(handler);
 
-handler.tags = ['autorized'];
-handler.command = /^(Autorizar)$/i;
-handler.register = false;
+    if (!handlerRecord) {
+        return res.status(404).json({ error: 'Handler no encontrado.' });
+    }
 
-export default handler;
+    if (!handlerRecord.tags.includes(tag)) {
+        return res.status(403).json({ error: 'No tienes permiso para realizar cambios en este handler.' });
+    }
+
+    // Realiza los cambios en el bot o código aquí
+    console.log(`Se ha realizado un cambio en el handler ${handler} con el comando ${command} y la etiqueta ${tag}`);
+    res.status(200).json({ message: 'Cambio realizado correctamente.' });
+});
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en el puerto ${port}`);
+});
