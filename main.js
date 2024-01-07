@@ -306,6 +306,11 @@ conn.logger.warn(`⚠️ Razón de desconexión desconocida. ${reason || ''}: ${
 await global.reloadHandler(true).catch(console.error)
 }}}
 
+if (connection == 'open') {
+conn.reply('', wm, m, )
+
+}
+
 process.on('uncaughtException', console.error)
 
 let isInit = true
