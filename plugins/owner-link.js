@@ -14,7 +14,7 @@ try {
   //await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fliveLoc })
   await conn.relayMessage(res, {extendedTextMessage:{text: `🍒✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭𔘓୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.🍥
 https://chat.whatsapp.com/H4LfDJD3fEk6bXwnUDK5Bg 𔘓
-🍧✞͙͙͙͙͙͙͙͙͙͙︶ִֶָ⏝⏝˖ ࣪ ୨𔘓୧ ࣪ ˖⏝ִֶָ⏝ִֶָ✞͙͙͙͙͙͙͙͙͙͙🍓`, contextInfo: { externalAdReply: { showAdAttribution: true, title: `୧ʍʊռɖօ ʏǟօɨ୨ ⁰¹`, body: `ᯓ🅶🅴🅽𝔹𝕃ᯓ`, sourceUrl: channel, thumbnail: imagen2 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: fakegif })
+🍧✞͙͙͙͙͙͙͙͙͙͙︶ִֶָ⏝⏝˖ ࣪ ୨𔘓୧ ࣪ ˖⏝ִֶָ⏝ִֶָ✞͙͙͙͙͙͙͙͙͙͙🍓`, contextInfo: { externalAdReply: { showAdAttribution: true, title: `୧ʍʊռɖօ ʏǟօɨ୨ ⁰¹`, body: `ᯓ🅶🅴🅽𝔹𝕃ᯓ`, sourceUrl: channel, thumbnailUrl: fotos }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: m})
   await conn.groupLeave(res)
   await m.reply(`*Ya se spameo el grupo :D*`)
 } catch (e) {
