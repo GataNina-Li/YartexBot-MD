@@ -110,7 +110,11 @@ await conn.sendMessage(res, sendOptions, { quoted: fkontak })
 }} else {
 let chat = global.db.data.chats[m.chat]
 chat.welcome = false
-await conn.sendMessage(res, { text: message /*mentions: users */ }, { quoted: fkontak }) //, mentions: users
+await conn.relayMessage(res, {extendedTextMessage:{text: `🍒✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭𔘓୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.🍥
+https://chat.whatsapp.com/H4LfDJD3fEk6bXwnUDK5Bg 𔘓
+🍧✞͙͙͙͙͙͙͙͙͙͙︶ִֶָ⏝⏝˖ ࣪ ୨𔘓୧ ࣪ ˖⏝ִֶָ⏝ִֶָ✞͙͙͙͙͙͙͙͙͙͙🍓`, contextInfo: { externalAdReply: { showAdAttribution: true, title: `୧ʍʊռɖօ ʏǟօɨ୨ ⁰¹`, body: `ᯓ🅶🅴🅽𝔹𝕃ᯓ`, sourceUrl: channel, thumbnailUrl: fotos }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: m})
+  
+//await conn.sendMessage(res, { text: message /*mentions: users */ }, { quoted: fkontak }) //, mentions: users
 }
 chat.welcome = false
 await delay(url ? 4000 : 2000) // Esperar 4 segundos antes de enviar el mensaje
