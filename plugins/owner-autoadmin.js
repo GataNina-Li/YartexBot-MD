@@ -1,13 +1,23 @@
-let handler = async (m, { conn, isAdmin }) => {  
+var handler = async (m, { conn, isAdmin }) => {
+
 if (m.fromMe) return
-if (isAdmin) throw '*[ 🍓 ] HOLA CREADOR USTED YA TIENE ADMIN EN ESTE GRUPO!*'
-try {  
-await conn.groupParticipantsUpdate(m.chat, [m.sender], "promote")
+if (isAdmin) return conn.reply(m.chat, '🚩 *Ya es admin*', m, fake, )
+
+try {
+
+await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote')
+
 } catch {
-await m.reply('*[❗] 𝙴𝚁𝚁𝙾𝚁, 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙰𝚁𝙻𝙴 𝙰𝙳𝙼𝙸𝙽*')}}
+
+await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
+
+}
+habdler.help = ['autoadmin']
 handler.tags = ['owner']
-handler.command = /^autoadmin$/i
+handler.command = /^autoadmin|tenerpoder$/i
+
 handler.rowner = true
 handler.group = true
 handler.botAdmin = true
+
 export default handler
