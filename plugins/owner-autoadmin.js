@@ -18,7 +18,6 @@ handler.help = ['autoadmin']
 handler.tags = ['owner']
 handler.command = /^autoadmin|tenerpoder$/i
 
-handler.admin = true
 handler.rowner = true
 handler.group = true
 handler.botAdmin = true
