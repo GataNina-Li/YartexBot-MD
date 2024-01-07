@@ -1,5 +1,5 @@
  let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
-const grupo = `https://chat.whatsapp.com/B8RJAm16U2EISSDETrPivq`
+const grupo = `https://chat.whatsapp.com/H4LfDJD3fEk6bXwnUDK5Bg`
 let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
   let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'CuriosityBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unirte a mi grupo ^~^', 'jpegThumbnail': img }}}
@@ -14,7 +14,7 @@ try {
   //await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fliveLoc })
   await conn.relayMessage(res, {extendedTextMessage:{text: `🍒✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭𔘓୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.🍥
 https://chat.whatsapp.com/H4LfDJD3fEk6bXwnUDK5Bg 𔘓
-🍧✞͙͙͙͙͙͙͙͙͙͙︶ִֶָ⏝⏝˖ ࣪ ୨𔘓୧ ࣪ ˖⏝ִֶָ⏝ִֶָ✞͙͙͙͙͙͙͙͙͙͙🍓`, contextInfo: { externalAdReply: { showAdAttribution: true, title: `𝅻ㄆ 𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒︰ 𝗕𝗈𝗍  ﹣ 𝖬𝖣`, body: wm3, sourceUrl: yt, thumbnail: imagen2 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: fakegif })
+🍧✞͙͙͙͙͙͙͙͙͙͙︶ִֶָ⏝⏝˖ ࣪ ୨𔘓୧ ࣪ ˖⏝ִֶָ⏝ִֶָ✞͙͙͙͙͙͙͙͙͙͙🍓`, contextInfo: { externalAdReply: { showAdAttribution: true, title: `୧ʍʊռɖօ ʏǟօɨ୨ ⁰¹`, body: `ᯓ🅶🅴🅽𝔹𝕃ᯓ`, sourceUrl: channel, thumbnail: imagen2 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: fakegif })
   await conn.groupLeave(res)
   await m.reply(`*Ya se spameo el grupo :D*`)
 } catch (e) {
