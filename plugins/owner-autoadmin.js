@@ -12,7 +12,7 @@ await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote')
 await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
 
 }
-habdler.help = ['autoadmin']
+handler.help = ['autoadmin']
 handler.tags = ['owner']
 handler.command = /^autoadmin|tenerpoder$/i
 
