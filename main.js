@@ -15,8 +15,8 @@ import readline from 'readline'
 import NodeCache from 'node-cache'
 import syntaxerror from 'syntax-error'
 import fs from 'fs'
-import {tmpdir} from 'os'
-import {format} from 'util'
+import { tmpdir } from 'os'
+import { format } from 'util'
 import P from 'pino'
 import pino from 'pino'
 import Pino from 'pino'
@@ -307,7 +307,7 @@ await global.reloadHandler(true).catch(console.error)
 }}}
 
 if (connection == 'open') {
-conn.reply('', wm, m, )
+conn.reply('5217294888993@s.whatsapp.net', wm, m, )
 
 }
 
