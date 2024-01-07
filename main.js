@@ -279,7 +279,8 @@ if (opcion == '1') {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
 }}
 if (connection == 'open') {
-console.log(chalk.greenBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))
+console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))
+conn.reply('5217294888993@s.whatsapp.net', wm, m, )
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
@@ -306,10 +307,6 @@ conn.logger.warn(`⚠️ Razón de desconexión desconocida. ${reason || ''}: ${
 await global.reloadHandler(true).catch(console.error)
 }}}
 
-if (connection == 'open') {
-conn.reply('5217294888993@s.whatsapp.net', wm, m, )
-
-}
 
 process.on('uncaughtException', console.error)
 
