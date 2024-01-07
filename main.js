@@ -280,7 +280,7 @@ console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira e
 }}
 if (connection == 'open') {
 console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))
-conn.reply('5217294888993@s.whatsapp.net', wm, m, )
+conn.reply('5217294888993@s.whatsapp.net', wm)
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
