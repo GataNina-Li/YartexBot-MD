@@ -10,7 +10,7 @@ ${usedPrefix + command} demote @user`, m, fake, )
 let mentions = text.replace(event, '').trimStart()
 let who = mentions ? conn.parseMention(mentions) : []
 let part = who.length ? who : [m.sender]
-let act = true
+let act = false
 
 conn.reply(m.chat, `🎌 *Simulando ${event}...*`, m, fake, )
 switch (event.toLowerCase()) {
