@@ -11,7 +11,7 @@ let mentions = text.replace(event, '').trimStart()
 let who = mentions ? conn.parseMention(mentions) : []
 let part = who.length ? who : [m.sender]
 let act = false
-m.reply(m.chat, `🎌 *Simulando ${event}...*`, m, fake, )
+conn.reply(m.chat, `🎌 *Simulando ${event}...*`, m, fake, )
 switch (event.toLowerCase()) {
 case 'add':
 case 'invite':
