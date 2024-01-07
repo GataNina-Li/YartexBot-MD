@@ -1,16 +1,17 @@
 var handler = async (m, { conn, usedPrefix, command, args: [event], text }) => {
 
-if (!event) return await conn.reply(m.chat, `*❕ EJEMPLO:*
+if (!event) return await conn.reply(m.chat, `🚩 *Ejemplo de uso*
 
 ${usedPrefix + command} welcome @user
 ${usedPrefix + command} bye @user
 ${usedPrefix + command} promote @user
-${usedPrefix + command} demote @user`.trim())
+${usedPrefix + command} demote @user`, m, fake, )
+
 let mentions = text.replace(event, '').trimStart()
 let who = mentions ? conn.parseMention(mentions) : []
 let part = who.length ? who : [m.sender]
 let act = false
-m.reply(`*Simulando ${event}...*`)
+m.reply(m.chat, `🎌 *Simulando ${event}...*`, m, fake, )
 switch (event.toLowerCase()) {
 case 'add':
 case 'invite':
@@ -36,13 +37,9 @@ case 'quitarpoder':
 act = 'demote'
 break
 default:
-throw '*⚠️ ERROR, INGRESE UNA OPCION VALIDA*'
+return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 }
-if (act) return conn.participantsUpdate({
-id: m.chat,
-participants: part,
-action: act
-})
+if (act) return conn.participantsUpdate({ id: m.chat, participants: part, action: act })
 
 }
 handler.help = ['simulate'] 
