@@ -13,7 +13,7 @@ try {
   //await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fliveLoc })
   //await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fliveLoc })
   await conn.relayMessage(res, {extendedTextMessage:{text: `🍒✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭𔘓୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.🍥
-https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU 𔘓
+https://chat.whatsapp.com/H4LfDJD3fEk6bXwnUDK5Bg 𔘓
 🍧✞͙͙͙͙͙͙͙͙͙͙︶ִֶָ⏝⏝˖ ࣪ ୨𔘓୧ ࣪ ˖⏝ִֶָ⏝ִֶָ✞͙͙͙͙͙͙͙͙͙͙🍓`, contextInfo: { externalAdReply: { showAdAttribution: true, title: `𝅻ㄆ 𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒︰ 𝗕𝗈𝗍  ﹣ 𝖬𝖣`, body: wm3, sourceUrl: yt, thumbnail: imagen2 }, mentionedJid: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }}}, { quoted: fakegif })
   await conn.groupLeave(res)
   await m.reply(`*Ya se spameo el grupo :D*`)
