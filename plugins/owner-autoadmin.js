@@ -1,7 +1,9 @@
-var handler = async (m, { conn, isAdmin }) => {
+var handler = async (m, { conn, isAdmin, isOwner}) => {
 
 if (m.fromMe) return
-if (isAdmin) return conn.reply(m.chat, '🚩 *Ya es admin*', m, fake, )
+if (isOwner) return conn.reply(m.chat, '🚩 *Ya es admin*', m, fake, )
+  
+  else if (isAdmin) return conn.reply(m.chat, '🚩 *USTED YA ES ADMIN, QUERIDO DESARROLLADOR*', m, fake, )
 
 try {
 
@@ -16,6 +18,7 @@ handler.help = ['autoadmin']
 handler.tags = ['owner']
 handler.command = /^autoadmin|tenerpoder$/i
 
+handler.admin = true
 handler.rowner = true
 handler.group = true
 handler.botAdmin = true
