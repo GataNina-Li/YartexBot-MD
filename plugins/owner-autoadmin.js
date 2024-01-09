@@ -1,4 +1,4 @@
-var handler = async (m, { conn, isAdmin, isOwner}) => {
+var handler = async (m, { conn, isAdmin) => {
 
 if (m.fromMe) return
 if (isAdmin) return conn.reply(m.chat, '🚩 *Ya es admin*', m, fake, )
