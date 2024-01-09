@@ -1,7 +1,7 @@
 var handler = async (m, { conn, isAdmin, isOwner}) => {
 
 if (m.fromMe) return
-if (isOwner) return conn.reply(m.chat, '🚩 *Ya es admin*', m, fake, )
+if (isAdmin) return conn.reply(m.chat, '🚩 *Ya es admin*', m, fake, )
 
 try {
 
