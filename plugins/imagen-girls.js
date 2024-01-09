@@ -42,4 +42,7 @@ handler.help = ['china', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'cor
 handler.command = ['china', 'mexicana', 'vietnamita', 'tailandes', 'indonesia', 'japones', 'coreana', 'malaya']
 handler.tags = ['nsfw']
 
+handler.limit = true
+handler.register = true
+
 export default handler
