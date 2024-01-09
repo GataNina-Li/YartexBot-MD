@@ -41,7 +41,7 @@ global.nnnnnn = 'https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A' //enlace curi
 global.channel = 'https://whatsapp.com/channel/0029VaB4w2ZFHWpwgyEe3w2k'
 global.email = 'thecuriositybot@gmail.com'
 global.channel2 = 'https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A'
-global.linkSity = [yt, ig, md, paypal, git, channe, channel2]
+global.linkSity = [yt, ig, md, paypal, git, channel, channel2]
 
 //Raíz
 global.raiz = './'
