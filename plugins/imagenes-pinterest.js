@@ -6,7 +6,7 @@ if (!text) return conn.reply(m.chat, `🎌 *Debera ingresar un texto*\n\nEjemplo
 m.react(done)
 
 const json = await pinterest(text)
-conn.sendFile(m.chat, json.getRandom(), 'pinterest.jpg', `🚩 *Resultado de:* ${text}`.trim(), m, fake, )
+conn.sendFile(m.chat, json.getRandom(), 'pinterest.jpg', `🚩 *Resultado de* ${text}`.trim(), m, fake, )
 
 }
 handler.help = ['pinterest']
