@@ -28,7 +28,7 @@ console.log(`Error : ${e}`)
 }}
 
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
-let pp = await this.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/1861aab98389b13db8588.jpg')
+//let pp = await this.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/1861aab98389b13db8588.jpg')
 global.fotos = sityImg.getRandom()
 global.enlaces = linkSity.getRandom()
 
@@ -36,11 +36,11 @@ global.enlaces = linkSity.getRandom()
 Mensajes Fakes
 */
 
-//global.fake = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: dev, title: , body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
+//global.gitHub = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: dev, title: , body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: nn }}}
   
-//global.fake = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: saludo, title: saludo, body: dev, thumbnailUrl: pp, sourceUrl: md }}}
+//global.whats = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: saludo, title: saludo, body: dev, thumbnailUrl: pp, sourceUrl: md }}}
 
-global.youtube = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: 'ˢᵘˢᶜʳᶦᵇᵉᵗᵉ ᵃ ⁿᵘᵉˢᵗʳᵒ ᶜᵃⁿᵃˡ ᵈᵉˡ ʸᵒᵘᵀᵘᵇᵉ : ' + yt, title: 'YouTube', body: 'CuriosityBot-MD', thumbnailUrl: pp, sourceUrl: yt }}}
+//global.youtube = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: 'ˢᵘˢᶜʳᶦᵇᵉᵗᵉ ᵃ ⁿᵘᵉˢᵗʳᵒ ᶜᵃⁿᵃˡ ᵈᵉˡ ʸᵒᵘᵀᵘᵇᵉ : ' + yt, title: 'YouTube', body: 'CuriosityBot-MD', thumbnailUrl: pp, sourceUrl: yt }}}
 
 global.fgif = { key: { fromMe: false, participant: "0@s.whatsapp.net", ...(m.chat ? { remoteJid: "6285736178354-1625305606@g.us" } : {})}, message: { videoMessage: { title: wm, "h": `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': wm,  'jpegThumbnail': imagen1}}}
 
