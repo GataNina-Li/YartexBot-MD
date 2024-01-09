@@ -5,8 +5,8 @@ import axios from 'axios'
 import moment from 'moment-timezone'
 const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
 
-//var handler = m => m
-//handler.all = async function (m) {
+var handler = m => m
+handler.all = async function (m) {
 
 global.getBuffer = async function getBuffer(url, options) {
 try {
@@ -115,6 +115,6 @@ global.nombre = conn.getName(m.sender)
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 global.fake = { contextInfo: { externalAdReply: {title: saludo + ` ${m.name}`, body: dev, sourceUrl: enlaces, thumbnailUrl: fotos }}}
 
-//}
+}
 
-//export default handler
+export default handler
