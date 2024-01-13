@@ -12,7 +12,7 @@ const res = await googleImage(text)
 let image = res.getRandom()
 let link = image
 
-conn.sendFile(m.chat, link, 'error.jpg', `🚩 *Resultado de:* ${text}`, m, fake, )
+conn.sendFile(m.chat, link, 'error.jpg', `🚩 *Resultado de:* ${text}`, m)
 
 }
 handler.help = ['gimage', 'imagen']
