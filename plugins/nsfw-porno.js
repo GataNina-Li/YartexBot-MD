@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+/* import fetch from 'node-fetch'
 
 var handler = async (m, { conn, args, usedPrefix, command }) => {
 
@@ -14,4 +14,4 @@ handler.command = ['vporno', 'xxxvideo']
 handler.help = ['vporno', 'xxxvideo']
 handler.register = true
 
-export default handler
+export default handler /*
