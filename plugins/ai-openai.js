@@ -18,20 +18,20 @@ conn.sendPresenceUpdate('composing', m.chat)
 const translation = await translate(text, { from: 'id', to: 'es' })
 const indonesianText = translation.text
 let syms = `Eres un asistente y tu nombre es CuriosityBot-MD, el nombre de tu dueño es Azami`
-let res = await openaiii.ChatGpt(indonesianText, syms);
+let res = await openaiii.ChatGpt(indonesianText, syms)
 
 await m.reply(res.text)
 
 } catch (err) {
 try {
-let ia2 = await fetch(`https://aemt.me/openai?text=${text}`);
+let ia2 = await fetch(`https://aemt.me/openai?text=${text}`)
 let resu2 = await ia2.json()
 m.reply(resu2.result.trim())
 } catch (err) {
 try {
-let tioress = await fetch(`https://api.lolhuman.xyz/api/openai-turbo?apikey=${lolkeysapi}&text=${text}`);
+let tioress = await fetch(`https://api.lolhuman.xyz/api/openai-turbo?apikey=${lolkeysapi}&text=${text}`)
 let hasill = await tioress.json()
-m.reply(`${hasill.result}`.trim())
+conn.reply(m.chat, `${hasill.result}`, m, fake, )
 } catch (err) {
 console.error(err)
 conn.reply(m.chat, '🚩 *Error al procesar la solicitud*', m, fake, )
