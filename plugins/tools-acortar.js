@@ -13,11 +13,11 @@ let conver = '⏰ Espere un momento'
 if (args[1] == 'tinyurl') {
 try {
 let tiny = await (await fetch(`https://hardianto.xyz/api/short/tinyurl?url=${args[0]}&apikey=hardianto`)).json()
-await conn.reply(m.chat, conver, m)
+await conn.reply(m.chat, conver, m, fake, )
 await conn.reply(m.chat, `${reslink}${tiny.result}`, m)
 } catch (e) {
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${await shortUrl(args[0])}`, m)
+await conn.reply(m.chat, conver, m, fake, )
+await conn.reply(m.chat, `${reslink}${await shortUrl(args[0])}`, m, fake, )
 }
 }
 
