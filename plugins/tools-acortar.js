@@ -21,20 +21,6 @@ await conn.reply(m.chat, `${reslink}${await shortUrl(args[0])}`, m, fake, )
 }
 }
 
-if (args[1] == 'linkpoi') {
-let poi = await (await fetch(`https://linkpoi.ga/api.php?url=${args[0]}`)).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${poi.shorturl.replace("\/","/")}`, m)
-}
-
-if (args[1] == 'bitly') {
-let bit = await (await fetch(global.API('xteam', '/shorturl/bitly', {
-url: args[0]
-}, 'apikey'))).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${bit.result.link}`, m)
-}
-
 if (args[1] == 'ouo') {
 let ouo = await (await fetch(`https://api.lolhuman.xyz/api/ouoshortlink?apikey=${lolkeysapi}&url=${args[0]}`)).json()
 await conn.reply(m.chat, conver, m)
