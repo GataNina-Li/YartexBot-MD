@@ -163,6 +163,7 @@ expired: 0
 }
 
 let settings = global.db.data.settings[this.user.jid]
+let user = global.db.data.users[m.sender]
 if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
 if (settings) {
 if (!('self' in settings)) settings.self = false
