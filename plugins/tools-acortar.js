@@ -21,16 +21,10 @@ await conn.reply(m.chat, `${reslink}${await shortUrl(args[0])}`, m, fake, )
 }
 }
 
-if (args[1] == 'ouo') {
-let ouo = await (await fetch(`https://api.lolhuman.xyz/api/ouoshortlink?apikey=${lolkeysapi}&url=${args[0]}`)).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${ouo.result}`, m)
-}
-
 if (args[1] == '1pt') {
 let pt = await (await fetch(`https://csclub.uwaterloo.ca/~phthakka/1pt/addURL.php?url=${encodeURIComponent(args[0])}`)).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}https://1pt.co/${pt.short}`, m)
+await conn.reply(m.chat, conver, m, fake, )
+await conn.reply(m.chat, `${reslink}https://1pt.co/${pt.short}`, m, fake)
 }
 
 if (args[1] == 'cleanuri') {
@@ -40,34 +34,8 @@ body: new URLSearchParams({
 'url': args[0]
 })
 })).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${clu.result_url}`, m)
-}
-
-if (args[1] == "gotiny") {
-let gtn = await (await fetch(`https://gotiny.cc/api`, {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json'
-},
-body: JSON.stringify({
-input: args[0]
-}),
-})).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}https://gotiny.cc/${gtn[0].code}`, m)
-}
-
-if (args[1] == 'isgd') {
-let igd = await (await fetch(`https://is.gd/create.php?format=json&url=` + args[0])).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${igd.shorturl}`, m)
-}
-
-if (args[1] == 'vgd') {
-let vgd = await (await fetch(`https://v.gd/create.php?format=json&url=` + args[0])).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${vgd.shorturl}`, m)
+await conn.reply(m.chat, conver, m, fake, )
+await conn.reply(m.chat, `${reslink}${clu.result_url}`, m, fake, )
 }
 
 if (args[1] == 'tnyim') {
