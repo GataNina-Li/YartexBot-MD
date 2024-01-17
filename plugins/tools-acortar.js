@@ -39,9 +39,10 @@ await conn.reply(m.chat, `${reslink}${clu.result_url}`, m, fake, )
 }
 
 if (args[1] == 'tnyim') {
-let tny = await (await fetch(`https://tny.im/yourls-api.php?format=json&action=shorturl&url=` + args[0])).json()
-await conn.reply(m.chat, conver, m)
-await conn.reply(m.chat, `${reslink}${tny.shorturl}`, m)
+let tny = await fetch(`https://tny.im/yourls-api.php?format=json&action=shorturl&url=` + args[0])
+let tnyi = tny.json()
+await conn.reply(m.chat, conver, m, fake, )
+await conn.reply(m.chat, `${reslink}${tnyi.shorturl}`, m, fake, )
 }
 
 if (args[1] == 'kutt') {
