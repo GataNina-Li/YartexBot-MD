@@ -5,7 +5,7 @@ var handler = async (m, { command, usedPrefix, conn, args }) => {
 if (!args[0]) return conn.reply(m.chat, '🎌 *Ingrese el enlace a acortar*\n\nEjemplo, !short https://github.com/AzamiJs/CuriosityBot-MD 1pt', m, fake, )
 if (!args[0].startsWith('https://')) return conn.reply(m.chat, '🚩 *El enlace debe ser https://*', m, fake, )
 
-let urllist = [ 'tinyurl', 'linkpoi', 'bitly', 'ouo', '1pt', 'cleanuri', 'gotiny', 'isgd', 'vgd', 'tnyim', 'kutt', 'rebrandly', 'multishort', 'shrtco']
+let urllist = [ 'tinyurl', '1pt', 'cleanuri', 'kutt', 'rebrandly']
 
 if (!urllist.includes(args[1])) return conn.reply(m.chat, '🚩 *Ejemplo*\n.short https://vortexuscloud.com 1pt\n\n*Seleccione un tipo existente*\n' + urllist.map((v, index) => '  ○ ' + v).join('\n'), m, fake, )
 let reslink = '🚀 *Enlace:*\n'
@@ -38,12 +38,12 @@ await conn.reply(m.chat, conver, m, fake, )
 await conn.reply(m.chat, `${reslink}${clu.result_url}`, m, fake, )
 }
 
-if (args[1] == 'tnyim') {
+/*if (args[1] == 'tnyim') {
 let tny = await fetch(`https://tny.im/yourls-api.php?format=json&action=shorturl&url=` + args[0])
 let tnyi = tny.json()
 await conn.reply(m.chat, conver, m, fake, )
 await conn.reply(m.chat, `${reslink}${tnyi.shorturl}`, m, fake, )
-}
+}*/
 
 if (args[1] == 'kutt') {
 let config = {
@@ -78,17 +78,6 @@ headers: {
 })).json()
 await conn.reply(m.chat, conver, m)
 await conn.reply(m.chat, `${reslink}${reb.shortUrl}`, m)
-}
-
-if (args[1] == 'multishort') {
-let sl = await (await fetch('https://short-link-api.vercel.app/?query=' + args[0])).json()
-await conn.reply(m.chat, conver, m)
-let linkList = Object.entries(sl).map(([name, link]) => ({
-nama: name,
-link
-}))
-let Liks = linkList.map((v, index) => '  ○ ' + v.link).join('\n')
-await conn.reply(m.chat, `${reslink + '\n' + Liks}`, m)
 }
 
 if (args[1] == 'shrtco') {
