@@ -1,4 +1,4 @@
-import fs from 'fs'
+/*import fs from 'fs'
 import axios from 'axios'
 import fetch from "node-fetch"
 import uploadFile from '../lib/uploadFile.js'
@@ -103,8 +103,8 @@ totalTime += url ? 3000 : 2000
 let users = (await conn.groupMetadata(res)).participants.map(v => v.id)
 if (url) {
 const sendOptions = { image: url.endsWith('.jpg') || url.endsWith('.jpeg') || url.endsWith('.png') ? { url: url } : url, caption: message /*mentions: users */ }
-if (/video/g.test(mime)) {
-await conn.sendMessage(res, { video: url, mimetype: 'video/mp4', caption: message /*mentions: users */ }, { quoted: fkontak })
+/*if (/video/g.test(mime)) {
+await conn.sendMessage(res, { video: url, mimetype: 'video/mp4', caption: message /*mentions: users */ }, /*{ quoted: fkontak })
 } else {
 await conn.sendMessage(res, sendOptions, { quoted: fkontak })
 }} else {
@@ -116,7 +116,7 @@ https://chat.whatsapp.com/H4LfDJD3fEk6bXwnUDK5Bg 𔘓
   
 //await conn.sendMessage(res, { text: message /*mentions: users */ }, { quoted: fkontak }) //, mentions: users
 }
-chat.welcome = false
+/*chat.welcome = false
 await delay(url ? 4000 : 2000) // Esperar 4 segundos antes de enviar el mensaje
 totalTime += url ? 4000 : 2000
 
@@ -146,4 +146,4 @@ await m.reply(`_Mensaje enviado a todos los grupos_. Tiempo total: ${totalTime /
 
 handler.command = ['promocionar']
 handler.owner = true
-export default handler
+export default handler*/
