@@ -1,4 +1,4 @@
-/*var handler = async(m, { conn, isAdmin }) => {
+var handler = async(m, { conn, isAdmin }) => {
 
 if (m.fromMe) return
 if (isAdmin) return conn.reply(m.chat, '✅📌 *USTED YA ES ADMIN*', m, fake, )
@@ -20,4 +20,4 @@ handler.rowner = true
 handler.group = true
 handler.botAdmin = true
 
-export default handler*/
+export default handler
