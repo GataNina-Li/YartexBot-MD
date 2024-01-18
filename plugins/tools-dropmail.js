@@ -13,7 +13,7 @@ if (!lister.includes(feature)) return m.reply('🚩 *Ejemplo*\n' + usedPrefix + 
 if (lister.includes(feature)) {
 if (feature == 'create') {
 try {
-let eml = await random_mail();
+let eml = await random_mail()
 const timeDiff = new Date(eml[2]) - new Date();
 conn.dropmail[id] = [
 await conn.reply(m.chat, '*Email:*\n' + eml[0] + '\n\n' + '*Id:*\n' + eml[1] + '\n\n*Expiración:*\n' + msToTime(timeDiff) + '\n\n_Ejemplo *' + usedPrefix + command + ' message* Para comprobar la bandeja de entrada_', m, fake, ),
@@ -42,7 +42,7 @@ return conn.reply(m.chat, `*EMAIL [ ${index + 1} ]*
 *Encabezamiento* : ${v.headerSubject}
 *Descarga* : ${v.downloadUrl}`, m, fake, )
 }).filter((v) => v).join('\n\n________________________\n\n');
-await m.reply(teks || '*Vacío*' + '\n\n🚩 *Ejemplo*' + usedPrefix + command + ' delete* Para eliminar correos electrónicos')
+await m.reply(teks || '📖 *No hay mensajes*' + '\n\n🚩 ' + '!' + command + ' delete Para eliminar correos electrónicos')
 } catch (e) {
 await m.reply(eror)
 }
@@ -54,7 +54,7 @@ try {
 delete conn.dropmail[id];
 await conn.reply(m.chat, '✅ *Correo eliminado*', m, fake, )
 } catch (e) {
-await m.reply(eror)
+await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 }}}
 
 }
