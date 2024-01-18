@@ -1,6 +1,6 @@
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply(m.chat, `🚩 *Ejemplo de uso*\n\n!${command} Hola, ${saludo} @${m.sender.split`@`[0]} ${saludo}`, m, fake, )
+if (!text) return m.reply(m.chat, `🚩 *Ejemplo de uso*\n\n!${command} Hola @${m.sender.split`@`[0]} Hola 😽`, m, fake, )
 let cm = copy(m)
 let who
 
