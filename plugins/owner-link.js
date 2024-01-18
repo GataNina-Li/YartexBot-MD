@@ -1,4 +1,4 @@
- let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
+/* let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
 const grupo = `https://chat.whatsapp.com/H4LfDJD3fEk6bXwnUDK5Bg`
 let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
@@ -27,3 +27,4 @@ handler.command = ['spamgp']
 handler.owner = true
 
 export default handler
+*/
