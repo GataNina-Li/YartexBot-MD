@@ -1,6 +1,6 @@
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply(`*⚠️ USO DEL COMANDO*\n\n*${usedPrefix + command}* hola @${m.sender.split`@`[0]} hi`, null, { mentions: [m.sender] })
+if (!text) return m.reply(m.chat, `🚩 *Ejemplo de uso*\n\n!${command} Hola, ${saludo} @${m.sender.split`@`[0]} ${saludo}`, m, fake, )
 let cm = copy(m)
 let who
 
@@ -8,7 +8,7 @@ if (text.includes('@0')) who = '0@s.whatsapp.net'
 else if (m.isGroup) who = cm.participant = m.mentionedJid[0]
 else who = m.chat
 
-if (!who) return m.reply(`*⚠️ USO DEL COMANDO*\n\n*${usedPrefix + command}* hola @${m.sender.split`@`[0]} hi`, null, { mentions: [m.sender] })
+if (!who) return m.reply(m.chat, `🚩 *Ejemplo de uso*\n\n!${command}* Hola, ${saludo} @${m.sender.split`@`[0]} ${saludo}`, m, fake, )
 cm.key.fromMe = false
  
 cm.message[m.mtype] = copy(m.msg)
@@ -19,10 +19,12 @@ conn.fakeReply(m.chat, real.join(sp).trimStart(), who, fake.trimEnd(), m.isGroup
 
 }
 handler.help = ['fake']
-handler.tags = ['implementos']
+handler.tags = ['tools']
 handler.command = /^(fitnah|fakereply|fake)$/
+
 handler.diamond = true
 handler.register = true
+handler.group = true
                               
 export default handler
 
