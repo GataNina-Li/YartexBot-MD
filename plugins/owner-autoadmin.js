@@ -1,4 +1,5 @@
-var handler = async(m, { conn, isAdmin ) => {
+//Lleva una llave "}" sino va a mandar error.
+var handler = async(m, { conn, isAdmin }) => {
 
 if (m.fromMe) return
 if (isAdmin) return conn.reply(m.chat, '✅📌 *USTED YA ES ADMIN*', m, fake, )
