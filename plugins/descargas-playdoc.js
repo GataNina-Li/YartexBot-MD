@@ -104,7 +104,6 @@ await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 
 } catch {
 return conn.reply(m.chat, '🚩 *Inténtelo de nuevo*', m, fake, )}
-}
   
 }
 handler.help = ['play3', 'play4']
