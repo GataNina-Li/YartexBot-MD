@@ -4,24 +4,23 @@ import path from 'path'
 
 var handler = async (m, { text, conn, usedPrefix, command }) => {
 
-if (!text) return conn.reply(m.chat, `🎌 *Ingresa el enlace de una página*\n\nEjemplo, !get https://github.com`, m, fakes, )
-
+if (!text) { return conn.reply(m.chat, `🎌 *Ingresa el enlace de una página*\n\nEjemplo, !get https://github.com`, m, fakes, )}
 
 if (!/^https?:\/\//.test(text)) {
-text = 'http://' + text;
+text = 'http://' + text
 } else if (/^https:\/\//.test(text)) {
-text = text;
+text = text
 }
 
 let _url = new URL(text)
 let url = global.API(_url.origin, _url.pathname, Object.fromEntries(_url.searchParams.entries()), 'APIKEY')
 
-let maxRedirects = 999999;
-let redirectCount = 0;
-let redirectUrl = url;
+let maxRedirects = 999999
+let redirectCount = 0
+let redirectUrl = url
 
 while (redirectCount < maxRedirects) {
-let res = await fetch(redirectUrl);
+let res = await fetch(redirectUrl)
 
 if (res.headers.get('content-length') > 100 * 1024 * 1024 * 1024) {
 res.body.destroy()
