@@ -14,4 +14,4 @@ handler.command = ['vporno', 'xxxvideo']
 handler.help = ['vporno', 'xxxvideo']
 handler.register = true
 
-export default handler /*
+export default handler */
