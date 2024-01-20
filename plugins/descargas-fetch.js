@@ -4,9 +4,8 @@ import path from 'path'
 
 var handler = async (m, { text, conn, usedPrefix, command }) => {
 
-if (!text) {
-return conn.reply(m.chat, `🎌 *Ingresa el enlace de una página*\n\nEjemplo, !get https://github.com`, m, fakes, )
-}
+if (!text) return conn.reply(m.chat, `🎌 *Ingresa el enlace de una página*\n\nEjemplo, !get https://github.com`, m, fakes, )
+
 
 if (!/^https?:\/\//.test(text)) {
 text = 'http://' + text;
