@@ -1,6 +1,6 @@
 var handler = async m => 
 
-m.reply(` 
+conn.reply(m.chat, ` 
 ┏━━━━━━━━━━━━━━━━━━━━┅
 ┇                   *「 ANIME」*       
 ┣━━━━━━━━━━━━━━━━━━━━┅
@@ -16,12 +16,13 @@ m.reply(`
 ┃ ❖ https://pendekarsubs.us
 ┃ ❖ https://myanimelist.net
 ┗━━━━━━━━━━━━━━━━━━━━┅
- `.trim())
+ `, m, fake, )
  
- handler.help = ['animelink']
- handler.tags = ['anime']
- handler.command = /^animelink$/i
+handler.help = ['animelink']
+handler.tags = ['anime']
+handler.command = /^animelink$/i
  
- handler.limit = true
+handler.limit = true
+handler.register = true
  
- export default handler 
+export default handler 
