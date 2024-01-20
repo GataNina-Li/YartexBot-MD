@@ -6,7 +6,7 @@ import {youtubedl, youtubedlv2} from '@bochilteam/scraper'
 
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
-if (!text) return conn.reply(m.chat, `🎌 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Banners - Someone To You`,  m, fake, )
+if (!text) return conn.reply(m.chat, `🎌 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} New West - Those Eyes`,  m, fake, )
 m.react(rwait)
 
 try {
@@ -109,6 +109,9 @@ return conn.reply(m.chat, '🚩 *Inténtelo de nuevo*', m, fake, )}
 handler.help = ['play3', 'play4']
 handler.tags = ['descargas']
 handler.command = /^(playdoc|playdoc2|play3|play4)$/i
+
+handler.limit = true
+handler.register = true
 
 export default handler
 
