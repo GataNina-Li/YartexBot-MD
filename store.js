@@ -21,7 +21,7 @@ global.refran = fs.readFileSync('./storage/imagenes/refran.jpg')
 global.linksjpg = fs.readFileSync('./storage/imagenes/Links.jpg')
 
 var img = 'https://telegra.ph/file/d837e687c894ff494b8d0.jpg'; var img1 = 'https://telegra.ph/file/0cdc7553a40170768bb62.jpg'; var img2 = 'https://telegra.ph/file/f65120cc170ec0bd17954.jpg'; var img3 = 'https://telegra.ph/file/cee466f95093295d0e813.jpg'; var img4 = 'https://telegra.ph/file/ee93c98e87acf5d9209df.jpg'; var img5 = 'https://telegra.ph/file/27f4c77f58c19efefb4f6.jpg'
-var img6 = 'https://telegra.ph/file/e69365c893e373d9b9b2a.jpg'; var img7 = 'https://telegra.ph/file/74c4b176f5cdc4961ee3f.jpg'; var img8 = 'https://telegra.ph/file/57205e403964eff285ee6.jpg'; var img9 = 'https://telegra.ph/file/44356ed9419c4e87ed9f3.jpg'; var imag10 = 'https://telegra.ph/file/27f4c77f58c19efefb4f6.jpg'
+var img6 = 'https://telegra.ph/file/e69365c893e373d9b9b2a.jpg'; var img7 = 'https://telegra.ph/file/74c4b176f5cdc4961ee3f.jpg'; var img8 = 'https://telegra.ph/file/57205e403964eff285ee6.jpg'; var img9 = 'https://telegra.ph/file/44356ed9419c4e87ed9f3.jpg'; var img10 = 'https://telegra.ph/file/27f4c77f58c19efefb4f6.jpg'
 
 global.ImgAll = [img, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
 
