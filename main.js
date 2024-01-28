@@ -135,7 +135,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : false,
 mobile: MethodMobile, 
-browser: ['CuriosityBot-MD ッ', 'Waterfox', '2.0.0'],
+browser: ['CuriosityBot-MD', 'Chrome', '20.0.04'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
