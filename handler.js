@@ -552,7 +552,7 @@ this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 console.error(e)
 }}
 
-let fotos = sityImg.getRandom()
+let fotos = ImgAll.getRandom()
 
 global.dfail = (type, m, conn) => {
 
