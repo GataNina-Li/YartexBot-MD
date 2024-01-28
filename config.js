@@ -9,7 +9,6 @@ global.owner = [['524531287294', 'CuriosityBot-MD 🍧', true], ['573183650526']
 global.botNumberCode = '' //Ejemplo: +59309090909
 global.confirmCode = ''
 
-global.animxscans = ['5214531287294']
 global.suittag = ['5214531287294']
 global.mods = []
 global.prems = []
@@ -26,7 +25,7 @@ global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
 global.lenguaje = 'Español'
 global.menudi = ['⛶','❏','⫹⫺']
-global.dev = 'Zam (:'
+global.dev = 'Azami ~ ¿Zam?'
 global.devnum = '+52 1 729 488 8993'
 
 let file = fileURLToPath(import.meta.url)
