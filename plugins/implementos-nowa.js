@@ -3,7 +3,7 @@ var handler = async (m, {conn, text, usedPrefix, command}) => {
 const regex = /x/g
   
 if (!text) return conn.reply(m.chat, '🚩 *Número faltante*', m, fake, )
-if (!text.match(regex)) return conn.reply(m.chat, `🚩 *Ejemplo de uso*\n${usedPrefix + command} 5217299999x*`, m, fake, )
+if (!text.match(regex)) return conn.reply(m.chat, `🚩 *Ejemplo de uso*\n!${command} 5217299999x`, m, fake, )
 let random = text.match(regex).length
 let total = Math.pow(10, random)
 let array = []
@@ -15,12 +15,12 @@ let info = await conn.fetchStatus(result).catch((_) => {})
 array.push({exists: true, jid: result, ...info})
 } else {
 array.push({exists: false, jid: result})}}
-let txt = '🚩 *Registrados*\n\n' + array.filter((v) => v.exists).map((v) => `${readMore}• Nro: wa.me/${v.jid.split('@')[0]}\n*• Bio:* ${v.status || 'Sin descripcion'}\n*• Fecha:* ${formatDate(v.setAt)}`).join('\n\n') + '\n\n*No registrados*\n\n' + array.filter((v) => !v.exists).map((v) => v.jid.split('@')[0]).join('\n')
+let txt = '🚩 *Registrados*\n\n' + array.filter((v) => v.exists).map((v) => `• Nro: wa.me/${v.jid.split('@')[0]}\n*• Bio:* ${v.status || 'Sin descripcion'}\n*• Fecha:* ${formatDate(v.setAt)}`).join('\n\n') + '\n\n*No registrados*\n\n' + array.filter((v) => !v.exists).map((v) => v.jid.split('@')[0]).join('\n')
 conn.reply(m.chat, txt, m, fake, )
 
 }
 handler.help = ['nowa']
-handler.tags = ['implementos']
+handler.tags = ['tools']
 handler.command = /^nowa$/i
 
 export default handler
