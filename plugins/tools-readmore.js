@@ -3,11 +3,11 @@ var handler = async (m, { conn, text }) => {
 let [l, r] = text.split`|`
 if (!l) l = ''
 if (!r) r = ''
-conn.reply(m.chat, l + readMore + r, m)
+conn.reply(m.chat, l + readMore + r, m, fake, )
 
 }
 handler.help = ['spoiler']
-handler.tags = ['implementos']
+handler.tags = ['tools']
 handler.command = /^(spoiler|hidetext|readmore|selengkapnya)$/i
 
 export default handler
