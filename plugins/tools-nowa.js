@@ -24,6 +24,9 @@ handler.help = ['nowa']
 handler.tags = ['tools']
 handler.command = /^nowa$/i
 
+handler.register = true
+handler.limit = true
+
 export default handler
 
 function formatDate(n, locale = 'id') {
