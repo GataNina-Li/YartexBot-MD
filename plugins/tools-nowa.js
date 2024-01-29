@@ -11,6 +11,7 @@ for (let i = 0; i < total; i++) {
 let list = [...i.toString().padStart(random, '0')]
 let result = text.replace(regex, () => list.shift()) + '@s.whatsapp.net'
 if (await conn.onWhatsApp(result).then((v) => (v[0] || {}).exists)) {
+conn.reply(m.chat, '⏰ Espere un momento', m, fake,
 let info = await conn.fetchStatus(result).catch((_) => {})
 array.push({exists: true, jid: result, ...info})
 } else {
