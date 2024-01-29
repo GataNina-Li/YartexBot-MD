@@ -15,6 +15,7 @@ let info = await conn.fetchStatus(result).catch((_) => {})
 array.push({exists: true, jid: result, ...info})
 } else {
 array.push({exists: false, jid: result})}}
+conn.reply(m.chat, '⏰ Espere un momento', m, fake, )
 let txt = '🚩 *Registrados*\n\n' + array.filter((v) => v.exists).map((v) => `• Nro: wa.me/${v.jid.split('@')[0]}\n*• Bio:* ${v.status || 'Sin descripcion'}\n*• Fecha:* ${formatDate(v.setAt)}`).join('\n\n') + '\n\n*No registrados*\n\n' + array.filter((v) => !v.exists).map((v) => v.jid.split('@')[0]).join('\n')
 conn.reply(m.chat, txt, m, fake, )
 
