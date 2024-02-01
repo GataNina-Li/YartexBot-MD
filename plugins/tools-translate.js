@@ -20,7 +20,7 @@ try {
 let lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/${lang}?apikey=${lolkeysapi}&text=${text}`)
 let loll = await lol.json()
 let result2 = loll.result.translated
-await conn.reply(m.chat, '*Traducción:* ' + result2, fake, )
+await conn.reply(m.chat, '*Traducción:* ' + result2, m, fake, )
 } catch {
 await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 }}
