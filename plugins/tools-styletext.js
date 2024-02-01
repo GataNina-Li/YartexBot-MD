@@ -3,12 +3,15 @@ import { JSDOM } from 'jsdom'
 
 var handler = async (m, { conn, text }) => {
 
-conn.reply(m.chat, Object.entries(await stylizeText(text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text)).map(([name, value]) => `*${name}*\n${value}`).join`\n\n`, m)
+conn.reply(m.chat, Object.entries(await stylizeText(text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text)).map(([name, value]) => `*${name}*\n${value}`).join`\n\n`, m, fake, )
 
 }
 handler.help = ['style']
-handler.tags = ['implementos']
+handler.tags = ['tools']
 handler.command = /^(style(text)?)$/i
+
+handler.limit = true
+handler.register = true
 
 export default handler
 
