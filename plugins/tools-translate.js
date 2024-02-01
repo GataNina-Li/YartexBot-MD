@@ -27,7 +27,7 @@ await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 }}}
 
 if (command == 'codesidioma') {
-let codesidioma = '🇲🇽 *Español:* es\n *Welsh:* cy\n*Vietnamese:* vi\n*Turkish:* tr\n*Thai:* th\n*Tamil:* ta\n*Swedish:* sv\n*Swahili:* sw\n*Slovak:* sk\n*Serbian:* sr\n*Russian:* ru\n*Romanian:* ro\n*Portuguese:* pt\n*Polish:* pl\n*Norwegian:* no\n*Macedonian:* mk\n*Latvian:* lv\n*Latin:* la\n*Korean:* ko\n*Japanese:* ja\n*Italian:* it\n*Indonesian:* id\n*Icelandic:* is\n*Hungarian:* hu\n*Hindi:* hi\n*Haitian Creole:* ht\n*Greek:* el\n*German:* de\n*French:* fr\n*Finnish:* fi\n*Esperanto:* eo\n*English:* en\n*Dutch:* nl\n*Danish:* da\n*Czech:* cs\n*Croatian:* hr\n*Chinese:* zh\n*Catalan:* ca\n*Armenian:* hy\n*Arabic:* ar\n*Albanian:* sq\n*Afrikaans:* af'
+let codesidioma = '🇲🇽 *Español:* es\n🏴󠁧󠁢󠁷󠁬󠁳󠁿 *Welsh:* cy\n🇻🇳 *Vietnamese:* vi\n🇹🇷 *Turkish:* tr\n🇹🇭 *Thai:* th\n*Tamil:* ta\n*Swedish:* sv\n*Swahili:* sw\n*Slovak:* sk\n*Serbian:* sr\n*Russian:* ru\n*Romanian:* ro\n*Portuguese:* pt\n*Polish:* pl\n*Norwegian:* no\n*Macedonian:* mk\n*Latvian:* lv\n*Latin:* la\n*Korean:* ko\n*Japanese:* ja\n*Italian:* it\n*Indonesian:* id\n*Icelandic:* is\n*Hungarian:* hu\n*Hindi:* hi\n*Haitian Creole:* ht\n*Greek:* el\n*German:* de\n*French:* fr\n*Finnish:* fi\n*Esperanto:* eo\n*English:* en\n*Dutch:* nl\n*Danish:* da\n*Czech:* cs\n*Croatian:* hr\n*Chinese:* zh\n*Catalan:* ca\n*Armenian:* hy\n*Arabic:* ar\n*Albanian:* sq\n*Afrikaans:* af'
 conn.reply(m.chat, codesidioma, m, fake, )
 }
 
