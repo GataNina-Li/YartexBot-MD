@@ -14,13 +14,13 @@ text = args.join(' ')}
 if (!text && m.quoted && m.quoted.text) text = m.quoted.text
 try {
 let result = await translate(`${text}`, { to: lang, autoCorrect: true })
-await conn.reply(m.chat, '*Traducción:*\n ' + result.text, m, fake, )
+await conn.reply(m.chat, '*Traducción:* ' + result.text, m, fake, )
 } catch {
 try {
 let lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/${lang}?apikey=${lolkeysapi}&text=${text}`)
 let loll = await lol.json()
 let result2 = loll.result.translated
-await conn.reply(m.chat, '*Traducción:*\n ' + result2, fake, )
+await conn.reply(m.chat, '*Traducción:* ' + result2, fake, )
 } catch {
 await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 }}
