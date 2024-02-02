@@ -91,13 +91,14 @@ let contacto = `🎌 *Contacto - Colaboradores*
 ⬡ *Cpw*
 @573003025991`
 
-m.reply(contacto, m.chat, { mentions: conn.parseMention(contacto)})
-}
+m.reply(contacto, m.chat, { mentions: conn.parseMention(contacto)})}
 }
   
 }
-handler.help = ['tqto']
+handler.help = ['tqto', 'creditos', 'credits', 'thanks', 'thanksto']
 handler.tags = ['info']
 handler.command = /^(credits|creditos|credit|thanks|thanksto|tqto)$/i
+
+handler.register = true
 
 export default handler
