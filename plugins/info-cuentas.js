@@ -1,6 +1,5 @@
 var handler = async (m, { conn, command }) => {
 
-
 if (command == 'cuentas' || command == 'cuentasoficiales' || command == 'cuentasof') {
 let str = `🚩 *CUENTAS*
 
@@ -23,7 +22,10 @@ await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { ti
 }
 
 if (command == 'grupos') {
-m.reply(wm)
+let text = `🚩 *Grupos oficiales*
+${wm} 🍧
+${nn}`
+conn.reply(m.chat, text, m, fake, )
 }
 
 }
