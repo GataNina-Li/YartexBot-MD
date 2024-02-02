@@ -10,7 +10,7 @@ return { name, ...val }
  
 stats = stats.sort((a, b) => b.total - a.total)
 var handlers = stats.slice(0, 10).map(({ name, total, last }) => {
-return `● *Comando* : *${name}*\n● *Usos* : ${total}`
+return `⬡ *Comando* : *${name}*\n⬡ *Usos* : ${total}`
 }).join`\n\n`
 
 conn.reply(m.chat, handlers, m, fake, )
@@ -28,7 +28,7 @@ conn.reply(m.chat, `${saludo}
 }
 
 }
-handler.help = ['dash', 'dashboard', 'views']
+handler.help = ['dash', 'dashboard', 'views', 'database', 'usuarios', 'user']
 handler.tags = ['info']
 handler.command = ['dashboard', 'dash', 'views', 'database', 'usuarios', 'user']
 
