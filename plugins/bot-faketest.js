@@ -26,7 +26,7 @@ conn.reply(m.chat, wm, m, fgif)
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^(fake2img|fakeloc|sendurl)$/i
+handler.command = /^(fake2img|fakeloc|sendurl|fgif)$/i
 
 handler.rowner = true
 
