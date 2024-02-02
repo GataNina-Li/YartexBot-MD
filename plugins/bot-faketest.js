@@ -31,10 +31,14 @@ if (command == 'fdocs') {
 conn.reply(m.chat, wm, fdocs)
 }
 
+if (command == 'fgif') {
+conn.reply(m.chat, wm, fkoto)
+}
+
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^(fake2img|fakeloc|sendurl|fgif|fgclink)$/i
+handler.command = /^(fake2img|fakeloc|sendurl|fgif|fgclink)|fdocs|fkoto$/i
 
 handler.rowner = true
 
