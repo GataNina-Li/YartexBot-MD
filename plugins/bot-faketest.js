@@ -50,11 +50,19 @@ conn.reply(m.chat, wm, fkontak)
 if (command == 'faketick') {
 conn.reply(m.chat, wm, faketick)
 }
+
+if (command == 'fakeimg') {
+conn.reply(m.chat, wm, fakeimg)
+}
+
+if (command == 'fakemsg') {
+conn.reply(m.chat, wm, fakemsg)
+}
  
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll|fkontak|faketick$/i
+handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll|fkontak|faketick|fakeimg|fakemsg$/i
 
 handler.rowner = true
 
