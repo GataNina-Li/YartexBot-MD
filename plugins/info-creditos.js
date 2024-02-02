@@ -16,6 +16,7 @@ https://github.com/AzamiJs
 ⬡ *Jose*
 ⬡ *Katashi*
 ⬡ *Daniel*
+⬡ *X_Arumiii*
 ⬡ *Wilson*
 ⬡ *Cpw*
 
@@ -39,6 +40,7 @@ let texto = `🚩 *GitHub - Colaboradores*
 ⬡ https://github.com/KimdanBot-MD
 ⬡ https://github.com/KatashiFukushima
 ⬡ https://github.com/MoonContentCreator
+⬡ https://github.com/ArizzVal
 ⬡ https://github.com/WilsonWaoz
 ⬡ https://github.com/WorkCwp
 
@@ -79,6 +81,9 @@ let contacto = `🎌 *Contacto - Colaboradores*
 
 ⬡ *Daniel*
 @33760536110
+
+⬡ *X_Arumiii*
+@5215610314499
 
 ⬡ *Wilson*
 @5492964650915
