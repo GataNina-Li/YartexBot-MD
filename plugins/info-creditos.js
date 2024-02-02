@@ -23,10 +23,12 @@ _Envie "colaboradores" para obtener el enlace del perfil de los colaboradores_`
 
 conn.reply(m.chat, tqto, m, fake, )
 
-if (/^colaboradores$/i.test(m.text) ) {
-m.reply(wm)
-}
+handler.before = async m => {
 
+if (/^colaboradores|Colaboradores$/i.test(m.text) ) {
+m.reply(wm)
+}}
+  
 }
 handler.help = ['tqto']
 handler.tags = ['info']
