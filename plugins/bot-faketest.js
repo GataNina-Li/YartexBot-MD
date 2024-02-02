@@ -31,7 +31,7 @@ if (command == 'fdocs') {
 conn.reply(m.chat, wm, fdocs)
 }
 
-if (command == 'fgif') {
+if (command == 'fkoto') {
 conn.reply(m.chat, wm, ftoko)
 }
 
