@@ -38,11 +38,15 @@ conn.reply(m.chat, wm, ftoko)
 if (command == 'ftextt') {
 conn.reply(m.chat, wm, ftextt)
 }
+
+if (command == 'fpoll') {
+conn.reply(m.chat, wm, fpoll)
+}
  
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt$/i
+handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll$/i
 
 handler.rowner = true
 
