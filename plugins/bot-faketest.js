@@ -1,3 +1,5 @@
+//Estos mensajes fake se encuentran en bot-allfake.js
+
 import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
@@ -5,7 +7,7 @@ var handler = async(m, { conn, text, usedPrefix, command }) => {
 
 if (command == 'fakelist' || command == 'listafake') {
 let texto = ``
-conn.reply(m.chat, texto, m, fakes, )
+conn.reply(m.chat, texto, m, fake, )
 }
  
 if (command == 'fakeloc') {
