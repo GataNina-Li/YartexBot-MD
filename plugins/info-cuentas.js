@@ -11,14 +11,19 @@ ${ig}
 ⬡ *YouTube*
 ${yt}
 
-⬡ WhatsApp Bot
-${linkwabot}`
+⬡ *WhatsApp Bot*
+${linkwabot}
+
+⬡ *Email*
+${email}`
 
 await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
                     
 }
-handler.tags = ['main']
+handler.help = ['cuentasoficiales', 'cuentasofc', 'cuentas']
+handler.tags = ['info']
 handler.command = /^cuentasoficiales|cuentasofc|cuentas$/i
-handler.exp = 35
+
 handler.register = true
+
 export default handler
