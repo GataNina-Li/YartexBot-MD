@@ -6,7 +6,31 @@ const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/b
 var handler = async(m, { conn, text, usedPrefix, command }) => {
 
 if (command == 'fakelist' || command == 'listafake') {
-let texto = ``
+let texto = `⬣ *LISTA FAKES*
+
+Total Fakes : 20 Fakes
+
+⬡ *fakeloc*
+⬡ *fake2img*
+⬡ *sendurl*
+⬡ *fgif*
+⬡ *fgclink*
+⬡ *fdocs*
+⬡ *ftoko*
+⬡ *ftextt*
+⬡ *fpoll*
+⬡ *fkontak*
+⬡ *faketick*
+⬡ *estiloaudio*
+⬡ *fvideo*
+⬡ *fproducto*
+⬡ *fproduct*
+⬡ *fakevovid*
+⬡ *fakevoimg*
+⬡ *twa*
+⬡ *fpay*
+⬡ *fakemek*
+────────────────────────`
 conn.reply(m.chat, texto, m, fake, )
 }
  
