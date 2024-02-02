@@ -40,7 +40,9 @@ let texto = `🚩 *GitHub Colaboradores*
 ⬡ https://github.com/KatashiFukushima
 ⬡ https://github.com/MoonContentCreator
 ⬡ https://github.com/WilsonWaoz
-⬡ https://github.com/WorkCwp`
+⬡ https://github.com/WorkCwp
+
+_Envie "cc" para obtener el contacto de los colaboradores_`
 conn.reply(m.chat, texto, m, fake, )
 }
 
