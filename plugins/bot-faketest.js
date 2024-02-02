@@ -5,7 +5,7 @@ var handler = async(m, { conn, text, usedPrefix, command }) => {
 
 if (command == 'fakelist' || command == 'listafake') {
 let texto = ``
-conn.reply(m.chat, texto, fake, )
+conn.reply(m.chat, texto, m, fakes, )
 }
  
 if (command == 'fakeloc') {
