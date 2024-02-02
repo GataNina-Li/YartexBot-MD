@@ -41,8 +41,9 @@ let texto = `🚩 *GitHub - Colaboradores*
 ⬡ https://github.com/MoonContentCreator
 ⬡ https://github.com/WilsonWaoz
 ⬡ https://github.com/WorkCwp
-m.reply(kicktext, m.chat, { mentions: conn.parseMention(kicktext)}) 
+
 _Envie "cc" para obtener el contacto de los colaboradores_`
+
 conn.reply(m.chat, texto, m, fake, )
 }
 
