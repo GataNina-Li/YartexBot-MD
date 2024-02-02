@@ -17,7 +17,7 @@ conn.sendMessage(m.chat, {image: imagen1, caption: wm, mentions: [...text.matchA
 
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^((a|a)a)$/i
+handler.command = /^(fake2img|fakeloc)$/i
 
 handler.rowner = true
 
