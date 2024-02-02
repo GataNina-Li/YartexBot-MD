@@ -5,19 +5,19 @@ let tqto = `🚩 *Desarrollador*
 https://github.com/AzamiJs
 
 🎌 *Colaboradores*
-⬡ *Mario* (Elrebelde21)
-⬡ *GataDios* (GataNina-Li)
-⬡ *Endymion* (ReyEndymion)
-⬡ *Wotchito* (Aleixon127271)
-⬡ *HJ* (HACHEJOTA)
-⬡ *Ender* (EnderLB)
-⬡ *Ax* (Jxtxn17)
-⬡ *Wilmer* (Wilsmac)
-⬡ *Jose* (KimdanBot-MD)
-⬡ *Katashi* (KatashiFukushima)
-⬡ *Daniel* (MoonContentCreator)
-⬡ *Wilson* (WilsonWaoz)
-⬡ *Cpw* (Criwilop)
+⬡ *Mario* 
+⬡ *GataDios*
+⬡ *Endymion*
+⬡ *Wotchito*
+⬡ *HJ*
+⬡ *Ender*
+⬡ *Ax*
+⬡ *Wilmer*
+⬡ *Jose*
+⬡ *Katashi*
+⬡ *Daniel*
+⬡ *Wilson*
+⬡ *Cpw*
 
 _Envie "colaboradores" para obtener el enlace del perfil de los colaboradores_`
 
@@ -26,7 +26,22 @@ conn.reply(m.chat, tqto, m, fake, )
 handler.before = async m => {
 
 if (/^colaboradores|Colaboradores$/i.test(m.text) ) {
-m.reply(wm)
+let texto = `🚩 *GitHub Colaboradores*
+
+⬡ https://github.com/elrebelde21
+⬡ https://github.com/GataNina-Li
+⬡ https://github.com/ReyEndymion
+⬡ https://github.com/
+⬡ https://github.com/HACHEJOTA
+⬡ https://github.com/EnderLB
+⬡ https://github.com/Jxtxn17
+⬡ https://github.com/Wilsmac
+⬡ https://github.com/KimdanBot-MD
+⬡ https://github.com/KatashiFukushima
+⬡ https://github.com/MoonContentCreator
+⬡ https://github.com/WilsonWaoz
+⬡ https://github.com/`
+conn.reply(m.chat, texto, m, fake, )
 }}
   
 }
