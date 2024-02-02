@@ -40,15 +40,15 @@ conn.reply(m.chat, wm, ftextt)
 }
 
 if (command == 'fliveLoc') {
-conn.reply(m.chat, wm, fliveLoc)
+conn.reply(m.chat, wm, m, fliveLoc)
 }
 
 if (command == 'fliveLoc2') {
-conn.reply(m.chat, wm, fliveLoc)
+conn.reply(m.chat, wm, m, fliveLoc2)
 }
 
 if (command == 'fliveLoc3') {
-conn.reply(m.chat, wm, fliveLoc)
+conn.reply(m.chat, wm, m, fliveLoc3)
 }
 
 /*if (command == 'fliveLoc') {
