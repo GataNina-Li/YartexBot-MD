@@ -25,7 +25,10 @@ if (command == 'grupos') {
 let text = `🚩 *Grupos oficiales*
 
 ${wm} 🍧
-${nn}`
+${nn}
+
+Multi Bots 💖
+${nnnn}`
 
 conn.reply(m.chat, text, m, fake, )
 }
