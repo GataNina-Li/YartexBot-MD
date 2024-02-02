@@ -41,14 +41,17 @@ let texto = `🚩 *GitHub - Colaboradores*
 ⬡ https://github.com/MoonContentCreator
 ⬡ https://github.com/WilsonWaoz
 ⬡ https://github.com/WorkCwp
-
+m.reply(kicktext, m.chat, { mentions: conn.parseMention(kicktext)}) 
 _Envie "cc" para obtener el contacto de los colaboradores_`
 conn.reply(m.chat, texto, m, fake, )
 }
 
 if (/^cc$/i.test(m.text) ) {
-let contacto = `🎌 *Contacto - Colaboradores*`
-m.reply(wm)
+let contacto = `🎌 *Contacto - Colaboradores* 
+
+⬡ *Gata Dios*
+@593968263524`
+m.reply(contacto, m.chat, { mentions: conn.parseMention(contacto)})
 }
 }
   
