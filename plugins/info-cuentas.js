@@ -41,6 +41,11 @@ ${group4}
 ⬡ *NovaBot - CuriosityBot*
 ${group5}
 
+⬡ *GataBot - CuriosityBot*
+${group6}
+
+⬡ *Curiosity - Criwilop*
+${group7}
 `
 
 conn.reply(m.chat, text, m, fake, )
