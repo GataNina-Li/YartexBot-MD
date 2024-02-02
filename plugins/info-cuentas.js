@@ -48,7 +48,15 @@ ${group6}
 ${group7}
 
 ⬡ *OnyxBot - CuriosityBot*
-${group8}`
+${group8}
+
+✨ *Canales oficiales*
+
+⬡ *CuriosityBot*
+${channel}
+
+⬡ *INFINITY-WA*
+${channel2}`
 
 conn.reply(m.chat, text, m, fake, )
 }
