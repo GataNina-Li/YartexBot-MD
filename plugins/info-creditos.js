@@ -31,7 +31,7 @@ let texto = `🚩 *GitHub Colaboradores*
 ⬡ https://github.com/elrebelde21
 ⬡ https://github.com/GataNina-Li
 ⬡ https://github.com/ReyEndymion
-⬡ https://github.com/
+⬡ https://github.com/WOTCHITO
 ⬡ https://github.com/HACHEJOTA
 ⬡ https://github.com/EnderLB
 ⬡ https://github.com/Jxtxn17
@@ -40,7 +40,7 @@ let texto = `🚩 *GitHub Colaboradores*
 ⬡ https://github.com/KatashiFukushima
 ⬡ https://github.com/MoonContentCreator
 ⬡ https://github.com/WilsonWaoz
-⬡ https://github.com/`
+⬡ https://github.com/WorkCwp`
 conn.reply(m.chat, texto, m, fake, )
 }}
   
