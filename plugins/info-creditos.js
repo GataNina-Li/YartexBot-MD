@@ -19,7 +19,7 @@ https://github.com/AzamiJs
 ⬡ *Wilson*
 ⬡ *Cpw*
 
-_Envie "colaboradores" para obtener el enlace del perfil de los colaboradores_`
+_Envie "colaboradores" para obtener el enlace del perfil de GitHub de los colaboradores_`
 
 conn.reply(m.chat, tqto, m, fake, )
 
