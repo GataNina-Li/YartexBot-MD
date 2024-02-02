@@ -9,6 +9,7 @@ let msg = await generateWAMessageFromContent(m.chat, { locationMessage: { degree
 
 conn.relayMessage(m.chat, msg.message, {})
 }
+
 if (command == 'fake2img') {
 conn.sendMessage(m.chat, {image: imagen1, caption: wm, mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": global.nn, "sourceUrl": global.nn}}}, {quoted: fproducto})
 }
@@ -16,6 +17,10 @@ conn.sendMessage(m.chat, {image: imagen1, caption: wm, mentions: [...text.matchA
 if (command == 'sendurl') {
 let str = '*🍧 CuriosityBot-MD*'
 await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }})
+}
+
+if (command == 'fgif') {
+conn.reply(m.chat, wm, m, fgif)
 }
 
 }
