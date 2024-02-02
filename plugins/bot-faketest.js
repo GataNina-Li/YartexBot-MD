@@ -20,7 +20,7 @@ await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLarg
 }
 
 if (command == 'fgif') {
-conn.reply(m.chat, wm, m, fgif)
+conn.reply(m.chat, wm, fgif)
 }
 
 }
