@@ -51,7 +51,10 @@ if (/^cc$/i.test(m.text) ) {
 let contacto = `🎌 *Contacto - Colaboradores* 
 
 ⬡ *Gata Dios*
-@593968263524`
+@593968263524
+
+⬡ *ReyEndymion*
+@5215517489568`
 m.reply(contacto, m.chat, { mentions: conn.parseMention(contacto)})
 }
 }
