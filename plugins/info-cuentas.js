@@ -11,7 +11,7 @@ ${ig}
 ⬡ *YouTube*
 ${yt}`
 
-await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: 'CURIOSITY - CUENTAS', thumbnailUrl: 'https://telegra.ph/file/02c0a5281854538488c4c.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: '🎌 CURIOSITY - CUENTAS', thumbnailUrl: 'https://telegra.ph/file/c66d37b52b1306b4cfe4f.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
                     
 }
 handler.tags = ['main']
