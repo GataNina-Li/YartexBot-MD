@@ -64,13 +64,33 @@ conn.reply(m.chat, wm, fproducto)
 }
 
 if (command == 'fproduct') {
-conn.reply(m.chat, wm, fproducto2)
+conn.reply(m.chat, wm, fproduct)
 }
+
+if (command == 'fakevovid') {
+conn.reply(m.chat, wm, fakevovid)
+}
+
+if (command == 'fakevoimg') {
+conn.reply(m.chat, wm, fakevoimg)
+}
+
+if (command == 'fpay') {
+conn.reply(m.chat, wm, fpay)
+}
+
+if (command == 'twa') {
+conn.reply(m.chat, wm, twa)
+}
+
+if (command == 'fakemek') {
+conn.reply(m.chat, wm, fakemek)
+ }
  
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll|fkontak|faketick|estiloaudio|fvideo|fproducto|fproduct$/i
+handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll|fkontak|faketick|estiloaudio|fvideo|fproducto|fproduct|fakevovid|fakevoimg|fpay|twa|fakemek$/i
 
 handler.rowner = true
 
