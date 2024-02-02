@@ -31,7 +31,7 @@ if (command == 'fdocs') {
 conn.reply(m.chat, wm, fdocs)
 }
 
-if (command == 'fkoto') {
+if (command == 'ftoko') {
 conn.reply(m.chat, wm, ftoko)
 }
 
