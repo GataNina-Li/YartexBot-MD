@@ -63,7 +63,16 @@ let contacto = `🎌 *Contacto - Colaboradores*
 @524437863111
 
 ⬡ *Ender*
-@50558124470`
+@50558124470
+
+⬡ *Jxjxn17*
+@51929972576
+
+⬡ *Wilmer*
+@50258115623
+
+⬡ *Jose*
+@573173090446`
 m.reply(contacto, m.chat, { mentions: conn.parseMention(contacto)})
 }
 }
