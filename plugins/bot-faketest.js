@@ -38,23 +38,11 @@ conn.reply(m.chat, wm, ftoko)
 if (command == 'ftextt') {
 conn.reply(m.chat, wm, ftextt)
 }
-
-if (command == 'fliveLoc') {
-conn.reply(m.chat, wm, fliveLoc)
-}
-
-if (command == 'liveLoc') {
-conn.reply(m.chat, wm, fliveLoc2)
-}
-
-if (command == 'fLoc') {
-conn.reply(m.chat, wm, fliveLoc3)
-}
  
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fliveLoc|liveLoc|fLoc$/i
+handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt$/i
 
 handler.rowner = true
 
