@@ -14,7 +14,7 @@ ${yt}
 ⬡ WhatsApp Bot
 ${linkwabot}`
 
-await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnailUrl: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
                     
 }
 handler.tags = ['main']
