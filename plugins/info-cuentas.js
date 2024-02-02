@@ -9,9 +9,12 @@ ${md}
 ${ig}
 
 ⬡ *YouTube*
-${yt}`
+${yt}
 
-await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: '🎌 CURIOSITY - CUENTAS', thumbnailUrl: 'https://telegra.ph/file/c66d37b52b1306b4cfe4f.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+⬡ WhatsApp Bot
+${linkwabot}`
+
+await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnailUrl: imagen2, sourceUrl: channel, mediaType: 1, renderLargerThumbnail: true }}})
                     
 }
 handler.tags = ['main']
