@@ -2,13 +2,13 @@ var handler = async (m, { conn, command }) => {
 
 let str = `🚩 *CUENTAS*
 
-*Github*
-${git}
+⬡ *Github*
+${md}
 
-*Instagram*
+⬡ *Instagram*
 ${ig}
 
-*YouTube*
+⬡ *YouTube*
 ${yt}`
 
 await conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)}
