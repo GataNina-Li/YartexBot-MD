@@ -3,7 +3,7 @@ const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/b
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
- let text = wm
+ 
 const perfil_sc = await conn.profilePictureUrl(m.sender, "image").catch(_ => "https://i.pinimg.com/564x/da/4b/9b/da4b9b9a26146c50c951410d9d2f1037.jpg")
 
  let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
