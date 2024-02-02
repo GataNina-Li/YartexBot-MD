@@ -3,6 +3,11 @@ const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/b
 
 var handler = async(m, { conn, text, usedPrefix, command }) => {
 
+if (command == 'fakelist' || command == 'listafake') {
+let texto = ``
+conn.reply(m.chat, texto, fakes, )
+}
+ 
 if (command == 'fakeloc') {
 const perfil_sc = await conn.profilePictureUrl(m.sender, "image").catch(_ => "https://i.pinimg.com/564x/da/4b/9b/da4b9b9a26146c50c951410d9d2f1037.jpg")
 let msg = await generateWAMessageFromContent(m.chat, { locationMessage: { degreesLatitude: 0, degreesLongitude: 0, name: 'Github del bot', address: 'By Azami', url: md, isLive: true, accuracyInMeters: 0, speedInMps: 0, degreesClockwiseFromMagneticNorth: 2, comment: 'Hola', jpegThumbnail: imagen3 }}, { quoted: m })
@@ -90,7 +95,7 @@ conn.reply(m.chat, wm, fakemek)
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll|fkontak|faketick|estiloaudio|fvideo|fproducto|fproduct|fakevovid|fakevoimg|fpay|twa|fakemek$/i
+handler.command = /^listfake|listafake|fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll|fkontak|faketick|estiloaudio|fvideo|fproducto|fproduct|fakevovid|fakevoimg|fpay|twa|fakemek$/i
 
 handler.rowner = true
 
