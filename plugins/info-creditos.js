@@ -1,7 +1,7 @@
 var handler = async (m) => {
 
 let tqto = `🚩 *Desarrollador*
-*Azami:*
+⬡ *Azami*
 https://github.com/AzamiJs
 
 🎌 *Colaboradores*
@@ -17,7 +17,9 @@ https://github.com/AzamiJs
 ⬡ *Katashi* (KatashiFukushima)
 ⬡ *Daniel* (MoonContentCreator)
 ⬡ *Wilson* (WilsonWaoz)
-⬡ *Cpw* (Criwilop)`
+⬡ *Cpw* (Criwilop)
+
+_Envie "colaboradores" para obtener el enlace del perfil de los colaboradores_`
 
 conn.reply(m.chat, tqto, m, fake, )
 
