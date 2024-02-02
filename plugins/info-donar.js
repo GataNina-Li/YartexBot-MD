@@ -1,17 +1,23 @@
-let media = './storage/logos/Menu2.jpg'
-let handler = async (m, { conn, command }) => {
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let str = `*「 🌟 DONAR 🌟 」*
----------------------
-💙 *PAYPAL*
-🩵 *${paypal}*
----------------------
-👑 *Creador del bot*
-💬 wa.me/527294888993`
+var handler = async (m, { conn, command }) => {
 
-await conn.sendFile(m.chat, media, 'Curiosity.jpg', str, fkontak)}
-handler.tags = ['main']
+let str = `🚩 *Donar*
+
+⬡ *PAYPAL*
+${paypal}
+
+⬡ *Creador del bot*
+wa.me/5217294888993
+
+_Puedes apoyar el bot dando tu estrellita en nuestro repositorio_
+${md}`
+
+conn.reply(m.chat, str, m, fake, )
+
+}
+handler.help = ['donar', 'donate', 'donasi']
+handler.tags = ['info']
 handler.command = /^donar|donate|donasi$/i
-handler.exp = 35
+
 handler.register = true
+
 export default handler
