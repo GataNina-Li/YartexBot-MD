@@ -46,7 +46,9 @@ ${group6}
 
 ⬡ *Curiosity - Criwilop*
 ${group7}
-`
+
+⬡ *OnyxBot - CuriosityBot*
+${group8}`
 
 conn.reply(m.chat, text, m, fake, )
 }
