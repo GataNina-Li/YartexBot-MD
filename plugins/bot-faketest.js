@@ -64,7 +64,7 @@ conn.reply(m.chat, wm, fproducto)
 }
 
 if (command == 'fproduct') {
-conn.reply(m.chat, wm, fproduct)
+conn.reply(m.chat, wm, fproducto2)
 }
  
 }
