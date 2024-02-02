@@ -25,13 +25,23 @@ if (command == 'grupos') {
 let text = `🚩 *Grupos oficiales*
 
 ⬡ *CuriosityBot-MD*
-${nn}
+${group}
+
+⬡ *Enlaces Curiosity*
+${group2}
+
+⬡ *Curiosity Global*
+${group3}
+
+🎌 *Colaboraciones*
 
 ⬡ *Multi Bots*
-${nnnn}
+${group4}
 
 ⬡ *NovaBot - CuriosityBot*
-${nnnnn}`
+${group5}
+
+`
 
 conn.reply(m.chat, text, m, fake, )
 }
