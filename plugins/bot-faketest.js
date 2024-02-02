@@ -43,11 +43,11 @@ if (command == 'fliveLoc') {
 conn.reply(m.chat, wm, m, fliveLoc)
 }
 
-if (command == 'fliveLoc2') {
+if (command == 'liveLoc') {
 conn.reply(m.chat, wm, m, fliveLoc2)
 }
 
-if (command == 'fliveLoc3') {
+if (command == 'fLoc') {
 conn.reply(m.chat, wm, m, fliveLoc3)
 }
 
@@ -58,7 +58,7 @@ conn.reply(m.chat, wm, fliveLoc)
 }
 handler.help = ['listafakes']
 handler.tags = ['bot']
-handler.command = /^(fake2img|fakeloc|sendurl|fgif|fgclink)|fdocs|ftoko|ftextt|fliveLoc|fliveLoc2|fliveLoc3$/i
+handler.command = /^(fake2img|fakeloc|sendurl|fgif|fgclink)|fdocs|ftoko|ftextt|fliveLoc|liveLoc|fLoc$/i
 
 handler.rowner = true
 
