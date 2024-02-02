@@ -135,7 +135,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : false,
 mobile: MethodMobile, 
-browser: ['Ubuntu', 'Chrome', '108.0.1'],
+browser: ['Ubuntu', 'Firefox', '108.0.1'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
