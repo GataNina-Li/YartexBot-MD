@@ -11,8 +11,9 @@ ${ig}
 ⬡ *YouTube*
 ${yt}`
 
-await conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)}
-
+await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: 'CURIOSITY - CUENTAS', thumbnailUrl: 'https://telegra.ph/file/02c0a5281854538488c4c.jpg', sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+                    
+}
 handler.tags = ['main']
 handler.command = /^cuentasoficiales|cuentasofc|cuentas$/i
 handler.exp = 35
