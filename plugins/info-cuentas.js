@@ -24,13 +24,13 @@ await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { ti
 if (command == 'grupos') {
 let text = `🚩 *Grupos oficiales*
 
-*${wm}* 🍧
+⬡ *CuriosityBot-MD*
 ${nn}
 
-*Multi Bots* 💖
+⬡ *Multi Bots*
 ${nnnn}
 
-*NovaBot - CuriosityBot* ☁️
+⬡ *NovaBot - CuriosityBot*
 ${nnnnn}`
 
 conn.reply(m.chat, text, m, fake, )
