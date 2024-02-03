@@ -9,7 +9,7 @@ let biografiaBot = await conn.fetchStatus('5214531287294' +'@s.whatsapp.net').ca
 await conn.sendContactArray(m.chat, [
 [devnum, `${await conn.getName('5217294888993'+'@s.whatsapp.net')}`, `🍭 Creador`, dev, `No correo`, `🇲🇽 México`, `https://www.youtube.com/@Azami_19`, biografia],
 [`${conn.user.jid.split('@')[0]}`, `${await conn.getName(conn.user.jid)}`, `🍧 CuriosityBot-MD`, `📵 No hacer spam`, `No correo`, `🇲🇽 México`, `https://github.com/AzamiJs/CuriosityBot-MD`, biografiaBot]
-], fake)
+], m)
 } 
 
 handler.command = /^(sentcontact)/i
