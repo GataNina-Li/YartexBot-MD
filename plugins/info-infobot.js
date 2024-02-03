@@ -30,12 +30,12 @@ Azami
 
 ⬡ *Contacto* 
 ${ig}
---------------------------
+
 ⬡ *Versión actual*
  ${vs}
 
 ⬡ *Prefijo*
-"!"
+!
 
 ⬡ *Chats privados*
 ${chats.length - groups.length}
@@ -61,10 +61,7 @@ ${autoread ? 'Habilitado' : 'Deshabilitado'}
 ⬡ *Restrict*
 ${restrict ? 'Habilitado' : 'Deshabilitado'}`
 
-let aa = { quoted: m, userJid: conn.user.jid }
-let res = generateWAMessageFromContent (m.chat, {liveLocationMessage: {degreesLatitude: 0, degreesLongitude: 0, caption: info, secuenceNumber: "0", contextInfo: {mentionedJid: conn.parseMention()}}}, aa)
-
-conn.relayMessage(m.chat, res.message, {})
+conn.sendMessage(m.chat, {image: imagen1, caption: info, mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": global.nn, "sourceUrl": global.nn}}}, {quoted: fproducto})
 
 }
 handler.help = ['infobot']
