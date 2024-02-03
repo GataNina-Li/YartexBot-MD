@@ -5,7 +5,7 @@ var handler = async(m, { conn, command, usedPrefix}) => {
 
 try {
 
-let NotDetect = 'Not Detect'
+let NotDetect = 'No Detectado'
 let old = performance.now()
 let cpu = osu.cpu
 let cpuCore = cpu.count()
@@ -28,7 +28,7 @@ let _ramTotal = (ramTotal + ' MB')
 let neww = performance.now()
         
 
-var txt = `\t\t\t\t\t*「 Estado 」*
+var txt = `🚩 *Estado*
 
 *OS* : ${OS}
 *CPU Model* : ${cpuModel}
@@ -37,8 +37,8 @@ var txt = `\t\t\t\t\t*「 Estado 」*
 *Ram* : ${ramUsed} / ${_ramTotal}(${/[0-9.+/]/g.test(ramUsed) &&  /[0-9.+/]/g.test(ramTotal) ? Math.round(100 * (ramUsed / ramTotal)) + '%' : NotDetect})
 *Drive* : ${driveUsed} / ${driveTotal} (${drivePer})
 *Ping* : ${Math.round(neww - old)} ms
-*Internet IN* : *${netsIn}
-*Internet OUT* : *${netsOut}`
+*Internet IN* : ${netsIn}
+*Internet OUT* : ${netsOut}`
 
 conn.relayMessage(m.chat, { extendedTextMessage:{ text: txt, contextInfo: { externalAdReply: { title: '', mediaType: 1, previewType: 0, renderLargerThumbnail: true, thumbnailUrl: 'https://telegra.ph/file/ec8cf04e3a2890d3dce9c.jpg', sourceUrl: '' }}, mentions: [m.sender] }}, {})
 
