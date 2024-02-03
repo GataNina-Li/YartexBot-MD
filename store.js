@@ -42,6 +42,7 @@ global.group5 = 'https://chat.whatsapp.com/E9qJfvlLjENKAxnhII9rao' //Colaboraci�
 global.group6 = 'https://chat.whatsapp.com/KQtWZDVfosTKbheIlndLBN' //Colaboración GataBot - CuriosityBot
 global.group7 = 'https://chat.whatsapp.com/BXdy1TYcQ5NLs4Xy9jNavH' //Colaboración CuriosityBot - Criwilop
 global.group8 = 'https://chat.whatsapp.com/LBvl1TSDIm3LNZNKeT2bjb' //Colaboración OnyxBot - CuriosityBot
+global.group9 = 'https://chat.whatsapp.com/KY0EqhkVFZf7LDq4tJTa4c' //Colaboración CuriosityBot - SakuraBot
 global.channel = 'https://whatsapp.com/channel/0029VaB4w2ZFHWpwgyEe3w2k'
 global.channel2 = 'https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A'
 global.linkSity = [yt, ig, md, paypal, git, channel, channel2]
