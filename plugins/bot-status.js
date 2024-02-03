@@ -1,3 +1,5 @@
+//Credit for https://github.com/GataNina-Li/GataBot-MD & https://github.com/AzamiJs/CuriosityBot-MD
+
 import { performance } from 'perf_hooks'
 import osu from 'node-os-utils'
 
