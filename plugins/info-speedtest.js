@@ -11,7 +11,7 @@ let o
   
 try {
 
-o = await exec('python3 speed.py')
+o = await exec('python5 speed.py')
 } catch (e) {
 o = e
 } finally {
