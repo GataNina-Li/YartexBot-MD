@@ -50,13 +50,15 @@ await delay(1000 * 1)
 m.reply('npm start')
 }
 if (/^instalar2$/i.test(m.text) ) {
-conn.reply(m.chat, `🚩 *Instalación automática*\n\nTutoríal: https://youtu.be/smoWgg28wPk?si=1J9cm-QCCcZLHiQM\n\nEn breve se remitirán los comandos para la instalación automática por Termux`, m, fake, )
+conn.reply(m.chat, `🚩 *Instalación automática*\n\nTutoríal: \n\nEn breve se remitirán los comandos para la instalación automática por Termux`, m, fake, )
 await delay(2000 * 1)
 m.reply('termux-setup-storage')
+await delay(1000 * 1)
+m.reply('apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash')
 }
 
 if (/^vortexus$/i.test(m.text) ) {
-m.reply(wm)
+conn.reply(m.chat, '🚩 *Instalación por vortexus*\n\nTutoríal:  (nosotros no tenemos tutorial pero eso les puede ayudar)', m, fake )
 }
 }
 
