@@ -28,7 +28,9 @@ npm start
 
 _Utilice "comandos" para enviarle los comandos uno por uno_
 
-_Utilice "instalar2" para ver los otros tipos de instalación_`
+_Utilice "instalar2" para ver los otros tipos de instalación_
+
+_Utilice "vortexus" para instalar el bot mediante el hosting vortexus_`
 
 conn.reply(m.chat, texto, m, fake, )
 
@@ -48,10 +50,15 @@ await delay(1000 * 1)
 m.reply('npm start')
 }
 if (/^instalar2$/i.test(m.text) ) {
-conn.reply(m.chat, `🚩 *Instalación automática*\n\nTutoríal: \n\n_En breve se estarían enviando los comandos para la automática de Termux`, m, fake, )
+conn.reply(m.chat, `🚩 *Instalación automática*\n\nTutoríal: \n\nEn breve se remitirán los comandos para la instalación automática por Termux`, m, fake, )
 await delay(2000 * 1)
 m.reply('termux-setup-storage')
-}}
+}
+
+if (/^vortexus$/i.test(m.text) ) {
+m.reply(wm)
+}
+}
 
 }
 handler.help = ['instalarbot']
