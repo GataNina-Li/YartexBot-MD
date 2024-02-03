@@ -61,6 +61,8 @@ if (/^vortexus$/i.test(m.text) ) {
 conn.reply(m.chat, '🚩 *Instalación por vortexus*\n\nTutoríal: https://youtu.be/Xp2jRbG_v8o?si=vmkcNpjQ9kgzCkUy\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Pagina oficial :\nhttps://vortexuscloud.com\n\n• Dashboard:\nhttps://dash.vortexuscloud.com\n\n• Panel:\nhttps://cloud.vortexuscloud.com', m, fake )
 await delay(2000 * 1)
 conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/41b8b3e0f536bb8ec1d6c.jpg'}, caption: ''}, {quoted: m})
+await delay(1000 * 1)
+conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/d9ead76219f879bb1e66a.jpg'}, caption: ''}, {quoted: m})
 }
 }
 
