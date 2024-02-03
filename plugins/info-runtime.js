@@ -28,17 +28,17 @@ let _ramTotal = (ramTotal + ' MB')
 let neww = performance.now()
         
 
-var txt = `*「 Estado 」*
+var txt = `\t\t\t\t\t*「 Estado 」*
 
-OS : *${OS}*
-CPU Model : *${cpuModel}*
-CPU Core : *${cpuCore} Core*
-CPU : *${cpuPer}%*
-Ram : *${ramUsed} / ${_ramTotal}(${/[0-9.+/]/g.test(ramUsed) &&  /[0-9.+/]/g.test(ramTotal) ? Math.round(100 * (ramUsed / ramTotal)) + '%' : NotDetect})*
-Drive : *${driveUsed} / ${driveTotal} (${drivePer})*
-Ping : *${Math.round(neww - old)} ms*
-Internet IN : *${netsIn}*
-Internet OUT : *${netsOut}*`
+*OS* : ${OS}
+*CPU Model* : ${cpuModel}
+*CPU Core* : ${cpuCore} Centro
+*CPU* : ${cpuPer}%
+*Ram* : ${ramUsed} / ${_ramTotal}(${/[0-9.+/]/g.test(ramUsed) &&  /[0-9.+/]/g.test(ramTotal) ? Math.round(100 * (ramUsed / ramTotal)) + '%' : NotDetect})
+*Drive* : ${driveUsed} / ${driveTotal} (${drivePer})
+*Ping* : ${Math.round(neww - old)} ms
+*Internet IN* : *${netsIn}
+*Internet OUT* : *${netsOut}`
 
 conn.relayMessage(m.chat, { extendedTextMessage:{ text: txt, contextInfo: { externalAdReply: { title: '', mediaType: 1, previewType: 0, renderLargerThumbnail: true, thumbnailUrl: 'https://telegra.ph/file/ec8cf04e3a2890d3dce9c.jpg', sourceUrl: '' }}, mentions: [m.sender] }}, {})
 
@@ -50,7 +50,7 @@ conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
 }
 handler.help = ['estado', 'status']
 handler.tags = ['bot']
-handler.command = /^(estado)?stat(us)?(bot)?$/i
+handler.command = /^status|statusbot|botstatus|estado$/i
 
 handler.register = true
 
