@@ -129,6 +129,7 @@ if (!('antiSticker' in chat))
 chat.antiSticker = false 
 if (!('antibule' in chat))
 chat.antibule = false 
+if (!('game' in chat)) chat.game = true
 if (!isNumber(chat.expired))
 chat.expired = 0
 } else
@@ -153,6 +154,7 @@ modoadmin: false,
 nsfw: true,
 antiSticker: false,
 antibule: false,
+game: true, 
 expired: 0
 }
 
