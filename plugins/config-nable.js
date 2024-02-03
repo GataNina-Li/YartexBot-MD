@@ -129,6 +129,14 @@ throw false
 }}
 chat.antiToxic = isEnable
 break
+case 'game': case 'juegos': case 'fun': case 'ruleta':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.game = isEnable          
+break    
 case 'modohorny':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
