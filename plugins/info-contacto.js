@@ -12,5 +12,5 @@ await conn.sendContactArray(m.chat, [
 ], fake)
 } 
 
-handler.command = /^(owner|creator|contacto?s)/i
+handler.command = /^(sentcontact)/i
 export default handler
