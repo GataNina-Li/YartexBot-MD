@@ -68,7 +68,7 @@ conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/d9ead76219f879bb
 
 }
 handler.help = ['instalarbot']
-handler.tags = ['main']
+handler.tags = ['info']
 handler.command = /^(instalarbot)/i
 
 export default handler
