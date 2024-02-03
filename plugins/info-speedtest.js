@@ -4,14 +4,8 @@ import {promisify} from 'util'
 const exec = promisify(cp.exec).bind(cp)
 
 var handler = async (m) => {
-  
-const { key } = await conn.sendMessage(m.chat, {text: `🚀 Espere un momento`}, {quoted: m})
-await delay(1000 * 1)
-await conn.sendMessage(m.chat, {text: `📑 Recuperando la lista de servidores speedtest.net...`, edit: key})
-await delay(2000 * 1)
-await conn.sendMessage(m.chat, {text: `🔎 Seleccionando el mejor servidor según el ping...`, edit: key})
-await delay(2000 * 1)
-await conn.sendMessage(m.chat, {text: `✅ *Hecho*`, edit: key})
+
+conn.reply(m.chat, '🚀 Espere un momento ', m, fake, )
 
 let o
   
@@ -24,8 +18,8 @@ o = e
 let {stdout, stderr} = o
 
 
-if (stdout.trim()) m.reply(stdout)
-if (stderr.trim()) m.reply(stderr)
+if (stdout.trim()) conn.reply(m.chat, stdout, m, fake, )
+if (stderr.trim()) conn.reply(m.chat, stderr, m, fake, )
 }
 
 }
@@ -36,5 +30,3 @@ handler.command = /^(speedtest?|test?speed)$/i
 handler.register = true
 
 export default handler
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
