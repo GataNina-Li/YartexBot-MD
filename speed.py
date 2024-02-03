@@ -1914,7 +1914,7 @@ def shell():
             quiet)
 
     if not args.mini:
-        printer('📑 Recuperando la lista de servidores speedtest.net...', quiet)
+        printer('', quiet)
         try:
             speedtest.get_servers(servers=args.server, exclude=args.exclude)
         except NoMatchedServers:
@@ -1932,9 +1932,9 @@ def shell():
             )
 
         if args.server and len(args.server) == 1:
-            printer('📰 Recuperando información para el servidor seleccionado...', quiet)
+            printer('', quiet)
         else:
-            printer('🔎 Seleccionando el mejor servidor según el ping...', quiet)
+            printer('', quiet)
         speedtest.get_best_server()
     elif args.mini:
         speedtest.get_best_server(speedtest.set_mini_server(args.mini))
