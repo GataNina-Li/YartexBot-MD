@@ -1664,18 +1664,18 @@ class Speedtest(object):
                                        args=(q, requests, request_count))
         cons_thread = threading.Thread(target=consumer,
                                        args=(q, request_count))
-        start = timeit.default_timer()
+start = timeit.default_timer()
         prod_thread.start()
-        cons_thread.start()
-        _is_alive = thread_is_alive
-        while _is_alive(prod_thread):
-            prod_thread.join(timeout=0.1)
-        while _is_alive(cons_thread):
-            cons_thread.join(timeout=0.1)
+cons_thread.start()
+_is_alive = thread_is_alive
+while _is_alive(prod_thread):
+prod_thread.join(timeout=0.1)
+while _is_alive(cons_thread):
+cons_thread.join(timeout=0.1)
 
-        stop = timeit.default_timer()
-        self.results.bytes_sent = sum(finished)
-        self.results.upload = (
+stop = timeit.default_timer()
+self.results.bytes_sent = sum(finished)
+self.results.upload = (
             (self.results.bytes_sent / (stop - start)) * 8.0
         )
         return self.results.upload
@@ -1888,14 +1888,14 @@ def shell():
             secure=args.secure
         )
     except (ConfigRetrievalError,) + HTTP_ERRORS:
-        printer('Cannot retrieve speedtest configuration', error=True)
+        printer('No se puede recuperar la configuración de prueba de velocidad', error=True)
         raise SpeedtestCLIError(get_exception())
 
     if args.list:
         try:
             speedtest.get_servers()
         except (ServersRetrievalError,) + HTTP_ERRORS:
-            printer('Cannot retrieve speedtest server list', error=True)
+            printer('No se puede recuperar la lista de servidores de prueba de velocidad', error=True)
             raise SpeedtestCLIError(get_exception())
 
         for _, servers in sorted(speedtest.servers.items()):
@@ -1910,74 +1910,71 @@ def shell():
                         raise
         sys.exit(0)
 
-    printer('_*< INFO - SPEEDTEST />*_\n\n', quiet)
-
+    printer('*🔭 Prueba desde %(isp)s...*\n' % speedtest.config['client'],
+            quiet)
 
     if not args.mini:
-        printer('▢ *Iniciando prueba...*', quiet)
-        printer('▢ *Buscando servidor...*', quiet)
+        printer('📑 Recuperando la lista de servidores speedtest.net...', quiet)
         try:
             speedtest.get_servers(servers=args.server, exclude=args.exclude)
         except NoMatchedServers:
             raise SpeedtestCLIError(
-                '▢ *No hay servidores coincidentes:* %s' %
+                'No hay servidores coincidentes: %s' %
                 ', '.join('%s' % s for s in args.server)
             )
         except (ServersRetrievalError,) + HTTP_ERRORS:
-            printer('▢ *No se pudo obtener la lista de servidores.*', error=True)
+            printer('No se puede recuperar la lista de servidores de prueba de velocidad', error=True)
             raise SpeedtestCLIError(get_exception())
         except InvalidServerIDType:
             raise SpeedtestCLIError(
-                '%s is an invalid server type, must '
+                '%s es un tipo de servidor no válido, debe'
                 'be an int' % ', '.join('%s' % s for s in args.server)
             )
 
         if args.server and len(args.server) == 1:
-            printer('▢ *Obteniendo info. del servidor...*', quiet)
+            printer('📰 Recuperando información para el servidor seleccionado...', quiet)
         else:
-            printer('▢ *Se selecionó el mejor servidor...*', quiet)
+            printer('🔎 Seleccionando el mejor servidor según el ping...', quiet)
         speedtest.get_best_server()
     elif args.mini:
         speedtest.get_best_server(speedtest.set_mini_server(args.mini))
 
     results = speedtest.results
 
-    printer('\n▢ *ISP:* %(isp)s' % speedtest.config['client'],
-            quiet)
-    printer('▢ *Servidor:* %(sponsor)s\n▢ *Ubicación:* %(name)s [%(d)0.2f km] '
-            '\n▢ *Latencia:* %(latency)s ms' % results.server, quiet)
+    printer('\n...................................................................................\n🏬 *Hosted By :* %(sponsor)s\n🌎 *Lugar:* %(name)s [%(d)0.2f km] '
+            '\n⚡ *Ping :* %(latency)s ms' % results.server, quiet)
 
     if args.download:
         printer('', quiet,
-                end=('', '')[bool(debug)])
+                end=('', '\n')[bool(debug)])
         speedtest.download(
             callback=callback,
             threads=(None, 1)[args.single]
         )
-        printer('▢ *Descarga:* %0.2f M%s/s' %
+        printer('*📫 Descarga:* %0.2f M%s/s' %
                 ((results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
     else:
-        printer('▢ *Omitiendo la prueba de descarga.*', quiet)
+        printer('Saltando a prueba de descarga', quiet)
 
     if args.upload:
         speedtest.upload()
-        printer('▢ *Subida:* %0.2f M%s/s' %
+        printer('*🚀 Subida:* %0.2f M%s/s' %
                 ((results.upload / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
-        printer("\n▢ Modificado por *dftzippo*\n▢ Powered by *Ookla*")
+        printer("\n...................................................................................\n▶︎ POWERED BY *OOKLA*\n▶︎ Script By *AzamiJs*")
     else:
-        printer('▢ *Omitiendo la prueba de subida.*', quiet)
+        printer('Saltando la prueba de carga', quiet)
 
-    printer('▢ *Resultados:*\n%r' % results.dict(), debug=True)
+    printer('Resultados:\n%r' % results.dict(), debug=True)
 
     if not args.simple and args.share:
         results.share()
 
     if args.simple:
-        printer('▢ Latencia: %s ms\n▢ Descarga: %0.2f M%s/s\n\n▢ Subida: %0.2f M%s/s' %
+        printer('Ping: %s ms\nDescarga: %0.2f M%s/s\nSubida: %0.2f M%s/s' %
                 (results.ping,
                  (results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0],
@@ -1989,14 +1986,14 @@ def shell():
         printer(results.json())
 
     if args.share and not machine_format:
-        printer('\n▢ *Compartir resultado:* %s' % results.share())
+        printer('Compartir resultados: %s' % results.share())
 
 
 def main():
     try:
         shell()
     except KeyboardInterrupt:
-        printer('\n▢ *Cancelando...*', error=True)
+        printer('\nCancelando...', error=True)
     except (SpeedtestException, SystemExit):
         e = get_exception()
         # Ignore a successful exit, or argparse exit
