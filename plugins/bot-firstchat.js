@@ -16,8 +16,8 @@ await conn.reply(m.chat, `👋 Hola ${nombre}!!
 ⚠️ *Nota:* no envíe spam al bot
 🧃 Escriba *.menu* para mostrar el menú 
   
-📝 ¿Quieres apoyar este proyecto para que siga actualizándose? enviar a través de: 
-*https://paypal.me/azami.19*`, m, fake, )
+📝 ¿Quieres apoyar este proyecto para que siga actualizándose? únete a nuestro grupo: 
+*https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU*`, m, fake, )
 
 
 user.pc = new Date * 1
