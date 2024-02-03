@@ -23,9 +23,7 @@ let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
 
-let info = `🚩 *Info Bot*
-
-⬡ *Creador*
+let info = `⬡ *Creador*
 Azami
 
 ⬡ *Contacto* 
@@ -61,7 +59,7 @@ ${autoread ? 'Habilitado' : 'Deshabilitado'}
 ⬡ *Restrict*
 ${restrict ? 'Habilitado' : 'Deshabilitado'}`
 
-conn.sendMessage(m.chat, {image: imagen1, caption: info, mentions: [...info.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...info.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": global.nn, "sourceUrl": global.nn}}}, {quoted: fproducto})
+conn.sendMessage(m.chat, {image: imagen1, caption: info, mentions: [...info.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...info.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": "🚩 *Información - Curiosity*", "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": group, "sourceUrl": group}}}, {quoted: m})
 
 }
 handler.help = ['infobot']
