@@ -1664,18 +1664,18 @@ class Speedtest(object):
                                        args=(q, requests, request_count))
         cons_thread = threading.Thread(target=consumer,
                                        args=(q, request_count))
-start = timeit.default_timer()
+        start = timeit.default_timer()
         prod_thread.start()
-cons_thread.start()
-_is_alive = thread_is_alive
-while _is_alive(prod_thread):
-prod_thread.join(timeout=0.1)
-while _is_alive(cons_thread):
-cons_thread.join(timeout=0.1)
+        cons_thread.start()
+        _is_alive = thread_is_alive
+        while _is_alive(prod_thread):
+            prod_thread.join(timeout=0.1)
+        while _is_alive(cons_thread):
+            cons_thread.join(timeout=0.1)
 
-stop = timeit.default_timer()
-self.results.bytes_sent = sum(finished)
-self.results.upload = (
+        stop = timeit.default_timer()
+        self.results.bytes_sent = sum(finished)
+        self.results.upload = (
             (self.results.bytes_sent / (stop - start)) * 8.0
         )
         return self.results.upload
@@ -1927,8 +1927,8 @@ def shell():
             raise SpeedtestCLIError(get_exception())
         except InvalidServerIDType:
             raise SpeedtestCLIError(
-                '%s es un tipo de servidor no válido, debe'
-                'be an int' % ', '.join('%s' % s for s in args.server)
+                '%s es un tipo de servidor no válido, debe '
+                'ser un int' % ', '.join('%s' % s for s in args.server)
             )
 
         if args.server and len(args.server) == 1:
@@ -1956,11 +1956,11 @@ def shell():
                  args.units[0]),
                 quiet)
     else:
-        printer('Saltando a prueba de descarga', quiet)
+        printer('Saltando la prueba de descarga', quiet)
 
     if args.upload:
         speedtest.upload()
-        printer('*🚀 Subida:* %0.2f M%s/s' %
+        printer('*🚀 Subir:* %0.2f M%s/s' %
                 ((results.upload / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
@@ -1974,7 +1974,7 @@ def shell():
         results.share()
 
     if args.simple:
-        printer('Ping: %s ms\nDescarga: %0.2f M%s/s\nSubida: %0.2f M%s/s' %
+        printer('Ping: %s ms\nDownload: %0.2f M%s/s\nUpload: %0.2f M%s/s' %
                 (results.ping,
                  (results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0],
