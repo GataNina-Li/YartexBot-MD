@@ -18,8 +18,8 @@ img = 'https://elcomercio.pe/resizer/RJM30xnujgfmaODGytH1rRVOrAA=/400x0/smart/fi
 }
 
 if (aaaa == '') return conn.reply(m.chat, '🚩 *Sin resultados*', m, fake, )
-const res = await aaaa.map((v) => `*Nombre:* ${v.title}\n*Enlace:* ${v.link}`).join`\n\n───────────────\n\n`
-const ads = '*Bloqueador de anuncios recomendado:* Block This\n*Enlace:* https://block-this.com/block-this-latest.apk\n\n≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣\n\n'
+const res = await aaaa.map((v) => `⬡ *Nombre:* ${v.title}\n⬡ *Enlace:* ${v.link}`).join`\n\n───────────────\n\n`
+const ads = '⬡ *Bloqueador de anuncios recomendado:* Block This\n⬡ *Enlace:* https://block-this.com/block-this-latest.apk\n\n≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣\n\n'
 conn.sendMessage(m.chat, {image: {url: img}, caption: ads + res}, {quoted: m})
 
 }
