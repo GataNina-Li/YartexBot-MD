@@ -50,6 +50,9 @@ ${group7}
 ⬡ *OnyxBot - CuriosityBot*
 ${group8}
 
+⬡ *CuriosityBot - SakuraBot*
+${group9}
+
 ✨ *Canales oficiales*
 
 ⬡ *CuriosityBot*
