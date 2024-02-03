@@ -1,13 +1,12 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw `*[⚠️] ESCRIBE EL REPORTE*\n\n💡 EJEMPLO\n*${usedPrefix + command} el comando ${usedPrefix}infobot no funciona.*`
-if (text.length < 8) throw `⚠️ *Mínimo 10 caracteres para hacer El Reporte.*`
-if (text.length > 1000) throw `⚠️ *Máximo 1000 caracteres para hacer El Reporte.*`
-let teks = `*⚠️ REPORTE ⚠️*\n*📞 NÚMERO*\nWa.me/${m.sender.split`@`[0]}\n*📝 MENSAJE*\n${text}`
-conn.reply('120363145586610812@g.us', m.quoted ? teks + m.quoted.text : teks, null, {
-contextInfo: {
-mentionedJid: [m.sender]
-}})
-  m.reply(`*[⚠️] Exito el reporte ha sido enviado a mí Creadora. Tendrá una respuesta pronto. Si se detecta que el reporte es Falso será Ignorado el reporte.*`)
+var handler = async (m, { conn, text, usedPrefix, command }) => {
+
+if (!text) return conn.reply(m.chat, `🎌 *Escriba su reporte*\n\nEjemplo, !${command} el comando !infobot no funciona`, m, fake, )
+if (text.length < 10) return conn.reply(m.chat, `🚩 *Mínimo 10 caracteres para hacer el reporte*`, m, fake, )
+if (text.length > 1000) return conn.reply(m.chat, `🚩 *Máximo 1000 caracteres para hacer el reporte.*`, m, fake, )
+
+let teks = `⚠️ *Reporte* ⚠️\n\n *\nWa.me/${m.sender.split`@`[0]}\n*📝 MENSAJE*\n${text}`
+conn.reply('5217294888993@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, { contextInfo: { mentionedJid: [m.sender] }})
+m.reply(`*[⚠️] Exito el reporte ha sido enviado a mí Creadora. Tendrá una respuesta pronto. Si se detecta que el reporte es Falso será Ignorado el reporte.*`)
 
 }
 
