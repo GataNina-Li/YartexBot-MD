@@ -1932,7 +1932,7 @@ def shell():
             )
 
         if args.server and len(args.server) == 1:
-    
+    printer('xd')
             
         speedtest.get_best_server()
     elif args.mini:
