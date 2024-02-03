@@ -7,12 +7,11 @@ if (text.length > 1000) return conn.reply(m.chat, `🚩 *Máximo 1000 caracteres
 let teks = `⚠️ *Reporte* ⚠️\n\n⬡ *Numero*\nWa.me/${m.sender.split`@`[0]}\n\n⬡ *Mensaje*\n${text}`
 conn.reply('5217294888993@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, { contextInfo: { mentionedJid: [m.sender] }})
 
-conn.reply(m.chat, `🚩 *El reporte se envió a mi creador, entra una respuesta más tarde*`, m, fake, )
+conn.reply(m.chat, `🚩 *El reporte se envió a mi creador, tendrá una respuesta más tarde*`, m, fake, )
 
 }
-
 handler.help = ['reporte', 'request']
-handler.tags = ['owner']
+handler.tags = ['bot']
 handler.command = /^(report|request|reporte|bugs|bug|report-owner|reportes|reportar)$/i
 
 handler.register = true
