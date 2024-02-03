@@ -59,7 +59,7 @@ ${autoread ? 'Habilitado' : 'Deshabilitado'}
 ⬡ *Restrict*
 ${restrict ? 'Habilitado' : 'Deshabilitado'}`
 
- conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: '', body: '🚩 Curiosity Info', thumbnailUrl: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+ conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: '', body: '🚩 Curiosity Info', thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 
 }
 handler.help = ['infobot']
