@@ -50,7 +50,7 @@ await delay(1000 * 1)
 m.reply('npm start')
 }
 if (/^instalar2$/i.test(m.text) ) {
-conn.reply(m.chat, `🚩 *Instalación automática*\n\nTutoríal: \n\nEn breve se remitirán los comandos para la instalación automática por Termux`, m, fake, )
+conn.reply(m.chat, `🚩 *Instalación automática*\n\nTutoríal: https://youtu.be/smoWgg28wPk?si=1J9cm-QCCcZLHiQM\n\nEn breve se remitirán los comandos para la instalación automática por Termux`, m, fake, )
 await delay(2000 * 1)
 m.reply('termux-setup-storage')
 await delay(1000 * 1)
@@ -58,7 +58,7 @@ m.reply('apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && w
 }
 
 if (/^vortexus$/i.test(m.text) ) {
-conn.reply(m.chat, '🚩 *Instalación por vortexus*\n\nTutoríal:  (nosotros no tenemos tutorial pero eso les puede ayudar)', m, fake )
+conn.reply(m.chat, '🚩 *Instalación por vortexus*\n\nTutoríal: https://youtu.be/Xp2jRbG_v8o?si=vmkcNpjQ9kgzCkUy\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Pagina oficial :\nhttps://vortexuscloud.com\n\n• Dashboard:\nhttps://dash.vortexuscloud.com\n\n• Panel:\nhttps://panel.vortexuscloud.com', m, fake )
 }
 }
 
