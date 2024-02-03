@@ -46,6 +46,11 @@ await delay(1000 * 1)
 m.reply('ls')
 await delay(1000 * 1)
 m.reply('npm start')
+}
+if (/^instalar2$/i.test(m.text) ) {
+conn.reply(m.chat, `🚩 *Instalación automática*\n\nTutoríal: \n\n_En breve se estarían enviando los comandos para la automática de Termux`, m, fake, )
+await delay(2000 * 1)
+m.reply('termux-setup-storage')
 }}
 
 }
