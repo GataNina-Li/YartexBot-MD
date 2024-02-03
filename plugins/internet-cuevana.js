@@ -1,10 +1,10 @@
 import fetch from 'node-fetch'
 import axios from 'axios'
-import {load} from 'cheerio'
+import { load } from 'cheerio'
 
 var handler = async (m, {text, usedPrefix, command, conn}) => {
 
-if (!text) return conn.reply(m.chat, '🎌 *Ingrese el nombre de una película*\n\nEjemplo, !${command} merlina', m, fake, )
+if (!text) return conn.reply(m.chat, `🎌 *Ingrese el nombre de una película*\n\nEjemplo, !${command} merlina`, m, fake, )
 let aaaa
 let img
 
