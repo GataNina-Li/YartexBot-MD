@@ -5,6 +5,7 @@ import { load } from 'cheerio'
 var handler = async (m, {text, usedPrefix, command, conn}) => {
 
 if (!text) return conn.reply(m.chat, `🎌 *Ingrese el nombre de una película*\n\nEjemplo, !${command} merlina`, m, fake, )
+conn.reply(m.chat, '⏰ Espere un momento', m, fake, )
 let aaaa
 let img
 
