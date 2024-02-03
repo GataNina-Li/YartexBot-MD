@@ -1914,7 +1914,7 @@ def shell():
             quiet)
 
     if not args.mini:
-
+        printer('📑 Recuperando la lista de servidores speedtest.net...', quiet)
         try:
             speedtest.get_servers(servers=args.server, exclude=args.exclude)
         except NoMatchedServers:
@@ -1932,8 +1932,9 @@ def shell():
             )
 
         if args.server and len(args.server) == 1:
-    printer('xd')
-            
+            printer('📰 Recuperando información para el servidor seleccionado...', quiet)
+        else:
+            printer('🔎 Seleccionando el mejor servidor según el ping...', quiet)
         speedtest.get_best_server()
     elif args.mini:
         speedtest.get_best_server(speedtest.set_mini_server(args.mini))
@@ -1944,7 +1945,7 @@ def shell():
             '\n⚡ *Ping :* %(latency)s ms' % results.server, quiet)
 
     if args.download:
-        
+        printer('', quiet,
                 end=('', '\n')[bool(debug)])
         speedtest.download(
             callback=callback,
@@ -1973,7 +1974,7 @@ def shell():
         results.share()
 
     if args.simple:
-        printer('Ping: %s ms\nDownload: %0.2f M%s/s\nUpload: %0.2f M%s/s' %
+        printer('Ping: %s ms\nDescarga: %0.2f M%s/s\nSubida: %0.2f M%s/s' %
                 (results.ping,
                  (results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0],
