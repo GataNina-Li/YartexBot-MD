@@ -4,7 +4,7 @@ import {load} from 'cheerio'
 
 var handler = async (m, {text, usedPrefix, command, conn}) => {
 
-if (!text) throw '*⚠️ INGRESE EL NOMBRE DE UNA PELÍCULA*'
+if (!text) return conn.reply(m.chat, '🎌 *Ingrese el nombre de una película*\n\nEjemplo, !${command} merlina', m, fake, )
 let aaaa
 let img
 
@@ -17,13 +17,17 @@ aaaa = await searchP(text)
 img = 'https://elcomercio.pe/resizer/RJM30xnujgfmaODGytH1rRVOrAA=/400x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/BJ2L67XNRRGHTFPKPDOEQ2AH5Y.jpg'
 }
 
-if (aaaa == '') throw '*⚠️ NO HAY RESULTADOS*'
-const res = await aaaa.map((v) => `*🎬 Nombre:* ${v.title}\n*🍿 Url:* ${v.link}`).join`\n\n───────────────\n\n`
-const ads = '*🎋 • Bloqueador de anuncios recomendado:* Block This\n*🧃 Link:* https://block-this.com/block-this-latest.apk\n\n≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣\n\n'
+if (aaaa == '') return conn.reply(m.chat, '🚩 *Sin resultados*', m, fake, )
+const res = await aaaa.map((v) => `*Nombre:* ${v.title}\n*Enlace:* ${v.link}`).join`\n\n───────────────\n\n`
+const ads = '*Bloqueador de anuncios recomendado:* Block This\n*Enlace:* https://block-this.com/block-this-latest.apk\n\n≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣\n\n'
 conn.sendMessage(m.chat, {image: {url: img}, caption: ads + res}, {quoted: m})
 
 }
+handler.help = ['pelisplus']
+handler.tags = ['internet']
 handler.command = ['cuevana', 'pelisplus']
+
+handler.register = true
 
 export default handler
 
