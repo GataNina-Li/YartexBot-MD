@@ -1,5 +1,3 @@
-import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
-
 var handler  = async (m, { conn }) => {
 
 let texto = `🚩 *Instalación de CuriosityBot*
@@ -26,7 +24,11 @@ git clone https://github.com/AzamiJs/CuriosityBot-MD && cd CuriosityBot-MD && ya
 
 ls
 
-npm start`
+npm start
+
+_Utilice "comandos" para enviarle los comandos uno por uno_
+
+_Utilice "instalar2" para ver los otros tipos de instalación_`
 
 conn.reply(m.chat, texto, m, fake, )
 
