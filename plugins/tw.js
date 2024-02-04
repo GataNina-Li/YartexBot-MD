@@ -59,7 +59,7 @@ const connectionOptions = {
 printQRInTerminal: true,
 auth: state, 
 logger: P({ level: 'silent'}),
-browser: ['Ubuntu', 'Chrome', '110.0.5585.95'],
+browser: ['Ubuntu', 'Chrome', '110.0.5585.95']
 }
 
 let conn = makeWASocket(connectionOptions)
