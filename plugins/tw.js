@@ -80,5 +80,5 @@ handler.command = /^jadi$/i
 
 handler.premium = true
 
-module.exports = handler
+export default handler
                                        
