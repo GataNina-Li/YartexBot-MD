@@ -14,7 +14,7 @@ case 'video': return `⬡ *Título:* ${v.title}
 ⬡ *Subido:* ${v.ago}
 ⬡ *Vidtas:* ${v.views}`}}).filter(v => v).join('\n\n••••••••••••••••••••••••••••••••••••\n\n')
 
-await conn.sendUrl(m.chat, teks, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: tes[0].thumbnail, thumbnail: tes[0].thumbnail, title: 'Resultados Encontrados 🔎'}})
+await conn.sendUrl(m.chat, teks, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: tes[0].thumbnail, thumbnailUrl: tes[0].thumbnail, title: 'Resultados Encontrados 🔎'}})
 
 }
 handler.help = ['ytsearch']
