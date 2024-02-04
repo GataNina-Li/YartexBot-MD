@@ -15,7 +15,7 @@ ${users.map(v => '⬡ wa.me/' + v.replace(/[^0-9]/g, '') + `?text=${encodeURICom
 \n🎌 *Se finalizo con el envió en ${users.length * 1.5} segundos aproximadamente*`.trim(), m)
 
 }
-handler.bcbot
+handler.help = ['bcbot']
 handler.tags = ['jadibot']
 handler.command = /^bcbot$/i
 
