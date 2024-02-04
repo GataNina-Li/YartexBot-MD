@@ -1,5 +1,5 @@
 let { MessageType } = (await import('@whiskeysockets/baileys')).default
-let { is } = (await import('@cheerio/lib/api/traversing.js')).default
+import { is } form 'cheerio'
 import qrcode from 'qrcode'
 import fs from 'fs'
 import path from 'path'
