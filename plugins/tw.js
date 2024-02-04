@@ -1,5 +1,4 @@
-let { MessageType } = (await import('@whiskeysockets/baileys')).default
-import { is } from 'cheerio'
+let { MessageType } = (await import('@whiskeysockets/baileys')).default 
 import qrcode from 'qrcode'
 import fs from 'fs'
 import path from 'path'
