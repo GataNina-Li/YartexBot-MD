@@ -147,7 +147,7 @@ jddt()
 handler.help = ['jadibot']
 handler.tags = ['jadibot']
 
-handler.command = /^(jadi|serbot|getcode)/i
+handler.command = /^(jadi)/i
 
 handler.limit = false
 
