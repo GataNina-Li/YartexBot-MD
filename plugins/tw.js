@@ -1,5 +1,5 @@
 let { MessageType } = (await import('@whiskeysockets/baileys')).default
-import { is } form 'cheerio'
+import { is } from 'cheerio'
 import qrcode from 'qrcode'
 import fs from 'fs'
 import path from 'path'
