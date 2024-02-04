@@ -6,14 +6,15 @@ import path from 'path'
 if (global.conns instanceof Array) console.log()
 else global.conns = []
 
-var handler = async (m, { args, usedPrefix, command, isOwner }) => {
+var handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
 
-let conn = new global.conn.constructor()
+let parentw = conn
 let parent = args[0] && args[0] == 'plz' ? conn : global.conn
 
-process.argv.includes('qr', async qr => {
+/*process.argv.includes('qr', async qr => {
 await parent.sendFile(m.chat, await qrcode.toDataURL(qr, { scale: 8 }), 'qrcode.png', wm, m)
-})
+})*/
+ parentw.sendMessage(m.chat, {image: await qrcode.toBuffer(qr, { scale: 8 }) , caption: wm}, { quoted: m })
 conn.welcome = global.conn.welcome + ''
 conn.bye = global.conn.bye + ''
 conn.spromote = global.conn.spromote + ''
