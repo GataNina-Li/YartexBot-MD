@@ -69,6 +69,8 @@ if (!('role' in user)) user.role = 'Novato'
 if (!('autolevelup' in user)) user.autolevelup = true
 if (!('simi' in user)) user.simi = false
 if (!('muto' in user)) user.muto = false
+if (!('premium' in user)) user.premium = false
+
 } else
 
 global.db.data.users[m.sender] = {
@@ -88,6 +90,7 @@ role: 'Novato',
 autolevelup: true,
 simi: false,
 muto: false,
+premium: false,
 }
 
 let chat = global.db.data.chats[m.chat]
