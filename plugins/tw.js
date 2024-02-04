@@ -196,7 +196,7 @@ return true
 creloadHandler(false)
 }
 jddt()
-})
+}
 
 }
 handler.command = /^(jadi|bo|getcode)/i
