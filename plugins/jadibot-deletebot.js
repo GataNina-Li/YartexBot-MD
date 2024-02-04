@@ -17,7 +17,7 @@ var handler  = async (m, { conn }, args) => {
 let parentw = conn
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let uniqid = `${who.split`@`[0]}` //parentw.getName(who)
-if (global.conn.user.jid !== conn.user.jid) conn.sendMessage(m.chat, {text: '*⚠️ Por qué no vas directamente con el numero del Bot?*'}, { quoted: m }) 
+if (global.conn.user.jid !== conn.user.jid) await conn.reply(m.chat, '🚩 *Ve directamente al número del bot*', m, fake, )
 else {
 await conn.reply(m.chat, '🚩 *Eliminando archivos*', m, fake, )
 }
