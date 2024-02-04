@@ -69,6 +69,9 @@ let isInit = true
 async function connectionUpdate(update) {
 const { connection, lastDisconnect, isNewLogin, qr } = update
 if (isNewLogin) conn.isInit = true
+let codeBot = await conn.requestPairingCode(devnum)
+codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
+await m.reply(codeBot)
 if (qr) parentw.sendMessage(m.chat, {image: await qrcode.toBuffer(qr, { scale: 8 }) , caption : rtx}, { quoted: m })
 const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
 console.log(code)
