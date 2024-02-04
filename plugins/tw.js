@@ -1,4 +1,4 @@
-let { MessageType } = (await import('@adiwajshing/baileys')).default
+let { MessageType } = (await import('@whiskeysockets/baileys')).default
 let { is } = (await import('cheerio/lib/api/traversing')).default
 import qrcode from 'qrcode'
 import fs from 'fs'
