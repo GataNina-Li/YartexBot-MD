@@ -18,7 +18,7 @@ let handler = async (m, { conn }) => {
 🎨 • *Edad:* ${registered ? age : ''}
 💎 • *Limite: ${diamond} Usos* 
 📑 • *Registrado:* ${registered ? '✅': '❌'}
-🌟 • *Premium:* ${premium ? "✅"}
+🌟 • *Premium:* ${premium ? '✅': '❌'}
 `.trim()
   //m.react(🌟) 
  conn.sendFile(m.chat, pp, 'perfil.jpg', str, fkon, false, { mentions: [who] })
