@@ -11,10 +11,19 @@ var handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
 let parentw = conn
 let parent = args[0] && args[0] == 'plz' ? conn : global.conn
 
-/*process.argv.includes('qr', async qr => {
-await parent.sendFile(m.chat, await qrcode.toDataURL(qr, { scale: 8 }), 'qrcode.png', wm, m)
-})*/
- parentw.sendMessage(m.chat, {image: await qrcode.toBuffer(qr, { scale: 8 }) , caption: wm}, { quoted: m })
+async function connectionUpdate(update) {
+const { connection, lastDisconnect, isNewLogin, qr } = update
+if (isNewLogin) conn.isInit = true
+if (qr) parentw.sendMessage(m.chat, {image: await qrcode.toBuffer(qr, { scale: 8 }) , caption : wm}, { quoted: m })
+const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
+console.log(code)
+if (code && code !== DisconnectReason.loggedOut && conn?.ws.readyState !== CONNECTING) {
+let i = global.conns.indexOf(conn)
+if (i < 0) return console.log(await creloadHandler(true).catch(console.error))
+delete global.conns[i]
+global.conns.splice(i, 1)
+if (code !== DisconnectReason.connectionClosed){ parentw.sendMessage(m.chat, {text : "La conexión se cerró"}, { quoted: m })}}}
+ 
 conn.welcome = global.conn.welcome + ''
 conn.bye = global.conn.bye + ''
 conn.spromote = global.conn.spromote + ''
