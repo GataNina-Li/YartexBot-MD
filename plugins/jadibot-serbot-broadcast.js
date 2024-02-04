@@ -4,6 +4,7 @@ if (conn.user.jid !== global.conn.user.jid) throw false
 let users = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'close').map(conn => conn.user.jid)])]
 let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
 let teks = text ? text : cc.text
+const replyMessage = message.length === 0 ? '*⚠️ NO HAY SUB BOTS DISPONIBLE POR EL MOMENTO . 🔰VERIFIQUE MÁS TARDE.*' : message;
 let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '🚩 *Disfunción a subbots*\n\n' + teks)
 for (let id of users) {
 await delay(1500)
