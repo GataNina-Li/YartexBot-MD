@@ -11,7 +11,7 @@ var handler = async (m, { args, usedPrefix, command, isOwner }) => {
 let conn = new global.conn.constructor()
 let parent = args[0] && args[0] == 'plz' ? conn : global.conn
 
-conn.on('qr', async qr => {
+process.argv.includes('qr', async qr => {
 await parent.sendFile(m.chat, await qrcode.toDataURL(qr, { scale: 8 }), 'qrcode.png', wm, m)
 })
 conn.welcome = global.conn.welcome + ''
