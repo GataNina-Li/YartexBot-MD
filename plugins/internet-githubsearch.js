@@ -4,7 +4,7 @@ import fs from 'fs'
 
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 
-if (!text) throw `⚠️ *INGRESE EL NOMBRE DE UN REPOSITORIO DE GITHUB*\n\n❕ EJEMPLO:\n*${usedPrefix + command}* CuriosityBot-MD`
+if (!text) return conn.reply(m.chat, `🎌 *Ingrese el nombre de un repositorio de github*\n\nEjemplo, !${command} CuriosityBot-MD`, m, fake, )
 
 try {
 
@@ -13,27 +13,27 @@ let json = await res.json()
 if (res.status !== 200) throw json
 let str = json.items.map((repo, index) => {
 return `
-• 🍟 Resultado: ${1 + index}
-• 📦 Link: ${repo.html_url}
-• 🏵️ Creador: ${repo.owner.login}
-• 🐣 Nombre: ${repo.name}
-• 📅 Creado: ${formatDate(repo.created_at)}
-• ⏰ Actualizado: ${formatDate(repo.updated_at)}
-• 👁 Visitas: ${repo.watchers}
-• 🍴 Bifurcado: ${repo.forks}
-• ⭐ Estrellas: ${repo.stargazers_count}
-• 🧩 Issues: ${repo.open_issues}
-• 🎐 Descripción: ${repo.description ? `${repo.description}` : 'Sin Descripción'}
-• ♻️ Clone: ${repo.clone_url}
+⬡ *Resultado:* ${1 + index}
+⬡ *Enlace:* ${repo.html_url}
+⬡ *Creador:* ${repo.owner.login}
+⬡ *Nombre:* ${repo.name}
+⬡ *Creado:* ${formatDate(repo.created_at)}
+⬡ *Actualizado:* ${formatDate(repo.updated_at)}
+⬡ *Visitas:* ${repo.watchers}
+⬡ *Bifurcado:* ${repo.forks}
+⬡ *Estrellas:* ${repo.stargazers_count}
+⬡ *Issues:* ${repo.open_issues}
+⬡ *Descripción:* ${repo.description ? `${repo.description}` : 'Sin Descripción'}
+⬡ *Clone:* ${repo.clone_url}
 `.trim()}).join('\n\n─────────────────\n\n')
 
 let img = await (await fetch(json.items[0].owner.avatar_url)).buffer()
-await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: img, thumbnailUrl: img, title: '• Resultados Encontrados🔎',
+await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: img, thumbnailUrl: img, title: 'Resultados Encontrados 🔎',
 }
 })
 
 } catch {
-m.reply('⚠️ *RESULTADOS NO ENCONTRADOS.*')
+conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 }
 
 }
