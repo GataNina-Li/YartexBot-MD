@@ -6,7 +6,7 @@ import path from 'path'
 if (global.conns instanceof Array) console.log()
 else global.conns = []
 
-var handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
+var handler = async (m, { args, usedPrefix, command, isOwner }) => {
 
 let conn = new global.conn.constructor()
 let parent = args[0] && args[0] == 'plz' ? conn : global.conn
