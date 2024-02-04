@@ -57,7 +57,7 @@ const { state, saveState, saveCreds } = await useMultiFileAuthState("./jadibts/"
 
 const connectionOptions = {
 printQRInTerminal: true,
-auth: state,
+auth: state, 
 logger: P({ level: 'silent'}),
 browser: ['Test', 'Edge', '2.0.0'],
 }
