@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text }) => {
 
-if (!text) return conn.reply(m.chat, '🎌 *Ingrese lo que esta buscando*\n\nEjemplo, !npm module', m, fake, )
+if (!text) return conn.reply(m.chat, '🎌 *Ingrese lo que esta buscando*\n\nEjemplo, !npmjs module', m, fake, )
 let res = await fetch(`http://registry.npmjs.com/-/v1/search?text=${text}`)
 let { objects } = await res.json()
 if (!objects.length) return conn.reply(m.chat, `🚩 *La solicitud "${text}" no funciona*`, m, fake, )
