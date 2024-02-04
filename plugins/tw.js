@@ -1,4 +1,4 @@
-let { MessageType } = (await import('@whiskeysockets/baileys')).default 
+const { DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore, jidNormalizedUser, PHONENUMBER_MCC } = await import('@whiskeysockets/baileys')
 import qrcode from 'qrcode'
 import fs from 'fs'
 import path from 'path'
