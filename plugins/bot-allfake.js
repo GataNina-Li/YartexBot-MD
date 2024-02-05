@@ -112,9 +112,8 @@ global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
 global.nombre = conn.getName(m.sender)
-global.taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-global.fake = { contextInfo: { externalAdReply: {title: saludo + ` ${m.name}`, body: dev, sourceUrl: enlaces, thumbnailUrl: fotos }}}
-
+global.taguser = '@' + m.sender.split("@s.whatsapp.net")
+global.fake = { contextInfo:{ forwardingScore: 0, externalAdReply: {title: saludo + ` ${m.name}`, body: dev, sourceUrl: enlaces, thumbnailUrl: fotos }}}
 }
 
 export default handler
