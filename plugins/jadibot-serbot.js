@@ -159,7 +159,7 @@ return await conn.reply(m.chat, '🚩 *La conexión se ha cerrado, deberá de co
 await endSesion(false)
 return console.log('🚩 Tiempo de conexión agotado, reconectando....')
 } else {
-console.log('🚩 Razon de desconexión desconocida: ${reason || ''} >> ${connection || ''}')
+console.log('🚩 Razon de desconexión desconocida: ${reason || ""} >> ${connection || ""}')
 }}
 if (global.db.data == null) loadDatabase()
 if (connection == `open`) {
