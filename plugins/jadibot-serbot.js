@@ -1075,6 +1075,7 @@ handler['help'] = [
     _0x29b9f7(0x194),
     _0x29b9f7(0xa6)
 ], handler[_0x29b9f7(0xab)] = [_0x29b9f7(0xa7)], handler[_0x29b9f7(0xf7)] = /^(jadibot|serbot|rentbot)/i;
+handler.private = true
 export default handler;
 const delay = _0x3fd225 => new Promise(_0x506267 => setTimeout(_0x506267, _0x3fd225));
 function sleep(_0x29165d) {
