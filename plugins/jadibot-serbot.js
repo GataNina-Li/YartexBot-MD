@@ -39,8 +39,8 @@ let crm3 = 'SBpbmZvLWRvbmFyLmpz'
 let crm4 = 'IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz'
 let drm1 = 'CkphZGlib3QsIEhlY2hv'
 let drm2 = 'IHBvciBAQWlkZW5fTm90TG9naWM'
-let rtx = `📍 JadiBot - Curiosity\n\nEscanea este QR para convertirte en un bot temporal\n\n1. Haga clic en los tres puntos en la esquina superior derecha.\n2. Toca Dispositivos vinculados\n3. Vincular un dispositivo\n4. Escanea este QR\n\nQR Caduca en 20 segundos.`
-let rtx2 = `📍 JadiBot - Curiosity\n\nInicia sesión con este código para convertirte en un bot temporal\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toca Dispositivos vinculados.\n3. Vincular un dispositivo.\n4. Vincular con número de teléfono.\n5. Pegar el código a continuación.`
+let rtx = `🚀 *JadiBot - Curiosity*\n\nEscanea este QR para convertirte en un bot temporal\n\n1. Haga clic en los tres puntos en la esquina superior derecha.\n2. Toca Dispositivos vinculados.\n3. Vincular un dispositivo.\n4. Escanea este QR.\n\nQR Caduca en 20 segundos.`
+let rtx2 = `🚀 *JadiBot - Curiosity*\n\nInicia sesión con este código para convertirte en un bot temporal\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toca Dispositivos vinculados.\n3. Vincular un dispositivo.\n4. Vincular con número de teléfono.\n5. Pegar el código a continuación.`
 
 if (global.conns instanceof Array) console.log()
 else global.conns = []
