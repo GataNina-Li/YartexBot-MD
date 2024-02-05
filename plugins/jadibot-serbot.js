@@ -93,7 +93,7 @@ msgRetry,
 msgRetryCache,
 version,
 syncFullHistory: true,
-browser: mcode ? ['Ubuntu', 'Chrome' '110.0.5585.95'] : ['CuriosityBot', 'Opera', '5.0'],
+browser: mcode ? ['Ubuntu', 'Chrome', '110.0.5585.95'] : ['CuriosityBot', 'Opera', '5.0'],
 defaultQueryTimeoutMs: undefined,
 getMessage: async (key) => {
 if (store) {
