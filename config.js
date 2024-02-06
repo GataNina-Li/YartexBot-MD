@@ -26,7 +26,7 @@ global.baileys = '@whiskeysockets/baileys'
 global.lenguaje = 'Español'
 global.menudi = ['⛶','❏','⫹⫺']
 global.dev = 'Azami ~ ¿Zam?'
-global.devnum = '+52 1 729 488 8993'
+global.devnum = '+52 656 601 4078'
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => { unwatchFile(file)
