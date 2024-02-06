@@ -20,7 +20,7 @@ font: 'block',
 align: 'center',
 colors: ['magenta', 'cyan']
 })
-say(`Bot: ${name}\nVersion: 1.0.5\nCreador: Azami ~ Zam\nNumero: +52 1 729 488 8993\nEmail: thecuriositybot@gmail.com`, {
+say(`Bot: ${name}\nVersion: 1.0.5\nCreador: Azami ~ Zam\nNumero: +52 656 601 4078\nEmail: thecuriositybot@gmail.com`, {
 font: 'console',
 gradient: ['blue', 'magenta']
 })
