@@ -9,7 +9,7 @@ if (usedPrefix == 'a' || usedPrefix == 'A') return;
 if (!text) throw `[ ⚠️ ] 𝐈𝙉𝙂𝙍𝙀𝙎𝙀 𝙐𝙉𝘼 𝙋𝙀𝙏𝙄𝘾𝙄𝙊𝙉 𝙊 𝙐𝙉𝘼 𝙊𝙍𝘿𝙀𝙉 𝙋𝘼𝙍𝘼 𝙐𝙎𝘼𝙍 𝙇𝘼 𝙁𝙐𝙉𝘾𝙄𝙊𝙉 𝘿𝙀𝙇 𝘾𝙃𝘼𝙏𝙂𝙋𝙏\n\n❏ 𝙀𝙅𝙀𝙈𝙋𝙇𝙊 𝘿𝙀 𝙋𝙀𝙏𝙄𝘾𝙄𝙊𝙉𝙀𝙎 𝙔 𝙊𝙍𝘿𝙀𝙉𝙀𝙎\n❏ ${usedPrefix + command} Recomienda un top 10 de películas de acción\n❏ ${usedPrefix + command} Codigo en JS para un juego de cartas`    
 try {
 conn.sendPresenceUpdate('composing', m.chat);
-let sistema1 = `Actuaras como un Bot de WhatsApp el cual fue creado por Alexis, tu seras CuriosityBug`;
+let sistema1 = `Actuaras como un Bot de WhatsApp el cual fue creado por Alexis, tu seras Curiositybot-MD`;
 async function getOpenAIChatCompletion(texto) {
 const openaiAPIKey = global.openai_key;
 let chgptdb = global.chatgpt.data.users[m.sender];
@@ -32,7 +32,7 @@ if (botIA222.data.choices[0].text == 'error' || botIA222.data.choices[0].text ==
 m.reply(botIA222.data.choices[0].text.trim());
 } catch {
 try {
-const syms1 = `Actuaras como un Bot de WhatsApp el cual fue creado por Alexis, tu seras CuriosityBug`
+const syms1 = `Actuaras como un Bot de WhatsApp el cual fue creado por Alexis, tu seras CuriosityBot-MD`
 const Empireapi1 = await fetch(`https://api.cafirexos.com/api/chatgpt?text=${text}&name=${m.name}&prompt=${syms1}`);
 const empireApijson1 = await Empireapi1.json();
 if (empireApijson1.resultado == 'error' || empireApijson1.resultado == '' || !empireApijson1.resultado) return XD; // causar error undefined para lanzar msg de error
