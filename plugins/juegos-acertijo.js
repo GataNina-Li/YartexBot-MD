@@ -3,11 +3,12 @@ import fs from 'fs'
 let timeout = 60000
 let poin = 500
 
-let handler = async (m, { conn, usedPrefix }) => {
+var handler = async (m, { conn, usedPrefix }) => {
+
 conn.tekateki = conn.tekateki ? conn.tekateki : {}
 let id = m.chat
 if (id in conn.tekateki) {
-conn.reply(m.chat, '*⚠️ TODAVÍA HAY ACERTIJOS SIN RESPONDER EN ESTE CHAT*', conn.tekateki[id][0])
+conn.reply(m.chat, '🚩 *Hay acertijos sin responder en este chat*', conn.tekateki[id][0], fake, )
 throw false
 }
 let tekateki = JSON.parse(fs.readFileSync(`./storage/juegos/acertijo.json`))
@@ -24,13 +25,13 @@ conn.tekateki[id] = [
 await conn.reply(m.chat, caption, m),
 json, poin,
 setTimeout(async () => {
-if (conn.tekateki[id]) await conn.reply(m.chat, `*⚠️ SE ACABÓ EL TIEMPO!*\nRespuesta: *${json.response}*`, conn.tekateki[id][0])
+if (conn.tekateki[id]) await conn.reply(m.chat, `🚩 *Se terminó el tiempo*`, conn.tekateki[id][0]), fake, 
 delete conn.tekateki[id]
 }, timeout)
 ]
 }
 
-handler.help = ['acertijo']
+handler.help = ['acertijo', 'acert', 'adivinanza', 'tekateki']
 handler.tags = ['juegos']
 handler.command = /^(acertijo|acert|adivinanza|tekateki)$/i
 
