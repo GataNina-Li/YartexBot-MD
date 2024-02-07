@@ -7,8 +7,8 @@ let who
 if (m.isGroup) who = m.mentionedJid[0]
 else who = m.chat
 if (!who) return conn.reply(m.chat, '🎌 *Ingrese el tag de algún usuario*', m, fake, )
-let start = `*⚠️ EMPEZANDO DOXEO ⚠️*`
-let ala = `😨`
+let start = `🚩 *Iniciando doxeo* 🚩`
+let ala = `🤫`
 let boost = `*${pickRandom(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'])}%*`
 let boost2 = `*${pickRandom(['21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'])}%*`
 let boost3 = `*${pickRandom(['41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60'])}%*`
@@ -28,7 +28,7 @@ await conn.sendMessage(m.chat, {text: `${boost5}`, edit: key})
 let old = performance.now()
 let neww = performance.now()
 let speed = `${neww - old}`
-let doxeo = `*‼️ PERSONA DOXEADA CON EXITO ‼️*
+let doxeo = `🚩 *Persona doxeada* 
 
 📅 ${fecha}
 ⏰ ${tiempo}
@@ -74,9 +74,11 @@ Sof02s32inf14.1e100.net
 m.reply(doxeo, null, { mentions: conn.parseMention(doxeo) })
 
 }
-handler.help = ['doxear']
+handler.help = ['doxear', 'doxeo', 'doxxeo']
 handler.tags = ['juegos']
 handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i
+
+handler.register = true
 handler.group = true
 
 export default handler
