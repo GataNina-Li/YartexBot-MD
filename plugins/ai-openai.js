@@ -14,7 +14,7 @@ if (!text) return conn.reply(m.chat, `🎌 *Ingrese una petición*\n\nEjemplo, !
 try {
 
 conn.sendPresenceUpdate('composing', m.chat)
-let sistema1 = `Actuaras como un Bot de WhatsApp el cual fue creado por Azami, tu seras Curiositybot-MD pero te pueden decir Curiosity y el pronombre de tu creador es Zam`
+let sistema1 = `Actuaras como un Bot de WhatsApp el cual fue creado por Alexis, tu seras Curiositybot-MD`
 async function getOpenAIChatCompletion(texto) {
 const openaiAPIKey = global.openai_key
 let chgptdb = global.chatgpt.data.users[m.sender]
