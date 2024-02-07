@@ -6,7 +6,7 @@ conn.sendFile(m.chat, global.API('https://some-random-api.com', '/canvas/gay', {
 }
 handler.help = ['gay']
 handler.tags = ['juegos']
-handler.tags = ['Ector']
+handler.tags = ['Juegos']
 handler.command = /^(gay)$/i
 
 export default handler
