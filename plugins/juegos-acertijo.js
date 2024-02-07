@@ -35,4 +35,6 @@ handler.help = ['acertijo', 'acert', 'adivinanza', 'tekateki']
 handler.tags = ['juegos']
 handler.command = /^(acertijo|acert|adivinanza|tekateki)$/i
 
+handler.register = true
+
 export default handler
