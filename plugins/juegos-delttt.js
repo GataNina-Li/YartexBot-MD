@@ -6,9 +6,10 @@ delete conn.game[room.id]
 await conn.reply(m.chat, `*✅ SE ELIMINÓ LA SESIÓN DE TICTACTOE*`, m)
 
 }
-handler.help = ['delttt']
+handler.help = ['delttt', 'delttc', 'delxo']
 handler.tags = ['juegos']
 handler.command = ['delttc', 'delttt', 'delxo']
+
 handler.register = true 
 handler.group = true
 
