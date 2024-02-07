@@ -16,7 +16,7 @@ conn.reply(m.chat, `✅ *Respuesta correcta*\n+${this.tekateki[id][2]} Exp`, m, 
 m.react(done)
 clearTimeout(this.tekateki[id][3])
 delete this.tekateki[id]
-} else if (similarity(m.text.toLowerCase(), json.response.toLowerCase().trim()) >= threshold) m.reply(`*⚠️ CASI LO LOGRAS!*`)
+} else if (similarity(m.text.toLowerCase(), json.response.toLowerCase().trim()) >= threshold) conn.reply(m.chat, `🎌 *Casi lo logras*`, m, fake, )
 else conn.reply(m.chat, '🚩 *Respuesta incorrecta*', m, fake, )}
 m.react(error)
 return !0
