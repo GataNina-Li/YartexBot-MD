@@ -1,4 +1,4 @@
-## CuriosityBot-MD ✨
+- ## 𝐂𝐮𝐫𝐢𝐨𝐬𝐢𝐭𝐲 : 𝐁𝐨𝐭 - 𝐌𝐃 ✨
 
 <p align="center">
 <img src="https://telegra.ph/file/1de45831f62519a4dac60.jpg" alt="CuriosityBot-MD" width="900"/>
@@ -94,7 +94,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > npm start
 ```
 
-- ### EDITOR & PROPIETARIO DEL BOT
+### EDITOR & PROPIETARIO DEL BOT
 <a href="https://github.com/AzamiJs"><img src="https://github.com/AzamiJs.png" width="250" height="250" alt="Azami19"/></a>
 
 - #### COLABORADORES 
