@@ -8,7 +8,7 @@ let chat = global.db.data.chats[m.chat]
 
 if (/^Azami|azami|Zam|zam$/i.test(m.text) && !chat.isBanned) { 
 
-var GB = `🚩 *Parece que se ha mencionado el nombre de mi creado (@${devnum})r*`
+var GB = `🚩 *Parece que se ha mencionado el nombre de mi creado (@${devnum})*`
 
 m.reply(GB, m.chat, { mentions: conn.parseMention(GB)})
 
