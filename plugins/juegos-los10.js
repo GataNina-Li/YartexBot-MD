@@ -31,7 +31,7 @@ let top = `*${x} Los 10 ${text} ${x}*
 *9. ${user(i)}*
 *10. ${user(j)}*`
 
-await m.reply(top, mentions: conn.parseMention(txt) }, {quoted: m})
+await m.reply(top, m.chat, {mentions: conn.parseMention(top) })
     
 }
 handler.help = ['los10']
