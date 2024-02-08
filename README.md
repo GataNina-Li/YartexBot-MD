@@ -33,8 +33,8 @@
 ***
 
 ### `⚙️ 𝗔𝗝𝗨𝗦𝗧𝗘𝗦 ⚙️`
-- CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
-- Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
+- Cambiar Numero De Los Propietarios [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
+- Puede Cambiar A La Última Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
 #### 🚩𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗔𝗨𝗧𝗢𝗠𝗔𝗧𝗜𝗖𝗔 𝗣𝗢𝗥 𝗧𝗘𝗥𝗠𝗨𝗫
