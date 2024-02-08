@@ -1,6 +1,3 @@
-import util from 'util'
-import path from 'path'
-
 async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 
 let user = a => '@' + a.split('@')[0]
@@ -34,7 +31,7 @@ let top = `*${x} Los 10 ${text} ${x}*
 *9. ${user(i)}*
 *10. ${user(j)}*`
 
-await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, {quoted: m})
+await conn.sendMessage(m.chat, { text: top.trim(), mentions: conn.parseMention(txt) }, {quoted: m})
     
 }
 handler.help = ['los10']
