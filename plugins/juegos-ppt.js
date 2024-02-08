@@ -31,7 +31,7 @@ global.db.data.users[m.sender].exp += 500
 conn.reply(m.chat, `🎌 *Ganaste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n🎁 Puntos +${poin} XP ✨`, m, fake, )
 } else {
 global.db.data.users[m.sender].exp -= 150
-m.reply(`🤯 *PERDISTE* 🤯\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${poin} XP*`)
+conn.reply(m.chat, `🚩 *Perdiste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n Puntos -${poin} XP ✨`, m, fake, )
 }
 } else if (text == 'papel') {
 if (astro == 'piedra') {
