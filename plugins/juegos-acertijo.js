@@ -25,7 +25,7 @@ conn.tekateki[id] = [
 await conn.reply(m.chat, caption, m),
 json, poin,
 setTimeout(async () => {
-if (conn.tekateki[id]) await conn.reply(m.chat, `🚩 *Se terminó el tiempo*`, conn.tekateki[id][0]), fake, 
+if (conn.tekateki[id]) await conn.reply(m.chat, `🚩 *Se terminó el tiempo*`, conn.tekateki[id][0], fake, )
 delete conn.tekateki[id]
 }, timeout)
 ]
