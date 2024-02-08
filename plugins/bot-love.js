@@ -14,11 +14,13 @@ let love = `🚩 𝗨𝗡 𝗣𝗢𝗥𝗖𝗘𝗡𝗧𝗔𝗝𝗘 𝗗𝗘 𝗔
 
 🎌 𝐇𝐚𝐲 𝐀𝐦𝐨𝐫,𝐃𝐞𝐛𝐞𝐬 𝐏𝐞𝐝𝐢𝐫𝐥𝐞 𝐌𝐚𝐭𝐫𝐢𝐦𝐨𝐧𝐢𝐨?`
 
-conn.sendMessage(m.chat,{image: {url: pp}, caption: love, mentions: [m.sender]}, {quoted: m}) 
-}
+conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 
-handler.help = ['love  @user']
-handler.tags = ['fun']
+}
+handler.help = ['love']
+handler.tags = ['juegos']
 handler.command = /^(love)$/i
+
 handler.register = true
+
 export default handler
