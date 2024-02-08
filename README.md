@@ -23,6 +23,9 @@ En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
   <img src="https://img.shields.io/badge/CuriosityBot-0a0a0a?style=for-the-badge&logo=whatsapp&logoColor=white">
 </a>
 
+- ### `✵ 🎌𝑪𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒂𝒄𝒊𝒐𝒏🚩`
+ 𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
+
 ***
 
 ### `⚙️ AJUSTES ⚙️`
