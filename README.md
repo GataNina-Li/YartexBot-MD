@@ -103,7 +103,7 @@ npm start
 ```
 
 
-- #### `☂️ 𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗛𝗘𝗥𝗢𝗞𝗨 ☂️`
+- #### `☂️ 𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖤𝗇 𝖧𝖾𝗋𝗈𝗄𝗎 ☂️`
 para usuarios del heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
