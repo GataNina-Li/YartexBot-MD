@@ -5,7 +5,7 @@ async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 
 let user = a => '@' + a.split('@')[0]
 
-if (!text) throw `🚩 *Ejemplo de uso:*\n!${command} Pros`
+if (!text) return conn.reply(m.chat, `🚩 *Ejemplo de uso:*\n!${command} Pros`, m, fake, )
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
 let b = ps.getRandom()
