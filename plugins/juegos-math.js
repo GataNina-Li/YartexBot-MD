@@ -21,13 +21,13 @@ _Ejemplo : ${usedPrefix+command} normal_
 `, m, fake, )
     
 let id = m.chat
-if (id in conn.math) return conn.reply(m.chat, '🚩 *Todavía hay preguntas sin respuesta en este chat*', conn.math[id][0], m, fake, )
+if (id in conn.math) return conn.reply(m.chat, '🚩 *Todavía hay preguntas sin respuesta en este chat*', conn.math[id][0], fake, )
 let math = genMath(mode)
 conn.math[id] = [
 await conn.reply(m.chat, `🧮 Cuanto es *${math.str}*=\n\n_Tienes: ${(math.time / 1000).toFixed(2)} segundos para responder_\n\n🎁 Recompensa: ${math.bonus} XP`, m, fake, ),
 math, 4,
 setTimeout(() => {
-if (conn.math[id]) conn.reply(m.chat, `⏰ Se acabó el tiempo!\nLa respuesta es : *${math.result}*`, conn.math[id][0], m, fake, )
+if (conn.math[id]) conn.reply(m.chat, `⏰ Se acabó el tiempo!\nLa respuesta es : *${math.result}*`, conn.math[id][0], fake, )
 delete conn.math[id]
 }, math.time)
 ]
