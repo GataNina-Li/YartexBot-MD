@@ -22,22 +22,22 @@
 
 <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
-- #### `🚩𝗖𝗟𝗢𝗡𝗔𝗥 𝗥𝗘𝗣𝗢𝗦𝗜𝗧𝗢𝗥𝗜𝗢`
+- #### `🚩𝖢𝗅𝗈𝗇𝖺𝗋 𝖤𝗅 𝖱𝖾𝗉𝗈𝗌𝗂𝗍𝗈𝗋𝗂𝗈`
  𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 
 ***
 
-- #### `🎌𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗣𝗢𝗥 𝗖𝗢𝗗𝗘 𝗦𝗣𝗔𝗖𝗘`
+- #### `🎌𝖨𝗇𝗌𝗍𝖺𝗅𝖺𝖼𝗂𝗈𝗇 𝖯𝗈𝗋 𝖢𝗈𝖽𝖾 𝖲𝗉𝖺𝖼𝖾`
 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-### `⚙️ 𝗔𝗝𝗨𝗦𝗧𝗘𝗦 ⚙️`
+### `⚙️ 𝖢𝗈𝗆𝖿𝗂𝗀𝗎𝗋𝖺𝖼𝗂𝗈𝗇𝖾𝗌 ⚙️`
 - Cambiar Numero De Los Propietarios [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
 - Puede Cambiar A La Última Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
-- #### 🚩𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗔𝗨𝗧𝗢𝗠𝗔𝗧𝗜𝗖𝗔 𝗣𝗢𝗥 𝗧𝗘𝗥𝗠𝗨𝗫
+- #### 🚩𝖨𝗇𝗌𝗍𝖺𝗅𝖺𝖼𝗂𝗈𝗇 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺 𝖯𝗈𝗋 𝖳𝖾𝗋𝗆𝗎𝗑
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
 > 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝙿𝙰𝚁𝙰 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁 𝙵𝙾𝚁𝙼𝙰 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰 𝚅𝙸𝙰 𝚃𝙴𝚁𝙼𝚄𝚇.
@@ -49,7 +49,7 @@ termux-setup-storage
 apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
-- #### 🚩𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗠𝗔𝗡𝗨𝗔𝗟 𝗣𝗢𝗥 𝗧𝗘𝗥𝗠𝗨𝗫
+- #### 🚩𝖨𝗇𝗌𝗍𝖺𝗅𝖺𝖼𝗂𝗈𝗇 𝖬𝖺𝗇𝗎𝖺𝗅 𝖯𝗈𝗋 𝖳𝖾𝗋𝗆𝗎𝗑
 [![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
 > 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
 
@@ -80,7 +80,7 @@ npm update
 npm start
 ```
 
-- #### `🚩𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗖𝗔𝗦𝗢 𝗗𝗘 𝗗𝗘𝗧𝗘𝗡𝗘𝗥𝗦𝗘 𝗘𝗟 𝗧𝗘𝗥𝗠𝗨𝗫`
+- #### `🚩𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖤𝗇 𝖢𝖺𝗌𝗈 𝖣𝖾 𝖣𝖾𝗍𝖾𝗇𝖾𝗋𝗌𝖾 𝖤𝗇 𝖳𝖾𝗋𝗆𝗎𝗑`
 > 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
 ```bash
 > cd
@@ -88,7 +88,7 @@ npm start
 > npm start
 ```
 
-- #### `🚩𝗢𝗕𝗧𝗘𝗡𝗘𝗥 𝗢𝗧𝗥𝗢 𝗖𝗢𝗗𝗜𝗚𝗢 𝗤𝗥`
+- #### `🚩 𝖮𝖻𝗍𝖾𝗇𝖾𝗋 𝖮𝗍𝗋𝗈 𝖢𝗈𝖽𝗂𝗀𝗈 𝖰𝖱`
 > 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
 ```bash
 > cd CuriosityBot-MD
@@ -96,7 +96,7 @@ npm start
 > npm start
 ```
 
-- #### `🎌𝗣𝗢𝗡𝗘𝗥 24/7 (𝚃𝙴𝚁𝙼𝚄𝚇)`
+- #### `🎌 𝖯𝖺𝗋𝖺 𝖠𝖼𝗍𝗂𝗏𝖺𝗋 24/7 (𝚃𝙴𝚁𝙼𝚄𝚇)`
 > 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙳𝙴𝚅𝙴 𝙸𝚁 𝙴𝙽 𝙻𝙰 𝙲𝙰𝚁𝙿𝙴𝚃𝙰 𝙲𝚄𝚁𝙸𝙾𝚂𝙸𝚃𝚈𝙱𝙾𝚃-𝙼𝙳
 ```bash
 > npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
