@@ -18,7 +18,7 @@
 
 ### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊" width="42" height="42"> 🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊
 
-> Antes De Instalar El Bot Quieres Usarlo. Usalo Aqui.
+> 𝙰𝙽𝚃𝙴𝚂 𝙳𝙴 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁 𝙴𝙻 𝙱𝙾𝚃 𝚀𝚄𝙸𝙴𝚁𝙴𝚂 𝚄𝚂𝙰𝚁𝙻𝙾?, 𝚄𝚂𝙰𝙻𝙾 𝙰𝚀𝚄𝙸!
 
 <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
@@ -40,7 +40,8 @@
 - #### 🚩𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗔𝗨𝗧𝗢𝗠𝗔𝗧𝗜𝗖𝗔 𝗣𝗢𝗥 𝗧𝗘𝗥𝗠𝗨𝗫
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
-> **Nota:** Comandos para instalar de forma automática en Termux  
+> 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝙿𝙰𝚁𝙰 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁 𝙵𝙾𝚁𝙼𝙰 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰 𝚅𝙸𝙰 𝚃𝙴𝚁𝙼𝚄𝚇.
+
 ```bash
 termux-setup-storage
 ```
@@ -50,7 +51,8 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 
 - #### 🚩𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗠𝗔𝗡𝗨𝗔𝗟 𝗣𝗢𝗥 𝗧𝗘𝗥𝗠𝗨𝗫
 [![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
-> **Nota:** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
+
 ```bash
 termux-setup-storage
 ```
@@ -80,7 +82,8 @@ npm start
 
 - #### `🚩𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗖𝗔𝗦𝗢 𝗗𝗘 𝗗𝗘𝗧𝗘𝗡𝗘𝗥𝗦𝗘 𝗧𝗘𝗥𝗠𝗨𝗫`
 ```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝙰 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
+
 > cd
 > cd CuriosityBot-MD
 > npm start
@@ -88,10 +91,16 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 - #### `🚩𝗢𝗕𝗧𝗘𝗡𝗘𝗥 𝗢𝗧𝗥𝗢 𝗖𝗢𝗗𝗜𝗚𝗢 𝗤𝗥`
 ```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
+
 > cd CuriosityBot-MD
 > rm -rf sessions
 > npm start
+```
+
+- #### `🎌𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗕𝗢𝗧 24/7 (𝚃𝙴𝚁𝙼𝚄𝚇)`
+```bash
+> npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 
 
