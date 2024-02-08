@@ -19,7 +19,7 @@ conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 }
 handler.help = ['love']
 handler.tags = ['juegos']
-handler.command = /^(love)$/i
+handler.command = /^(love|amor|poncentaje)$/i
 
 handler.register = true
 
