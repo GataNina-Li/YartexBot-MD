@@ -1,4 +1,4 @@
-- ## 𝐂𝐮𝐫𝐢𝐨𝐬𝐢𝐭𝐲 : 𝐁𝐨𝐭 - 𝐌𝐃 ✨
+- ## 𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍 - 𝗠𝗗 ✨
 
 <p align="center">
 <img src="https://telegra.ph/file/1de45831f62519a4dac60.jpg" alt="CuriosityBot-MD" width="900"/>
@@ -22,22 +22,22 @@
 
  <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
- ### `✵ 🎌𝙲𝙻𝙾𝙽𝙰𝚁 𝙴𝙻 𝚁𝙴𝙿𝙾🚩`
+ ### `✵ 🚩𝗖𝗟𝗢𝗡𝗔𝗥 𝗥𝗘𝗣𝗢`
  𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 
 ***
 
-- #### `🎌𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾𝙽 𝙿𝙾𝚁 𝙲𝙾𝙳𝙴 𝚂𝙿𝙰𝙲𝙴𝚂`
+- #### `🎌𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗣𝗢𝗥 𝗖𝗢𝗗𝗘 𝗦𝗣𝗔𝗖𝗘`
 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-### `⚙️ 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝙲𝙸𝙾𝙽𝙴𝚂 ⚙️`
+### `⚙️ 𝗔𝗝𝗨𝗦𝗧𝗘𝗦 ⚙️`
 - CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
-#### 🚩𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾𝙽 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰 𝙿𝙾𝚁 𝚃𝙴𝚁𝙼𝚄𝚇
+#### 🚩𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗔𝗨𝗧𝗢𝗠𝗔𝗧𝗜𝗖𝗔 𝗣𝗢𝗥 𝗧𝗘𝗥𝗠𝗨𝗫
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
 > **Nota:** Comandos para instalar de forma automática en Termux  
@@ -48,7 +48,7 @@ termux-setup-storage
 apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
-#### 🚩𝙰𝙲𝚃𝙸𝚅𝙰𝚁 𝙴𝙽 𝚃𝙴𝚁𝙼𝚄𝚇
+#### 🚩𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗧𝗘𝗥𝗠𝗨𝗫
 [![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
 > **Nota:** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
@@ -79,7 +79,7 @@ npm start
 ```
 
 
-#### `☂️ 𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙽 𝙷𝙴𝚁𝙾𝙺𝚄 ☂️`
+#### `☂️ 𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗛𝗘𝗥𝗢𝗞𝗨 ☂️`
 para usuarios del heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
@@ -92,7 +92,7 @@ para usuarios del heroku
 
 ***
 
-### `🚩𝙾𝙱𝚃𝙴𝙽𝙴𝚁 𝙾𝚃𝚁𝙾 𝙲𝙾𝙳𝙸𝙶𝙾 𝚀𝚁`
+### `🚩𝗢𝗕𝗧𝗘𝗡𝗘𝗥 𝗢𝗧𝗥𝗢 𝗖𝗢𝗗𝗜𝗚𝗢 𝗤𝗥`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd CuriosityBot-MD
