@@ -10,7 +10,7 @@ global.botNumberCode = '' //Ejemplo: +59309090909
 global.confirmCode = ''
 
 global.suittag = ['5214531287294']
-global.azami = ['527294888993']
+global.creadora = ['5217294888993']
 global.mods = []
 global.prems = []
 
