@@ -37,7 +37,7 @@
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
-#### 🚩𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾́𝙽 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰̃ 𝙿𝙾𝚁 𝚃𝙴𝚁𝙼𝚄𝚇
+#### 🚩𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾𝙽 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
 > **Nota:** Comandos para instalar de forma automática en Termux  
