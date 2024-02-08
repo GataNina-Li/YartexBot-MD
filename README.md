@@ -18,9 +18,9 @@
 
 ## <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊" width="42" height="42"> 🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊
 
->Antes De Instalar Quieres Probar El Bot?, Pruebalo Aqui.
+> Antes De Instalar El Bot Quieres Usarlo. Pruebalo Aqui.
 
-* <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+ <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
  ### `✵ 🎌𝑪𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒂𝒄𝒊𝒐𝒏🚩`
  𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
