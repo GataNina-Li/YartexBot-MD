@@ -32,7 +32,7 @@
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-### `⚙️ 𝖢𝗈𝗆𝖿𝗂𝗀𝗎𝗋𝖺𝖼𝗂𝗈𝗇𝖾𝗌 ⚙️`
+### `⚙️ 𝖢𝗈𝗇𝖿𝗂𝗀𝗎𝗋𝖺𝖼𝗂𝗈𝗇𝖾𝗌 ⚙️`
 - Cambiar Numero De Los Propietarios [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
 - Puede Cambiar A La Última Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
