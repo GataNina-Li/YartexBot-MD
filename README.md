@@ -1,7 +1,7 @@
 ## 𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍 - 𝗠𝗗 ✨
 
 <p align="center">
-<img src="https://telegra.ph/file/c754a3ff85fff534755d3.jpg" alt="CuriosityBot-MD" width="900"/>
+<img src="https://telegra.ph/file/04b7a17f4f7aaa302b2d8.jpg" alt="CuriosityBot-MD" width="900"/>
 </p>
 
 <a href="https://github.com/azamijs/CuriosityBot-MD"><img title="Stars" src="https://img.shields.io/github/stars/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
