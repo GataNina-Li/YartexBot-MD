@@ -58,7 +58,7 @@ global.media = raiz+'media/'
 global.jadibts = join(__dirname, 'jadibts/')
 global.raiz = './storage/logos/Menu1.jpg'
 
-//Reacciones
+//Reacciones De Comandos.!
 global.rwait = '⏰'
 global.done = '✅'
 global.error = '❌'
