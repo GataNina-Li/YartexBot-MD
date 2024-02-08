@@ -78,6 +78,22 @@ npm update
 npm start
 ```
 
+- #### `🚩𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗖𝗔𝗦𝗢 𝗗𝗘 𝗗𝗘𝗧𝗘𝗡𝗘𝗥𝗦𝗘 𝗧𝗘𝗥𝗠𝗨𝗫`
+```bash
+ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> cd
+> cd CuriosityBot-MD
+> npm start
+```
+
+- #### `🚩𝗢𝗕𝗧𝗘𝗡𝗘𝗥 𝗢𝗧𝗥𝗢 𝗖𝗢𝗗𝗜𝗚𝗢 𝗤𝗥`
+```bash
+ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> cd CuriosityBot-MD
+> rm -rf sessions
+> npm start
+```
+
 
 - #### `☂️ 𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗛𝗘𝗥𝗢𝗞𝗨 ☂️`
 para usuarios del heroku
@@ -92,13 +108,6 @@ para usuarios del heroku
 
 ***
 
-- #### `🚩𝗢𝗕𝗧𝗘𝗡𝗘𝗥 𝗢𝗧𝗥𝗢 𝗖𝗢𝗗𝗜𝗚𝗢 𝗤𝗥`
-```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd CuriosityBot-MD
-> rm -rf sessions
-> npm start
-```
 
 ### EDITOR Y PROPIETARIO DEL BOT
 <a href="https://github.com/AzamiJs"><img src="https://github.com/AzamiJs.png" width="250" height="250" alt="Azami19"/></a>
