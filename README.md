@@ -99,7 +99,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > rm -rf sessions
 > npm start
 ```
-## <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="🎌 𝐄𝐝𝐢𝐭𝐨𝐫 𝐘 𝐏𝐫𝐨𝐩𝐢𝐞𝐭𝐚𝐫𝐢𝐨 𝐃𝐞𝐥 𝐁𝐨𝐭" width="42" height="42"> 🎌 𝐄𝐝𝐢𝐭𝐨𝐫 𝐘 𝐏𝐫𝐨𝐩𝐢𝐞𝐭𝐚𝐫𝐢𝐨 𝐃𝐞𝐥 𝐁𝐨𝐭
+##alt="🎌 𝐄𝐝𝐢𝐭𝐨𝐫 𝐘 𝐏𝐫𝐨𝐩𝐢𝐞𝐭𝐚𝐫𝐢𝐨 𝐃𝐞𝐥 𝐁𝐨𝐭" width="42" height="42"> 🎌 𝐄𝐝𝐢𝐭𝐨𝐫 𝐘 𝐏𝐫𝐨𝐩𝐢𝐞𝐭𝐚𝐫𝐢𝐨 𝐃𝐞𝐥 𝐁𝐨𝐭
 
 <a href="https://github.com/AzamiJs"><img src="https://github.com/AzamiJs.png" width="250" height="250" alt="Azami19"/></a>
 
