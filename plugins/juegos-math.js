@@ -37,6 +37,8 @@ handler.help = ['mates']
 handler.tags = ['juegos']
 handler.command = ['mates', 'mate', 'matemáticas', 'math'] 
 
+handler.register = true
+
 
 let modes = {
 noob: [-3, 3,-3, 3, '+-', 15000, 10],
