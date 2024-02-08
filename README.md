@@ -16,12 +16,9 @@
 <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
 </a>
 
-### Ejemplo 
-En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
+## <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊 𝑬𝒏 𝑮𝒓𝒖𝒑𝒐" width="42" height="42"> 🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊 𝑬𝒏 𝑮𝒓𝒖𝒑𝒐
 
-<a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU">
-  <img src="https://img.shields.io/badge/CuriosityBot-0a0a0a?style=for-the-badge&logo=whatsapp&logoColor=white">
-</a>
+* <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🍓-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
 - ### `✵ 🎌𝑪𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒂𝒄𝒊𝒐𝒏🚩`
  𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
