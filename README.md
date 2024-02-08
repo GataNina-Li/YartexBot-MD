@@ -22,7 +22,7 @@
 
 <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
-- ### `🚩𝗖𝗟𝗢𝗡𝗔𝗥 𝗥𝗘𝗣𝗢𝗦𝗜𝗧𝗢𝗥𝗜𝗢`
+- #### `🚩𝗖𝗟𝗢𝗡𝗔𝗥 𝗥𝗘𝗣𝗢𝗦𝗜𝗧𝗢𝗥𝗜𝗢`
  𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 
 ***
