@@ -22,22 +22,22 @@
 
  <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
- ### `✵ 🎌𝑪𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒂𝒄𝒊𝒐𝒏🚩`
+ ### `✵ 🎌𝙲𝙻𝙾𝙽𝙰𝚁 𝙴𝙻 𝚁𝙴𝙿𝙾🚩`
  𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 
 ***
 
-- ### `🎌 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾𝙽 𝙿𝙾𝚁 𝙲𝙾𝙳𝙴 𝚂𝙿𝙰𝙲𝙴𝚂`
+- ### `🎌𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾𝙽 𝙿𝙾𝚁 𝙲𝙾𝙳𝙴 𝚂𝙿𝙰𝙲𝙴𝚂`
 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-### `⚙️ AJUSTES ⚙️`
+### `⚙️ 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝙲𝙸𝙾𝙽𝙴𝚂 ⚙️`
 - CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
 - Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
-#### INSTALACIÓN AUTOMÁTICA POR TERMUX
+#### 🚩𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝙲𝙸𝙾́𝙽 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰̃ 𝙿𝙾𝚁 𝚃𝙴𝚁𝙼𝚄𝚇
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
 > **Nota:** Comandos para instalar de forma automática en Termux  
@@ -48,7 +48,7 @@ termux-setup-storage
 apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
-#### ACTIVAR EN TERMUX
+#### 🚩𝙰𝙲𝚃𝙸𝚅𝙰𝚁 𝙴𝙽 𝚃𝙴𝚁𝙼𝚄𝚇
 [![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
 > **Nota:** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
@@ -79,7 +79,7 @@ npm start
 ```
 
 
-#### `☂️ ACTIVA EN HEROKU ☂️`
+#### `☂️ 𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙽 𝙷𝙴𝚁𝙾𝙺𝚄 ☂️`
 para usuarios del heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
@@ -92,7 +92,7 @@ para usuarios del heroku
 
 ***
 
-### `OBTENER OTRO CODIGO QR`
+### `🚩𝙾𝙱𝚃𝙴𝙽𝙴𝚁 𝙾𝚃𝚁𝙾 𝙲𝙾𝙳𝙸𝙶𝙾 𝚀𝚁`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd CuriosityBot-MD
