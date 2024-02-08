@@ -48,7 +48,7 @@ termux-setup-storage
 apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
 ```
 
-#### 🚩𝗔𝗖𝗧𝗜𝗩𝗔𝗥 𝗘𝗡 𝗧𝗘𝗥𝗠𝗨𝗫
+#### 🚩𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗖𝗜𝗢𝗡 𝗠𝗔𝗡𝗨𝗔𝗟 𝗣𝗢𝗥 𝗧𝗘𝗥𝗠𝗨𝗫
 [![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
 > **Nota:** ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
