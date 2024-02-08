@@ -1,3 +1,6 @@
+/*Codigo Acrualizado Y Editado Para El Bot CuriosityBot-MD
+Comando Actualizado Por AzamiJs*/
+
 let handler = (m) => m;
 handler.all = async function (m) {
 
