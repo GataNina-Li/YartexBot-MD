@@ -1,8 +1,9 @@
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 
 let poin = 500
-let reseqv = `*⚠️ SELECCIONE PIEDRA/PAPEL/TIJERA*\n\n❕ EJEMPLO:\n*${usedPrefix + command}* papel`
-if (!text) throw reseqv
+
+if (!text) return conn.reply(m.chat, `🎌 *Seleccione piedra/papel/tijera*\n\nEjemplo, !${command} papel`, m, fake, )
+
 var astro = Math.random()
 
 if (astro < 0.34) {
@@ -15,19 +16,19 @@ astro = 'papel'
 
 if (text == astro) {
 global.db.data.users[m.sender].exp += 100
-m.reply(`🤡 *EMPATE*\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos (±)100 XP`)
+conn.reply(m.chat, `🚩 *Empate*\n\nTú: ${text}\nEl Bot: ${astro}\n\n🎁 Puntos (±)100 XP ✨`, m, fake, )
 } else if (text == 'piedra') {
 if (astro == 'tijera') {
 global.db.data.users[m.sender].exp += 300
-m.reply(`🎊 *GANASTE* 🎊\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+conn.reply(m.chat, `🎌 *Ganaste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n🎁 Puntos +${poin} XP ✨`, m, fake, )
 } else {
 global.db.data.users[m.sender].exp -= 300
-m.reply(`🤯 *PERDISTE* 🤯\n\nTú : ${text}\nEl Bot : ${astro}\n\n Puntos *-${poin} XP*`)
+conn.reply(m.chat, `🚩 *Perdiste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n Puntos -${poin} XP ✨`, m, fake, )
 }
 } else if (text == 'tijera') {
 if (astro == 'papel') {
 global.db.data.users[m.sender].exp += 500
-m.reply(` 🎊 *GANASTE* 🎊\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+conn.reply(m.chat, `🎌 *Ganaste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n🎁 Puntos +${poin} XP ✨`, m, fake, )
 } else {
 global.db.data.users[m.sender].exp -= 150
 m.reply(`🤯 *PERDISTE* 🤯\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${poin} XP*`)
@@ -35,19 +36,20 @@ m.reply(`🤯 *PERDISTE* 🤯\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${
 } else if (text == 'papel') {
 if (astro == 'piedra') {
 global.db.data.users[m.sender].exp += 600
-m.reply(`🎊 *GANASTE* 🎊\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+conn.reply(m.chat, `🚩 *Perdiste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n Puntos -${poin} XP ✨`, m, fake, )
 } else {
 global.db.data.users[m.sender].exp -= 300
-m.reply(`🤯 *PERDISTE* 🤯\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${poin} XP*`)
+conn.reply(m.chat, `🚩 *Perdiste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n Puntos -${poin} XP ✨`, m, fake, )
 }
 } else {
-throw reseqv
+return conn.reply(m.chat, `🎌 *Seleccione piedra/papel/tijera*\n\nEjemplo, !${command} papel`, m, fake, )
 }
 
 }
 handler.help = ['ppt']
 handler.tags = ['juegos']
-handler.command = ['ppt'] 
+handler.command = ['ppt']
+
 handler.register = true
 
 export default handler
