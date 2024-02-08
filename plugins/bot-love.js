@@ -1,7 +1,7 @@
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-const pp = './Menu1.jpg'
+const pp = './storage//Menu1.jpg'
 
 let love = `\t\t*🚩 𝐔𝐍 𝐀𝐌𝐎𝐑 𝐏𝐎𝐑 𝐓𝐈*
 
