@@ -16,11 +16,11 @@
 <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
 </a>
 
-- ## <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊" width="42" height="42"> 🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊
+### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊" width="42" height="42"> 🎌 𝑷𝒓𝒖𝒆𝒃𝒂 𝑬𝒍 𝑩𝒐𝒕 𝑨𝒒𝒖𝒊
 
 > Antes De Instalar El Bot Quieres Usarlo. Usalo Aqui.
 
- <a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+<a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 𝐆𝐫𝐮𝐩𝐨 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
 - ### `🚩𝗖𝗟𝗢𝗡𝗔𝗥 𝗥𝗘𝗣𝗢𝗦𝗜𝗧𝗢𝗥𝗜𝗢`
  𝑪𝒍𝒐𝒏𝒂𝒓 𝑹𝒆𝒑𝒐: 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕 [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
@@ -32,7 +32,7 @@
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-* ### `⚙️ 𝗔𝗝𝗨𝗦𝗧𝗘𝗦 ⚙️`
+### `⚙️ 𝗔𝗝𝗨𝗦𝗧𝗘𝗦 ⚙️`
 - Cambiar Numero De Los Propietarios [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
 - Puede Cambiar A La Última Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
