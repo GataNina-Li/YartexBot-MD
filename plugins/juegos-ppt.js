@@ -19,42 +19,42 @@ if (text == astro) {
 global.db.data.users[m.sender].exp += 100
 global.db.data.users[m.sender].diamond += 5
 
-conn.reply(m.chat, `🚩 *Empate*\n\nTú: ${text}\nEl Bot: ${astro}\n\n(±)100 XP ✨\n(±)5 Diamantes 💎`, m, fake, )
+conn.reply(m.chat, `🚩 *Empate*\n\n> Tú: ${text}\n> El Bot: ${astro}\n\n(±)100 XP ✨\n(±)5 Diamantes 💎`, m, fake, )
 } else if (text == 'piedra') {
 if (astro == 'tijera') {
   
 global.db.data.users[m.sender].exp += 300
 global.db.data.users[m.sender].diamond += 10
 
-conn.reply(m.chat, `🎌 *Ganaste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n+${poin} XP ✨\n+${poin2} Diamantes 💎`, m, fake, )
+conn.reply(m.chat, `🎌 *Ganaste*\n\n> Tú: ${text}\n> El Bot: ${astro}\n\n+${poin} XP ✨\n+${poin2} Diamantes 💎`, m, fake, )
 } else {
 global.db.data.users[m.sender].diamond -= 10
 global.db.data.users[m.sender].exp -= 300
 
-conn.reply(m.chat, `🚩 *Perdiste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n-${poin} XP ✨\n-${poin2} Diamantes 💎`, m, fake, )
+conn.reply(m.chat, `🚩 *Perdiste*\n\n> Tú: ${text}\n> El Bot: ${astro}\n\n-${poin} XP ✨\n-${poin2} Diamantes 💎`, m, fake, )
 }
 } else if (text == 'tijera') {
 if (astro == 'papel') {
 global.db.data.users[m.sender].diamond += 20
 global.db.data.users[m.sender].exp += 500
 
-conn.reply(m.chat, `🎌 *Ganaste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n+${poin} XP ✨\n+${poin2} Diamantes 💎`, m, fake, )
+conn.reply(m.chat, `🎌 *Ganaste*\n\n> Tú: ${text}\n> El Bot: ${astro}\n\n+${poin} XP ✨\n+${poin2} Diamantes 💎`, m, fake, )
 } else {
 global.db.data.users[m.sender].diamond -= 15
 global.db.data.users[m.sender].exp -= 150
 
-conn.reply(m.chat, `🚩 *Perdiste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n-${poin} XP ✨\n-${poin2} Diamantes 💎`, m, fake, )
+conn.reply(m.chat, `🚩 *Perdiste*\n\n> Tú: ${text}\n> El Bot: ${astro}\n\n-${poin} XP ✨\n-${poin2} Diamantes 💎`, m, fake, )
 }
 } else if (text == 'papel') {
 if (astro == 'piedra') {
 global.db.data.users[m.sender].diamond += 25
 global.db.data.users[m.sender].exp += 600
 
-conn.reply(m.chat, `🎌 *Ganaste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n+${poin} XP ✨\n+${poin2} Diamantes 💎`, m, fake, )
+conn.reply(m.chat, `🎌 *Ganaste*\n\n> Tú: ${text}\n> El Bot: ${astro}\n\n+${poin} XP ✨\n+${poin2} Diamantes 💎`, m, fake, )
 } else {
 global.db.data.users[m.sender].diamond -= 10
 global.db.data.users[m.sender].exp -= 300
-conn.reply(m.chat, `🚩 *Perdiste*\n\nTú: ${text}\nEl Bot: ${astro}\n\n-${poin} XP ✨\n-${poin2} Diamantes 💎`, m, fake, )
+conn.reply(m.chat, `🚩 *Perdiste*\n\n> Tú: ${text}\n> El Bot: ${astro}\n\n-${poin} XP ✨\n-${poin2} Diamantes 💎`, m, fake, )
 }
 
 } else {
