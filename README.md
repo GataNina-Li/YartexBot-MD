@@ -102,25 +102,25 @@ npm start
 > npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 ----
-### `❃ ACTIVAR EN REPLIT`
+- #### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖱𝖾𝗉𝗅𝗂𝗍`
 
 [![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
 ----  
-### `❃ ACTIVAR EN KOYEB`
+- #### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖪𝗈𝗒𝖾𝖻`
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/AzamiJs/CuriosityBot-MD&branch=master&name=curiositybot)
 ----  
-### `❃ ACTIVAR EN RENDER`
+- #### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖱𝖾𝗇𝖽𝖾𝗋`
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FAzamiJs%2FCuriosityBot-MD) 
 ----  
-### `☁️ VORTEXUS CLOUD - HOST`
+- #### `☁️ 𝖵𝗈𝗋𝗍𝖾𝗑𝗎𝗌 𝖢𝗅𝗈𝗎𝖽 - 𝖧𝗈𝗌𝗍`
 > Integra CuriosityBot-MD en un servicio de alojamiento 24/7 online 
 
 <a href="https://vortexuscloud.com"><img src="https://telegra.ph/file/4bd3d8d14e5683073d4f3.jpg" height="125px"></a>
 ### vortexus cloud
 
-- **Pagina Oficial:** [`Vortexuscloud`](https://vortexuscloud.com)
+- **𝖯𝖺𝗀𝗂𝗇𝖺 𝖮𝖿𝗂𝖼𝗂𝖺𝗅 𝖣𝖾 𝖵𝗈𝗋𝗍𝖾𝗑𝗎𝗌:** [`Vortexuscloud`](https://vortexuscloud.com)
 - **Crear cuenta en la Dashboard:** [`Dashboard`](https://youtu.be/JUg7DWUY6_Y?si=DHwk9dwjvWdPEIBJ)
 - **Dashboard:** [`Dash`](https://dash.vortexuscloud.com)
 - **Panel:** [`Aquí`](https://panel.vortexuscloud.com)
