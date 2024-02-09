@@ -6,7 +6,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
 `.trim(), null, {mentions: Object.values(global.db.data.sticker).map((x) => x.mentionedJid).reduce((a, b) => [...a, ...b], [])})
 
 }
-handler.tags = ['owner']
+handler.tags = ['database']
 handler.help = ['listcmd']
 handler.command = ['listcmd', 'cmdlist']
 
