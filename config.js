@@ -1,3 +1,5 @@
+/*Si Editas Por Favor Dejar Los Owner Como Estan, No Seas Rata!*/
+
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
@@ -14,12 +16,12 @@ global.mods = []
 global.prems = []
 
 /*Esto Son Los Nombres Del Bot*/
-global.packname = '© CuriosityBot'
-global.author = 'Created By Azami'
-global.wm = '© CuriosityBot-MD'
+global.packname = '© 𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒𝖡𝗈𝗍'
+global.author = '𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖡𝗒 𝖠𝗓𝖺𝗆𝗂'
+global.wm = '© 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒𝖡𝗈𝗍-𝖬𝖣'
 global.wm2 = '𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍'
-global.azami = 'Azami'
-global.cb = 'CuriosityBot-MD'
+global.azami = '𝖠𝗓𝖺𝗆𝗂'
+global.cb = '𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒𝖡𝗈𝗍-𝖬𝖣'
 
 //versiones y otros
 global.vs = 'V2 • 1.0.5'
