@@ -1,7 +1,7 @@
 /*Codigo Actualizado Y Editado Para El Bot CuriosityBot-MD
 Comando Actualizado Por AzamiJs*/
 
-let handler = (m) => m
+/*let handler = (m) => m
 handler.before = async function (m) {
 
 let chat = global.db.data.chats[m.chat]
@@ -16,4 +16,4 @@ m.reply(GB, m.chat, { mentions: conn.parseMention(GB)})
 return !0
 
 }
-export default handler
+export default handler*/
