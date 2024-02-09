@@ -11,7 +11,7 @@ conn.reply(m.chat, `🚩 *El reporte se envió a mi creador, tendrá una respues
 
 }
 handler.help = ['reporte', 'request']
-handler.tags = ['info']
+handler.tags = ['bot']
 handler.command = /^(report|request|reporte|bugs|bug|report-owner|reportes|reportar)$/i
 
 handler.register = true
