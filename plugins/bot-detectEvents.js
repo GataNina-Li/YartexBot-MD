@@ -39,10 +39,10 @@ await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Ha cambiado la imágen 
 await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Ha modificado la descripción!*\n\nNueva descripción:\n\n${m.messageStubParameters[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect2 && m.messageStubType == 25) {
-await this.sendMessage(m.chat, { text: `🔒 Ahora *${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'}* pueden editar la información del grupo`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `🚩 *Ahora ${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'} pueden editar la información del grupo*`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect2 && m.messageStubType == 26) {
-await this.sendMessage(m.chat, { text: `${groupMetadata.subject} Ha sido *${m.messageStubParameters[0] == 'on' ? 'cerrado' : 'abierto'}*\n${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'} pueden enviar mensajes*`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `${groupMetadata.subject} *Ha sido ${m.messageStubParameters[0] == 'on' ? 'cerrado' : 'abierto'}*\n${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'} pueden enviar mensajes*`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect2 && m.messageStubType == 29) {
 let txt1 = `🚩 *Nuevo admin*\n\n`
