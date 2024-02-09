@@ -1,6 +1,6 @@
 var handler = async (m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return conn.reply(m.chat, `*Ingrese un texto a preguntar*\n\nEjemplo, !${command} Hoy va llover?`
+if (!text) return conn.reply(m.chat, `*Ingrese un texto a preguntar*\n\nEjemplo, !${command} Hoy va llover?`, m, fake, )
 m.react('❔')
 await delay(1000 * 1)
 m.react(❓)
@@ -19,3 +19,5 @@ handler.command = /^pregunta|preguntas|apakah$/i
 handler.register = true
 
 export default handler
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
