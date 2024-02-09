@@ -65,6 +65,15 @@ throw false
 }}
 chat.delete = isEnable
 break
+case 'audios':
+      if (m.isGroup) {
+        if (!(isAdmin || isROwner || isOwner)) {
+          global.dfail('admin', m, conn);
+          throw false;
+        }
+      }
+      chat.audios = isEnable;
+      break;
 case 'antibule':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
