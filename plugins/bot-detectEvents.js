@@ -1,7 +1,7 @@
 import {WAMessageStubType} from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
-import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs';
-import path from 'path';
+import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs'
+import path from 'path'
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
@@ -30,19 +30,19 @@ filesDeleted++;
 console.log(`⚠️ Eliminacion session (PreKey) que provocan el undefined el chat`)}}}
 
 if (chat.detect2 && m.messageStubType == 21) {
-await this.sendMessage(m.chat, { text: `🚩 ${usuario} *HA CAMBIADO EL NOMBRE DEL GRUPO*\n\n🔰 *NUEVO NOMBRE ES:*\n\n*${m.messageStubParameters[0]}*`, mentions: [m.sender], mentions: (await conn.groupMetadata(m.chat)).participants.map(v => v.id) }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
+await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Ha cambiado el nombre del grupo*`, mentions: [m.sender], mentions: (await conn.groupMetadata(m.chat)).participants.map(v => v.id) }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
 
 } else if (chat.detect2 && m.messageStubType == 22) {
-await this.sendMessage(m.chat, { text: `🚩 ${usuario} ha cambiado la imágen de grupo : *${groupMetadata.subject}*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
+await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Ha cambiado la imágen del grupo*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
 
 } else if (chat.detect2 && m.messageStubType == 24) {
-await this.sendMessage(m.chat, { text: `🚩 ${usuario} ¡ha modificado la descripción!\n\n*Nueva descripción:*\n\n${m.messageStubParameters[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Ha modificado la descripción!*\n\nNueva descripción:\n\n${m.messageStubParameters[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect2 && m.messageStubType == 25) {
-await this.sendMessage(m.chat, { text: `🔒 𝙰𝙷𝙾𝚁𝙰 *${m.messageStubParameters[0] == 'on' ? '𝚂𝙾𝙻𝙾 𝙰𝙳𝙼𝙸𝙽𝚂' : '𝚃𝙾𝙳𝙾𝚂'}* 𝙿𝚄𝙴𝙳𝙴 𝙴𝙳𝙸𝚃𝙰𝚁 𝙻𝙰 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `🔒 Ahora *${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'}* pueden editar la información del grupo`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect2 && m.messageStubType == 26) {
-await this.sendMessage(m.chat, { text: `${groupMetadata.subject} HA SIDO *${m.messageStubParameters[0] == 'on' ? 'CERRADO 🔒' : 'ABIERTO 🔓'}*\n${m.messageStubParameters[0] == 'on' ? 'SOLO ADMINS' : 'TODOS'} PUEDEN ENVIAR MENSAJES*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `${groupMetadata.subject} Ha sido *${m.messageStubParameters[0] == 'on' ? 'cerrado' : 'abierto'}*\n${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'} pueden enviar mensajes*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect2 && m.messageStubType == 29) {
 let txt1 = `🚩 *Nuevo admin*\n\n`
@@ -59,10 +59,10 @@ txt2 += `Le quitó admin: @${m.sender.split`@`[0]}`
 await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
 
 } else if (chat.detect2 && m.messageStubType == 72) {
-await this.sendMessage(m.chat, { text: `🚩 ${usuario} 𝙲𝙰𝙼𝙱𝙸𝙾 𝙻𝙰 𝙳𝚄𝚁𝙰𝙽𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙼𝙴𝙽𝚂𝙰𝙹𝙴𝚂 𝚃𝙴𝙼𝙿𝙾𝚁𝙰𝙻𝙴𝚂 𝙰 *@${m.messageStubParameters[0]}*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Cambió la duración de mensajes temporales a @${m.messageStubParameters[0]}*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect2 && m.messageStubType == 123) {
-await this.sendMessage(m.chat, { text: `🚩 ${usuario} *𝙳𝙴𝚂𝚂𝙲𝚃𝙸𝚅́* 𝙻𝙾𝚂 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝚃𝙴𝙼𝙿𝙾𝚁𝙰𝙻𝙴𝚂.`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Desactivó los mensajes temporales*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 } else {
 console.log({messageStubType: m.messageStubType,
 messageStubParameters: m.messageStubParameters,
