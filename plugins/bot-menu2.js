@@ -89,7 +89,7 @@ conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 console.log(e)
 }}
 handler.help = ['menu2', 'audios']
-handler.tags = ['info']
+handler.tags = ['bot']
 handler.command = /^(menu2|menuaudios|audios)$/i
 handler.register = true
 
