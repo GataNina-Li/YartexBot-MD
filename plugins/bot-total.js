@@ -6,7 +6,7 @@ conn.reply(m.chat, `*🎌 Total de Funciones:* ${totalf}`, m, fake, )
 
 }
 handler.help = ['totalf']
-handler.tags = ['info']
+handler.tags = ['database']
 handler.command = ['totalf']
 
 handler.register = true
