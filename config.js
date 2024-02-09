@@ -21,7 +21,7 @@ global.wm2 = '𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍'
 global.azami = 'Azami'
 global.cb = 'CuriosityBot-MD'
 
-//version y otros
+//versiones y otros
 global.vs = 'V2 • 1.0.5'
 global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
