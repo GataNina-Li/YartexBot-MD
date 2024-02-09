@@ -97,25 +97,25 @@ npm start
 > npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 ----
-- #### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖱𝖾𝗉𝗅𝗂𝗍`
-
-[![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
-----  
-
-- #### `🎌𝖨𝗇𝗌𝗍𝖺𝗅𝖺𝖼𝗂𝗈𝗇 𝖯𝗈𝗋 𝖢𝗈𝖽𝖾 𝖲𝗉𝖺𝖼𝖾`
+- ### `🎌𝖨𝗇𝗌𝗍𝖺𝗅𝖺𝖼𝗂𝗈𝗇 𝖯𝗈𝗋 𝖢𝗈𝖽𝖾 𝖲𝗉𝖺𝖼𝖾`
 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-- #### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖪𝗈𝗒𝖾𝖻`
+- ### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖱𝖾𝗉𝗅𝗂𝗍`
+
+[![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
+----  
+
+- ### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖪𝗈𝗒𝖾𝖻`
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/AzamiJs/CuriosityBot-MD&branch=master&name=curiositybot)
 ----  
-- #### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖱𝖾𝗇𝖽𝖾𝗋`
+- ### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖱𝖾𝗇𝖽𝖾𝗋`
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FAzamiJs%2FCuriosityBot-MD) 
 ----  
-- #### `☁️ 𝖵𝗈𝗋𝗍𝖾𝗑𝗎𝗌 𝖢𝗅𝗈𝗎𝖽 - 𝖧𝗈𝗌𝗍`
+- ### `☁️ 𝖵𝗈𝗋𝗍𝖾𝗑𝗎𝗌 𝖢𝗅𝗈𝗎𝖽 - 𝖧𝗈𝗌𝗍`
 > Integra CuriosityBot-MD en un servicio de alojamiento 24/7 online 
 
 <a href="https://vortexuscloud.com"><img src="https://telegra.ph/file/4bd3d8d14e5683073d4f3.jpg" height="125px"></a>
@@ -131,7 +131,7 @@ npm start
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - CuriosityBot-MD**</summary><img src="https://telegra.ph/file/524ab6e15b912d9cdb777.jpg"></details>
 ------------------
 
-- #### `☂️ 𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖤𝗇 𝖧𝖾𝗋𝗈𝗄𝗎 ☂️`
+- ### `☂️ 𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖤𝗇 𝖧𝖾𝗋𝗈𝗄𝗎 ☂️`
 para usuarios del heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
