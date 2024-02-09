@@ -8,7 +8,7 @@ m.react(rwait)
 
 await conn.reply(m.chat, `⏰ Espere un momento`, m, fake, )
 
-try {
+-/*try {
 
 let qu = args[1] || '360'
 let q = qu + 'p'
