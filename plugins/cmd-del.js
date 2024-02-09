@@ -10,7 +10,7 @@ delete sticker[hash]
 conn.reply(m.chat, `✅ *Eliminado correctamente*`, m, fake, )
 
 }
-handler.tags = ['database']
+handler.tags = ['owner']
 handler.help = ['delcmd']
 handler.command = ['delcmd']
 

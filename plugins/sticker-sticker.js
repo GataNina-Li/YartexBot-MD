@@ -38,6 +38,8 @@ console.log(stiker)
 }}
 
 handler.command = /^(s(tickers?)?(image|video|gif|img)?)$/i
+handler.help = ['s', 'stickers']
+handler.tags = ['sticker']
 export default handler
 
 const isUrl = (text) => {

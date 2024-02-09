@@ -12,8 +12,8 @@ _*by Curiosity*_
 m.reply(love, null, { mentions: conn.parseMention(love) })
 
 }
-handler.help = ['love']
-handler.tags = ['fun']
+handler.help = ['ship']
+handler.tags = ['juegos']
 handler.command = /^(ship)$/i
 
 export default handler

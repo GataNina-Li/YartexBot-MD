@@ -10,7 +10,7 @@ conn.sendFile(m.chat, json.getRandom(), 'pinterest.jpg', `🚩 *Resultado de* ${
 
 }
 handler.help = ['pinterest']
-handler.tags = ['imagenes']
+handler.tags = ['internet']
 handler.command = /^(pinterest)$/i
 
 handler.limit = true

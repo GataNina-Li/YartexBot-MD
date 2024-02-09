@@ -31,7 +31,7 @@ return conn.reply(m.chat, `🚩 *Ocurrió un fallo*`, m, fake, )
 
 }
 handler.help = ['tiktokslide']
-handler.tags = ['descargador']
+handler.tags = ['descargas']
 handler.command = /^((tt|tiktok)imagen)$/i
 
 export default handler

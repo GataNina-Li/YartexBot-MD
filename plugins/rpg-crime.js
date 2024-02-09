@@ -24,8 +24,8 @@ if (media === 'text4') return m.reply(`《🚓》${pickRandom(global.robmal)}\n\
 if (media === 'text5') return conn.reply(m.chat, `《💰》Le has robado a @${randow.split`@`[0]} una cantidad de ${exp} XP`, m, {contextInfo: {mentionedJid: [randow]}}).catch(global.db.data.users[m.sender].exp += exp).catch(global.db.data.users[randow].exp -= crime) 
 } catch (e) {
 console.log(e)}}
-handler.help = ['robar'];
-handler.tags = ['xp'];
+handler.help = ['crime'];
+handler.tags = ['rg']
 handler.command = /^(crime|Crime)$/i
 handler.register = true
 handler.group = true

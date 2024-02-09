@@ -24,7 +24,7 @@ if (stderr.trim()) conn.reply(m.chat, stderr, m, fake, )
 
 }
 handler.help = ['speedtest']
-handler.tags = ['bot']
+handler.tags = ['info']
 handler.command = /^(speedtest?|test?speed)$/i
 
 handler.register = true

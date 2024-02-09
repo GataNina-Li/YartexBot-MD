@@ -15,7 +15,7 @@ let tags = {
 'sticker': 'S T I C K E R',
 'rg': 'R P G',
 'audio': 'A U D I O S   E F E C T O S', 
-'implementos': 'H E R R A M I E N T A S', 
+'tools': 'H E R R A M I E N T A S', 
 'anime': 'A N I M E', 
 'nsfw': 'N S F W +18', 
 'owner': 'O W N E R',
@@ -165,8 +165,8 @@ conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 throw e}
 
 }
-handler.help = ['help']
-handler.tags = ['main']
+handler.help = ['help', 'allmenu']
+handler.tags = ['info']
 handler.command = ['help', 'menucompleto', 'allmenu'] 
 handler.register = true
 

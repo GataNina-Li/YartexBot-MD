@@ -6,7 +6,7 @@ conn.reply(m.chat, tag, m, { contextInfo: { mentionedJid }})
 
 }
 handler.help = ['tagme']
-handler.tags = ['rpg']
+handler.tags = ['rg']
 handler.command = /^tagme$/i
 handler.group = false
 

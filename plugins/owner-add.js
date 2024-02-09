@@ -34,7 +34,7 @@ const handler = async (m, {conn, text, participants, args}) => {
   }
 };
 handler.help = ['add1', '+'].map((v) => v + ' número');
-handler.tags = ['group'];
+handler.tags = ['grupo']
 handler.command = /^(add1|añadir|\+)$/i;
 handler.admin = true
 handler.group = true

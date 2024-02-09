@@ -12,7 +12,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
 };
 
 handler.help = ['fun', 'fap'];
-handler.tags = ['fun', 'sega'];
+handler.tags = ['juegos']
 handler.command = /^(sega|sierra|fap)$/i;
 
 export default handler;

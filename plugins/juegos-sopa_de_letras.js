@@ -166,6 +166,7 @@ return
 }}}
 
 }
+handler.help = ['buscarpalabra', 'sopa', 'soup', 'spdepalabras']
 handler.tags = ['juegos']
 handler.command = /^(buscarpalabra|sopa|soup|wordsearch|wordfind|spdeletras|spletras|sppalabras|spalabras|spdepalabras)$/i
 

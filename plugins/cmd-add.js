@@ -13,7 +13,7 @@ sticker[hash] = {text, mentionedJid: m.mentionedJid, creator: m.sender, at: + ne
 conn.reply(m.chat, `✅ *Guardado correctamente*`, m, fake, )
 }
 
-handler.tags = ['database']
+handler.tags = ['owner']
 handler.help = ['setcmd']
 handler.command = ['setcmd', 'addcmd', 'cmdadd', 'cmdset']
 

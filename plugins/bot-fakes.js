@@ -120,7 +120,7 @@ conn.reply(m.chat, wm, fakemek)
  
 }
 handler.help = ['listafakes']
-handler.tags = ['bot']
+handler.tags = ['tools']
 handler.command = /^fakelist|listafake|fake2img|fakeloc|sendurl|fgif|fgclink|fdocs|ftoko|ftextt|fpoll|fkontak|faketick|estiloaudio|fvideo|fproducto|fproduct|fakevovid|fakevoimg|fpay|twa|fakemek$/i
 
 handler.rowner = true

@@ -24,6 +24,8 @@ const handler = async (m, {conn, usedPrefix, text}) => {
     }, timeout), poin, poin_lose, poin_bot, timeout,
   };
 };
+handler.help = ['pvp', 'suit']
+handler.tags = ['juegos']
 handler.command = /^pvp|suit(pvp)?$/i;
 handler.group = true;
 handler.game = true;
