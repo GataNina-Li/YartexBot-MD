@@ -102,6 +102,18 @@ npm start
 > npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 ----
+### `❃ ACTIVAR EN REPLIT`
+
+[![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
+----  
+### `❃ ACTIVAR EN KOYEB`
+
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/AzamiJs/CuriosityBot-MD&branch=master&name=curiositybot)
+----  
+### `❃ ACTIVAR EN RENDER`
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FAzamiJs%2FCuriosityBot-MD) 
+----  
 ### `☁️ VORTEXUS CLOUD - HOST`
 > Integra CuriosityBot-MD en un servicio de alojamiento 24/7 online 
 
