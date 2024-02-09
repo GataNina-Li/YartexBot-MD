@@ -1,6 +1,6 @@
 var handler  = async (m, { conn }) => {
 
-let resp = `*📝 Reto:* ${pickRandom(global.bucin)}`
+let resp = `🚩 *Retos*\n\n⬡ *Reto:* ${pickRandom(global.bucin)}`
 let txt = ''
 let count = 0
 for (const c of resp) {
@@ -11,6 +11,7 @@ count++
 if (count % 10 === 0) {
 conn.sendPresenceUpdate('composing' , m.chat)
 }
+
 }
 await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100} )
 
@@ -18,6 +19,8 @@ await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(t
 handler.help = ['reto']
 handler.tags = ['juegos']
 handler.command = /^reto/i
+
+handler.register = true
 
 export default handler
 
