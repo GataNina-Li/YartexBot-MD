@@ -27,11 +27,6 @@
 
 ***
 
-- #### `🎌𝖨𝗇𝗌𝗍𝖺𝗅𝖺𝖼𝗂𝗈𝗇 𝖯𝗈𝗋 𝖢𝗈𝖽𝖾 𝖲𝗉𝖺𝖼𝖾`
-
-[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
-***
-
 ### `⚙️ 𝖢𝗈𝗇𝖿𝗂𝗀𝗎𝗋𝖺𝖼𝗂𝗈𝗇𝖾𝗌 ⚙️`
 - Cambiar Numero De Los Propietarios [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
 - Puede Cambiar A La Última Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
@@ -106,6 +101,12 @@ npm start
 
 [![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
 ----  
+
+- #### `🎌𝖨𝗇𝗌𝗍𝖺𝗅𝖺𝖼𝗂𝗈𝗇 𝖯𝗈𝗋 𝖢𝗈𝖽𝖾 𝖲𝗉𝖺𝖼𝖾`
+
+[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
+***
+
 - #### `𝖠𝖼𝗍𝗂𝗏𝖺𝗋 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 𝖤𝗇 𝖪𝗈𝗒𝖾𝖻`
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/AzamiJs/CuriosityBot-MD&branch=master&name=curiositybot)
