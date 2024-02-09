@@ -19,7 +19,7 @@ const ttl = await yt.title
 const size = await yt.video[q].fileSizeH
 m.react(done)
 await await conn.sendMessage(m.chat, { video: { url: dl_url }, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `*Título*\n${ttl}\n\n*Peso*\n${size}`, thumbnail: await fetch(yt.thumbnail) }, { quoted: m })
-} catch {
+} catch {*/
 
 try {
 
