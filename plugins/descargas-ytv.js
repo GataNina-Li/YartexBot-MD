@@ -8,7 +8,7 @@ m.react(rwait)
 
 await conn.reply(m.chat, `⏰ Espere un momento`, m, fake, )
 
--/*try {
+try {
 
 let qu = args[1] || '360'
 let q = qu + 'p'
@@ -19,9 +19,9 @@ const ttl = await yt.title
 const size = await yt.video[q].fileSizeH
 m.react(done)
 await await conn.sendMessage(m.chat, { video: { url: dl_url }, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `*Título*\n${ttl}\n\n*Peso*\n${size}`, thumbnail: await fetch(yt.thumbnail) }, { quoted: m })
-} catch {*/
+} catch {
 
-try {
+/*try {
 
 let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${args[0]}`)    
 let lolh = await lolhuman.json()
@@ -31,9 +31,9 @@ let n3 = lolh.result.size
 let n4 = lolh.result.thumbnail
 m.react(done)
 await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `*Título*\n${n}\n\n*Peso*\n${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
-} catch {
+} catch {*/
 await conn.reply(m.chat, `🚩 *Ocurrió un error*`, m, fake, )
-m.react(error)}}
+m.react(error)}
 
 }
 handler.help = ['ytv']
