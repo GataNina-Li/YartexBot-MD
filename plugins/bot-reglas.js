@@ -1,6 +1,5 @@
 var handler = async (m, { conn, usedPrefix, command}) => {
 
-
 let Reglas = `🎌 *Respeta las reglas del bot*\n
 ⬡ No llamar
 ⬡ No hacer spam
