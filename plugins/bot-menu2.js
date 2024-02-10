@@ -1,5 +1,7 @@
 //CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios & https://github.com/AzamiJs | @Azami
 
+import fetch from 'node-fetch'
+
 var handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
 
 try {
