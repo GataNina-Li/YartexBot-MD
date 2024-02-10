@@ -24,7 +24,7 @@ let a = {'key': {'participants': '0@s.whatsapp.net', 'fromMe': false, 'id': '3B6
 const ftrol = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 2023, status: 1, surface : 1, message: `${name}!`, orderTitle: `▮Menu ▸`, sellerJid: '0@s.whatsapp.net' }}}
 const fload = { key : { message: `CuriosityBot-MD 🍧` + `\nAzami`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp.net' }}
 
-m.react('🍓')
+m.react('🚩')
   
 let menu2 = `╭━━━〔 ${wm} 〕━━━◉
 ┃╭──────────────
@@ -32,65 +32,66 @@ let menu2 = `╭━━━〔 ${wm} 〕━━━◉
 ┃╰──────────────
 ├━━━━━━━━━━━━━━━◉
 ┃
-├━━━〔 🄼🄴🄽🅄 🄰🅄🄳🄸🄾 〕━━━◉
+├━━━〔 Menu Audios 〕━━━◉
 ┃╭──────────────
-┃┃ *ᴇsᴄʀɪʙᴇ ʟᴀs sɪɢᴜɪᴇɴᴛᴇs ᴘᴀʟᴀʙʀᴀs ᴏ*
-┃┃ *ғʀᴀsᴇs sɪɴ ɴɪɴɢᴜɴ ᴘʀᴇғɪᴊᴏs:* (#, /, *, .)
+┃┃ _Escriba las palabras sin prefijo: (#, /, *, .)_
 ┃┃━━━━━━━━━━━━━━━
-┃┃ 🍓 _Quien es tu sempai botsito 7w7_
-┃┃ 🍓 _Te diagnostico con gay_
-┃┃ 🍓 _No digas eso papu_
-┃┃ 🍓 _A nadie le importa_
-┃┃ 🍓 _Fiesta del admin_
-┃┃ 🍓 _Fiesta del administrador_ 
-┃┃ 🍓 _Vivan los novios_
-┃┃ 🍓 _Feliz cumpleaños_
-┃┃ 🍓 _Noche de paz_
-┃┃ 🍓 _Buenos dias_
-┃┃ 🍓 _Buenos tardes_
-┃┃ 🍓 _Buenos noches_
-┃┃ 🍓 _Audio hentai_
-┃┃ 🍓 _Chica lgante_
-┃┃ 🍓 _Feliz navidad_
-┃┃ 🍓 _Vete a la vrg_
-┃┃ 🍓 _Pasa pack Bot_
-┃┃ 🍓 _Atencion grupo_
-┃┃ 🍓 _Marica quien_
-┃┃ 🍓 _Murio el grupo_
-┃┃ 🍓 _Oh me vengo_
-┃┃ 🍓 _tio que rico_
-┃┃ 🍓 _Viernes_
-┃┃ 🍓 _Baneado_
-┃┃ 🍓 _Sexo_
-┃┃ 🍓 _Hola_
-┃┃ 🍓 _Un pato_
-┃┃ 🍓 _Nyanpasu_
-┃┃ 🍓 _Te amo_
-┃┃ 🍓 _Yamete_
-┃┃ 🍓 _Bañate_
-┃┃ 🍓 _Es puto_
-┃┃ 🍓 _La biblia_
-┃┃ 🍓 _Onichan_
-┃┃ 🍓 _Mierda de Bot_
-┃┃ 🍓 _Siuuu_
-┃┃ 🍓 _Epico_
-┃┃ 🍓 _Shitpost_
-┃┃ 🍓 _Rawr_
-┃┃ 🍓 _UwU_
-┃┃ 🍓 _:c_
-┃┃ 🍓 _a_
+┃┃ Quien es tu sempai botsito 7w7
+┃┃ Te diagnostico con gay
+┃┃ No digas eso papu
+┃┃ A nadie le importa
+┃┃ Fiesta del admin
+┃┃ Fiesta del administrador
+┃┃ Vivan los novios
+┃┃ Feliz cumpleaños
+┃┃ Noche de paz
+┃┃ Buenos dias
+┃┃ Buenos tardes
+┃┃ Buenos noches
+┃┃ Audio hentai
+┃┃ Chica lgante
+┃┃ Feliz navidad
+┃┃ Vete a la vrg
+┃┃ Pasa pack Bot
+┃┃ Atencion grupo
+┃┃ Marica quien
+┃┃ Murio el grupo
+┃┃ Oh me vengo
+┃┃ tio que rico
+┃┃ Viernes
+┃┃ Baneado
+┃┃ Sexo
+┃┃ Hola
+┃┃ Un pato
+┃┃ Nyanpasu
+┃┃ Te amo
+┃┃ Yamete
+┃┃ Bañate
+┃┃ Es puto
+┃┃ La biblia
+┃┃ Onichan
+┃┃ Mierda de Bot
+┃┃ Siuuu
+┃┃ Epico
+┃┃ Shitpost
+┃┃ Rawr
+┃┃ UwU
+┃┃ :c
+┃┃ a
 ┃╰──────────────
 ╰━━━━━━━━━━━━━━◉`
 
 await  conn.sendFile(m.chat, pp, 'lp.jpg', menu2, m, false, { contextInfo: { externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}})
-//conn.reply(m.chat, menu, a, { contextInfo: { externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}})
 } catch {
 conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 console.log(e)
-}}
+}
+
+}
 handler.help = ['menu2', 'audios']
 handler.tags = ['bot']
 handler.command = /^(menu2|menuaudios|audios)$/i
+
 handler.register = true
 
 export default handler
