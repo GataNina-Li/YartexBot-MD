@@ -66,7 +66,7 @@ if (!chat.isBanned && m.text.match(/(bebito fiu fiu|bff|Bebito Fiu Fiu|Bff)/gi))
 if (!db.data.chats[m.chat].audios) return
 let vn = './storage/audios/bff.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
-conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak)
+conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(buenas noches|Buenas noches|Boanoite|boanoite)/gi)) {
@@ -318,7 +318,7 @@ if (!chat.isBanned && m.text.match(/(no digas eso papu)/gi)) {
 if (!db.data.chats[m.chat].audios) return
 const vn = './storage/audios/nopapu.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
-conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak)
+conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 } 
 
 return !0
