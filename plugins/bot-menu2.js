@@ -81,7 +81,7 @@ let menu2 = `╭━━━〔 ${wm} 〕━━━◉
 ┃╰──────────────
 ╰━━━━━━━━━━━━━━◉`
 
-await  conn.sendMessage(m.chat, {image: imagen1, caption: menu2, mentions: [...menu2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...menu2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": group, "sourceUrl": group}}}, {quoted: fproducto})
+await  conn.sendMessage(m.chat, {image: imagen1, caption: menu2, mentions: [...menu2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...menu2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": group, "sourceUrl": group}}}, {quoted: fload})
 } catch {
 conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 console.log(e)
