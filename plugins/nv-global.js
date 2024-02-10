@@ -3,20 +3,22 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 import axios from 'axios'
 var handler = m => m
+
 handler.all = async function (m, {conm}) {
-  const chat = global.db.data.chats[m.chat];
 
-  if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Abre este enlace')) && !m.isBaileys && !m.isGroup && !chat.isBanned && !m.fromMe) {
-   const join = `*< UNE UN BOT A TU GRUPO />*\n\n*🍓 Hola @${m.sender.split('@')[0]}, si deseas solicitar un Bot para tu grupo usa el comando #join mas el enlace de tu grupo.*\n\n*☞ Ejemplo:*\n*#join* https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU`.trim();
-    this.sendMessage(m.chat, {text: join.trim(), mentions: [...join.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...join.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": fs.readFileSync("./storage/logos/Menu1.jpg"), "mediaUrl": fs.readFileSync("./storage/logos/Menu1.jpg"), "sourceUrl": 'https://github.com/AzamiJs/CuriosityBot-MD'}}}, {quoted: m});
-  }
+const chat = global.db.data.chats[m.chat]
 
-  if (/^hola$/i.test(m.text) && !chat.isBanned) {
-    if (!db.data.chats[m.chat].audios) return;
-    const vn = './media/Hola.mp3';
-   conn.sendPresenceUpdate('recording', m.chat);
-  conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
-  }
+if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Abre este enlace')) && !m.isBaileys && !m.isGroup && !chat.isBanned && !m.fromMe) {
+const join = `🚩 *Une un bot a tu grupo*\n\n*Hola @${m.sender.split('@')[0]}, si deseas solicitar un Bot para tu grupo usa el comando !join mas el enlace de tu grupo*\n\nEjemplo, !join https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU`.trim()
+this.sendMessage(m.chat, {text: join.trim(), mentions: [...join.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...join.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": fs.readFileSync("./storage/logos/Menu1.jpg"), "mediaUrl": fs.readFileSync("./storage/logos/Menu1.jpg"), "sourceUrl": 'https://github.com/AzamiJs/CuriosityBot-MD'}}}, {quoted: m})
+}
+
+if (/^hola$/i.test(m.text) && !chat.isBanned) {
+if (!db.data.chats[m.chat].audios) return
+let vn = './media/Hola.mp3'
+conn.sendPresenceUpdate('recording', m.chat)
+conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
+}
 
   if (/^que no$/i.test(m.text) && !chat.isBanned) {
     if (!db.data.chats[m.chat].audios) return;
