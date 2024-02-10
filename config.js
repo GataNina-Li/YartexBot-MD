@@ -1,4 +1,7 @@
-/*Si Editas Por Favor Dejar Los Owner Como Estan, No Seas Rata!*/
+/* Credits to:
+* AzamiJs
+* Elrebelde21
+* GataNina-Li */
 
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
@@ -16,15 +19,15 @@ global.mods = []
 global.prems = []
 
 /*Esto Son Los Nombres Del Bot*/
-global.packname = '© 𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒𝖡𝗈𝗍'
-global.author = '𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖡𝗒 𝖠𝗓𝖺𝗆𝗂'
-global.wm = '© 𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒𝖡𝗈𝗍-𝖬𝖣'
-global.wm2 = '𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍'
-global.azami = '𝖠𝗓𝖺𝗆𝗂'
-global.cb = '𝖢𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒𝖡𝗈𝗍-𝖬𝖣'
+global.packname = ''
+global.author = 'CuriosityBot'
+global.wm = '© CuriosityBot-MD'
+global.wm2 = 'Curiosity : Bot'
+global.azami = 'Azami'
+global.cb = 'Bot'
 
 //versiones y otros
-global.vs = 'V2 • 1.0.5'
+global.vs = 'V2'
 global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
 global.lenguaje = 'Español'
