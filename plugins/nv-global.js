@@ -52,7 +52,7 @@ if (!chat.isBanned && m.text.match(/(baÃ±ate|BaÃ±ate)/gi)) {
 if (!db.data.chats[m.chat].audios) return
 let vn = './storage/audios/Banate.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
-conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak)
+conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(baneado|Baneado)/gi)) {
