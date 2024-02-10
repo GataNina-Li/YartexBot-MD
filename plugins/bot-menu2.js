@@ -34,7 +34,7 @@ let menu2 = `╭━━━〔 ${wm} 〕━━━◉
 ┃
 ├━━━〔 Menu Audios 〕━━━◉
 ┃╭──────────────
-┃┃ _Escriba las palabras sin prefijo: (#, /, *, .)_
+┃┃ _Escriba las palabras sin prefijo_
 ┃┃━━━━━━━━━━━━━━━
 ┃┃ Quien es tu sempai botsito 7w7
 ┃┃ Te diagnostico con gay
