@@ -6,7 +6,7 @@ var handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, com
 
 try {
 
-let name = conn.getName(m.sender)
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 
 let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': imagen1, thumbnail: imagen1 ,sendEphemeral: true}}}
@@ -19,7 +19,7 @@ m.react('🚩')
   
 let menu2 = `╭━━━〔 ${wm} 〕━━━◉
 ┃╭──────────────
-┃┃  *Hola ${name}*
+┃┃  *Hola @${who.replace(/@.+/, '')}*
 ┃╰──────────────
 ├━━━━━━━━━━━━━━━◉
 ┃
