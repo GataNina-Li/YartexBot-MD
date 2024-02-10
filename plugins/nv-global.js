@@ -278,7 +278,7 @@ let vn = './storage/audios/vete a la verga.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
-
+ 
 if (!chat.isBanned && m.text.match(/(fiesta viernes|viernes|Viernes|viernes fiesta)/gi)) {
 if (!db.data.chats[m.chat].audios) return
 let vn = './storage/audios/viernes.mp3'
