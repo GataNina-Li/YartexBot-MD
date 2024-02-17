@@ -1,12 +1,9 @@
 //Lleva una llave "}" sino va a mandar error.
+
 var handler = async(m, { conn, isAdmin }) => {
 
 if (m.fromMe) return
 if (isAdmin) return conn.reply(m.chat, '🚧*Soy un texto de Prueba de Owner*', m, fake, )
-
-try {
-
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote')
 
 } catch {
 
