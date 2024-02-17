@@ -10,9 +10,9 @@ if (isAdmin) return conn.reply(m.chat, '🚧*Soy un texto de Prueba de Owner*', 
 await conn.reply(m.chat, '🪛 *Paso un Error* ⚙️, m, fake, )}
 
 }
-handler.help = ['Esto es prueba']
+handler.help = ['prueba']
 handler.tags = ['owner']
-handler.command = /^Prueba|Aprueba$/i
+handler.command = /^prueba|aprueba$/i
 
 handler.rowner = true
 handler.group = true
