@@ -190,7 +190,7 @@ console.error(e)
 }
 if (opts['nyimak'])
 return
-if (!m.fromMe && opts['self'])
+if (!isROwner && opts['self'])
 return
 if (opts['pconly'] && m.chat.endsWith('g.us'))
 return
