@@ -12,7 +12,7 @@ await conn.reply(m.chat, '🪛 *Paso un Error* ⚙️, m, fake, )}
 }
 handler.help = ['prueba']
 handler.tags = ['owner']
-handler.command = /^(prueba)$/i
+handler.command = /^prueba$/i
 handler.register = true
 
 handler.rowner = true;
