@@ -1,21 +1,19 @@
-//Lleva una llave "}" sino va a mandar error.
+var handler = async (m, { conn, isOwner }) => {
+    if (!isOwner) return; // Solo el owner puede ejecutar esta prueba
 
-var handler = async(m, { conn, isAdmin }) => {
-
-if (m.fromMe) return
-if (isAdmin) return conn.reply(m.chat, '🚧*Soy un texto de Prueba de Owner*', m, fake, )
-
-} catch {
-
-await conn.reply(m.chat, '🪛 *Paso un Error* ⚙️, m, fake, )}
-
+    try {
+        await conn.reply(m.chat, '🚧 *Soy un texto de Prueba de Owner* 🚀', m)
+    } catch (e) {
+        await conn.reply(m.chat, '🪛 *Ocurrió un error al ejecutar la prueba* ⚙️', m)
+    }
 }
+
 handler.help = ['prueba']
 handler.tags = ['owner']
-handler.command = /^prueba|aprueba$/i
+handler.command = /^prueba$/i
 
-handler.rowner = true;
-handler.group = true;
-handler.botAdmin = true;
+handler.rowner = true
+handler.group = true
+handler.botAdmin = true
 
 export default handler
