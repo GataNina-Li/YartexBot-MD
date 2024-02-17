@@ -15,8 +15,8 @@ handler.tags = ['owner']
 handler.command = /^prueba$/i
 handler.register = true
 
-handler.rowner = true;
-handler.group = true;
-handler.botAdmin = true;
+handler.rowner = true
+handler.group = true
+handler.botAdmin = true
 
 export default handler
