@@ -1,8 +1,8 @@
 //Lleva una llave "}" sino va a mandar error.
-var handler = async(m, { conn, isOwner }) => {
+var handler = async(m, { conn, isAdmin }) => {
 
 if (m.fromMe) return
-if (isOwner) return conn.reply(m.chat, '🚧*Soy un texto de Prueba de Owner*', m, fake, )
+if (isAdmin) return conn.reply(m.chat, '🚧*Soy un texto de Prueba de Owner*', m, fake, )
 
 try {
 
