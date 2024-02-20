@@ -4,10 +4,10 @@ var handler = async (m, { conn, usedPrefix, command, text }) => {
 
 conn.game = conn.game ? conn.game : {}
 if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw `*⚠️ TODAVÍA ESTAS EN UN JUEGO, ESCRIBE ${usedPrefix}delttt PARA CERRAR EL JUEGO*`
-if (!text) throw `*⚠️ PONGA UN NOMBRE A LA SALA*`
+if (!text) return conn.reply(m.chat, `*Seleccioné un nombre para la sala*`, m, fake, )
 let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
 if (room) {
-m.reply('*✅ COMPAÑERO ENCONTRADO*')
+conn.reply(m.chat, '✅ *Compañero Encontrado*', m, fake, )
 room.o = m.chat
 room.game.playerO = m.sender
 room.state = 'PLAYING'
@@ -65,6 +65,7 @@ conn.game[room.id] = room
 handler.help = ['tictactoe']
 handler.tags = ['juegos']
 handler.command = ['tictactoe', 'ttc', 'ttt', 'xo']
+
 handler.register = true
 
 export default handler
