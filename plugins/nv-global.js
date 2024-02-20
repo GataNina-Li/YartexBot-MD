@@ -177,28 +177,28 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(Feliz navidad|feliz navidad|Merry Christmas|merry chritmas)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/navidad.m4a'
+let vn = 'https://qu.ax/XYyY.m4a'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(noche de paz|Noche de paz|Noche de amor|noche de amor|Noche de Paz)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Noche.mp3'
+let vn = 'https://qu.ax/SgrV.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(Nyapasu|Nyanpasu|nyapasu|Nyapasu|Gambure|Yabure)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/otaku.mp3'
+let vn = 'https://qu.ax/ZgFZ.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
   if (!chat.isBanned && m.text.match(/(ho me vengo|oh me vengo|o me vengo|Ho me vengo|Oh me vengo|O me vengo)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/vengo.mp3'
+let vn = 'https://qu.ax/waHR.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
