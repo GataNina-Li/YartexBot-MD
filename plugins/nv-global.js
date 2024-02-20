@@ -261,28 +261,28 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(UwU|uwu|Uwu|uwU|UWU)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/UwU.mp3'
+let vn = 'https://qu.ax/lOCR.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(vetealavrg|vete a la vrg|vete a la verga)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/vete a la verga.mp3'
+let vn = 'https://qu.ax/pXts.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
  
 if (!chat.isBanned && m.text.match(/(fiesta viernes|viernes|Viernes|viernes fiesta)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/viernes.mp3'
+let vn = 'https://qu.ax/wqXs.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(vivan!!|vivan los novios|vivanlosnovios)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/vivan.mp3'
+let vn = 'https://qu.ax/vHX.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
