@@ -29,14 +29,14 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(anadieleimporta|a nadie le importa)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/dylan1.mp3'
+let vn = 'https://qu.ax/JocM.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(araara|ara ara)/gi)) { 
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Ara.mp3'
+let vn = 'https://qu.ax/PPgt.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
