@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, usedPrefix, command}) => {
 
 if (!userSP) {
 userSP = m.sender.split("@")[0]
-await conn.reply(m.chat, `*@${m.sender.split("@")[0]} REGISTRADO EN EL JUEGO* ✅`, m, { mentions: [m.sender] })
+await conn.reply(m.chat, `*@${m.sender.split("@")[0]} Registrado en el juego* ✅`, m, { mentions: [m.sender] })
 }
   
 async function generarSopaDeLetras() {
@@ -97,12 +97,12 @@ sopaDeLetrasConBordes += fila + "\n"
 sopaDeLetrasConBordes = sopaDeLetrasConBordes.replace(/[a-zA-Z]/g, letra => LETRAS_POSIBLES[letra.charCodeAt() - 65] || letra)
 
 await m.reply(`🔠 *SOPA DE LETRAS* 🔠
-*PALABRA:* \`\`\`"${PALABRA}"\`\`\`
-*TIENE 3 MINUTOS PARA ENCONTRAR LA RESPUESTA CORRECTA!!*
+*Palabra:* \`\`\`"${PALABRA}"\`\`\`
+*Tiene 3 minutos para encontrar la respuesta correcta!!*
 
 *ESCRIBA EL NÚMERO DE FILA Y COLUMNA DEL COMIENZO DE LA PRIMERA LETRA _"${PALABRA.charAt(0)}"_ DE LA PALABRA _"${PALABRA}"_ TIENE _${intentos}_ INTENTOS!!*
 
-*EJEMPLO:*
+*Ejemplo:*
 ❇️ \`\`\`${usedPrefix + command} 28\`\`\`
 ➡️ \`\`\`FILA 2\`\`\`    ⬇️ \`\`\`COLUMNA 8\`\`\``.trim())
 await m.reply(`🔠 *${PALABRA.split("").join(" ")}* 🔠\n\n` + sopaDeLetrasConBordes.trimEnd())
@@ -169,5 +169,7 @@ return
 handler.help = ['buscarpalabra', 'sopa', 'soup', 'spdepalabras']
 handler.tags = ['juegos']
 handler.command = /^(buscarpalabra|sopa|soup|wordsearch|wordfind|spdeletras|spletras|sppalabras|spalabras|spdepalabras)$/i
+
+handler.register = true
 
 export default handler
