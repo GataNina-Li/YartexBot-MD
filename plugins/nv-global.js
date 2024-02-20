@@ -205,28 +205,28 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(oni-chan|onichan|o-onichan)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Onichan.mp3'
+let vn = 'https://qu.ax/sEFj.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(Pasa pack|vendes tu nudes|pasa video hot|pasa tu pack|pasa fotos hot|vendes tu pack|Vendes tu pack|Vendes tu pack?|vendes tu pack|Pasa Pack Bot|pasa pack Bot|pasa tu pack Bot|PÃ¡same tus fotos desnudas|pÃ¡same tu pack|me pasas tu pak|me pasas tu pack|pasa pack)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Elmo.mp3'
+let vn = 'https://qu.ax/KjHR.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(QuiÃ©n es tu senpai botsito 7u7|Quien es tu senpai botsito 7u7|QuiÃ©n es tu sempai botsito 7u7|Quien es tu sempai botsito 7u7|QuiÃ©n es tu senpai botsito 7w7|Quien es tu senpai botsito 7w7|quiÃ©n es tu senpai botsito 7u7|quien es tu senpai botsito 7u7|QuiÃ©n es tu sempai botsito 7w7|Quien es tu sempai botsito 7w7|QuiÃ©n es tu senpai botsito|Quien es tu senpai botsito|QuiÃ©n es tu sempai botsito|Quien es tu sempai botsito|QuiÃ©n es tu senpai botsito|Quien es tu senpai botsito|quiÃ©n es tu senpai botsito|quien es tu senpai botsito|QuiÃ©n es tu sempai botsito|Quien es tu sempai botsito)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Tu.mp3'
+let vn = 'https://qu.ax/uyqQ.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(rawr|Rawr|RAWR|raawwr|rraawr|rawwr)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/rawr.mp3'
+let vn = 'https://qu.ax/YnoG.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
