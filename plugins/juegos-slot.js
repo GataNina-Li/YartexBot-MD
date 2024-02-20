@@ -11,7 +11,7 @@ let apuesta = parseInt(args[0])
 let users = global.db.data.users[m.sender]
 let time = users.lastslot + 10000
 if (new Date - users.lastslot < 10000) throw `*⏰ ESPERE ${msToTime(time - new Date())} PARA USAR DE NUEVO*`
-if (apuesta < 50) return conn.reply(m.chat, '🚩 *Lo mínimo para aportar es 100 XP*', m, fake, )
+if (apuesta < 50) return conn.reply(m.chat, '🚩 *Lo mínimo para apostar es 100 XP*', m, fake, )
 if (users.exp < apuesta) {
 return conn.reply(m.chat, '🚩 *No tienes suficiente XP*', m, fake, )
 }
