@@ -2,8 +2,8 @@ import { sticker } from '../lib/sticker.js'
 import fs from 'fs'
 import fetch from 'node-fetch'
 import axios from 'axios'
-var handler = m => m
 
+var handler = m => m
 handler.all = async function (m, {conm}) {
 
 const chat = global.db.data.chats[m.chat]
@@ -289,31 +289,24 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(Yamete|yamete|Yamete kudasai|yamete kudasai)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Yamete-kudasai.mp3'
+let vn = 'https://qu.ax/thgS.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(epico|esto va a ser epico)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-const vn = './storage/audios/Epico.mp3'
+const vn = 'https://qu.ax/pjTx.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(shitpost)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/shitpost.mp3'
+let vn = 'https://qu.ax/Bdn.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
-
-if (!chat.isBanned && m.text.match(/(no digas eso papu)/gi)) {
-if (!db.data.chats[m.chat].audios) return
-const vn = './storage/audios/nopapu.mp3'
-conn.sendPresenceUpdate('recording', m.chat)
-conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
-} 
 
 return !0
 }
