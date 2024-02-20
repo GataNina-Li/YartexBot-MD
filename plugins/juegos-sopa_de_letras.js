@@ -103,7 +103,7 @@ Tiene 3 minutos para encontrar la respuesta correcta!!
 
 *Escriba el número de fila y columna del comienzo de la primera letra* _"${PALABRA.charAt(0)}"_ *de la palabra* _"${PALABRA}"_ *tiene* _${intentos}_ *intentos!!*
 
-*Ejemplo:*
+Ejemplo:
 ❇️ \`\`\`${usedPrefix + command} 28\`\`\`
 ➡️ \`\`\`Fila 2\`\`\`    ⬇️ \`\`\`Columna 8\`\`\``.trim())
 await m.reply(`🔠 *${PALABRA.split("").join(" ")}* 🔠\n\n` + sopaDeLetrasConBordes.trimEnd())
@@ -150,7 +150,7 @@ diamante = 32
 }
 global.db.data.users[m.sender].limit += diamante
 
-await m.reply(`\`\`\`🎊 Has Ganado ${diamante} ${rpgshop.emoticon('limit')}!!\`\`\`\n\n*Correcto!! la palabra* `${sopaPalabra}` *se encontraba en la dirección* ${cambioLetra} *de la fila* ${fila} *y columna* ${columna}`)
+await m.reply(`\`\`\`🎊 Has Ganado ${diamante} ${rpgshop.emoticon('limit')}!!\`\`\`\n\n*Correcto!! la palabra* ${sopaPalabra} *se encontraba en la dirección* ${cambioLetra} *de la fila* ${fila} *y columna* ${columna}`)
 fila = null, columna = null, sopaNube = null, sopaPalabra = null, sopaDir = null, userSP = null, cambioLetra = null
 intentos = 0
 return
