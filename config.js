@@ -7,6 +7,8 @@ import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
 
+//no editar los propietarios del bot, si quieres puedes añadirte solo no quites a los que estan.
+
 global.owner = [['524531287294', 'CuriosityBot-MD 🍧', true], ['5492266466080', 'Owner 🍧', true], ['5217294888993'], ['59162714296'], ['5214531287294'], ['5492964650915'], ['573013482814'], ['5215610314499']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
@@ -18,7 +20,7 @@ global.suittag = ['5214531287294']
 global.mods = []
 global.prems = []
 
-/*Esto Son Los Nombres Del Bot*/
+//Aqui encuentras los nombres del bot
 global.packname = ''
 global.author = 'CuriosityBot'
 global.wm = '© CuriosityBot-MD'
@@ -26,7 +28,7 @@ global.wm2 = 'Curiosity : Bot'
 global.azami = 'Azami'
 global.cb = 'Bot'
 
-//versiones y otros
+//Aqui la versión y entre otros
 global.vs = 'V2'
 global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
