@@ -162,7 +162,7 @@ await m.reply(`🫡 *Agotaste Los Intentos!! La Palabra* ${sopaPalabra} *se enco
 return  
 } else {
 intentos -= 1
-await m.reply(`😮‍💨 *Incorrecto. Te Quedan `${intentos}` intentos!!* ${intentos === 1 ? '' : `\n*Palabra a encontrar:* \`\`\`${sopaPalabra}\`\`\` `}\n\n${intentos === 1 ? `\`\`\`💡 Pista!!\`\`\`\n*La palabra ${sopaPalabra} se encuentra en la dirección _"${cambioLetra}"_*\n\n` : ''}${sopaNube}`)
+await m.reply(`😮‍💨 *Incorrecto. Te Quedan ${intentos} intentos!!* ${intentos === 1 ? '' : `\n*Palabra a encontrar:* \`\`\`${sopaPalabra}\`\`\` `}\n\n${intentos === 1 ? `\`\`\`💡 Pista!!\`\`\`\n*La palabra ${sopaPalabra} se encuentra en la dirección _"${cambioLetra}"_*\n\n` : ''}${sopaNube}`)
 return
 }}}
 
