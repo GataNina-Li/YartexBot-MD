@@ -7,8 +7,7 @@ import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
 
-//no editar los propietarios del bot, si quieres puedes añadirte solo no quites a los que estan.
-
+//no editar los propietarios del bot, si quieres puedes añadirte solo no quites a los que ya estan.
 global.owner = [['524531287294', 'CuriosityBot-MD 🍧', true], ['5492266466080', 'Owner 🍧', true], ['5217294888993'], ['59162714296'], ['5214531287294'], ['5492964650915'], ['573013482814'], ['5215610314499']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
