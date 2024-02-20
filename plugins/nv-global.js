@@ -114,7 +114,7 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(Fiesta del admin|fiesta del admin)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/admin.mp3'
+let vn = 'https://qu.ax/jDVi.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
@@ -135,14 +135,14 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(gemidos|gemime|gime|gemime|gemi2)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/gemi2.mp3'
+let vn = 'https://qu.ax/bwPL.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(audio hentai|Audio hentai|audiohentai|Audiohentai)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/hentai.mp3'
+let vn = 'https://qu.ax/GSUY.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
