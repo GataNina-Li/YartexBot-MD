@@ -97,14 +97,15 @@ sopaDeLetrasConBordes += fila + "\n"
 sopaDeLetrasConBordes = sopaDeLetrasConBordes.replace(/[a-zA-Z]/g, letra => LETRAS_POSIBLES[letra.charCodeAt() - 65] || letra)
 
 await m.reply(`🔠 *SOPA DE LETRAS* 🔠
-*Palabra:* \`\`\`"${PALABRA}"\`\`\`
-*Tiene 3 minutos para encontrar la respuesta correcta!!*
 
-*ESCRIBA EL NÚMERO DE FILA Y COLUMNA DEL COMIENZO DE LA PRIMERA LETRA _"${PALABRA.charAt(0)}"_ DE LA PALABRA _"${PALABRA}"_ TIENE _${intentos}_ INTENTOS!!*
+Palabra: \`\`\`"${PALABRA}"\`\`\`
+Tiene 3 minutos para encontrar la respuesta correcta!!
+
+*Escriba el número de fila y columna del comienzo de la primera letra* _"${PALABRA.charAt(0)}"_ *de la palabra* _"${PALABRA}"_ *tiene* _${intentos}_ *intentos!!*
 
 *Ejemplo:*
 ❇️ \`\`\`${usedPrefix + command} 28\`\`\`
-➡️ \`\`\`FILA 2\`\`\`    ⬇️ \`\`\`COLUMNA 8\`\`\``.trim())
+➡️ \`\`\`Fila 2\`\`\`    ⬇️ \`\`\`Columna 8\`\`\``.trim())
 await m.reply(`🔠 *${PALABRA.split("").join(" ")}* 🔠\n\n` + sopaDeLetrasConBordes.trimEnd())
 fila = filaInicial 
 columna = columnaInicial
@@ -149,7 +150,7 @@ diamante = 32
 }
 global.db.data.users[m.sender].limit += diamante
 
-await m.reply(`\`\`\`🎊 HAS GANADO ${diamante} ${rpgshop.emoticon('limit')}!!\`\`\`\n\n*CORRECTO!! LA PALABRA _"${sopaPalabra}"_ SE ENCONTRABA EN LA DIRECCIÓN _${cambioLetra}_ DE LA FILA _${fila}_ Y COLUMNA _${columna}_*`)
+await m.reply(`\`\`\`🎊 Has Ganado ${diamante} ${rpgshop.emoticon('limit')}!!\`\`\`\n\n*Correcto!! la palabra* `${sopaPalabra}` *se encontraba en la dirección* `${cambioLetra}` *de la fila* `${fila}` *y columna* `${columna}` `)
 fila = null, columna = null, sopaNube = null, sopaPalabra = null, sopaDir = null, userSP = null, cambioLetra = null
 intentos = 0
 return
@@ -157,11 +158,11 @@ return
 if (intentos === 1) {
 fila = null, columna = null, sopaNube = null, sopaPalabra = null, sopaDir = null, userSP = null, cambioLetra = null
 intentos = 0
-await m.reply(`🫡 *AGOTASTE LOS INTENTOS!! LA PALABRA _"${sopaPalabra}"_ SE ENCONTRABA EN LA DIRECCIÓN _${cambioLetra}_ DE LA FILA _${fila}_ Y COLUMNA _${columna}_*`)
+await m.reply(`🫡 *Agotaste Los Intentos!! La Palabra* `${sopaPalabra}` *se encontraba en la dirección* `${cambioLetra}` *de la fila* `${fila}` *y columna* `${columna}` `)
 return  
 } else {
 intentos -= 1
-await m.reply(`😮‍💨 *INCORRECTO. TE QUEDAN _${intentos}_ INTENTOS!!*${intentos === 1 ? '' : `\n*PALABRA A ENCONTRAR:* \`\`\`${sopaPalabra}\`\`\``}\n\n${intentos === 1 ? `\`\`\`💡 PISTA!!\`\`\`\n*LA PALABRA _${sopaPalabra}_ SE ENCUENTRA EN LA DIRECCIÓN _"${cambioLetra}"_*\n\n` : ''}${sopaNube}`)
+await m.reply(`😮‍💨 *Incorrecto. Te Quedan `${intentos}` intentos!!* ${intentos === 1 ? '' : `\n*Palabra a encontrar:* \`\`\`${sopaPalabra}\`\`\` `}\n\n${intentos === 1 ? `\`\`\`💡 Pista!!\`\`\`\n*La palabra ${sopaPalabra} se encuentra en la dirección _"${cambioLetra}"_*\n\n` : ''}${sopaNube}`)
 return
 }}}
 
