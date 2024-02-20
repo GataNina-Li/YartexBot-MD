@@ -1,14 +1,12 @@
 var handler = async (m, { conn, command, text }) => {
 
-if (!text) throw `*⚠️ ESCRIBE EL NOMBRE DE DOS PERSONAS PARA CALCULAR SU AMOR*`
+if (!text) conn.reply(m.chat, `🎌 *Escribe el nombre de dos personas para calcular su amor*`, m, fake, )
 let [text1, ...text2] = text.split(' ')
 
 text2 = (text2 || []).join(' ')
-if (!text2) throw `*⚠️ ESCRIBE EL NOMBRE DE LA SEGUNDA PERSONA*`
-let love = `❤️ *${text1}* tu oportunidad de enamorarte de *${text2}* es de *${Math.floor(Math.random() * 100)}%*👩🏻‍❤️‍👨🏻 
+if (!text2) conn.reply(m.chat, `🚩 *Escribe el nombre de la segunda persona*`, m, fake, )
+let love = `❤️ *${text1}* tu oportunidad de enamorarte de *${text2}* es de *${Math.floor(Math.random() * 100)}%* 👩🏻‍❤️‍👨🏻`
 
-_*by Curiosity*_
-`.trim()
 m.reply(love, null, { mentions: conn.parseMention(love) })
 
 }
