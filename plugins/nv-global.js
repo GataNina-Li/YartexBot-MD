@@ -15,7 +15,7 @@ this.sendMessage(m.chat, {text: join.trim(), mentions: [...join.matchAll(/@([0-9
 
 if (/^hola$/i.test(m.text) && !chat.isBanned) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Hola.mp3'
+let vn = 'https://qu.ax/HPeS.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
