@@ -4,7 +4,7 @@ import path from 'path'
 async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 
 let user = a => '@' + a.split('@')[0]
-if (!text) throw `*⚠️ EJEMPLO DE USO:*\n${usedPrefix + command} texto`
+if (!text) return conn.reply(m.chat, `🚩 *Ejemplo de uso*\n!${command} texto`, m, fake, )
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
 let k = Math.floor(Math.random() * 70)
