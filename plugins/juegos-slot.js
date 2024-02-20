@@ -16,7 +16,7 @@ if (users.exp < apuesta) {
 return conn.reply(m.chat, '🚩 *No tienes suficiente XP*', m, fake, )
 }
 
-let emojis = ['🪐', '🌜', '🌟']
+let emojis = ['🦊', '🐹', '🐮']
 let a = Math.floor(Math.random() * emojis.length)
 let b = Math.floor(Math.random() * emojis.length)
 let c = Math.floor(Math.random() * emojis.length)
@@ -51,13 +51,12 @@ users.exp -= apuesta
 }
 users.lastslot = new Date * 1
 return await m.reply(
-`🎰 ┃ *SLOTS* 
+`🚩 ┃ *SLOTS* 
 ───────────
 ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
 ───────────
-🎰┃🎰┃ 🎰
        
 ${end}`)
 
