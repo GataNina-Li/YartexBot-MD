@@ -20,12 +20,6 @@ conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
-if (/^que no$/i.test(m.text) && !chat.isBanned) {
-if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/queno.mp3'
-conn.sendPresenceUpdate('recording', m.chat)
-conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
-}
 
 if (!chat.isBanned && m.text.match(/(anadieleimporta|a nadie le importa)/gi)) {
 if (!db.data.chats[m.chat].audios) return
@@ -43,21 +37,21 @@ conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'au
 
 if (!chat.isBanned && m.text.match(/(miarda de bot|mierda de bot|mearda de bot|Miarda de Bot|Mierda de Bot|Mearda de Bot)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/insultar.mp3'
+let vn = 'https://qu.ax/UEZQ.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(baÃ±ate|BaÃ±ate)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './storage/audios/Banate.mp3'
+let vn = 'https://qu.ax/JsYa.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
 
 if (!chat.isBanned && m.text.match(/(baneado|Baneado)/gi)) {
 if (!db.data.chats[m.chat].audios) return
-let vn = './media/baneado.mp3'
+let vn = 'https://qu.ax/SJJt.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: fkontak})
 }
