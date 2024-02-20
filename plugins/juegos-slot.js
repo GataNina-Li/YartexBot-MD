@@ -16,7 +16,7 @@ if (users.exp < apuesta) {
 return conn.reply(m.chat, '🚩 *No tienes suficiente XP*', m, fake, )
 }
 
-let emojis = ['🦊', '🐹', '🐮']
+let emojis = ['🔔', '🍒', '💰']
 let a = Math.floor(Math.random() * emojis.length)
 let b = Math.floor(Math.random() * emojis.length)
 let c = Math.floor(Math.random() * emojis.length)
