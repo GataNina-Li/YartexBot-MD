@@ -10,7 +10,7 @@ if (isNaN(args[0])) return conn.reply(m.chat, fa, m, fake, )
 let apuesta = parseInt(args[0])
 let users = global.db.data.users[m.sender]
 let time = users.lastslot + 10000
-if (new Date - users.lastslot < 10000) throw `*⏰ ESPERE ${msToTime(time - new Date())} PARA USAR DE NUEVO*`
+if (new Date - users.lastslot < 10000) return conn.reply(m.chat, `⏰ *Deberá esperar ${msToTime(time - new Date())}*`, m, fake, )
 if (apuesta < 50) return conn.reply(m.chat, '🚩 *Lo mínimo para apostar es 100 XP*', m, fake, )
 if (users.exp < apuesta) {
 return conn.reply(m.chat, '🚩 *No tienes suficiente XP*', m, fake, )
@@ -50,7 +50,7 @@ end = `⚠️ *Perdiste la apuesta*\n*Te e quitado ${apuesta} XP*`
 users.exp -= apuesta
 }
 users.lastslot = new Date * 1
-return await m.reply(
+return await conn.reply(m.chat,
 `🚩 ┃ *SLOTS* 
 ───────────
 ${x[0]} : ${y[0]} : ${z[0]}
@@ -58,7 +58,7 @@ ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
 ───────────
        
-${end}`)
+${end}`, m, fake, )
 
 }
 handler.help = ['slot']
