@@ -150,7 +150,7 @@ diamante = 32
 }
 global.db.data.users[m.sender].limit += diamante
 
-await m.reply(`\`\`\`🎊 Has Ganado ${diamante} ${rpgshop.emoticon('limit')}!!\`\`\`\n\n*Correcto!! la palabra* `${sopaPalabra}` *se encontraba en la dirección* `${cambioLetra}` *de la fila* `${fila}` *y columna* `${columna}` `)
+await m.reply(`\`\`\`🎊 Has Ganado ${diamante} ${rpgshop.emoticon('limit')}!!\`\`\`\n\n*Correcto!! la palabra* `${sopaPalabra}` *se encontraba en la dirección* ${cambioLetra} *de la fila* ${fila} *y columna* ${columna}`)
 fila = null, columna = null, sopaNube = null, sopaPalabra = null, sopaDir = null, userSP = null, cambioLetra = null
 intentos = 0
 return
@@ -158,7 +158,7 @@ return
 if (intentos === 1) {
 fila = null, columna = null, sopaNube = null, sopaPalabra = null, sopaDir = null, userSP = null, cambioLetra = null
 intentos = 0
-await m.reply(`🫡 *Agotaste Los Intentos!! La Palabra* `${sopaPalabra}` *se encontraba en la dirección* `${cambioLetra}` *de la fila* `${fila}` *y columna* `${columna}` `)
+await m.reply(`🫡 *Agotaste Los Intentos!! La Palabra* ${sopaPalabra} *se encontraba en la dirección* ${cambioLetra} *de la fila* ${fila} *y columna* ${columna}`)
 return  
 } else {
 intentos -= 1
