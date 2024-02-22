@@ -14,7 +14,7 @@ number = text
 user = conn.user.jid.split`@`[0] + '@s.whatsapp.net'
 bot = conn.user.jid.split`@`[0] 
 bant = `🎌 *Etiquete a una persona*\n\nEjemplo, !${command} @${global.suittag}`
-if (!text && !m.quoted) return conn.reply(m.chat, bant, null, { mentions: [user] })               
+if (!text && !m.quoted) return conn.reply(m.chat, bant, { mentions: [user] })               
 try {
 if(text) {
 user = number + '@s.whatsapp.net'
@@ -25,22 +25,22 @@ user = number + '@s.whatsapp.net'
 }} catch (e) {
 } finally {
 number = user.split('@')[0]
-if(user === conn.user.jid) return conn.reply(m.chat, `🚩 @${bot} *No puede ser baneado con este comando*`, null, { mentions: [user] })   
+if(user === conn.user.jid) return conn.reply(m.chat, `🚩 @${bot} *No puede ser baneado con este comando*`, { mentions: [user] })   
 for (let i = 0; i < global.owner.length; i++) {
 ownerNumber = global.owner[i][0];
 if (user.replace(/@s\.whatsapp\.net$/, '') === ownerNumber) {
 aa = ownerNumber + '@s.whatsapp.net'
-await conn.reply(m.chat, `🚩 *No puedo banear al propietario @${ownerNumber} de ${cb}*`, null, { mentions: [aa] })
+await conn.reply(m.chat, `🚩 *No puedo banear al propietario @${ownerNumber} de ${cb}*`, { mentions: [aa] })
 return
 }}
 users = global.db.data.users
 if (users[user].banned === true) conn.reply(m.chat, `🚩 *No es necesario volver a banear a @${number}*`, null, { mentions: [user] }) 
 users[user].banned = true
 usr = m.sender.split('@')[0]     
-await conn.reply(m.chat, '✅ *Usuario baneado con éxito*', null, { mentions: [user] })   
+await conn.reply(m.chat, '✅ *Usuario baneado con éxito*', { mentions: [user] })   
 
 }} catch (e) {
-await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', null, m, fake, )
+await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
 console.log(e) 
 }
 
