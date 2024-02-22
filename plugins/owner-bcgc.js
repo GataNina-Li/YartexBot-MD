@@ -1,6 +1,5 @@
 var handler = async (m, { conn, isROwner, text }) => {
-    
-const delay = time => new Promise(res => setTimeout(res, time))
+
 let getGroups = await conn.groupFetchAllParticipating()
 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
 let anu = groups.map(v => v.id)
@@ -21,3 +20,5 @@ handler.command = /^(broadcast|bc)(group|grup|gc)$/i
 handler.owner = true
 
 export default handler
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
