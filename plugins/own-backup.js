@@ -9,13 +9,12 @@ try {
 let d = new Date
 let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })
 let database = await fs.readFileSync(`./database.json`)
-let code_database = await fs.readFileSync(`./code_database.json`)
 let creds = await fs.readFileSync(`./sessions/creds.json`)
 
 await conn.reply(m.sender, `*🗓️ Database:* ${date}`, fkontak)
 await conn.sendMessage(m.sender, {document: database, mimetype: 'application/json', fileName: `database.json`}, { quoted: m })
 await conn.sendMessage(m.sender, {document: creds, mimetype: 'application/json', fileName: `creds.json`}, { quoted: m })
-await conn.sendMessage(m.sender, {document: code_database, mimetype: 'application/json', fileName: `code_database.json`}, { quoted: m })
+
 } catch (e) {
 
 await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
