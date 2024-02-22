@@ -30,7 +30,7 @@ return resultado
 }
 
 const message = users.map((v, index) => `${index + 1} @${v.user.jid.replace(/[^0-9]/g, '')}\n wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n*Nombre:* ${v.user.name || '-'}\n*Actividad:* ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : 'Desconocido'}`).join('\n\n')
-const replyMessage = message.length === 0 ? '🚩 *No hay sub bots disponible por el momento.*\n- Verifique más tarde.' : message
+const replyMessage = message.length === 0 ? '🚩 *No hay sub bots disponibles por el momento.*\n- Verifique más tarde.' : message
 const totalUsers = users.length
 const responseMessage = `${replyMessage.trim()}`.trim()
 
