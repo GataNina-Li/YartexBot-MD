@@ -6,7 +6,7 @@ let Reglas = `🎌 *Respeta las reglas de CuriosityBot*\n
 ⬡ Contacta al creador si es necesario
 ⬡ Pedir permiso para añadir el bot a un grupo
 
-🚩 *Si no cumples con las reglas del bot, seras bloqueado por el owner del bot.*
+🚩 *Si no cumples con las reglas del bot, seras bloqueado.*
 
 *Puedea apoyarnos dejando una estrellita 🌟 al repositorio oficial de CuriosityBot.*
 
