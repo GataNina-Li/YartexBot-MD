@@ -25,7 +25,7 @@ global.author = 'CuriosityBot'
 global.wm = '© CuriosityBot-MD'
 global.wm2 = 'Curiosity : Bot'
 global.azami = 'Azami'
-global.cb = 'Bot'
+global.cb = 'CuriosityBot'
 
 //Aqui la versión y entre otros
 global.vs = 'V2'
