@@ -302,9 +302,9 @@ m.plugin = name
 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
 let chat = global.db.data.chats[m.chat]
 let user = global.db.data.users[m.sender]
-if (name != 'owner-unbanchat.js' && chat?.isBanned)
+if (name != 'own-unbanchat.js' && chat?.isBanned)
 return
-if (name != 'owner-unbanuser.js' && user?.banned)
+if (name != 'own-unbanuser.js' && user?.banned)
 return
 }
 let adminMode = global.db.data.chats[m.chat].modoadmin
@@ -396,7 +396,7 @@ console.error(e)
 }
 }
 if (m.diamond)
-m.reply(`「 💎 」Se a utilizado un *${+m.diamond}* diamante`)
+m.reply(`💎 Se a utilizado un *${+m.diamond}* diamante`)
 }
 break
 }
