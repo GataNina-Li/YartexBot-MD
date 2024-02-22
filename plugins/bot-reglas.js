@@ -1,14 +1,14 @@
 var handler = async (m, { conn, usedPrefix, command}) => {
 
-let Reglas = `🎌 *Respeta las reglas del bot*\n
+let Reglas = `🎌 *Respeta las reglas de CuriosityBot*\n
 ⬡ No llamar
 ⬡ No hacer spam
 ⬡ Contacta al creador si es necesario
 ⬡ Pedir permiso para añadir el bot a un grupo
 
-🚩 *Si no cumples las reglas seras bloqueado*
+🚩 *Si no cumples las reglas seras bloqueado o podras ser baneado.*
 
-Puedes apoyar el bot dejando tu estrella en el repositorio
+*Puedea apoyarnos dejando una estrellita 🌟 al repositorio de CuriosityBot.*
 
 https://github.com/AzamiJs/CurioistyBot-MD`.trim()
 await conn.reply(m.chat, Reglas, m, fake, )
