@@ -28,10 +28,10 @@ text: m.text
 }))
 if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
 m.reply({
-'-3': '*⚠️ EL JUEGO A TERMINADO*',
-'-2': '*⚠️ INVALIDO*',
-'-1': '*⚠️ POSICIÓN INVALIDA*',
-0: '*⚠️ POSICIÓN INVALIDA*',
+'-3': '🚩 *El juego a terminado*',
+'-2': '🚩 *Inválido*',
+'-1': '🚩 *Posición invalida*',
+0: '🚩 *Posición invalida*',
 }[ok])
 return !0
 }
@@ -66,8 +66,8 @@ ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
 👤 JUGADORES
-*JUGADOR 1* ❎ : @${room.game.playerX.split('@')[0]} 
-*JUGADOR 2* ⭕ : @${room.game.playerO.split('@')[0]}`.trim()
+*Jugador 1* ❎ : @${room.game.playerX.split('@')[0]} 
+*Jugador 2* ⭕ : @${room.game.playerO.split('@')[0]}`.trim()
 
 let users = global.global.db.data.users
 if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
