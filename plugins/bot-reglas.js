@@ -10,7 +10,7 @@ let Reglas = `🎌 *Respeta las reglas de CuriosityBot*\n
 
 *Puedea apoyarnos dejando una estrellita 🌟 al repositorio de CuriosityBot.*
 
-https://github.com/AzamiJs/CurioistyBot-MD`.trim()
+https://github.com/AzamiJs/CuriosityBot-MD`.trim()
 await conn.reply(m.chat, Reglas, m, fake, )
 
 }
