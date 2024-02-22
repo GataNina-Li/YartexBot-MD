@@ -47,10 +47,10 @@ ${group6}
 ⬡ *Curiosity - Criwilop*
 ${group7}
 
-⬡ *OnyxBot - CuriosityBot*
+⬡ *CuriosityBot - SakuraBot*
 ${group8}
 
-⬡ *CuriosityBot - SakuraBot*
+⬡ *OnyxBot - CuriosityBot*
 ${group9}
 
 ✨ *Canales oficiales*
