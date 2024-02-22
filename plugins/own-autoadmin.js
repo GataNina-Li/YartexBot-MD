@@ -13,7 +13,7 @@ await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
 
 }
 handler.help = ['autoadmin']
-handler.tags = ['owner']
+handler.tags = ['own']
 handler.command = /^autoadmin|tenerpoder$/i
 
 handler.rowner = true
