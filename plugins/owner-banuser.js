@@ -58,7 +58,7 @@ users = global.db.data.users
 if (users[user].banned === true) conn.reply(m.chat, `🚩 *No es necesario volver a banear a @${number}*`, null, { mentions: [user] }) 
 users[user].banned = true
 usr = m.sender.split('@')[0]     
-await conn.reply(m.chat, lenguajeGB.smsPropban5(), null, { mentions: [user] })   
+await conn.reply(m.chat, '✅ *Usuario baneado con éxito*', null, { mentions: [user] })   
 
 }} catch (e) {
 await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', null, m, fake, )
