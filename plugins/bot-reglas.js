@@ -6,9 +6,9 @@ let Reglas = `🎌 *Respeta las reglas de CuriosityBot*\n
 ⬡ Contacta al creador si es necesario
 ⬡ Pedir permiso para añadir el bot a un grupo
 
-🚩 *Si no cumples las reglas seras bloqueado o podras ser baneado.*
+🚩 *Si no cumples con las reglas del bot, seras bloqueado o puedes ser baneado por el propietario/a.*
 
-*Puedea apoyarnos dejando una estrellita 🌟 al repositorio de CuriosityBot.*
+*Puedea apoyarnos dejando una estrellita 🌟 al repositorio oficial de CuriosityBot.*
 
 https://github.com/AzamiJs/CuriosityBot-MD`.trim()
 await conn.reply(m.chat, Reglas, m, fake, )
