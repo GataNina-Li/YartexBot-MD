@@ -7,11 +7,11 @@ if (!who) conn.reply(m.chat, why, m, { mentions: [m.sender] })
 let res = []
 switch (command) {
 case 'blok': case 'block':
-if (who) await conn.updateBlockStatus(who, 'block').then(() => { res.push(who)})
+if (who) await conn.updateBlockStatus(who, 'block').then(() => { res.push(who); })
 else conn.reply(m.chat, why, m, { mentions: [m.sender] })
 break
 case 'unblok': case 'unblock':
-if (who) await conn.updateBlockStatus(who, 'unblock').then(() => { res.push(who)})
+if (who) await conn.updateBlockStatus(who, 'unblock').then(() => { res.push(who); })
 else conn.reply(m.chat, why, m, { mentions: [m.sender] })
 break
 
