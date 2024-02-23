@@ -6,11 +6,11 @@ if (!text) return conn.reply(m.chat, bant, m, fake, )
 let who
 if (m.isGroup) who = m.mentionedJid[0]
 else who = m.chat
-if (!who) return conn.reply(m.chat, bant, m, { mentions: [user] })
+if (!who) return conn.reply(m.chat, bant, m, { mentions: [text] })
 let users = global.db.data.users
 
 users[who].banned = false
-conn.reply(m.chat, `✅ *Se desbaneo al usuario ${text} con éxito*`, m, { mentions: [user] })
+conn.reply(m.chat, `✅ *Se desbaneo al usuario ${text} con éxito*`, m, { mentions: [text] })
 
 }
 handler.help = ['unbanuser']
