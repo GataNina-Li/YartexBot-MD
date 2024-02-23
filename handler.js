@@ -188,9 +188,9 @@ status: 0
 } catch (e) {
 console.error(e)
 }
-const dataown = global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)
+//const dataown = global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)
 //let JIS of data.map(([id]) => [id] + '@s.whatsapp.net').filter(v => v != conn.user.jid) 
-const isROwner = dataown //JIS //[conn.decodeJid(global.conn.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+const isROwner = [conn.decodeJid(global.conn.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isOwner = isROwner || m.fromMe
 const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
