@@ -18,7 +18,7 @@ return conn.reply(m.chat, `
   
 ⬣ *Plugins*
 
-⬡ ${pluginNames.map(name => `${name}`).join('\n')}`, m, fake, )}
+${pluginNames.map(name => `⬡ ${name}`).join('\n')}`, m, fake, )}
 
 try {
 const { stdout, stderr } = await exec(`cat plugins/${text}.js`)
