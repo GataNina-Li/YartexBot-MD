@@ -14,6 +14,7 @@ o = await exec(command.trimStart()  + ' ' + text.trimEnd())
 o = e
 } finally {
 let { stdout, stderr } = o
+if (stdout.trim()) conn.reply(m.chat, stdout, m, fake, )
 if (stderr.trim()) conn.reply(m.chat, stderr, m, fake, )
 }
   
