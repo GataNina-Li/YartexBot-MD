@@ -6,6 +6,12 @@ let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : t
 if (!who) return conn.reply(m.chat, why, m, { mentions: [m.sender] })
 let res = []
 switch (command) {
+for (let i = 0; i < global.owner.length; i++) {
+let ownerNumber = global.owner[i][0]
+if (user.replace(/@s\.whatsapp\.net$/, '') === ownerNumber) {
+let aa = ownerNumber + '@s.whatsapp.net'
+await conn.reply(m.chat, `🚩 *No puedo banear al propietario @${ownerNumber} de ${cb}*`, m, { mentions: [aa] })
+return
 case 'blok': case 'block':
 if (who) await conn.updateBlockStatus(who, 'block').then(() => { res.push(who); })
 else conn.reply(m.chat, why, m, { mentions: [m.sender] })
@@ -18,7 +24,10 @@ break
 }
 if (res[0]) conn.reply(m.chat, `*Se uso con éxito el comando ${command} para el usuario*  ${res ? `${res.map(v => '@' + v.split("@")[0])}` : ''}`, m, { mentions: res })}
 
-handler.tags = ['owner']
+handler.tags = ['own']
+handler.help = ['block', 'unblock']
 handler.command = /^(block|unblock)$/i
+
 handler.rowner = true
+
 export default handler
