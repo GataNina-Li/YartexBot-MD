@@ -41,7 +41,7 @@ let users = '500'
 let link = (m.quoted ? m.quoted.text ? m.quoted.text : text : text) || text
 let [_, code] = link.match(linkRegex) || []
 let gpData = await conn.groupGetInviteInfo(code).catch(e => {})
-if (!code) return conn.reply(m.chat, `🎌 *Ingrese el enlace de un grupo*\n\nEjemplo, !unete ${group}`, m, fake, )
+if (!code) return conn.reply(m.chat, `🎌 *Ingrese el enlace de un grupo*\n\nEjemplo, !unete`, m, fake, )
 
 if ( isMods || isOwner || m.fromMe) {
 m.reply(m.chat, `✅ ${cb} *Se unió al grupo*`, m, fake, )
