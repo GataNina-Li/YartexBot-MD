@@ -1,14 +1,8 @@
 import { tmpdir } from 'os'
 import path, { join } from 'path'
-import {
-readdirSync,
-statSync,
-unlinkSync,
-existsSync,
-readFileSync,
-watch
-} from 'fs'
-let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => { 
+import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch } from 'fs'
+
+var handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => { 
 
 conn.reply(m.chat, `*⚠️ ARCHIVOS DE LA CARPETA TMP FUERON ELIMINADOS*`, m)
 
