@@ -1,7 +1,7 @@
 var handler = async (m, { conn, text, command }) => {
 
 let id = text ? text : m.chat  
-await conn.reply(id, '**', m, fake, ) 
+await conn.reply(id, saludo, m, fake, ) 
 await conn.groupLeave(id)}
 
 handler.help = ['out', 'leavegc', 'salir']
