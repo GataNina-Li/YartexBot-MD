@@ -25,7 +25,7 @@ else conn.reply(m.chat, why, m, { mentions: [m.sender] })
 break
 
 }
-if (res[0]) conn.reply(m.chat, `*Se uso con éxito el comando ${command} para el usuario*  ${res ? `${res.map(v => '@' + v.split("@")[0])}` : ''}`, m, { mentions: res })}
+if (res[0]) conn.reply(m.chat, `🚩 *Se uso con éxito el comando ${command} para el usuario*  ${res ? `${res.map(v => '@' + v.split("@")[0])}` : ''}`, m, { mentions: res })}
 
 handler.tags = ['own']
 handler.help = ['block', 'unblock']
