@@ -12,7 +12,7 @@ await conn.reply(m.chat, `🚩 *No puedo banear al propietario @${ownerNumber} d
 return
 }}
 switch (command) {
-}}
+
 case 'blok': case 'block':
 if (who) await conn.updateBlockStatus(who, 'block').then(() => { res.push(who); })
 else conn.reply(m.chat, why, m, { mentions: [m.sender] })
