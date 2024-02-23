@@ -1,6 +1,10 @@
 var handler = async (m, {conn, text}) => {
 
-if (!text) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
+let user, bant
+
+user = conn.user.jid.split`@`[0] + '@s.whatsapp.net'
+bant = `🎌 *Etiquete a una persona*\n\nEjemplo, !${command} @${global.suittag}`
+if (!text) return conn.reply(m.chat, bant, m, { mentions: [user] })
 let who
 if (m.isGroup) who = m.mentionedJid[0]
 else who = m.chat
@@ -8,7 +12,7 @@ if (!who) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
 let users = global.db.data.users
 
 users[who].banned = false
-conn.reply(m.chat, `*⏤͟͟͞͞🍓ESTE USUARIO FUE DESBANEADO CON ÉXITO*\n*[🌟] YA PUEDE USAR CURIOSITY BOT-MD*`, m)
+conn.reply(m.chat, `*Se desbaneo al usuario ${text} con éxito*`, m, { mentions: [text] })
 
 }
 handler.help = ['unbanuser']
