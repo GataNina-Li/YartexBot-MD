@@ -1,7 +1,7 @@
 var handler = async (m, { text, conn, usedPrefix, command }) => {
 
 let why = `🚩 *Ejemplo de uso*\n!${command} @${m.sender.split('@')[0]}`
-
+let user = conn.user.jid.split`@`[0] + '@s.whatsapp.net'
 let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false
 if (!who) return conn.reply(m.chat, why, m, { mentions: [m.sender] })
 let res = []
