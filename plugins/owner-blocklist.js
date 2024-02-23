@@ -1,17 +1,24 @@
 /* Creado por https://github.com/FG98F */
 
-let handler = async (m, { conn }) => {	
+var handler = async (m, { conn }) => {
+
 await conn.fetchBlocklist().then(async data => {
-let txt = `*≡ Lista de bloqueados*\n\n*Total :* ${data.length}\n\n┌─⊷\n`
+let txt = `⬣ *LISTA DE BLOQUEADOS*
+
+Total bloqueados : ${data.length}`
 for (let i of data) {
-txt += `▢ @${i.split("@")[0]}\n`}
-txt += "└───────────"
+txt += `⬡ @${i.split('@')[0]}\n`}
+txt += '────────────────────────'
 return conn.reply(m.chat, txt, m, { mentions: await conn.parseMention(txt) })
 }).catch(err => {
-console.log(err);
-throw 'No hay números bloqueados'})}
+console.log(err)
+return conn.reply(m.chat, '🚩 *No hay números bloqueados*', m, fake, )})
+
+}
 handler.help = ['blocklist']
-handler.tags = ['owner']
+handler.tags = ['own']
 handler.command = ['blocklist', 'listblock'] 
+
 handler.rowner = true
+
 export default handler
