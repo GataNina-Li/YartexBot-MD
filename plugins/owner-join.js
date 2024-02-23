@@ -1,11 +1,11 @@
-/*import db from '../lib/database.js'
+import db from '../lib/database.js'
 
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
 
 let handler = async (m, { conn, text, isOwner, args }) => {
 
 let users = '500'
-if (!args[0]) return conn.reply(m.chat, `🎌 *Ingrese el enlace de un grupo*\n\nEjemplo, !unete ${nn}`, m, fake, )
+if (!args[0]) return conn.reply(m.chat, `🎌 *Ingrese el enlace de un grupo*\n\nEjemplo, !unete ${group}`, m, fake, )
 let [_, code, expired] = text.match(linkRegex) || []
 if (!code) return conn.reply(m.chat, '🚩 Error, El enlace no funciona o es inválido', m, fake, )
 let gpData = await conn.groupGetInviteInfo(code).catch(e => {})
@@ -31,4 +31,3 @@ handler.limit = 10
 export default handler
 
 const isNumber = (x) => (x = parseInt(x), typeof x === 'number' && !isNaN(x))
-*/
