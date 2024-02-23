@@ -4,7 +4,8 @@ let why = `🚩 *Ejemplo de uso*\n!${command} @${m.sender.split('@')[0]}`
 let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false
 if (!who) return conn.reply(m.chat, why, m, { mentions: [m.sender] })
 let res = []
-if (!((command === 'unblock') && (isOwner || isROwner))) {
+let cmd = command.toLowerCase()
+if (!((cmd === 'unblock') && (isOwner || isROwner))) {
 for (let i = 0; i < global.owner.length; i++) {
 let ownerNumber = global.owner[i][0]
 if (who.replace(/@s\.whatsapp\.net$/, '') === ownerNumber) {
