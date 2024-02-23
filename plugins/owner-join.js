@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+/*import db from '../lib/database.js'
 
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
 
@@ -31,3 +31,4 @@ handler.limit = 10
 export default handler
 
 const isNumber = (x) => (x = parseInt(x), typeof x === 'number' && !isNaN(x))
+*/
