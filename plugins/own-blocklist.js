@@ -5,7 +5,7 @@ var handler = async (m, { conn }) => {
 await conn.fetchBlocklist().then(async data => {
 let txt = `⬣ *LISTA DE BLOQUEADOS*
 
-Total bloqueados : ${data.length}`
+Total bloqueados : *${data.length}*\n\n`
 for (let i of data) {
 txt += `⬡ @${i.split('@')[0]}\n`}
 txt += '────────────────────────'
