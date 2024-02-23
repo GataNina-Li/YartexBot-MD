@@ -41,7 +41,7 @@ await conn.reply(m.chat, '🚩 *Ocurrió un fallo*',  m, fake, )
 
 }
 handler.help = ['dsowner']
-handler.tags = ['owner']
+handler.tags = ['own']
 handler.command = /^(del_reg_in_session_owner|dsowner|clearallsession)$/i
 
 handler.rowner = true
