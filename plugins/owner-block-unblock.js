@@ -12,6 +12,7 @@ if (user.replace(/@s\.whatsapp\.net$/, '') === ownerNumber) {
 let aa = ownerNumber + '@s.whatsapp.net'
 await conn.reply(m.chat, `🚩 *No puedo banear al propietario @${ownerNumber} de ${cb}*`, m, { mentions: [aa] })
 return
+}}
 case 'blok': case 'block':
 if (who) await conn.updateBlockStatus(who, 'block').then(() => { res.push(who); })
 else conn.reply(m.chat, why, m, { mentions: [m.sender] })
