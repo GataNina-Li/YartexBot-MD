@@ -10,7 +10,7 @@ if (!who) return conn.reply(m.chat, bant, m, { mentions: [text] })
 let users = global.db.data.users
 
 users[who].banned = false
-conn.reply(m.chat, `✅ *Se desbaneo al usuario ${text} con éxito*`, m, { mentions: [text] })
+ m.reply(`✅ *Se desbaneo al usuario ${text} con éxito*`, m.chat, { mentions: conn.parseMention(text)}) 
 
 }
 handler.help = ['unbanuser']
