@@ -9,7 +9,7 @@ m.reply(`╭─────✔⏍ *Balance* ⏍✔╮
 ├✨ *Exp:* ${global.db.data.users[who].exp}
 ╰─────────🎰─╯
 
-*╭─╮──📝 *Nota* ✔╮
+*╭─╮──📝 Nota* ✔╮
 ├💵*puedes comprar diamantes 💎*
 ├📨*utilizando los comandos 👇*
 ├💲*${usedPrefix}buy <cantidad>*
