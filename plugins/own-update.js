@@ -36,7 +36,7 @@ await conn.reply(m.chat, errorMessage2, m, fake, )
 handler.help = ['update', 'actualizar']
 handler.tags = ['own']
 handler.command = /^(update|actualizar|gitpull)$/i
-
+m.react('✏️')
 handler.rowner = true
 
 export default handler
