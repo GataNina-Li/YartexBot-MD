@@ -75,7 +75,7 @@ npm update
 npm start
 ```
 
-- #### `🚩 Activar En Caso De Detenerse En Termux`
+- #### 🚩 Activar En Caso De Detenerse En Termux
 > Escribe Estos Comandos Uno Por Uno
 ```bash
 > cd
@@ -83,7 +83,7 @@ npm start
 > npm start
 ```
 
-- #### `🚩 Obtener Otro Codigo Qr`
+- #### 🚩 Obtener Otro Codigo Qr
 > 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
 ```bash
 > cd CuriosityBot-MD
@@ -91,31 +91,31 @@ npm start
 > npm start
 ```
 
-- #### `🎌 Para Activar 24/7 (Termux)`
+- #### 🎌 Para Activar 24/7 (Termux)
 > Este Comando Deve Ir En La Carpeta CuriosityBot-MD
 ```bash
 > npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 ----
-- ### `🎌 Instalacion Por Code Dpace`
+- ### 🎌 Instalacion Por Code Dpace
 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-- ### `Activar En Replit`
+- ### Activar En Replit
 
 [![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
 ----  
 
-- ### `Activar En Koyeb`
+- ### Activar En Koyeb
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/AzamiJs/CuriosityBot-MD&branch=master&name=curiositybot)
 ----  
-- ### `Activar En Render`
+- ### Activar En Render
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FAzamiJs%2FCuriosityBot-MD) 
 ----  
-- ### `☁️ Vortexus Cloud - Host`
+- ### ☁️ Vortexus Cloud - Host
 > Integra CuriosityBot-MD en un servicio de alojamiento 24/7 online 
 
 <a href="https://vortexuscloud.com"><img src="https://telegra.ph/file/4bd3d8d14e5683073d4f3.jpg" height="125px"></a>
@@ -131,7 +131,7 @@ npm start
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - CuriosityBot-MD**</summary><img src="https://telegra.ph/file/524ab6e15b912d9cdb777.jpg"></details>
 ------------------
 
-- ### `☂️ Activar En Heroku ☂️`
+- ### ☂️ Activar En Heroku ☂️
 para usuarios del heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
