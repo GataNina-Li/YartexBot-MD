@@ -8,8 +8,8 @@ let messager = stdout.toString()
 if (messager.includes('Already up to date.')) messager = '✅ *No hay actualizaciones pendientes*'
 if (messager.includes('Updating')) messager = '✅ *Actualización finalizada exitosamente*\n\n' + stdout.toString()
 conn.reply(m.chat, messager, m, fake, )
-} catch {      
-try {    
+} catch { 
+try {
 const status = execSync('git status --porcelain')
 if (status.length > 0) {
 const conflictedFiles = status.toString().split('\n').filter(line => line.trim() !== '').map(line => {
