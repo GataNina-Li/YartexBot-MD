@@ -102,16 +102,16 @@ npm start
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-- ### `Activar Curiosity En Replit`
+- ### `Activar En Replit`
 
 [![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
 ----  
 
-- ### `Acrivar Curiosity En Koyeb`
+- ### `Activar En Koyeb`
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/AzamiJs/CuriosityBot-MD&branch=master&name=curiositybot)
 ----  
-- ### `Acrivar Curiosity En Render`
+- ### `Activar En Render`
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FAzamiJs%2FCuriosityBot-MD) 
 ----  
@@ -121,7 +121,7 @@ npm start
 <a href="https://vortexuscloud.com"><img src="https://telegra.ph/file/4bd3d8d14e5683073d4f3.jpg" height="125px"></a>
 ### vortexus cloud
 
-- **Pagina oficial de vortexus:** [`Vortexuscloud`](https://vortexuscloud.com)
+- **Pagina Oficial De Vortexus:** [`Vortexuscloud`](https://vortexuscloud.com)
 - **Crear cuenta en la Dashboard:** [`Dashboard`](https://youtu.be/JUg7DWUY6_Y?si=DHwk9dwjvWdPEIBJ)
 - **Dashboard:** [`Dash`](https://dash.vortexuscloud.com)
 - **Panel:** [`Aquí`](https://panel.vortexuscloud.com)
