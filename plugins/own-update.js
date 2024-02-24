@@ -1,6 +1,6 @@
 import { execSync } from 'child_process'
 
-let handler = async (m, { conn, text }) => {
+var handler = async (m, { conn, text }) => {
 
 try {
 const stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : ''));
