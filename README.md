@@ -1,4 +1,4 @@
-## 𝗖𝗎𝗋𝗂𝗈𝗌𝗂𝗍𝗒 : 𝗕𝗈𝗍 - 𝗠𝗗 ✨
+## Curiosity : Bot - MD ✨
 
 <p align="center">
 <img src="https://telegra.ph/file/04b7a17f4f7aaa302b2d8.jpg" alt="CuriosityBot-MD" width="900"/>
@@ -29,7 +29,7 @@
 
 ### `⚙️ Configuraciones ⚙️`
 - Cambiar Los Numeros De Los Owner [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
-- Puede Cambiar A La Últim Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
+- Puede Cambiar A La Última Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
 ***
 
 - #### 🚩 Instalacion Automatica Por Termux
