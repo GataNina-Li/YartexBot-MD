@@ -10,11 +10,11 @@ m.reply(`╭─────✔⏍ *Balance* ⏍✔╮
 ╰─────────🎰─╯
 
 *╭─╮──📝 Nota* ✔╮
-├💵*puedes comprar diamantes 💎*
-├📨*utilizando los comandos 👇*
-├💲*${usedPrefix}buy <cantidad>*
-├☑️*${usedPrefix}buyall*
-*╰──────🔰──✔──⏍`)
+├💵 *puedes comprar diamantes 💎*
+├📨 *utilizando los comandos 👇*
+├💲 *${usedPrefix}buy <cantidad>*
+├☑️ *${usedPrefix}buyall*
+╰──────🔰──✔──⏍`)
 }
 handler.help = ['bal']
 handler.tags = ['rg']
