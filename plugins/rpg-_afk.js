@@ -16,12 +16,11 @@ continue
 let afkTime = user.afk
 if (!afkTime || afkTime < 0)
 continue
-        let reason = user.afkReason || ''
-        m.reply(`
-️⚠️ *EL USUARIO QUE MENCIONASTE ESTA AFK*
-${reason ? '👀 *Razón* : ' + reason : '*Sin razón*'}
-⏱️ *Durante* : ${clockString(new Date - afkTime)}
-  `.trim())
-    }
-    return true
+let reason = user.afkReason || ''
+conn.reply(m.chat, `🚩 *El usuario que mencionaste esta afk*
+${reason ? '*Razón* : ' + reason : '*Sin razón*'}
+*Durante* : ${clockString(new Date - afkTime)}`, m, fake, )
+
+}
+return true
 }
