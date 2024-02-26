@@ -4,35 +4,35 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-'info': 'Informacion 📄',
+'info': 'Información 📄',
 'grupo': 'Grupos 🗺️',
-'juegos': 'Juegos 🪅',
+'juegos': 'Juegos 🧸',
 'descargas': 'Descargas 🚀',
 'jadibot': 'JadiBot 🤖', 
 'nable': 'Enable / Disable ⚙️', 
 'internet': 'Buscadores 🔎',
-'transformador': 'Convertidores 📐', 
-'sticker': 'Stickers 🧨',
+'transformador': 'Convertidores 👏🏻', 
+'sticker': 'Stickers 🧩',
 'rg': 'Rpg 🌱',
 'audio': 'Audios - Efectos 🎶', 
 'tools': 'Herramientas 🧰', 
-'anime': 'Anime 🇯🇵', 
-'own': 'Propietario 🪙',
+'anime': 'Anime 📍', 
+'own': 'Propietario 👑',
 'ai': 'Inteligencia Artificial 🙋🏻‍♂️',
 'imagenes': 'Imagenes 🖼️',
 }
 const defaultMenu = {
 before: `> ╭─❒ 「 *Usuario* 🎗️ 」
-> │○ *Nombre:* %name
+> │○ *Cliente:* %name
 > │○ *Limite:* %diamond
 > │○ *Nivel:* %level
 > │○ *Rango:* %role
 > │○ *Exp:* %exp
 > │
-> ├─❒ 「 *InfoBot* 🔖 」
+> ├─❒ 「 *InfoBot* 🚩 」
 > │○ *Creador:* Azami / Zam
 > │○ *Tiempo Activo:* %muptime
-> │○ *Registrados:* %rtotalreg de %totalreg usuarios
+> │○ *Registrados:* %rtotalreg De %totalreg Usuarios
 > │
 > ├─❒ 「 *Hoy* 📅 」
 > │○ *Fecha:* %date
