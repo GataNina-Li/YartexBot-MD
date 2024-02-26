@@ -22,30 +22,27 @@ let tags = {
 'imagen': 'Imagenes 🖼️',
 }
 const defaultMenu = {
-before: `╭─❒ 「 *Usuario* 」
-│
+before: `╭─❒ 「 *Usuario* 🎗️ 」
 │○ *Nombre:* %name
 │○ *Limite:* %diamond
 │○ *Nivel:* %level
 │○ *Rango:* %role
 │○ *Exp:* %exp
 ├──────────────
-├─❒ 「 *InfoBot* 」
-│
+├─❒ 「 *InfoBot* 📄 」
 │○ *Creador:* Azami / Zam
 │○ *Tiempo Activo:* %muptime
 │○ *Registrados:* %rtotalreg de %totalreg usuarios
 ├────────────── 
 │
-├─❒ 「 *Hoy* 」
-│
+├─❒ 「 *Hoy* 📅 」
 │○ *Fecha:* %date
 ╰──────────────
 %readmore`.trimStart(),
 
-header: '╭━━━〔 %category 〕━━━◉\n┃╭───────────',
-body: '┃┃  %cmd',
-footer: '┃╰───────────\n╰━━━━━━━━━━━━━━◉\n',
+header: '╭─❒ 「 *%category* 」\n╭───────────',
+body: '│○  %cmd',
+footer: '╰───────────\n',
 after: `
 `,
 }
@@ -106,12 +103,12 @@ for (let plugin of help)
 if (plugin && 'tags' in plugin)
 for (let tag of plugin.tags)
 if (!(tag in tags) && tag) tags[tag] = tag
-conn.menu = conn.menu ? conn.menu : {}
-let before = conn.menu.before || defaultMenu.before
-let header = conn.menu.header || defaultMenu.header
-let body = conn.menu.body || defaultMenu.body
-let footer = conn.menu.footer || defaultMenu.footer
-let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
+azami.menu = azami.menu ? azami.menu : {}
+let before = azami.menu.before || defaultMenu.before
+let header = azami.menu.header || defaultMenu.header
+let body = azami.menu.body || defaultMenu.body
+let footer = azami.menu.footer || defaultMenu.footer
+let after = azami.menu.after || (conn.user.jid == conn.user.jid ? '' : `Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
 let _text = [
 before,
 ...Object.keys(tags).map(tag => {
@@ -130,11 +127,11 @@ footer
 after
 ].join('\n')
 
-let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
+let text = typeof azami.menu == 'string' ? azami.menu : typeof azami.menu == 'object' ? _text : ''
 let replace = {
 '%': '%',
 p: _p, uptime, muptime,
-me: conn.getName(conn.user.jid),
+me: azami.getName(azami.user.jid),
 npmname: _package.name,
 npmdesc: _package.description,
 version: _package.version,
@@ -149,15 +146,15 @@ readmore: readMore
 text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
 let whoPP = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let ppBot = await conn.profilePictureUrl(whoPP, 'image').catch((_) => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let ppBot = await azami.profilePictureUrl(whoPP, 'image').catch((_) => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
   
-await conn.reply(m.chat, '*Próximamente se remitirá el menú.*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnailUrl: ppBot }}})
+await azami.reply(m.chat, '*Próximamente se remitirá el menú.*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnailUrl: ppBot }}})
 m.react('🚀') 
 
-conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": group, "sourceUrl": group}}}, {quoted: fkontak});
+azami.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": group, "sourceUrl": group}}}, {quoted: fkontak});
     
 } catch (e) {
-conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
+azami.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 throw e}
 
 }
