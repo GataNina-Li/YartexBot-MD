@@ -22,25 +22,25 @@ let tags = {
 'imagen': 'Imagenes 🖼️',
 }
 const defaultMenu = {
-before: `╭─❒ 「 *Usuario* 🎗️ 」
+before: `╭─❒ 「 🎗️ *Usuario* 🎗️ 」
 │○ *Nombre:* %name
 │○ *Limite:* %diamond
 │○ *Nivel:* %level
 │○ *Rango:* %role
 │○ *Exp:* %exp
 ├──────────────
-├─❒ 「 *InfoBot* 📄 」
+├─❒ 「 🔖 *InfoBot* 🔖 」
 │○ *Creador:* Azami / Zam
 │○ *Tiempo Activo:* %muptime
 │○ *Registrados:* %rtotalreg de %totalreg usuarios
 ├────────────── 
 │
-├─❒ 「 *Hoy* 📅 」
+├─❒ 「 ⛅ *Hoy* 📅 」
 │○ *Fecha:* %date
 ╰──────────────
 %readmore`.trimStart(),
 
-header: '╭─❒ 「 *%category* 」\n├───────────',
+header: '╭─❒ 「 *%category* 」\n│',
 body: '│○  %cmd',
 footer: '╰───────────\n',
 after: `
