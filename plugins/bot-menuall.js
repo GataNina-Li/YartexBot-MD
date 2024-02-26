@@ -4,37 +4,37 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-'info': 'INFORMACIÓN 📄',
-'grupo': 'GRUPOS ⚡️',
-'juegos': 'JUEGOS 🧸',
-'descargas': 'DESCARGAS 🚀',
-'jadibot': 'JADIBOT 🤖', 
-'nable': 'ENABLE/DISABLE ⚙️', 
-'internet': 'BUSCADORES 🔎',
-'transformador': 'CONVERTIDORES 👏🏻', 
-'sticker': 'STICKERS 🧩',
+'info': 'Información 📄',
+'grupo': 'Grupos ⚡️',
+'juegos': 'Juegos 🧸',
+'descargas': 'Descargas 🚀',
+'jadibot': 'JadiBot 🤖', 
+'nable': 'Enable / Disable ⚙️', 
+'internet': 'Buscadores 🔎',
+'transformador': 'Convertidores 👏🏻', 
+'sticker': 'Stickers 🧩',
 'rg': 'RPG 🌱',
-'audio': 'AUDIOS - EFECTOS 🎶', 
-'tools': 'HERRAMIENTAS 🧰', 
-'anime': 'ANIME 📍', 
-'own': 'PROPIETARIO 👑',
-'ai': 'INTELIGENCIA ARTIFICIAL 🙋🏻‍♂️',
-'imagenes': 'IMAGENES 🖼️',
+'audio': 'Audios - Efectos 🎶', 
+'tools': 'Herramientas 🧰', 
+'anime': 'Anime 📍', 
+'own': 'Propoetario 👑',
+'ai': 'Inteligencia Artificial 🙋🏻‍♂️',
+'imagenes': 'Imagenes 🖼️',
 }
 const defaultMenu = {
-before: `> ╭─❒ 「 *USUARIO* 🎗️ 」
+before: `> ╭─❒ 「 *Usuario* 🎗️ 」
 > │○ *Cliente:* %name
 > │○ *Limite:* %diamond
 > │○ *Nivel:* %level
 > │○ *Rango:* %role
 > │○ *Exp:* %exp
 > │
-> ├─❒ 「 *INFOBOT* 🚩 」
+> ├─❒ 「 *InfoBot* 🚩 」
 > │○ *Creador:* Azami / Zam
 > │○ *Tiempo Activo:* %muptime
 > │○ *Registrados:* %rtotalreg De %totalreg Usuarios
 > │
-> ├─❒ 「 *HOY* 📅 」
+> ├─❒ 「 *Hoy* 📅 」
 > │○ *Fecha:* %date
 > ╰──────────────
 %readmore`.trimStart(),
