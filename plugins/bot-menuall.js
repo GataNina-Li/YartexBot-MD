@@ -12,13 +12,14 @@ let tags = {
 'nable': 'Enable / Disable ⚙️', 
 'internet': 'Buscadores 🔎',
 'transformador': 'Convertidores 📐', 
-'sticker': 'Stickers 🖼️',
+'sticker': 'Stickers 🧨',
 'rg': 'Rpg 🌱',
 'audio': 'Audios - Efectos 🎶', 
 'tools': 'H E R R A M I E N T A S', 
 'anime': 'Anime 🇯🇵', 
 'own': 'Propietario 🪙',
 'ai': 'Inteligencia Artificial 🙋🏻‍♂️',
+'imagen': 'Imagenes 🖼️',
 }
 const defaultMenu = {
 before: `╭━━━〔 U S U A R I O 〕━━━◉
