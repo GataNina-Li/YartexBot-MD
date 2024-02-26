@@ -12,7 +12,7 @@ m.react('🤣')
 
 }
 handler.help = ['meme']
-handler.tags = ['imagenes']
+handler.tags = ['imagen']
 handler.command = ['meme', 'memes']
 
 handler.diamond = true
