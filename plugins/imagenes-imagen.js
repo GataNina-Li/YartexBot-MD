@@ -16,7 +16,7 @@ conn.sendFile(m.chat, link, 'error.jpg', `🚩 *Resultado de:* ${text}`, m)
 
 }
 handler.help = ['gimage', 'imagen']
-handler.tags = ['internet']
+handler.tags = ['imagenes']
 handler.command = /^(gimage|image|imagen)$/i
 
 handler.limit = true
