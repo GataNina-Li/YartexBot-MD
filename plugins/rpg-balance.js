@@ -10,9 +10,13 @@ conn.reply(m.chat, `🌱 *Balance*
 *Diamantes:* ${global.db.data.users[who].diamond}
 
 📄 *Nota*
-Puedes comprar más diamantes tilizando los comandos:* 👇
-${usedPrefix}buy <cantidad>
-${usedPrefix}buyall`, m, fake, )
+Puedes comprar más diamantes tilizando los comandos: 👇
+
+!buy <cantidad>
+_(Para comparar una cantidad definida)_
+
+!buyall
+_(Para comprar todos los diamantes)_`, m, fake, )
 
 }
 handler.help = ['bal']
