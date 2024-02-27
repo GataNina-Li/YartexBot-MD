@@ -22,9 +22,16 @@ Recursos:
 > 🌱 Otros comandos
 
 !weekly
-_(Para obtener tu recompensa semanal)_`, m, fake, )
-  
-//global.db.data.users[m.sender].lastclaim = new Date * 1
+_(Para obtener tu recompensa semanal)_
+
+!work
+_(Para trabajar)_
+
+!minar
+_(Para minar)_`, m, fake, )
+
+global.db.data.users[m.sender].lastclaim = new Date * 1
+
 }
 handler.help = ['daily']
 handler.tags = ['rg']
