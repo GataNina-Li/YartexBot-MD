@@ -7,10 +7,11 @@ import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
 
-//Prohibido Editar
+//Prohibido Editar Los Numeros De Los  Propietario
 global.owner = [
 ['524531287294', 'CuriosityBot-MD 🍧', true], 
-['5492266466080', 'Owner 🍧', true], ['5217294888993'], 
+['5492266466080', 'Owner 🍧', true], 
+['5217294888993'], 
 ['00'], 
 ['5214531287294'], 
 ['5492964650915'], 
