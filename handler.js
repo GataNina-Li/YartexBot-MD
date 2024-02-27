@@ -44,6 +44,8 @@ if (!isNumber(user.exp))
 user.exp = 0
 if (!isNumber(user.diamond))
 user.diamond = 20
+ if (!isNumber(user.money))
+user.money = 10
 if (!isNumber(user.lastclaim))
 user.lastclaim = 0
 if (!('registered' in user))
@@ -76,6 +78,7 @@ if (!('premium' in user)) user.premium = false
 global.db.data.users[m.sender] = {
 exp: 0,
 diamond: 20,
+money: 10,
 lastclaim: 0,
 registered: false,
 name: m.name,
