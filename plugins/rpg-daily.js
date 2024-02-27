@@ -17,7 +17,10 @@ conn.reply(m.chat, `🎁 *Recompensa Diaria*
 Recursos:
 ✨ Xp : *+${isPrems ? exppremium : exp}*
 💎 Diamantes : *+${d}*
-🪙 Coins : *+${coin}*`, m, fake, )
+🪙 Coins : *+${coin}*
+
+!weekly
+_(Para obtener tu recompensa semanal)_`, m, fake, )
   
 //global.db.data.users[m.sender].lastclaim = new Date * 1
 }
