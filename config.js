@@ -1,4 +1,4 @@
-/*No seas rata deja los creditos!
+/*No seas rata, deja los creditos!
 
  Credits to:
 * AzamiJs
