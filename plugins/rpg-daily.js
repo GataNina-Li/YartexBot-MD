@@ -14,10 +14,10 @@ if (new Date - global.db.data.users[m.sender].lastclaim < 7200000) return conn.r
 global.db.data.users[m.sender].exp += exppremium ? prem : exp
 conn.reply(m.chat, `🎁 *Recompensa Diaria*
 
-Has recibido:
-✨ *Xp* : +${isPrems ? exppremium : exp}
-💎 *Diamantes* : +${d}
-🪙 *Coins* ${coin}`, m, fake, )
+Recursos:
+✨ Xp : *+${isPrems ? exppremium : exp}*
+💎 Diamantes : *+${d}*
+🪙 Coins : *+${coin}*`, m, fake, )
   
 //global.db.data.users[m.sender].lastclaim = new Date * 1
 }
