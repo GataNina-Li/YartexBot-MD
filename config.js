@@ -1,3 +1,5 @@
+//Si editas el bot, por favor deja los creditos!
+
 /* Credits to:
 * AzamiJs
 * Elrebelde21
@@ -7,7 +9,7 @@ import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
 
-//Prohibido Editar Los Numeros De Los  Propietario
+//No quitar los numeros de los owners.
 global.owner = [
 ['524531287294', 'CuriosityBot-MD 🍧', true], 
 ['5492266466080', 'Owner 🍧', true], 
