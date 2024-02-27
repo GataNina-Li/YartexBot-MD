@@ -3,7 +3,7 @@ import db from '../lib/database.js'
 var handler = async (m, { conn, text }) => {
 
 let user = global.db.data.users[m.sender]
-if (!text) return conn.reply(m.chat, `🎌 *Por favor coloque su motivo para estar afk*\n\nEjemplo, !afk Voy a comer*`, m, fake, )
+if (!text) return conn.reply(m.chat, `🎌 *Por favor coloque su motivo para estar afk*\n\nEjemplo, !afk Voy a comer`, m, fake, )
 if (text.length < 10) return conn.reply(m.chat, `🚩 *El motivo es muy corto, minimo 10 carácteres*`, m, fake, )
 user.afk = + new Date
 user.afkReason = text
