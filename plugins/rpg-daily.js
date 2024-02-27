@@ -3,6 +3,7 @@ const prem = 15
 
 var handler = async (m, {conn, isPrems }) => {
 
+let coin = `${pickRandom([5, 6, 7, 9, 10, 15, 20, 25, 30])}` * 1
 let exp = `${pickRandom([500, 600, 700, 800, 900, 999, 1000, 1300, 1500, 1800])}` * 1
 let exppremium = `${pickRandom([1000, 1500, 1800, 2100, 2500, 2900, 3300, 3600, 4000, 4500])}` * 1
 let d = Math.floor(Math.random() * 30)
@@ -16,8 +17,9 @@ conn.reply(m.chat, `🎁 *Recompensa Diaria*
 Has recibido:
 ✨ *Xp* : +${isPrems ? exppremium : exp}
 💎 *Diamantes* : +${d}
-🪙 *Coins*`)
-  global.db.data.users[m.sender].lastclaim = new Date * 1
+🪙 *Coins* ${coin}`, m, fake, )
+  
+//global.db.data.users[m.sender].lastclaim = new Date * 1
 }
 handler.help = ['daily']
 handler.tags = ['rg']
