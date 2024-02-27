@@ -5,18 +5,18 @@ if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 else who = m.sender
 let name = conn.getName(who)
 
-conn.reply(m.chat, `╭─────< *Balance* >╮
-├🛡️ *Nombre:* ${name}
-├💎 *diamante*: ${global.db.data.users[who].diamond} 💎
-├✨ *Exp:* ${global.db.data.users[who].exp}
-╰─────────🎰─╯
+conn.reply(m.chat, `╭───────< *Balance* >───────╮
+├🛡️ *Nombre:* ${name} 🛡️
+├💎 *Diamante:* ${global.db.data.users[who].diamond} 💎
+├✨ *Exp:* ${global.db.data.users[who].exp} ✨
+╰───────────🎰───────────╯
 
-╭───< *Nota* >╮
-├💵 *puedes comprar diamantes* 💎
-├📨 *utilizando los comandos* 👇
+╭───< *Nota* >───╮
+├💵 *Puedes comprar más diamantes* 💎
+├📨 *Utilizando los comandos:* 👇
 ├💲 *${usedPrefix}buy <cantidad>*
 ├☑️ *${usedPrefix}buyall*
-╰──────────`, m, fake, )
+╰─────────────`, m, fake, )
 
 }
 handler.help = ['bal']
