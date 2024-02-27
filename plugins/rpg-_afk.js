@@ -11,11 +11,9 @@ user.afkReason = ''
 let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
 for (let jid of jids) {
 let users = global.db.data.users[jid]
-if (!user)
-continue
+if (!user) continue
 let afkTime = user.afk
-if (!afkTime || afkTime < 0)
-continue
+if (!afkTime || afkTime < 0) continue
 let reason = user.afkReason || ''
 conn.reply(m.chat, `🚩 *El usuario que mencionaste esta afk*
 ${reason ? '*Razón* : ' + reason : '*Sin razón*'}
