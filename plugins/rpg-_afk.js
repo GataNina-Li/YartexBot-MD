@@ -10,7 +10,7 @@ user.afkReason = ''
 }
 let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
 for (let jid of jids) {
-let user = global.db.data.users[jid]
+//let users = global.db.data.users[jid]
 if (!user)
 continue
 let afkTime = user.afk
