@@ -22,8 +22,8 @@ let media = or[Math.floor(Math.random() * 4)]
 global.db.data.users[m.sender].crime = new Date * 1
 if (media === 'text') return conn.reply(m.chat, `🪙 ${pickRandom(global.robar)} ${exp} XP`).catch(global.db.data.users[m.sender].exp += exp, m, fake, )
 if (media === 'text2') return conn.reply(m.chat, `🚔 ${pickRandom(global.robmal)} ${exp} XP`).catch(global.db.data.users[m.sender].exp -= crime)
-if (media === 'text3') return conn.reply(m.chat, `🪙 *${pickRandom(global.robar)}*\n\n${diamond} Diamantes\n${money} 🪙 Coins`).catch(global.db.data.users[m.sender].limit += diamond).catch(global.db.data.users[m.sender].money += money, m, fake, )
-if (media === 'text4') return conn.reply(m.chat, `🚔 ${pickRandom(global.robmal)}\n\n${diamond} Diamantes\n${money} 🪙 Coins`).catch(global.db.data.users[m.sender].limit -= diamante).catch(global.db.data.users[m.sender].money -= crime, m, fake, )
+if (media === 'text3') return conn.reply(m.chat, `🪙 *${pickRandom(global.robar)}*\n\n*${diamond}* Diamantes\n*${money}* Coins`).catch(global.db.data.users[m.sender].limit += diamond).catch(global.db.data.users[m.sender].money += money, m, fake, )
+if (media === 'text4') return conn.reply(m.chat, `🚔 ${pickRandom(global.robmal)}\n\n*${diamond}* Diamantes\n*${money}* Coins`).catch(global.db.data.users[m.sender].limit -= diamante).catch(global.db.data.users[m.sender].money -= crime, m, fake, )
 if (media === 'text5') return conn.reply(m.chat, `💰 Le has robado a @${randow.split`@`[0]} una cantidad de ${exp} XP`, m, {contextInfo: {mentionedJid: [randow]}}).catch(global.db.data.users[m.sender].exp += exp).catch(global.db.data.users[randow].exp -= crime)
 } catch (e) {
 console.log(e)
