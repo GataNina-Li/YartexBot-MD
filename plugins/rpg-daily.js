@@ -20,6 +20,7 @@ Recursos:
 🪙 Coins : *+${coin}*
 
 > 🌱 Otros comandos
+
 !weekly
 _(Para obtener tu recompensa semanal)_`, m, fake, )
   
