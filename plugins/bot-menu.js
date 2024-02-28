@@ -22,7 +22,7 @@ let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra
 let fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': imagen1, thumbnail: imagen1 ,sendEphemeral: true}}}
 let links = linkSity.getRandom()
 
-/*let fechaMoment, formatDate, nombreLugar, ciudad = null
+let fechaMoment, formatDate, nombreLugar, ciudad = null
 const phoneNumber = '+' + m.sender
 const parsedPhoneNumber = parsePhoneNumber(PhoneNumber)
 const countryCode = parsedPhoneNumber.country
@@ -43,7 +43,7 @@ fechaMoment = lugarMoment.format('llll [(]a[)]')
 formatDate = fechaMoment.charAt(0).toUpperCase() + fechaMoment.slice(1) 
 nombreLugar = 'America'
 ciudad = 'Ciudad de México'
-}*/
+}
   
 //FAKES
 let a = {'key': {'participants': '0@s.whatsapp.net', 'fromMe': false, 'id': '3B64558B07848BD81108C1D14712018E'}, 'message': {'locationMessage': {'name': `${user}`, 'jpegThumbnail': await (await fetch(pp)).buffer(), 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'}
