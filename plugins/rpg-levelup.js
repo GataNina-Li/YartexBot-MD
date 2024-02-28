@@ -17,7 +17,7 @@ let ppBot = await conn.profilePictureUrl(whoPP, 'image').catch((_) => 'https://t
 
 let image = await new can.Rank().setAvatar(ppBot).setUsername(name ? name.replaceAll('\n','') : '-').setBg('https://telegra.ph/file/3cb040ecc09693d1c21de.jpg').setNeedxp(wm).setCurrxp(`${user.exp}`).setLevel(`${user.level}`).setRank('https://i.ibb.co/Wn9cvnv/FABLED.png').toAttachment()
 let data = image.toBuffer()
-conn.sendMessage(m.chat, { text: wm, contextInfo: { externalAdReply: { title: '', body: '', thumbnail: data, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+conn.sendMessage(m.chat, { text: wm, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: data, sourceUrl: md, mediaType: 1, renderLargerThumbnail: true }}})
 //await conn.sendMessage(m.chat, { image: data, caption: wm }, { quoted: m })
 /*let { role } = global.db.data.users[m.sender]
 let name = conn.getName(m.sender)
