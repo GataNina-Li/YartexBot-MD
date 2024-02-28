@@ -55,6 +55,8 @@ m.react('🏷️')
   
 let menu = `*👋 Hola, ${user}*
 
+_${formatDate}_
+
 *País*: ${nombreLugar} 
 *Ciudad*: ${ciudad}
 
