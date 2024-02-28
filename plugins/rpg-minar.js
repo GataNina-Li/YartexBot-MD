@@ -15,12 +15,12 @@ _Compré Healths escribiendo !buy potion <cantidad>_
 
 _Escribe !heal <cantidad> para usar pociones_
 
-> Ejemplo, !healts 5`, m, fake, )
+> Ejemplo, !heal 5`, m, fake, )
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🍁 CuriosityBot-MD 🍁*', 'status@broadcast')
 m.react('⛏️')
 
-user.health -= 10
+//user.health -= 10
 
 //global.db.data.users[m.sender].lastmiming = new Date * 1
   
