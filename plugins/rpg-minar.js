@@ -7,7 +7,8 @@ let time = global.db.data.users[m.sender].lastmiming + 600000
 if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.reply(m.chat, `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`, m, fake, )
 if (user.health < 80) return conn.reply(m.chat, `🚩 *Requiere al menos 80 de Salud para la minería*
 
-> 🛍️ Compra 
+> 🛍️ Compra
+${readMore}
 
 _Compré Healths escribiendo !buy potion <cantidad>_
 
