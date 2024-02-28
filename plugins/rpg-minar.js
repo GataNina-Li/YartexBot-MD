@@ -5,9 +5,17 @@ let hasil = Math.floor(Math.random() * 1000)
 let info = `*Genial minaste ${hasil} XP ✨*`
 let time = global.db.data.users[m.sender].lastmiming + 600000
 if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.reply(m.chat, `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`, m, fake, )
-if (user.health < 80) return conn.reply(m.chat, `🚩 *!Requiere al menos 80 ❤️ de Salud para la minería!!
-compre ❤️Healths primero escribiendo !buy potion <cantidad>,
-y escribe !heal <cantidad> para usar pociones*`, m, fake, )
+if (user.health < 80) return conn.reply(m.chat, `🚩 *Requiere al menos 80 de Salud para la minería*
+
+> 🛍️ Compra 
+
+Compré Healths escribiendo !buy potion <cantidad>
+
+> Ejemplo, !buy potion 5
+
+_Escribe !heal <cantidad> para usar pociones_
+
+> Ejemplo, !healts 5`, m, fake, )
 user.health -= 20
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🍁 CuriosityBot-MD 🍁*', 'status@broadcast')
 m.react('⛏️')   
