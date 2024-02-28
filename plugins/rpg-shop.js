@@ -49,7 +49,7 @@ return `${global.rpg.emoticon(v)}${v} ${listItems[v][paymentMethod]} ${global.rp
   
 const item = (args[0] || '').toLowerCase()
 const total = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1
-if (!listItems[item]) return m.reply(info)
+if (!listItems[item]) return conn.reply(m.chat, info, m, fake, )
 if (command.toLowerCase() == 'buy') {
 let paymentMethod = Object.keys(listItems[item]).find(v => v in user)
 if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`You don't have enough ${global.rpg.emoticon(paymentMethod)}${paymentMethod} to buy *${total}* ${global.rpg.emoticon(item)}${item}. You need *${(listItems[item][paymentMethod] * total) - user[paymentMethod]}* more ${paymentMethod} to be able to buy`)
