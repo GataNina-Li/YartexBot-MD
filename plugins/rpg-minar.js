@@ -9,7 +9,6 @@ if (user.health < 80) return conn.reply(m.chat, `🚩 *Requiere al menos 80 de S
 
 > 🛍️ Compra
 ${readMore}
-
 _Compré Healths escribiendo !buy potion <cantidad>_
 
 > Ejemplo, !buy potion 5
@@ -17,9 +16,11 @@ _Compré Healths escribiendo !buy potion <cantidad>_
 _Escribe !heal <cantidad> para usar pociones_
 
 > Ejemplo, !healts 5`, m, fake, )
-user.health -= 20
+
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🍁 CuriosityBot-MD 🍁*', 'status@broadcast')
-m.react('⛏️')   
+m.react('⛏️')
+
+user.health -= 20
 
 //global.db.data.users[m.sender].lastmiming = new Date * 1
   
@@ -28,6 +29,7 @@ handler.help = ['minar']
 handler.tags = ['rg']
 handler.command = ['minar', 'miming', 'mine']
 
+handler.owner = true
 handler.fail = null
 handler.register = true
 
