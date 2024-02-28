@@ -55,7 +55,7 @@ let paymentMethod = Object.keys(listItems[item]).find(v => v in user)
 if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`You don't have enough ${global.rpg.emoticon(paymentMethod)}${paymentMethod} to buy *${total}* ${global.rpg.emoticon(item)}${item}. You need *${(listItems[item][paymentMethod] * total) - user[paymentMethod]}* more ${paymentMethod} to be able to buy`)
 user[paymentMethod] -= listItems[item][paymentMethod] * total
 user[item] += total
-return comn.reply(m.chat, `🛍️ Has comprado *${total}* ${global.rpg.emoticon(item)}${item}`, m, fake, )
+return conn.reply(m.chat, `🛍️ Has comprado *${total}* ${global.rpg.emoticon(item)}${item}`, m, fake, )
 } else {
 if (user[item] < total) return m.reply(`You don't have enough *${global.rpg.emoticon(item)}${item}* to sell, you only have ${user[item]} items`)
 user[item] -= total
