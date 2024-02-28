@@ -8,7 +8,7 @@ if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.r
 if (user.health < 80) return conn.reply(m.chat, `🚩 *!Requiere al menos 80 ❤️ de Salud para la minería!!
 compre ❤️Healths primero escribiendo !buy potion <cantidad>,
 y escribe !heal <cantidad> para usar pociones*`, m, fake, )
-
+user.health -= 20
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🍁 CuriosityBot-MD 🍁*', 'status@broadcast')
 m.react('⛏️')   
 
