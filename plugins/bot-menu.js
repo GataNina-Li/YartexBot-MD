@@ -25,7 +25,7 @@ let links = linkSity.getRandom()
 
 let fechaMoment, formatDate, nombreLugar, ciudad = null
 const phoneNumber = '+' + m.sender
-const parsedPhoneNumber = parsePhoneNumber(PhoneNumber)
+const parsedPhoneNumber = parsePhoneNumber(phoneNumber)
 const countryCode = parsedPhoneNumber.country
 const countryData = ct.getCountry(countryCode)
 const timezones = countryData.timezones
