@@ -35,18 +35,15 @@ let before = user.level * 1
 while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
 if (before !== user.level) {
 
-let str = `
-»»» 「 ✨ NIVEL ✨ 」
-» *NIVEL ANTERIOR:*
-› *${before}*
-•-------------------
-» *NIVEL ACTUAL:*
-› *${user.level}*
-•-------------------
-» *FECHA:* 
-› *${new Date().toLocaleString('id-ID')}*
+let str = `🎊 F E L I C I T A C I O N E S 🎊 
 
-*_Cuanto más interactúes con ${cb}, mayor será tu nivel!!_*`
+*${before}* ➔ *${user.level}* [ *${user.role}* ]
+
+• 🧬 Nivel anterior : ${before}
+• 🧬 Nuevos niveles : ${user.level}
+• 📅 Fecha : ${new Date().toLocaleString('id-ID')}
+
+*Nota:* _Cuanto más a menudo interactúes con el bot, mayor será tu nivel_`
 try {
 await conn.sendMessage(m.chat, { image: data, caption: str }, { quoted: m })
 } catch (e) {
