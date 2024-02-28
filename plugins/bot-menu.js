@@ -27,7 +27,7 @@ const countryCode = parsedPhoneNumber.country
 const countryData = ct.getCountry(countryCode)
 const timezones = countryData.timezones
 const zonaHoraria = timezones.length > 0 ? timezones[0] : 'UTC'
-moment.locale(mid.idioma_code)
+moment.locale('es-mx')
 let lugarMoment = moment().tz(zonaHoraria)
 if (lugarMoment) {
 fechaMoment = lugarMoment.format('llll [(]a[)]')
@@ -36,11 +36,11 @@ nombreLugar = countryData.name
 const partes = zonaHoraria.split('/')
 ciudad = partes[partes.length - 1].replace(/_/g, ' ')
 }else{
-lugarMoment = moment().tz('America/Lima')
+lugarMoment = moment().tz('America/Mexico_City')
 fechaMoment = lugarMoment.format('llll [(]a[)]')
 formatDate = fechaMoment.charAt(0).toUpperCase() + fechaMoment.slice(1) 
 nombreLugar = 'America'
-ciudad = 'Lima'
+ciudad = 'Ciudad de México'
 }	
   
 //FAKES
