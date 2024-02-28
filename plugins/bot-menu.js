@@ -28,7 +28,7 @@ const countryCode = parsedPhoneNumber.country
 const countryData = ct.getCountry(countryCode)
 const timezones = countryData.timezones
 const zonaHoraria = timezones.length > 0 ? timezones[0] : 'UTC'
-moment.locale('es-mx')
+moment.locale('es-MX')
 let lugarMoment = moment().tz(zonaHoraria)
 if (lugarMoment) {
 fechaMoment = lugarMoment.format('llll [(]a[)]')
