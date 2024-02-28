@@ -22,14 +22,14 @@ m.react('⛏️')
 
 user.health -= 20
 
-//global.db.data.users[m.sender].lastmiming = new Date * 1
+global.db.data.users[m.sender].lastmiming = new Date * 1
   
 }
 handler.help = ['minar']
 handler.tags = ['rg']
 handler.command = ['minar', 'miming', 'mine']
 
-handler.owner = true
+handler.owner = false
 handler.fail = null
 handler.register = true
 
