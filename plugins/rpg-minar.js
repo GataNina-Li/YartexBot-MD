@@ -5,8 +5,11 @@ let iron = `${pickRandom([5, 6, 7, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60
 let gold = `${pickRandom([20, 5, 7, 8, 88, 40, 50])}` * 1
 let hasil = Math.floor(Math.random() * 1000)
 let info = `*Genial minaste ${hasil} XP ✨*
-iron : ${iron}
-Gold : ${gold}`
+
+💚 *Emerald*: ${}
+🔩 *Iron*: ${iron}
+🏅 *Gold*: ${gold}
+`
 
 //let time = global.db.data.users[m.sender].lastmiming + 600000
 //if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.reply(m.chat, `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`, m, fake, )
