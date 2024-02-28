@@ -45,6 +45,7 @@ if (!isNumber(user.diamond)) user.diamond = 20
 if (!isNumber(user.money)) user.money = 10
 if (!isNumber(user.lastclaim)) user.lastclaim = 0
 if (!isNumber(user.health)) user.health = 100
+if (!isNumber(user.potion)) user.potion = 5
 if (!('registered' in user)) user.registered = false
  
 //--Usuario registrado
@@ -74,6 +75,7 @@ diamond: 20,
 money: 10,
 lastclaim: 0,
 health: 100,
+potion: 5,
 registered: false,
 name: m.name,
 age: -1,
