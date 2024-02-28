@@ -22,17 +22,13 @@ let { role } = global.db.data.users[m.sender]
 if (!canLevelUp(user.level, user.exp, global.multiplier)) {
 let { min, xp, max } = xpRange(user.level, global.multiplier)
 
-let le = `»»» 「 ✨ NIVEL ✨ 」
-» *NOMBRE*
-› ${name}
-•-------------------
-» *NIVEL:* 
-› *${user.level}*
-•-------------------
-» *XP:*
-› *${user.exp - min}/${xp}*
+let le = `*Nombre* ${name}
 
-*Te falta ${max - user.exp} de XP para subir de nivel*`
+Nivel *${user.level}* 📊
+XP *${user.exp - min} / ${xp}*
+
+
+No es suficiente XP *${max - user.exp}* ¡De nuevo! ✨`
 await conn.sendMessage(m.chat, { image: data, caption: le }, { quoted: m })
 }
 let before = user.level * 1
