@@ -12,12 +12,12 @@ conn.reply(m.chat, `🌱 *Balance*
 📄 *Nota*
 Puedes comprar más diamantes utilizando los comandos: 👇
 
-!buy <cantidad>
+!buy limit <cantidad>
 _(Para comparar una cantidad definida)_
 
-> Ejemplo !buy 10
+> Ejemplo !buy limit 10
 
-!buyall
+!buyall limit
 _(Para comprar todos los diamantes)_`, m, fake, )
 
 }
