@@ -37,13 +37,15 @@ var handler = async (m, { command, usedPrefix, args }) => {
 
 let user = global.db.data.users[m.sender]
 const listItems = Object.fromEntries(Object.entries(items[command.toLowerCase()]).filter(([v]) => v && v in user))
-const info = `🛍️ *Uso del formato* !${command} [crate] [count]
+const info = `🛍️ *Uso del formato*
+!${command} [crate] [count]
+
 Ejemplo de uso: !${command} potion 10
     
-📍 Lista de items: 
+📍 *Lista de items:*
 ${Object.keys(listItems).map((v) => {
 let paymentMethod = Object.keys(listItems[v]).find(v => v in user)
-return `${global.rpg.emoticon(v)}${v} | ${listItems[v][paymentMethod]} ${global.rpg.emoticon(paymentMethod)}${paymentMethod}`.trim()}).join('\n')}`.trim()
+return `${global.rpg.emoticon(v)}${v} ${listItems[v][paymentMethod]} ${global.rpg.emoticon(paymentMethod)}${paymentMethod}`.trim()}).join('\n')}`.trim()
   
 const item = (args[0] || '').toLowerCase()
 const total = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1
