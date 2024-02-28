@@ -9,7 +9,7 @@ if (user.health < 80) return conn.reply(m.chat, `🚩 *Requiere al menos 80 de S
 
 > 🛍️ Compra 
 
-Compré Healths escribiendo !buy potion <cantidad>
+_Compré Healths escribiendo !buy potion <cantidad>_
 
 > Ejemplo, !buy potion 5
 
