@@ -41,11 +41,16 @@ if (typeof user !== 'object')
 global.db.data.users[m.sender] = {}
 if (user) {
 if (!isNumber(user.exp)) user.exp = 0
-if (!isNumber(user.diamond)) user.diamond = 20
 if (!isNumber(user.money)) user.money = 10
 if (!isNumber(user.lastclaim)) user.lastclaim = 0
 if (!isNumber(user.health)) user.health = 100
 if (!isNumber(user.potion)) user.potion = 5
+if (!isNumber(user.diamond)) user.diamond = 20
+if (!isNumber(user.emerald)) user.emerald = 0
+if (!isNumber(user.gold)) user.gold = 0
+if (!isNumber(user.iron)) user.iron = 0
+if (!isNumber(user.coal)) user.coal = 0
+if (!isNumber(user.stone)) user.stone = 0
 if (!('registered' in user)) user.registered = false
  
 //--Usuario registrado
@@ -71,11 +76,16 @@ if (!('premium' in user)) user.premium = false
 
 global.db.data.users[m.sender] = {
 exp: 0,
-diamond: 20,
 money: 10,
 lastclaim: 0,
 health: 100,
 potion: 5,
+diamond: 20,
+emerald: 0,
+gold: 0,
+iron: 0,
+coal: 0,
+stone: 0,
 registered: false,
 name: m.name,
 age: -1,
