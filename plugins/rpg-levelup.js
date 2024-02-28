@@ -3,6 +3,12 @@ import { levelup } from '../lib/canvas.js'
 import can from 'knights-canvas'
 
 let handler = async (m, { conn }) => {
+
+function test(num, size) {
+var s = num+''
+while (s.length < size) s = '0' + s
+return s
+}
 /*let { role } = global.db.data.users[m.sender]
 let name = conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
