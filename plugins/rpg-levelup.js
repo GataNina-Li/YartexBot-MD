@@ -17,15 +17,14 @@ let ppBot = await conn.profilePictureUrl(whoPP, 'image').catch((_) => 'https://t
 
 let image = await new can.Rank().setAvatar(ppBot).setUsername(name ? name.replaceAll('\n','') : '-').setBg('https://telegra.ph/file/3cb040ecc09693d1c21de.jpg').setNeedxp(wm).setCurrxp(`${user.exp}`).setLevel(`${user.level}`).setRank('https://i.ibb.co/Wn9cvnv/FABLED.png').toAttachment()
 let data = image.toBuffer()
-conn.sendMessage(m.chat, { text: wm, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: data, sourceUrl: md, mediaType: 1, renderLargerThumbnail: true }}})
-//await conn.sendMessage(m.chat, { image: data, caption: wm }, { quoted: m })
-/*let { role } = global.db.data.users[m.sender]
+
+let { role } = global.db.data.users[m.sender]
 let name = conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
-    if (!canLevelUp(user.level, user.exp, global.multiplier)) {
-        let { min, xp, max } = xpRange(user.level, global.multiplier)
-        throw `
-»»» 「 ✨ NIVEL ✨ 」
+if (!canLevelUp(user.level, user.exp, global.multiplier)) {
+let { min, xp, max } = xpRange(user.level, global.multiplier)
+
+let le = `»»» 「 ✨ NIVEL ✨ 」
 » *NOMBRE*
 › ${name}
 •-------------------
@@ -35,14 +34,14 @@ let user = global.db.data.users[m.sender]
 » *XP:*
 › *${user.exp - min}/${xp}*
 
-*Te falta ${max - user.exp} de XP para subir de nivel*
-`.trim()
-    }
-    let before = user.level * 1
-    while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
-    if (before !== user.level) {
-        let teks = `Bien hecho! ${conn.getName(m.sender)} Nivel: ${user.level}`
-        let str = `
+*Te falta ${max - user.exp} de XP para subir de nivel*`
+await conn.sendMessage(m.chat, { image: data, caption: le }, { quoted: m })
+}
+let before = user.level * 1
+while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
+if (before !== user.level) {
+
+let str = `
 »»» 「 ✨ NIVEL ✨ 」
 » *NIVEL ANTERIOR:*
 › *${before}*
@@ -53,20 +52,16 @@ let user = global.db.data.users[m.sender]
 » *FECHA:* 
 › *${new Date().toLocaleString('id-ID')}*
 
-*_Cuanto más interactúes con ${cb}, mayor será tu nivel!!_*
-`.trim()
-        try {
-            const img = await levelup(teks, user.level)
-            conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
-        } catch (e) {
-            m.reply(str)
-        }
-    }*/
-}
+*_Cuanto más interactúes con ${cb}, mayor será tu nivel!!_*`
+try {
+await conn.sendMessage(m.chat, { image: data, caption: str }, { quoted: m })
+} catch (e) {
+m.reply(str)
+}}
 
+}
 handler.help = ['levelup']
 handler.tags = ['rg']
-
-handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
+handler.command = ['nivel', 'lvl', 'levelup', 'level']
 
 export default handler
