@@ -52,7 +52,7 @@ const total = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1])
 if (!listItems[item]) return conn.reply(m.chat, info, m, fake, )
 if (command.toLowerCase() == 'buy') {
 let paymentMethod = Object.keys(listItems[item]).find(v => v in user)
-if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`You don't have enough ${global.rpg.emoticon(paymentMethod)}${paymentMethod} to buy *${total}* ${global.rpg.emoticon(item)}${item}. You need *${(listItems[item][paymentMethod] * total) - user[paymentMethod]}* more ${paymentMethod} to be able to buy`)
+if (user[paymentMethod] < listItems[item][paymentMethod] * total) return conn.reply(m.chat, `No tienes suficiente *${global.rpg.emoticon(paymentMethod)}${paymentMethod}* para comprar *${total}* ${global.rpg.emoticon(item)}${item}. Necesitas *${(listItems[item][paymentMethod] * total) - user[paymentMethod]}* más ${paymentMethod} para poder comprar`, m, fake, )
 user[paymentMethod] -= listItems[item][paymentMethod] * total
 user[item] += total
 return conn.reply(m.chat, `🛍️ Has comprado *${total}* ${global.rpg.emoticon(item)}${item}`, m, fake, )
