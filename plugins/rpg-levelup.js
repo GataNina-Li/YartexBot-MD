@@ -1,8 +1,9 @@
 import { canLevelUp, xpRange } from '../lib/levelling.js'
 import { levelup } from '../lib/canvas.js'
+import can from 'knights-canvas'
 
 let handler = async (m, { conn }) => {
-let { role } = global.db.data.users[m.sender]
+/*let { role } = global.db.data.users[m.sender]
 let name = conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
@@ -44,7 +45,7 @@ let user = global.db.data.users[m.sender]
         } catch (e) {
             m.reply(str)
         }
-    }
+    }*/
 }
 
 handler.help = ['levelup']
