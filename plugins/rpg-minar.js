@@ -1,20 +1,23 @@
-let handler = async (m, { conn, isPrems}) => {
+var handler = async (m, { conn, isPrems}) => {
+
 let hasil = Math.floor(Math.random() * 1000)
 let info = `*Genial minaste ${hasil} XP ✨*`
 let time = global.db.data.users[m.sender].lastmiming + 600000
-if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`  
+if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.reply(m.chat, `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`, m, fake, ) 
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🍁 CuriosityBot-MD 🍁*', 'status@broadcast')
 m.react('⛏️')   
-//m.reply(`*[ 🎉 ] 𝙶𝚎𝚗𝚒𝚊𝚕, 𝚖𝚒𝚗𝚊𝚜𝚝𝚎 ${hasil} 𝚇𝙿*`)
-global.db.data.users[m.sender].lastmiming = new Date * 1
+
+//global.db.data.users[m.sender].lastmiming = new Date * 1
   
 }
 handler.help = ['minar']
 handler.tags = ['rg']
-handler.command = ['minar', 'miming', 'mine'] 
+handler.command = ['minar', 'miming', 'mine']
+
 handler.fail = null
-handler.exp = 0
+handler.register = true
+
 export default handler
 
 function msToTime(duration) {
