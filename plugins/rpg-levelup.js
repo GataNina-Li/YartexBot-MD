@@ -19,8 +19,6 @@ let image = await new can.Rank().setAvatar(ppBot).setUsername(name ? name.replac
 let data = image.toBuffer()
 
 let { role } = global.db.data.users[m.sender]
-let name = conn.getName(m.sender)
-let user = global.db.data.users[m.sender]
 if (!canLevelUp(user.level, user.exp, global.multiplier)) {
 let { min, xp, max } = xpRange(user.level, global.multiplier)
 
