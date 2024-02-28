@@ -1,6 +1,7 @@
 //CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios & https://github.com/AzamiJs | @Azami
 
 import fs from 'fs'
+import { parsePhoneNumber } from 'libphonenumber-js'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
