@@ -27,7 +27,6 @@ let le = `*Nombre* ${name}
 Nivel *${user.level}* 📊
 XP *${user.exp - min} / ${xp}*
 
-
 No es suficiente XP *${max - user.exp}* ¡De nuevo! ✨`
 await conn.sendMessage(m.chat, { image: data, caption: le }, { quoted: m })
 }
