@@ -40,25 +40,18 @@ let user = global.db.data.users[m.sender]
 if (typeof user !== 'object')
 global.db.data.users[m.sender] = {}
 if (user) {
-if (!isNumber(user.exp))
-user.exp = 0
-if (!isNumber(user.diamond))
-user.diamond = 20
- if (!isNumber(user.money))
-user.money = 10
-if (!isNumber(user.lastclaim))
-user.lastclaim = 0
-if (!('registered' in user))
-user.registered = false
+if (!isNumber(user.exp)) user.exp = 0
+if (!isNumber(user.diamond)) user.diamond = 20
+if (!isNumber(user.money)) user.money = 10
+if (!isNumber(user.lastclaim)) user.lastclaim = 0
+if (!isNumber(user.health)) user.health = 100
+if (!('registered' in user)) user.registered = false
  
 //--Usuario registrado
 if (!user.registered) {
-if (!('name' in user))
-user.name = m.name
-if (!isNumber(user.age))
-user.age = -1
-if (!isNumber(user.regTime))
-user.regTime = -1
+if (!('name' in user)) user.name = m.name
+if (!isNumber(user.age)) user.age = -1
+if (!isNumber(user.regTime)) user.regTime = -1
 }
 
 //--Usuario número
@@ -80,6 +73,7 @@ exp: 0,
 diamond: 20,
 money: 10,
 lastclaim: 0,
+health: 100,
 registered: false,
 name: m.name,
 age: -1,
