@@ -7,6 +7,9 @@ const { levelling } = '../lib/levelling.js'
 import PhoneNumber from 'awesome-phonenumber'
 import { promises } from 'fs'
 import { join } from 'path'
+import ct from 'countries-and-timezones'
+import moment from 'moment-timezone'
+import translate from '@vitalets/google-translate-api'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 var handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
