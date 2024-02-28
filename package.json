@@ -7,7 +7,7 @@
     
 "directories": {
 "lib": "lib",
-"src": "src",
+"storage": "storage",
 "plugins": "plugins" },
     
 "scripts": {
@@ -19,7 +19,7 @@
     
 "homepage": "https://github.com/AzamiJs/CuriosityBot-MD",
 "author": {
-"name": "Azami_dev" }, 
+"name": "AzamiJs" }, 
     
 "repository": {
 "type": "git",
@@ -62,6 +62,7 @@
 "jimp": "^0.16.1",
 "lodash": "^4.17.21",
 "lowdb": "^3.0.0",
+"libphonenumber-js": "^1.10.55",
 "moment-timezone": "^0.5.41",
 "mongoose": "^7.0.0",
 "node-fetch": "^3.2.0",
