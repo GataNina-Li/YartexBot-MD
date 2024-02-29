@@ -57,7 +57,7 @@ user[paymentMethod] -= listItems[item][paymentMethod] * total
 user[item] += total
 return conn.reply(m.chat, `🛍️ Has comprado *${total}* ${global.rpg.emoticon(item)}${item}`, m, fake, )
 } else {
-if (user[item] < total) return m.reply(`You don't have enough *${global.rpg.emoticon(item)}${item}* to sell, you only have ${user[item]} items`)
+if (user[item] < total) return conn.reply(m.chat, `🪙 No tienes suficiente *${global.rpg.emoticon(item)}${item}*, para vender solo tienes ${user[item]} items`, m, fake, )
 user[item] -= total
 user.money += listItems[item].money * total
 return conn.reply(m.chat, `🛍️ Vendiste *${total}* ${global.rpg.emoticon(item)}${item}`, m, fake, )
