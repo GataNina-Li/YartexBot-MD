@@ -51,6 +51,8 @@ if (!isNumber(user.gold)) user.gold = 0
 if (!isNumber(user.iron)) user.iron = 0
 if (!isNumber(user.coal)) user.coal = 0
 if (!isNumber(user.stone)) user.stone = 0
+if (!isNumber(user.pickaxe)) user.pickaxe = 1
+if (!isNumber(user.pickaxedurability)) user.pickaxedurability = 0
 if (!('registered' in user)) user.registered = false
  
 //--Usuario registrado
@@ -86,6 +88,8 @@ gold: 0,
 iron: 0,
 coal: 0,
 stone: 0,
+pickaxe: 1,
+pickaxedurability: 0, 
 registered: false,
 name: m.name,
 age: -1,
