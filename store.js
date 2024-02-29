@@ -144,7 +144,8 @@ let emot = {
 level: '🏆', limit: '💎', exp: '✨',
 health: '❤️',
 money: '💵',
-potion: '🥤'
+potion: '🥤',
+pico: '⛏️' 
 }
 
 let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
