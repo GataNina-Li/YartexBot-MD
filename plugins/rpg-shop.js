@@ -25,12 +25,12 @@ const items = {
 buy: {
 limit: { exp: 350 },
 potion: { money: 5 },
-pico: { money: 30 } 
+pickaxe: { money: 30 } 
 },
 sell: {
 potion: { money: 10 },
 diamond: { money: 5 },
-pico: { money: 15 }
+pickaxe: { money: 15 }
 }}
 
 var handler = async (m, { command, usedPrefix, args }) => {
