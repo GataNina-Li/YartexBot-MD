@@ -17,7 +17,7 @@ try {
 if (/repair/i.test(command)) {
 const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
 switch (type) {
-case 'pickaxe' case 'pico':
+case 'pickaxe': case 'pico':
 if (user.pickaxedurability > 99) return conn.reply(m.chat, '✨ *Esta herramienta aún no tiene daños*', m, fake, )
 if (user.pickaxe == 0) return conn.reply(m.chat, '🚩 *Aún no tienes esta herramienta*', m, fake, )
 if (user.diamond < 1 || user.stone < 3 || user.iron < 3 ) return conn.reply(m.chat, `🚩 *No tienes suficientes recursos!*`, m, fake, )
