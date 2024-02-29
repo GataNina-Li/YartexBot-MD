@@ -30,7 +30,7 @@ _Escribe !heal <cantidad> para usar pociones_
 
 > Ejemplo, !healts 5`, m, fake, )
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '⛏️ *Mining - CuriosityBot* ⛏️', 'status@broadcast', m, fake, )
+conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '⛏️ *Mining - CuriosityBot* ⛏️', 'status@broadcast' )
 m.react('⛏️')
 
 user.health -= 10
