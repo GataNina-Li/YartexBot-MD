@@ -1,19 +1,12 @@
-const resources = {
-diamond: [20, 5, 7, 8, 88, 40, 50, 70, 90, 999, 300],
-emerald: [1, 5, 7, 8],
-iron: [5, 6, 7, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
-gold: [20, 5, 7, 8, 88, 40, 50],
-coal: [20, 5, 7, 8, 88, 40, 50, 80, 70, 60, 100, 120, 600, 700, 64],
-stone: [200, 500, 700, 800, 900, 4000, 300],
-}
-
 var handler = async (m, { conn, isPrems}) => {
 
 let user = global.db.data.users[m.sender]
 let diamond = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 70, 90, 999, 300])}` * 1; let emerald = `${pickRandom([1, 5, 7, 8])}` * 1; let iron = `${pickRandom([5, 6, 7, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80])}` * 1; let gold = `${pickRandom([20, 5, 7, 8, 88, 40, 50])}` * 1; let coal = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 80, 70, 60, 100, 120, 600, 700, 64])}` * 1; let stone = `${pickRandom([200, 500, 700, 800, 900, 4000, 300])}` * 1
 
 let hasil = Math.floor(Math.random() * 1000)
-let info = `⛏️ *Te has adentrando en las Cuevas
+let info = `⛏️ *Te has adentrando en lo profundo de las cuevas*
+
+> 🌱 Obtuviste estos recursos
 
 ✨ *Exp*: ${hasil}
 💎 *Diamante*: ${diamond}
