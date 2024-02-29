@@ -1,20 +1,25 @@
 var handler = async (m, { conn, isPrems}) => {
 
 let user = global.db.data.users[m.sender]
+let diamond = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 70, 90, 999, 300])}` * 1
 let emerald = `${pickRandom([1, 5, 7, 8])}` * 1
 let iron = `${pickRandom([5, 6, 7, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80])}` * 1
 let gold = `${pickRandom([20, 5, 7, 8, 88, 40, 50])}` * 1
+let coal = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 80, 70, 60, 100, 120, 600, 700, 64])}` * 1
+let stone = `${pickRandom([200, 500, 700, 800, 900, 4000, 300])}` * 1
 let hasil = Math.floor(Math.random() * 1000)
 let info = `*Genial minaste ${hasil} XP ✨*
 
-💚 *Emerald*: ${emerald}
-🔩 *Iron*: ${iron}
-🏅 *Gold*: ${gold}
-`
+💎 *Diamante*: ${diamond}
+💚 *Esmeralda*: ${emerald}
+🔩 *Hierro*: ${iron}
+🏅 *Oro*: ${gold}
+🕋 *Carbón*: ${coal}
+🪨 *Piedra*: ${stone}`
 
 //let time = global.db.data.users[m.sender].lastmiming + 600000
 //if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.reply(m.chat, `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`, m, fake, )
-if (user.health < 80) return conn.reply(m.chat, `🚩 *Requiere al menos 80 de Salud para la minería*
+if (user.helet gold = `${pickRandom([20, 5, 7, 8, 88, 40, 50])}` * 1alth < 80) return conn.reply(m.chat, `🚩 *Requiere al menos 80 de Salud para la minería*
 
 > 🛍️ Compra
 ${readMore}
@@ -30,9 +35,12 @@ conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🍁 CuriosityBot-MD 🍁*', 
 m.react('⛏️')
 
 user.health -= 10
+user.diamond += diamond 
 user.iron += iron
 user.gold += gold
-user.emerald += emerald 
+user.emerald += emerald
+user.coal += coal
+user.stone += stone
 //global.db.data.users[m.sender].lastmiming = new Date * 1
   
 }
