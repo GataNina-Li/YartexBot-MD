@@ -34,7 +34,8 @@ _Escribe !heal <cantidad> para usar pociones_
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '🌳 *Mining - CuriosityBot* 🌳', 'status@broadcast' )
 m.react('⛏️')
 
-user.health -= 10
+user.health -= 0
+user.pickaxedurability -= 30
 user.diamond += diamond 
 user.iron += iron
 user.gold += gold
