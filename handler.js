@@ -55,9 +55,9 @@ if (!isNumber(user.pickaxe)) user.pickaxe = 0
 if (!isNumber(user.pickaxedurability)) user.pickaxedurability = 100
 if (!isNumber(user.common)) user.common = 0
 if (!isNumber(user.uncommon)) user.uncommon = 0
-if (!isNumber(user.stone)) user.cat = 0
-if (!isNumber(user.stone)) user.dog = 0
-if (!isNumber(user.stone)) user.fox = 0
+if (!isNumber(user.cat)) user.cat = 0
+if (!isNumber(user.dog)) user.dog = 0
+if (!isNumber(user.fox)) user.fox = 0
 if (!('registered' in user)) user.registered = false
  
 //--Usuario registrado
@@ -94,7 +94,12 @@ iron: 0,
 coal: 0,
 stone: 0,
 pickaxe: 1,
-pickaxedurability: 100, 
+pickaxedurability: 100,
+cat: 0,
+dog: 0,
+fox: 0,
+common: 0,
+uncommon: 0,
 registered: false,
 name: m.name,
 age: -1,
