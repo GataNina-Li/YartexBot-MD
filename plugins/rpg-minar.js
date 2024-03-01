@@ -18,7 +18,7 @@ let info = `⛏️ *Te has adentrando en lo profundo de las cuevas*
 
 //let time = global.db.data.users[m.sender].lastmiming + 600000
 //if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.reply(m.chat, `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`, m, fake, )
-if (user.pickaxe < 0) return conn.reply(m.chat, `🚩 *Requiere al menos un pico para la minería*\n\n> 🛍️ Compra\n_Compré un pico con !buy pickaxe_`, m, fake, )
+if (user.pickaxe == 0) return conn.reply(m.chat, `🚩 *Requiere al menos un pico para la minería*\n\n> 🛍️ Compra\n_Compré un pico con !buy pickaxe_`, m, fake, )
 if (user.pickaxedurability < 10) return conn.reply(m.chat, `🚩 *El pico esta muy roto*\n\n> ⚙️ Reparar\n${readMore}\n_Repara tu pico con !repair pico_`, m, fake, )
 if (user.health < 80) return conn.reply(m.chat, `🚩 *Requiere al menos 80 de Salud para la minería*
 
