@@ -35,8 +35,8 @@ _Escribe !heal <cantidad> para usar pociones_
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '🌳 *Mining - CuriosityBot* 🌳', 'status@broadcast' )
 m.react('⛏️')
 
-user.health -= 10
-user.pickaxedurability -= 10
+user.health -= 50
+user.pickaxedurability -= 30
 user.diamond += diamond 
 user.iron += iron
 user.gold += gold
@@ -50,7 +50,6 @@ handler.help = ['minar']
 handler.tags = ['rg']
 handler.command = ['minar', 'miming', 'mine']
 
-handler.owner = true
 handler.fail = null
 handler.register = true
 
