@@ -51,8 +51,13 @@ if (!isNumber(user.gold)) user.gold = 0
 if (!isNumber(user.iron)) user.iron = 0
 if (!isNumber(user.coal)) user.coal = 0
 if (!isNumber(user.stone)) user.stone = 0
-if (!isNumber(user.pickaxe)) user.pickaxe = 1
+if (!isNumber(user.pickaxe)) user.pickaxe = 0
 if (!isNumber(user.pickaxedurability)) user.pickaxedurability = 100
+if (!isNumber(user.common)) user.common = 0
+if (!isNumber(user.uncommon)) user.uncommon = 0
+if (!isNumber(user.stone)) user.cat = 0
+if (!isNumber(user.stone)) user.dog = 0
+if (!isNumber(user.stone)) user.fox = 0
 if (!('registered' in user)) user.registered = false
  
 //--Usuario registrado
