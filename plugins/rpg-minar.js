@@ -30,13 +30,13 @@ _Compré Healths escribiendo !buy potion <cantidad>_
 
 _Escribe !heal <cantidad> para usar pociones_
 
-> Ejemplo, !healts 5`, m, fake, )
+> Ejemplo, !heal 5`, m, fake, )
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '🌳 *Mining - CuriosityBot* 🌳', 'status@broadcast' )
 m.react('⛏️')
 
 user.health -= 10
-user.pickaxedurability -= 50
+user.pickaxedurability -= 10
 user.diamond += diamond 
 user.iron += iron
 user.gold += gold
