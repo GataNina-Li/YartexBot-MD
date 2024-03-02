@@ -17,7 +17,7 @@ let tags = {
 'audio': 'Audios - Efectos 🎶', 
 'tools': 'Herramientas 🧰', 
 'anime': 'Anime 📍', 
-'own': 'Propoetario 👑',
+'own': 'Propietario 👑',
 'ai': 'Inteligencia Artificial 🙋🏻‍♂️',
 'imagenes': 'Imagenes 🖼️',
 }
