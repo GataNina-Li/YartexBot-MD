@@ -14,7 +14,7 @@ await m.reply(`${user.warn == 1 ? `NOO 😠 *@${m.sender.split`@`[0]}*` : `*@${m
 }
 
 if (user.warn >= 4) {
-user.warn = 0;
+user.warn = 0
 await m.reply(`🚩 Te lo dije *@${m.sender.split`@`[0]}*, Superaste las 4 advertencias por lo tanto serás eliminado de este grupo`, false, { mentions: [m.sender], })
 user.banned = false
 await this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
