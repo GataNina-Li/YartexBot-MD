@@ -18,7 +18,7 @@ const exp = Math.floor(Math.random() * 9000)
 const diamond = Math.floor(Math.random() * 150)
 const money = Math.floor(Math.random() * 9000)
 let or = ['text', 'text2', 'text3', 'text4', 'text5']
-let media = or[Math.floor(Math.random() * 4)]
+let media = or[Math.floor(Math.random() * 5)]
 global.db.data.users[m.sender].crime = new Date * 1
 if (media === 'text') return conn.reply(m.chat, `🪙 ${pickRandom(global.robar)} ${exp} XP`).catch(global.db.data.users[m.sender].exp += exp, m, fake, )
 if (media === 'text2') return conn.reply(m.chat, `🚔 ${pickRandom(global.robmal)} ${exp} XP`).catch(global.db.data.users[m.sender].exp -= crime)
@@ -54,5 +54,5 @@ function pickRandom(list) {
 return list[Math.floor(list.length * Math.random())]
 }
 
-global.robar = ['Robaste un Banco 🏦 y Obtuviste', 'Negociaste con el jefe de la mafia y Obtuviste :', 'Casi te atrapa la policía pero lograste robar una cantidad valiosa ¡Ten cuidado la próxima vez! Obtuviste:', 'Los mafiosos te han pagado:', 'Le has robado al Administrador del Grupo', 'Le robaste a tu presidente una suma de:', 'Le robaste a un famoso un valor de :']
-global.robmal = ['La policía te vio 🙀👮‍♂️ perdiste', 'Fuiste a robar un banco 🏦 y tu ayudante te vendió a la policía, perdiste', 'No pudiste escapar de la Policía 🚔🤡, perdiste :']
+global.robar = ['Robaste un Banco 🏦 y Obtuviste', 'Negociarte con el jefe de la mafia y Obtuviste :', 'Casi te atrapa la policía pero lograste robar una cantidad valiosa de 💰. !Te cuidado la próxima vez! Obtuviste:', 'Los mafiosos te han pagado :', 'Le has robado al Administrador del Grupo', 'Le robarte a tu presidente una sumar de :', 'le robarte a un famoso un valor de :', 'Entraste sigilosamente en el museo y robaste una obra de arte valiosa:', 'Infiltraste una joyería y obtuviste un botín impresionante:', 'Te convertiste en el ladrón más buscado del país, obtuviste:', 'Robaste un camión lleno de productos valiosos y obtuviste', 'Asaltaste un tren y conseguiste', 'Robaste un avión cargado de mercancía y obtuviste', 'Te hiciste pasar por un millonario para robar una joya única, obtuviste', 'Entraste a la casa de un coleccionista de arte y robaste una pieza invaluable, obtuviste', 'Secuestraste a un empresario y conseguiste un rescate importante:', 'Amenazaste a un político y obtuviste una gran suma de dinero:', 'Sobornaste a un oficial de policía para obtener información valiosa, conseguiste'];
+global.robmal = ['LA POLICIA TE VIO 🙀👮‍♂️ PERDISTE', 'Fuiste a robar un banco 🏦 y tu ayudarte que vendio a la policía, perdiste', 'No pudiste escapar de la Policía 🚔🤡, perdiste :', 'Intentaste robar un casino pero te descubrieron, perdiste', 'Te atraparon tratando de robar una tienda, perdiste :', 'La alarma sonó cuando intentabas robar un almacén, perdiste', 'El dueño del lugar te atrapó in fraganti, perdiste', 'Intentaste hackear una cuenta bancaria pero te rastrearon, perdiste', 'Fuiste descubierto tratando de sobornar a un oficial, perdiste', 'Tu plan para chantajear a un empresario salió mal, perdiste']
