@@ -203,16 +203,23 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
-function clearTmp() {
-const tmp = [tmpdir(), join(__dirname, './tmp')]
-const filename = []
-tmp.forEach((dirname) => readdirSync(dirname).forEach((file) => filename.push(join(dirname, file))))
-return filename.map((file) => {
-const stats = statSync(file)
-if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file); // 3 minutos
-return false
-})
+/* Clear */
+async function clearTmp() {
+  const tmp = [tmpdir(), join(__dirname, './tmp')]
+  const filename = []
+  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+
+  return filename.map(file => {
+    const stats = statSync(file)
+    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 1)) return unlinkSync(file) // 1 minuto
+    return false
+  })
 }
+
+setInterval(async () => {
+	await clearTmp()
+console.log(chalk.cyan(`AUTOCLEAR │ BASURA ELIMINADA\n`))
+}, 60000) //1 munto
 
 function purgeSession() {
 let prekey = []
