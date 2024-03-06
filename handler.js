@@ -212,9 +212,11 @@ status: 0
 console.error(e)
 }
 //const dataown = global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)
-//let JIS of data.map(([id]) => [id] + '@s.whatsapp.net').filter(v => v != conn.user.jid) 
+//let JIS of data.map(([id]) => [id] + '@s.whatsapp.net').filter(v => v != conn.user.jid)
+const isROOwner = [conn.decodeJid(global.conn.user.id), ...global.isdev.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isROwner = [conn.decodeJid(global.conn.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isOwner = isROwner || m.fromMe
+const isDev = isROOwner || m.fromMe
 const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 
@@ -339,7 +341,7 @@ if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) {
 fail('owner', m, this)
 continue
 }
-if (plugin.rowner && !isROwner) { // Desarollador del bot
+if (plugin.rowner && !isDev) { // Desarollador del bot
 fail('rowner', m, this)
 continue
 }
