@@ -1,4 +1,4 @@
-/*Deja los creditos no seas rata!
+/*no quites los creditos!, no seas rata*/
 
  Credits to:
 * AzamiJs
@@ -13,8 +13,8 @@ global.owner = [
 ['524531287294', 'CuriosityBot-MD 🍧', true], 
 ['5492266466080', 'Owner 🍧', true], 
 ['5217294888993'], 
-['00'], 
 ['5214531287294'], 
+['00'],
 ['5492964650915'], 
 ['573013482814'], 
 ['5492266613038'], 
