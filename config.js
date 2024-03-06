@@ -1,4 +1,4 @@
-/*no quites los creditos!, no seas rata*/
+/*no quites los creditos!, no seas rata
 
  Credits to:
 * AzamiJs
