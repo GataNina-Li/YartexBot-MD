@@ -1,4 +1,4 @@
-import { createHash } from 'crypto'
+/*import { createHash } from 'crypto'
 let handler = async function (m, { args, command }) {
 
 if (command == 'unregister' || command == 'unreg') {
@@ -13,9 +13,10 @@ m.reply(`*📇 USTED YA NO ESTÁ REGISTRADO*`)
 if (command == 'sn' || command == 'myns') {
 conn.fakeReply(m.chat, sn, '0@s.whatsapp.net', '⬇️ *Este es su número de serie* ⬇️', 'status@broadcast')
 }
+
 }
 handler.help = ['', 'ister'].map(v => 'unreg' + v + ' <numero de serie>')
 handler.tags = ['rg']
 handler.command = /^unreg(ister)|myns|ns?$/i
 handler.register = true
-export default handler
+export default handler*/
