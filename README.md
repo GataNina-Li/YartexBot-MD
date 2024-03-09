@@ -20,7 +20,7 @@
 
 > Antes De Instalar El Bot Quieres Usarlo?. Usalo Aqui!
 
-<a href="https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU"><img alt="🎌 Grupo WhatsApp" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+<a href="https://chat.whatsapp.com/GrcXB1NINsDAPp4fCVgwfX"><img alt="🎌 Grupo WhatsApp" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
 - #### `🚩 Clonar El Repositorio`
  Clonar CuriosityBot [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
