@@ -20,7 +20,7 @@ global.mods = []
 global.prems = []
 
 //Solo desarrolladores aprobados
-global.isdev = [['5217294888993'], ['5492266466080'], ['5492266613038'], ['5215610314499']]
+global.isdev = [['5217294888993'], ['5492266466080'], ['5492266613038'], ['5215610314499'], ['573013482814']]
 
 //Aqui encuentras los nombres del bot
 global.packname = ''
