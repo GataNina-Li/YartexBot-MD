@@ -9,7 +9,13 @@ try {
 conn.sendPresenceUpdate('composing', m.chat)
 var apii = await fetch(`https://lookup.binlist.net/${text}`)
 var res = await apii.json()
-await m.reply(res.result)
+await m.reply(`${res.scheme} 
+${res.type}
+${res.brand} 
+${res.alpha2} 
+${res.name}
+${res.emoji} 
+${res.bank}`)
 
 } catch (error) {
 console.error(error)
