@@ -1,19 +1,26 @@
-var handler = async (m, { conn, isOwner }) => {
-    if (!isOwner) return; // Solo el owner puede ejecutar esta prueba
+import fetch from 'node-fetch'
 
-    try {
-        await conn.reply(m.chat, '🚧 *Soy un texto de Prueba de Owner* 🚀', m)
-    } catch (e) {
-        await conn.reply(m.chat, '🪛 *Ocurrió un error al ejecutar la prueba* ⚙️', m)
-    }
+var handler = async (m, { text,  usedPrefix, command }) => {
+
+if (!text) return conn.reply(m.chat, `🎌 *Falta bing*`, m, fake, )
+
+try {
+
+conn.sendPresenceUpdate('composing', m.chat)
+var apii = await fetch(`https://lookup.binlist.net/${text}`)
+var res = await apii.json()
+await m.reply(res.result)
+
+} catch (error) {
+console.error(error)
+return conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 }
 
-handler.help = ['prueba']
-handler.tags = ['owner']
-handler.command = /^prueba$/i
+}
+handler.command = ['bing']
+handler.help = ['bard']
+handler.tags = ['ai']
 
-handler.rowner = true
-handler.group = true
-handler.botAdmin = true
+handler.premium = false
 
 export default handler
