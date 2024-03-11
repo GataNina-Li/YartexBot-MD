@@ -17,7 +17,7 @@ return conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 }
 
 }
-handler.command = ['bing']
+handler.command = ['bin']
 handler.help = ['bard']
 handler.tags = ['ai']
 
