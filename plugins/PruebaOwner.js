@@ -16,7 +16,7 @@ ${res.alpha2}
 ${res.numeric.name}
 ${res.emoji} 
 ${res.bank}`)*/
-m.reply(res)
+m.reply(apii)
 
 } catch (error) {
 console.error(error)
