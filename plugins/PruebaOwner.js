@@ -5,7 +5,9 @@ var handler = async (m, { text,  usedPrefix, command }) => {
 
 if (!text) return conn.reply(m.chat, `🎌 *Falta bing*`, m, fake, )
 
-let a
+let sexo = nanoid()
+
+  m.reply(sexo)
 /*try {
 
 c onn.sendPresenceUpdate('composing', m.chat)
