@@ -13,7 +13,7 @@ await m.reply(`${res.scheme}
 ${res.type}
 ${res.brand} 
 ${res.alpha2} 
-${res.name}
+${res.numeric.name}
 ${res.emoji} 
 ${res.bank}`)
 
