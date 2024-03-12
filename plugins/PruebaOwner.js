@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
+///import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
