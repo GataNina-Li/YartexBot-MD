@@ -198,12 +198,11 @@ if (global.db) {
 setInterval(async () => {
 if (global.db.data) await global.db.write()
 if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', 'jadibts'], tmp.forEach((filename) => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
-}, 30 * 1000)
+}, 60 * 1000)
 }}
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
-/* Clear */
 async function clearTmp() {
   const tmp = [tmpdir(), join(__dirname, './tmp')]
   const filename = []
@@ -217,7 +216,7 @@ async function clearTmp() {
 }
 
 setInterval(async () => {
-	await clearTmp()
+await clearTmp()
 console.log(chalk.cyan(`AUTOCLEAR │ BASURA ELIMINADA\n`))
 }, 60000) //1 munto
 
