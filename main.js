@@ -142,7 +142,6 @@ keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ l
 },
 markOnlineOnConnect: false, 
 generateHighQualityLinkPreview: true, 
-msgRetry, 
 version,
 syncFullHistory: true,  
 getMessage: async (clave) => {
