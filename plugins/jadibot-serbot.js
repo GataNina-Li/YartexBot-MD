@@ -13,7 +13,7 @@ Contenido adaptado por:
 - AzamiJs >> https://github.com/AzamiJs
 */
 
-/*const _0x29b9f7 = _0x4e67;
+const _0x29b9f7 = _0x4e67;
 (function (_0x2aad7c, _0x4d3fb7) {
     const _0xac4b6d = _0x4e67, _0x4add8b = _0x2aad7c();
     while (!![]) {
@@ -1080,4 +1080,4 @@ export default handler;
 const delay = _0x3fd225 => new Promise(_0x506267 => setTimeout(_0x506267, _0x3fd225));
 function sleep(_0x29165d) {
     return new Promise(_0x1d72eb => setTimeout(_0x1d72eb, _0x29165d));
-}*/
+}
