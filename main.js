@@ -191,6 +191,7 @@ rl.close()
 
 conn.isInit = false
 conn.well = false
+conn.user.connect = true;
 conn.logger.info(`🔵 H E C H O\n`)
 
 if (!opts['test']) {
@@ -289,7 +290,7 @@ if (connection == 'open') {
 console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))}
 if (conn.user.connect) {
 conn.fakeReply('5217294888993@s.whatsapp.net', '😃', '0@s.whatsapp.net', '😅 Soy CuriosityBot\nRecientemente me e conectado', '0@s.whatsapp.net')
-conn.user.connect = true;
+conn.user.connect = false;
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) { 
@@ -375,13 +376,13 @@ conn.onCall = handler.callUpdate.bind(global.conn)
 conn.connectionUpdate = connectionUpdate.bind(global.conn)
 conn.credsUpdate = saveCreds.bind(global.conn, true)
 
-//const currentDateTime = new Date()
-//const messageDateTime = new Date(conn.ev)
-//if (currentDateTime >= messageDateTime) {
-//const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0])
-//} else {
-//const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0])
-//}
+const currentDateTime = new Date()
+const messageDateTime = new Date(conn.ev)
+if (currentDateTime >= messageDateTime) {
+const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0])
+} else {
+const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0])
+}
 
 conn.ev.on('messages.upsert', conn.handler)
 conn.ev.on('group-participants.update', conn.participantsUpdate)
