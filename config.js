@@ -22,7 +22,7 @@ global.prems = []
 //Solo desarrolladores aprobados
 global.isdev = [['5217294888993'], ['5492266466080'], ['5492266613038'], ['5215610314499'], ['573218138672'], ['51935531943'], ['5217862279795'], ['5492964650915']]
 
-//Aqui encuentras los nombres del bot
+//Aqui encuentras los nombres del bot 
 global.packname = ''
 global.author = 'CuriosityBot'
 global.wm = '© CuriosityBot-MD'
