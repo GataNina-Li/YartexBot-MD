@@ -18,7 +18,7 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
     }
 
     if (user === ownerBot) {
-        return conn.reply(m.chat, '🚩 No puedo banear al propietario del bot ', m);
+        return conn.reply(m.chat, '🚩 No puedo eliminar al propietario del bot ', m);
     }
 
     await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
