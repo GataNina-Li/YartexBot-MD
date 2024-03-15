@@ -120,43 +120,26 @@ let chat = global.db.data.chats[m.chat]
 if (typeof chat !== 'object')
 global.db.data.chats[m.chat] = {}
 if (chat) {
-if (!('isBanned' in chat))
-chat.isBanned = false
-if (!('welcome' in chat))
-chat.welcome = true
-if (!('detect' in chat))
-chat.detect = false
-if (!('detect2' in chat))
-chat.detect2 = true
-if (!('sWelcome' in chat))
-chat.sWelcome = ''
-if (!('sBye' in chat))
-chat.sBye = ''
-if (!('sPromote' in chat))
-chat.sPromote = ''
-if (!('sDemote' in chat))
-chat.sDemote = ''
-if (!('delete' in chat))
-chat.delete = true
-if (!('antiLink' in chat))
-chat.antiLink = false
-if (!('antiTraba' in chat))
-chat.antiTraba = false
-if (!('antiToxic' in chat)) 
-chat.antiToxic = true
-if (!('viewonce' in chat))
-chat.viewonce = true
-if (!('onlyLatinos' in chat))
-chat.onlyLatinos = false
+if (!('isBanned' in chat)) chat.isBanned = false
+if (!('welcome' in chat)) chat.welcome = true
+if (!('detect' in chat)) chat.detect = false
+if (!('detect2' in chat)) chat.detect2 = true
+if (!('sWelcome' in chat)) chat.sWelcome = ''
+if (!('sBye' in chat)) chat.sBye = ''
+if (!('sPromote' in chat)) chat.sPromote = ''
+if (!('sDemote' in chat)) chat.sDemote = ''
+if (!('delete' in chat)) chat.delete = true
+if (!('antiLink' in chat)) chat.antiLink = true
+if (!('antiTraba' in chat)) chat.antiTraba = false
+if (!('antiToxic' in chat)) chat.antiToxic = true
+if (!('viewonce' in chat)) chat.viewonce = true
+if (!('onlyLatinos' in chat)) chat.onlyLatinos = false
 if (!('modoadmin' in chat)) chat.modoadmin = false   
-if (!('nsfw' in chat))
-chat.nsfw = true
-if (!('antiSticker' in chat))
-chat.antiSticker = false 
-if (!('antibule' in chat))
-chat.antibule = false 
+if (!('nsfw' in chat)) chat.nsfw = true
+if (!('antiSticker' in chat)) chat.antiSticker = false 
+if (!('antibule' in chat)) chat.antibule = false 
 if (!('audios' in chat)) chat.audios = true
-if (!('game' in chat)) chat.game = true
+if (!('game' in chat)) chat.game = false
 if (!isNumber(chat.expired))
 chat.expired = 0
 } else
@@ -173,7 +156,7 @@ sDemote: '',
 delete: true,
 antiTraba: true,
 antiToxic: true,
-antiLink: false,
+antiLink: true,
 viewonce: true,
 useDocument: false,
 onlyLatinos: false,
@@ -182,7 +165,7 @@ nsfw: true,
 antiSticker: false,
 antibule: false,
 audios: true, 
-game: true, 
+game: false, 
 expired: 0
 }
 
