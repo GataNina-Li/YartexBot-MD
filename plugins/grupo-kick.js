@@ -6,10 +6,19 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
     let user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
 
     const groupInfo = await conn.groupMetadata(m.chat);
-    const owner = groupInfo.owner || m.chat.split`-`[0] + '@s.whatsapp.net';
+    const ownerGroup = groupInfo.owner || m.chat.split`-`[0] + '@s.whatsapp.net';
+    const ownerBot = global.owner[0][0] + '@s.whatsapp.net';
 
-    if (user === conn.user.jid || user === owner) {
-        return conn.reply(m.chat, '🚩 No puedo eliminar el bot ni el creador del grupo ', m);
+    if (user === conn.user.jid) {
+        return conn.reply(m.chat, '🚩 No puedo eliminar el bot del grupo ', m);
+    }
+
+    if (user === ownerGroup) {
+        return conn.reply(m.chat, '🚩 No puedo eliminar al creador del grupo ', m);
+    }
+
+    if (user === ownerBot) {
+        return conn.reply(m.chat, '🚩 No puedo banear al propietario del bot ', m);
     }
 
     await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
