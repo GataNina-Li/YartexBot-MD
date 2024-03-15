@@ -10,15 +10,15 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
     const ownerBot = global.owner[0][0] + '@s.whatsapp.net';
 
     if (user === conn.user.jid) {
-        return conn.reply(m.chat, '🚩 No puedo eliminar el bot del grupo ', m);
+        return conn.reply(m.chat, '🚩 No puedo eliminar el bot del grupo', m);
     }
 
     if (user === ownerGroup) {
-        return conn.reply(m.chat, '🚩 No puedo eliminar al creador del grupo ', m);
+        return conn.reply(m.chat, '🚩 No puedo eliminar al creador del grupo', m);
     }
 
     if (user === ownerBot) {
-        return conn.reply(m.chat, '🚩 No puedo eliminar al propietario del bot ', m);
+        return conn.reply(m.chat, '🚩 No puedo eliminar al propietario del bot', m);
     }
 
     await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
