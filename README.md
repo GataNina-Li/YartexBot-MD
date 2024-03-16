@@ -1,4 +1,4 @@
-## Curiosity : Bot - MD 🧃
+## Curiosity : Bot - MD ✨️
 
 <p align="center">
 <img src="https://telegra.ph/file/04b7a17f4f7aaa302b2d8.jpg" alt="CuriosityBot-MD" width="900"/>
