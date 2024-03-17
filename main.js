@@ -165,7 +165,7 @@ if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento
 let addNumber
 if (!!phoneNumber) {
 addNumber = phoneNumber.replace(/[^0-9]/g, '')
-if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
+if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
 console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +593xxxx")))
 process.exit(0)
 }} else {
@@ -178,7 +178,7 @@ break
 } else {
 console.log(chalk.bgBlack(chalk.bold.redBright("Asegúrese de agregar el código de país.")))
 }}
-//rl.close()
+rl.close()
 }
 
 setTimeout(async () => {
@@ -191,7 +191,7 @@ rl.close()
 
 conn.isInit = false
 conn.well = false
-conn.user.connect = true;
+//conn.user.connect = true;
 conn.logger.info(`🔵 H E C H O\n`)
 
 if (!opts['test']) {
