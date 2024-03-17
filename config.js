@@ -8,7 +8,7 @@ import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
 
 global.owner = [
-['524531287294', 'CuriosityBot-MD 🍧', true], ['573026191480', 'Support', true], ['5217294888993'], ['5214531287294'], ['5492266466080'], ['573012482597'], ['5492266613038'], ['5215610314499'], ['51935531943'], ['5217862279795'], ['59162714296'], ['5492964650915']]
+['524531287294', 'CuriosityBot-MD 🍧', true], ['573026191480', 'Support', true], ['5217294888993'], ['5214531287294'], ['5492266466080'], ['5492266613038'], ['5215610314499'], ['51935531943'], ['59162714296'], ['5492964650915']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
 //Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
@@ -20,7 +20,7 @@ global.mods = []
 global.prems = []
 
 //Solo desarrolladores aprobados
-global.isdev = [['5217294888993'], ['5492266466080'], ['5492266613038'], ['5215610314499'], ['573012482597'], ['51935531943'], ['5217862279795'], ['5492964650915']]
+global.isdev = [['5217294888993'], ['5492266466080'], ['5492266613038'], ['5215610314499'], ['51935531943'], ['5492964650915']]
 
 //Aqui encuentras los nombres del bot 
 global.packname = ''
