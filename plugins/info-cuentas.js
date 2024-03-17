@@ -59,7 +59,7 @@ ${group9}
 ${channel}
 
 ⬡ *INFINITY-WA*
-${channel2}`
+https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A`
 
 conn.reply(m.chat, text, m, fake, )
 }
