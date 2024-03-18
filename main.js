@@ -141,9 +141,8 @@ auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
 },
-markOnlineOnConnect: false, 
+markOnlineOnConnect: true, 
 generateHighQualityLinkPreview: true, 
-version,
 syncFullHistory: true,  
 getMessage: async (clave) => {
 let jid = jidNormalizedUser(clave.remoteJid)
@@ -151,7 +150,9 @@ let msg = await store.loadMessage(jid, clave.id)
 return msg?.message || ""
 },
 msgRetryCounterCache, //Resolver mensajes en espera
+msgRetryCounterMap, // Determinar si se debe volver a intentar enviar un mensaje o no
 defaultQueryTimeoutMs: undefined, 
+version,  
 }
 
 // Código adaptado para la compatibilidad de
