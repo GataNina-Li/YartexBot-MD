@@ -132,6 +132,7 @@ opcion = opcion
 }
 
 console.info = () => {}
+console.warn = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : false,
