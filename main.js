@@ -131,7 +131,7 @@ console.log('Por favor, seleccione solo 1 o 2.')
 opcion = opcion
 }
 
-console.info = () => {} //dejará de aparecer la molesta "pre-key"
+console.info = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : false,
