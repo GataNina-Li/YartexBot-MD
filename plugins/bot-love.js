@@ -12,7 +12,8 @@ let love = `🚩 𝗨𝗡 𝗣𝗢𝗥𝗖𝗘𝗡𝗧𝗔𝗝𝗘 𝗗𝗘 𝗔
 ┋➸ *${Math.floor(Math.random() * 100)}%* 𝖣𝖾 𝖴𝗇 *100%*
 ╰◈ ━━━━━━━ ⸙ ━━━━━━━ ◈╯
 
-🎌 𝐇𝐚𝐲 𝐀𝐦𝐨𝐫,𝐃𝐞𝐛𝐞𝐬 𝐏𝐞𝐝𝐢𝐫𝐥𝐞 𝐌𝐚𝐭𝐫𝐢𝐦𝐨𝐧𝐢𝐨?`
+🎌 𝐇𝐚𝐲 𝐀𝐦𝐨𝐫,𝐃𝐞𝐛𝐞𝐬 𝐏𝐞𝐝𝐢𝐫𝐥𝐞 𝐌𝐚𝐭𝐫𝐢𝐦𝐨𝐧𝐢𝐨?`.trim()
+await conn.reply(m.chat, Love, m, fake, )
 
 conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 
@@ -21,7 +22,7 @@ conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 }
 handler.help = ['love']
 handler.tags = ['juegos']
-handler.command = /^(love|amor|poncentaje)$/i
+handler.command = /^(love|amor|Love)$/i
 
 handler.register = true
 
