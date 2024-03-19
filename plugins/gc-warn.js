@@ -30,7 +30,7 @@ const handler = async (m, { conn, text, command, usedPrefix }) => {
     );
     await conn.groupParticipantsUpdate(m.chat, [who], 'remove');
   }
-  return !1;
+  return !0;
 };
 
 handler.command = /^(advertir|advertencia|warn|warning)$/i;
