@@ -10,8 +10,12 @@ const handler = async (m, { conn, text, command, usedPrefix }) => {
 
     const user = global.db.data.users[who];
 
-    if (who === conn.user.jid) {
+        if (user === conn.user.jid) {
         return conn.reply(m.chat, '🚩 No puedo advertir al bot', m);
+    }
+
+    if (user === ownerBot) {
+        return conn.reply(m.chat, '🚩 No puedo advertir al propietario del bot (' + OwnerBot + ')', m);
     }
 
     user.warn += 1;
