@@ -1,9 +1,7 @@
 const handler = async (m, { conn, text, command, usedPrefix }) => {
-  if (m.mentionedJid.includes(conn.user.jid)) return; // Evitar advertir al bot mismo
- if (m.mentionedJid.includes(global.owner)) return; 
-    return m.reply(`El propietario @${conn.getName(owner)} de ©CuriosityBot-MD no puede ser advertido`, m.chat, { mentions: conn.parseMention(`@${conn.getName(owner)}`) });
-  
-  const pp = './storage/warn.jpg';
+ // if (m.mentionedJid.includes(conn.user.jid)) return; // Evitar advertir al bot mismo
+// if (m.mentionedJid.includes(global.owner)) return;     return m.reply(`El propietario @${conn.getName(owner)} de ©CuriosityBot-MD no puede ser advertido`, m.chat, { mentions: conn.parseMention(`@${conn.getName(owner)}`) });
+//  const pp = './storage/warn.jpg';
   let who;
   if (m.isGroup) {
     who = m.mentionedJid[0] ?
