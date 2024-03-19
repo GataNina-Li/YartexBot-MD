@@ -562,9 +562,9 @@ let chat = global.db.data.chats[msg?.chat] || {}
 if (!chat?.delete) return 
 if (!msg) return 
 if (!msg?.isGroup) return 
-await this.reply(msg.chat, `🔎 BORRO UN MENSAJE
-🧃 *NOMBRE:* @${participant.split`@`[0]} 
-`.trim(), msg, {mentions: [participant]
+await this.sendMessage(msg.chat, {text: `🔎 BORRO UN MENSAJE
+🧃 *NOMBRE:* @${participant.split`@`[0]}\n
+𝙿𝙰𝚁𝙰 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝚁 𝙴𝚂𝚃𝙰 𝙾𝙿𝙲𝙸𝙾́𝙽 𝚄𝚂𝙰𝚁: #disable delete`, mentions: [participant]}, {quoted: msg})
 this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 } catch (e) {
 console.error(e)
