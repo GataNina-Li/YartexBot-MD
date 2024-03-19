@@ -21,7 +21,7 @@ for (let i = 0; i < global.owner.length; i++) {
 ownerNumber = global.owner[i][0];
 if (usuario.replace(/@s\.whatsapp\.net$/, '') === ownerNumber) {
 aa = ownerNumber + '@s.whatsapp.net'
-await conn.reply(m.chat, `⚠️ `, null, { mentions: [aa] })
+await conn.reply(m.chat, `🚩 Este Comando No  Se Puede Usar Para Un Propietario `, null, { mentions: [aa] })
 return
 }}
   
