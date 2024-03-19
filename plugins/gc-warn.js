@@ -10,7 +10,7 @@ const handler = async (m, { conn, text, command, usedPrefix }) => {
 
     const user = global.db.data.users[who];
 
-    if (user === conn.user.jid) {
+    if (who === conn.user.jid) {
         return conn.reply(m.chat, '🚩 No puedo advertir al bot', m);
     }
 
