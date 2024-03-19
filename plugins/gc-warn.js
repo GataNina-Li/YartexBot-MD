@@ -3,26 +3,23 @@ const handler = async (m, { conn, text, command, usedPrefix }) => {
 // if (m.mentionedJid.includes(global.owner)) return;     return m.reply(`El propietario @${conn.getName(owner)} de ©CuriosityBot-MD no puede ser advertido`, m.chat, { mentions: conn.parseMention(`@${conn.getName(owner)}`) });
 //  const pp = './storage/warn.jpg';
 let number, ownerNumber, aa, who;
-  if (m.isGroup) {
-    who = m.mentionedJid[0] ?
-      m.mentionedJid[0] :
-      m.quoted ?
-      m.quoted.sender :
-      text;
-  } else who = m.chat;
+if (m.isGroup) { 
+who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text; 
+} else who = m.chat;
   const user = global.db.data.users[who];
+  const usuario = conn.user.jid.split`@`[0] + '@s.whatsapp.net'
   const bot = global.db.data.settings[conn.user.jid] || {};
   const dReason = 'Sin motivo';
-  const msgtext = text || dReason;
+  const msgtext = text || dReason 
   const sdms = msgtext.replace(/@\d+-?\d* /g, '');
   const warntext = `*❌ 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙴 𝙰 𝚄𝙽𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰 𝙾 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙰 𝙰 𝚄𝙽 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 𝙿𝙰𝚁𝙰 𝙰𝙳𝚅𝙴𝚁𝚃𝙸𝚁 𝙰𝙻 𝚄𝚂𝚄𝙰𝚁𝙸𝙾*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} @0*`;
   if (!who) {
-    return m.reply(warntext, m.chat, { mentions: conn.parseMention(warntext) });
+return m.reply(warntext, m.chat, { mentions: conn.parseMention(warntext) });
   }
   
 for (let i = 0; i < global.owner.length; i++) {
 ownerNumber = global.owner[i][0];
-if (user.replace(/@s\.whatsapp\.net$/, '') === ownerNumber) {
+if (usuario.replace(/@s\.whatsapp\.net$/, '') === ownerNumber) {
 aa = ownerNumber + '@s.whatsapp.net'
 await conn.reply(m.chat, `⚠️ `, null, { mentions: [aa] })
 return
