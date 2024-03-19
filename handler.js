@@ -136,6 +136,7 @@ if (!('viewonce' in chat)) chat.viewonce = true
 if (!('onlyLatinos' in chat)) chat.onlyLatinos = false
 if (!('modoadmin' in chat)) chat.modoadmin = false   
 if (!('nsfw' in chat)) chat.nsfw = true
+if (!('reaction' in chat)) chat.reaction = true    
 if (!('antiSticker' in chat)) chat.antiSticker = false 
 if (!('antibule' in chat)) chat.antibule = false 
 if (!('audios' in chat)) chat.audios = true
@@ -162,6 +163,7 @@ useDocument: false,
 onlyLatinos: false,
 modoadmin: false,
 nsfw: true,
+reaction: true, 
 antiSticker: false,
 antibule: false,
 audios: true, 
@@ -463,14 +465,18 @@ stat.lastSuccess = now
 try {
 if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this)
 } catch (e) {
-console.log(m, m.quoted, e)
-}
+console.log(m, m.quoted, e)}
 let settingsREAD = global.db.data.settings[this.user.jid] || {}  
 if (opts['autoread']) await this.readMessages([m.key])
 if (settingsREAD.autoread2) await this.readMessages([m.key])  
-     
+//if (settingsREAD.autoread2 == 'true') await this.readMessages([m.key])    
+	    
+if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|curiosity|bot|curio|bug|syntax)/gi)) {
+let emot = pickRandom(["😀", "😃", "😄", "😁", "😆", "🥹", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😶‍🌫️", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🫣", "🤭", "🫢", "🫡", "🤫", "🫠", "🤥", "😶", "🫥", "😐", "🫤", "😑", "🫨", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😮‍💨", "😵", "😵‍💫", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", "🤠", "😈", "👿", "👺", "🤡", "💩", "👻", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🫶", "👍", "✌️", "🙏", "🫵", "🤏", "🤌", "☝️", "🖕", "🙏", "🫵", "🫂", "🐱", "🤹‍♀️", "🤹‍♂️", "🗿", "✨", "⚡", "🔥", "🌈", "🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎", "💔", "❤️‍🔥", "❤️‍🩹", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "🏳️‍🌈", "👊", "👀", "💋", "🫰", "💅", "👑", "🐣", "🐤", "🐈"])
+if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
 }
-} 
+function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
+}}
 
 export async function participantsUpdate({ id, participants, action }) {
 
@@ -548,22 +554,17 @@ await this.updateBlockStatus(cs.from, 'block')
 }
 
 export async function deleteUpdate(message) {
-
 try {
 const { fromMe, id, participant } = message
-if (fromMe)
-return
+if (fromMe) return 
 let msg = this.serializeM(this.loadMessage(id))
-if (!msg)
-return
-let chat = global.db.data.chats[msg.chat] || {}
-if (chat.delete)
-return
+let chat = global.db.data.chats[msg?.chat] || {}
+if (!chat?.delete) return 
+if (!msg) return 
+if (!msg?.isGroup) return 
 await this.reply(msg.chat, `🔎 BORRO UN MENSAJE
 🧃 *NOMBRE:* @${participant.split`@`[0]} 
-`.trim(), msg, {
-mentions: [participant]
-})
+`.trim(), msg, {mentions: [participant]
 this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 } catch (e) {
 console.error(e)
