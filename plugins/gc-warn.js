@@ -1,4 +1,8 @@
 const handler = async (m, { conn, text, command, usedPrefix }) => {
+    const groupInfo = await conn.groupMetadata(m.chat);
+    const ownerGroup = groupInfo.owner || m.chat.split`-`[0] + '@s.whatsapp.net';
+    const ownerBot = global.owner[0][0] + '@s.whatsapp.net';
+
     let who;
     if (m.isGroup) {
         who = m.mentionedJid[0] ?
@@ -10,12 +14,10 @@ const handler = async (m, { conn, text, command, usedPrefix }) => {
 
     const user = global.db.data.users[who];
 
-        if (user === conn.user.jid) {
+    if (who === conn.user.jid) {
         return conn.reply(m.chat, '🚩 No puedo advertir al bot', m);
-    }
-
-    if (user === ownerBot) {
-        return conn.reply(m.chat, '🚩 No puedo advertir al propietario del bot (' + OwnerBot + ')', m);
+    } else if (who === ownerBot) {
+        return conn.reply(m.chat, '🚩 No puedo advertir al propietario del bot', m);
     }
 
     user.warn += 1;
