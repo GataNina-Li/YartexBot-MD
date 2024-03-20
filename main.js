@@ -222,7 +222,7 @@ async function clearTmp() {
 setInterval(async () => {
 await clearTmp()
 console.log(chalk.cyan(`AUTOCLEAR │ BASURA ELIMINADA\n`))
-}, 600) //1 munto
+}, 60000) //1 munto
 
 function purgeSession() {
 let prekey = []
