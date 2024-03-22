@@ -101,7 +101,7 @@ var credit = 'X8KpIFJlcXVlc3RlZCBieSBDdXJpb3NpdHlCb3Rf'
 global.cred = Buffer.from(credit, 'base64')
 
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Linda noche'; break; case 1: hour = 'Linda noche'; break; case 2: hour = 'Linda noche'; break; case 3: hour = 'Linda mañana'; break; case 4: hour = 'Linda mañana'; break; case 5: hour = 'Linda mañana'; break; case 6: hour = 'Linda mañana'; break; case 7: hour = 'Linda mañana'; break; case 8: hour = 'Linda mañana'; break; case 9: hour = 'Linda mañana'; break; case 10: hour = 'Buen dia'; break; case 11: hour = 'Buen dia'; break; case 12: hour = 'Buen dia'; break; case 13: hour = 'Buen dia'; break; case 14: hour = 'Bonita tarde'; break; case 15: hour = 'Bonita tarde'; break; case 16: hour = 'Bonita tarde'; break; case 17: hour = 'Bonito anochecer'; break; case 18: hour = 'Linda noche'; break; case 19: hour = 'Linda noche'; break; case 20: hour = 'Linda noche'; break; case 21: hour = 'Linda noche'; break; case 22: hour = 'Linda noche'; break; case 23: hour = 'Linda noche'; break;}
-global.saludo = '🧃' + hour;
+global.saludo = '🍃' + hour;
 
 global.d = new Date(new Date + 3600000)
 global.locale = 'es'
@@ -114,7 +114,7 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.nombre = conn.getName(m.sender)
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 //global.fake = { contextInfo:{ forwardingScore: 0, externalAdReply: {title: saludo + ` ${m.name}`, body: dev, sourceUrl: enlaces, thumbnailUrl: fotos }}} //Fake simple
-global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 888, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363200015845018@newsletter', serverMessageId: '', newsletterName: `${m.name}` }, externalAdReply: { title: saludo + `${m.name}`, body: dev, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: fotos, thumbnail: imagen1, sourceUrl: enlaces }}}, { quoted: m } //fake con reenviado de canal
+global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 888, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363200015845018@newsletter', serverMessageId: '', newsletterName: `${m.name}` }, externalAdReply: { title: saludo, body: dev, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: fotos, thumbnail: imagen1, sourceUrl: enlaces }}}, { quoted: m } //fake con reenviado de canal
 }
 
 export default handler
