@@ -97,10 +97,14 @@ global.twa = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.ne
 
 global.fakemek = {key: {participant: "0@s.whatsapp.net",remoteJid: "0@s.whatsapp.net"}, message: {groupInviteMessage: {groupJid: "51995386439-1616969743@g.us", inviteCode: "m",groupName: "P", caption: 'CuriosityBot-MD', jpegThumbnail: null}}}
 
+
+const moji = (await axios.get(`https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/main/storage/juegos/emojis.json`)).data
+const emoji = await res[Math.floor(res.length * Math.random())]
+	
 var credit = 'X8KpIFJlcXVlc3RlZCBieSBDdXJpb3NpdHlCb3Rf'
 global.cred = Buffer.from(credit, 'base64')
 
-var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Hola, Buenas Noches'; break; case 1: hour = 'Hola, Buenas Noches'; break; case 2: hour = 'Hola, Buenas Noches'; break; case 3: hour = 'Hola, Buenos Días'; break; case 4: hour = 'Hola, Buenos Días'; break; case 5: hour = 'Hola, Buenos Días'; break; case 6: hour = 'Hola, Buenos Días'; break; case 7: hour = 'Hola, Buenos Días'; break; case 8: hour = 'Hola, Buenos Días'; break; case 9: hour = 'Hola, Buenos Días'; break; case 10: hour = 'Hola, Buenos Días'; break; case 11: hour = 'Hola, Buenos Días'; break; case 12: hour = 'Hola, Buenas Tardes'; break; case 13: hour = 'Hola, Buenas Tardes'; break; case 14: hour = 'Hola, Buenas Tardes'; break; case 15: hour = 'Hola, Buenas Tardes'; break; case 16: hour = 'Hola, Buenas Tardes'; break; case 17: hour = 'Hola, Buenas Tardes'; break; case 18: hour = 'Hola, Buenas noches'; break; case 19: hour = 'Hola, Buenas noches'; break; case 20: hour = 'Hola, Buenas noches'; break; case 21: hour = 'Hola, Buenas noches'; break; case 22: hour = 'Hola, Buenas noches'; break; case 23: hour = 'Hola, Buenas noches'; break;}
+var ase = new Date(new Date + 3600000); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Hola, Buenas Noches'; break; case 1: hour = 'Hola, Buenas Noches'; break; case 2: hour = 'Hola, Buenas Noches'; break; case 3: hour = 'Hola, Buenos Días'; break; case 4: hour = 'Hola, Buenos Días'; break; case 5: hour = 'Hola, Buenos Días'; break; case 6: hour = 'Hola, Buenos Días'; break; case 7: hour = 'Hola, Buenos Días'; break; case 8: hour = 'Hola, Buenos Días'; break; case 9: hour = 'Hola, Buenos Días'; break; case 10: hour = 'Hola, Buenos Días'; break; case 11: hour = 'Hola, Buenos Días'; break; case 12: hour = 'Hola, Buenas Tardes'; break; case 13: hour = 'Hola, Buenas Tardes'; break; case 14: hour = 'Hola, Buenas Tardes'; break; case 15: hour = 'Hola, Buenas Tardes'; break; case 16: hour = 'Hola, Buenas Tardes'; break; case 17: hour = 'Hola, Buenas Tardes'; break; case 18: hour = 'Hola, Buenas noches'; break; case 19: hour = 'Hola, Buenas noches'; break; case 20: hour = 'Hola, Buenas noches'; break; case 21: hour = 'Hola, Buenas noches'; break; case 22: hour = 'Hola, Buenas noches'; break; case 23: hour = 'Hola, Buenas noches'; break;}
 global.saludo = '🍃' + hour;
 
 global.d = new Date(new Date + 3600000)
@@ -114,7 +118,7 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.nombre = conn.getName(m.sender)
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 //global.fake = { contextInfo:{ forwardingScore: 0, externalAdReply: {title: saludo + ` ${m.name}`, body: dev, sourceUrl: enlaces, thumbnailUrl: fotos }}} //Fake simple
-global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 888, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363200015845018@newsletter', serverMessageId: '', newsletterName: saludo + ` ${m.name}` }, externalAdReply: { title: wm + ' 🍋', body: dev, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: fotos, thumbnail: imagen1, sourceUrl: enlaces }}}, { quoted: fkontak } //fake con reenviado de canal
+global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 888, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363200015845018@newsletter', serverMessageId: '', newsletterName: saludo + ` ${m.name}` }, externalAdReply: { title: wm + ` ${emoji}`, body: dev, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: fotos, thumbnail: imagen1, sourceUrl: enlaces }}}, { quoted: fkontak } //fake con reenviado de canal
 }
 
 export default handler
