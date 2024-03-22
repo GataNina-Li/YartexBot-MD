@@ -22,7 +22,7 @@ global.refran = fs.readFileSync('./storage/imagenes/refran.jpg')
 global.linksjpg = fs.readFileSync('./storage/imagenes/Links.jpg')
 
 var img = 'https://qu.ax/alsW.png'; var img1 = 'https://qu.ax/HxYf.jpg'; var img2 = 'https://qu.ax/xBui.png'; var img3 = 'https://qu.ax/vQgp.png'; var img4 = 'https://qu.ax/vGrc.png'; var img5 = 'https://qu.ax/OLUO.png'
-var img6 = 'https://qu.ax/Aehc.png'; var img7 = 'https://qu.ax/aLNg.jpg'; var img8 = 'https://https://qu.ax/VgNa.png'; var img9 = 'https://qu.ax/moFT.png'; var img10 = 'https://qu.ax/JhNf.png'
+var img6 = 'https://qu.ax/Aehc.png'; var img7 = 'https://qu.ax/aLNg.jpg'; var img8 = 'https://qu.ax/VgNa.png'; var img9 = 'https://qu.ax/moFT.png'; var img10 = 'https://qu.ax/JhNf.png'
 
 global.ImgAll = [img, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
 
