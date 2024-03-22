@@ -3,11 +3,11 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-if (!text) return conn.reply(m.chat, `🎌 *Falta bing*`, m, fake, )
+//if (!text) return conn.reply(m.chat, `🎌 *Falta bing*`, m, fake, )
 
-let sexo = nanoid()
+//let sexo = nanoid()
 
-  m.reply(sexo)
+//  m.reply(sexo)
 /*try {
 
 c onn.sendPresenceUpdate('composing', m.chat)
@@ -26,11 +26,12 @@ m.reply(apii)
 console.error(error)
 return conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
 }*/
+conn.reply(m.chat, 'Zam', m, fake, )
 
 }
-handler.command = ['bin']
-handler.help = ['bard']
-handler.tags = ['ai']
+handler.command = ['Ts']
+//handler.help = ['']
+//handler.tags = ['ai']
 
 handler.premium = false
 
