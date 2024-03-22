@@ -99,7 +99,7 @@ global.fakemek = {key: {participant: "0@s.whatsapp.net",remoteJid: "0@s.whatsapp
 
 
 const moji = (await axios.get(`https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/main/storage/juegos/emojis.json`)).data
-const emoji = await res[Math.floor(moji.length * Math.random())]
+const emoji = await moji[Math.floor(moji.length * Math.random())]
 	
 var credit = 'X8KpIFJlcXVlc3RlZCBieSBDdXJpb3NpdHlCb3Rf'
 global.cred = Buffer.from(credit, 'base64')
