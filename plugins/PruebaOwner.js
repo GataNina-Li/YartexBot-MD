@@ -13,7 +13,7 @@ var handler = async (m, { text,  usedPrefix, command }) => {
         thumbnailUrl: fotos,
       },
     })}*/
-  await conn.reply(m.chat, '*Test*', { contextInfo:{ forwardingScore: 'https://whatsapp.com/channel/0029VaB4w2ZFHWpwgyEe3w2k/214', isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnailUrl: fotos}}})
+  await conn.reply(m.chat, '*Test*', m, { contextInfo:{ forwardingScore: 'https://whatsapp.com/channel/0029VaB4w2ZFHWpwgyEe3w2k/214', isForwarded: true, externalAdReply: {title: '👋 Hola!!', body: saludo, sourceUrl: global.ig, thumbnailUrl: fotos}}})
 m.react('🚀') 
 
 }
