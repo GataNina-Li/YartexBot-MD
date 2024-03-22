@@ -90,6 +90,12 @@ npm start
 > npm start
 ```
 
+- ### 🚩 Actualizar CuriosityBot 
+> Note Comandos para actualizar CuriosityBot-MD de forma automática
+```bash
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/update.sh | bash
+```
+
 - #### 🎌 Para Activar 24/7 (Termux)
 > Este Comando Deve Ir En La Carpeta CuriosityBot-MD
 ```bash
