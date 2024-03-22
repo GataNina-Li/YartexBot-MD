@@ -22,7 +22,7 @@ participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "" } : {})
 }
 }}
 
-conn.sendMessge(m.chat, { text: wm }, { quoted: kalgans })
+conn.sendMessage(m.chat, { text: wm }, { quoted: kalgans })
 
 }
 handler.command = ['ts']
