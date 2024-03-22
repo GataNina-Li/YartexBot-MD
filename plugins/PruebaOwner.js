@@ -3,7 +3,7 @@ var handler = async (m, { text,  usedPrefix, command }) => {
 const kalgans = { 
 key: {
 fromMe: true, 
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
+participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "" } : {}) 
 },
 'message': {
 "interactiveMessage": {
