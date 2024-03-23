@@ -19,7 +19,7 @@ conn.reply(m.chat, `Uso exitoso de *${count}* 🥤 Pocion(es)
 }
 
 handler.help = ['heal']
-handler.tags = ['rp']
+handler.tags = ['rg']
 handler.command = /^(heal)$/i
 
 export default handler
