@@ -132,10 +132,10 @@ opcion = opcion
 }
 
 console.info = () => {}
-console.warn = () => {}
+//console.warn = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
-printQRInTerminal: opcion == '1' ? true : false,
+printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
 browser: ['Ubuntu', 'Chrome', '110.0.5585.95'],
 auth: {
@@ -144,15 +144,15 @@ keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ l
 },
 markOnlineOnConnect: true, 
 generateHighQualityLinkPreview: true, 
-syncFullHistory: true,  
+syncFullHistory: true,
 getMessage: async (clave) => {
 let jid = jidNormalizedUser(clave.remoteJid)
 let msg = await store.loadMessage(jid, clave.id)
 return msg?.message || ""
 },
-msgRetryCounterCache, //Resolver mensajes en espera
+msgRetryCounterCache, // Resolver mensajes en espera
 msgRetryCounterMap, // Determinar si se debe volver a intentar enviar un mensaje o no
-defaultQueryTimeoutMs: undefined, 
+defaultQueryTimeoutMs: undefined,
 version,  
 }
 
