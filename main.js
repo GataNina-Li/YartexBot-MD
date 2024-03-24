@@ -1,6 +1,5 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
-import './config.js'
-import './store.js'
+
 import {createRequire} from 'module'
 import path, {join} from 'path'
 import {fileURLToPath, pathToFileURL} from 'url'
@@ -116,17 +115,20 @@ const methodCodeQR = process.argv.includes("qr")
 const methodCode = !!phoneNumber || process.argv.includes("code")
 const MethodMobile = process.argv.includes("mobile")
 
+const colores = chalk.bold.green
+const opcionQR = chalk.bgBlue.white
+const opcionTexto = chalk.bgMagenta.white
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
 let opcion
 if (!fs.existsSync(`./${authFile}/creds.json`) && !methodCodeQR && !methodCode) {
 while (true) {
-opcion = await question('Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n--> ')
+opcion = await question(colores('Seleccione una opción:\n') + opcionQR('1. Con código QR\n') + opcionTexto('2. Con código de texto de 8 dígitos\n--> '))
 if (opcion === '1' || opcion === '2') {
 break
 } else {
-console.log('Por favor, seleccione solo 1 o 2.')
+console.log(chalk.bgYellow.black.bold('Por favor, seleccione solo 1 o 2.'))
 }}
 opcion = opcion
 }
@@ -185,12 +187,16 @@ rl.close()
 }
 
 setTimeout(async () => {
+const codigoEmparejamiento = chalk.black.bgGreen
+const codigoBotResaltado = chalk.bold.white
+
 let codeBot = await conn.requestPairingCode(addNumber)
 codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
-console.log(chalk.black(chalk.bgGreen(`Código de emparejamiento: `)), chalk.bold.white(chalk.white(codeBot)))
+console.log(codigoEmparejamiento('Código de emparejamiento: '), codigoBotResaltado(codeBot))
 rl.close()
 }, 3000)
 }}
+
 
 conn.isInit = false
 conn.well = false
