@@ -45,7 +45,7 @@ let handler = async (m, {conn, args, usedPrefix, command}) => {
     if (stiker)
       conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
     else
-      throw "❌ Error";
+      throw "*⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*";
   }
 };
 handler.help = ["sticker"];
