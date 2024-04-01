@@ -33,7 +33,19 @@ https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV
 • https://www.facebook.com/elrebelde21
 • wa.me/527294888993
 • wa.me/5492964650915`
-await conn.reply(m.chat, txt, m, fake, )
+await conn.sendMessage(m.chat, { text: txt,
+contextInfo:{
+forwardingScore: 9999999,
+isForwarded: false, 
+"externalAdReply": {
+"showAdAttribution": true,
+"containsAutoReply": true,
+title: `🤖 𝐈𝐍𝐅𝐈𝐍𝐈𝐓𝐘𝐖𝐀-𝐇𝐎𝐒𝐓 🤖`,
+body: `✅ Hosting de Calidad`,
+"previewType": "PHOTO",
+thumbnailUrl: 'https://qu.ax/EQTd.jpg', 
+sourceUrl: 'https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A'}}},
+{ quoted: fkontak})
 }
 handler.tags =['info'] 
 handler.help = ['infinity', 'host', 'hosting'] 
