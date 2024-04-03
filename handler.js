@@ -129,8 +129,8 @@ if (!('sBye' in chat)) chat.sBye = ''
 if (!('sPromote' in chat)) chat.sPromote = ''
 if (!('sDemote' in chat)) chat.sDemote = ''
 if (!('delete' in chat)) chat.delete = true
-if (!('antiLink' in chat)) chat.antiLink = true
-if (!('antiTraba' in chat)) chat.antiTraba = false
+if (!('antiLink' in chat)) chat.antiLink = false
+if (!('antiTraba' in chat)) chat.antiTraba = true
 if (!('antiToxic' in chat)) chat.antiToxic = true
 if (!('viewonce' in chat)) chat.viewonce = true
 if (!('onlyLatinos' in chat)) chat.onlyLatinos = false
@@ -140,7 +140,7 @@ if (!('reaction' in chat)) chat.reaction = true
 if (!('antiSticker' in chat)) chat.antiSticker = false 
 if (!('antibule' in chat)) chat.antibule = false 
 if (!('audios' in chat)) chat.audios = true
-if (!('game' in chat)) chat.game = false
+if (!('game' in chat)) chat.game = true
 if (!isNumber(chat.expired))
 chat.expired = 0
 } else
@@ -156,10 +156,10 @@ sPromote: '',
 sDemote: '',
 delete: true,
 antiTraba: true,
-antiToxic: true,
+antiToxic: false,
 antiLink: true,
 viewonce: true,
-useDocument: false,
+useDocument: true,
 onlyLatinos: false,
 modoadmin: false,
 nsfw: true,
@@ -167,7 +167,7 @@ reaction: true,
 antiSticker: false,
 antibule: false,
 audios: true, 
-game: false, 
+game: true, 
 expired: 0
 }
 
