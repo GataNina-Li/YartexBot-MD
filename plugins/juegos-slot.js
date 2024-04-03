@@ -70,7 +70,7 @@ const arrayCasuale = generaArrayCasuale(hawemod, maxIterations);
 
 const array = [...arrayCasuale, ];
   
-let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, fake);
+let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, {quoted: fake});
 
 for (let i = 0; i < maxIterations; i++) {
 
@@ -84,7 +84,7 @@ ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
 ───────────
-🎰┃🎰┃ 🎰\n\n${end}`, edit: key})
+🎰┃🎰┃ 🎰\n\n${end}`, edit: key}, {quoted: fake})
 }
 handler.help = ['slot']
 handler.tags = ['juegos']
