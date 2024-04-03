@@ -52,16 +52,15 @@ users.exp -= apuesta
 }
 users.lastslot = new Date * 1
 
-
 var hawemod = [
-`${x[1]} : ${y[0]} : ${z[0]}
-${z[0]} : ${y[1]} : ${x[1]}
-${z[1]} : ${x[2]} : ${y[0]}`, 
-`${x[0]} : ${y[1]} : ${z[2]}
-${y[1]} : ${z[2]} : ${x[1]}
-${x[2]} : ${y[0]} : ${z[0]}`, 
-`${x[1]} : ${y[2]} : ${z[1]}
-${y[0]} : ${z[0]} : ${x[2]}
+`${x[0]} : ${y[1]} : ${z[0]}
+${z[0]} : ${y[0]} : ${x[1]}
+${z[2]} : ${x[2]} : ${y[2]}`, 
+`${x[0]} : ${y[0]} : ${z[0]}
+${y[1]} : ${z[1]} : ${x[1]}
+${x[2]} : ${y[2]} : ${z[2]}`, 
+`${x[0]} : ${y[1]} : ${z[0]}
+${y[1]} : ${z[0]} : ${x[1]}
 ${x[2]} : ${y[1]} : ${z[0]}`
 ]
 
@@ -70,12 +69,11 @@ const arrayCasuale = generaArrayCasuale(hawemod, maxIterations);
 
 const array = [...arrayCasuale, ];
   
-let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, {quoted: fkontak});
+let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, { quoted: fkontak });
 
-for (let i = 0; i < maxIterations; i++) {
-
-await conn.sendMessage(m.chat, { text: `🎰 | *RANURAS* | 🎰\n────────\n` + `${array[i]}` + `\n ────────\n🎰 |   *SLOTS*   | 🎰`, edit: key });
-await new Promise((resolve) => setTimeout(resolve, 5))}
+for (let i = 1; i <= maxIterations; i++) {
+await conn.sendMessage(m.chat, { text: `🎰 | *RANURAS* | 🎰\n────────\n` + `${array[i]}` + `\n ────────\n🎰 |   *SLOTS*   | 🎰`, edit: key }, { quoted: fkontak });
+await new Promise((resolve) => setTimeout(resolve, 50))}
   
 return await conn.sendMessage(m.chat, {text: `
 🎰 ┃ *SLOTS* 
@@ -84,7 +82,7 @@ ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
 ───────────
-🎰┃🎰┃ 🎰\n\n${end}`, edit: key})
+🎰┃🎰┃ 🎰\n\n${end}`, edit: key}, {quoted: fkontak})
 }
 handler.help = ['slot']
 handler.tags = ['juegos']
