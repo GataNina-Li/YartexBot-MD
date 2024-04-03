@@ -12,7 +12,7 @@ let apuesta = parseInt(args[0])
 let users = global.db.data.users[m.sender]
 let time = users.lastslot + 10000
 if (new Date - users.lastslot < 10000) throw `*⏰ ESPERE ${msToTime(time - new Date())} PARA USAR DE NUEVO*`
-if (apuesta < 50) throw '*⚠️ LO MÍNIMO PARA APOSTAR ES 100 XP*'
+if (apuesta < 30) throw '*⚠️ LO MÍNIMO PARA APOSTAR ES 30 XP*'
 if (users.exp < apuesta) {
 throw `*⚠️ NO TIENES SUFICIENTE XP*`
 }
@@ -70,7 +70,7 @@ const arrayCasuale = generaArrayCasuale(hawemod, maxIterations);
 
 const array = [...arrayCasuale, ];
   
-let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, {quoted: fake});
+let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, {quoted: fkontak});
 
 for (let i = 0; i < maxIterations; i++) {
 
@@ -84,7 +84,7 @@ ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
 ───────────
-🎰┃🎰┃ 🎰\n\n${end}`, edit: key}, {quoted: fake})
+🎰┃🎰┃ 🎰\n\n${end}`, edit: key}, {quoted: fkontak})
 }
 handler.help = ['slot']
 handler.tags = ['juegos']
