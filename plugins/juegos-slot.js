@@ -74,8 +74,8 @@ let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, {
 
 for (let i = 0; i < maxIterations; i++) {
 
-await conn.sendMessage(m.chat, { text: `🎰 | *RANURAS* | 🎰\n────────\n` + `${array[i]}` + `\n ────────\n🎰 |   *SLOTS*   | 🎰`, edit: key }, { quoted: m });
-await new Promise((resolve) => setTimeout(resolve, 1))}
+await conn.sendMessage(m.chat, { text: `🎰 | *RANURAS* | 🎰\n────────\n` + `${array[i]}` + `\n ────────\n🎰 |   *SLOTS*   | 🎰`, edit: key });
+await new Promise((resolve) => setTimeout(resolve, 5))}
   
 return await conn.sendMessage(m.chat, {text: `
 🎰 ┃ *SLOTS* 
@@ -84,7 +84,7 @@ ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
 ───────────
-🎰┃🎰┃ 🎰\n\n${end}`, edit: key}, {quoted: fkontak})
+🎰┃🎰┃ 🎰\n\n${end}`, edit: key})
 }
 handler.help = ['slot']
 handler.tags = ['juegos']
