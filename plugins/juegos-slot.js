@@ -105,3 +105,11 @@ seconds = (seconds < 10) ? "0" + seconds : seconds
 
 return seconds + " Segundo(s)"
 }
+
+function generaArrayCasuale(array, ripetizioni) {
+  let risultato = [];
+  for (let i = 0; i < ripetizioni; i++) {
+    risultato = risultato.concat(array);
+  }
+  return risultato;
+}
