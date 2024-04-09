@@ -2,6 +2,8 @@ import { createHash } from 'crypto'
 
 let handler = async (m, { conn, text }) => {
 
+let user = global.db.data.users[m.sender]
+  
 user.registered = false
 m.reply(`*📇 USTED YA NO ESTÁ REGISTRADO*`)
 
