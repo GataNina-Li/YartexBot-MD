@@ -66,7 +66,7 @@ import { createHash } from 'crypto'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
 var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i
-let handler = async function (m, { conn, text, usedPrefix, command }) {
+let handler = async function (m, { conn, text, usedPrefix, command, isOwner }) {
 let user = global.db.data.users[m.sender]
   if (!isOwner) return conn.reply(m.chat, '🚩 *Esta función se encuentra en mantenimiento*\n\nUtilice !verify', m, fake, )
 let name2 = conn.getName(m.sender)
