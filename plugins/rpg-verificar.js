@@ -1,4 +1,4 @@
-import { createHash } from 'crypto';
+import { createHash } from 'crypto'
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -10,11 +10,13 @@ let handler = async function (m, { conn, text, usedPrefix, command, isOwner }) {
   if (!isOwner) return conn.reply(m.chat, '🚩 *Esta función se encuentra en mantenimiento*\n\nUtilice !verify', m, fake, )
   let user = global.db.data.users[m.sender]
   if (user.registered) throw `*⚠️ Ya estás registrado*\n\n¿Quiere volver a registrarse?\n\n💬 Use este comando para *eliminar su registro*\n*${usedPrefix}unreg* <Número de serie>`
+ let [_, name, splitter, age, email, password] = text.match(Reg)
 
-
-  if (!text) throw '*📝 Uso correcto:* .reg [nombre].[edad] [correo electrónico] [contraseña]'
-  let [_, name, splitter, age, email, password] = text.match(Reg)
-
+  if (!name) throw 'Ingresé su nombre'
+  if (!age) throw 'ingresé su edad'
+  if (!email) throw 'ingresé su correo electrónico' 
+  if (!password) throw 'ingresé su edad'
+  
   if (!name) throw '*📝 El nombre no puede estar vacío*'
   if (!age) throw '*📝 La edad no puede estar vacía*'
   if (!email) throw '*📝 El correo electrónico no puede estar vacío*'
