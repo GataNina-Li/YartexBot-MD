@@ -12,15 +12,15 @@ let handler = async function (m, { conn, text, usedPrefix, command, isOwner }) {
   if (user.registered) throw `*⚠️ Ya estás registrado*\n\n¿Quiere volver a registrarse?\n\n💬 Use este comando para *eliminar su registro*\n*${usedPrefix}unreg* <Número de serie>`
  let [_, name, splitter, age, email, password] = text.match(Reg)
 
-  if (!name) throw 'Ingresé su nombre'
-  if (!age) throw 'ingresé su edad'
-  if (!email) throw 'ingresé su correo electrónico' 
-  if (!password) throw 'ingresé su edad'
+  if (!text) throw 'Ingresé su nombre'
+  if (!text) throw 'ingresé su edad'
+  if (!text) throw 'ingresé su correo electrónico' 
+  if (!text) throw 'ingresé su edad'
   
-  if (name.length > 0) throw '*📝 El nombre no puede estar vacío*'
-  if (age.length > 0) throw '*📝 La edad no puede estar vacía*'
-  if (email.length > 0) throw '*📝 El correo electrónico no puede estar vacío*'
-  if (password.length >= 0) throw '*📝 La contraseña no puede estar vacía*'
+  if (!name) throw '*📝 El nombre no puede estar vacío*'
+  if (!age) throw '*📝 La edad no puede estar vacía*'
+  if (!email) throw '*📝 El correo electrónico no puede estar vacío*'
+  if (!password) throw '*📝 La contraseña no puede estar vacía*'
   if (name.length >= 30) throw '*⚠️ El nombre es demasiado largo*'
   if (!emailRegex.test(email)) throw '*⚠️ Formato de correo electrónico inválido*'
   if (!passwordRegex.test(password)) throw '*⚠️ La contraseña debe tener al menos 8 caracteres, incluyendo una letra y un número*'
