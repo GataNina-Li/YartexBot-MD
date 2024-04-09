@@ -64,6 +64,8 @@ export default handler
 import { createHash } from 'crypto'
 
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
 let handler = async function (m, { conn, text, usedPrefix, command }) {
 let user = global.db.data.users[m.sender]
 let name2 = conn.getName(m.sender)
@@ -78,7 +80,15 @@ if (name.length >= 30) throw '*⚠️ El nombre es demasiado largo*'
 age = parseInt(age)
 if (age > 100) throw '*👴🏻 Wow el abuelo quiere jugar al bot*'
 if (age < 5) throw '*👀 hay un bebé jsjsj*'
-if (!email) throw 'Email'
+if (!email) throw 'ingresé su emil\n\nEjemplo, Email: zam@gmail.com\n\n> Siempre debe ser: Email:\n> De no ser así no va a funcionar'
+handler.before = async m => {
+
+if (/^Email:$/i.test(m.text) ) {
+if (!emailRegex.test(email)) throw 'mal'
+m.reply('Hecho')
+
+}
+}
 user.name = name.trim()
 user.age = age
 user.email = email
