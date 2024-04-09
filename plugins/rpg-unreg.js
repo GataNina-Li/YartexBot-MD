@@ -1,6 +1,6 @@
 import { createHash } from 'crypto'
 
-let handler = async function (m, { args }) {
+let handler = async (m, { conn, text }) => {
 
 user.registered = false
 m.reply(`*📇 USTED YA NO ESTÁ REGISTRADO*`)
