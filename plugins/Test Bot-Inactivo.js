@@ -1,4 +1,4 @@
-var activeGroups = [];
+/*var activeGroups = [];
 
 var handler = async (m, { conn, isOwner }) => {
     if (!isOwner) return; // Solo el owner puede ejecutar esta acción
@@ -27,4 +27,31 @@ handler.rowner = true;
 handler.group = true;
 handler.botAdmin = true;
 
-export default handler;
+export default handler;*/
+
+import fetch from 'fetch'
+
+var handler = async (m, { conn } ) => {
+
+const url = 'https://informacion-de-cualquier-numero-fijo-y-movil-de-mexico.p.rapidapi.com/api/v11/telefono/4434424737/'
+const options = {
+method: 'GET',
+headers: {
+Authorization: 'a950074d08eab7d5de00fc38e0eb15bd7ed8ca54',
+'X-RapidAPI-Key': 'e0d3640cdemsh781a83286e8a7dbp1c32e9jsn6a1b74abd4f8',
+'X-RapidAPI-Host': 'informacion-de-cualquier-numero-fijo-y-movil-de-mexico.p.rapidapi.com'
+}
+}
+
+try {
+const response = await fetch(url, options)
+const result = await response.text()
+m.reply(result)
+} catch (error) {
+m.reply('🚩')
+}
+
+}
+handler.command = ['lada']
+
+export default handler
