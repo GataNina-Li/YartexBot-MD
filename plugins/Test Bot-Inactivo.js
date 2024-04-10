@@ -31,9 +31,11 @@ export default handler;*/
 
 import fetch from 'fetch'
 
-var handler = async (m, { conn } ) => {
+var handler = async (m, { conn, text } ) => {
 
-const url = 'https://informacion-de-cualquier-numero-fijo-y-movil-de-mexico.p.rapidapi.com/api/v11/telefono/4434424737/'
+if (!text) throw 'su número'
+    
+const url = `https://informacion-de-cualquier-numero-fijo-y-movil-de-mexico.p.rapidapi.com/api/v11/telefono/${text}`
 const options = {
 method: 'GET',
 headers: {
