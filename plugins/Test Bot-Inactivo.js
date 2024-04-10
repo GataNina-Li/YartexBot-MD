@@ -47,7 +47,7 @@ Authorization: 'a950074d08eab7d5de00fc38e0eb15bd7ed8ca54',
 
 try {
 const response = await fetch(url, options)
-const result = await response.text()
+const result = await response.json()
 m.reply(result)
 } catch (error) {
 m.reply('🚩')
