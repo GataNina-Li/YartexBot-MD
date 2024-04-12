@@ -5,7 +5,7 @@ let name = conn.getName(who)
 
 const pp = './storage/logos/Menu2.jpg'
 
-let di = `> Mensaje: ${text} 🚩\n\n*${name} Quiere CuriosityBot*`
+let di = `> Mensaje: ${text} 🚩\n\n*${name} Quiere A CuriosityBot*`
 
 conn.sendMessage(m.chat, {text: di, mentions: [m.sender]}, {quoted: fkontak2})
 
