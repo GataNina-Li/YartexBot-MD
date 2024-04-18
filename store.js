@@ -36,6 +36,7 @@ global.git = 'https://github.com/AzamiJs'
 global.linkwabot = 'https://wa.me/message/QRWLLJZ2PH3MG1'
 global.email = 'thecuriositybot@gmail.com'
 global.x = 'https://x.com/Sharli_Zam'
+global.tg = 't.me/Sharly_Zam'
 global.group = 'https://chat.whatsapp.com/EfWlxyVXlZ7AWVJ6sjJvyI' //Grupo ofc
 global.group2 = 'https://chat.whatsapp.com/B8RJAm16U2EISSDETrPivq' //enlace curiosity
 global.group3 = 'https://chat.whatsapp.com/J1R402WH1N0Hdl3S0NDEYu' //Curiosity global
