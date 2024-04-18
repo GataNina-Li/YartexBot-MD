@@ -16,7 +16,10 @@ ${yt}
 ${linkwabot}
 
 ⬡ *Email*
-${email}`
+${email}
+
+⬡ *Threads*
+${threads}`
 
 await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 }
