@@ -27,8 +27,9 @@ var img6 = 'https://telegra.ph/file/e1c9c47c389b17de97a03.jpg'; var img7 = 'http
 global.ImgAll = [img, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
 
 //Enlaces
-global.yt = 'https://www.youtube.com/@Azami_YT'
-global.ig = 'https://instagram.com/azami_dev'
+global.yt = 'https://www.youtube.com/@Zam_D.A'
+global.ig = 'https://instagram.com/zam_sharly'
+global.threads = 'https://www.threads.net/@zam_sharly'
 global.md = 'https://github.com/AzamiJs/CuriosityBot-MD'
 global.paypal = 'https://paypal.me/Azamijs'
 global.git = 'https://github.com/AzamiJs'
