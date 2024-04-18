@@ -19,7 +19,13 @@ ${linkwabot}
 ${email}
 
 ⬡ *Threads*
-${threads}`
+${threads}
+
+⬡ *X*
+${x}
+
+⬡ *Telegram*
+${tg}`
 
 await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 }
