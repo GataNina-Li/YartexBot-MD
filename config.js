@@ -29,6 +29,7 @@ global.wm2 = 'Curiosity : Bot'
 global.azami = 'Azami'
 global.cb = 'CuriosityBot'
 
+
 //Las Versiones Y Entre Otros
 global.vs = 'V2'
 global.library = 'Baileys'
