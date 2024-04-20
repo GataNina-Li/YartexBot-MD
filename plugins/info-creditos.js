@@ -45,7 +45,7 @@ let texto = `🚩 *GitHub - Colaboradores*
 ⬡ https://github.com/ArizzVal
 ⬡ https://github.com/WilsonWaoz
 ⬡ https://github.com/WorkCwp
-⬡ https://github.com/diegojadibot
+⬡ https://github.com/Diego-SK-177
 ⬡ https://github.com/Edwardofc
 
 _Envie "cc" Para Obtener El Contacto De Los Colaboradores_`
