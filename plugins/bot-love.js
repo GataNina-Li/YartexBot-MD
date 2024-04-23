@@ -6,13 +6,13 @@ const pp = './storage/logos/Menu2.jpg'
 let love = `╭━━━━━━━◇x◇━━━━━━━╮
 ┃ • *LOVE - CURIOSITYBOT* 🪷
 ┣━━━━━━━◇x◇━━━━━━━╯
-┃ ┌──────⊱◈◈◈⊰──────
+┃ ┌─────⊱◈◈◈⊰─────
 ┃ ┃🚩 Nombre: ${name}
-┃ ┃💞 Amor Por Ti : *${Math.floor(Math.random() * 100)}%*
-┃ └──────⊱◈◈◈⊰──────
+┃ ┃💞 Amor Por Ti Es: *${Math.floor(Math.random() * 100)}%* De 100%
+┃ └─────⊱◈◈◈⊰─────
 ╰━━━━━━━◇x◇━━━━━━━╯
 
-🍧 Hay Amor, ¿debes pedirle matrimonio?`
+❤️ Hay Amor, ¿debes pedirle matrimonio?`
 
 conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 
