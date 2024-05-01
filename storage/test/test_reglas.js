@@ -1,6 +1,6 @@
 var handler = async (m, { conn, usedPrefix, command}) => {
 
-let Reglas = `🎌 *Respeta las reglas de CuriosityBot*\n
+let reglas = `🎌 *Respeta las reglas de CuriosityBot*\n
 ⬡ No llamar
 ⬡ No hacer spam
 ⬡ Contacta al creador si es necesario
@@ -11,7 +11,7 @@ let Reglas = `🎌 *Respeta las reglas de CuriosityBot*\n
 *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de CuriosityBot.*
 
 https://github.com/AzamiJs/CuriosityBot-MD`.trim()
-await conn.reply(m.chat, Reglas, m, fake, )
+await conn.reply(m.chat, reglas, m, fake, )
 
 }
 handler.customPrefix = /reglas|Reglas|reglasbot, botreglas|uso, usobot|uso del bot/i
