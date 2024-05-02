@@ -15,6 +15,14 @@
 <a href="https://github.com/zhwzein/Killua-Zoldyck/network/members"><img title="Forks" src="https://img.shields.io/github/forks/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
 <a href="https://github.com/zhwzein/Killua-Zoldyck/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/azamijs/CuriosityBot-MD?label=watchers&color=ff4500&style=flat-square" /></a> <br>
 
+
+<p align="center"> 
+<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=Mi Youtube+🍓+;Diviertete+🍓" height="50px"></a> 
+</p>
+
+
+
+
 <a href="https://www.youtube.com/@Azami_19">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
 </a>
