@@ -1,3 +1,10 @@
+
+<p align="center"> 
+<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=CuriosityBot+MD+;𝐵𝑦+𝐴𝑧𝑎𝑚𝑖+𝑂𝐹𝐶" height="50px"></a> 
+</p>
+
+
+
 ## Curiosity : Bot - MD ✨️
 
 <p align="center">
