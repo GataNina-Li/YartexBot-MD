@@ -28,6 +28,13 @@
 
 <a href="https://chat.whatsapp.com/GrcXB1NINsDAPp4fCVgwfX"><img alt="🎌 Grupo WhatsApp" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
+
+<p align="center"> 
+<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝑅𝑒𝑝𝑜𝑠𝑖𝑡𝑜𝑟𝑖𝑜+𝐺𝑖𝑡𝐻𝑢𝑏++;𝑍𝑎𝑚+𝑂𝑓𝑖𝑐𝑖𝑎𝑙" height="50px"></a> 
+</p>
+
+
+
 - #### `🚩 Clonar El Repositorio`
  Clonar CuriosityBot [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
 
