@@ -17,7 +17,7 @@
 
 
 <p align="center"> 
-<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=Mi Youtube+🍓+;Diviertete+🍓" height="50px"></a> 
+<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=Mi+Youtube+🍓+;Diviertete+🍓" height="50px"></a> 
 </p>
 
 
