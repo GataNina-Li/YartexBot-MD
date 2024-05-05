@@ -8,6 +8,7 @@
 <a href="https://github.com/zhwzein/Killua-Zoldyck/network/members"><img title="Forks" src="https://img.shields.io/github/forks/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
 <a href="https://github.com/zhwzein/Killua-Zoldyck/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/azamijs/CuriosityBot-MD?label=watchers&color=ff4500&style=flat-square" /></a> <br>
 
+<a href="https://www.youtube.com/@Azami_19">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
 </a>
 <a href="https://instagram.com/azami.19">
@@ -19,7 +20,6 @@
 > Antes De Instalar El Bot Quieres Usarlo?. Usalo Aqui!
 
 <a href="https://chat.whatsapp.com/GrcXB1NINsDAPp4fCVgwfX"><img alt="🎌 Grupo WhatsApp" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
-
 
 - #### `🚩 Clonar El Repositorio`
  Clonar CuriosityBot [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
