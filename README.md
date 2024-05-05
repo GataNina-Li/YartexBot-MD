@@ -1,10 +1,3 @@
-
-<p align="center"> 
-<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=CuriosityBot+MD+;𝐵𝑦+𝐴𝑧𝑎𝑚𝑖+𝑂𝐹𝐶" height="50px"></a> 
-</p>
-
-
-
 ## Curiosity : Bot - MD ✨️
 
 <p align="center">
@@ -15,15 +8,6 @@
 <a href="https://github.com/zhwzein/Killua-Zoldyck/network/members"><img title="Forks" src="https://img.shields.io/github/forks/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
 <a href="https://github.com/zhwzein/Killua-Zoldyck/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/azamijs/CuriosityBot-MD?label=watchers&color=ff4500&style=flat-square" /></a> <br>
 
-
-<p align="center"> 
-<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=Mi+Youtube+🍓+;Diviertete+🍓" height="50px"></a> 
-</p>
-
-
-
-
-<a href="https://www.youtube.com/@Azami_19">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
 </a>
 <a href="https://instagram.com/azami.19">
@@ -35,12 +19,6 @@
 > Antes De Instalar El Bot Quieres Usarlo?. Usalo Aqui!
 
 <a href="https://chat.whatsapp.com/GrcXB1NINsDAPp4fCVgwfX"><img alt="🎌 Grupo WhatsApp" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
-
-
-<p align="center"> 
-<a href="https://github.com/EnderJs-CreatorGL"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝑅𝑒𝑝𝑜𝑠𝑖𝑡𝑜𝑟𝑖𝑜+𝐺𝑖𝑡𝐻𝑢𝑏++;𝑍𝑎𝑚+𝑂𝑓𝑖𝑐𝑖𝑎𝑙" height="50px"></a> 
-</p>
-
 
 
 - #### `🚩 Clonar El Repositorio`
