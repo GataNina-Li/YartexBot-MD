@@ -1,4 +1,4 @@
-let foto = imagen4
+let foto = img
 let handler = async (m, { conn, command }) => {
 let user = db.data.users[m.sender]
 let text = `🍍 𝗕𝘂𝘁𝘁𝗼𝗻 𝗧𝗲𝘀𝘁 🥳🍓`
@@ -7,7 +7,7 @@ await conn.sendButton(m.chat, text, `👋🏻 ¡Hola! ` + nombre, foto, [
 ['♨️ Script Bot', '!sc'],
 ['❤️ Propietario', '#owner'],
 ['🌼 Hablar Al  Bot', '!bot Hola']], null, [
-['🌏 Canal Curiosity', `${channel}`]], fkontak)}
+['🌏 Canal Curiosity', `${channel}`]], m)}
 
 handler.command = /^(prueba|mprueba|button)$/i
 
