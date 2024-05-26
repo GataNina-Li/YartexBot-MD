@@ -37,8 +37,8 @@ let crm1 = 'Y2QgcGx1Z2lucy'
 let crm2 = 'A7IG1kNXN1b'
 let crm3 = 'SBpbmZvLWRvbmFyLmpz'
 let crm4 = 'IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz'
-let drm1 = '4pOI77iOICpTYWt1'
-let drm2 = 'cmFCb3RMaXRlLU1EKiDwn6e/'
+let drm1 = ''
+let drm2 = ''
 let rtx = `🚀 *JadiBot - Curiosity*\n\nEscanea este QR para convertirte en un bot temporal\n\n1. Haga clic en los tres puntos en la esquina superior derecha.\n2. Toca Dispositivos vinculados.\n3. Vincular un dispositivo.\n4. Escanea este QR.\n\nQR Caduca en 20 segundos.`
 let rtx2 = `🚀 *JadiBot - Curiosity*\n\nInicia sesión con este código para convertirte en un bot temporal\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toca Dispositivos vinculados.\n3. Vincular un dispositivo.\n4. Vincular con número de teléfono.\n5. Pegar el código a continuación.`
 
