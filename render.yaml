@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: curiositybot-md
+    name: yartexbot-md
     env: docker
     region: Frankfurt
     plan: free
