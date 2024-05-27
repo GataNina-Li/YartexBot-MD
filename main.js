@@ -135,7 +135,6 @@ opcion = opcion
 }
 
 console.info = () => {}
-//console.warn = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
@@ -298,10 +297,6 @@ console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira e
  }}
 if (connection == 'open') {
 console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))}
-//if (conn.user.connect) {
-//conn.fakeReply('5217294888993@s.whatsapp.net', '😃', '0@s.whatsapp.net', '😅 Soy CuriosityBot\nRecientemente me e conectado', '0@s.whatsapp.net')
-//conn.user.connect = true;
-//}
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) { 
 await fs.unlinkSync("./sessions/" + "creds.json")
