@@ -72,7 +72,7 @@ global.estiloaudio = { key: {  fromMe: false, participant: "0@s.whatsapp.net", .
 
 global.fvideo = {key: { fromMe: false,participant: "0@s.whatsapp.net", ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title": `${wm}`, "h": `Hmm`, 'seconds': '2022', 'caption': `${wm}`, 'jpegThumbnail': imagen1}}}
 
-global.fgclink = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net" }, message: { groupInviteMessage: { groupJid: "6288213840883-1616169743@g.us", inviteCode: "m", groupName: "AzamiJs", caption: `${wm}\n      ${gatanina}`, jpegThumbnail: imagen1}}}
+global.fgclink = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net" }, message: { groupInviteMessage: { groupJid: "6288213840883-1616169743@g.us", inviteCode: "m", groupName: "GataNina-Li", caption: `${wm}\n      ${gatanina}`, jpegThumbnail: imagen1}}}
 
 global.fproducto2 = { key: { fromMe: false, participant: "0@s.whatsapp.net", ...(false ? { remoteJid: "status@broadcast" } : {})}, message: { productMessage: { product: { productImage: { mimetype: "image/jpeg", jpegThumbnail: imagen1}, title: `${wm}`, retailerId: "YartexBot-MD", productImageCount: 1 }, businessOwnerJid: "0@s.whatsapp.net" }}}	
 	
