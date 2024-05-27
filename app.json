@@ -1,7 +1,7 @@
 {
-  "name": "CuriosityBot-MD",
-  "description": "Customizable WhatsApp Bot",
-  "repository": "https://github.com/Undefined17/Curiosity-MD",
+  "name": "YartexBot-MD",
+  "description": "WhatsApp Bot - JS",
+  "repository": "https://github.com/GataNina-Li/YartexBot-MD",
   "logo": "https://i.ibb.co/dG6rm49/fg-logo.png",
-  "keywords": ["bot", "whatsapp", "whatsapp-bot", "rpg", "curiosity-bot-md", "games-wabot"]
+  "keywords": ["bot", "whatsapp", "whatsapp-bot", "rpg", "yartex-bot-MD", "games-wabot"]
 }
