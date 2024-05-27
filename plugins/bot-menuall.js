@@ -30,7 +30,7 @@ before: `> ╭─❒ 「 *Usuario* 🎗️ 」
 > │○ *Exp:* %exp
 > │
 > ├─❒ 「 *InfoBot* 🚩 」
-> │○ *Creador:* Azami / Zam
+> │○ *Creador:* GataNina-Li
 > │○ *Tiempo Activo:* %muptime
 > │○ *Registrados:* %rtotalreg De %totalreg Usuarios
 > │
