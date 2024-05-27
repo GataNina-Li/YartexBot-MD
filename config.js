@@ -26,7 +26,7 @@ global.packname = ''
 global.author = 'YartexBot-MD'
 global.wm = 'Yartex Bot - MD'
 global.wm2 = 'Yartex : Bot'
-global.azami = 'GataNina-Li'
+global.gatanina = 'GataNina-Li'
 global.cb = 'YartexBot'
 
 
