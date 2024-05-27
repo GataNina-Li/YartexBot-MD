@@ -24,7 +24,7 @@ let neww = performance.now()
 let speed = neww - old
 
 let info = `⬡ *Creador*
-Azami
+GataNina-Li
 
 ⬡ *Contacto* 
 ${ig}
@@ -59,7 +59,7 @@ ${autoread ? 'Habilitado' : 'Deshabilitado'}
 ⬡ *Restrict*
 ${restrict ? 'Habilitado' : 'Deshabilitado'}`
 
- conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: '', body: '🚩 Curiosity Info', thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+ conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: '', body: '🌟 YartexBot Info', thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 
 }
 handler.help = ['infobot']
