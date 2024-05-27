@@ -46,7 +46,7 @@ _(Para ver el menu audios)_`
 await conn.reply(m.chat, menu, a, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}})
 
 } catch {
-conn.reply(m.chat, `*📛 Ocurrió un error*`, m, fake, )
+conn.reply(m.chat, `*❗️ Ocurrió un error*`, m, fake, )
 console.log(e)
 }}
 handler.help = ['menu']
