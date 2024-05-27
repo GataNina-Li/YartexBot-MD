@@ -23,11 +23,11 @@ global.isdev = [ /* ['5217294888993'], */ ['5214434703586'], ['5492266466080'], 
 
 //Aqui encuentras los nombres del bot 
 global.packname = ''
-global.author = 'CuriosityBot'
-global.wm = '© CuriosityBot-MD'
-global.wm2 = 'Curiosity : Bot'
-global.azami = 'Azami'
-global.cb = 'CuriosityBot'
+global.author = 'YartexBot-MD'
+global.wm = 'Yartex Bot - MD'
+global.wm2 = 'Yartex : Bot'
+global.azami = 'GataNina-Li'
+global.cb = 'YartexBot'
 
 
 //Las Versiones Y Entre Otros
@@ -36,8 +36,8 @@ global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
 global.lenguaje = 'Español'
 global.menudi = ['⛶','❏','⫹⫺']
-global.dev = '¿Azami ~ Zam?'
-global.devnum = '+591 62714296'
+global.dev = 'GataNina-Li'
+global.devnum = '+593 96 826 3524'
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => { unwatchFile(file)
