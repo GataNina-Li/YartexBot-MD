@@ -21,7 +21,7 @@ let info = ` *🗂️ ENLACE:*\n${link}\n
 *🚀 EXPIRACION:*\n ${isTele ? '✅ NO EXPIRA' : '⚠️ DESCONOCIDO'}\n
 *🔰 ACORTADO:*\n${await shortUrl(link)}`
 
-conn.reply(m.chat, info, m, { contextInfo: { externalAdReply :{ mediaUrl: ig, mediaType: 2, title: wm, body: azami, thumbnail: await(await fetch(link)).buffer(), sourceUrl: link}}})
+conn.reply(m.chat, info, m, { contextInfo: { externalAdReply :{ mediaUrl: ig, mediaType: 2, title: wm, body: gatanina, thumbnail: await(await fetch(link)).buffer(), sourceUrl: link}}})
 
 }
 handler.help = ['tourl']
