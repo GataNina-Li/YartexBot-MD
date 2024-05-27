@@ -46,8 +46,8 @@ conn.sendMessage(m.chat, {image: imagen1, caption: wm, mentions: [...text.matchA
 }
  
 if (command == 'sendurl') {
-let str = '*🍧 CuriosityBot-MD*'
-await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🍓 Azami', }})
+let str = '*YartexBot-MD ⭐️*'
+await conn.sendUrl(m.chat, str, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: imagen1, thumbnailUrl: imagen1, title: '🌟 GataNina-Li', }})
 }
 
 if (command == 'fgif') {
