@@ -6,145 +6,116 @@
 <img src="https://telegra.ph/file/3f00e26dcd5dcd09a68a1.jpg" alt="CuriosityBot-MD" width="600"/>
 </p>
 
-<a href="https://github.com/azamijs/CuriosityBot-MD"><img title="Stars" src="https://img.shields.io/github/stars/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
-<a href="https://github.com/zhwzein/Killua-Zoldyck/network/members"><img title="Forks" src="https://img.shields.io/github/forks/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
-<a href="https://github.com/zhwzein/Killua-Zoldyck/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/azamijs/CuriosityBot-MD?label=watchers&color=ff4500&style=flat-square" /></a> <br>
+<p align="center">
+<a href="https://github.com/GataNina-Li/followers"><img title="Followers" src="https://img.shields.io/github/followers/GataNina-Li?color=red&style=flat-square"></a>
+<a href="https://github.com/GataNina-Li/YartexBot-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/GataNina-Li/YartexBot-MD?color=blue&style=flat-square"></a>
+<a href="https://github.com/GataNina-Li/YartexBot-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/GataNina-Li/YartexBot-MD?color=red&style=flat-square"></a>
+<a href="https://github.com/GataNina-Li/YartexBot-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/GataNina-Li/YartexBot-MD?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/GataNina-Li"><img title="Open Source" src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103"></a>
+<a href="https://github.com/GataNina-Li/YartexBot-MD"><img title="Size" src="https://img.shields.io/github/repo-size/GataNina-Li/YartexBot-MD?style=flat-square&color=green"></a>
+</p>
 
-<a href="https://www.youtube.com/@Azami_19">
-<img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
-</a>
-<a href="https://instagram.com/azami.19">
-<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
-</a>
+<p align="center">
+<a href="https://whatsapp.com/channel/0029VabS4KD8KMqeVXXmkG1D"><img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp_Canal-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+</p>
 
-### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="🎌 Prueba El Bot Aqui" width="42" height="42"> 🎌 Prueba El Bot Aqui
+> [!IMPORTANT]
+> **Este bot contiene contenido no apto para todo público. Si planeas utilizar este bot, ten en cuenta que su diseño está orientado al género Yaoi/Bl.**
+> **No nos hacemos responsables del uso que se le pueda dar. Este bot ha sido creado y pensado únicamente para los seguidores de dicho género.**
 
-> Antes De Instalar El Bot Quieres Usarlo?. Usalo Aqui!
-
-<a href="https://chat.whatsapp.com/GrcXB1NINsDAPp4fCVgwfX"><img alt="🎌 Grupo WhatsApp" src="https://img.shields.io/badge/Grupo-CuriosityBot🎌-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
-
-- #### `🚩 Clonar El Repositorio`
- Clonar CuriosityBot [Aqui](https://github.com/AzamiJs/CuriosityBot-MD/fork)
+<p align="left">
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/qUBbRnJ.png" alt="YartexBot-MD" width="100"/> </a> 
+ 
+- #### Clona YartexBot [`Aquí`](https://github.com/GataNina-Li/YartexBot-MD/fork)
+- #### Agregar/editar Owners [`aqui`](https://github.com/GataNina-Li/YartexBot-MD/blob/main/config.js)
+- #### Version de Baileys en el [`package.json`](https://github.com/GataNina-Li/YartexBot-MD/blob/main/package.json)
+</p>
 
 ***
 
-### `⚙️ Configuraciones ⚙️`
-- Cambiar Los Numeros De Los Owner [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/config.js#L6)
-- Puede Cambiar A La Última Versión De Baileys Editando El package.json [aqui](https://github.com/AzamiJs/CuriosityBot-MD/blob/main/package.json#L42)
-***
-
-- #### 🚩 Instalacion Automatica Por Termux
-[![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
-
-> Comandos Para Instalar CuriosityBot Forma Automatica Por Termux.
-
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/30ST8Cd.png" alt="YartexBot-MD" width="100"/> </a> 
+### 🌺 INSTALACIÓN AUTOMÁTICA POR TERMUX 
+<p align="left">
+ 
 ```bash
 termux-setup-storage
 ```
 ```bash
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/curiosity.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/GataNina-Li/YartexBot-MD/master/curiosity.sh | bash
 ```
 
-- #### 🚩 Instalacion Manual Por Termux
-[![blog](https://img.shields.io/badge/Instalacion-Manual-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/qRb9ElGT8mM?si=XxSt-Y8CTQs1Imzl?feature=share)
-> Escribe Estos Comandos Uno Por Uno
+***
+
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/LZV2FRV.png" alt="YartexBot-MD" width="150"/> </a> 
+### 🌹 INSTALACIÓN MANUAL POR TERMUX
+> **Escribe estos comandos uno por uno.**
 
 ```bash
 termux-setup-storage
 ```
-
 ```bash
 apt-get update -y && apt-get upgrade -y
 ```
-
 ```bash
 pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
-
 ```bash
-git clone https://github.com/AzamiJs/CuriosityBot-MD && cd CuriosityBot-MD && yarn install && npm install
-```
-
-```bash
-ls
+git clone https://github.com/GataNina-Li/YartexBot-MD && cd YartexBot-MD && yarn install && npm install
 ```
 ```bash
 npm update
 ```
-
 ```bash
 npm start
 ```
 
-- #### 🚩 Activar En Caso De Detenerse En Termux
-> Escribe Estos Comandos Uno Por Uno
+#### 🌼 PARA VOLVER ACTIVAR EN TERMUX
 ```bash
-> cd
-> cd CuriosityBot-MD
-> npm start
+cd && cd YartexBot-MD && npm start
 ```
 
-- #### 🚩 Obtener Otro Codigo Qr
-> 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙴𝚂𝚃𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚄𝙽𝙾 𝙿𝙾𝚁 𝚄𝙽𝙾:
-```bash
-> cd CuriosityBot-MD
-> rm -rf sessions
-> npm start
-```
-
-- ### 🚩 Actualizar CuriosityBot 
-> Note Comandos para actualizar CuriosityBot-MD de forma automática
-```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/AzamiJs/CuriosityBot-MD/master/update.sh | bash
-```
-Para que no pierda su progreso en CuriosityBot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
-
-> Warning Estos comandos solo funcionan para TERMUX, REPLIT, LINUX
-
-- #### 🎌 Para Activar 24/7 (Termux)
-> Este Comando Deve Ir En La Carpeta CuriosityBot-MD
-```bash
-> npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
-```
-----
-- ### 🎌 Instalacion Por Code Dpace
-
-[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
 
-- ### Activar En Replit
+### ☘️ ACTUALIZAR EN TERMUX
+> **Comandos para actualizar YartexBot-MD de forma automática. (Termux)**
+```bash
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/GataNina-Li/YartexBot-MD/master/update.sh | bash
+```
+> [!NOTE]
+> **Para que no pierda su progreso en YartexBot-MD, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.**
 
-[![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/AzamiJs/CuriosityBot-MD) 
-----  
+***
 
-- ### Activar En Koyeb
+- #### 💐 ACTIVAR 24/7 (Termux)
+> **Usar este comando dentro de la carpeta YartexBot-MD**
+```bash
+npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
+```
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/AzamiJs/CuriosityBot-MD&branch=master&name=curiositybot)
-----  
-- ### Activar En Render
+***
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FAzamiJs%2FCuriosityBot-MD) 
-----  
-- ### ☁️ Vortexus Cloud - Host
-> Integra CuriosityBot-MD en un servicio de alojamiento 24/7 online 
+### 🍄 INSTALACIÓN POR CODE SPACE
+[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 
-<a href="https://vortexuscloud.com"><img src="https://telegra.ph/file/4bd3d8d14e5683073d4f3.jpg" height="125px"></a>
-### vortexus cloud
+***
 
-- **Pagina Oficial De Vortexus:** [`Vortexuscloud`](https://vortexuscloud.com)
-- **Crear cuenta en la Dashboard:** [`Dashboard`](https://youtu.be/JUg7DWUY6_Y?si=DHwk9dwjvWdPEIBJ)
-- **Dashboard:** [`Dash`](https://dash.vortexuscloud.com)
-- **Panel:** [`Aquí`](https://panel.vortexuscloud.com)
-- **Contacto:** [`Aquí`](https://wa.me/258858119033) 
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va8ZD6O3mFXxTPl1m13A)
+### 🌻 ACTIVAR EN REPLIT
+[![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/GataNina-Li/YartexBot-MD) 
 
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - CuriosityBot-MD**</summary><img src="https://telegra.ph/file/524ab6e15b912d9cdb777.jpg"></details>
-------------------
+***
 
-- ### ☂️ Activar En Heroku ☂️
-para usuarios del heroku
+### 🪷 ACTIVAR EN KOYEB
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/GataNina-Li/YartexBot-MD&branch=master&name=YartexBot-MD)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Azami19/CuriosityBot-MD1)
+***
+
+### 🪸 ACTIVAR EN RENDER
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FGataNina-Li%2FYartexBot-MD) 
+
+***
+
+### 🪻 ACTIVAR EN HEROKU
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GataNina-Li/YartexBot-MD)
 
 #### Heroku Buildpack
 | BuildPack | LINK |
