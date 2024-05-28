@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://github.com/GataNina-Li"><img src="https://readme-typing-svg.demolab.com?font=Oswald&weight=300&size=37&duration=2500&pause=100&color=AD46FF&background=601D6E00&center=verdadero&vCenter=verdadero&repeat=verdadero&random=FALSO&width=660&height=90&lines=CuriosityBot-MD+%C2%A1evolucion%C3%B3!+;Ahora+se+llama+YartexBot-MD;Un+bot+con+tem%C3%A1tica+Yaoi+hecho+por+fans+para+fans." alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Oswald&weight=300&size=37&duration=2500&pause=100&color=AD46FF&background=601D6E00&center=FALSO&vCenter=FALSO&repeat=FALSO&random=FALSO&width=660&height=90&lines=CuriosityBot-MD+%C2%A1evolucion%C3%B3!;Ahora+se+llama+YartexBot-MD;Un+bot+con+tem%C3%A1tica+Yaoi+hecho+por+fans+para+fans." alt="Typing SVG"/></a>
 </div>
 
 <p align="center">
