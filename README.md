@@ -1,7 +1,9 @@
-# CuriosityBot-MD evolucionó a YartexBot-MD ✨️
+<div align="center">
+<a href="https://github.com/GataNina-Li"><img src="https://readme-typing-svg.demolab.com?font=Oswald&weight=300&size=37&duration=2500&pause=100&color=AD46FF&background=601D6E00&center=verdadero&vCenter=verdadero&repeat=verdadero&random=FALSO&width=660&height=90&lines=CuriosityBot-MD+%C2%A1evolucion%C3%B3!+;Ahora+se+llama+YartexBot-MD;Un+bot+con+tem%C3%A1tica+Yaoi+hecho+por+fans+para+fans." alt="Typing SVG" /></a>
+</div>
 
 <p align="center">
-<img src="https://telegra.ph/file/04b7a17f4f7aaa302b2d8.jpg" alt="CuriosityBot-MD" width="900"/>
+<img src="https://telegra.ph/file/3f00e26dcd5dcd09a68a1.jpg" alt="CuriosityBot-MD" width="600"/>
 </p>
 
 <a href="https://github.com/azamijs/CuriosityBot-MD"><img title="Stars" src="https://img.shields.io/github/stars/azamijs/CuriosityBot-MD?color=ff4500&style=flat-square" /></a>
