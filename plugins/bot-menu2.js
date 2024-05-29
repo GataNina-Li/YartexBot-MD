@@ -13,9 +13,9 @@ let fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.cha
 let links = linkSity.getRandom()
 
 //FAKE
-const fload = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : -99999999, status: 1, surface : 1, message: `CuriosityBot-MD 🍧` + `\nAzami`, orderTitle: `▮Menu ▸`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp.net' }}}
+const fload = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : -99999999, status: 1, surface : 1, message: `YartexBot-MD 🧃` + `\nGataNina`, orderTitle: `▮Menu ▸`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp.net' }}}
 
-m.react('🚩')
+m.react('🍓')
   
 let menu2 = `╭━━━〔 ${wm} 〕━━━◉
 ┃╭──────────────
@@ -74,7 +74,7 @@ let menu2 = `╭━━━〔 ${wm} 〕━━━◉
 
 await  conn.sendMessage(m.chat, {image: imagen1, caption: menu2, mentions: [...menu2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...menu2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen2, "mediaUrl": group, "sourceUrl": group}}}, {quoted: fload})
 } catch {
-conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, fake, )
+conn.reply(m.chat, `*❗️ Ocurrió un error*`, m, fake, )
 console.log(e)
 }
 
