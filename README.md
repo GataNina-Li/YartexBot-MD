@@ -24,7 +24,7 @@
 > **No nos hacemos responsables del uso que se le pueda dar. Este bot ha sido creado y pensado únicamente para los seguidores de dicho género.**
 
 <p align="left">
-<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/qUBbRnJ.png" alt="YartexBot-MD" width="100"/> </a> 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/qUBbRnJ.png" alt="YartexBot-MD" width="150"/> </a> 
  
 - #### Clona YartexBot [`Aquí`](https://github.com/GataNina-Li/YartexBot-MD/fork)
 - #### Agregar/editar Owners [`aqui`](https://github.com/GataNina-Li/YartexBot-MD/blob/main/config.js)
@@ -33,7 +33,7 @@
 
 ***
 
-<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/30ST8Cd.png" alt="YartexBot-MD" width="100"/> </a> 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/30ST8Cd.png" alt="YartexBot-MD" width="150"/> </a> 
 ### 🌺 INSTALACIÓN AUTOMÁTICA POR TERMUX 
 <p align="left">
  
@@ -46,7 +46,7 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 
 ***
 
-<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/LZV2FRV.png" alt="YartexBot-MD" width="150"/> </a> 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/LZV2FRV.png" alt="YartexBot-MD" width="200"/> </a> 
 ### 🌹 INSTALACIÓN MANUAL POR TERMUX
 > **Escribe estos comandos uno por uno.**
 
@@ -76,6 +76,7 @@ cd && cd YartexBot-MD && npm start
 
 ***
 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/yOBuLwg.png" alt="YartexBot-MD" width="150"/> </a> 
 ### ☘️ ACTUALIZAR EN TERMUX
 > **Comandos para actualizar YartexBot-MD de forma automática. (Termux)**
 ```bash
@@ -86,6 +87,7 @@ grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https:/
 
 ***
 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/IGYKSEp.png" alt="YartexBot-MD" width="150"/> </a> 
 - #### 💐 ACTIVAR 24/7 (Termux)
 > **Usar este comando dentro de la carpeta YartexBot-MD**
 ```bash
@@ -99,6 +101,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ***
 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/7rUKH0w.png" alt="YartexBot-MD" width="150"/> </a> 
 ### 🌻 ACTIVAR EN REPLIT
 [![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/GataNina-Li/YartexBot-MD) 
 
@@ -109,6 +112,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ***
 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/jcG5kRn.png" alt="YartexBot-MD" width="150"/> </a> 
 ### 🪸 ACTIVAR EN RENDER
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FGataNina-Li%2FYartexBot-MD) 
 
