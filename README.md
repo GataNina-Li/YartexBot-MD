@@ -33,7 +33,7 @@
 
 ***
 
-<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/30ST8Cd.png" alt="YartexBot-MD" width="150"/> </a> 
+<a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/Hq6B5EM.png" alt="YartexBot-MD" width="150"/> </a> 
 ### 🌺 INSTALACIÓN AUTOMÁTICA POR TERMUX 
 <p align="left">
  
