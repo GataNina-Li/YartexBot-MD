@@ -257,6 +257,8 @@ handler.help = [`jadibot`, `serbot`, `getcode`, `rentbot`]
 handler.tags = [`jadibot`]
 handler.command = /^(jadibot|serbot|rentbot)/i
 
+handler.private = true
+
 export default handler
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
