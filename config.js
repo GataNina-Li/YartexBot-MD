@@ -22,12 +22,12 @@ global.prems = []
 global.isdev = [ /* ['5217294888993'], */ ['5214434703586'], ['5492266466080'], ['5492266613038'], ['573012482597'], ['5215610314499'], ['51935531943'], ['33760536110'], ['5492964650915'], ['50558124470']]
 
 //Aqui encuentras los nombres del bot 
-global.packname = ''
-global.author = 'YartexBot-MD'
-global.wm = 'Yartex Bot - MD'
-global.wm2 = 'Yartex : Bot'
-global.gatanina = 'GataNina-Li'
-global.cb = 'YartexBot'
+global.packname = '𝙔𝙖𝙧𝙩𝙚𝙭𝘽𝙤𝙩-𝙈𝘿 🍓'
+global.author = '𝗬𝗮𝗿𝘁𝗲𝘅𝗕𝗼𝘁-𝗠𝗗'
+global.wm = '𝖸𝖺𝗋𝗍𝖾𝗑 𝖡𝗈𝗍 - 𝖬𝖣'
+global.wm2 = '𝗬𝖺𝗋𝗍𝖾𝗑 : 𝗕𝗈𝗍'
+global.gatanina = '𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 🐈'
+global.cb = '𝘠𝘢𝘳𝘵𝘦𝘹𝘉𝘰𝘵'
 
 
 //Las Versiones Y Entre Otros
