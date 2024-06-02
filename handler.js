@@ -614,7 +614,7 @@ botAdmin: '*¡Para realizar la función debo ser admin!*',
 unreg: '> *¡Debe registrarse!*\n\n#verificar nombre.edad\n\n*Uso correcto:* #verificar GataNina.20',
 restrict: '*¡Esta característica esta desactivada!*'
 }[type]
-if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '📖'  + saludo + ' ' + nombre, body: dev, sourceUrl: global.channel, thumbnailUrl: random1 }}})
+if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '📖'  + saludo + ' ' + nombre, body: dev, sourceUrl: global.channel, thumbnailUrl: random1() }}})
 
 }
 const file = global.__filename(import.meta.url, true);
