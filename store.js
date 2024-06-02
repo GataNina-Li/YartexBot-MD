@@ -9,7 +9,7 @@ global.__filename = function filename(pathURL = import.meta.url, rmPrefix = plat
 const __dirname = global.__dirname(import.meta.url)
 
 // Random
-global.random1 = getRandomImageBoys
+global.random1 = getRandomImageBoys()
 
 //Imagenes
 global.imagen1 = fs.readFileSync('./storage/logos/Menu1.jpg')
