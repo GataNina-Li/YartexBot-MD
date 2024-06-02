@@ -111,7 +111,7 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.nombre = conn.getName(m.sender)
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 
-global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363302472386010@newslette', serverMessageId: '', newsletterName: saludo + ` ${m.name}` }, externalAdReply: { title: wm + ` 💫`, body: dev, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: random1, thumbnail: imagen1, sourceUrl: enlaces }}}, { quoted: fkontak } //fake con reenviado de canal
+global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363302472386010@newslette', serverMessageId: '', newsletterName: saludo + ` ${m.name}` }, externalAdReply: { title: wm + ` 💫`, body: dev, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: random1(), thumbnail: imagen1, sourceUrl: enlaces }}}, { quoted: fkontak } //fake con reenviado de canal
 }
 
 export default handler
