@@ -8,7 +8,8 @@ import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
 
 global.owner = [
-['524531287294', '✨ YartexBot-MD', true], 
+['524531287294', '✨ YartexBot-MD', true],
+['542215034412'], 
 ['593968263524']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
