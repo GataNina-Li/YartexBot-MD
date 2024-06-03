@@ -1,83 +1,25 @@
-var handler = async (m, { conn, command }) => {
+let media = ''
+let handler = async (m, { conn, command }) => {
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+let str = `💙 𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊(𝘼) 𝘼 𝙇𝘼𝙎 𝘾𝙐𝙀𝙉𝙏𝘼𝙎 𝙊𝙁𝙄𝘾𝙄𝘼𝙇𝙀𝙎
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+✅ *GITHUB*
+*${md}*
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+✅ *INSTAGRAM - ASISTENCIA*
+*${ig}*
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+✅ *YOUTUBE*
+*${yt}*
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+✅ *FACEBOOK*
+*${fb}*
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+*Si tienen dudas, sugerencias, o preguntas solo escriban por Instagram.*\n
+*If you have doubts, suggestions or questions just write on Instagram.*`
 
-if (command == 'cuentas' || command == 'cuentasoficiales' || command == 'cuentasof') {
-let str = `🚩 *CUENTAS*
+conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)
 
-⬡ *Github*
-${md}
-
-⬡ *Instagram*
-${ig}
-
-⬡ *YouTube*
-${yt}
-
-⬡ *WhatsApp Bot*
-${linkwabot}
-
-⬡ *Email*
-${email}
-
-⬡ *Threads*
-${threads}
-
-⬡ *X*
-${x}
-
-⬡ *Telegram*
-${tg}`
-
-await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
-}
-
-if (command == 'grupos') {
-let text = `🚩 *Grupos oficiales*
-
-⬡ *CuriosityBot-MD*
-${group}
-
-⬡ *Enlaces Curiosity*
-${group2}
-
-⬡ *Curiosity Global*
-${group3}
-
-🎌 *Colaboraciones*
-
-⬡ *Multi Bots*
-${group4}
-
-⬡ *NovaBot - CuriosityBot*
-${group5}
-
-⬡ *GataBot - CuriosityBot*
-${group6}
-
-⬡ *Curiosity - Criwilop*
-${group7}
-
-⬡ *CuriosityBot - SakuraBot*
-${group8}
-
-⬡ *OnyxBot - CuriosityBot*
-${group9}
-
-✨ *Canales oficiales*
-
-⬡ *CuriosityBot*
-${channel}
-
-⬡ *INFINITY-WA*
-https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A`
-
-conn.reply(m.chat, text, m, fake, )
-}
-
-}
-handler.help = ['cuentasoficiales', 'cuentasofc', 'cuentas', 'grupos']
-handler.tags = ['info']
-handler.command = /^cuentasoficiales|cuentasofc|cuentas|grupos$/i
-
-handler.register = true
-
+handler.command = /^cuentasoficiales|gataig|cuentasyb|cuentayb|accounts|yartexaccounts|account|iggata|cuentasdeyaryex|cuentasdeyartexbot|cuentayartexbot|cuentasgatabot$/i
+handler.exp = 35
 export default handler
