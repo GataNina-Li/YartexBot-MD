@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 import { setupMaster, fork } from 'cluster'
 import { watchFile, unwatchFile } from 'fs'
 import cfonts from 'cfonts'
-import ora from 'ora'
+import spinners from 'cli-spinners'
 import { createInterface } from 'readline'
 import yargs from 'yargs'
 
@@ -29,11 +29,16 @@ activeCollaborators = activeCollaborators.slice(0, -2)
 //colors: ['magenta', 'cyan']
 //})
 
-const spinner = ora('Cargando datos...').start()
+const spinnerFrames = spinners.dots.frames
+let index = 0
+const interval = setInterval(() => {
+process.stdout.write(`\r${spinnerFrames[index]} Cargando...`)
+index = (index + 1) % spinnerFrames.length
+}, spinners.dots.interval)
 setTimeout(() => {
-spinner.succeed('Datos cargados exitosamente')
-}, 2000)
-
+clearInterval(interval);
+console.log('\nProceso completado.')
+}, 5000)
 
 cfonts.say('yartex\nbot md', {
 align: 'center',           
