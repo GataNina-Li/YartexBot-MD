@@ -32,11 +32,6 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? t
 global.fotos = ImgAll.getRandom()
 global.enlaces = linkSity.getRandom()
 
-//Reacciones De Comandos.!
-global.rwait = '⏰'
-global.done = '✅'
-global.error = '❌'
-
 /* 
 Mensajes Fakes
 */
