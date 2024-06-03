@@ -32,21 +32,10 @@ font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
 })
-//say(`Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersion: ${version}`, {
-//font: 'console',
-//gradient: ['blue', 'magenta']
-//})
-
-const message = `
-Desarrollado por: ${author.name}
-Código basado de: ${collaborators.col1}
-${activeCollaborators}
-Versión: ${version}
-`
-console.log(boxen(message, { padding: 1, margin: 0, borderStyle: 'double', borderColor: 'blue', float: 'center' }))
+const message = `Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersión: ${version}`
+console.log(boxen(message, { padding: 0, margin: 0, borderStyle: 'double', borderColor: 'blue', float: 'center' }))
 
 var isRunning = false
-
 async function start(file) {
 if (isRunning) return
 isRunning = true
