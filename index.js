@@ -10,17 +10,29 @@ import yargs from 'yargs'
 
 // https://stackoverflow.com/a/50052194
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const require = createRequire(__dirname) // Bring in the ability to create the 'require' method
-const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
+const require = createRequire(__dirname) // Incorpora la capacidad de crear el método 'require'
+const { name, author, version, description, collaborators } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
+
+let activeCollaborators = 'Colaboradores activos: '
+for (const key in collaborators) {
+if (collaborators.hasOwnProperty(key)) {
+activeCollaborators += collaborators[key] + ', '
+}}
+activeCollaborators = activeCollaborators.slice(0, -2)
 
 say('Yartex\nBot\nMD', {
 font: 'block',
 align: 'center',
 colors: ['magenta', 'cyan']
 })
-say(`Bot: ${name}\nVersion: 1.0.5\nCreador: GataNina-Li\nEmail: centergatabot@gmail.com`, {
+say(activeCollaborators, {
+font: 'console',
+align: 'center',
+gradient: ['blue', 'magenta']
+})
+say(`Desarrollado por: ${author.name}\nCódigo basado por: ${collaborators.col1}\n${activeCollaborators}\nVersion: ${version}`, {
 font: 'console',
 gradient: ['blue', 'magenta']
 })
