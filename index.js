@@ -27,15 +27,13 @@ align: 'center',
 gradient: ['red', 'blue'] 
 })
 say(description, {
-font: 'console',
+font: 'simpleBlock',
 align: 'center',
-gradient: ['blue', 'magenta'],
-bold: true
+gradient: ['blue', 'magenta']
 })
 say(`Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersion: ${version}`, {
 font: 'console',
-gradient: ['blue', 'magenta'],
-uppercase: true
+gradient: ['blue', 'magenta']
 })
 
 var isRunning = false
@@ -48,8 +46,7 @@ let args = [join(__dirname, file), ...process.argv.slice(2)]
 say([process.argv[0], ...args].join(' '), {
 font: 'console',
 align: 'center',
-color: 'white',
-bold: true
+color: 'white'
 })
 setupMaster({exec: args[0], args: args.slice(1),
 })
