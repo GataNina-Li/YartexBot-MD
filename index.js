@@ -17,7 +17,7 @@ const { name, author, version, description, collaborators } = require(join(__dir
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-const subtitleStyle = chalk.geen.bold
+const subtitleStyle = chalk.green.bold
 const responseStyle = chalk.blue.bold
 
 let activeCollaborators = subtitleStyle('Colaboradores activos: ')
