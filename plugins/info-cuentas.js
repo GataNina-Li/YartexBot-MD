@@ -26,6 +26,7 @@ let text = `🔗 *Grupo oficial*
 
 *Yartex Bot - MD 👑*
 ${group}`
+
 conn.reply(m.chat, text, m, fake, )
 }
 
