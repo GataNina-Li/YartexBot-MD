@@ -8,6 +8,7 @@ import cfonts from 'cfonts'
 import { createInterface } from 'readline'
 import boxen from 'boxen'
 import yargs from 'yargs'
+import chalk from 'chalk'
 
 // https://stackoverflow.com/a/50052194
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -23,6 +24,9 @@ activeCollaborators += collaborators[key] + ', '
 }}
 activeCollaborators = activeCollaborators.slice(0, -2)
 
+const subtitleStyle = chalk.cyan.bold
+const responseStyle = chalk.black.bold
+
 cfonts.say('yartex\nbot md', {
 align: 'center',           
 gradient: ['red', 'blue'] 
@@ -32,7 +36,12 @@ font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
 })
-const message = `Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersión: ${version}`
+const message = `
+${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
+${subtitleStyle('Código basado por:')} ${responseStyle(collaborators.col1)}
+${responseStyle(activeCollaborators)}
+${subtitleStyle('Versión:')} ${responseStyle(version)}`
+//const message = `Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersión: ${version}`
 console.log(boxen(message, { padding: 1, margin: 0, borderStyle: 'double', borderColor: 'blue', float: 'center', backgroundColor: 'white' }))
 
 var isRunning = false
