@@ -11,7 +11,7 @@ let handler = async (m, { conn, text }) => {
     m.reply('😊 𝗖𝗥𝗘𝗔𝗡𝗗𝗢 𝗘𝗟 𝗚𝗥𝗨𝗣𝗢, 𝗕𝗬: 𝗬𝗔𝗥𝗧𝗘𝗫')
     let group = await conn.groupCreate(text, [m.sender])
     let link = await conn.groupInviteCode(group.gid)
-    let url = 'https://chat.whatsapp.com/' +  group
+    let url = 'https://chat.whatsapp.com/' +  link
     m.reply(url)
   } catch (e) {
     m.reply(`❌ 𝗘𝗥𝗥𝗢𝗥`)
