@@ -18,7 +18,7 @@ const rl = createInterface(process.stdin, process.stdout)
 console.log(chalk.bold('✨ Iniciando...'))
 
 const subtitleStyle = chalk.white.bold
-const responseStyle = chalk.gray.bold
+const responseStyle = chalk.dim.gray.bold
 
 let activeCollaborators = subtitleStyle('Colaboradores activos: ')
 for (const key in collaborators) {
