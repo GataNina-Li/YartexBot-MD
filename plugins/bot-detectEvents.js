@@ -44,19 +44,25 @@ await this.sendMessage(m.chat, { text: `🚩 *Ahora ${m.messageStubParameters[0]
 } else if (chat.detect2 && m.messageStubType == 26) {
 await this.sendMessage(m.chat, { text: `🚩 *El grupo ha sido ${m.messageStubParameters[0] == 'on' ? 'cerrado' : 'abierto'}*\n\n${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'} pueden enviar mensajes`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
-} else if (chat.detect2 && m.messageStubType == 29) {
+/*} else if (chat.detect2 && m.messageStubType == 29) {
 let txt1 = `🚩 *Nuevo admin*\n\n`
 txt1 += `Nombre: @${m.messageStubParameters[0].split`@`[0]}\n`
-txt1 += `Le otorgó admin: @${m.sender.split`@`[0]}`
+txt1 += `Le otorgó admin: @${m.sender.split`@`[0]}`*/
 
-await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
+} else if (chat.detect2 && m.messageStubType == 22) {
+await this.sendMessage(m.chat, { text: `🌻 *Nuevo Admin*\nNombre: @${m.messageStubParameters[0].split`@`[0]}\nLe otorgó admin: @${m.sender.split`@`[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
 
-} else if (chat.detect2 && m.messageStubType == 30) {
+//await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
+
+/*} else if (chat.detect2 && m.messageStubType == 30) {
 let txt2 = `🚩 *Un admin menos*\n\n`
 txt2 += `Nombre: @${m.messageStubParameters[0].split`@`[0]}\n`
-txt2 += `Le quitó admin: @${m.sender.split`@`[0]}`
+txt2 += `Le quitó admin: @${m.sender.split`@`[0]}`*/
 
-await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
+} else if (chat.detect2 && m.messageStubType == 22) {
+await this.sendMessage(m.chat, { text: `🌻 *Un Admin Menos*\nNombre: @${m.messageStubParameters[0].split`@`[0]}\nLe quitó admin: @${m.sender.split`@`[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+
+//await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
 
 } else if (chat.detect2 && m.messageStubType == 72) {
 await this.sendMessage(m.chat, { text: `🚩 ${usuario} *Cambió la duración de mensajes temporales a @${m.messageStubParameters[0]}*`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
