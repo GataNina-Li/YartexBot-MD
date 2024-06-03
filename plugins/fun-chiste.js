@@ -8,10 +8,10 @@ let handler = async (m, { usedPrefix, command }) => {
     
     let json = await res.json();
     if (json.setup && json.punchline) {
-      let setup = await translate(json.setup, { to: 'es' });
-      let random = await translate(json.punchline, { to: 'es' });
+      let translatedSetup = await translate(json.setup, { to: 'es' });
+      let translatedPunchline = await translate(json.punchline, { to: 'es' });
       
-      m.reply(`${setup}\n` + `${random}`);
+      m.reply(`${translatedSetup.text}\n` + `${translatedPunchline.text}`);
     } else {
       throw new Error('Invalid');
     }
