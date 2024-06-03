@@ -22,7 +22,10 @@ await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { ti
 }
 
 if (command == 'grupos') {
-let text = `🚩 *Grupos oficiales*`
+let text = `🔗 *Grupo oficial*
+
+*Yartex Bot - MD 👑*
+${group}`
 conn.reply(m.chat, text, m, fake, )
 }
 
