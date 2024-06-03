@@ -29,11 +29,11 @@ activeCollaborators = activeCollaborators.slice(0, -2)
 //colors: ['magenta', 'cyan']
 //})
 
-const spinner = ora('Procesando datos...').start()
+const spinner = ora('Cargando datos...').start()
 setTimeout(() => {
-spinner.text = 'Datos procesados.' 
-spinner.succeed('Proceso completado exitosamente')
+spinner.succeed('Datos cargados exitosamente')
 }, 2000)
+
 
 cfonts.say('yartex\nbot md', {
 align: 'center',           
