@@ -31,11 +31,11 @@ cfonts.say('yartex\nbot md', {
 align: 'center',           
 gradient: ['red', 'blue'] 
 })
-chalk.bold(say(description, {
+cfonts.say(description, {
 font: 'console',
 align: 'center',
-gradient: ['blue', 'magenta']
-}))
+gradient: ['yellow', 'green']
+})
 const message = `${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
 ${subtitleStyle('Código basado por:')} ${responseStyle(collaborators.col1)}
 ${responseStyle(activeCollaborators)}
