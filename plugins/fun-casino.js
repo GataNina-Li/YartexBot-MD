@@ -5,7 +5,7 @@ let cooldowns = {}
 
 let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
         let user = global.db.data.users[m.sender]
-        let randoyartex = `${Math.floor(Math.random() * 101)}`.trim()
+        let randomyartex = `${Math.floor(Math.random() * 101)}`.trim()
         let randomgata = `${Math.floor(Math.random() * 55)}`.trim()
         let yartex = (randomyartex * 1)
         let gata = (randomgata * 1)
