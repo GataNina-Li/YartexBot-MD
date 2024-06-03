@@ -1,3 +1,5 @@
+//Créditos a https://github.com/matias-crypto 
+
 import translate from '@vitalets/google-translate-api'
 import fetch from 'node-fetch'
 
