@@ -1,4 +1,3 @@
-console.log('✨ Iniciando...')
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
 import { fileURLToPath } from 'url'
@@ -16,6 +15,7 @@ const require = createRequire(__dirname) // Incorpora la capacidad de crear el m
 const { name, author, version, description, collaborators } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
+console.log(chalk.bold('✨ Iniciando...'))
 
 const subtitleStyle = chalk.white.bold
 const responseStyle = chalk.gray.bold
