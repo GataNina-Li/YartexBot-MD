@@ -1,5 +1,3 @@
-
-
 import fetch from 'node-fetch';
 import translate from '@vitalets/google-translate-api';
 
@@ -10,10 +8,10 @@ let handler = async (m, { usedPrefix, command }) => {
     
     let json = await res.json();
     if (json.setup && json.punchline) {
-      let translatedSetup = await translate(json.setup, { to: 'es' });
-      let translatedPunchline = await translate(json.punchline, { to: 'es' });
+      let setup = await translate(json.setup, { to: 'es' });
+      let random = await translate(json.punchline, { to: 'es' });
       
-      m.reply(`${translatedSetup.text}\n` + `${translatedPunchline.text}`);
+      m.reply(`${setup}\n` + `${random}`);
     } else {
       throw new Error('Invalid');
     }
