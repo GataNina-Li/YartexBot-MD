@@ -17,7 +17,7 @@ const { name, author, version, description, collaborators } = require(join(__dir
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-const subtitleStyle = chalk.bold
+const subtitleStyle = chalk.white.bold
 const responseStyle = chalk.gray.bold
 
 let activeCollaborators = subtitleStyle('Colaboradores activos: ')
@@ -41,7 +41,7 @@ ${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
 ${subtitleStyle('Código basado por:')} ${responseStyle(collaborators.col1)}
 ${responseStyle(activeCollaborators)}
 ${subtitleStyle('Versión:')} ${responseStyle(version)}`
-console.log(boxen(message, { padding: 1, margin: 0, borderStyle: 'double', borderColor: 'blue', float: 'center', }))
+console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'double', borderColor: 'blue', float: 'center', }))
 
 var isRunning = false
 async function start(file) {
