@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url'
 import { setupMaster, fork } from 'cluster'
 import { watchFile, unwatchFile } from 'fs'
 import cfonts from 'cfonts'
-import spinners from 'cli-spinners'
 import { createInterface } from 'readline'
 import yargs from 'yargs'
 
@@ -23,23 +22,6 @@ activeCollaborators += collaborators[key] + ', '
 }}
 activeCollaborators = activeCollaborators.slice(0, -2)
 
-//say('Yartex\nBot\nMD', {
-//font: 'block',
-//align: 'center',
-//colors: ['magenta', 'cyan']
-//})
-
-const spinnerFrames = spinners.dots.frames
-let index = 0
-const interval = setInterval(() => {
-process.stdout.write(`\r${spinnerFrames[index]} Cargando...`)
-index = (index + 1) % spinnerFrames.length
-}, spinners.dots.interval)
-setTimeout(() => {
-clearInterval(interval);
-console.log('\nProceso completado.')
-}, 5000)
-
 cfonts.say('yartex\nbot md', {
 align: 'center',           
 gradient: ['red', 'blue'] 
@@ -51,7 +33,8 @@ gradient: ['blue', 'magenta']
 })
 say(`Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersion: ${version}`, {
 font: 'console',
-gradient: ['blue', 'magenta']
+gradient: ['blue', 'magenta'],
+uppercase: false
 })
 
 var isRunning = false
