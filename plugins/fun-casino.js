@@ -25,19 +25,19 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
 
         count = count ? /all/i.test(count) ? Math.floor(global.db.data.users[m.sender].exp / buatall) : parseInt(count) : args[0] ? parseInt(args[0]) : 1
         count = Math.max(1, count)
-        if (args.length < 1) return conn.reply(m.chat, '💫 𝙲𝚄𝙰𝙽𝙳𝙾 𝚀𝚄𝙸𝙴𝚁𝙴𝚂 𝙰𝙿𝙾𝚂𝚃𝙰𝚁?\n\n👑 𝙴𝚓𝚎𝚖𝚙𝚕𝚘: !apostar 1000', m)
-        if (count > 1000) return conn.reply(m.chat, 'Maximo *1000 XP*', m)
+        if (args.length < 1) return conn.reply(m.chat, `💫 𝙲𝚄𝙰𝙽𝙳𝙾 𝚀𝚄𝙸𝙴𝚁𝙴𝚂 𝙰𝙿𝙾𝚂𝚃𝙰𝚁?\n\n👑 𝙴𝚓𝚎𝚖𝚙𝚕𝚘: !apostar 1000`, m)
+        if (count > 1000) return conn.reply(m.chat, 'Maximo *1000 𝚇𝙿*', m)
 
         if (user.exp >= count * 1) {
             user.exp -= count * 1
             if (yartex > gata) {
-                conn.reply(m.chat, `𝙔𝙖𝙧𝙩𝙚𝙭 𝘽𝙤𝙩 - 𝙈𝘿 🌟\n\n𝚅𝙴𝙰𝙼𝙾𝚂 𝚀𝚄𝙴 𝙽𝚄𝙼𝙴𝚁𝙾𝚂 𝚃𝙸𝙴𝙽𝙴𝙽!\n*𝙴𝙻 𝙱𝙾𝚃* : ${yartex}\n*${username}* : ${gata}\n\n ${username}, *¡𝐏𝐄𝐑𝐃𝐈𝐒𝐓𝐄𝐒!* ${count} XP`.trim(), m)
+                conn.reply(m.chat, `𝙔𝙖𝙧𝙩𝙚𝙭 𝘽𝙤𝙩 - 𝙈𝘿 🌟\n\n𝚅𝙴𝙰𝙼𝙾𝚂 𝚀𝚄𝙴 𝙽𝚄𝙼𝙴𝚁𝙾𝚂 𝚃𝙸𝙴𝙽𝙴𝙽!\n*𝙴𝙻 𝙱𝙾𝚃* : ${yartex}\n*${username}* : ${gata}\n\n ${username}, *¡𝐏𝐄𝐑𝐃𝐈𝐒𝐓𝐄𝐒!* ${count} 𝚇𝙿`.trim(), m)
             } else if (yartex < gata) {
                 user.exp += count * 2
-                conn.reply(m.chat, `𝙔𝙖𝙧𝙩𝙚𝙭 𝘽𝙤𝙩 - 𝙈𝘿 🌟\n\n𝚅𝙴𝙰𝙼𝙾𝚂 𝚀𝚄𝙴 𝙽𝚄𝙼𝙴𝚁𝙾𝚂 𝚃𝙸𝙴𝙽𝙴𝙽!\n*𝙴𝙻 𝙱𝙾𝚃* : ${yartex}\n*${username}* : ${gata}\n\n𝙱𝙸𝙴𝙽! ${username}, *¡𝐆𝐀𝐍𝐀𝐒𝐓𝐄𝐒!* ${count * 2} XP`.trim(), m)
+                conn.reply(m.chat, `𝙔𝙖𝙧𝙩𝙚𝙭 𝘽𝙤𝙩 - 𝙈𝘿 🌟\n\n𝚅𝙴𝙰𝙼𝙾𝚂 𝚀𝚄𝙴 𝙽𝚄𝙼𝙴𝚁𝙾𝚂 𝚃𝙸𝙴𝙽𝙴𝙽!\n*𝙴𝙻 𝙱𝙾𝚃* : ${yartex}\n*${username}* : ${gata}\n\n𝙱𝙸𝙴𝙽! ${username}, *¡𝐆𝐀𝐍𝐀𝐒𝐓𝐄𝐒!* ${count * 2} 𝚇𝙿`.trim(), m)
             } else {
                 user.exp += count * 1
-                conn.reply(m.chat, `𝙔𝙖𝙧𝙩𝙚𝙭 𝘽𝙤𝙩 - 𝙈𝘿 🌟\n\n𝚅𝙴𝙰𝙼𝙾𝚂 𝚀𝚄𝙴 𝙽𝚄𝙼𝙴𝚁𝙾𝚂 𝚃𝙸𝙴𝙽𝙴𝙽!\n*𝙴𝙻 𝙱𝙾𝚃* : ${yartex}\n*${username}* : ${gata}\n\n *¡𝐄𝐌𝐏𝐀𝐓𝐄!*, ${username} 𝙾𝚋𝚝𝚒𝚎𝚗𝚎𝚜 ${count * 1} XP`.trim(), m)
+                conn.reply(m.chat, `𝙔𝙖𝙧𝙩𝙚𝙭 𝘽𝙤𝙩 - 𝙈𝘿 🌟\n\n𝚅𝙴𝙰𝙼𝙾𝚂 𝚀𝚄𝙴 𝙽𝚄𝙼𝙴𝚁𝙾𝚂 𝚃𝙸𝙴𝙽𝙴𝙽!\n*𝙴𝙻 𝙱𝙾𝚃* : ${yartex}\n*${username}* : ${gata}\n\n *¡𝐄𝐌𝐏𝐀𝐓𝐄!*, ${username} 𝙾𝚋𝚝𝚒𝚎𝚗𝚎𝚜 ${count * 1} 𝚇𝙿`.trim(), m)
             }
         } else conn.reply(m.chat, `𝙔𝙖𝙧𝙩𝙚𝙭 𝘽𝙤𝙩 - 𝙈𝘿 🌟\n\n${username}, 𝙽𝙾 𝚃𝙸𝙴𝙽𝙴𝚂 ${count} 𝚇𝙿 𝙿𝙰𝚁𝙰 𝙹𝚄𝙶𝙰𝚁!`.trim(), m)
 
