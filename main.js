@@ -25,6 +25,7 @@ import {makeWASocket, protoType, serialize} from './lib/simple.js'
 import {Low, JSONFile} from 'lowdb'
 import {mongoDB, mongoDBV2} from './lib/mongoDB.js';
 import store from './lib/store.js'
+import boxen from 'boxen'
 const { proto} = (await import('@whiskeysockets/baileys')).default;
 const { DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore, jidNormalizedUser, PHONENUMBER_MCC } = await import('@whiskeysockets/baileys')
 const {CONNECTING} = ws
@@ -289,7 +290,9 @@ if (opcion == '1') {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
  }}
 if (connection == 'open') {
-console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))}
+//console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│ ¡CONECTADO CON WHATSAPP!\n│\n╰───────────────────────────◉\n'))
+console.log(boxen(chalk.bold('¡CONECTADO CON WHATSAPP!'), { borderStyle: 'round', borderColor: 'green', title: chalk.green.bold('CONEXIÓN'), titleAlignment: 'center' }))
+}
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
 if (reason === DisconnectReason.badSession) {
