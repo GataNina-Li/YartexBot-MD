@@ -20,7 +20,7 @@ console.log(chalk.bold('✨ Iniciando...'))
 const subtitleStyle = chalk.white.bold
 const responseStyle = chalk.dim.bold
 
-let activeCollaborators = subtitleStyle('Colaboradores activos: ')
+let activeCollaborators = ''
 for (const key in collaborators) {
 if (collaborators.hasOwnProperty(key)) {
 activeCollaborators += collaborators[key] + ', '
@@ -36,10 +36,10 @@ font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
 })
-const message = `${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
-${subtitleStyle('Código basado por:')} ${responseStyle(collaborators.col1)}
-${responseStyle(activeCollaborators)}
-${subtitleStyle('Versión:')} ${responseStyle(version)}`
+const message = `${subtitleStyle('Desarrollado por »')} ${responseStyle(author.name)}
+${subtitleStyle('Código basado por »')} ${responseStyle(collaborators.col1)}
+${subtitleStyle('Colaboradores activos »')} ${responseStyle(activeCollaborators)}
+${subtitleStyle('Versión »')} ${responseStyle(version)}`
 console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'double', borderColor: 'blue', float: 'center', }))
 
 var isRunning = false
