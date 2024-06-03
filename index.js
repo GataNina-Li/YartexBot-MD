@@ -11,7 +11,7 @@ import yargs from 'yargs'
 // https://stackoverflow.com/a/50052194
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname) // Incorpora la capacidad de crear el método 'require'
-const { name, author, version, description, collaborators, description } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
+const { name, author, version, description, collaborators } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
