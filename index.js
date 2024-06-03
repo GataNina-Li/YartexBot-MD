@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 import { setupMaster, fork } from 'cluster'
 import { watchFile, unwatchFile } from 'fs'
 import cfonts from 'cfonts'
+import ora from 'ora'
 import { createInterface } from 'readline'
 import yargs from 'yargs'
 
@@ -27,7 +28,14 @@ activeCollaborators = activeCollaborators.slice(0, -2)
 //align: 'center',
 //colors: ['magenta', 'cyan']
 //})
-cfonts.say('yartex bot md', {
+
+const spinner = ora('Procesando datos...').start()
+setTimeout(() => {
+spinner.text = 'Datos procesados.' 
+spinner.succeed('Proceso completado exitosamente')
+}, 2000)
+
+cfonts.say('yartex\nbot md', {
 align: 'center',           
 gradient: ['red', 'blue'] 
 })
