@@ -1,7 +1,7 @@
-let media = 'https://telegra.ph/file/e2882a8fb92765b1da2b9.jpg'
-let handler = async (m, { conn, command }) => {
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let str = `𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝖽𝗂𝗈 𝖠 𝖫𝖺𝗌 𝖢𝗎𝖾𝗇𝗍𝖺𝗌 𝖮𝖿𝗂𝖼𝗂𝖺𝗅𝖾𝗌 😻
+var handler = async (m, { conn, command }) => {
+
+if (command == 'cuentas' || command == 'cuentasoficiales' || command == 'cuentasof') {
+let str = `𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝖽𝗂𝗈/A 𝖠 𝖫𝖺𝗌 𝖢𝗎𝖾𝗇𝗍𝖺𝗌 𝖮𝖿𝗂𝖼𝗂𝖺𝗅𝖾𝗌 😻
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 *Github Del Bot* 🌟
 *${md}*
@@ -18,10 +18,19 @@ ${yt}
 *Instagram* 🌩
 ${ig}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈`
+await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+}
 
-await conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)}
+if (command == 'grupos') {
+let text = `🚩 *Grupos oficiales*
+conn.reply(m.chat, text, m, fake, )
+}
 
-handler.command = /^cuentas|cuentasoficiales$/i
-handler.exp = 35
+}
+handler.help = ['cuentasoficiales', 'cuentasofc', 'cuentas', 'grupos']
+handler.tags = ['info']
+handler.command = /^cuentasoficiales|cuentasofc|cuentas|grupos$/i
+
 handler.register = true
+
 export default handler
