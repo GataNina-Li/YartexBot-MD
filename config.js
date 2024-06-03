@@ -10,7 +10,8 @@ import { fileURLToPath, pathToFileURL } from 'url'
 global.owner = [
 ['524531287294', '✨ YartexBot-MD', true],
 ['542215034412'], 
-['593968263524']]
+['593968263524'],
+['573012482597']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
 //Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
