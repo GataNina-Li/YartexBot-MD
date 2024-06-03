@@ -5,10 +5,10 @@ let cooldowns = {}
 
 let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
         let user = global.db.data.users[m.sender]
-        let randomaku = `${Math.floor(Math.random() * 101)}`.trim()
-        let randomkamu = `${Math.floor(Math.random() * 55)}`.trim()
-        let yartex = (randomaku * 1)
-        let gata = (randomkamu * 1)
+        let randoyartex = `${Math.floor(Math.random() * 101)}`.trim()
+        let randomgata = `${Math.floor(Math.random() * 55)}`.trim()
+        let yartex = (randomyartex * 1)
+        let gata = (randomgata * 1)
         let count = args[0]
                 let who = m.fromMe ? conn.user.jid : m.sender
             let username = conn.getName(who)
