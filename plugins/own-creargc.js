@@ -12,7 +12,7 @@ let handler = async (m, { conn, text }) => {
     let group = await conn.groupCreate(text, [m.sender])
     let link = await conn.groupInviteCode(group.gid)
     let url = 'https://chat.whatsapp.com/' +  link
-    if (!text) return m.reply(url)
+    m.reply(url)
   } catch (e) {
     m.reply(`❌ 𝗘𝗥𝗥𝗢𝗥`)
   }
