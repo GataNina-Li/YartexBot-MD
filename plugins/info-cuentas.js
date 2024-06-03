@@ -28,7 +28,7 @@ let text = `🔗 *Grupo oficial*
 > *CuriosityBot-MD*
 ${group}
 
-👑 *Canales Oficialea*
+👑 *Canales Oficiales*
 
 > *YartexBot*
 ${channel}
