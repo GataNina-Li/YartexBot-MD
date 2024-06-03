@@ -34,7 +34,7 @@ gradient: ['red', 'blue']
 cfonts.say(description, {
 font: 'console',
 align: 'center',
-gradient: ['yellow', 'green']
+gradient: ['blue', 'magenta']
 })
 const message = `${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
 ${subtitleStyle('Código basado por:')} ${responseStyle(collaborators.col1)}
