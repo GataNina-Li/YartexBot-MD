@@ -257,7 +257,7 @@ handler.help = [`jadibot`, `serbot`, `getcode`, `rentbot`]
 handler.tags = [`jadibot`]
 handler.command = /^(jadibot|serbot|rentbot)/i
 
-handler.private = true
+handler.private = false
 
 export default handler
 
