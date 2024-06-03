@@ -46,9 +46,9 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
 handler.help = ['apostar *<cantidad>*']
 handler.tags = ['game']
 handler.command = /^(apostar|casino)$/i
-handler.register = true
+//handler.register = true
 
-handler.fail = null
+//handler.fail = null
 
 export default handler
 
