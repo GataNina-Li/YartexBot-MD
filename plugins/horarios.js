@@ -1,3 +1,5 @@
+//Créditos a https://github.com/matias-crypto 
+
 
 import fetch from 'node-fetch';
 
