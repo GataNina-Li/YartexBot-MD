@@ -17,8 +17,8 @@ const { name, author, version, description, collaborators } = require(join(__dir
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-const subtitleStyle = chalk.whiteBright.bold
-const responseStyle = chalk.white.bold
+const subtitleStyle = chalk.white.bold
+const responseStyle = chalk.gray.bold
 
 let activeCollaborators = subtitleStyle('Colaboradores activos: ')
 for (const key in collaborators) {
@@ -48,11 +48,6 @@ if (isRunning) return
 isRunning = true
 const currentFilePath = new URL(import.meta.url).pathname
 let args = [join(__dirname, file), ...process.argv.slice(2)]
-//say([process.argv[0], ...args].join(' '), {
-//font: 'console',
-//align: 'center',
-//color: 'white'
-//})
 setupMaster({exec: args[0], args: args.slice(1),
 })
 let p = fork()
@@ -70,7 +65,7 @@ break
 
 p.on('exit', (_, code) => {
 isRunning = false
-console.error('⚠️ ERROR ⚠️ >> ', code)
+console.log('⚠️ ERROR >> ', code)
 start('main.js')
 
 if (code === 0) return
