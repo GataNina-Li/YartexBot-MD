@@ -32,6 +32,6 @@ await m.reply(regbot)
 }
 handler.help = ['reg']
 handler.tags = ['rg']
-handler.command = ['verify', 'reg'] 
+handler.command = ['verify', 'reg', 'verificar'] 
 
 export default handler
