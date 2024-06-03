@@ -52,7 +52,6 @@
   "chalk": "^5.0.1",
   "cheerio": "^1.0.0-rc.12",
   "colors": "1.4.0",
-  "cli-spinners": "3.0.0",
   "countries-and-timezones": "^3.6.0",
   "didyoumean": "^1.2.2",
   "express": "^4.18.1",
