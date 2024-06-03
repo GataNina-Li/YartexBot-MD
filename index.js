@@ -36,8 +36,7 @@ font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
 })
-const message = `
-${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
+const message = `${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
 ${subtitleStyle('Código basado por:')} ${responseStyle(collaborators.col1)}
 ${responseStyle(activeCollaborators)}
 ${subtitleStyle('Versión:')} ${responseStyle(version)}`
