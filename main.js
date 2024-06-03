@@ -291,7 +291,7 @@ console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira e
  }}
 if (connection == 'open') {
 //console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│ ¡CONECTADO CON WHATSAPP!\n│\n╰───────────────────────────◉\n'))
-console.log(boxen(chalk.bold('¡CONECTADO CON WHATSAPP!'), { borderStyle: 'round', borderColor: 'green', title: chalk.green.bold('CONEXIÓN'), titleAlignment: 'center' }))
+console.log(boxen(chalk.bold(' ¡CONECTADO CON WHATSAPP! '), { borderStyle: 'round', borderColor: 'green', title: chalk.green.bold('CONEXIÓN'), titleAlignment: 'center' }))
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
