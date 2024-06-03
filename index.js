@@ -18,7 +18,7 @@ const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
 const subtitleStyle = chalk.white.bold
-const responseStyle = chalk.gray.bold
+const responseStyle = chalk.brightGray.bold
 
 let activeCollaborators = subtitleStyle('Colaboradores activos: ')
 for (const key in collaborators) {
