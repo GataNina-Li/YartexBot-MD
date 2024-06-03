@@ -34,6 +34,7 @@ gradient: ['red', 'blue']
 say(description, {
 font: 'console',
 align: 'center',
+bold: true,
 gradient: ['blue', 'magenta']
 })
 const message = `${subtitleStyle('Desarrollado por:')} ${responseStyle(author.name)}
