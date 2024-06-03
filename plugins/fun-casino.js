@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
                 let who = m.fromMe ? conn.user.jid : m.sender
             let username = conn.getName(who)
 
-            let tiempoEspera = 15
+            let tiempoEspera = 5
 
             if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempoEspera * 1000) {
     let tiempoRestante = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempoEspera * 1000 - Date.now()) / 1000))
