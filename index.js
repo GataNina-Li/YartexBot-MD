@@ -43,7 +43,7 @@ Código basado de: ${collaborators.col1}
 ${activeCollaborators}
 Versión: ${version}
 `
-console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'double', borderColor: 'blue' }))
+console.log(boxen(message, { padding: 1, margin: 0, borderStyle: 'double', borderColor: 'blue', float: 'center' }))
 
 var isRunning = false
 
