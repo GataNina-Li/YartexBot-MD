@@ -17,8 +17,8 @@ const { name, author, version, description, collaborators } = require(join(__dir
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-const subtitleStyle = chalk.white.bold
-const responseStyle = chalk.hex('#D3D3D3').bold
+const subtitleStyle = chalk.whiteBright.bold
+const responseStyle = chalk.white.bold
 
 let activeCollaborators = subtitleStyle('Colaboradores activos: ')
 for (const key in collaborators) {
