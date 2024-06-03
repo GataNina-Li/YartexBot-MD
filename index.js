@@ -29,12 +29,13 @@ gradient: ['red', 'blue']
 say(description, {
 font: 'console',
 align: 'center',
-gradient: ['blue', 'magenta']
+gradient: ['blue', 'magenta'],
+bold: true
 })
 say(`Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersion: ${version}`, {
 font: 'console',
 gradient: ['blue', 'magenta'],
-uppercase: false
+uppercase: true
 })
 
 var isRunning = false
@@ -47,7 +48,8 @@ let args = [join(__dirname, file), ...process.argv.slice(2)]
 say([process.argv[0], ...args].join(' '), {
 font: 'console',
 align: 'center',
-gradient: ['red', 'magenta']
+color: 'white',
+bold: true
 })
 setupMaster({exec: args[0], args: args.slice(1),
 })
