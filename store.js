@@ -31,27 +31,23 @@ var img6 = 'https://telegra.ph/file/e1c9c47c389b17de97a03.jpg'; var img7 = 'http
 global.ImgAll = [img, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
 
 //Enlaces
-global.yt = 'https://www.youtube.com/@Zam_D.A'
-global.ig = 'https://instagram.com/zam_sharly'
-global.threads = 'https://www.threads.net/@zam_sharly'
-global.md = 'https://github.com/AzamiJs/CuriosityBot-MD'
-global.paypal = 'https://paypal.me/Azamijs'
-global.git = 'https://github.com/AzamiJs'
-global.linkwabot = 'https://wa.me/message/QRWLLJZ2PH3MG1'
-global.email = 'thecuriositybot@gmail.com'
-global.x = 'https://x.com/Sharli_Zam'
-global.tg = 't.me/Sharly_Zam'
+global.yt = 'https://youtube.com/@gatadios'
+
+global.ig = 'https://instagram.com/gata_dios'
+
+global.md = 'https://github.com/GataNina-Li/YartexBot-MD'
+
+global.paypal = 'https://paypal.me/OficialGD'
+
+global.git = 'https://github.com/GataNina-Li'
+
+global.email = 'theyartexbot@gmail.com'
+
 global.group = 'https://chat.whatsapp.com/EfWlxyVXlZ7AWVJ6sjJvyI' //Grupo ofc
-global.group2 = 'https://chat.whatsapp.com/B8RJAm16U2EISSDETrPivq' //enlace curiosity
-global.group3 = 'https://chat.whatsapp.com/J1R402WH1N0Hdl3S0NDEYu' //Curiosity global
-global.group4 = 'https://chat.whatsapp.com/KjR8NTfdWwU1a66uDOOGLZ' //colaboración multi bots
-global.group5 = 'https://chat.whatsapp.com/E9qJfvlLjENKAxnhII9rao' //Colaboración CuriosityBot - NovaBot
-global.group6 = 'https://chat.whatsapp.com/KQtWZDVfosTKbheIlndLBN' //Colaboración GataBot - CuriosityBot
-global.group7 = 'https://chat.whatsapp.com/BXdy1TYcQ5NLs4Xy9jNavH' //Colaboración CuriosityBot - Criwilop
-global.group8 = 'https://chat.whatsapp.com/JNdlCEUKLqHAw87sOqfKmO' //Colaboración CuriosityBot - SakuraBot
-global.group9 = 'https://chat.whatsapp.com/EvRZx8BOI2RFcV3KLFGOU8' //Colaboración OnyxBot - CuriosityBot
+
 global.channel = 'https://whatsapp.com/channel/0029VabS4KD8KMqeVXXmkG1D'
-global.linkSity = [yt, ig, md, paypal, git, channel, email, threads, x, tg, linkwabot]
+
+global.linkSity = [yt, ig, md, paypal, git, channel, email]
 
 //Raíz
 global.raiz = './'
