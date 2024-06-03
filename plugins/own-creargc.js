@@ -9,7 +9,7 @@ let handler = async (m, { conn, text }) => {
 if (!text) return m.reply('𝗘𝗦𝗖𝗥𝗜𝗕𝗔 𝗘𝗟 𝗡𝗢𝗠𝗕𝗥𝗘 𝗗𝗘𝗟 𝗚𝗥𝗨𝗣𝗢 🌟')
 try{
 //m.react('🚀')
-//m.reply('😊 𝗖𝗥𝗘𝗔𝗡𝗗𝗢 𝗘𝗟 𝗚𝗥𝗨𝗣𝗢, 𝗕𝗬: 𝗬𝗔𝗥𝗧𝗘𝗫')
+m.reply('😊 𝗖𝗥𝗘𝗔𝗡𝗗𝗢 𝗘𝗟 𝗚𝗥𝗨𝗣𝗢, 𝗕𝗬: 𝗬𝗔𝗥𝗧𝗘𝗫')
 m.reply(url)
 let group = await conn.groupCreate(text, [m.sender])
 let link = await conn.groupInviteCode(group.gid)
