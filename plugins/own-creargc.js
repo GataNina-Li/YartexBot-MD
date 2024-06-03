@@ -12,7 +12,9 @@ let handler = async (m, { conn, text }) => {
     let group = await conn.groupCreate(text, [m.sender])
     let link = await conn.groupInviteCode(group.gid)
     let url = 'https://chat.whatsapp.com/' +  link
-    m.reply(url)
+  const groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats);
+    const [jid, chat] = groups[i];
+    m.reply(`https://chat.whatsapp.com/${await conn.groupInviteCode(jid)`)
   } catch (e) {
     m.reply(`❌ 𝗘𝗥𝗥𝗢𝗥`)
   }
