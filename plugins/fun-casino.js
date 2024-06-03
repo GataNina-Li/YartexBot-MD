@@ -25,7 +25,7 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
 
         count = count ? /all/i.test(count) ? Math.floor(global.db.data.users[m.sender].exp / buatall) : parseInt(count) : args[0] ? parseInt(args[0]) : 1
         count = Math.max(1, count)
-        if (args.length < 1) return conn.reply(m.chat, `💫 𝙲𝚄𝙰𝙽𝙳𝙾 𝚀𝚄𝙸𝙴𝚁𝙴𝚂 𝙰𝙿𝙾𝚂𝚃𝙰𝚁?\n\n👑 𝙴𝚓𝚎𝚖𝚙𝚕𝚘: !apostar 1000`, m)
+        if (args.length < 1) return conn.reply(m.chat, `💫 𝙲𝚄𝙰𝙽𝚃𝙾 𝚀𝚄𝙸𝙴𝚁𝙴𝚂 𝙰𝙿𝙾𝚂𝚃𝙰𝚁?\n\n👑 𝙴𝚓𝚎𝚖𝚙𝚕𝚘: !apostar 1000`, m)
         if (count > 1000) return conn.reply(m.chat, 'Maximo *1000 𝚇𝙿*', m)
 
         if (user.exp >= count * 1) {
