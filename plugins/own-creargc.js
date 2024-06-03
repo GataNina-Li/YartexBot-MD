@@ -13,7 +13,7 @@ m.reply('😊 𝗖𝗥𝗘𝗔𝗡𝗗𝗢 𝗘𝗟 𝗚𝗥𝗨𝗣𝗢, 𝗕�
 let group = await conn.groupCreate(text, [m.sender])
 let link = await conn.groupInviteCode(group.gid)
 let url = 'https://chat.whatsapp.com/' + link;
-await m.reply(url)
+m.reply(``)
 } catch (e) {
 m.reply(`❌ 𝗘𝗥𝗥𝗢𝗥`)
 }
