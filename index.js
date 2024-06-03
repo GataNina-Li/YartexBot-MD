@@ -33,7 +33,7 @@ align: 'center',
 gradient: ['blue', 'magenta']
 })
 const message = `Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersión: ${version}`
-console.log(boxen(message, { padding: 0, margin: 0, borderStyle: 'double', borderColor: 'blue', float: 'center' }))
+console.log(boxen(message, { padding: 1, margin: 0, borderStyle: 'double', borderColor: 'magenta', float: 'center' }))
 
 var isRunning = false
 async function start(file) {
