@@ -17,15 +17,15 @@ const { name, author, version, description, collaborators } = require(join(__dir
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
+const subtitleStyle = chalk.geen.bold
+const responseStyle = chalk.blue.bold
+
 let activeCollaborators = subtitleStyle('Colaboradores activos: ')
 for (const key in collaborators) {
 if (collaborators.hasOwnProperty(key)) {
 activeCollaborators += collaborators[key] + ', '
 }}
 activeCollaborators = activeCollaborators.slice(0, -2)
-
-const subtitleStyle = chalk.geen.bold
-const responseStyle = chalk.blue.bold
 
 cfonts.say('yartex\nbot md', {
 align: 'center',           
