@@ -1,7 +1,7 @@
 {
 "name": "YartexBot-MD",
 "version": "1.0.5", 
-"description": "Bot de WhatsApp con temática Yaoi/Bl hecho por fans para fans.",
+"description": "Bot de WhatsApp con tematica Yaoi/Bl hecho por fans para fans.",
 "main": "index.js",
 "type": "module",
     
