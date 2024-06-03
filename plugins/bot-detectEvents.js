@@ -49,7 +49,7 @@ let txt1 = `🚩 *Nuevo admin*\n\n`
 txt1 += `Nombre: @${m.messageStubParameters[0].split`@`[0]}\n`
 txt1 += `Le otorgó admin: @${m.sender.split`@`[0]}`*/
 
-} else if (chat.detect2 && m.messageStubType == 22) {
+} else if (chat.detect2 && m.messageStubType == 29) {
 await this.sendMessage(m.chat, { text: `🌻 *Nuevo Admin*\nNombre: @${m.messageStubParameters[0].split`@`[0]}\nLe otorgó admin: @${m.sender.split`@`[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
 
 //await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": links, "sourceUrl": links}}})
