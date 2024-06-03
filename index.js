@@ -6,6 +6,7 @@ import { setupMaster, fork } from 'cluster'
 import { watchFile, unwatchFile } from 'fs'
 import cfonts from 'cfonts'
 import { createInterface } from 'readline'
+import boxen from 'boxen'
 import yargs from 'yargs'
 
 // https://stackoverflow.com/a/50052194
@@ -27,14 +28,22 @@ align: 'center',
 gradient: ['red', 'blue'] 
 })
 say(description, {
-font: 'simpleBlock',
+font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
 })
-say(`Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersion: ${version}`, {
-font: 'console',
-gradient: ['blue', 'magenta']
-})
+//say(`Desarrollado por: ${author.name}\nCódigo basado de: ${collaborators.col1}\n${activeCollaborators}\nVersion: ${version}`, {
+//font: 'console',
+//gradient: ['blue', 'magenta']
+//})
+
+const message = `
+Desarrollado por: ${author.name}
+Código basado de: ${collaborators.col1}
+${activeCollaborators}
+Versión: ${version}
+`
+console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'double', borderColor: 'blue' }))
 
 var isRunning = false
 
@@ -43,11 +52,11 @@ if (isRunning) return
 isRunning = true
 const currentFilePath = new URL(import.meta.url).pathname
 let args = [join(__dirname, file), ...process.argv.slice(2)]
-say([process.argv[0], ...args].join(' '), {
-font: 'console',
-align: 'center',
-color: 'white'
-})
+//say([process.argv[0], ...args].join(' '), {
+//font: 'console',
+//align: 'center',
+//color: 'white'
+//})
 setupMaster({exec: args[0], args: args.slice(1),
 })
 let p = fork()
