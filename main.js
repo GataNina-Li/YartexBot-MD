@@ -202,7 +202,7 @@ rl.close()
 conn.isInit = false
 conn.well = false
 //conn.user.connect = true;
-conn.logger.info(`🔵 H E C H O\n`)
+//conn.logger.info(`🔵 H E C H O\n`)
 
 if (!opts['test']) {
 if (global.db) setInterval(async () => {
@@ -290,8 +290,7 @@ if (opcion == '1') {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
  }}
 if (connection == 'open') {
-//console.log(chalk.yellowBright('\n╭───────────────────────────◉\n│\n│ ¡CONECTADO CON WHATSAPP!\n│\n╰───────────────────────────◉\n'))
-console.log(boxen(chalk.bold(' ¡CONECTADO CON WHATSAPP! '), { borderStyle: 'round', borderColor: 'green', title: chalk.green.bold('CONEXIÓN'), titleAlignment: 'center' }))
+console.log(boxen(chalk.bold(' ¡CONECTADO CON WHATSAPP! '), { borderStyle: 'round', borderColor: 'green', title: chalk.green.bold('𖤍 CONEXIÓN 𖤍'), titleAlignment: 'center' }))
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
