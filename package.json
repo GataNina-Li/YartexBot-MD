@@ -19,8 +19,13 @@
     
 "homepage": "https://github.com/GataNina-Li/YartexBot-MD",
 "author": {
-"name": "GataNina-Li" }, 
-    
+"name": "GataNina-Li"
+}, 
+"collaborators": {
+"col1": "AzamiJs",
+"col2": "Diego-YL-177"
+},
+  
 "repository": {
 "type": "git",
  "url": "git+https://github.com/GataNina-Li/YartexBot-MD.git" },
