@@ -27,7 +27,7 @@ activeCollaborators = activeCollaborators.slice(0, -2)
 //align: 'center',
 //colors: ['magenta', 'cyan']
 //})
-cfonts.say('Yartex\nBot\nMD', {
+cfonts.say('yartex bot md', {
 align: 'center',           
 gradient: ['red', 'blue'] 
 })
