@@ -24,9 +24,9 @@ echo -e "\033[38;5;3m\033[01mGit ya estaba instalado anteriormente.\033[0m"
 else
 if pkg install git -y 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
 error=$(pkg install git -y 2>&1 >/dev/null)
-echo -e "\033[1;38;5;196mError: $error\033[0m"
-echo -e "\033[0;34mNo se pudo instalar Git. Verifique su conexión a internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
-echo -e "\033[01;33m$COMANDOS\033[0m"
+echo -e "\033[1;38;5;196m\033[1mError: $error\033[0m"
+echo -e "\033[0;34m\033[1mNo se pudo instalar Git. Verifique su conexión a internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m"
+echo -e "\033[01;33m\033[1m$COMANDOS\033[0m"
 exit 1
 else
 echo -e "\033[38;5;2m\033[01mGit se ha instalado correctamente.\n\033[0m" 
@@ -42,9 +42,9 @@ echo -e "\033[38;5;3m\033[01mNodejs ya estaba instalado anteriormente.\033[0m"
 else
 if pkg install nodejs -y 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
 error=$(pkg install nodejs -y 2>&1 >/dev/null)
-echo -e "\033[1;38;5;196mError: $error\033[0m"
-echo -e "\033[0;34mNo se pudo instalar Node.js. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
-echo -e "\033[01;33m$COMANDOS\033[0m"
+echo -e "\033[1;38;5;196m\033[1mError: $error\033[0m"
+echo -e "\033[0;34m\033[1mNo se pudo instalar Node.js. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m"
+echo -e "\033[01;33m\033[1m$COMANDOS\033[0m"
 exit 1
 else
 echo -e "\033[38;5;2m\033[01mNode.js se ha instalado correctamente.\n\033[0m" 
@@ -60,9 +60,9 @@ echo -e "\033[38;5;3m\033[01mFfmpeg ya estaba instalado anteriormente.\033[0m"
 else
 if pkg install ffmpeg -y 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
 error=$(pkg install ffmpeg -y 2>&1 >/dev/null)
-echo -e "\033[1;38;5;196mError: $error\033[0m"
-echo -e "\033[0;34mNo se pudo instalar FFmpeg. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
-echo -e "\033[01;33m$COMANDOS\033[0m"
+echo -e "\033[1;38;5;196m\033[1mError: $error\033[0m"
+echo -e "\033[0;34m\033[1mNo se pudo instalar FFmpeg. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m"
+echo -e "\033[01;33m\033[1m$COMANDOS\033[0m"
 exit 1
 else
 echo -e "\033[38;5;2m\033[01mFFmpeg se ha instalado correctamente.\n\033[0m" 
@@ -78,9 +78,9 @@ echo -e "\033[38;5;3m\033[01mImagemagick ya estaba instalado anteriormente.\033[
 else
 if pkg install imagemagick -y 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
 error=$(pkg install imagemagick -y 2>&1 >/dev/null)
-echo -e "\033[1;38;5;196mError: $error\033[0m"
-echo -e "\033[0;34mNo se pudo instalar ImageMagick. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
-echo -e "\033[01;33m$COMANDOS\033[0m"
+echo -e "\033[1;38;5;196m\033[1mError: $error\033[0m"
+echo -e "\033[0;34m\033[1mNo se pudo instalar ImageMagick. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m"
+echo -e "\033[01;33m\033[1m$COMANDOS\033[0m"
 exit 1
 else
 echo -e "\033[38;5;2m\033[01mImageMagick se ha instalado correctamente.\n\033[0m" 
@@ -96,16 +96,16 @@ echo -e "\033[38;5;3m\033[01mYarn ya estaba instalado anteriormente.\033[0m"
 else
 if npm install -g yarn 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
 error=$(npm install -g yarn 2>&1 >/dev/null)
-echo -e "\033[1;38;5;196mError: $error\033[0m"
-echo -e "\033[0;34mNo se pudo instalar Yarn. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
-echo -e "\033[01;33m$COMANDOS\033[0m"
+echo -e "\033[1;38;5;196m\033[1mError: $error\033[0m"
+echo -e "\033[0;34m\033[1mNo se pudo instalar Yarn. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m"
+echo -e "\033[01;33m\033[1m$COMANDOS\033[0m"
 exit 1
 else
 echo -e "\033[38;5;2m\033[01mYarn se ha instalado correctamente.\n\033[0m" 
 fi
 fi
 
-echo -e "\033[38;5;130m
+echo -e "\033[38;5;266m
 ▀▀█▀▀ ▒█▀▀▀█ ▒█▀▀▄ ▒█▀▀▀█ 　 ▒█▀▀█ ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀█ ▒█▀▀▀ ▒█▀▀█ ▀▀█▀▀ ▒█▀▀▀█ 
 ░▒█░░ ▒█░░▒█ ▒█░▒█ ▒█░░▒█ 　 ▒█░░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄▀ ▒█▀▀▀ ▒█░░░ ░▒█░░ ▒█░░▒█ 
 ░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█ 　 ▒█▄▄█ ▒█▄▄▄█ ▒█░▒█ ▒█░▒█ ▒█▄▄▄ ▒█▄▄█ ░▒█░░ ▒█▄▄▄█\e[0m"
@@ -133,8 +133,8 @@ echo -e "\e[38;5;111m
 echo -e "\033[38;5;229mSe actualizará yarn automáticamente. Esto puede tomar tiempo, Espere por favor.\n\033[0m"
 if yarn install 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
 error=$(yarn install 2>&1 >/dev/null)
-echo -e "\033[1;38;5;196mError: $error\033[0m"
-echo -e "\033[0;34mNo se pudo instalar yarn. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
+echo -e "\033[1;38;5;196m\033[1mError: $error\033[0m"
+echo -e "\033[0;34m\033[1mNo se pudo instalar yarn. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m"
 else
 echo -e "\033[38;5;2m\033[01mYarn se ha actualizado correctamente.\n\033[0m"
 fi
