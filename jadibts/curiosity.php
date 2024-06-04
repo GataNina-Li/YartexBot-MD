@@ -1,5 +1,5 @@
 <?php
 
-$short_options = "Jadibots";
+$short_options = "Jadibots"
 
 ?>
