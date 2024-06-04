@@ -1,7 +1,13 @@
 {
-  "name": "YartexBot-MD",
-  "description": "WhatsApp Bot - JS",
-  "repository": "https://github.com/GataNina-Li/YartexBot-MD",
-  "logo": "https://i.ibb.co/dG6rm49/fg-logo.png",
-  "keywords": ["bot", "whatsapp", "whatsapp-bot", "rpg", "yartex-bot-md", "games-wabot"]
+"name": "YartexBot-MD",
+"description": "Bot de WhatsApp con tematica Yaoi/Bl hecho por fans para fans.",
+"repository": "https://github.com/GataNina-Li/YartexBot-MD",
+"logo": "https://telegra.ph/file/3f00e26dcd5dcd09a68a1.jpg",
+"keywords": ["bot", "whatsapp", "whatsapp-bot", "boyslove", "yartex-bot-md", "yaoi"],
+"buildpacks": [
+{ "url": "heroku/nodejs" },
+{ "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" },
+{ "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git" },
+{ "url": "https://github.com/bogini/heroku-buildpack-graphicsmagick" }    
+]
 }
