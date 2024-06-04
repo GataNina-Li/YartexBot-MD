@@ -13,7 +13,6 @@ echo -e "\e[38;5;123m
 echo -e "\033[1;38;5;79mEmpezando instalación...\n\033[0m"
 echo -e "\033[38;5;165m\033[01mInstalando dependencias!!\n\033[0m" 
 echo -e "\e[38;5;49m
-
 █ █▄░█ █▀ ▀█▀ ▄▀█ █░░ █░░   █▀▀ █ ▀█▀
 █ █░▀█ ▄█ ░█░ █▀█ █▄▄ █▄▄   █▄█ █ ░█░\n\e[0m"
 
@@ -49,7 +48,7 @@ echo -e "\033[1;38;5;2m\033[01mNode.js se ha instalado correctamente.\n\033[0m"
 fi
 fi
 
-echo -e "\e[38;5;117m
+echo -e "\e[38;5;49m
 █ █▄░█ █▀ ▀█▀ ▄▀█ █░░ █░░   █▀▀ █▀▀ █▀▄▀█ █▀█ █▀▀ █▀▀
 █ █░▀█ ▄█ ░█░ █▀█ █▄▄ █▄▄   █▀░ █▀░ █░▀░█ █▀▀ ██▄ █▄█\n\e[0m"
 
@@ -85,7 +84,7 @@ echo -e "\033[1;38;5;2m\033[01mImageMagick se ha instalado correctamente.\n\033[
 fi
 fi
 
-echo -e "\e[38;5;117m
+echo -e "\e[38;5;49m
 █ █▄░█ █▀ ▀█▀ ▄▀█ █░░ █░░   █▄█ ▄▀█ █▀█ █▄░█
 █ █░▀█ ▄█ ░█░ █▀█ █▄▄ █▄▄   ░█░ █▀█ █▀▄ █░▀█\n\e[0m"
 
