@@ -16,14 +16,6 @@ global.imagen1 = fs.readFileSync('./storage/logos/Menu1.jpg')
 global.imagen2 = fs.readFileSync('./storage/logos/Menu2.jpg')
 global.imagen3 = fs.readFileSync('./storage/logos/Menu3.jpg')
 global.imagen4 = fs.readFileSync('./storage/logos/Menu4.jpg')
-global.icon = fs.readFileSync('./storage/logos/icon.webp')
-
-global.config = fs.readFileSync('./storage/imagenes/configuraciones.jpg')
-global.suerte = fs.readFileSync('./storage/imagenes/suerte.jpg')
-global.oracion = fs.readFileSync('./storage/imagenes/oracion.jpg')
-global.rosas = fs.readFileSync('./storage/imagenes/rosas.jpg')
-global.refran = fs.readFileSync('./storage/imagenes/refran.jpg')
-global.linksjpg = fs.readFileSync('./storage/imagenes/Links.jpg')
 
 var img = 'https://telegra.ph/file/9a9a4851b638c90ebb214.jpg'; var img1 = 'https://telegra.ph/file/c248943164f6a3d28088c.jpg'; var img2 = 'https://telegra.ph/file/f14102fec3b4104e41e98.jpg'; var img3 = 'https://telegra.ph/file/5646b7540b22e8a00615e.jpg'; var img4 = 'https://telegra.ph/file/e6c11fc60a74a77789f56.jpg'; var img5 = 'https://telegra.ph/file/19af932324e24ceb896cd.jpg'
 var img6 = 'https://telegra.ph/file/e1c9c47c389b17de97a03.jpg'; var img7 = 'https://telegra.ph/file/caa791fa59111b4b4311a.jpg'; var img8 = 'https://telegra.ph/file/76fff527eeaa2b61099ca.jpg'; var img9 = 'https://telegra.ph/file/3dad91ec4eea23ea93f3d.jpg'; var img10 = 'https://telegra.ph/file/4443d4eb77531313b1f9b.jpg'

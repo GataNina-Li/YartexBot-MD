@@ -11,7 +11,7 @@ conn.reply(m.chat, `*╭─────◈🌹◈──────╮*
 
 ${pickRandom(global.piropo)}
 
-*╰─────◈🌹◈──────╯*`, m, { contextInfo:{ externalAdReply: {title: '🥀 Piropo 🥀', body: saludo, sourceUrl: global.paypal, thumbnail: rosas }}})
+*╰─────◈🌹◈──────╯*`, m, { contextInfo:{ externalAdReply: {title: '🥀 Piropo 🥀', body: saludo, sourceUrl: global.paypal, thumbnail: imagen3 }}})
 
 }
 handler.help = ['piropo']

@@ -8,7 +8,7 @@ import chalk from 'chalk'
 import { fileURLToPath, pathToFileURL } from 'url'
 
 global.owner = [
-['524531287294', '✨ YartexBot-MD', true],
+['5493873687620', '✨ YartexBot-MD', true],
 ['542215034412'], 
 ['593968263524'],
 ['595976126756'],

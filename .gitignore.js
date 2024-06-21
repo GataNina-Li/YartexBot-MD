@@ -133,4 +133,5 @@ sessions/
 data.store.json
 database.json
 package-lock.json
+.git
  

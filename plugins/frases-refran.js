@@ -10,7 +10,7 @@ conn.reply(m.chat, `*╭─────◈🗿◈──────╮*
 
 ${pickRandom(global.refran2)}
 
-*╰─────◈🗿◈──────╯*`, m, { contextInfo:{ externalAdReply: {title: '🧠 Refrán 🧠', body: saludo, sourceUrl: global.paypal, thumbnail: refran }}})
+*╰─────◈🗿◈──────╯*`, m, { contextInfo:{ externalAdReply: {title: '🧠 Refrán 🧠', body: saludo, sourceUrl: global.paypal, thumbnail: imagen4 }}})
 
 }
 handler.help = ['refran']
