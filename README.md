@@ -97,10 +97,9 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ***
 
 ### 📦⛏️ BOXMINE HOST 
-[![YouTube](https://img.shields.io/badge/BoxMine_Host-GataBot-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Ko019wvu2Tc)
 [![YouTube](https://img.shields.io/badge/BoxMine_Host-World-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@boxminehost)
 
-> Tutorial para activar **GataBot-MD** en un servidor reconocido y para todos.
+> Tutorial para activar **YartexBot-MD** en un servidor reconocido y para todos.
 
 <a href="https://boxmineworld.com"><img src="https://i.imgur.com/allAyd4.png" height="125px"></a>
 ### BoxMine World
@@ -111,12 +110,12 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 - **Dudas sobre el Host:** [`Discord`](https://discord.gg/84qsr4v) _(Preguntar por Vicemi)_
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va71C1q2UPBOICnxu83r)
 
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://i.imgur.com/tD3NQSR.jpeg"></details>
+- [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://telegra.ph/file/1ff9729ad4e18c319bd50.jpg"></details>
 
 ***
 
 ### 🟢 INFINITY-HOST
-> Activar **GataBot-MD** 24/7 activo en Infinity-Host
+> Activar **YartexBot-MD** 24/7 activo en Infinity-Host
 
 <a href="https://dashboard.infinitywa.xyz"><img src="https://qu.ax/XLCK.jpg" height="125px"></a>
 ### Información del Host
@@ -128,12 +127,12 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A)
 - **Support:** [`Bot exclusivo`](https://wa.me/message/FETBF7YBO37CG1)
 
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://qu.ax/cpgf.jpg"></details>
+- [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://telegra.ph/file/4ed8f39a08e62569e766a.jpg"></details>
 
 ***
 
 ### 💎 FlarexCloud
-> Empiece a usar FlarexCloud para activar **GataBot-MD**
+> Empiece a usar FlarexCloud para activar **YartexBot-MD**
 
 <a href="https://www.flarex.cloud"><img src="https://cdn.flarex.cloud/deploy.png" height="60px"></a>
 ### Información sobre FlarexCloud
