@@ -258,7 +258,13 @@ let menu = `
 *. ⋅⊰ꕤ ┆* ${_p}ꜱᴄʀɪᴘᴛ
 *. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
 `.trim()
-await conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/991f743c25817e4b94db5.mp4' }, gifPlayback: true, caption: menu, mentions: [m.sender] }, { quoted: m })
+  
+let vid [
+'https://telegra.ph/file/991f743c25817e4b94db5.mp4',
+'https://telegra.ph/file/a45d4c28a7b57bf2b4e5c.mp4'
+].getRandom()
+  
+await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender] }, { quoted: m })
 }
 
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
