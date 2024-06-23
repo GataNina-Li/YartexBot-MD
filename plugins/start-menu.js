@@ -216,10 +216,10 @@ let menu = `
 ┆ ⋮ ⋅.⊹ *𐒄Ꮛ𐒐Ꮼ́ Ꮯ𐒀𐒄ᎵႱᏋᎿ𐒀* ⋅.⊹
 ┆ ⋮ . ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .
 ┆ ⋮
-┆ ⋮ *Usuario* @${m.sender.split("@")[0]}
-┆ ⋮ *Lugar* ${nombreLugar} - ${ciudad}
-┆ ⋮ *Registrados:* \`\`\`${Object.values(global.db.data.users).filter(user => user.registered == true).length}/${Object.keys(global.db.data.users).length}\`\`\`
-┆ ⋮ *Versión* \`${version}\`
+┆ ⋮  *Usuario* @${m.sender.split("@")[0]}
+┆ ⋮  *Lugar* ${nombreLugar} - ${ciudad}
+┆ ⋮  *Registrados:* \`\`\`${Object.values(global.db.data.users).filter(user => user.registered == true).length}/${Object.keys(global.db.data.users).length}\`\`\`
+┆ ⋮  *Versión* \`${version}\`
 ╰・・・・☆・・・・☆ ・・・・
 
 *. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ᏆΝҒϴᎡᎷᎪᏟᏆϴ́Ν :･ﾟ✧:･ﾟ✧*
@@ -257,7 +257,7 @@ let menu = `
 *. ⋅⊰ꕤ ┆* ${_p}ꜱᴄʀɪᴘᴛ
 *. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
 `.trim()
-await conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/991f743c25817e4b94db5.mp4' }, gifPlayback: true, caption: menu }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/991f743c25817e4b94db5.mp4' }, gifPlayback: true, caption: menu, mentions: [m.sender] }, { quoted: m })
 }
 
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
