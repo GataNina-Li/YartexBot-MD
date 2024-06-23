@@ -177,15 +177,49 @@ return [d, 'd ', h, 'h ', m, 'm '].map(v => v.toString().padStart(2, 0)).join(''
 */
 
 import fs from 'fs'
+import moment from 'moment-timezone'
+import { join, dirname } from 'path'
+import { parsePhoneNumber } from 'libphonenumber-js'
 
-let handler = async (m, { conn, usedPrefix: _p, __dirname, text, command }) => {
+let handler = async (m, { conn, usedPrefix: _p, text, command }) => {
+  
+let fechaMoment, formatDate, nombreLugar, ciudad = null
+const phoneNumber = '+' + m.sender
+const parsedPhoneNumber = parsePhoneNumber(phoneNumber)
+const countryCode = parsedPhoneNumber.country
+const countryData = ct.getCountry(countryCode)
+const timezones = countryData.timezones
+const zonaHoraria = timezones.length > 0 ? timezones[0] : 'UTC'; moment.locale('es')
+let lugarMoment = moment().tz(zonaHoraria)
+if (lugarMoment) { fechaMoment = lugarMoment.format('llll [(]a[)]')
+formatDate = fechaMoment.charAt(0).toUpperCase() + fechaMoment.slice(1)
+nombreLugar = countryData.name; const partes = zonaHoraria.split('/')
+ciudad = partes[partes.length - 1].replace(/_/g, ' ')
+} else { 
+lugarMoment = moment().tz('America/Quito')
+fechaMoment = lugarMoment.format('llll [(]a[)]')
+formatDate = fechaMoment.charAt(0).toUpperCase() + fechaMoment.slice(1)
+nombreLugar = 'America'; ciudad = 'Quito' 
+}
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const require = createRequire(__dirname)
+const { name, author, version, description, collaborators } = require(join(__dirname, './package.json'))
+
+let { money, joincount } = global.db.data.users[m.sender]
 
 let menu = `
-*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
-*⋅.⊹ 𐒄Ꮛ𐒐Ꮼ́ Ꮯ𐒀𐒄ᎵႱᏋᎿ𐒀 ⋅.⊹*
-*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+ ⋮ *. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+ ⋮ *⋅.⊹ 𐒄Ꮛ𐒐Ꮼ́ Ꮯ𐒀𐒄ᎵႱᏋᎿ𐒀 ⋅.⊹*
+ ⋮ *. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+ ⋮
+ ⋮ *Usuario* @${m.sender.split("@")[0]}
+ ⋮ *Lugar* ${nombreLugar} - ${ciudad}
+ ⋮ *Registrados:* \`${Object.values(global.db.data.users).filter(user => user.registered == true).length}/${Object.keys(global.db.data.users).length}\`
+ ⋮ *Versión* \`${version}\`
+╰・・・・☆・・・・☆ ・・・・
 
-*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ᏆΝҒϴᎡᎷᎪᏟᏆϴ́Ν *:･ﾟ✧*:･ﾟ✧*
+*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ᏆΝҒϴᎡᎷᎪᏟᏆϴ́Ν :･ﾟ✧:･ﾟ✧*
 *. ⋅⊰ꕤ ┆* ${_p}ʜᴇʟᴘ*
 *. ⋅⊰ꕤ ┆* ${_p}ᴀʟʟᴍᴇɴᴜ
 *. ⋅⊰ꕤ ┆* ${_p}ʜᴏʀᴀʀɪᴏꜱ
