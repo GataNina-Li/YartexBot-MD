@@ -179,6 +179,7 @@ return [d, 'd ', h, 'h ', m, 'm '].map(v => v.toString().padStart(2, 0)).join(''
 import fs from 'fs'
 import moment from 'moment-timezone'
 import { join, dirname } from 'path'
+import ct from 'countries-and-timezones'
 import { parsePhoneNumber } from 'libphonenumber-js'
 
 let handler = async (m, { conn, usedPrefix: _p, text, command }) => {
