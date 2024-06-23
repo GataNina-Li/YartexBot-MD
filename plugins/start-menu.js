@@ -212,15 +212,16 @@ const { name, author, version, description, collaborators } = require(join(__dir
 let { money, joincount } = global.db.data.users[m.sender]
 
 let menu = `
+╭・・・・☆・・・・・・☆ ・・・・
 ┆ ⋮ . ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .
 ┆ ⋮ ⋅.⊹ *𐒄Ꮛ𐒐Ꮼ́ Ꮯ𐒀𐒄ᎵႱᏋᎿ𐒀* ⋅.⊹
 ┆ ⋮ . ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .
 ┆ ⋮
 ┆ ⋮  *Usuario* @${m.sender.split("@")[0]}
 ┆ ⋮  *Lugar* ${nombreLugar} - ${ciudad}
-┆ ⋮  *Registrados:* \`\`\`${Object.values(global.db.data.users).filter(user => user.registered == true).length}/${Object.keys(global.db.data.users).length}\`\`\`
+┆ ⋮  *Registrados* \`\`\`${Object.values(global.db.data.users).filter(user => user.registered == true).length}/${Object.keys(global.db.data.users).length}\`\`\`
 ┆ ⋮  *Versión* \`${version}\`
-╰・・・・☆・・・・☆ ・・・・
+╰・・・・☆・・・・・・☆ ・・・・
 
 *. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ᏆΝҒϴᎡᎷᎪᏟᏆϴ́Ν :･ﾟ✧:･ﾟ✧*
 *. ⋅⊰ꕤ ┆* ${_p}ʜᴇʟᴘ*
