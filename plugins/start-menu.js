@@ -207,7 +207,7 @@ nombreLugar = 'America'; ciudad = 'Quito'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname)
-const { name, author, version, description, collaborators } = require(join(__dirname, './package.json'))
+const { name, author, version, description, collaborators } = require(join(__dirname, '../package.json'))
 
 let { money, joincount } = global.db.data.users[m.sender]
 
