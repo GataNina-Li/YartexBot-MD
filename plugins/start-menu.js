@@ -1,4 +1,4 @@
-import { promises } from 'fs'
+/*import { promises } from 'fs'
 import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
@@ -174,4 +174,56 @@ let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [d, 'd ', h, 'h ', m, 'm '].map(v => v.toString().padStart(2, 0)).join('')
 }
-  
+*/
+
+import fs from 'fs'
+
+let handler = async (m, { conn, usedPrefix: _p, __dirname, text, command }) => {
+
+let menu = `
+*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+*⋅.⊹ 𐒄Ꮛ𐒐Ꮼ́ Ꮯ𐒀𐒄ᎵႱᏋᎿ𐒀 ⋅.⊹*
+*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+
+*. ⋅ᘛ⁐̤ᕐ⩺┈٠┈┈•༶ ᏆΝҒϴᎡᎷᎪᏟᏆϴ́Ν *:･ﾟ✧*:･ﾟ✧*
+*. ⋅⊰࿐┆* ${_p}ʜᴇʟᴘ*
+*. ⋅⊰࿐┆* ${_p}ᴀʟʟᴍᴇɴᴜ
+*. ⋅⊰࿐┆* ${_p}ʜᴏʀᴀʀɪᴏꜱ
+*. ⋅⊰࿐┆* ${_p}ᴏᴡɴᴇʀ
+*. ⋅⊰࿐┆* ${_p}ᴄᴏɴᴛᴀᴄᴛᴏ
+*. ⋅⊰࿐┆* ${_p}ᴄʀᴇᴀᴅᴏʀ
+*. ⋅⊰࿐┆* ${_p}ᴛQᴛᴏ
+*. ⋅⊰࿐┆* ${_p}ᴄʀᴇᴅɪᴛᴏꜱ
+*. ⋅⊰࿐┆* ${_p}ᴄʀᴇᴅɪᴛꜱ
+*. ⋅⊰࿐┆* ${_p}ᴛʜᴀɴᴋꜱ
+*. ⋅⊰࿐┆* ${_p}ᴛʜᴀɴᴋꜱᴛᴏ
+*. ⋅⊰࿐┆* ${_p}ᴄᴜᴇɴᴛᴀꜱᴏꜰɪᴄɪᴀʟᴇꜱ
+*. ⋅⊰࿐┆* ${_p}ᴄᴜᴇɴᴛᴀꜱᴏꜰᴄ
+*. ⋅⊰࿐┆* ${_p}ᴄᴜᴇɴᴛᴀꜱ
+*. ⋅⊰࿐┆* ${_p}ɢʀᴜᴘᴏꜱ
+*. ⋅⊰࿐┆* ${_p}ᴅᴀꜱʜ
+*. ⋅⊰࿐┆* ${_p}ᴅᴀꜱʜʙᴏᴀʀᴅ
+*. ⋅⊰࿐┆* ${_p}ᴠɪᴇᴡꜱ
+*. ⋅⊰࿐┆* ${_p}ᴅᴀᴛᴀʙᴀꜱᴇ
+*. ⋅⊰࿐┆* ${_p}ᴜꜱᴜᴀʀɪᴏꜱ
+*. ⋅⊰࿐┆* ${_p}ᴜꜱᴇʀ
+*. ⋅⊰࿐┆* ${_p}ᴅᴏɴᴀʀ
+*. ⋅⊰࿐┆* ${_p}ᴅᴏɴᴀᴛᴇ
+*. ⋅⊰࿐┆* ${_p}ᴅᴏɴᴀꜱɪ
+*. ⋅⊰࿐┆* ${_p}ɢʀᴏᴜᴘꜱ
+*. ⋅⊰࿐┆* ${_p}ɢʀᴏᴜᴘʟɪꜱᴛ
+*. ⋅⊰࿐┆* ${_p}ɪɴꜰɪɴɪᴛʏ
+*. ⋅⊰࿐┆* ${_p}ʜᴏꜱᴛ
+*. ⋅⊰࿐┆* ${_p}ʜᴏꜱᴛɪɴɢ
+*. ⋅⊰࿐┆* ${_p}ɪɴꜰᴏʙᴏᴛ
+*. ⋅⊰࿐┆* ${_p}ɪɴꜱᴛᴀʟᴀʀʙᴏᴛ
+*. ⋅⊰࿐┆* ${_p}ꜱᴄʀɪᴘᴛ
+*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+`.trim()
+await conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/991f743c25817e4b94db5.mp4' }, gifPlayback: true, caption: menu }, { quoted: m })
+}
+
+//handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
+handler.command = ['help', 'menucompleto', 'allmenu'] 
+handler.register = true
+export default handler
