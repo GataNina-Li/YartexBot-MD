@@ -596,7 +596,7 @@ let vid = [
 ].getRandom()
 
 await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
-mentionedJid: conn.parseMention(top),
+mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
 forwardingScore: 1, 
 forwardedNewsletterMessageInfo: {
