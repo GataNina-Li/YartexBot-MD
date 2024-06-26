@@ -210,6 +210,7 @@ const require = createRequire(__dirname)
 const { name, author, version, description, collaborators } = require(join(__dirname, '../package.json'))
 
 let { money, joincount } = global.db.data.users[m.sender]
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
 let menu = `
 ╭・・・・☆・・・・・・☆ ・・・・
@@ -593,8 +594,16 @@ let vid = [
 //'https://telegra.ph/file/a45d4c28a7b57bf2b4e5c.mp4',
 'https://telegra.ph/file/42628261be1a83c99907b.mp4'
 ].getRandom()
-  
-await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender] }, { quoted: m })
+
+await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
+mentionedJid: conn.parseMention(top),
+isForwarded: true,
+forwardingScore: 1, 
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363302472386010@newsletter',
+newsletterName: 'YartexBot-MD ✨',
+serverMessageId: -1
+}}}, { quoted: fkontak })
 }
 
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
