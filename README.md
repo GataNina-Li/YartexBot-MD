@@ -96,6 +96,20 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ***
 
+### 💎 FlarexCloud
+> Empiece a usar FlarexCloud para activar **YartexBot-MD**
+
+<a href="https://www.flarex.cloud"><img src="https://cdn.flarex.cloud/deploy.png" height="60px"></a>
+### Información sobre FlarexCloud
+
+- **Página:** [`Aquí`](https://www.flarex.cloud)
+- **Dashboard / Área de Pagos:** [`Aquí`](https://billing.flarex.cloud)
+- **Game Panel:** [`Aquí`](https://gamepanel.flarex.cloud)
+- **Discord:** [`Aquí`](https://discord.flarex.cloud)
+- **Contacto:** [`hi@flarex.cloud`](mailto:hi@flarex.cloud) / [`support@flarex.cloud`](mailto:support@flarex.cloud) / [`partnerships@flarex.cloud`](mailto:partnerships@flarex.cloud)
+
+***
+
 ### 📦⛏️ BOXMINE HOST 
 [![YouTube](https://img.shields.io/badge/BoxMine_Host-World-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@boxminehost)
 
@@ -128,20 +142,6 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 - **Support:** [`Bot exclusivo`](https://wa.me/message/FETBF7YBO37CG1)
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://telegra.ph/file/4ed8f39a08e62569e766a.jpg"></details>
-
-***
-
-### 💎 FlarexCloud
-> Empiece a usar FlarexCloud para activar **YartexBot-MD**
-
-<a href="https://www.flarex.cloud"><img src="https://cdn.flarex.cloud/deploy.png" height="60px"></a>
-### Información sobre FlarexCloud
-
-- **Página:** [`Aquí`](https://www.flarex.cloud)
-- **Dashboard / Área de Pagos:** [`Aquí`](https://billing.flarex.cloud)
-- **Game Panel:** [`Aquí`](https://gamepanel.flarex.cloud)
-- **Discord:** [`Aquí`](https://discord.flarex.cloud)
-- **Contacto:** [`hi@flarex.cloud`](mailto:hi@flarex.cloud) / [`support@flarex.cloud`](mailto:support@flarex.cloud) / [`partnerships@flarex.cloud`](mailto:partnerships@flarex.cloud)
 
 ***
 
