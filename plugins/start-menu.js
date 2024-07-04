@@ -7,7 +7,7 @@ import ct from 'countries-and-timezones'
 import { parsePhoneNumber } from 'libphonenumber-js'
 
 let handler = async (m, { conn, usedPrefix: _p, text, command }) => {
-  
+let editMenu = global.db.data.chats[m.chat].editMenu
 let fechaMoment, formatDate, nombreLugar, ciudad = null
 const phoneNumber = '+' + m.sender
 const parsedPhoneNumber = parsePhoneNumber(phoneNumber)
@@ -46,7 +46,7 @@ let menu = `
 ┆ ⋮  *Versión* \`${version}\`
 ╰・・・・☆・・・・・・☆ ・・・・
 
-*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ℹ :･ﾟ✧:･ﾟ✧･ﾟ✧*
+${editMenu.emoji ? '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ℹ :･ﾟ✧:･ﾟ✧･ﾟ✧*' : '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶:･ﾟ✧:･ﾟ✧･ﾟ✧*'}
 *. ⋅⊰ꕤ ┆* ⭔ 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈Ó𝐍 
 *. ⋅⊰ꕤ ┆* ・・・・・・・・・・・
 *. ⋅⊰ꕤ ┆* ${_p}ʜᴇʟᴘ
