@@ -9,12 +9,12 @@ return conn.reply(m.chat, '*No tiene permitido usar este comando, no eres dueño
 }
 
 let initialSections = [
-  { header: 'EMOJIS', title: "Actualmente: ", description: `Emojis en el menú completo`, id: `` },
-  { header: "IMAGEN", title: "Actualmente: ", description: `Usar sólo imágenes para el menú completo`, id: `` },
-  { header: "VÍDEO", title: "Actualmente: ", description: `Usar sólo vídeos para el menú completo`, id: `` },
-  { header: "PRESENTACIÓN DINÁMICA", title: "Actualmente: ", description: `Usar Imágenes y Vídeos de forma aleatoria en el menú completo`, id: `` },
-  { header: "SIMPLE", title: "Actualmente: ", description: `Omitir multimedia en el menú completo`, id: `` },
-  { header: "MENCIÓN", title: "Actualmente: ", description: `Mencionar al usuario en el menú completo`, id: `` }
+  { header: 'EMOJIS', title: "Actualmente: ", description: `Emojis en el menú completo`, id: `m` },
+  { header: "IMAGEN", title: "Actualmente: ", description: `Usar sólo imágenes para el menú completo`, id: `m` },
+  { header: "VÍDEO", title: "Actualmente: ", description: `Usar sólo vídeos para el menú completo`, id: `m` },
+  { header: "PRESENTACIÓN DINÁMICA", title: "Actualmente: ", description: `Usar Imágenes y Vídeos de forma aleatoria en el menú completo`, id: `m` },
+  { header: "SIMPLE", title: "Actualmente: ", description: `Omitir multimedia en el menú completo`, id: `m` },
+  { header: "MENCIÓN", title: "Actualmente: ", description: `Mencionar al usuario en el menú completo`, id: `m` }
 ]
 
 let headers = initialSections.map(section => section.header);
