@@ -68,7 +68,7 @@ let botImg2 = 'https://telegra.ph/file/95dc64c1182fd7985c838.jpg'
 let botImg3 = 'https://telegra.ph/file/e46ef0f31bc2bd030ce6b.jpg'
 let botImg4 = 'https://telegra.ph/file/5895dd5bee8c8c24a0966.jpg'
 let botImg5 = 'https://telegra.ph/file/96c870b2df851f15b000f.jpg'
-let yartexImg = [botImg1, botImg2, botImg3, botImg4, botImg5]
+global.yartexImg = [botImg1, botImg2, botImg3, botImg4, botImg5]
   
 //Enlaces
 global.yt = 'https://youtube.com/@gatadios'
