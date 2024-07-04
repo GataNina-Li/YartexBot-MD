@@ -58,7 +58,7 @@ await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, n
 if (command === "editaremoji01") {
 if (editMenu.hasOwnProperty('emoji')) {
 editMenu.emoji = !editMenu.emoji
-let mensajeConfirmacion = `Los emojis ahora están ${editMenu.emoji ? 'activados ✅' : 'desactivados ❌'} para el menú completo`
+let mensajeConfirmacion = `Los emojis ahora están ${editMenu.emoji ? 'activado ✅' : 'desactivado ❌'} para el menú completo`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -68,7 +68,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 if (command === "editardividir07") {
 if (editMenu.hasOwnProperty('dividir')) {
 editMenu.dividir = !editMenu.dividir
-let mensajeConfirmacion = `Truncar menú se ha ${editMenu.emoji ? 'activados ✅' : 'desactivados ❌'}, ahora aparecerá "... Leer más" en cada sección`
+let mensajeConfirmacion = `Truncar menú se ha ${editMenu.emoji ? 'activado ✅ ahora aparecerá "... Leer más" en cada sección' : 'desactivado ❌ ya no aparecerá "... Leer más" en cada sección'}`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
