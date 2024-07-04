@@ -13,39 +13,25 @@ let titulo = [ "EMOJIS", "IMAGEN", "VÍDEO", "PRESENTACIÓN DINÁMICA", "SIMPLE"
 let nombre = [ "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: " ]
 let descripción = [ "Emojis en el menú completo", "Usar sólo imágenes para el menú completo", "Usar sólo vídeos para el menú completo", "Usar Imágenes y Vídeos de forma aleatoria en el menú completo", "Omitir multimedia en el menú completo", "Mencionar al usuario en el menú completo" ]
 let comando = [ "m", "m", "m", "m", "m", "m" ]
-/*let sections = Object.keys(seccion, titulo, nombre, descripción, comando).map((v, index) => ({ title: `${seccion[v]}`,
-rows: [{ header: titulo[v], title: nombre[v], description: descripción[v], id: comando[v], }], }))*/
 
-const sections = [];
+const sections = [
+{ title: seccion[0], rows: [
+{ header: titulo[0], title: nombre[0], description: descripción[0], id: comando[0] },
+{ header: titulo[1], title: nombre[1], description: descripción[1], rowId: comando[1] },
+{ header: titulo[2], title: nombre[2], description: descripción[2], rowId: comando[2] },
+{ header: titulo[3], title: nombre[3], description: descripción[3], rowId: comando[3] },
+{ header: titulo[4], title: nombre[4], description: descripción[4], rowId: comando[4] },
+{ header: titulo[5], title: nombre[5], description: descripción[5], rowId: comando[5] }
+]}
+]
 
-for (let i = 0; i < seccion.length; i++) {
-    const section = {
-        title: `${seccion[i]}`,
-        rows: []
-    };
-
-    for (let j = 0; j < titulo.length; j++) {
-        const row = {
-            header: titulo[j],
-            title: nombre[j],
-            description: descripción[j],
-            id: comando[j]
-        };
-        section.rows.push(row);
-    }
-
-    sections.push(section);
-}
-
-const listMessage = {
+const list = {
 text: `*Editar menú*`,
 footer: wm,
-title: null,
 buttonText: `AJUSTAR`,
-sections
 }
 
-await conn.sendList(m.chat, listMessage.text, listMessage.footer, listMessage.buttonText, sections, null, null, fkontak)
+await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, fkontak)
   
 }
 handler.command = /^(editarmenu)$/i
