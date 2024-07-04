@@ -426,7 +426,7 @@ let vid = [
 ].getRandom()
 
 if (editMenu.imagen) {
-await conn.sendMessage(m.chat, { image: { url: yartexImg }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
+await conn.sendMessage(m.chat, { image: { url: yartexImg.getRamdon() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
 forwardingScore: 1, 
