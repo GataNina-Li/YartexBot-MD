@@ -42,7 +42,10 @@ const sections = [
 { header: titulo[2], title: nombre[2], description: descripción[2], id: usedPrefix + comando[2] },
 { header: titulo[3], title: nombre[3], description: descripción[3], id: usedPrefix + comando[3] },
 { header: titulo[4], title: nombre[4], description: descripción[4], id: usedPrefix + comando[4] },
-{ header: titulo[5], title: nombre[5], description: descripción[5], id: usedPrefix + comando[5] }
+{ header: titulo[5], title: nombre[5], description: descripción[5], id: usedPrefix + comando[5] },
+{ header: titulo[6], title: nombre[6], description: descripción[6], id: usedPrefix + comando[6] },
+{ header: titulo[7], title: nombre[7], description: descripción[7], id: usedPrefix + comando[7] },
+{ header: titulo[8], title: nombre[8], description: descripción[8], id: usedPrefix + comando[8] }
 ]} 
 ]
 const list = {
