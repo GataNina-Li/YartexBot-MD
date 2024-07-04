@@ -13,8 +13,29 @@ let titulo = [ "EMOJIS", "IMAGEN", "VÍDEO", "PRESENTACIÓN DINÁMICA", "SIMPLE"
 let nombre = [ "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: " ]
 let descripción = [ "Emojis en el menú completo", "Usar sólo imágenes para el menú completo", "Usar sólo vídeos para el menú completo", "Usar Imágenes y Vídeos de forma aleatoria en el menú completo", "Omitir multimedia en el menú completo", "Mencionar al usuario en el menú completo" ]
 let comando = [ "m", "m", "m", "m", "m", "m" ]
-let sections = Object.keys(seccion, titulo, nombre, descripción, comando).map((v, index) => ({ title: `${seccion[v]}`,
-rows: [{ header: titulo[v], title: nombre[v], description: descripción[v], id: comando[v], }], }))
+/*let sections = Object.keys(seccion, titulo, nombre, descripción, comando).map((v, index) => ({ title: `${seccion[v]}`,
+rows: [{ header: titulo[v], title: nombre[v], description: descripción[v], id: comando[v], }], }))*/
+
+const sections = [];
+
+for (let i = 0; i < seccion.length; i++) {
+    const section = {
+        title: `${seccion[i]}`,
+        rows: []
+    };
+
+    for (let j = 0; j < titulo.length; j++) {
+        const row = {
+            header: titulo[j],
+            title: nombre[j],
+            description: descripción[j],
+            id: comando[j]
+        };
+        section.rows.push(row);
+    }
+
+    sections.push(section);
+}
 
 const listMessage = {
 text: `*Editar menú*`,
