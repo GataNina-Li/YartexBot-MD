@@ -23,25 +23,26 @@ let descriptions = initialSections.map(section => section.description);
 let ids = initialSections.map(section => section.id);
 
 
-let sections = headers.map((header, index) => ({
-title: `CONFIGURACIÓN PARA EL MENÚ COMPLETO`,
-rows: [{
-header: headers[index],
-title: titles[index],
-description: descriptions[index],
-id: ids[index]
+let sections = [{
+  title: `CONFIGURACIÓN PARA EL MENÚ COMPLETO`,
+  rows: headers.map((header, index) => ({
+    title: titles[index],
+    description: descriptions[index],
+    rowId: ids[index]
+  }))
 }]
-}))
-  
+
+
 const listMessage = {
-text: `*Editar menú*`,
-footer: wm,
-title: null,
-buttonText: `AJUSTAR`,
-sections }
-  
+  text: `*Editar menú*`,
+  footer: wm,
+  title: null,
+  buttonText: `AJUSTAR`,
+  sections
+}
+
 await conn.sendList(m.chat, listMessage.text, listMessage.footer, listMessage.buttonText, sections, null, null, fkontak)
-  
+
 }
 handler.command = /^(editarmenu)$/i
 export default handler
