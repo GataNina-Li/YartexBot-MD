@@ -435,7 +435,6 @@ newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: fkontak })
-}
 } else {
 await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
@@ -446,7 +445,7 @@ newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: fkontak })
-}
+}}
 }
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
 handler.command = ['help', 'menucompleto', 'allmenu'] 
