@@ -17,16 +17,30 @@ let initialSections = [
   { header: "MENCIÓN", title: "Actualmente: ", description: `Mencionar al usuario en el menú completo`, id: `` }
 ]
 
-let listSections = [{
+let headers = initialSections.map(section => section.header);
+let titles = initialSections.map(section => section.title);
+let descriptions = initialSections.map(section => section.description);
+let ids = initialSections.map(section => section.id);
+
+
+let sections = headers.map((header, index) => ({
 title: `CONFIGURACIÓN PARA EL MENÚ COMPLETO`,
-rows: initialSections.map(section => ({
-header: section.header,
-title: section.title,
-description: section.description,
-id: section.id
-}))
+rows: [{
+header: headers[index],
+title: titles[index],
+description: descriptions[index],
+id: ids[index]
 }]
-await conn.sendList(m.chat, `*Editar menú*`, wm, `AJUSTAR`, listSections, fkontak)
+}))
+  
+const listMessage = {
+text: `*Editar menú*`,
+footer: wm,
+title: null,
+buttonText: `AJUSTAR`,
+sections }
+  
+await conn.sendList(m.chat, listMessage.text, listMessage.footer, listMessage.buttonText, sections, null, null, fkontak)
   
 }
 handler.command = /^(editarmenu)$/i
