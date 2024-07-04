@@ -17,11 +17,11 @@ let comando = [ "m", "m", "m", "m", "m", "m" ]
 const sections = [
 { title: seccion[0], rows: [
 { header: titulo[0], title: nombre[0], description: descripción[0], id: comando[0] },
-{ header: titulo[1], title: nombre[1], description: descripción[1], rowId: comando[1] },
-{ header: titulo[2], title: nombre[2], description: descripción[2], rowId: comando[2] },
-{ header: titulo[3], title: nombre[3], description: descripción[3], rowId: comando[3] },
-{ header: titulo[4], title: nombre[4], description: descripción[4], rowId: comando[4] },
-{ header: titulo[5], title: nombre[5], description: descripción[5], rowId: comando[5] }
+{ header: titulo[1], title: nombre[1], description: descripción[1], id: comando[1] },
+{ header: titulo[2], title: nombre[2], description: descripción[2], id: comando[2] },
+{ header: titulo[3], title: nombre[3], description: descripción[3], id: comando[3] },
+{ header: titulo[4], title: nombre[4], description: descripción[4], id: comando[4] },
+{ header: titulo[5], title: nombre[5], description: descripción[5], id: comando[5] }
 ]}
 ]
 
