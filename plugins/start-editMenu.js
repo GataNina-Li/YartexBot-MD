@@ -1,11 +1,8 @@
 let handler = async (m, { conn, usedPrefix, command, isAdmin, isOwner, isROwner }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-let editMenuString = global.db.data.chats[m.chat].editMenu
-console.log(editMenuString)
-//let editMenu = JSON.parse(editMenuString)
-
-//let emojiItem = editMenu.find(item => item.hasOwnProperty('emoji'))
+let editMenu = global.db.data.chats[m.chat].editMenu
+let emojiItem = editMenu.find(item => item.hasOwnProperty('emoji'))
   
 if (m.isGroup && !isAdmin) {
 return conn.reply(m.chat, '*No tiene permitido usar este comando, debe de ser admin*')
