@@ -8,12 +8,13 @@ return conn.reply(m.chat, '*No tiene permitido usar este comando, debe de ser ad
 return conn.reply(m.chat, '*No tiene permitido usar este comando, no eres dueño de este bot*')
 }
 
+let seccion = [ 'CONFIGURACIÓN PARA EL MENU COMPLETO' ]
 let titulo = [ "EMOJIS", "IMAGEN", "VÍDEO", "PRESENTACIÓN DINÁMICA", "SIMPLE", "MENCIÓN" ]
 let nombre = [ "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: ", "Actualmente: " ]
 let descripción = [ "Emojis en el menú completo", "Usar sólo imágenes para el menú completo", "Usar sólo vídeos para el menú completo", "Usar Imágenes y Vídeos de forma aleatoria en el menú completo", "Omitir multimedia en el menú completo", "Mencionar al usuario en el menú completo" ]
 let comando = [ "m", "m", "m", "m", "m", "m" ]
-let sections = Object.keys(titulo, nombre, descripción, comando).map((v, index) => ({ title: `${titulo[v]}`,
-rows: [{ title: `${nombre[v]}`, description: `${descripción[v]}`, id: comando[v], }], }))
+let sections = Object.keys(seccion, titulo, nombre, descripción, comando).map((v, index) => ({ title: `${seccion[v]}`,
+rows: [{ header: titulo[v], title: nombre[v], description: descripción[v], id: comando[v], }], }))
 
 const listMessage = {
 text: `*Editar menú*`,
