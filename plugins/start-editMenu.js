@@ -43,7 +43,7 @@ const sections = [
 { header: titulo[3], title: nombre[3], description: descripción[3], id: usedPrefix + comando[3] },
 { header: titulo[4], title: nombre[4], description: descripción[4], id: usedPrefix + comando[4] },
 { header: titulo[5], title: nombre[5], description: descripción[5], id: usedPrefix + comando[5] }
-]}
+]} 
 ]
 const list = {
 text: `*Editar menú*`,
