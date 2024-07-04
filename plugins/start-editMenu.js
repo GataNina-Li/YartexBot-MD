@@ -31,7 +31,7 @@ footer: wm,
 buttonText: `AJUSTAR`,
 }
 
-await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, fkontak)
+await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, fkontak)
   
 }
 handler.command = /^(editarmenu)$/i
