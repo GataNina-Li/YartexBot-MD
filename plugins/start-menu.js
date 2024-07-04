@@ -45,7 +45,7 @@ let menu = `
 ┆ ⋮  *Registrados* \`\`\`${Object.values(global.db.data.users).filter(user => user.registered == true).length}/${Object.keys(global.db.data.users).length}\`\`\`
 ┆ ⋮  *Versión* \`${version}\`
 ╰・・・・☆・・・・・・☆ ・・・・
-${String.fromCharCode(8206).repeat(850)}
+${readMore}
 ${editMenu.emoji ? '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ℹ :･ﾟ✧:･ﾟ✧･ﾟ✧*' : '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶:･ﾟ✧:･ﾟ✧･ﾟ✧*'}
 *. ⋅⊰ꕤ ┆* ⭔ 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈Ó𝐍 
 *. ⋅⊰ꕤ ┆* ・・・・・・・・・・・
@@ -82,7 +82,7 @@ ${editMenu.emoji ? '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ℹ :･ﾟ✧:･ﾟ✧･ﾟ
 *. ⋅⊰ꕤ ┆* ${_p}ɪɴꜱᴛᴀʟᴀʀʙᴏᴛ
 *. ⋅⊰ꕤ ┆* ${_p}ꜱᴄʀɪᴘᴛ
 *. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
-${String.fromCharCode(8206).repeat(850)}
+${readMore}
 ${editMenu.emoji ? '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ 🪂 :･ﾟ✧:･ﾟ✧･ﾟ✧*' : '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶:･ﾟ✧:･ﾟ✧･ﾟ✧*'}
 *. ⋅⊰ꕤ ┆* ⭔ 𝐈𝐍𝐈𝐂𝐈𝐎
 *. ⋅⊰ꕤ ┆* ・・・・・・・・・・・
@@ -440,3 +440,6 @@ serverMessageId: -1
 handler.command = ['help', 'menucompleto', 'allmenu'] 
 handler.register = true
 export default handler
+
+const more = String.fromCharCode(8206);
+const readMore = more.repeat(4001);
