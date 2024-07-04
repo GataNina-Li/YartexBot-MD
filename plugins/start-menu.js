@@ -415,7 +415,8 @@ let vid = [
 //'https://telegra.ph/file/a45d4c28a7b57bf2b4e5c.mp4',
 //'https://telegra.ph/file/42628261be1a83c99907b.mp4',
 //'https://telegra.ph/file/979133eed9684f927804a.mp4'
-'https://telegra.ph/file/141ad86e7786dbf6ea2dc.mp4' //bl
+//'https://telegra.ph/file/141ad86e7786dbf6ea2dc.mp4' //bl
+'https://telegra.ph/file/7f9922e4d2cb2001b4682.mp4'
 ].getRandom()
 
 await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
