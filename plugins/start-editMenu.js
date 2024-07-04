@@ -65,10 +65,24 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
+if (command === "editarimagen02") {
+if (editMenu.hasOwnProperty('imagen')) {
+editMenu.imagen = !editMenu.imagen
+editMenu.video = false
+editMenu.dinamico = false
+editMenu.simple = false
+editMenu.personalizado = false
+let mensajeConfirmacion = `Las imágenes están ${editMenu.imagen ? 'activadas ✅' : 'desactivadas ❌'} para el menú completo`
+global.db.data.chats[m.chat].editMenu = editMenu
+conn.reply(m.chat, mensajeConfirmacion, m)
+} else {
+return conn.reply(m.chat, hasOwnPropertyError, m)
+}}
+
 if (command === "editarmencion06") {
 if (editMenu.hasOwnProperty('mencion')) {
 editMenu.mencion = !editMenu.mencion
-let mensajeConfirmacion = `La mención está ${editMenu.mencion ? 'activado ✅ para el menú completo, aparecerá el nombre de usuario sin mencionar' : 'desactivado ❌ para el menú completo'}`
+let mensajeConfirmacion = `La mención está ${editMenu.mencion ? 'activado ✅ para el menú completo' : 'desactivado ❌ para el menú completo, aparecerá el nombre de usuario sin mencionar'}`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
