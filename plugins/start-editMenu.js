@@ -30,7 +30,7 @@ let descripción = [
 "Usar Imágenes y Vídeos de forma aleatoria en el menú", 
 "Omitir multimedia en el menú", 
 "Mencionar al usuario en el menú",
-"Usar \"ver más\" despuésde cada sección del menú",
+"Aplicar \"... Leer más\" después de cada sección del menú",
 "Aplicar verificado al mensaje del menú",
 "Usa esta opción si quieres agregar una imagen personalizada al menú"
 ]
@@ -59,6 +59,16 @@ if (command === "editaremoji01") {
 if (editMenu.hasOwnProperty('emoji')) {
 editMenu.emoji = !editMenu.emoji
 let mensajeConfirmacion = `Los emojis ahora están ${editMenu.emoji ? 'activados ✅' : 'desactivados ❌'} para el menú completo`
+global.db.data.chats[m.chat].editMenu = editMenu
+conn.reply(m.chat, mensajeConfirmacion, m)
+} else {
+return conn.reply(m.chat, hasOwnPropertyError, m)
+}}
+
+if (command === "editardividir07") {
+if (editMenu.hasOwnProperty('dividir')) {
+editMenu.dividir = !editMenu.dividir
+let mensajeConfirmacion = `Truncar menú se ha ${editMenu.emoji ? 'activados ✅' : 'desactivados ❌'}, ahora aparecerá "... Leer más" en cada sección`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
