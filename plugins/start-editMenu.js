@@ -29,8 +29,8 @@ let descripción = [
 "Usar sólo vídeos para el menú", 
 "Usar Imágenes y Vídeos de forma aleatoria en el menú", 
 "Omitir multimedia en el menú", 
-"Mencionar al usuario en el menú",
-"Aplicar \"... Leer más\" después de cada sección del menú",
+"Mencionar \"@\" al usuario en el menú",
+"Aplicar \"... Leer más\" antes de loa comandos",
 "Aplicar verificado al mensaje del menú",
 "Usa esta opción si quieres agregar una imagen personalizada al menú"
 ]
@@ -65,10 +65,20 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
+if (command === "editarmencion06") {
+if (editMenu.hasOwnProperty('mencion')) {
+editMenu.mencion = !editMenu.mencion
+let mensajeConfirmacion = `La mención está ${editMenu.mencion ? 'activado ✅ para el menú completo, aparecerá el nombre de usuario sin mencionar' : 'desactivado ❌ para el menú completo'}`
+global.db.data.chats[m.chat].editMenu = editMenu
+conn.reply(m.chat, mensajeConfirmacion, m)
+} else {
+return conn.reply(m.chat, hasOwnPropertyError, m)
+}}
+  
 if (command === "editardividir07") {
 if (editMenu.hasOwnProperty('dividir')) {
 editMenu.dividir = !editMenu.dividir
-let mensajeConfirmacion = `Truncar menú se ha ${editMenu.dividir ? 'activado ✅ ahora aparecerá "... Leer más" en cada sección' : 'desactivado ❌ ya no aparecerá "... Leer más" en cada sección'}`
+let mensajeConfirmacion = `Truncar menú se ha ${editMenu.dividir ? 'activado ✅ ahora aparecerá "... Leer más" antes de los comandos' : 'desactivado ❌ ya no aparecerá "... Leer más"'}`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
