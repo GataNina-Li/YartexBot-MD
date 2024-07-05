@@ -37,7 +37,7 @@ global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['54922150
 global.packname = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨'
 global.author = 'ɢᴀᴛᴀ ᴅɪᴏs 🫶'
 global.wm = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ | ɢᴀᴛᴀ ᴅɪᴏs 🫶'
-global.wm2 = '                    ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨\n*♡º°‘¨ һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs ¨‘°º♡*'
+global.wm2 = '                   ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨\n*♡º°‘¨ һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs ¨‘°º♡*'
 global.des = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨ con tematica Yaoi/Bl hecho por fans para fans.'
 
 
