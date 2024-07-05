@@ -1,6 +1,8 @@
 import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 import fetch from 'node-fetch'
+import axios from 'axios'
+import { PNGReader } from 'pngjs'
 
 let handler = async (m, { conn, usedPrefix, command, isAdmin, isOwner, isROwner, text }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
@@ -189,9 +191,16 @@ let buffer = await q.download()
 pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
-const apng = await isAPNG(pp)
-console.log(apng)
+const imageUrl = pp
+await isAPNG(imageUrl).then(isAPNG => {
+if (isAPNG) {
+console.log('La imagen es un APNG.')
+} else {
+console.log('La imagen no es un APNG.')
+}}).catch(error => {
+console.error('Error:', error)})
 }}
+  
 console.log(pp)
 editMenu.personalizado = pp
 editMenu.simple = false
@@ -223,23 +232,24 @@ return true
 return false
 }
 
-async function isAPNG(imageUrl) {
-  try {
-    const response = await fetch(imageUrl, { method: 'HEAD' }); 
-    if (!response.ok) {
-      throw new Error(`Error al obtener los metadatos de la imagen (${response.status} ${response.statusText})`);
-    }
-
-    
-    const contentType = response.headers.get('content-type');
-    if (contentType && contentType.startsWith('image/png')) {
-      const isAPNG = response.headers.get('content-disposition') === 'inline; apng';
-      return isAPNG;
-    } else {
-      return false; 
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    throw error;
-  }
+async function isAPNG(url) {
+try {
+const response = await axios.get(url, { responseType: 'arraybuffer' })
+if (response.status !== 200) {
+throw new Error(`No se pudo descargar la imagen (${response.status} ${response.statusText})`)
 }
+const buffer = Buffer.from(response.data)
+const reader = new PNGReader(buffer)
+return new Promise((resolve, reject) => {
+reader.parse((err, png) => {
+if (err) {
+reject(err)
+} else {
+const hasAPNGChunks = png.animChunks && png.animChunks.length > 0
+resolve(hasAPNGChunks)
+}})
+})
+} catch (error) {
+console.error('Error al verificar APNG:', error)
+throw error
+}}
