@@ -34,22 +34,21 @@ global.prems = []
 global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['5492215034412'], ['5214434703586'], ['595976126756']]
 
 //Aqui encuentras los nombres del bot 
-global.packname = '𝗬𝗮𝗿𝘁𝗲𝘅 𝗕𝗼𝘁 - 𝗠𝗗 💫'
-global.author = '𝗬𝗮𝗿𝘁𝗲𝘅𝗕𝗼𝘁-𝗠𝗗'
-global.wm = '𝖸𝖺𝗋𝗍𝖾𝗑 𝖡𝗈𝗍 - 𝖬𝖣'
-global.wm2 = '𝗬𝖺𝗋𝗍𝖾𝗑 : 𝗕𝗈𝗍'
-global.gatanina = '𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 🐈'
-global.cb = '𝘠𝘢𝘳𝘵𝘦𝘹𝘉𝘰𝘵'
+global.packname = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨'
+global.author = 'ɢᴀᴛᴀ ᴅɪᴏs 🫶'
+global.wm = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ | ɢᴀᴛᴀ ᴅɪᴏs 🫶'
+global.wm2 = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨\nOº°‘¨ һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs ¨‘°ºO'
 
 
 //Las Versiones Y Entre Otros
-global.vs = 'V2'
 global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
 global.lenguaje = 'Español'
 global.menudi = ['⛶','❏','⫹⫺']
 global.dev = 'GataNina-Li'
 global.devnum = '+593 96 826 3524'
+
+// Diseños 
 global.dis = ':⁖֟⊱┈֟፝❥ '
 global.cen1 = '✧──⭒─⊹ '
 global.cen2 = ' ⊹─⭒──✧'
