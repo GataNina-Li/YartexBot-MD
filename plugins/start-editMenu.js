@@ -58,8 +58,10 @@ text: `*Editar menú*`,
 footer: wm,
 buttonText: `AJUSTAR`,
 }
-await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, null, fkontak)
-
+if (command === "editarmenu" || command === "editmenu") {
+return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, null, fkontak)
+}
+  
 if (command === "editaremoji01") {
 if (editMenu.hasOwnProperty('emoji')) {
 editMenu.emoji = !editMenu.emoji
