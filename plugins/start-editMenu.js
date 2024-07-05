@@ -160,7 +160,8 @@ if (editMenu.hasOwnProperty('personalizado')) {
 if (!text && !m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
 let link
 let web = /https?:\/\/\S+/
-
+let q = m.quoted ? m.quoted : m
+  
 if (q.text || web.test(q.text)) {
 await IsEnlace(q.text).then(result => {
 link = result ? enlace : false
@@ -173,7 +174,6 @@ if (link === false) {
 return await conn.reply(m.chat, 'El enlace proporcionado no es válido.', m)
 }}
 
-let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/image/g.test(mime) || /webp/g.test(mime)) {
 try {
