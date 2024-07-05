@@ -54,7 +54,7 @@ const sections = [
 ]} 
 ]
 const list = {
-text: `✨ *¡Empieza a personalizar ${packname}!*\n
+text: `✨ *¡Empieza a personalizar lo que vez en ${packname}!*\n
 ☆ ⌒ ★ ⌒ ☆ ⌒ ★ ⌒ ☆ ⌒ ★ ⌒ ☆
 🍰 \`Continua si eres alguno de estos roles:\`
 ${m.isGroup ? `✪ Admin: ${isAdmin ? '✅' : '❌'}` : ''}
