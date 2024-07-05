@@ -189,7 +189,7 @@ let buffer = await q.download()
 pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
-let ppimg = await IsEnlace(pp)
+let ppimg = await checkImageType(pp) //await IsEnlace(pp)
 console.log(ppimg)
 }}
 console.log(pp)
@@ -221,4 +221,25 @@ if (contentType && (contentType.startsWith('image/jpeg') || contentType.startsWi
 return true
 }}
 return false
+}
+
+async function checkImageType(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch the image: ${response.statusText}`);
+    }
+
+    const contentType = response.headers.get('content-type');
+    
+    if (contentType === 'image/apng') {
+      console.log('The image is of type APNG');
+    } else {
+      console.log(`The image is of type ${contentType}`);
+    }
+    
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
