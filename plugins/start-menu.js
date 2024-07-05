@@ -35,7 +35,7 @@ const { name, author, version, description, collaborators } = require(join(__dir
 
 let { money, joincount } = global.db.data.users[m.sender]
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-
+  
 let menu = `
 ╭・・・・☆・・・・・・☆ ・・・・
 ┆ ⋮ . ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .
@@ -412,16 +412,18 @@ ${editMenu.emoji ? '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ 🥵 :･ﾟ✧:･ﾟ✧･�
 *. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
 `.trim()
 
-if (editMenu.imagen) {
-await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption: menu, mentions: [m.sender], contextInfo: {
+let contextInfo = {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
-forwardingScore: 1, 
+forwardingScore: 1,
 forwardedNewsletterMessageInfo: {
 newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
-}}}, { quoted: editMenu.verificado ? fkontak : m })
+}}
+
+if (editMenu.imagen) {
+await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
 } else if (editMenu.video) {
 await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
