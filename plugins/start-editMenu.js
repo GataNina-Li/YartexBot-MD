@@ -190,6 +190,7 @@ pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
 }}
+console.log(pp)
 editMenu.personalizado = pp
 editMenu.simple = false
 editMenu.dinamico = false
