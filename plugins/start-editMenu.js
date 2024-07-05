@@ -157,9 +157,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 
 if (command === "editarmenu09") {
 if ('personalizado' in editMenu) {
-editMenu.personalizado = !editMenu.personalizado
-global.db.data.chats[m.chat].editMenu = editMenu
-/*if (!text && !m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
+if (!text && !m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
 let link
 let web = /https?:\/\/\S+/
 let q = m.quoted ? m.quoted : m
@@ -192,12 +190,11 @@ editMenu.imagen = false
 let mensajeConfirmacion = `Menú personalizado ${editMenu.personalizado ? 'activado ✅ verifica los cambios en el menú completo' : 'desactivado ❌'}`
 global.db.data.chats[m.chat].editMenu = editMenu
 console.log(editMenu)
-conn.reply(m.chat, mensajeConfirmacion, m)*/
+conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
-}
 }
 handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|editarmenu09)$/i
 export default handler
