@@ -18,6 +18,7 @@ global.owner = [
 ['542215034412'], 
 ['593968263524'],
 ['595976126756'],
+['59169082565'],
 ['573012482597']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
