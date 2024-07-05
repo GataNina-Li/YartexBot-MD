@@ -2,7 +2,6 @@ import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 import fetch from 'node-fetch'
 import axios from 'axios'
-import { PNG } from 'pngjs'
 
 let handler = async (m, { conn, usedPrefix, command, isAdmin, isOwner, isROwner, text }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
@@ -233,18 +232,51 @@ return false
 }
 
 async function isAPNG(url) {
-try {
-const response = await fetch(url)
-if (!response.ok) {
-throw new Error(`No se pudo descargar la imagen (${response.status} ${response.statusText})`)
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`No se pudo descargar la imagen (${response.status} ${response.statusText})`);
+        }
+
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.startsWith('image/png')) {
+            const buffer = await response.buffer();
+            const arrayBuffer = new Uint8Array(buffer);
+
+            
+            if (hasAPNGChunks(arrayBuffer)) {
+                return true;
+            }
+        }
+
+        return false; 
+    } catch (error) {
+        console.error('Error al verificar APNG:', error);
+        return false; // Manejar el error adecuadamente según tu aplicación
+    }
 }
-const arrayBuffer = await response.arrayBuffer()
-const png = PNG.sync.read(Buffer.from(arrayBuffer))
-if (png.animChunks && png.animChunks.length > 0) {
-return true
-} else {
-return false
-}} catch (error) {
-console.error('Error al verificar APNG:', error)
-return false
-}}
+
+function hasAPNGChunks(pngBytes) {
+    
+    const apngSignature = [137, 80, 78, 71, 13, 10, 26, 10]; // PNG signature
+
+    
+    for (let i = 0; i < apngSignature.length; i++) {
+        if (pngBytes[i] !== apngSignature[i]) {
+            return false;
+        }
+    }
+
+    
+    const acTLChunk = [97, 99, 84, 76]; 
+    for (let i = 0; i < pngBytes.length - 8; i++) {
+        if (pngBytes[i] === acTLChunk[0] &&
+            pngBytes[i + 1] === acTLChunk[1] &&
+            pngBytes[i + 2] === acTLChunk[2] &&
+            pngBytes[i + 3] === acTLChunk[3]) {
+            return true;
+        }
+    }
+
+    return false;
+}
