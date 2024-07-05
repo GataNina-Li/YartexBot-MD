@@ -162,9 +162,9 @@ if (!text) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con
 let link
 let web = /https?:\/\/\S+/
 let q = m.quoted ? m.quoted : m
-  
-if (q.text || web.test(q.text)) {
-await IsEnlace(q.text).then(result => {
+
+if (text || web.test(text)) {
+await IsEnlace(text).then(result => {
 link = result ? enlace : false
 editMenu.personalizado = link
 console.log(result)
