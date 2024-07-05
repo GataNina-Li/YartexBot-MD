@@ -15,7 +15,7 @@ return conn.reply(m.chat, dis + '*No tiene permitido usar este comando, debe de 
 return conn.reply(m.chat, dis + '*No tiene permitido usar este comando, no eres dueño de este bot.*', m)
 }
 
-let seccion = [ `${cen1}CONFIGURAR MENÚ COMPLETO${cen2}` ]
+let seccion = [ `${cen1}𝐂𝐎𝐍𝐅𝐈𝐆𝐔𝐑𝐀𝐑 𝐌𝐄𝐍𝐔 𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐎${cen2}` ]
 let titulo = [ "✨ EMOJIS", "🖼️ IMAGEN", "📹 VÍDEO", "🪄 DINÁMICO", "☁️ SIMPLE", "👤 MENCIÓN", "📌 TRUNCAR", "✅ VERIFICADO", "✏️ PERSONALIZAR" ]
 let nombre = [ 
 `༶ Actualmente: ${editMenu.emoji ? 'activado ✅' : 'desactivado ❌'}`, 
@@ -63,7 +63,7 @@ ${m.isGroup ? `✪ Admin: ${isAdmin ? '✅' : '❌'}` : ''}
 
 😍 *Disfruta modificando a tú gusto.*
 `,
-footer: wm,
+footer: wm2,
 buttonText: `⊱ VER OPCIONES ⊰`,
 }
 if (command === "editarmenu" || command === "editmenu") {
