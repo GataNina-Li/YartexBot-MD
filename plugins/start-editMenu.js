@@ -208,7 +208,7 @@ async function IsEnlace(texto) {
 const regexEnlace = /https?:\/\/\S+/
 const match = texto.match(regexEnlace)
 if (match) {
-enlace = match[0]
+texto = match[0]
 const response = await fetch(enlace, { method: 'HEAD' })
 const contentType = response.headers.get('content-type')
 console.log(contentType)
