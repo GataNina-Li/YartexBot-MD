@@ -7,37 +7,37 @@ let handler = async (m, { conn, usedPrefix, command, isAdmin, isOwner, isROwner,
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
 let editMenu = global.db.data.chats[m.chat].editMenu
-let hasOwnPropertyError = "*No se logró aplicar los cambios*"
+let hasOwnPropertyError = dis + "*No se logró aplicar los cambios, intente de nuevo.*"
   
 if (m.isGroup && !isAdmin) {
-return conn.reply(m.chat, '*No tiene permitido usar este comando, debe de ser admin*', m)
+return conn.reply(m.chat, dis + '*No tiene permitido usar este comando, debe de ser admin.*', m)
 } else if (!m.isGroup && (!isOwner || !isROwner)) {
-return conn.reply(m.chat, '*No tiene permitido usar este comando, no eres dueño de este bot*', m)
+return conn.reply(m.chat, dis + '*No tiene permitido usar este comando, no eres dueño de este bot.*', m)
 }
 
-let seccion = [ 'CONFIGURACIÓN PARA EL MENU COMPLETO' ]
-let titulo = [ "EMOJIS", "IMAGEN", "VÍDEO", "PRESENTACIÓN DINÁMICA", "SIMPLE", "MENCIÓN", "TRUNCAR MENÚ", "VERIFICADO", "PERSONALIZAR" ]
+let seccion = [ `${cen1}CONFIGURAR MENÚ COMPLETO${cen2}` ]
+let titulo = [ "✨ EMOJIS", "🖼️ IMAGEN", "📹 VÍDEO", "🪄 DINÁMICO", "☁️ SIMPLE", "👤 MENCIÓN", "📌 TRUNCAR", "✅ VERIFICADO", "✏️ PERSONALIZAR" ]
 let nombre = [ 
-`Actualmente: ${editMenu.emoji ? 'activado ✅' : 'desactivado ❌'}`, 
-`Actualmente: ${editMenu.imagen ? 'activado ✅' : 'desactivado ❌'}`, 
-`Actualmente: ${editMenu.video ? 'activado ✅' : 'desactivado ❌'}`, 
-`Actualmente: ${editMenu.dinamico ? 'activado ✅' : 'desactivado ❌'}`, 
-`Actualmente: ${editMenu.simple ? 'activado ✅' : 'desactivado ❌'}`, 
-`Actualmente: ${editMenu.mencion ? 'activado ✅' : 'desactivado ❌'}`,
-`Actualmente: ${editMenu.dividir ? 'activado ✅' : 'desactivado ❌'}`,
-`Actualmente: ${editMenu.verificado ? 'activado ✅' : 'desactivado ❌'}`,
-`Actualmente: ${editMenu.personalizado ? 'activado ✅' : 'desactivado ❌'}`
+`༶ Actualmente: ${editMenu.emoji ? 'activado ✅' : 'desactivado ❌'}`, 
+`༶ Actualmente: ${editMenu.imagen ? 'activado ✅' : 'desactivado ❌'}`, 
+`༶ Actualmente: ${editMenu.video ? 'activado ✅' : 'desactivado ❌'}`, 
+`༶ Actualmente: ${editMenu.dinamico ? 'activado ✅' : 'desactivado ❌'}`, 
+`༶ Actualmente: ${editMenu.simple ? 'activado ✅' : 'desactivado ❌'}`, 
+`༶ Actualmente: ${editMenu.mencion ? 'activado ✅' : 'desactivado ❌'}`,
+`༶ Actualmente: ${editMenu.dividir ? 'activado ✅' : 'desactivado ❌'}`,
+`༶ Actualmente: ${editMenu.verificado ? 'activado ✅' : 'desactivado ❌'}`,
+`༶ Actualmente: ${editMenu.personalizado ? 'activado ✅' : 'desactivado ❌'}`
 ]
 let descripción = [ 
-"Emojis en el menú", 
-"Usar sólo imágenes para el menú", 
-"Usar sólo vídeos para el menú", 
-"Usar Imágenes y Vídeos de forma aleatoria en el menú", 
-"Omitir multimedia en el menú", 
-"Mencionar \"@\" al usuario en el menú",
-"Aplicar \"... Leer más\" antes de loa comandos",
-"Aplicar verificado al mensaje del menú",
-"Usa esta opción si quieres agregar una imagen personalizada al menú"
+"✩‧₊˚ Usar emojis.", 
+"✩‧₊˚ Presentar sólo con imágenes.", 
+"✩‧₊˚ Presentar sólo con vídeos/gif.", 
+"✩‧₊˚ Presentar con imágenes y vídeos aleatorios.", 
+"✩‧₊˚ Remover multimedia, y mantener texto.", 
+"✩‧₊˚ Mencionar \"@\" al usuario.",
+"✩‧₊˚ Aplicar \"... Leer más\" antes de los comandos.",
+"✩‧₊˚ Simular mensaje verificado.",
+"✩‧₊˚ Usa esta opción si desea agregar una imagen personalizada."
 ]
 let comando = [ "editaremoji01", "editarimagen02", "editarvideo03", "editarvi04", "editarsimple05", "editarmencion06", "editardividir07", "editarverificado08", "editarpersonalizar09" ]
 const sections = [
@@ -54,9 +54,17 @@ const sections = [
 ]} 
 ]
 const list = {
-text: `*Editar menú*`,
+text: `✨ *¡Empieza a personalizar ${wm}!*\n
+☆ ⌒ ★ ⌒ ☆ ⌒ ★ ⌒ ☆ ⌒ ★ ⌒ ☆
+🍰 \`Continua si eres algunos de estos roles:\`
+${m.isGroup ? `✪ Admin: ${isAdmin ? '✅' : '❌'}` : ''}
+✪ Dueñ@: ${isOwner ? '✅' : '❌'}
+✪ Bot: ${isROwner ? '✅' : '❌'}
+
+😍 *Disfruta modificando a tú gusto.*
+`,
 footer: wm,
-buttonText: `AJUSTAR`,
+buttonText: `⊱ VER OPCIONES ⊰`,
 }
 if (command === "editarmenu" || command === "editmenu") {
 return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, null, fkontak)
@@ -65,7 +73,7 @@ return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sect
 if (command === "editaremoji01") {
 if (editMenu.hasOwnProperty('emoji')) {
 editMenu.emoji = !editMenu.emoji
-let mensajeConfirmacion = `Los emojis ahora están ${editMenu.emoji ? 'activado ✅' : 'desactivado ❌'} para el menú completo`
+let mensajeConfirmacion = dis + `Los emojis ✨ ahora están *${editMenu.emoji ? 'activados ✅' : 'desactivados ❌'}* para el menú completo.`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -79,7 +87,7 @@ editMenu.video = false
 editMenu.dinamico = false
 editMenu.simple = false
 editMenu.personalizado = false
-let mensajeConfirmacion = `Las imágenes están ${editMenu.imagen ? 'activadas ✅' : 'desactivadas ❌'} para el menú completo`
+let mensajeConfirmacion = dis + `Las imágenes 🖼️ ahora están *${editMenu.imagen ? 'activadas ✅' : 'desactivadas ❌'}* para el menú completo.`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -93,7 +101,7 @@ editMenu.imagen = false
 editMenu.dinamico = false
 editMenu.simple = false
 editMenu.personalizado = false
-let mensajeConfirmacion = `Los vídeos están ${editMenu.video ? 'activados ✅' : 'desactivados ❌'} para el menú completo`
+let mensajeConfirmacion = dis + `Los vídeos 📹 ahora están *${editMenu.video ? 'activados ✅' : 'desactivados ❌'}* para el menú completo.`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -107,7 +115,7 @@ editMenu.video = false
 editMenu.imagen = false
 editMenu.simple = false
 editMenu.personalizado = false
-let mensajeConfirmacion = `Menú dinámico ${editMenu.dinamico ? 'activado ✅ aparecerá de forma aleatoria mensajes de imagen y vídeo' : 'desactivado ❌'} para el menú completo`
+let mensajeConfirmacion = dis + `Menú dinámico 🪄 ${editMenu.dinamico ? '*activado* ✅ aparecerá de forma aleatoria imagen y vídeo' : '*desactivado* ❌'} para el menú completo.`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -121,7 +129,7 @@ editMenu.dinamico = false
 editMenu.video = false
 editMenu.imagen = false
 editMenu.personalizado = false
-let mensajeConfirmacion = `Menú simple ${editMenu.simple ? 'activado ✅' : 'desactivado ❌'} para el menú completo`
+let mensajeConfirmacion = dis + `Menú simple ☁️ *${editMenu.simple ? 'activado ✅' : 'desactivado ❌'}* para el menú completo.`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -131,7 +139,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 if (command === "editarmencion06") {
 if (editMenu.hasOwnProperty('mencion')) {
 editMenu.mencion = !editMenu.mencion
-let mensajeConfirmacion = `La mención está ${editMenu.mencion ? 'activado ✅ para el menú completo' : 'desactivado ❌ para el menú completo, aparecerá el nombre de usuario sin mencionar'}`
+let mensajeConfirmacion = dis + `La mención 👤 se ha ${editMenu.mencion ? '*activado* ✅ para el menú completo.' : '*desactivado* ❌ para el menú completo, aparecerá el nombre de usuario pero sin mencionar.'}`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -141,7 +149,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 if (command === "editardividir07") {
 if (editMenu.hasOwnProperty('dividir')) {
 editMenu.dividir = !editMenu.dividir
-let mensajeConfirmacion = `Truncar menú se ha ${editMenu.dividir ? 'activado ✅ ahora aparecerá "... Leer más" antes de los comandos' : 'desactivado ❌ ya no aparecerá "... Leer más"'}`
+let mensajeConfirmacion = dis + `Truncar 📌 menú se ha ${editMenu.dividir ? '*activado* ✅ ahora aparecerá *"... Leer más"* antes de los comandos.' : '*desactivado* ❌ ya no aparecerá *"... Leer más"*.'}`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -151,7 +159,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 if (command === "editarverificado08") {
 if (editMenu.hasOwnProperty('verificado')) {
 editMenu.verificado = !editMenu.verificado
-let mensajeConfirmacion = `El verificado en el menú completo se ha ${editMenu.verificado ? 'activado ✅' : 'desactivado ❌'}`
+let mensajeConfirmacion = dis + `El verificado ✅ en el menú completo se ha *${editMenu.verificado ? 'activado ✅' : 'desactivado ❌'}*`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -159,12 +167,12 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
 if (command === "editarpersonalizar09") {
-return conn.reply(m.chat, `Use el comando ${usedPrefix}cambiarmenu con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú\n\n> *Recomendación:* No responder a stickers animados ya que puede ocasionar error`, m)
+return conn.reply(m.chat, dis + `Use el comando *${usedPrefix}cambiarppmenu* con un enlace de imagen, o respondiendo a una imagen o sticker para definir la imagen del menú completo.\n\n> *Recomendación:* No responder a stickers animados ya que puede ocasionar error.`, m)
 }
 
-if (command === "cambiarmenu") {
+if (command === "cambiarppmenu") {
 if ('personalizado' in editMenu) {
-if (!text && !m.quoted) return conn.reply(m.chat, `Para establecer una imagen en el menú debe de usar un enlace (jpg, jpeg o png) también puede responder a una imagen o sticker\n\n> *Recomendación:* No responder a stickers animados ya que puede ocasionar error`, m)
+if (!text && !m.quoted) return conn.reply(m.chat, dis + `Para establecer una imagen en el menú completo debe de usar un enlace (jpg, jpeg o png) también puede responder a una imagen o sticker.\n\n> *Recomendación:* No responder a stickers animados ya que puede ocasionar error.`, m)
 //console.log(editMenu)
 
 let link, pp
@@ -182,7 +190,7 @@ link = false
 })
 }
 if (link === false) {
-return await conn.reply(m.chat, 'El enlace proporcionado no es válido.', m)
+return await conn.reply(m.chat, dis + '*El enlace proporcionado no es válido.*', m)
 }
   
 let mime = (q.msg || q).mimetype || q.mediaType || ''
@@ -195,7 +203,7 @@ pp = await webp2png(await q.download())
 const imageUrl = pp
 isAPNG(imageUrl).then(isAPNG => {
 if (isAPNG) {
-return conn.reply(m.chat, 'No es posible usar el sticker animado, intente de nuevo respondiendo a un sticker estático', m)
+return conn.reply(m.chat, dis + '*No es posible usar el sticker animado, intente de nuevo respondiendo a un sticker estático.*', m)
 }}).catch(error => {
 pp = false
 console.error('Error: ', error)})
@@ -206,7 +214,7 @@ editMenu.simple = false
 editMenu.dinamico = false
 editMenu.video = false
 editMenu.imagen = false
-let mensajeConfirmacion = `Menú personalizado ${editMenu.personalizado ? 'activado ✅ verifica los cambios en el menú completo\n\nPara desactivar use otra opción de multimedia' : 'desactivado ❌'}`
+let mensajeConfirmacion = dis + `Menú personalizado ✏️ ${editMenu.personalizado ? '*activado* ✅ verificar los cambios en el menú completo.\n\n\`Para desactivar use otra opción de multimedia.\`' : '*desactivado* ❌'}`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
@@ -214,7 +222,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
 }
-handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|editarpersonalizar09|cambiarmenu)$/i
+handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|editarpersonalizar09|cambiarppmenu)$/i
 export default handler
 
 async function IsEnlace(texto) {
