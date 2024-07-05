@@ -157,13 +157,14 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 
 if (command === "cambiarmenu") {
 if ('personalizado' in editMenu) {
+console.log(editMenu)
 if (!text) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
 
 let link
 let web = /https?:\/\/\S+/
 let q = m.quoted ? m.quoted : m
 
-if (text && web.test(text)) {
+if (text) {
 await IsEnlace(text).then(result => {
 link = result ? enlace : false
 editMenu.personalizado = link
