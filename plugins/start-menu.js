@@ -411,7 +411,7 @@ ${editMenu.emoji ? '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ 🥵 :･ﾟ✧:･ﾟ✧･�
 `.trim()
 
 if (editMenu.imagen) {
-await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
+await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
 forwardingScore: 1, 
@@ -430,6 +430,18 @@ newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: editMenu.verificado ? fkontak : m })
+} else if (editMenu.dinamico) {
+const mediaFiles = [{ image: { url: yartexImg.getRandom() } }, { video: { url: yartexVid.getRandom(), gifPlayback: true } }]
+let randomMedia = getRandom(mediaFiles)
+await conn.sendMessage(m.chat, { ...randomMedia, caption: menu, mentions: [m.sender], contextInfo: {
+mentionedJid: await conn.parseMention(menu),
+isForwarded: true,
+forwardingScore: 1, 
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363302472386010@newsletter',
+newsletterName: 'YartexBot-MD ✨',
+serverMessageId: -1
+}}}, { quoted: editMenu.verificado ? fkontak : m })  
 } else {
 await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
