@@ -421,7 +421,7 @@ newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: fkontak })
 } else if (editMenu.video) {
-await conn.sendMessage(m.chat, { video: { url: yartexVid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
+await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
 forwardingScore: 1, 
