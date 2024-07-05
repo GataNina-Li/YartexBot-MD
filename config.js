@@ -31,7 +31,7 @@ global.mods = []
 global.prems = []
 
 //Solo desarrolladores aprobados
-global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['5492215034412'], ['5214434703586']]
+global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['5492215034412'], ['5214434703586'], ['595976126756']]
 
 //Aqui encuentras los nombres del bot 
 global.packname = '𝗬𝗮𝗿𝘁𝗲𝘅 𝗕𝗼𝘁 - 𝗠𝗗 💫'
