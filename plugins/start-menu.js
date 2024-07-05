@@ -496,7 +496,7 @@ let size = Math.min(width, height)
 let x = (width - size) / 2
 let y = (height - size) / 2
 img.crop(x, y, size, size)
-let croppedBuffer = await img.getBufferAsync(Jimp.MIME_PNG)
+let croppedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
 return croppedBuffer
 } catch (error) {
 return console.error('Error:', error)
