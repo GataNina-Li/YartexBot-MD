@@ -189,7 +189,7 @@ let buffer = await q.download()
 pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
-const apng = await isAPNG(imageUrl)
+const apng = await isAPNG(pp)
 console.log(apng)
 }}
 console.log(pp)
