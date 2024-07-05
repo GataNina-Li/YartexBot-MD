@@ -216,7 +216,7 @@ if (match) {
 texto = match[0]
 const response = await fetch(texto, { method: 'HEAD' })
 const contentType = response.headers.get('content-type')
-//console.log(contentType)
+console.log(contentType)
 if (contentType && (contentType.startsWith('image/jpeg') || contentType.startsWith('image/jpg') || contentType.startsWith('image/png') || contentType.startsWith('image/webp'))) {
 return true
 }}
