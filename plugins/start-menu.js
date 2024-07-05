@@ -489,7 +489,7 @@ if (!response.ok) {
 return console.log(`Error al descargar la imagen (${response.status} ${response.statusText})`)
 }
 let imageBuffer = await response.buffer()
-let img = await Jimp.read(imageBuffer)
+let img = await jimp.read(imageBuffer)
 let width = img.getWidth()
 let height = img.getHeight()
 let size = Math.min(width, height)
