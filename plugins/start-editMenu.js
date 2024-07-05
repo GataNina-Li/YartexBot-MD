@@ -157,12 +157,12 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
 if (command === "editarpersonalizar09") {
-return conn.reply(m.chat, `Use el comando ${usedPrefix}cambiarmenu con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
+return conn.reply(m.chat, `Use el comando ${usedPrefix}cambiarmenu con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú\n\n> *Recomendación:* No responder a stickers animados ya que puede ocasionar error`, m)
 }
 
 if (command === "cambiarmenu") {
 if ('personalizado' in editMenu) {
-if (!text && !m.quoted) return conn.reply(m.chat, `Para establecer una imagen en el menú debe de usar un enlace (jpg, jpeg o png) también puede responder a una imagen o sticker`, m)
+if (!text && !m.quoted) return conn.reply(m.chat, `Para establecer una imagen en el menú debe de usar un enlace (jpg, jpeg o png) también puede responder a una imagen o sticker\n\n> *Recomendación:* No responder a stickers animados ya que puede ocasionar error`, m)
 //console.log(editMenu)
 
 let link, pp
@@ -193,14 +193,12 @@ pp = await webp2png(await q.download())
 const imageUrl = pp
 isAPNG(imageUrl).then(isAPNG => {
 if (isAPNG) {
-console.log('La imagen es un APNG.')
-} else {
-console.log('La imagen no es un APNG o no se pudo verificar.')
-}}).catch(error => {
-console.error('Error:', error)})
+return conn.reply(m.chat, 'No es posible usar el sticker animado, intente de nuevo respondiendo a un sticker estático', m)
+}).catch(error => {
+pp = false
+console.error('Error: ', error)})
 }}
-  
-console.log(pp)
+//console.log(pp)
 editMenu.personalizado = pp
 editMenu.simple = false
 editMenu.dinamico = false
@@ -224,7 +222,7 @@ if (match) {
 texto = match[0]
 const response = await fetch(texto, { method: 'HEAD' })
 const contentType = response.headers.get('content-type')
-console.log(contentType)
+//console.log(contentType)
 if (contentType && (contentType.startsWith('image/jpeg') || contentType.startsWith('image/jpg') || contentType.startsWith('image/png') || contentType.startsWith('image/webp'))) {
 return true
 }}
@@ -232,51 +230,37 @@ return false
 }
 
 async function isAPNG(url) {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`No se pudo descargar la imagen (${response.status} ${response.statusText})`);
-        }
-
-        const contentType = response.headers.get('content-type');
-        if (contentType && contentType.startsWith('image/png')) {
-            const buffer = await response.buffer();
-            const arrayBuffer = new Uint8Array(buffer);
-
-            
-            if (hasAPNGChunks(arrayBuffer)) {
-                return true;
-            }
-        }
-
-        return false; 
-    } catch (error) {
-        console.error('Error al verificar APNG:', error);
-        return false; // Manejar el error adecuadamente según tu aplicación
-    }
+try {
+const response = await fetch(url)
+if (!response.ok) {
+throw new Error(`No se pudo descargar la imagen (${response.status} ${response.statusText})`)
 }
+const contentType = response.headers.get('content-type')
+if (contentType && contentType.startsWith('image/png')) {
+const buffer = await response.buffer()
+const arrayBuffer = new Uint8Array(buffer)
+if (hasAPNGChunks(arrayBuffer)) {
+return true
+}}
+return false
+} catch (error) {
+console.error('Error al verificar APNG:', error)
+return false
+}}
 
 function hasAPNGChunks(pngBytes) {
-    
-    const apngSignature = [137, 80, 78, 71, 13, 10, 26, 10]; // PNG signature
-
-    
-    for (let i = 0; i < apngSignature.length; i++) {
-        if (pngBytes[i] !== apngSignature[i]) {
-            return false;
-        }
-    }
-
-    
-    const acTLChunk = [97, 99, 84, 76]; 
-    for (let i = 0; i < pngBytes.length - 8; i++) {
-        if (pngBytes[i] === acTLChunk[0] &&
-            pngBytes[i + 1] === acTLChunk[1] &&
-            pngBytes[i + 2] === acTLChunk[2] &&
-            pngBytes[i + 3] === acTLChunk[3]) {
-            return true;
-        }
-    }
-
-    return false;
+const apngSignature = [137, 80, 78, 71, 13, 10, 26, 10]
+for (let i = 0; i < apngSignature.length; i++) {
+if (pngBytes[i] !== apngSignature[i]) {
+return false
+}}
+const acTLChunk = [97, 99, 84, 76]; 
+for (let i = 0; i < pngBytes.length - 8; i++) {
+if (pngBytes[i] === acTLChunk[0] &&
+pngBytes[i + 1] === acTLChunk[1] &&
+pngBytes[i + 2] === acTLChunk[2] &&
+pngBytes[i + 3] === acTLChunk[3]) {
+return true
+}}
+return false
 }
