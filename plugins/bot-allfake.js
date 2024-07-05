@@ -7,7 +7,7 @@ const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
 
 var handler = m => m
 handler.all = async function (m) {
-
+let gatanina = des
 global.getBuffer = async function getBuffer(url, options) {
 try {
 options ? options : {}
