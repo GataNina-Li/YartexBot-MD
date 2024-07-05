@@ -164,14 +164,14 @@ if ('personalizado' in editMenu) {
 if (!text && !m.quoted) return conn.reply(m.chat, `Para establecer una imagen en el menú debe de usar un enlace (jpg, jpeg o png) también puede responder a una imagen o sticker`, m)
 console.log(editMenu)
 
-let link
+let link, pp
 let web = /https?:\/\/\S+/
 let q = m.quoted ? m.quoted : m
 
 if (text && web.test(text)) {
 await IsEnlace(text).then(result => {
 link = result ? result : false
-editMenu.personalizado = link
+pp = link
 console.log(result)
 }).catch(error => {
 link = false
@@ -186,11 +186,11 @@ let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/image/g.test(mime) || /webp/g.test(mime)) {
 try {
 let buffer = await q.download()
-editMenu.personalizado = await (uploadImage)(buffer)
+pp = await (uploadImage)(buffer)
 } catch {
-editMenu.personalizado = await webp2png(await q.download())
+pp = await webp2png(await q.download())
 }}
-  
+editMenu.personalizado = pp
 editMenu.simple = false
 editMenu.dinamico = false
 editMenu.video = false
