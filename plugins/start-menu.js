@@ -453,7 +453,7 @@ newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: editMenu.verificado ? fkontak : m })
 } else {
-await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
+await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
 forwardingScore: 1, 
