@@ -1,3 +1,6 @@
+import { webp2png } from '../lib/webp2mp4.js'
+import fetch from 'node-fetch'
+
 let handler = async (m, { conn, usedPrefix, command, isAdmin, isOwner, isROwner }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
@@ -34,7 +37,7 @@ let descripción = [
 "Aplicar verificado al mensaje del menú",
 "Usa esta opción si quieres agregar una imagen personalizada al menú"
 ]
-let comando = [ "editaremoji01", "editarimagen02", "editarvideo03", "editarvi04", "editarsimple05", "editarmencion06", "editardividir07", "editarverificado08", "editarpersonalizado09" ]
+let comando = [ "editaremoji01", "editarimagen02", "editarvideo03", "editarvi04", "editarsimple05", "editarmencion06", "editardividir07", "editarverificado08", "editarmenu09" ]
 const sections = [
 { title: seccion[0], rows: [
 { header: titulo[0], title: nombre[0], description: descripción[0], id: usedPrefix + comando[0] },
@@ -151,7 +154,60 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
+if (command === "editarmenu09") {
+if (editMenu.hasOwnProperty('personalizado')) {
+if (!text && !m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
+let link
+let web = /https?:\/\/\S+/
+
+if (q.text || web.test(q.text)) {
+await IsEnlace(q.text).then(result => {
+link = result ? enlace : false
+editMenu.personalizado = link
+console.log(result)
+}).catch(error => {
+link = false
+})
+if (link === false) {
+return await conn.reply(m.chat, 'El enlace proporcionado no es válido.', m)
+}}
+
+let q = m.quoted ? m.quoted : m
+let mime = (q.msg || q).mimetype || q.mediaType || ''
+if (/image/g.test(mime) || /webp/g.test(mime)) {
+try {
+let buffer = await q.download()
+editMenu.personalizado = await (uploadImage)(buffer)
+} catch {
+editMenu.personalizado = await webp2png(await q.download())
+}
+editMenu.simple = false
+editMenu.dinamico = false
+editMenu.video = false
+editMenu.imagen = false
+let mensajeConfirmacion = `Menú personalizado ${editMenu.personalizado ? 'activado ✅ verifica los cambios en el menú completo' : 'desactivado ❌'}`
+global.db.data.chats[m.chat].editMenu = editMenu
+console.log(editMenu)
+conn.reply(m.chat, mensajeConfirmacion, m)
+} else {
+return conn.reply(m.chat, hasOwnPropertyError, m)
+}}
+
  
 }
 handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|editarpersonalizado09)$/i
 export default handler
+
+async function IsEnlace(texto) {
+const regexEnlace = /https?:\/\/\S+/
+const match = texto.match(regexEnlace)
+if (match) {
+enlace = match[0]
+const response = await fetch(enlace, { method: 'HEAD' })
+const contentType = response.headers.get('content-type')
+console.log(contentType)
+if (contentType && (contentType.startsWith('image/jpeg') || contentType.startsWith('image/jpg') || contentType.startsWith('image/png') || contentType.startsWith('image/webp'))) {
+return true
+}}
+return false
+}
