@@ -466,9 +466,14 @@ let img = await jimp.read(imageBuffer)
 let width = img.getWidth()
 let height = img.getHeight()
 let size = Math.min(width, height)
-await img.resize(size, size)
-let resizedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
-await conn.sendMessage(m.chat, { image: resizedBuffer }, { quoted: m })
+let x = (width - size) / 2
+let y = (height - size) / 2
+img.crop(x, y, size, size)
+let croppedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
+await conn.sendMessage(m.chat, { image: croppedBuffer }, { quoted: m })
+//await img.resize(size, size)
+//let resizedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
+//await conn.sendMessage(m.chat, { image: resizedBuffer }, { quoted: m })
 } catch (error) {
 console.error('Error al procesar la imagen:', error)
 }}/*} else {
