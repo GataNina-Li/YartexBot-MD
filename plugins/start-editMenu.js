@@ -209,7 +209,7 @@ const regexEnlace = /https?:\/\/\S+/
 const match = texto.match(regexEnlace)
 if (match) {
 texto = match[0]
-const response = await fetch(enlace, { method: 'HEAD' })
+const response = await fetch(texto, { method: 'HEAD' })
 const contentType = response.headers.get('content-type')
 console.log(contentType)
 if (contentType && (contentType.startsWith('image/jpeg') || contentType.startsWith('image/jpg') || contentType.startsWith('image/png') || contentType.startsWith('image/webp'))) {
