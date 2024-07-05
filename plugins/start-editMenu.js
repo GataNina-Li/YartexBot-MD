@@ -170,7 +170,7 @@ let q = m.quoted ? m.quoted : m
 
 if (text && web.test(text)) {
 await IsEnlace(text).then(result => {
-link = result ? result : false
+link = result ? text : false
 pp = link
 console.log(result)
 }).catch(error => {
