@@ -93,6 +93,20 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
+if (command === "editarvi04") {
+if (editMenu.hasOwnProperty('dinamico')) {
+editMenu.dinamico = !editMenu.dinamico
+editMenu.video = false
+editMenu.imagen = false
+editMenu.simple = false
+editMenu.personalizado = false
+let mensajeConfirmacion = `Menú dinámico ${editMenu.dinamico ? 'activado ✅ aparecerá de forma aleatoria mensajes de imagen y vídeo' : 'desactivado ❌'} para el menú completo`
+global.db.data.chats[m.chat].editMenu = editMenu
+conn.reply(m.chat, mensajeConfirmacion, m)
+} else {
+return conn.reply(m.chat, hasOwnPropertyError, m)
+}}
+
 if (command === "editarmencion06") {
 if (editMenu.hasOwnProperty('mencion')) {
 editMenu.mencion = !editMenu.mencion
