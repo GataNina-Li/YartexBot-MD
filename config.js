@@ -51,6 +51,8 @@ global.menudi = ['⛶','❏','⫹⫺']
 global.dev = 'GataNina-Li'
 global.devnum = '+593 96 826 3524'
 global.dis = ':⁖֟⊱┈֟፝❥ '
+global.cen1 = '✧──⭒─⊹ '
+global.cen2 = ' ⊹─⭒──✧'
 
 // Random
 global.random1 = getRandomImageBoys
