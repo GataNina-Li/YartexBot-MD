@@ -49,7 +49,7 @@ const sections = [
 { header: titulo[5], title: nombre[5], description: descripción[5], id: usedPrefix + comando[5] },
 { header: titulo[6], title: nombre[6], description: descripción[6], id: usedPrefix + comando[6] },
 { header: titulo[7], title: nombre[7], description: descripción[7], id: usedPrefix + comando[7] },
-{ header: titulo[8], title: nombre[8], description: descripción[8], id: usedPrefix + comando[8] }
+{ header: titulo[8], title: nombre[8], description: descripción[8], id: `${usedPrefix + comando[8]}` }
 ]} 
 ]
 const list = {
