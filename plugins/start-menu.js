@@ -456,27 +456,9 @@ serverMessageId: -1
 }}}, { quoted: editMenu.verificado ? fkontak : m })
 } else {
 //} else if (editMenu.personalizado) {
-try {
-let response = await fetch(editMenu.personalizado)
-if (!response.ok) {
-return console.log(`Error al descargar la imagen (${response.status} ${response.statusText})`)
-}
-let imageBuffer = await response.buffer()
-let img = await jimp.read(imageBuffer)
-let width = img.getWidth()
-let height = img.getHeight()
-let size = Math.min(width, height)
-let x = (width - size) / 2
-let y = (height - size) / 2
-img.crop(x, y, size, size)
-let croppedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
-await conn.sendMessage(m.chat, { image: { url: 'https://s7.ezgif.com/tmp/ezgif-7-db3f652178.png'}, gifPlayback: true }, { quoted: m })
-//await img.resize(size, size)
-//let resizedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
-//await conn.sendMessage(m.chat, { image: resizedBuffer }, { quoted: m })
-} catch (error) {
-console.error('Error al procesar la imagen:', error)
-}}/*} else {
+let newImg = await cropImageToSquare(editMenu.personalizado)
+await conn.sendMessage(m.chat, { image: newImg }, { quoted: m })
+}/*} else {
 await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
@@ -499,3 +481,23 @@ const readMore = more.repeat(4001)
 function getRandom(array) {
 return array[Math.floor(Math.random() * array.length)];
 }
+
+async function cropImageToSquare(imageUrl) {
+try {
+let response = await fetch(imageUrl)
+if (!response.ok) {
+return console.log(`Error al descargar la imagen (${response.status} ${response.statusText})`)
+}
+let imageBuffer = await response.buffer()
+let img = await Jimp.read(imageBuffer)
+let width = img.getWidth()
+let height = img.getHeight()
+let size = Math.min(width, height)
+let x = (width - size) / 2
+let y = (height - size) / 2
+img.crop(x, y, size, size)
+let croppedBuffer = await img.getBufferAsync(Jimp.MIME_PNG)
+return croppedBuffer
+} catch (error) {
+return console.error('Error:', error)
+}}
