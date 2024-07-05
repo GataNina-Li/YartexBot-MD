@@ -114,7 +114,7 @@ editMenu.dinamico = false
 editMenu.video = false
 editMenu.imagen = false
 editMenu.personalizado = false
-let mensajeConfirmacion = `Menú simple ${editMenu.dinamico ? 'activado ✅' : 'desactivado ❌'} para el menú completo`
+let mensajeConfirmacion = `Menú simple ${editMenu.simple ? 'activado ✅' : 'desactivado ❌'} para el menú completo`
 global.db.data.chats[m.chat].editMenu = editMenu
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
