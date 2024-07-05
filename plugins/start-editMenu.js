@@ -38,7 +38,7 @@ let descripción = [
 "Aplicar verificado al mensaje del menú",
 "Usa esta opción si quieres agregar una imagen personalizada al menú"
 ]
-let comando = [ "editaremoji01", "editarimagen02", "editarvideo03", "editarvi04", "editarsimple05", "editarmencion06", "editardividir07", "editarverificado08", "cambiarmenu" ]
+let comando = [ "editaremoji01", "editarimagen02", "editarvideo03", "editarvi04", "editarsimple05", "editarmencion06", "editardividir07", "editarverificado08", "editarpersonalizar09" ]
 const sections = [
 { title: seccion[0], rows: [
 { header: titulo[0], title: nombre[0], description: descripción[0], id: usedPrefix + comando[0] },
@@ -155,9 +155,13 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
+if (command === "editarpersonalizar09") {
+return conn.reply(m.chat, `Use el comando ${usedPrefix}cambiarmenu con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
+}
+
 if (command === "cambiarmenu") {
-if (!text && !m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
 if ('personalizado' in editMenu) {
+if (!text && !m.quoted) return conn.reply(m.chat, `Para establecer una imagen en el menú debe de usar un enlace (jpg, jpeg o png) también puede responder a una imagen o sticker`, m)
 console.log(editMenu)
 
 let link
@@ -200,7 +204,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
 }
-handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|cambiarmenu)$/i
+handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|editarpersonalizar09|cambiarmenu)$/i
 export default handler
 
 async function IsEnlace(texto) {
