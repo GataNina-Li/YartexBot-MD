@@ -112,6 +112,17 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
+
+if (command === "editarverificado08") {
+if (editMenu.hasOwnProperty('verificado')) {
+editMenu.verificado = !editMenu.verificado
+let mensajeConfirmacion = `El verificado en el menú completo se ha ${editMenu.verificado ? 'activado ✅' : 'desactivado ❌'}`
+global.db.data.chats[m.chat].editMenu = editMenu
+conn.reply(m.chat, mensajeConfirmacion, m)
+} else {
+return conn.reply(m.chat, hasOwnPropertyError, m)
+}}
+
  
 }
 handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|editarpersonalizado09)$/i
