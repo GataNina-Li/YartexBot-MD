@@ -194,7 +194,7 @@ const imageUrl = pp
 isAPNG(imageUrl).then(isAPNG => {
 if (isAPNG) {
 return conn.reply(m.chat, 'No es posible usar el sticker animado, intente de nuevo respondiendo a un sticker estático', m)
-}).catch(error => {
+}}).catch(error => {
 pp = false
 console.error('Error: ', error)})
 }}
