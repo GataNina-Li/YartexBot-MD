@@ -156,6 +156,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
 if (command === "editarmenu09") {
+console.log(editMenu)
 if (editMenu.hasOwnProperty('personalizado')) {
 if (!text && !m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
 let link
