@@ -82,7 +82,7 @@ let botVid9 = 'https://telegra.ph/file/b1c3f0ffd8d7af9740000.mp4' //bl
 let botVid10 = 'https://telegra.ph/file/3a3e1bf3825add3679cb9.mp4' //bl
 let botVid11 = 'https://telegra.ph/file/a3485e1c3b115ba186b45.mp4' //bl
 let botVid12 = 'https://telegra.ph/file/1c5f62544f7278899a9be.mp4' //bl
-global.yartexVid = [botVid1, botVid2, botVid3, botVid4, botVid5, botVid6, botVid7, botVid8, botVid9, botVid10, botVid11, botVid12].getRandom()
+global.yartexVid = [botVid1, botVid2, botVid3, botVid4, botVid5, botVid6, botVid7, botVid8, botVid9, botVid10, botVid11, botVid12]
   
 //Enlaces
 global.yt = 'https://youtube.com/@gatadios'
