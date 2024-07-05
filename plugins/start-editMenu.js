@@ -164,9 +164,9 @@ let link
 let web = /https?:\/\/\S+/
 let q = m.quoted ? m.quoted : m
 
-if (text) {
+if (text && web.test(text)) {
 await IsEnlace(text).then(result => {
-link = result ? enlace : false
+link = result ? result : false
 editMenu.personalizado = link
 console.log(result)
 }).catch(error => {
