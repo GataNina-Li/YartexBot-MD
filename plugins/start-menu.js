@@ -420,7 +420,7 @@ newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: fkontak })
-} else (editMenu.video) {
+} else if (editMenu.video) {
 await conn.sendMessage(m.chat, { video: { url: yartexVid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
