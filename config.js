@@ -37,10 +37,11 @@ global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['54922150
 global.packname = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨'
 global.author = 'ɢᴀᴛᴀ ᴅɪᴏs 🫶'
 global.wm = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ | ɢᴀᴛᴀ ᴅɪᴏs 🫶'
-global.wm2 = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨\nOº°‘¨ һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs ¨‘°ºO'
+global.wm2 = '         ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨\n*♡º°‘¨ һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs ¨‘°º♡*'
 
 
 //Las Versiones Y Entre Otros
+global.vs = 'V2'
 global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
 global.lenguaje = 'Español'
