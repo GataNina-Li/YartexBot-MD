@@ -1,4 +1,6 @@
 import fs from 'fs'
+import fetch from 'node-fetch'
+import jimp from 'jimp'
 import { fileURLToPath } from 'url'
 import { createRequire } from 'module'
 import moment from 'moment-timezone'
@@ -452,7 +454,24 @@ newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: editMenu.verificado ? fkontak : m })
-} else {
+} else if (editMenu.personalizado) {
+try {
+let imageBuffer = await conn.downloadMedia(m)
+let response = await fetch(editMenu.personalizado)
+if (!response.ok) {
+return console.log(`Error al descargar la imagen (${response.status} ${response.statusText})`)
+}
+let imageBuffer = await response.buffer()
+let img = await jimp.read(imageBuffer)
+let width = img.getWidth()
+let height = img.getHeight()
+let size = Math.min(width, height)
+await img.resize(size, size)
+let resizedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
+await conn.sendMessage(m.chat, { image: resizedBuffer }, { quoted: m })
+} catch (error) {
+console.error('Error al procesar la imagen:', error)
+}}} else {
 await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
