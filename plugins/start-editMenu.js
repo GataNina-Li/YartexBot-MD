@@ -107,6 +107,20 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
+if (command === "editarsimple05") {
+if (editMenu.hasOwnProperty('simple')) {
+editMenu.simple = !editMenu.simple
+editMenu.dinamico = false
+editMenu.video = false
+editMenu.imagen = false
+editMenu.personalizado = false
+let mensajeConfirmacion = `Menú simple ${editMenu.dinamico ? 'activado ✅' : 'desactivado ❌'} para el menú completo`
+global.db.data.chats[m.chat].editMenu = editMenu
+conn.reply(m.chat, mensajeConfirmacion, m)
+} else {
+return conn.reply(m.chat, hasOwnPropertyError, m)
+}}
+
 if (command === "editarmencion06") {
 if (editMenu.hasOwnProperty('mencion')) {
 editMenu.mencion = !editMenu.mencion
