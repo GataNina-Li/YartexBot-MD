@@ -189,6 +189,8 @@ let buffer = await q.download()
 pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
+let ppimg = await IsEnlace(pp)
+console.log(ppimg)
 }}
 console.log(pp)
 editMenu.personalizado = pp
