@@ -189,21 +189,8 @@ let buffer = await q.download()
 pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
-(async () => {
-  const imageUrl = pp
-
-  try {
-    const apng = await isAPNG(imageUrl);
-    if (apng) {
-      console.log('La imagen es un APNG.');
-    } else {
-      console.log('La imagen no es un APNG o no se pudo determinar.');
-    }
-  } catch (error) {
-    console.error('Error al comprobar la imagen:', error);
-  }
-})()
-console.log(ppimg)
+const apng = await isAPNG(imageUrl)
+console.log(apng)
 }}
 console.log(pp)
 editMenu.personalizado = pp
