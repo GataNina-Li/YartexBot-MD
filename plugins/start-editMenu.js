@@ -192,11 +192,11 @@ pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
 const imageUrl = pp
-await isAPNG(imageUrl).then(isAPNG => {
+isAPNG(imageUrl).then(isAPNG => {
 if (isAPNG) {
 console.log('La imagen es un APNG.')
 } else {
-console.log('La imagen no es un APNG.')
+console.log('La imagen no es un APNG o no se pudo verificar.')
 }}).catch(error => {
 console.error('Error:', error)})
 }}
@@ -234,22 +234,17 @@ return false
 
 async function isAPNG(url) {
 try {
-const response = await axios.get(url, { responseType: 'arraybuffer' })
-if (response.status !== 200) {
+const response = await fetch(url)
+if (!response.ok) {
 throw new Error(`No se pudo descargar la imagen (${response.status} ${response.statusText})`)
 }
-const buffer = Buffer.from(response.data)
-const reader = new PNGReader(buffer)
-return new Promise((resolve, reject) => {
-reader.parse((err, png) => {
-if (err) {
-reject(err)
+const arrayBuffer = await response.arrayBuffer()
+const png = PNG.sync.read(Buffer.from(arrayBuffer))
+if (png.animChunks && png.animChunks.length > 0) {
+return true
 } else {
-const hasAPNGChunks = png.animChunks && png.animChunks.length > 0
-resolve(hasAPNGChunks)
-}})
-})
-} catch (error) {
+return false
+}} catch (error) {
 console.error('Error al verificar APNG:', error)
-throw error
+return false
 }}
