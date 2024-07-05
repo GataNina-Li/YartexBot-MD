@@ -454,11 +454,10 @@ newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: editMenu.verificado ? fkontak : m })
-} else {
-//} else if (editMenu.personalizado) {
+} else if (editMenu.personalizado) {
 let newImg = await cropImageToSquare(editMenu.personalizado)
 await conn.sendMessage(m.chat, { image: newImg }, { quoted: m })
-}/*} else {
+} else {
 await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
@@ -468,7 +467,7 @@ newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1 
 }}}, { quoted: fkontak })
-}*/
+}
 }
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
 handler.command = ['help', 'menucompleto', 'allmenu'] 
