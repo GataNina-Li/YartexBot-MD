@@ -189,7 +189,20 @@ let buffer = await q.download()
 pp = await (uploadImage)(buffer)
 } catch {
 pp = await webp2png(await q.download())
-let ppimg = await checkImageType(pp) //await IsEnlace(pp)
+(async () => {
+  const imageUrl = pp
+
+  try {
+    const apng = await isAPNG(imageUrl);
+    if (apng) {
+      console.log('La imagen es un APNG.');
+    } else {
+      console.log('La imagen no es un APNG o no se pudo determinar.');
+    }
+  } catch (error) {
+    console.error('Error al comprobar la imagen:', error);
+  }
+})()
 console.log(ppimg)
 }}
 console.log(pp)
@@ -223,23 +236,23 @@ return true
 return false
 }
 
-async function checkImageType(url) {
+async function isAPNG(imageUrl) {
   try {
-    const response = await fetch(url, { method: 'HEAD' });
-    
+    const response = await fetch(imageUrl, { method: 'HEAD' }); 
     if (!response.ok) {
-      throw new Error(`Failed to fetch the image: ${response.statusText}`);
+      throw new Error(`Error al obtener los metadatos de la imagen (${response.status} ${response.statusText})`);
     }
 
+    
     const contentType = response.headers.get('content-type');
-    
-    if (contentType === 'image/apng') {
-      console.log('The image is of type APNG');
+    if (contentType && contentType.startsWith('image/png')) {
+      const isAPNG = response.headers.get('content-disposition') === 'inline; apng';
+      return isAPNG;
     } else {
-      console.log(`The image is of type ${contentType}`);
+      return false; 
     }
-    
   } catch (error) {
     console.error('Error:', error);
+    throw error;
   }
 }
