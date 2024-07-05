@@ -50,7 +50,7 @@ global.lenguaje = 'Español'
 global.menudi = ['⛶','❏','⫹⫺']
 global.dev = 'GataNina-Li'
 global.devnum = '+593 96 826 3524'
-global.dis = ':⁖֟⊱┈֟፝❥'
+global.dis = ':⁖֟⊱┈֟፝❥ '
 
 // Random
 global.random1 = getRandomImageBoys
