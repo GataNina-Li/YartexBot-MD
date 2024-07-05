@@ -162,7 +162,7 @@ return conn.reply(m.chat, `Use el comando ${usedPrefix}cambiarmenu con un texto 
 if (command === "cambiarmenu") {
 if ('personalizado' in editMenu) {
 if (!text && !m.quoted) return conn.reply(m.chat, `Para establecer una imagen en el menú debe de usar un enlace (jpg, jpeg o png) también puede responder a una imagen o sticker`, m)
-console.log(editMenu)
+//console.log(editMenu)
 
 let link, pp
 let web = /https?:\/\/\S+/
@@ -172,10 +172,10 @@ if (text && web.test(text)) {
 await IsEnlace(text).then(result => {
 link = result ? text : false
 pp = link
-console.log(result)
+//console.log(result)
 }).catch(error => {
 link = false
-console.log(error)
+//console.log(error)
 })
 }
 if (link === false) {
@@ -198,7 +198,6 @@ editMenu.video = false
 editMenu.imagen = false
 let mensajeConfirmacion = `Menú personalizado ${editMenu.personalizado ? 'activado ✅ verifica los cambios en el menú completo' : 'desactivado ❌'}`
 global.db.data.chats[m.chat].editMenu = editMenu
-console.log(editMenu)
 conn.reply(m.chat, mensajeConfirmacion, m)
 } else {
 return conn.reply(m.chat, hasOwnPropertyError, m)
@@ -215,7 +214,7 @@ if (match) {
 texto = match[0]
 const response = await fetch(texto, { method: 'HEAD' })
 const contentType = response.headers.get('content-type')
-console.log(contentType)
+//console.log(contentType)
 if (contentType && (contentType.startsWith('image/jpeg') || contentType.startsWith('image/jpg') || contentType.startsWith('image/png') || contentType.startsWith('image/webp'))) {
 return true
 }}
