@@ -56,7 +56,7 @@ const sections = [
 const list = {
 text: `✨ *¡Empieza a personalizar ${wm}!*\n
 ☆ ⌒ ★ ⌒ ☆ ⌒ ★ ⌒ ☆ ⌒ ★ ⌒ ☆
-🍰 \`Continua si eres algunos de estos roles:\`
+🍰 \`Continua si eres alguno de estos roles:\`
 ${m.isGroup ? `✪ Admin: ${isAdmin ? '✅' : '❌'}` : ''}
 ✪ Dueñ@: ${isOwner ? '✅' : '❌'}
 ✪ Bot: ${isROwner ? '✅' : '❌'}
