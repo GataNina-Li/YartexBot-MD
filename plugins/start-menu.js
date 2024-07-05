@@ -459,5 +459,9 @@ handler.command = ['help', 'menucompleto', 'allmenu']
 handler.register = true
 export default handler
 
-const more = String.fromCharCode(8206);
-const readMore = more.repeat(4001);
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
+function getRandom(array) {
+return array[Math.floor(Math.random() * array.length)];
+}
