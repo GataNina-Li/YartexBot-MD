@@ -171,11 +171,13 @@ editMenu.personalizado = link
 console.log(result)
 }).catch(error => {
 link = false
+console.log(error)
 })
+}
 if (link === false) {
 return await conn.reply(m.chat, 'El enlace proporcionado no es válido.', m)
-}}
-
+}
+  
 if (!m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/image/g.test(mime) || /webp/g.test(mime)) {
