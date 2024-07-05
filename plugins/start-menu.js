@@ -456,7 +456,6 @@ serverMessageId: -1
 }}}, { quoted: editMenu.verificado ? fkontak : m })
 } else if (editMenu.personalizado) {
 try {
-let imageBuffer = await conn.downloadMedia(m)
 let response = await fetch(editMenu.personalizado)
 if (!response.ok) {
 return console.log(`Error al descargar la imagen (${response.status} ${response.statusText})`)
