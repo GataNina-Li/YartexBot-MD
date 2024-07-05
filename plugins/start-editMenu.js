@@ -158,7 +158,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 if (command === "cambiarmenu") {
 //if ('personalizado' in editMenu) {
 if (!text && !m.quoted) {
-return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m);
+return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
 }
 
 let link
@@ -184,7 +184,7 @@ let buffer = await q.download()
 editMenu.personalizado = await (uploadImage)(buffer)
 } catch {
 editMenu.personalizado = await webp2png(await q.download())
-}
+}}
   
 editMenu.simple = false
 editMenu.dinamico = false
