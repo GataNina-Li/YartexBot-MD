@@ -470,7 +470,7 @@ let x = (width - size) / 2
 let y = (height - size) / 2
 img.crop(x, y, size, size)
 let croppedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
-await conn.sendMessage(m.chat, { image: { url: 'https://s7.ezgif.com/tmp/ezgif-7-db3f652178.png'} }, { quoted: m })
+await conn.sendMessage(m.chat, { image: { url: 'https://s7.ezgif.com/tmp/ezgif-7-db3f652178.png'}, gifPlayback: true }, { quoted: m })
 //await img.resize(size, size)
 //let resizedBuffer = await img.getBufferAsync(jimp.MIME_PNG)
 //await conn.sendMessage(m.chat, { image: resizedBuffer }, { quoted: m })
