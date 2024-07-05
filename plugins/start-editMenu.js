@@ -38,7 +38,7 @@ let descripción = [
 "Aplicar verificado al mensaje del menú",
 "Usa esta opción si quieres agregar una imagen personalizada al menú"
 ]
-let comando = [ "editaremoji01", "editarimagen02", "editarvideo03", "editarvi04", "editarsimple05", "editarmencion06", "editardividir07", "editarverificado08", "editarmenu09" ]
+let comando = [ "editaremoji01", "editarimagen02", "editarvideo03", "editarvi04", "editarsimple05", "editarmencion06", "editardividir07", "editarverificado08", "cambiarmenu" ]
 const sections = [
 { title: seccion[0], rows: [
 { header: titulo[0], title: nombre[0], description: descripción[0], id: usedPrefix + comando[0] },
@@ -155,9 +155,12 @@ conn.reply(m.chat, mensajeConfirmacion, m)
 return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
-if (command === "editarmenu09") {
+if (command === "cambiarmenu") {
 if ('personalizado' in editMenu) {
-if (!text && !m.quoted) return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m)
+if (!text && !m.quoted) {
+return conn.reply(m.chat, `Use el comando ${usedPrefix + command} con un texto jpg, o respondiendo a una imagen o sticker para definir la imagen del menú`, m);
+}
+
 let link
 let web = /https?:\/\/\S+/
 let q = m.quoted ? m.quoted : m
@@ -196,7 +199,7 @@ return conn.reply(m.chat, hasOwnPropertyError, m)
 }}
 
 }}
-handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|editarmenu09)$/i
+handler.command = /^(editarmenu|editmenu|editaremoji01|editarimagen02|editarvideo03|editarvi04|editarsimple05|editarmencion06|editardividir07|editarverificado08|cambiarmenu)$/i
 export default handler
 
 async function IsEnlace(texto) {
