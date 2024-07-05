@@ -443,7 +443,7 @@ newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
 }}}, { quoted: editMenu.verificado ? fkontak : m })  
 } else if (editMenu.simple) {
-await conn.sendMessage(m.chat, { caption: menu, mentions: [m.sender], contextInfo: {
+await conn.sendMessage(m.chat, { text: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
 isForwarded: true,
 forwardingScore: 1, 
