@@ -419,7 +419,7 @@ forwardedNewsletterMessageInfo: {
 newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
-}}}, { quoted: fkontak })
+}}}, { quoted: editMenu.verificado ? fkontak : m })
 } else if (editMenu.video) {
 await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
@@ -429,7 +429,7 @@ forwardedNewsletterMessageInfo: {
 newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
 serverMessageId: -1
-}}}, { quoted: fkontak })
+}}}, { quoted: editMenu.verificado ? fkontak : m })
 } else {
 await conn.sendMessage(m.chat, { video: { url: vid }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
 mentionedJid: await conn.parseMention(menu),
@@ -438,7 +438,7 @@ forwardingScore: 1,
 forwardedNewsletterMessageInfo: {
 newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
-serverMessageId: -1
+serverMessageId: -1 
 }}}, { quoted: fkontak })
 }
 }
