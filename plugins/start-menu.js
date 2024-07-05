@@ -425,58 +425,18 @@ serverMessageId: -1
 if (editMenu.imagen) {
 await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
 } else if (editMenu.video) {
-await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
-mentionedJid: await conn.parseMention(menu),
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363302472386010@newsletter',
-newsletterName: 'YartexBot-MD ✨',
-serverMessageId: -1
-}}}, { quoted: editMenu.verificado ? fkontak : m })
+await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
 } else if (editMenu.dinamico) {
 const mediaFiles = [{ image: { url: yartexImg.getRandom() } }, { video: { url: yartexVid.getRandom(), gifPlayback: true } }]
 let randomMedia = getRandom(mediaFiles)
-await conn.sendMessage(m.chat, { ...randomMedia, caption: menu, mentions: [m.sender], contextInfo: {
-mentionedJid: await conn.parseMention(menu),
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363302472386010@newsletter',
-newsletterName: 'YartexBot-MD ✨',
-serverMessageId: -1
-}}}, { quoted: editMenu.verificado ? fkontak : m })  
+await conn.sendMessage(m.chat, { ...randomMedia, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
 } else if (editMenu.simple) {
-await conn.sendMessage(m.chat, { text: menu, mentions: [m.sender], contextInfo: {
-mentionedJid: await conn.parseMention(menu),
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363302472386010@newsletter',
-newsletterName: 'YartexBot-MD ✨',
-serverMessageId: -1
-}}}, { quoted: editMenu.verificado ? fkontak : m })
+await conn.sendMessage(m.chat, { text: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
 } else if (editMenu.personalizado) {
 let newImg = await cropImageToSquare(editMenu.personalizado)
-await conn.sendMessage(m.chat, { image: newImg, caption: menu, mentions: [m.sender], contextInfo: {
-mentionedJid: await conn.parseMention(menu),
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363302472386010@newsletter',
-newsletterName: 'YartexBot-MD ✨',
-serverMessageId: -1
-}}}, { quoted: editMenu.verificado ? fkontak : m })
+await conn.sendMessage(m.chat, { image: newImg, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
 } else {
-await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: {
-mentionedJid: await conn.parseMention(menu),
-isForwarded: true,
-forwardingScore: 1, 
-forwardedNewsletterMessageInfo: {
-newsletterJid: '120363302472386010@newsletter',
-newsletterName: 'YartexBot-MD ✨',
-serverMessageId: -1 
-}}}, { quoted: fkontak })
+await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: fkontak })
 }
 }
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
