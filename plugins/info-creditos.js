@@ -7,6 +7,7 @@ https://github.com/GataNina-Li
 🎌 *Colaboradores*
 ⬡ *AzamiJs* 
 ⬡ *Diego*
+⬡ *matias-crypto*
 
 _Envie "colaboradores" para obtener el enlace del perfil de GitHub de los colaboradores_`
 
@@ -19,6 +20,7 @@ let texto = `🌟 *GitHub - Colaboradores*
 
 ⬡ https://github.com/Diego-YL-177
 ⬡ https://github.com/AzamiJs
+⬡ *https://github.com/matias-crypto*
 
 _Envie "cc" Para Obtener El Contacto De Los Colaboradores_`
 
@@ -32,7 +34,10 @@ let contacto = `🌟 *Contacto - Colaboradores*
 @5214434703586
 
 ⬡ *Diego*
-@573012482597`
+@573012482597
+
+⬡ *matias-crypto*
+@5492215034412`
 
 m.reply(contacto, m.chat, { mentions: conn.parseMention(contacto)})}
 }
