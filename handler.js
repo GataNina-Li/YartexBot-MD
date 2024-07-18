@@ -12,13 +12,11 @@ const { proto } = (await import('@whiskeysockets/baileys')).default
 const isNumber = x => typeof x === 'number' && !isNaN(x)
 const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(function () {
 clearTimeout(this)
-resolve()
-}, ms))
+resolve()}, ms))
  
 export async function handler(chatUpdate) {
-
-this.msgqueque = this.msgqueque || [];
-this.uptime = this.uptime || Date.now();
+this.msgqueque = this.msgqueque || []
+this.uptime = this.uptime || Date.now()
 if (!chatUpdate)
 return
 this.pushMessage(chatUpdate.messages).catch(console.error)
@@ -34,7 +32,6 @@ return
 m.exp = 0
 m.diamond = false
 try {
-
 // TODO: Usa un bucle para insertar datos en lugar de esto.
 let user = global.db.data.users[m.sender]
 if (typeof user !== 'object')
@@ -60,14 +57,14 @@ if (!isNumber(user.dog)) user.dog = 0
 if (!isNumber(user.fox)) user.fox = 0
 if (!('registered' in user)) user.registered = false
  
-//--Usuario registrado
+// Registro de usuario
 if (!user.registered) {
 if (!('name' in user)) user.name = m.name
 if (!isNumber(user.age)) user.age = -1
 if (!isNumber(user.regTime)) user.regTime = -1
 }
 
-//--Usuario número
+// Datos de usuario
 if (!isNumber(user.afk)) user.afk = -1
 if (!('afkReason' in user)) user.afkReason = ''
 if (!('banned' in user)) user.banned = false
@@ -78,7 +75,7 @@ if (!('autolevelup' in user)) user.autolevelup = true
 if (!('simi' in user)) user.simi = false
 if (!('muto' in user)) user.muto = false
 if (!('premium' in user)) user.premium = false
-
+if (!user.premium) user.premiumTime = 0
 } else
 
 global.db.data.users[m.sender] = {
@@ -114,35 +111,35 @@ autolevelup: true,
 simi: false,
 muto: false,
 premium: false,
+premiumTime: 0,
 }
 
-const akinator = global.db.data.users[m.sender].akinator;
-		    if (typeof akinator !== 'object') {
-        global.db.data.users[m.sender].akinator = {};
-      }
-		    if (akinator) {
-        if (!('sesi' in akinator)) akinator.sesi = false;
-        if (!('server' in akinator)) akinator.server = null;
-        if (!('frontaddr' in akinator)) akinator.frontaddr = null;
-        if (!('session' in akinator)) akinator.session = null;
-        if (!('signature' in akinator)) akinator.signature = null;
-        if (!('question' in akinator)) akinator.question = null;
-        if (!('progression' in akinator)) akinator.progression = null;
-        if (!('step' in akinator)) akinator.step = null;
-        if (!('soal' in akinator)) akinator.soal = null;
-	            } else {
-        global.db.data.users[m.sender].akinator = {
-          sesi: false,
-          server: null,
-          frontaddr: null,
-          session: null,
-          signature: null,
-          question: null,
-          progression: null,
-          step: null,
-          soal: null,
-        };
-      } 
+const akinator = global.db.data.users[m.sender].akinator
+if (typeof akinator !== 'object') {
+global.db.data.users[m.sender].akinator = {}
+}
+if (akinator) {
+if (!('sesi' in akinator)) akinator.sesi = false
+if (!('server' in akinator)) akinator.server = null
+if (!('frontaddr' in akinator)) akinator.frontaddr = null
+if (!('session' in akinator)) akinator.session = null
+if (!('signature' in akinator)) akinator.signature = null
+if (!('question' in akinator)) akinator.question = null
+if (!('progression' in akinator)) akinator.progression = null
+if (!('step' in akinator)) akinator.step = null
+if (!('soal' in akinator)) akinator.soal = null
+} else {
+global.db.data.users[m.sender].akinator = {
+sesi: false,
+server: null,
+frontaddr: null,
+session: null,
+signature: null,
+question: null,
+progression: null,
+step: null,
+soal: null,
+}} 
 	
 let chat = global.db.data.chats[m.chat]
 if (typeof chat !== 'object')
@@ -220,19 +217,13 @@ antiCall: false,
 antiPrivate: false,
 modejadibot: true,
 status: 0
-
-}
-} catch (e) {
+}} catch (e) {
 console.error(e)
 }
-//const dataown = global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)
-//let JIS of data.map(([id]) => [id] + '@s.whatsapp.net').filter(v => v != conn.user.jid)
-const isROOwner = [conn.decodeJid(global.conn.user.id), ...global.isdev.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isROwner = [conn.decodeJid(global.conn.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isOwner = isROwner || m.fromMe
-const isDev = isROOwner || m.fromMe
 const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+const isPrems = isROwner || global.db.data.users[m.sender].premiumTime > 0
 
 if (opts['nyimak'])
 return
@@ -266,11 +257,11 @@ let _user = global.db.data && global.db.data.users && global.db.data.users[m.sen
 
 const groupMetadata = (m.isGroup ? ((conn.chats[m.chat] || {}).metadata || await this.groupMetadata(m.chat).catch(_ => null)) : {}) || {}
 const participants = (m.isGroup ? groupMetadata.participants : []) || []
-const user = (m.isGroup ? participants.find(u => conn.decodeJid(u.id) === m.sender) : {}) || {} // User Data
-const bot = (m.isGroup ? participants.find(u => conn.decodeJid(u.id) == this.user.jid) : {}) || {} // Your Data
-const isRAdmin = user?.admin == 'superadmin' || false
-const isAdmin = isRAdmin || user?.admin == 'admin' || false // Is User Admin?
-const isBotAdmin = bot?.admin || false // Are you Admin?
+const user = (m.isGroup ? participants.find(u => conn.decodeJid(u.id) === m.sender) : {}) || {} // Usuario
+const bot = (m.isGroup ? participants.find(u => conn.decodeJid(u.id) == this.user.jid) : {}) || {} // Datos del bot
+const isRAdmin = user?.admin == 'superadmin' || false // Creador o admin principal
+const isAdmin = isRAdmin || user?.admin == 'admin' || false // Admins
+const isBotAdmin = bot?.admin || false // Si el bot es admin
 
 const ___dirname = path.join(path.dirname(fileURLToPath(import.meta.url)), './plugins')
 for (let name in global.plugins) {
@@ -328,7 +319,7 @@ command = (command || '').toLowerCase()
 let fail = plugin.fail || global.dfail
 let isAccept = plugin.command instanceof RegExp ?
 plugin.command.test(command) :
-Array.isArray(plugin.command) ? // Array?
+Array.isArray(plugin.command) ? 
 plugin.command.some(cmd => cmd instanceof RegExp ?
 cmd.test(command) :
 cmd === command
@@ -355,7 +346,7 @@ if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) {
 fail('owner', m, this)
 continue
 }
-if (plugin.rowner && !isDev) { // Desarollador del bot
+if (plugin.rowner && !isROwner) { // bot
 fail('rowner', m, this)
 continue
 }
@@ -390,9 +381,9 @@ fail('unreg', m, this)
 continue
 }
 m.isCommand = true
-let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
-if (xp > 200)
-m.reply('Chirrido -_-')
+let xp = 'exp' in plugin ? parseInt(plugin.exp) : 10 // Ganancia de xp por comando
+if (xp > 2000)
+m.reply('Exp limit') 
 else
 m.exp += xp
 if (!isPrems && plugin.limit && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
@@ -499,8 +490,8 @@ let settingsREAD = global.db.data.settings[this.user.jid] || {}
 if (opts['autoread']) await this.readMessages([m.key])
 if (settingsREAD.autoread2) await this.readMessages([m.key])  
 //if (settingsREAD.autoread2 == 'true') await this.readMessages([m.key])    
-	    
-if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|curiosity|bot|curio|bug|syntax)/gi)) {
+
+if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify)/gi)) {
 let emot = pickRandom(["😀", "😃", "😄", "😁", "😆", "🥹", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😶‍🌫️", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🫣", "🤭", "🫢", "🫡", "🤫", "🫠", "🤥", "😶", "🫥", "😐", "🫤", "😑", "🫨", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😮‍💨", "😵", "😵‍💫", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", "🤠", "😈", "👿", "👺", "🤡", "💩", "👻", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🫶", "👍", "✌️", "🙏", "🫵", "🤏", "🤌", "☝️", "🖕", "🙏", "🫵", "🫂", "🐱", "🤹‍♀️", "🤹‍♂️", "🗿", "✨", "⚡", "🔥", "🌈", "🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎", "💔", "❤️‍🔥", "❤️‍🩹", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "🏳️‍🌈", "👊", "👀", "💋", "🫰", "💅", "👑", "🐣", "🐤", "🐈"])
 if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
 }
