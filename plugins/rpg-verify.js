@@ -23,7 +23,7 @@ user.registered = true
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
 m.react('✨') 
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
-> *${dis}ＲＥＧＩＳＴＲＯ*
+*║ ${dis}ＲＥＧＩＳＴＲＯ*
 *║ .・゜゜・・゜゜・．*
 *║* 💠 *Nombre* ${name}
 *║* 💠 *Edad* ${age} años
