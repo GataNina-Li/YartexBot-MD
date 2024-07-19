@@ -7,7 +7,7 @@ let name2 = conn.getName(m.sender)
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
 
-if (user.registered === true) return conn.reply(m.chat, `${dis}Ya esta registrado como *${user.name}*\n\n Si desea hacer un nuevo registro ✨ debe de usar el comando:\n*${usedPrefix}delregistro* \`Número de serie\`\n\n🙂 Si no conoce su número de serie, use el comando:\n*${usedPrefix}numserie*`, m) 
+if (user.registered === true) return conn.reply(m.chat, `${dis}Ya esta registrado como *${user.name}*\n\n Si desea hacer un nuevo registro ✨ debe de usar el comando:\n*${usedPrefix}delregistro* \`Número de serie\`\n\n🙂 Si no conoce su número de serie, use el comando:\n*${usedPrefix}numserie*`, m, fake) 
 if (!Reg.test(text)) return conn.reply(m.chat, `${dis}\`Uso correcto del comando:\`\n*${usedPrefix + command}* nombre.edad\n\n🩷 *Ejemplo:*\n*${usedPrefix + command}* GataDios.20`, m)
 let [_, name, splitter, age] = text.match(Reg)
 if (!name) return conn.reply(m.chat, `🫠 *No hemos econtrado su nombre, intente de nuevo.*`, m)
@@ -22,31 +22,6 @@ user.regTime = + new Date
 user.registered = true
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
 m.react('✨') 
-/*await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
-*║${dis}ＲＥＧＩＳＴＲＯ*
-*║ .・゜゜・・゜゜・．*
-*║* 💠 *Nombre* ${name}
-*║* 💠 *Edad* ${age} años
-*║* 💠 *Número de serie* \`${sn}\`
-*║⫘⫘⫘⫘⫘⫘✨*\n\n${wm2}`, mentions: [m.sender], contextInfo: {
-isForwarded: true,
-forwardedNewsletterMessageInfo: {
-newsletterJid: "120363302472386010@newsletter",
-serverMessageId: 100,
-newsletterName: 'YartexBot-MD ✨',
-},
-externalAdReply: { 
-showAdAttribution: true,
-title: packname,
-body: des,
-previewType: "PHOTO",
-thumbnailUrl: random1(),
-sourceUrl: md,
-mediaType: 1,
-renderLargerThumbnail: false
-},}
-}, { quoted: m })*/
-
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 > *${dis}ＲＥＧＩＳＴＲＯ*
 *║ .・゜゜・・゜゜・．*
