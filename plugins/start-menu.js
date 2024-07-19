@@ -419,7 +419,7 @@ forwardingScore: 1,
 forwardedNewsletterMessageInfo: {
 newsletterJid: '120363302472386010@newsletter',
 newsletterName: 'YartexBot-MD ✨',
-serverMessageId: -1
+serverMessageId: 100
 }}
 
 if (editMenu.imagen) {
