@@ -22,7 +22,7 @@ user.regTime = + new Date
 user.registered = true
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
 m.react('✨') 
-await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
+/*await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 *║${dis}ＲＥＧＩＳＴＲＯ*
 *║ .・゜゜・・゜゜・．*
 *║* 💠 *Nombre* ${name}
@@ -39,15 +39,21 @@ externalAdReply: {
 showAdAttribution: true,
 title: packname,
 body: des,
-mediaUrl: null,
-description: null,
 previewType: "PHOTO",
-thumbnailUrl: ImgAll.getRandom(),
+thumbnailUrl: random1(),
 sourceUrl: md,
 mediaType: 1,
 renderLargerThumbnail: false
 },}
-}, { quoted: m })
+}, { quoted: m })*/
+
+await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
+*║${dis}ＲＥＧＩＳＴＲＯ*
+*║ .・゜゜・・゜゜・．*
+*║* 💠 *Nombre* ${name}
+*║* 💠 *Edad* ${age} años
+*║* 💠 *Número de serie* \`${sn}\`
+*║⫘⫘⫘⫘⫘⫘✨*\n\n${wm2}`, mentions: [m.sender], { fake } }, { quoted: m })
   
 }
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
