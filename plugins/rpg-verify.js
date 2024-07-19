@@ -8,7 +8,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
 
 if (user.registered === true) return conn.reply(m.chat, `${dis}Ya esta registrado como *${user.name}*\n\n Si desea hacer un nuevo registro ✨ debe de usar el comando:\n*${usedPrefix}delregistro* \`Número de serie\`\n\n🙂 Si no conoce su número de serie, use el comando:\n*${usedPrefix}numserie*`, m) 
-if (!Reg.test(text)) return conn.reply(m.chat, `${dis}\`Uso correcto del comando:\`\n*${usedPrefix + command} nombre.edad*\n🩷 *Ejemplo:*\n*${usedPrefix + command}* GataDios.20`, m)
+if (!Reg.test(text)) return conn.reply(m.chat, `${dis}\`Uso correcto del comando:\`\n*${usedPrefix + command} nombre.edad*\n\n🩷 *Ejemplo:*\n*${usedPrefix + command}* GataDios.20`, m)
 let [_, name, splitter, age] = text.match(Reg)
 if (!name) return conn.reply(m.chat, `🫠 *No hemos econtrado su nombre, intente de nuevo.*`, m)
 if (!age) return conn.reply(m.chat, `🤔 *No hemos econtrado su edad, intente de nuevo.*`, m)
