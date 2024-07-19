@@ -116,7 +116,7 @@ contextInfo: {
 isForwarded: true,
 forwardedNewsletterMessageInfo: {
 newsletterJid: "120363302472386010@newsletter",
-serverMessageId: 1,
+serverMessageId: 100,
 newsletterName: 'YartexBot-MD ✨',
 },
 externalAdReply: { 
