@@ -118,15 +118,13 @@ contextInfo: {
 isForwarded: true,
 forwardedNewsletterMessageInfo: {
 newsletterJid: "120363302472386010@newsletter",
-serverMessageId: 100,
+serverMessageId: '',
 newsletterName: 'YartexBot-MD ✨',
 },
 externalAdReply: { 
 showAdAttribution: true,
 title: packname,
 body: des,
-mediaUrl: null,
-description: null,
 previewType: "PHOTO",
 thumbnailUrl: random1(),
 sourceUrl: md,
