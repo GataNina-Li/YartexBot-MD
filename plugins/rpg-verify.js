@@ -53,7 +53,7 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘�
 *║* 💠 *Nombre* ${name}
 *║* 💠 *Edad* ${age} años
 *║* 💠 *Número de serie* \`${sn}\`
-*║⫘⫘⫘⫘⫘⫘✨*\n\n${wm2}`, mentions: [m.sender], fake }, { quoted: m })
+*║⫘⫘⫘⫘⫘⫘✨*\n\n${wm2}`, mentions: [m.sender], ...fake }, { quoted: m })
   
 }
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
