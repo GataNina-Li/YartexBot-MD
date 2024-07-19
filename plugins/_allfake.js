@@ -128,11 +128,13 @@ body: des,
 mediaUrl: null,
 description: null,
 previewType: "PHOTO",
-thumbnailUrl: ImgAll.getRandom(),
+thumbnailUrl: random1(),
 sourceUrl: md,
 mediaType: 1,
 renderLargerThumbnail: false
 },},}
+
+  
 
 }
 
