@@ -48,7 +48,7 @@ renderLargerThumbnail: false
 }, { quoted: m })*/
 
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
-*║${dis}ＲＥＧＩＳＴＲＯ*
+> *${dis}ＲＥＧＩＳＴＲＯ*
 *║ .・゜゜・・゜゜・．*
 *║* 💠 *Nombre* ${name}
 *║* 💠 *Edad* ${age} años
