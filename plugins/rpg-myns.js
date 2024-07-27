@@ -12,7 +12,7 @@ null,
 [['Texto para copiar 1'], ['Texto para copiar 2'] /* etc... */],
 null,
 null
-] 
+]]
 await conn.sendCarousel(m.chat, 'Texto', 'Footer', 'Titulo de Carrusel', messages, m) 
 }
 handler.command = /^(myns|ceksn|ns|numserie)$/i
