@@ -9,7 +9,7 @@ wm2,
 null,
 [],
 [['Copiar ID', sn]],
-null
+[]
 ]] 
 await conn.sendCarousel(m.chat, 'Texto', 'Footer', 'Titulo de Carrusel', messages, m)  
 }
