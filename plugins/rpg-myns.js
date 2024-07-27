@@ -21,7 +21,7 @@ const messages = [[ // CARRUSEL 4
 [['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
 [['Botón Lista 1', sections], ['Botón Lista 2', sections]]
 ]] /* etc... */
-await conn.sendCarousel(m.chat, 'Texto', 'Footer', 'Titulo de Carrusel', messages, m) 
+await conn.sendCarousel(m.chat, 'Texto', 'Footer', 'Titulo de Carrusel', messages, m)  
 }
 handler.command = /^(myns|ceksn|ns|numserie)$/i
 handler.register = true
