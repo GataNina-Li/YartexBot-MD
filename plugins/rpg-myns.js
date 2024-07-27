@@ -7,7 +7,7 @@ const messages = [[
 '⬇️ *Su número de serie asignado es:* ⬇️',
 wm2,
 null,
-null,
+[],
 [['Copiar ID', sn]],
 null
 ]] 
