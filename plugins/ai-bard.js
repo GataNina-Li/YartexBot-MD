@@ -7,7 +7,7 @@ if (!text) return conn.reply(m.chat, `🎌 *Ingresé una petición*\n\nEjemplo, 
 try {
 
 conn.sendPresenceUpdate('composing', m.chat)
-var apii = await fetch(`https://aemt.me/bard?text=${text}`)
+var apii = await fetch(`https://aemt.me/gemini?text=${text}`)
 var res = await apii.json()
 await m.reply(res.result)
 
