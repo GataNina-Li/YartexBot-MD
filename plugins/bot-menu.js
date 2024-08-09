@@ -59,7 +59,7 @@ const messages = [[ // CARRUSEL 1
 random1(),
 [['Botón1', usedPrefix + 'menu'], ['Botón2', 'Id2'] /* etc... */],
 [['Texto para copiar 1'], ['Texto para copiar 2'] /* etc... */],
-[['Enlace1', canal2], ['Enlace2', 'https://example.com/link2'] /* etc... */],
+[['Enlace1', ''], ['Enlace2', 'https://example.com/link2'] /* etc... */],
 [['Botón Lista 1', sections], ['Botón Lista 2', sections] /* etc... */]
 ], [ // CARRUSEL 2
 'Descripción de Carrusel 2',
