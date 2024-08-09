@@ -88,7 +88,7 @@ random1(),
 ]] /* etc... */
 await conn.sendCarousel(m.chat, 'Texto', 'Footer', 'Titulo de Carrusel', messages, m)     
   
-} catch {
+} catch (e) {
 conn.reply(m.chat, `*❗️ Ocurrió un error*`, m, fake, )
 console.log(e)
 }}
