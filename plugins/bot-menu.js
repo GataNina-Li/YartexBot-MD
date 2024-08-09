@@ -58,7 +58,7 @@ const messages = [[ // CARRUSEL 1
 'Footer de Carrusel 1',
 yartexImg.getRandom(),
 [['Botón1', usedPrefix + 'menu'] /* etc... */],
-[[]],
+[[null, null]],
 [[]],
 [[]]
 ], [ // CARRUSEL 2
