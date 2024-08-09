@@ -30,7 +30,7 @@ let a = {'key': {'participants': '0@s.whatsapp.net', 'fromMe': false, 'id': '3B6
 const ftrol = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 2023, status: 1, surface : 1, message: `${user}!`, orderTitle: `▮Menu ▸`, sellerJid: '0@s.whatsapp.net' }}}
 const fload = { key : { message: `YartexBot-MD 🌟` + `\nGataNina-Li`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp.net' }}
 
-m.react('🌟')
+/*m.react('🌟')
   
 let menu = `*👋 Hola, ${user}*
 
@@ -44,7 +44,50 @@ _(Para ver el menú completo)_
 _(Para ver el menu audios)_`
 
 await conn.reply(m.chat, menu, a, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}})
-
+*/
+const sections = [{
+title: `Título de la sección`,
+rows: [
+{ header: 'Encabezado1', title: "Título1", description: 'Descripción1', id: usedPrefix + "menu" }, 
+{ header: 'Encabezado2', title: "Título2", description: 'Descripción2', id: "Id2" }, 
+{ header: 'Encabezado3', title: "Título3", description: 'Descripción3', id: "Id3" }, 
+{ header: 'Encabezado4', title: "Título4", description: 'Descripción4', id: "Id4" }, 
+]},]  
+const messages = [[ // CARRUSEL 1
+'Descripción de Carrusel 1', 
+'Footer de Carrusel 1',
+random1(),
+[['Botón1', usedPrefix + 'menu'], ['Botón2', 'Id2'] /* etc... */],
+[['Texto para copiar 1'], ['Texto para copiar 2'] /* etc... */],
+[['Enlace1', canal2], ['Enlace2', 'https://example.com/link2'] /* etc... */],
+[['Botón Lista 1', sections], ['Botón Lista 2', sections] /* etc... */]
+], [ // CARRUSEL 2
+'Descripción de Carrusel 2',
+'Footer de Carrusel 2',
+random1(),
+[['Botón1', 'Id1'], ['Botón2', 'Id2']],
+[['Texto para copiar 1'], ['Texto para copiar 2']],
+[['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
+[['Botón Lista 1', sections], ['Botón Lista 2', sections]]
+], [ // CARRUSEL 3
+'Descripción de Carrusel 3',
+'Footer de Carrusel 3',
+random1(),
+[['Botón1', 'Id1'], ['Botón2', 'Id2']],
+[['Texto para copiar 1'], ['Texto para copiar 2']],
+[['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
+[['Botón Lista 1', sections], ['Botón Lista 2', sections]]
+], [ // CARRUSEL 4
+'Descripción de Carrusel 4',
+'Footer de Carrusel 4',
+random1(),
+[['Botón1', 'Id1'], ['Botón2', 'Id2']],
+[['Texto para copiar 1'], ['Texto para copiar 2']],
+[['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
+[['Botón Lista 1', sections], ['Botón Lista 2', sections]]
+]] /* etc... */
+await conn.sendCarousel(m.chat, 'Texto', 'Footer', 'Titulo de Carrusel', messages, m)     
+  
 } catch {
 conn.reply(m.chat, `*❗️ Ocurrió un error*`, m, fake, )
 console.log(e)
