@@ -46,6 +46,7 @@ let menu = `
 ┆ ⋮  *Lugar* ${nombreLugar} - ${ciudad}
 ┆ ⋮  *Registrados* \`\`\`${Object.values(global.db.data.users).filter(user => user.registered == true).length}/${Object.keys(global.db.data.users).length}\`\`\`
 ┆ ⋮  *Versión* \`${version}\`
+┆ ⋮ *Menú de Audios* \`${_p}menu2\`
 ╰・・・・☆・・・・・・☆ ・・・・
 ${editMenu.dividir ? readMore : ''}
 ${editMenu.emoji ? '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ℹ :･ﾟ✧:･ﾟ✧･ﾟ✧*' : '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶:･ﾟ✧:･ﾟ✧･ﾟ✧*'}
