@@ -126,39 +126,6 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ***
 
-### 🟢 INFINITY-HOST
-> Activar **YartexBot-MD** 24/7 activo en Infinity-Host
-
-<a href="https://dash.infinity-wa.com"><img src="https://i.imgur.com/CiNEYMc.png" height="140px"></a>
-### Información del Host
-
-- **Dashboard:** [`Aquí`](https://dash.infinity-wa.com)
-- **Panel:** [`Aquí`](https://panel.infinity-wa.com)
-- **Estado de servicios:** [`Aquí`](https://status.infinity-wa.xyz)
-- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A)
-
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://telegra.ph/file/4ed8f39a08e62569e766a.jpg"></details>
-
-***
-
-### 🔵 CAFIREXOS 
-> Optimice la implementación de **YartexBot** mediante la integración en un servicio de alojamiento de alto rendimiento.
-
-<a href="https://www.cafirexos.com"><img src="https://grxcwmcwbxwj.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grxcwmcwbxwj/b/cafirexos/o/logos%2Flogo.png" height="125px"></a>
-### Información del Host
-
-- **Página:** [`Aquí`](https://www.cafirexos.com)
-- **Área de clientes:** [`Aquí`](https://clientes.cafirexos.com)
-- **Dashboard:** [`Aquí`](https://dashboard.cafirexos.com)
-- **Panel:** [`Aquí`](https://panel.cafirexos.com/)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q)
-- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/LrzOqVlP75A2h65v8kfLAR)
-- **Correo:** [`Aquí`](mailto:contacto@cafirexos.com)
-- **Contacto:** [`Diego Flores`](https://wa.me/50497150165)
-
-***
-
 ### 🍄 INSTALACIÓN POR CODE SPACE
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 
