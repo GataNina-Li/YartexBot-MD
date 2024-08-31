@@ -101,7 +101,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ### Información sobre CorinPlus
 
 - **Dashboard:** [`Aquí`](https://dash.corinplus.com)
-- **Panel:** [`Aquí`](https://panel.corinplus.com)
+- **Panel:** [`Aquí`](https://ctrl.corinplus.com)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
 - **Grupo - Soporte:** [`Aquí`](https://chat.whatsapp.com/K235lkvaGvlGRQKYm26xZP)
 - **Contacto:** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1)
