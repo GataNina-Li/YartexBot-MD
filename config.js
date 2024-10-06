@@ -17,6 +17,7 @@ global.owner = [
 ['5493873687620', '✨ YartexBot-MD', true],
 ['593968263524'],
 ['5214434703586'],
+['595976126756'],
 ['593968585383']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
