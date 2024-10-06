@@ -15,12 +15,9 @@ const __dirname = global.__dirname(import.meta.url)
 
 global.owner = [
 ['5493873687620', '✨ YartexBot-MD', true],
-['542215034412'], 
 ['593968263524'],
-['595976126756'],
-['59169082565'],
-['573012482597'],
-['5214434703586']]
+['5214434703586'],
+['593968585383']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
 //Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
