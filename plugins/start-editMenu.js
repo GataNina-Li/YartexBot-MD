@@ -67,7 +67,7 @@ footer: wm2,
 buttonText: `⊱ VER OPCIONES ⊰`,
 }
 if (command === "editarmenu" || command === "editmenu") {
-return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, null, fkontak)
+return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, null, m)
 }
   
 if (command === "editaremoji01") {
