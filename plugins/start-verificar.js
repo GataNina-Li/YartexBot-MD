@@ -26,7 +26,38 @@ if (!Reg.test(text)) {
 let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const edadesMayores = await generarEdades(21, 60)
 const edadesMenores = await generarEdades(9, 20)
-const secciones = [{
+const seccion = [`🔢 Elige tu Edad`];
+const titulos = ["🎲 Edad Aleatoria", "🧓 Mayor de Edad", "👶 Menor de Edad"];
+const nombres = [
+`🎲 Edad Aleatoria: ${edadRandom} Años`,
+...edadesMayores.map(age => `${age} Años`),
+...edadesMenores.map(age => `${age} Años`)
+]
+const comandos = [
+`${usedPrefix + command} ${nombre}.${edadRandom}`,
+...edadesMayores.map(age => `${usedPrefix + command} ${nombre}.${age}`),
+...edadesMenores.map(age => `${usedPrefix + command} ${nombre}.${age}`)
+]
+
+const sections = [{
+title: seccion[0],
+rows: [
+{ title: titulos[0], description: nombres[0], id: comandos[0] },
+...edadesMayores.map((age, index) => ({ title: titulos[1], description: nombres[index + 1], id: comandos[index + 1]})),
+...edadesMenores.map((age, index) => ({ title: titulos[2], description: nombres[index + edadesMayores.length + 1], id: comandos[index + edadesMayores.length + 1]
+}))
+]
+}]
+
+const mensajeLista = {
+text: "Por favor elige tu edad en los botones de abajo...",
+footer: formatoIncorrecto,
+title: `📝 Registro`,
+buttonText: "Elige Edad",
+sections: sections
+}
+return await conn.sendList(m.chat, mensajeLista.title, mensajeLista.text, mensajeLista.footer, mensajeLista.buttonText, null, sections, m)
+/*const secciones = [{
 title: `🔢 Elige tu Edad`,
 rows: [{
 title: "🎲 Edad Aleatoria",
@@ -52,7 +83,7 @@ title: `📝 Registro`,
 buttonText: "Elige Edad",
 sections: secciones
 }
-return await conn.sendListV2(m.chat, mensajeLista.title, mensajeLista.text, mensajeLista.footer, mensajeLista.buttonText, null, secciones, m)
+return await conn.sendListV2(m.chat, mensajeLista.title, mensajeLista.text, mensajeLista.footer, mensajeLista.buttonText, null, secciones, m)*/
 }  
 let [, name, , age] = text.match(Reg)
 if (!name) {
