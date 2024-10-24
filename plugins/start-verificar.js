@@ -97,15 +97,6 @@ user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }, 30000)
 }
 m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
-} catch (e) {
-user.name = ""
-user.age = 0
-user.registered = false
-user.OTP = "" 
-console.error(e)
-await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
-}
-
 handler.before = async function (m, { conn }) {
 if (m.quoted && m.quoted.id === msg.id && m.text === user.OTP) {
 let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
@@ -122,8 +113,14 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘�
 *║* 💠 *Edad* ${age} años
 *║* 💠 *Número de serie* \`${sn}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
-}
-  
+}}
+} catch (e) {
+user.name = ""
+user.age = 0
+user.registered = false
+user.OTP = "" 
+console.error(e)
+await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
 }}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
