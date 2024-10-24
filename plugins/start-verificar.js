@@ -104,7 +104,6 @@ user.OTP = ""
 console.error(e)
 await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
 }}
-}
 handler.before = async function (m, { conn }) {
 user = global.db.data.users[m.sender]
 console.log(user.OTP)
