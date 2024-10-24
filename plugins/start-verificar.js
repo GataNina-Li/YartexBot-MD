@@ -3,7 +3,7 @@ import { createHash, randomBytes } from "crypto"
 import fetch from "node-fetch"
 import _ from "lodash"
 const Reg = /\|?(.*)([^\w\s])([0-9]*)$/i
-let msg, user, pp, who, name, age, sn
+let msg, user, pp, who, name, age, sn, otp
 let handler = async function (m, { conn, text, usedPrefix, command }) {
 console.log('Prueba')
 user = global.db.data.users[m.sender]
@@ -104,10 +104,7 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 }
 handler.before = async function (m, { conn }) {
 user = global.db.data.users[m.sender]
-let isVerified = m.quoted.id == msg.key.id && m.text == user.OTP
-//console.log(m.quoted)
-console.log(m.quoted.id == msg.key.id)
-console.log(m.text == user.OTP)
+let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
 if (isVerified) {
 m.reply('Exito')
 //let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
@@ -123,8 +120,8 @@ await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption:
 *║* 💠 *Edad* ${age} años
 *║* 💠 *Número de serie* \`${sn}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
-msg = ''
-user.OTP = "" 
+//msg = ''
+otp = "" 
 }}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
