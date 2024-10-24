@@ -8,7 +8,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 console.log('Prueba')
 let user = global.db.data.users[m.sender]
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
+//let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
   
 //if (user.registered === false) {
 //return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", m)
