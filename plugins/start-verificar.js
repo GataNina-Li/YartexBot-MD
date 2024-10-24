@@ -82,7 +82,7 @@ let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n$
 user.OTP = otp 
 console.log(verified)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
-console.log(msg)
+console.log(user.OTP)
 // Si el tiempo se agota, se limpian los datos de registro
 if (otp) {
 setTimeout(() => {
@@ -105,8 +105,6 @@ console.error(e)
 await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
 }
 handler.before = async function (m, { conn }) {
-console.log('ID del mensaje citado:', m.quoted.id)
-console.log('ID del mensaje enviado:', msg.key.id)
 user = global.db.data.users[m.sender]
 if (m.quoted && m.quoted.id === msg.key.id && m.text === user.OTP) {
 let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
@@ -123,6 +121,7 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘�
 *║* 💠 *Edad* ${age} años
 *║* 💠 *Número de serie* \`${sn}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
+msg = ''
 }}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
