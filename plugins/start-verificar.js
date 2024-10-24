@@ -114,7 +114,7 @@ let combinacion = [...Array(5)].map(() => caracteres[_.random(0, caracteres.leng
 return `Usuario#${combinacion}`
 }
 
-async function generarEdades(min, max) {
+function generarEdades(min, max) {
 return _.range(max, min - 1, -1)  // Rango será de max a min (de mayor a menor)
 }
 
