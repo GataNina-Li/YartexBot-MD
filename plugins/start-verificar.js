@@ -3,7 +3,7 @@ import { createHash, randomBytes } from "crypto"
 import fetch from "node-fetch"
 import _ from "lodash"
 const Reg = /\|?(.*)([^\w\s])([0-9]*)$/i
-let msg, user, pp, who, name, age, sn, otp
+let msg, user, pp, who, name, age, sn
 let handler = async function (m, { conn, text, usedPrefix, command }) {
 console.log('Prueba')
 user = global.db.data.users[m.sender]
@@ -73,13 +73,13 @@ return await conn.reply(m.chat, "⚠️ Tu edad es muy avanzada. El máximo es 9
 if (age < 5) {
 return await conn.reply(m.chat, "⚠️ Tu edad es muy baja. El mínimo es 5 años.", m)
 }
-sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
+sn = createHash('md5').update(m.sender).digest('hex')
 //let caption = `🎉 *¡Felicidades! Te has registrado con éxito.*\n\n📛 *Nombre:* ${name}\n🎂 *Edad:* ${age} años\n🔑 *Número de Serie (SN):* ${sn}\n\n🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`
 try {
 const { image } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
 let confirm = "📝 Responde este mensaje con el código OTP que aparece en la imagen."
 let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n_(El código OTP es de un solo uso)_`
-user.OTP = otp 
+user.OTP = sn.replace(/\D/g, "").slice(0, 6)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 // Si el tiempo se agota, se limpian los datos de registro
 if (otp) {
@@ -104,9 +104,9 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 }
 handler.before = async function (m, { conn }) {
 user = global.db.data.users[m.sender]
-let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
+let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == user.OTP
 console.log(m.text)
-console.log(otp)
+console.log(user.OTP)
 if (isVerified) {
 m.reply('Exito')
 //let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
@@ -120,7 +120,7 @@ await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption:
 *║ .・゜゜・・゜゜・．*
 *║* 💠 *Nombre* ${name}
 *║* 💠 *Edad* ${age} años
-*║* 💠 *Número de serie* \`${sn}\`
+*║* 💠 *Número de serie* \`${sn.slice(0, 6)}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
 //msg = ''
 otp = "" 
