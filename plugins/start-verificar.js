@@ -21,7 +21,6 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const edadRandom = _.random(10, 60)
 const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando de esta manera:\n*${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo:\n*${usedPrefix + command}* ${nombre}.${edadRandom}`
-console.log(generarEdades(21, 60))
 if (!Reg.test(text)) { 
 
 const edadesMayores = await generarEdades(21, 60)
@@ -98,7 +97,8 @@ user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }
 m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
 handler.before = async function (m, { conn }) {
-if (m.quoted && m.quoted.id === msg.key && m.text === user.OTP) {
+cosnole.log(user.OTP)
+if (m.quoted && m.quoted.id === msg && m.text === user.OTP) {
 let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
 user.name = name
 user.age = age
