@@ -76,7 +76,7 @@ return await conn.reply(m.chat, "⚠️ Tu edad es muy baja. El mínimo es 5 añ
 sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
 //let caption = `🎉 *¡Felicidades! Te has registrado con éxito.*\n\n📛 *Nombre:* ${name}\n🎂 *Edad:* ${age} años\n🔑 *Número de Serie (SN):* ${sn}\n\n🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`
 try {
-const { image, otp, verified } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
+const { image } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
 let confirm = "📝 Responde este mensaje con el código OTP que aparece en la imagen."
 let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n_(El código OTP es de un solo uso)_`
 user.OTP = otp 
