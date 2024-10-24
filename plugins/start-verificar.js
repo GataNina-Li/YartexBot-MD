@@ -105,15 +105,15 @@ console.error(e)
 await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
 }
 handler.before = async function (m, { conn }) {
-user = global.db.data.users[m.sender]
+//user = global.db.data.users[m.sender]
 if (m.quoted && m.quoted.id === msg.key.id && m.text === user.OTP) {
-let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
+//let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
 user.name = name
 user.age = age
 user.registered = true
 await conn.sendMessage(m.sender, { delete: msg.key })
 m.react('✨') 
-await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
+await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 *║ ${dis}ＲＥＧＩＳＴＲＯ*
 *║ .・゜゜・・゜゜・．*
 *║* 💠 *Nombre* ${name}
