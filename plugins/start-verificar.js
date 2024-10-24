@@ -97,7 +97,7 @@ user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }
 m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
 handler.before = async function (m, { conn }) {
-cosnole.log(user.OTP)
+console.log(user.OTP)
 if (m.quoted && m.quoted.id === msg && m.text === user.OTP) {
 let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
 user.name = name
