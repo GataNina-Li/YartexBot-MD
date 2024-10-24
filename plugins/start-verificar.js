@@ -44,6 +44,7 @@ title: `🧓 Mayor de Edad`,
 rows: edadesMayores.map(age => ({
 title: `${age} Años`,
 description: `Elige ${age} como tu edad.`,
+highlight_label: "Popular",
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }
