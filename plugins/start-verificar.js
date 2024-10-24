@@ -57,7 +57,7 @@ buttonText: "Elige Edad",
 sections: sections
 }
 return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)*/
-const sections = [{
+const secciones = [{
 title: `🔢 Elige tu Edad`,
 rows: [{
 title: "🎲 Edad Aleatoria",
@@ -83,7 +83,7 @@ title: `📝 Registro`,
 buttonText: "Elige Edad",
 sections: secciones
 }
-await conn.sendListV2(m.chat, listMessage.title, listMessage.text, listMessage.footer, listMessage.buttonText, null, sections, m)
+await conn.sendListV2(m.chat, listMessage.title, listMessage.text, listMessage.footer, listMessage.buttonText, null, secciones, m)
 }  
 let [, name, , age] = text.match(Reg)
 if (!name) {
