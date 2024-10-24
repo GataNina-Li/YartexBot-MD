@@ -66,7 +66,6 @@ if (age < 5) {
 return await conn.reply(m.chat, "⚠️ Tu edad es muy baja. El mínimo es 5 años.", m)
 }
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
-let who = _.get(m, "mentionedJid[0]") || _.get(m, "quoted.sender") || (m.fromMe ? conn.user.jid : m.sender)
 let caption = `🎉 *¡Felicidades! Te has registrado con éxito.*\n\n📛 *Nombre:* ${name}\n🎂 *Edad:* ${age} años\n🔑 *Número de Serie (SN):* ${sn}\n\n🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`
 try {
 const { image, otp, verified } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
