@@ -21,7 +21,8 @@ return await conn.reply(m.chat, `✅ Ya estás registrado.\n¿Quieres registrart
 const edadRandom = _.random(1, 100)
 const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando de esta manera: *${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo: *${usedPrefix + command}* ${m.sender.split("@")[0]}.${edadRandom}`
 
-if (!Reg.test(text) || !text) { 
+if (!Reg.test(text)) { 
+console.log('Prueba')
 let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const secciones = [{
 title: `🔢 Elige tu Edad`,
