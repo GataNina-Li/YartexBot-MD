@@ -55,7 +55,7 @@ description: `Elige ${age} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }    
-//const sections = [seccionAleatoria, seccionMayores, seccionMenores];
+const sections = [seccionAleatoria, seccionMayores, seccionMenores];
 //const list = {
 //text: "Por favor elige tu edad en los botones de abajo...",
 //footer: formatoIncorrecto + '\n\n' + wm2,
