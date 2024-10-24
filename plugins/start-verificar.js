@@ -52,7 +52,7 @@ title: `📝 Registro`,
 buttonText: "Elige Edad",
 sections: secciones
 }
-return await conn.sendList(m.chat, mensajeLista.title, mensajeLista.text, mensajeLista.footer, mensajeLista.buttonText, null, secciones, m)
+return await conn.sendListV2(m.chat, mensajeLista.title, mensajeLista.text, mensajeLista.footer, mensajeLista.buttonText, null, secciones, m)
 }  
 let [, name, , age] = text.match(Reg)
 if (!name) {
