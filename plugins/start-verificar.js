@@ -107,7 +107,7 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 handler.before = async function (m, { conn }) {
 user = global.db.data.users[m.sender]
 console.log(user.OTP)
-if (m.quoted && m.quoted.id === msg.key.id && m.text === user.OTP) {
+if (m.quoted && m.quoted.id === msg.id && m.text === user.OTP) {
 let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
 user.name = name
 user.age = age
