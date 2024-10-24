@@ -33,8 +33,8 @@ title: "🎲 Edad Aleatoria",
 description: `Elige ${edadRandom} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${edadRandom}`
 }, {
-header: "Registro dinámico",  highlight_label: "Popular",
-title: "💫 Nombre y edad Aleatorio",
+header: "Registro dinámico",
+title: "💫 Nombre y edad Aleatorio", highlight_label: "Popular",
 description: `Nombre: ${await generarNombreRandom()} & Edad: ${edadRandom}.`,
 id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`  
 }]
