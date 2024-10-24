@@ -93,7 +93,7 @@ user.age = 0
 user.registered = false
 user.OTP = "" 
 }
-user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
+user.registered ? '' : conn.sendMessage(m.sender, { delete: msg })
 }, 30000)
 }
 m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
@@ -104,7 +104,7 @@ user.name = name
 user.age = age
 user.registered = true
 user.OTP = "" 
-conn.sendMessage(m.sender, { delete: msg.key })
+conn.sendMessage(m.sender, { delete: msg })
 m.react('✨') 
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 *║ ${dis}ＲＥＧＩＳＴＲＯ*
