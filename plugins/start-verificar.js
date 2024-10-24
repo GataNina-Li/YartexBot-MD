@@ -3,11 +3,11 @@ import { createHash, randomBytes } from "crypto"
 import fetch from "node-fetch"
 import _ from "lodash"
 const Reg = /\|?(.*)([^\w\s])([0-9]*)$/i
-let msg
+let msg, user, pp, who, name, age, sn
 let handler = async function (m, { conn, text, usedPrefix, command }) {
 console.log('Prueba')
-let user = global.db.data.users[m.sender]
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+user = global.db.data.users[m.sender]
+who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   
 //if (user.registered === false) {
 //return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", m)
@@ -59,7 +59,7 @@ sections: sections
 }
 return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
 }  
-let [, name, , age] = text.match(Reg)
+[, name, , age] = text.match(Reg)
 if (!name) {
 return await conn.reply(m.chat, "⚠️ El nombre no puede estar vacío. Usa solo letras y números.", m)
 }
@@ -73,7 +73,7 @@ return await conn.reply(m.chat, "⚠️ Tu edad es muy avanzada. El máximo es 9
 if (age < 5) {
 return await conn.reply(m.chat, "⚠️ Tu edad es muy baja. El mínimo es 5 años.", m)
 }
-let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
+sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
 //let caption = `🎉 *¡Felicidades! Te has registrado con éxito.*\n\n📛 *Nombre:* ${name}\n🎂 *Edad:* ${age} años\n🔑 *Número de Serie (SN):* ${sn}\n\n🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`
 try {
 const { image, otp, verified } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
