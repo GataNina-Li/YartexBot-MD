@@ -26,10 +26,10 @@ if (!Reg.test(text)) {
 const edadesMayores = await generarEdades(21, 60)
 const edadesMenores = await generarEdades(12, 20)
 const seccionAleatoria = {
-title: `🔢 Datos Aleatorios`,
+title: `🔢 Datos Aleatorios`, highlight_label: "Popular",
 rows: [
 {
-title: "🎲 Edad Aleatoria", highlight_label: "Beli Paket",
+title: "🎲 Edad Aleatoria", 
 description: `Elige ${edadRandom} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${edadRandom}`
 }, {
@@ -63,7 +63,7 @@ const sections = [seccionAleatoria, seccionMayores, seccionMenores]
 //sections: sections
 //}
 //return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
-conn.sendButton(m.chat, formatoIncorrecto, 'Por favor elige tu edad usando el botón de abajo...\n' + wm2, yartexImg.getRandom(), null, null, null, [['Elige Edad', sections]], m)
+return conn.sendButton(m.chat, formatoIncorrecto, 'Por favor elige tu edad usando el botón de abajo...\n' + wm2, yartexImg.getRandom(), null, null, null, [['Elige Edad', sections]], m)
 }  
 [, name, , age] = text.match(Reg)
 if (!name) {
