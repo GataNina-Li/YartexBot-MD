@@ -82,7 +82,7 @@ let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n$
 user.OTP = otp 
 console.log(verified)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
-
+console.log(msg)
 // Si el tiempo se agota, se limpian los datos de registro
 if (otp) {
 setTimeout(() => {
