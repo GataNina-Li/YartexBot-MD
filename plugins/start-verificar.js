@@ -105,8 +105,9 @@ console.error(e)
 await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
 }}
 handler.before = async function (m, { conn }) {
+console.log('ID del mensaje citado:', m.quoted.id)
+console.log('ID del mensaje enviado:', msg.key.id)
 user = global.db.data.users[m.sender]
-console.log(user.OTP)
 if (m.quoted && m.quoted.id === msg.id && m.text === user.OTP) {
 let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
 user.name = name
