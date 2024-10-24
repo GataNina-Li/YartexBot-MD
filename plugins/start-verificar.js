@@ -8,28 +8,27 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 console.log('Prueba')
 let user = global.db.data.users[m.sender]
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
+//let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
   
-if (user.registered === false) {
-return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", m)
-}
-if (user.banned) {
-return await conn.reply(m.chat, `🚫 Has sido bloqueado.\n¿Quieres eliminar el bloqueo? Escribe *${usedPrefix}unban <NÚMERO>*`, m)
-}
-if (user.registered) {
-return await conn.reply(m.chat, `✅ Ya estás registrado.\n¿Quieres registrarte de nuevo? Escribe *${usedPrefix}unreg <NÚMERO DE SERIE>*`, m)
-}
-const edadRandom = _.random(1, 100)
+//if (user.registered === false) {
+//return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", m)
+//}
+//if (user.banned) {
+//return await conn.reply(m.chat, `🚫 Has sido bloqueado.\n¿Quieres eliminar el bloqueo? Escribe *${usedPrefix}unban <NÚMERO>*`, m)
+//}
+//if (user.registered) {
+//return await conn.reply(m.chat, `✅ Ya estás registrado.\n¿Quieres registrarte de nuevo? Escribe *${usedPrefix}unreg <NÚMERO DE SERIE>*`, m)
+//}
+const edadRandom = _.random(10, 60)
 const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando de esta manera: *${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo: *${usedPrefix + command}* ${m.sender.split("@")[0]}.${edadRandom}`
 
 if (!Reg.test(text)) { 
-console.log('Prueba')
 let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const secciones = [{
 title: `🔢 Elige tu Edad`,
 rows: [{
 title: "🎲 Edad Aleatoria",
-id: usedPrefix + command + ` ${nombre}.${_.random(10, 60)}`
+id: usedPrefix + command + ` ${nombre}.${edadRandom}`
 }]
 }, {
 title: `🧓 Mayor de Edad`,
