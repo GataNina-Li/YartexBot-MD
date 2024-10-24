@@ -82,7 +82,7 @@ let confirm = "📝 Responde este mensaje con el código OTP que aparece en la i
 let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n_(El código OTP es de un solo uso)_`
 user.OTP = otp 
 console.log(verified)
-let msg = (await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })).key.id
+let msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 
 // Si el tiempo se agota, se limpian los datos de registro
 if (otp) {
@@ -93,18 +93,18 @@ user.age = 0
 user.registered = false
 user.OTP = "" 
 }
-user.registered ? '' : conn.sendMessage(m.sender, { delete: msg })
+user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }, 30000)
 }
 m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
 handler.before = async function (m, { conn }) {
-if (m.quoted && m.quoted.id === msg && m.text === user.OTP) {
+if (m.quoted && m.quoted.id === msg.key && m.text === user.OTP) {
 let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
 user.name = name
 user.age = age
 user.registered = true
 user.OTP = "" 
-conn.sendMessage(m.sender, { delete: msg })
+conn.sendMessage(m.sender, { delete: msg.key })
 m.react('✨') 
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 *║ ${dis}ＲＥＧＩＳＴＲＯ*
