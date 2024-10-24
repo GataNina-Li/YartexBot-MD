@@ -82,7 +82,7 @@ let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n$
 user.OTP = sn.replace(/\D/g, "").slice(0, 6)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 // Si el tiempo se agota, se limpian los datos de registro
-if (otp) {
+if (user.OTP) {
 setTimeout(() => {
 if (!user.registered) {
 user.name = ""
