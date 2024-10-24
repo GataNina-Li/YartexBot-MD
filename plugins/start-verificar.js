@@ -25,7 +25,7 @@ console.log(generarEdades(21, 60))
 if (!Reg.test(text)) { 
 let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const edadesMayores = await generarEdades(21, 60)
-const edadesMenores = await generarEdades(9, 20)
+const edadesMenores = await generarEdades(12, 20)
 const seccionAleatoria = {
 title: `🔢 Elige tu Edad`,
 rows: [
@@ -50,44 +50,15 @@ title: `${age} Años`,
 description: `Elige ${age} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
-}
-      
+}    
 const sections = [seccionAleatoria, seccionMayores, seccionMenores];
 const list = {
 text: "Por favor elige tu edad en los botones de abajo...",
-footer: formatoIncorrecto,
-title: `📝 Registro`,
+footer: formatoIncorrecto + '\n\n' + wm2,
 buttonText: "Elige Edad",
 sections: sections
 }
 return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
-/*const secciones = [{
-title: `🔢 Elige tu Edad`,
-rows: [{
-title: "🎲 Edad Aleatoria",
-id: usedPrefix + command + ` ${nombre}.${edadRandom}`
-}]
-}, {
-title: `🧓 Mayor de Edad`,
-rows: edadesMayores.map(age => ({
-title: `${age} Años`,
-id: usedPrefix + command + ` ${nombre}.${age}`
-}))
-}, {
-title: `👶 Menor de Edad`,
-rows: edadesMenores.map(age => ({
-title: `${age} Años`,
-id: usedPrefix + command + ` ${nombre}.${age}`
-}))
-}]
-const listMessage = {
-text: "Por favor elige tu edad en los botones de abajo...",
-footer: formatoIncorrecto,
-title: `📝 Registro`,
-buttonText: "Elige Edad",
-sections: secciones
-}
-await conn.sendListV2(m.chat, listMessage.title, listMessage.text, listMessage.footer, listMessage.buttonText, null, secciones, m)*/
 }  
 let [, name, , age] = text.match(Reg)
 if (!name) {
