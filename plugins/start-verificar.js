@@ -55,16 +55,15 @@ description: `Elige ${age} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }    
-const sections = [seccionAleatoria, seccionMayores, seccionMenores];
-const list = {
-text: "Por favor elige tu edad en los botones de abajo...",
-footer: formatoIncorrecto + '\n\n' + wm2,
-buttonText: "Elige Edad",
-sections: sections
-}
+//const sections = [seccionAleatoria, seccionMayores, seccionMenores];
+//const list = {
+//text: "Por favor elige tu edad en los botones de abajo...",
+//footer: formatoIncorrecto + '\n\n' + wm2,
+//buttonText: "Elige Edad",
+//sections: sections
+//}
 //return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
-const message = { messageContextInfo: { deviceListMetadata: {}, deviceListMetadataVersion: 2 }, list }
-return await conn.relayMessage(m.chat, { viewOnceMessage: { message } }, {})
+conn.sendButton(m.chat, formatoIncorrecto, 'Por favor elige tu edad usando el botón de abajo...\n' + wm2, yartexImg.getRandom(), null, null, null, [['Elige Edad', sections]], m)
 }  
 [, name, , age] = text.match(Reg)
 if (!name) {
