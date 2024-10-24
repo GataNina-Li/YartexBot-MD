@@ -3,7 +3,7 @@ import { createHash, randomBytes } from "crypto"
 import fetch from "node-fetch"
 import _ from "lodash"
 const Reg = /\|?(.*)([^\w\s])([0-9]*)$/i
-let msg, user, pp, who, name, age, sn
+let msg, user, pp, who, name, age, sn, otp
 let handler = async function (m, { conn, text, usedPrefix, command }) {
 console.log('Prueba')
 user = global.db.data.users[m.sender]
@@ -79,7 +79,7 @@ try {
 const { image } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
 let confirm = "📝 Responde este mensaje con el código OTP que aparece en la imagen."
 let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n_(El código OTP es de un solo uso)_`
-user.OTP = sn.replace(/\D/g, "").slice(0, 6)
+otp = sn.replace(/\D/g, "").slice(0, 6)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 // Si el tiempo se agota, se limpian los datos de registro
 if (user.OTP) {
@@ -104,9 +104,9 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 }
 handler.before = async function (m, { conn }) {
 user = global.db.data.users[m.sender]
-let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == user.OTP
+let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
 console.log(m.text)
-console.log(user.OTP)
+console.log(otp)
 if (isVerified) {
 m.reply('Exito')
 //let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
@@ -123,7 +123,7 @@ await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption:
 *║* 💠 *Número de serie* \`${sn.slice(0, 6)}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
 //msg = ''
-otp = "" 
+//otp = "" 
 }}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
