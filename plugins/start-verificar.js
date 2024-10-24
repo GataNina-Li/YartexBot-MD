@@ -25,7 +25,7 @@ if (!Reg.test(text)) {
 
 const edadesMayores = await generarEdades(21, 60)
 const edadesMenores = await generarEdades(12, 20)
-/*const seccionAleatoria = {
+const seccionAleatoria = {
 title: `🔢 Datos Aleatorios`,
 rows: [
 {
@@ -54,46 +54,7 @@ title: `${age} Años`,
 description: `Elige ${age} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
-} */
-const seccionAleatoria = {
-  title: `🔢 Datos Aleatorios`,
-  rows: [
-    {
-      header: "Aleatorio1",
-      title: "🎲 Edad Aleatoria",
-      description: `Elige ${edadRandom} como tu edad.`,
-      id: `${usedPrefix + command} ${nombre}.${edadRandom}`
-    },
-    {
-      header: "Registro dinámico",
-      title: "💫 Nombre y Edad Aleatorio",
-      description: `Nombre: ${await generarNombreRandom()} & Edad: ${edadRandom}.`,
-      id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`
-    }
-  ]
-};
-
-const seccionMayores = {
-  title: `🧓 Mayor de Edad`,
-  rows: edadesMayores.map((age) => ({
-    header: "Mayor de Edad",
-    title: `${age} Años`,
-    description: `Elige ${age} como tu edad.`,
-    id: `${usedPrefix + command} ${nombre}.${age}`
-  }))
-};
-
-const seccionMenores = {
-  title: `👶 Menor de Edad`,
-  rows: edadesMenores.map((age) => ({
-    header: "Menor de Edad",
-    title: `${age} Años`,
-    description: `Elige ${age} como tu edad.`,
-    id: `${usedPrefix + command} ${nombre}.${age}`
-  }))
-};
-
-
+} 
 const sections = [seccionAleatoria, seccionMayores, seccionMenores]
 //const list = {
 //text: "Por favor elige tu edad en los botones de abajo...",
