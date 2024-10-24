@@ -107,7 +107,7 @@ user = global.db.data.users[m.sender]
 let isVerified = m.quoted.id == msg.key.id && m.text == user.OTP
 //console.log(m.quoted)
 console.log(m.quoted.id == msg.key.id)
-console.log(user.OTP)
+console.log(m.text == user.OTP)
 if (isVerified) {
 m.reply('Exito')
 //let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
