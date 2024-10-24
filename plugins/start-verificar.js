@@ -12,7 +12,6 @@ let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRand
 if (db.data.database.registro[m.sender]) {
 return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", db.data.database.registro[m.sender].msg)
 }
-let user = db.data.users[m.sender]
 if (user.banned) {
 return await conn.reply(m.chat, `🚫 Has sido bloqueado.\n¿Quieres eliminar el bloqueo? Escribe *${usedPrefix}unban <NÚMERO>*`, m)
 }
