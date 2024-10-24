@@ -80,9 +80,7 @@ const { image, otp, verified } = await createOtpCanvas("Éxito", sn.replace(/\D/
 let confirm = "📝 Responde este mensaje con el código OTP que aparece en la imagen."
 let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n_(El código OTP es de un solo uso)_`
 user.OTP = otp 
-console.log(verified)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
-console.log(user.OTP)
 // Si el tiempo se agota, se limpian los datos de registro
 if (otp) {
 setTimeout(() => {
@@ -107,7 +105,7 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 handler.before = async function (m, { conn }) {
 //user = global.db.data.users[m.sender]
 let isVerified = m.quoted && m.quoted.id === msg.key.id && m.text === user.OTP
-console.log(isVerified)
+console.log(m.text)
 if (isVerified) {
 m.reply('Exito')
 //let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
