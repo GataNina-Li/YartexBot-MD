@@ -8,7 +8,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 console.log('Prueba')
 let user = global.db.data.users[m.sender]
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-//let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
+let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
   
 //if (user.registered === false) {
 //return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", m)
@@ -76,25 +76,28 @@ if (age < 5) {
 return await conn.reply(m.chat, "⚠️ Tu edad es muy baja. El mínimo es 5 años.", m)
 }
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
-let caption = `🎉 *¡Felicidades! Te has registrado con éxito.*\n\n📛 *Nombre:* ${name}\n🎂 *Edad:* ${age} años\n🔑 *Número de Serie (SN):* ${sn}\n\n🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`
+//let caption = `🎉 *¡Felicidades! Te has registrado con éxito.*\n\n📛 *Nombre:* ${name}\n🎂 *Edad:* ${age} años\n🔑 *Número de Serie (SN):* ${sn}\n\n🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`
 try {
 const { image, otp, verified } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
 let confirm = "📝 Responde este mensaje con el código OTP que aparece en la imagen."
 let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n_(El código OTP es de un solo uso)_`
+user.OTP = otp 
+console.log(verified)
 let msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 
 // Si el tiempo se agota, se limpian los datos de registro
 if (otp) {
 setTimeout(() => {
+if (!user.registered) {
 user.name = ""
 user.age = 0
 user.registered = false
 user.OTP = "" 
-conn.sendMessage(m.sender, { delete: msg.key })
+}
+user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }, 30000)
 }
-
-await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m)
+m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
 } catch (e) {
 user.name = ""
 user.age = 0
@@ -102,6 +105,25 @@ user.registered = false
 user.OTP = "" 
 console.error(e)
 await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
+}
+
+handler.before = async function (m, { conn }) {
+if (m.quoted && m.quoted.id === msg.id && m.text === user.OTP) {
+user.name = name
+user.age = age
+user.registered = true
+user.OTP = "" 
+conn.sendMessage(m.sender, { delete: msg.key })
+m.react('✨') 
+await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
+*║ ${dis}ＲＥＧＩＳＴＲＯ*
+*║ .・゜゜・・゜゜・．*
+*║* 💠 *Nombre* ${name}
+*║* 💠 *Edad* ${age} años
+*║* 💠 *Número de serie* \`${sn}\`
+*║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
+}
+  
 }}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
