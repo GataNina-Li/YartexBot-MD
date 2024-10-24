@@ -26,12 +26,17 @@ if (!Reg.test(text)) {
 const edadesMayores = await generarEdades(21, 60)
 const edadesMenores = await generarEdades(12, 20)
 const seccionAleatoria = {
-title: `🔢 Elige tu Edad`,
+title: `🔢 Datos Aleatorios`,
 rows: [
 {
 title: "🎲 Edad Aleatoria",
-description: `🎲 Edad Aleatoria: ${edadRandom} Años`,
+description: `Elige ${edadRandom} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${edadRandom}`
+}, {
+header: "Registro dinámico",
+title: "💫 Nombre y edad Aleatorio",
+description: `Nombre: ${await generarNombreRandom()} & Edad: ${edadRandom}.`,
+id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`  
 }]
 }
 const seccionMayores = {
@@ -105,25 +110,21 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 handler.before = async function (m, { conn }) {
 user = global.db.data.users[m.sender]
 let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
-console.log(m.text)
-console.log(otp)
 if (isVerified) {
-m.reply('Exito')
-//let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.getRandom())
+let pp = await conn.profilePictureUrl(who, 'image').catch(err => yartexImg.getRandom())
 user.name = name
 user.age = age
 user.registered = true
+user.OTP = sn.slice(0, 6)
 await conn.sendMessage(m.sender, { delete: msg.key })
 m.react('✨') 
-await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
+await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 *║ ${dis}ＲＥＧＩＳＴＲＯ*
 *║ .・゜゜・・゜゜・．*
 *║* 💠 *Nombre* ${name}
 *║* 💠 *Edad* ${age} años
 *║* 💠 *Número de serie* \`${sn.slice(0, 6)}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
-//msg = ''
-//otp = "" 
 }}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
