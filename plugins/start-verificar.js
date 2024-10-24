@@ -26,7 +26,7 @@ if (!Reg.test(text)) {
 const edadesMayores = await generarEdades(21, 60)
 const edadesMenores = await generarEdades(12, 20)
 const seccionAleatoria = {
-title: `🔢 Datos Aleatorios`,
+title: `🔢 Datos Aleatorios`, highlight_label: "Popular"
 rows: [
 {
 title: "🎲 Edad Aleatoria",
