@@ -24,6 +24,8 @@ const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando d
 console.log(generarEdades(21, 60))
 if (!Reg.test(text)) { 
 let nombre = await conn.getName(m.sender) || await generarNombreRandom()
+const edadesMayores = await generarEdades(21, 60)
+const edadesMenores = await generarEdades(9, 20)
 const secciones = [{
 title: `🔢 Elige tu Edad`,
 rows: [{
@@ -32,13 +34,13 @@ id: usedPrefix + command + ` ${nombre}.${edadRandom}`
 }]
 }, {
 title: `🧓 Mayor de Edad`,
-rows: generarEdades(21, 60).map(age => ({
+rows: edadesMayores.map(age => ({
 title: `${age} Años`,
 id: usedPrefix + command + ` ${tuNombre}.${age}`
 }))
 }, {
 title: `👶 Menor de Edad`,
-rows: generarEdades(9, 20).map(age => ({
+rows: edadesMenores.map(age => ({
 title: `${age} Años`,
 id: usedPrefix + command + ` ${tuNombre}.${age}`
 }))
