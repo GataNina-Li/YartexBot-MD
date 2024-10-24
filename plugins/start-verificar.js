@@ -62,7 +62,9 @@ footer: formatoIncorrecto + '\n\n' + wm2,
 buttonText: "Elige Edad",
 sections: sections
 }
-return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
+//return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
+const message = { messageContextInfo: { deviceListMetadata: {}, deviceListMetadataVersion: 2 }, list }
+return await conn.relayMessage(m.chat, { viewOnceMessage: { message } }, {})
 }  
 [, name, , age] = text.match(Reg)
 if (!name) {
