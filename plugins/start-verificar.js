@@ -4,7 +4,7 @@ import fetch from "node-fetch"
 import _ from "lodash"
 const Reg = /\|?(.*)([^\w\s])([0-9]*)$/i
 
-const handler = async (m, { conn, usedPrefix, command, text }) => {
+let handler = async function (m, { conn, text, usedPrefix, command }) {
 let user = global.db.data.users[m.sender]
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
