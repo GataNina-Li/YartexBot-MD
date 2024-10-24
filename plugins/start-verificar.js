@@ -5,6 +5,7 @@ import _ from "lodash"
 const Reg = /\|?(.*)([^\w\s])([0-9]*)$/i
 
 let handler = async function (m, { conn, text, usedPrefix, command }) {
+console.log('Prueba')
 let user = global.db.data.users[m.sender]
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
@@ -94,7 +95,6 @@ user.OTP = ""
 console.error(e)
 await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
 }}
-
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
 
