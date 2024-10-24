@@ -33,7 +33,7 @@ title: "🎲 Edad Aleatoria",
 description: `Elige ${edadRandom} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${edadRandom}`
 }, {
-header: "Registro dinámico",
+header: "Registro dinámico",  highlight_label: "Popular",
 title: "💫 Nombre y edad Aleatorio",
 description: `Nombre: ${await generarNombreRandom()} & Edad: ${edadRandom}.`,
 id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`  
@@ -63,7 +63,7 @@ const sections = [seccionAleatoria, seccionMayores, seccionMenores]
 //sections: sections
 //}
 //return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
-return conn.sendButton(m.chat, formatoIncorrecto, 'Por favor elige tu edad usando el botón de abajo...\n' + wm2, yartexImg.getRandom(), null, null, null, [['Elige Edad', sections]], m)
+return conn.sendButton(m.chat, formatoIncorrecto + '\n> _Por favor elige tu edad usando el botón de abajo..._\n', wm, yartexImg.getRandom(), null, null, null, [['Elige Edad', sections]], m)
 }  
 [, name, , age] = text.match(Reg)
 if (!name) {
