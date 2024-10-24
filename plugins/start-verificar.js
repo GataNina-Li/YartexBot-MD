@@ -36,13 +36,13 @@ id: usedPrefix + command + ` ${nombre}.${edadRandom}`
 title: `🧓 Mayor de Edad`,
 rows: edadesMayores.map(age => ({
 title: `${age} Años`,
-id: usedPrefix + command + ` ${tuNombre}.${age}`
+id: usedPrefix + command + ` ${nombre}.${age}`
 }))
 }, {
 title: `👶 Menor de Edad`,
 rows: edadesMenores.map(age => ({
 title: `${age} Años`,
-id: usedPrefix + command + ` ${tuNombre}.${age}`
+id: usedPrefix + command + ` ${nombre}.${age}`
 }))
 }]
 const mensajeLista = {
