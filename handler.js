@@ -62,6 +62,7 @@ if (!user.registered) {
 if (!('name' in user)) user.name = m.name
 if (!isNumber(user.age)) user.age = -1
 if (!isNumber(user.regTime)) user.regTime = -1
+if (!isNumber(user.OTP)) user.OTP = ''
 }
 
 // Datos de usuario
@@ -101,6 +102,7 @@ registered: false,
 name: m.name,
 age: -1,
 regTime: -1,
+OTP: '',
 afk: -1,
 afkReason: '',
 banned: false,
