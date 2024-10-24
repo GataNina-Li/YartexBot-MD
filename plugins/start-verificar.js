@@ -19,11 +19,12 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 //if (user.registered) {
 //return await conn.reply(m.chat, `✅ Ya estás registrado.\n¿Quieres registrarte de nuevo? Escribe *${usedPrefix}unreg <NÚMERO DE SERIE>*`, m)
 //}
+let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const edadRandom = _.random(10, 60)
-const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando de esta manera: *${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo: *${usedPrefix + command}* ${m.sender.split("@")[0]}.${edadRandom}`
+const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando de esta manera:\n*${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo:\n*${usedPrefix + command}* ${nombre}.${edadRandom}`
 console.log(generarEdades(21, 60))
 if (!Reg.test(text)) { 
-let nombre = await conn.getName(m.sender) || await generarNombreRandom()
+
 const edadesMayores = await generarEdades(21, 60)
 const edadesMenores = await generarEdades(12, 20)
 const seccionAleatoria = {
