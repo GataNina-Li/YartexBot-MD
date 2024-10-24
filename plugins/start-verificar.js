@@ -111,8 +111,7 @@ let pp = await conn.profilePictureUrl(who, 'image').catch(error => yartexImg.get
 user.name = name
 user.age = age
 user.registered = true
-user.OTP = "" 
-conn.sendMessage(m.sender, { delete: msg.key })
+await conn.sendMessage(m.sender, { delete: msg.key })
 m.react('✨') 
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 *║ ${dis}ＲＥＧＩＳＴＲＯ*
@@ -122,6 +121,7 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘�
 *║* 💠 *Número de serie* \`${sn}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
 msg = ''
+user.OTP = "" 
 }}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
