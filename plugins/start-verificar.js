@@ -9,8 +9,8 @@ let user = global.db.data.users[m.sender]
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => yartexImg.getRandom())
   
-if (db.data.database.registro[m.sender]) {
-return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", db.data.database.registro[m.sender].msg)
+if (user.registered === false) {
+return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", m)
 }
 if (user.banned) {
 return await conn.reply(m.chat, `🚫 Has sido bloqueado.\n¿Quieres eliminar el bloqueo? Escribe *${usedPrefix}unban <NÚMERO>*`, m)
@@ -75,6 +75,7 @@ let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n$
 let msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 
 // Si el tiempo se agota, se limpian los datos de registro
+if (otp) {
 setTimeout(() => {
 user.name = ""
 user.age = 0
@@ -82,6 +83,7 @@ user.registered = false
 user.OTP = "" 
 conn.sendMessage(m.sender, { delete: msg.key })
 }, 30000)
+}
 
 await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m)
 } catch (e) {
