@@ -57,7 +57,7 @@ buttonText: "Elige Edad",
 sections: sections
 }
 return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)*/
-const secciones = [{
+const sections = [{
 title: `🔢 Elige tu Edad`,
 rows: [{
 title: "🎲 Edad Aleatoria",
