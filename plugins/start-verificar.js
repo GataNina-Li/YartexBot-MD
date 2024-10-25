@@ -25,43 +25,6 @@ if (!Reg.test(text)) {
 
 const edadesMayores = await generarEdades(18, 60)
 const edadesMenores = await generarEdades(10, 17)
-/*const sections1 = {
-title: `🔢 Datos Aleatorios`, 
-highlight_label: "Popular",
-rows: [{
-title: "🎲 Edad Aleatoria", 
-description: `Elige ${edadRandom} como tu edad.`,
-id: `${usedPrefix + command} ${nombre}.${edadRandom}`
-}]
-}
-
-const sections2 = {
-title: `❇️ Registro dinámico`, 
-highlight_label: "Recomendado",
-rows: [{
-header: "Registro dinámico",
-title: "💫 Nombre y edad Aleatorios",
-description: `Nombre: ${await generarNombreRandom()}\nEdad: ${edadRandom}`,
-id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`
-}]}
-
-const sections3 = {
-title: `🧓 Mayor de Edad`, highlight_label: "Popular",
-rows: edadesMayores.map(age => ({
-title: `${age} Años`,
-description: `Elige ${age} como tu edad.`,
-id: `${usedPrefix + command} ${nombre}.${age}`
-}))
-}
-const sections4 = {
-title: `👶 Menor de Edad`,
-rows: edadesMenores.map(age => ({
-title: `${age} Años`,
-description: `Elige ${age} como tu edad.`,
-id: `${usedPrefix + command} ${nombre}.${age}`
-}))
-} 
-const sections = [sections1, sections2, sections3, sections4]*/
 const sections = [
 {
 title: `🔢 Datos Aleatorios`,
@@ -99,15 +62,7 @@ id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }  
 ]
-
-//const list = {
-//text: "Por favor elige tu edad en los botones de abajo...",
-//footer: formatoIncorrecto + '\n\n' + wm2,
-//buttonText: "Elige Edad",
-//sections: sections
-//}
-//return await conn.sendList(m.chat, list.text, list.footer, list.buttonText, sections, null, m)
-return conn.sendButton(m.chat, formatoIncorrecto + '\n> _Por favor elige tu edad usando el botón de abajo..._\n', wm, yartexImg.getRandom(), null, null, null, [['Elige Edad', sections]], m)
+return conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _Por favor elige tu edad usando el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
 }  
 [, name, , age] = text.match(Reg)
 if (!name) {
