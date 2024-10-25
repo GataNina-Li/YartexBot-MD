@@ -1,11 +1,13 @@
 import { generate, generateV1, generateV2, generateV3 } from "../lib/captcha.js"
 import { createHash, randomBytes } from "crypto"
+import { getDevice } from '@whiskeysockets/baileys'
 import fetch from "node-fetch"
 import _ from "lodash"
 const Reg = /\|?(.*)([^\w\s])([0-9]*)$/i
 let msg, user, pp, who, name, age, sn, otp
+
 let handler = async function (m, { conn, text, usedPrefix, command }) {
-console.log('Prueba')
+const dispositivo = await getDevice(m.key.id)
 user = global.db.data.users[m.sender]
 who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   
@@ -62,7 +64,11 @@ id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }  
 ]
-return conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _Por favor elige tu edad usando el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
+if (/ios|web|desktop|unknown/gi.test(dispositivo)) {
+return await conn.reply(m.chat, formatoIncorrecto + '\n\n' + wm2, m)
+} else {
+return await conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _Por favor elige tu edad usando el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
+}
 }  
 [, name, , age] = text.match(Reg)
 if (!name) {
