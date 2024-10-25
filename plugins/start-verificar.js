@@ -101,7 +101,6 @@ user.registered = false
 user.OTP = "" 
 user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }, 30000)
-}
 m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
 } catch (e) {
 user.name = ""
