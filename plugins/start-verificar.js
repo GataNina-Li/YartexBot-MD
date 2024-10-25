@@ -147,9 +147,10 @@ console.error(e)
 }}
 
 async function generarNombreRandom() {
-const caracteres = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-let combinacion = [...Array(5)].map(() => caracteres[_.random(0, caracteres.length - 1)]).join('')
-return `Usuario#${combinacion}`
+const numeros = '0123456789'
+const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const combinacion = [ numeros[_.random(0, numeros.length - 1)], numeros[_.random(0, numeros.length - 1)], letras[_.random(0, letras.length - 1)], letras[_.random(0, letras.length - 1)], letras[_.random(0, letras.length - 1)]]
+return `Usuario#${_.shuffle(combinacion).join('')}`
 }
 
 function generarEdades(min, max) {
