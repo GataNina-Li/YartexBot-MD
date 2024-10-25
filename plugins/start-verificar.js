@@ -95,7 +95,7 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 handler.before = async function (m, { conn }) {
 let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
 if (isVerified) {
-let pp = await conn.profilePictureUrl(m.sender, 'image').catch(err => yartexImg.getRandom())
+pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => yartexImg.getRandom())
 user.name = name
 user.age = age
 user.registered = true
