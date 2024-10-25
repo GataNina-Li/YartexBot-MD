@@ -107,7 +107,7 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘�
 *║* 💠 *Número de serie* \`${sn.slice(0, 6)}\`
 *║* 💠 *OTP* \`${user.OTP}\` (correcto)
 *║⫘⫘⫘⫘⫘⫘✨*\n
-\n> 🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`, mentions: [m.sender], ...fake }, { quoted: m })
+> ✅ _Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados._`, mentions: [m.sender], ...fake }, { quoted: m })
 }}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
