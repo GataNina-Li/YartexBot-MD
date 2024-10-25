@@ -57,7 +57,7 @@ id: `${usedPrefix + command} ${nombre}.${age}`
 if (/ios|web|desktop|unknown/gi.test(dispositivo)) {
 return await conn.reply(m.chat, formatoIncorrecto + '\n\n' + wm2, m)
 } else {
-return await conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _Por favor, usa el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
+return await conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _También puedes usar el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
 }
 }  
 [, name, , age] = text.match(Reg)
