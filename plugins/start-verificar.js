@@ -24,7 +24,7 @@ title: `🔢 Datos Aleatorios`,
 highlight_label: "Popular",
 rows: [{
 title: "🎲 Edad Aleatoria",
-description: `Elige ${edadRandom} como tu edad.`,
+description: `Elige ${edadRandom} para tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${edadRandom}`
 }]
 },
@@ -41,7 +41,7 @@ id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`
 title: `🧓 Mayor de edad`,
 rows: edadesMayores.map(age => ({
 title: `${age} Años`,
-description: `👉 Elige ${age} como tu edad.`,
+description: `👉 Elige ${age} para tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 },
@@ -49,7 +49,7 @@ id: `${usedPrefix + command} ${nombre}.${age}`
 title: `👶 Menor de edad`,
 rows: edadesMenores.map(age => ({
 title: `${age} Años`,
-description: `🍭 Elige ${age} como tu edad.`,
+description: `🍭 Elige ${age} para tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }  
