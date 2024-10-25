@@ -23,8 +23,8 @@ const edadRandom = _.random(10, 60)
 const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando de esta manera:\n*${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo:\n*${usedPrefix + command}* ${nombre}.${edadRandom}`
 if (!Reg.test(text)) { 
 
-const edadesMayores = await generarEdades(21, 60)
-const edadesMenores = await generarEdades(12, 20)
+const edadesMayores = await generarEdades(18, 60)
+const edadesMenores = await generarEdades(10, 17)
 /*const sections1 = {
 title: `🔢 Datos Aleatorios`, 
 highlight_label: "Popular",
@@ -83,7 +83,7 @@ id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`
 }]
 },
 {
-title: `🧓 Mayor de Edad`, highlight_label: "Popular",
+title: `🧓 Mayor de Edad`,
 rows: edadesMayores.map(age => ({
 title: `${age} Años`,
 description: `Elige ${age} como tu edad.`,
