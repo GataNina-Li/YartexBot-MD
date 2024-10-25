@@ -10,21 +10,12 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 const dispositivo = await getDevice(m.key.id)
 user = global.db.data.users[m.sender]
 who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-  
-if (user.OTP) {
-return await conn.reply(m.sender, "⚠️ Aún estás en el proceso de registro. ¡Termínalo primero!", m)
-}
-if (user.banned) {
-return await conn.reply(m.chat, `🚫 Has sido bloqueado.\n¿Quieres eliminar el bloqueo? Escribe *${usedPrefix}unban <NÚMERO>*`, m)
-}
-if (user.registered) {
-return await conn.reply(m.chat, `✅ Ya estás registrado.\n¿Quieres registrarte de nuevo? Escribe *${usedPrefix}unreg <NÚMERO DE SERIE>*`, m)
-}
+if (user.banned) return await conn.reply(m.chat, `🚫 Esta baneado. No tiene permitido usar este bot.*`, m)
+if (user.registered) return await conn.sendMessage(m.chat, { text: `${dis}Ya esta registrado como *${user.name}*\n\nSi desea hacer un nuevo registro ✨ debe de usar el comando:\n*${usedPrefix}delregistro* \`Número de serie\`\n\n🙂 Si no conoce su número de serie, use el comando:\n*${usedPrefix}numserie*`, ...fake }, { quoted: m })
 let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const edadRandom = _.random(10, 60)
-const formatoIncorrecto = `⚠️ ¡Formato incorrecto!\n\n📌 Usa el comando de esta manera:\n*${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo:\n*${usedPrefix + command}* ${nombre}.${edadRandom}`
+const formatoIncorrecto = `⚠️ *¡Verifica el formato de uso!*\n\n📌 Usa el comando de esta manera:\n*${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo:\n*${usedPrefix + command}* ${nombre}.${edadRandom}`
 if (!Reg.test(text)) { 
-
 const edadesMayores = await generarEdades(18, 60)
 const edadesMenores = await generarEdades(10, 17)
 const sections = [
@@ -38,28 +29,27 @@ id: `${usedPrefix + command} ${nombre}.${edadRandom}`
 }]
 },
 {
-title: `❇️ Registro dinámico`,
+title: `❇️ Registro Dinámico`,
 highlight_label: "Recomendado",
 rows: [{
-header: "Registro dinámico",
-title: "💫 Nombre y edad Aleatorios",
-description: `Nombre: ${await generarNombreRandom()}\nEdad: ${edadRandom}`,
+title: "💫 Nombre y edad aleatorios",
+description: `Registrarme como ${await generarNombreRandom()} con edad de ${edadRandom} años.`,
 id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`
 }]
 },
 {
-title: `🧓 Mayor de Edad`,
+title: `🧓 Mayor de edad`,
 rows: edadesMayores.map(age => ({
 title: `${age} Años`,
-description: `Elige ${age} como tu edad.`,
+description: `👉 Elige ${age} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 },
 {
-title: `👶 Menor de Edad`,
+title: `👶 Menor de edad`,
 rows: edadesMenores.map(age => ({
 title: `${age} Años`,
-description: `Elige ${age} como tu edad.`,
+description: `🍭 Elige ${age} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }  
@@ -67,29 +57,21 @@ id: `${usedPrefix + command} ${nombre}.${age}`
 if (/ios|web|desktop|unknown/gi.test(dispositivo)) {
 return await conn.reply(m.chat, formatoIncorrecto + '\n\n' + wm2, m)
 } else {
-return await conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _Por favor elige tu edad usando el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
+return await conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _Por favor, usa el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
 }
 }  
 [, name, , age] = text.match(Reg)
-if (!name) {
-return await conn.reply(m.chat, "⚠️ El nombre no puede estar vacío. Usa solo letras y números.", m)
-}
-if (!age) {
-return await conn.reply(m.chat, "⚠️ La edad no puede estar vacía. Solo ingresa números.", m)
-}
+if (!name) return conn.reply(m.chat, `🫠 *No hemos econtrado su nombre, intente de nuevo.*`, m)
+if (name.length >= 41) return conn.reply(m.chat, `😩 *Use un nombre más corto por favor.*`, m)
+if (!age) return conn.reply(m.chat, `🤔 *No hemos econtrado su edad, intente de nuevo.*`, m)
 age = parseInt(age)
-if (age > 99) {
-return await conn.reply(m.chat, "⚠️ Tu edad es muy avanzada. El máximo es 99 años.", m)
-}
-if (age < 5) {
-return await conn.reply(m.chat, "⚠️ Tu edad es muy baja. El mínimo es 5 años.", m)
-}
+if (age >= 61) return conn.reply(m.chat, `🤷‍♀️ *Use una edad más joven por favor.*`, m)
+if (age <= 9) return conn.reply(m.chat, `😆 *Use una edad mayor por favor.*`, m)
 sn = createHash('md5').update(m.sender).digest('hex')
-//let caption = `🎉 *¡Felicidades! Te has registrado con éxito.*\n\n📛 *Nombre:* ${name}\n🎂 *Edad:* ${age} años\n🔑 *Número de Serie (SN):* ${sn}\n\n🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`
 try {
 const { image } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
-let confirm = "📝 Responde este mensaje con el código OTP que aparece en la imagen."
-let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n_(El código OTP es de un solo uso)_`
+let confirm = "📌 Responde este mensaje con el código OTP que aparece en la imagen."
+let txt = `🕵️‍♀️ *Proceso de Verificación* 🕵️‍♀️\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n> _(El código OTP es personal y de un solo uso.)_`
 otp = sn.replace(/\D/g, "").slice(0, 6)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 // Si el tiempo se agota, se limpian los datos de registro
@@ -113,20 +95,22 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 handler.before = async function (m, { conn }) {
 let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
 if (isVerified) {
-//let pp = await conn.profilePictureUrl(who, 'image').catch(err => yartexImg.getRandom())
+let pp = await conn.profilePictureUrl(m.sender, 'image').catch(err => yartexImg.getRandom())
 user.name = name
 user.age = age
 user.registered = true
-user.OTP = sn.slice(0, 6)
+user.OTP = otp
 await conn.sendMessage(m.sender, { delete: msg.key })
 m.react('✨') 
-await conn.sendMessage(m.chat, { image: { url: yartexImg.getRandom() }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
+await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘⫘⫘✨*
 *║ ${dis}ＲＥＧＩＳＴＲＯ*
 *║ .・゜゜・・゜゜・．*
 *║* 💠 *Nombre* ${name}
 *║* 💠 *Edad* ${age} años
 *║* 💠 *Número de serie* \`${sn.slice(0, 6)}\`
-*║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
+*║* 💠 *OTP* \`${user.OTP}\` (correcto)
+*║⫘⫘⫘⫘⫘⫘✨*\n
+\n> 🔓 Tus datos están seguros en nuestra base de datos y ahora puedes usar todas las funciones disponibles para usuarios verificados.`, mentions: [m.sender], ...fake }, { quoted: m })
 }}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
