@@ -69,7 +69,7 @@ if (age >= 61) return conn.reply(m.chat, `🤷‍♀️ *Use una edad más joven
 if (age <= 9) return conn.reply(m.chat, `😆 *Use una edad mayor por favor.*`, m)
 sn = createHash('md5').update(m.sender).digest('hex')
 try {
-const { image } = await createOtpCanvas("Éxito", sn.replace(/\D/g, ""))
+const { image } = await createOtp("Éxito", sn.replace(/\D/g, ""))
 let confirm = "📌 Responde este mensaje con el código OTP que aparece en la imagen."
 let txt = `🕵️‍♀️ *Proceso de Verificación* 🕵️‍♀️\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n> _(El código OTP es personal y de un solo uso.)_`
 otp = sn.replace(/\D/g, "").slice(0, 6)
@@ -95,7 +95,8 @@ await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de ve
 handler.before = async function (m, { conn }) {
 let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
 if (isVerified) {
-pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => yartexImg.getRandom())
+pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => null) || yartexImg.getRandom()
+console.log(pp)
 user.name = name
 user.age = age
 user.registered = true
@@ -115,12 +116,12 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘�
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
 
-async function createOtpCanvas(inSucc, seri) {
-seri = seri.slice(0, 6)
+async function createOtp(buffer, code) {
+code = code.slice(0, 6)
 try {
-const captcha = await generateV2(seri) || await generateV3(seri) || await generateV1(seri) || await generate(seri)
+const captcha = await generateV2(code) || await generateV3(code) || await generateV1(code) || await generate(code)
 const captchaBuffer = captcha.buffer
-const securityBuffer = (await generateV2(inSucc) || await generateV3(inSucc) || await generateV1(inSucc) || await generate(inSucc))?.buffer
+const securityBuffer = (await generateV2(buffer) || await generateV3(buffer) || await generateV1(buffer) || await generate(buffer))?.buffer
 return { image: captchaBuffer, otp: captcha.code, verified: securityBuffer }
 } catch (e) {
 console.error(e)
