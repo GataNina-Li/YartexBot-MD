@@ -93,14 +93,12 @@ let txt = `📝 *Proceso de Verificación* 📝\n\n@${m.sender.split("@")[0]}\n$
 otp = sn.replace(/\D/g, "").slice(0, 6)
 msg = await conn.sendMessage(m.sender, { image: image, caption: txt, mentions: [m.sender] }, { quoted: m })
 // Si el tiempo se agota, se limpian los datos de registro
-if (user.OTP) {
 setTimeout(() => {
-if (!user.registered) {
+if (user.registered) return
 user.name = ""
 user.age = 0
 user.registered = false
 user.OTP = "" 
-}
 user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }, 30000)
 }
