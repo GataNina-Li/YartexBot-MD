@@ -40,12 +40,11 @@ id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`
 }]
 }
 const seccionMayores = {
-title: `🧓 Mayor de Edad`,
+title: `🧓 Mayor de Edad`, highlight_label: "Popular",
 rows: edadesMayores.map(age => ({
 title: `${age} Años`,
 description: `Elige ${age} como tu edad.`,
-id: `${usedPrefix + command} ${nombre}.${age}`,
-highlight_label: "Popular"
+id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 }
 const seccionMenores = {
@@ -108,7 +107,7 @@ user.registered = false
 user.OTP = "" 
 console.error(e)
 await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
-}
+}}
 handler.before = async function (m, { conn }) {
 user = global.db.data.users[m.sender]
 let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
@@ -127,7 +126,7 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*║⫘⫘⫘⫘�
 *║* 💠 *Edad* ${age} años
 *║* 💠 *Número de serie* \`${sn.slice(0, 6)}\`
 *║⫘⫘⫘⫘⫘⫘✨*`, mentions: [m.sender], ...fake }, { quoted: m })
-}}}
+}}
 handler.command = /^(ver(ify|ificar)|reg(istrar)?)$/i
 export default handler
 
