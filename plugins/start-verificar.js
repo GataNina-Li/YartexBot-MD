@@ -69,7 +69,7 @@ if (age >= 61) return conn.reply(m.chat, `🤷‍♀️ *Use una edad más joven
 if (age <= 9) return conn.reply(m.chat, `😆 *Use una edad mayor por favor.*`, m)
 sn = createHash('md5').update(m.sender).digest('hex')
 try {
-pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => yartexImg.getRandom())
+pp = await conn.profilePictureUrl(m.sender, 'image')//.catch(_ => yartexImg.getRandom())
 const { image } = await createOtp("Éxito", sn.replace(/\D/g, ""))
 let confirm = "📌 Responde este mensaje con el código OTP que aparece en la imagen."
 let txt = `🕵️‍♀️ *Proceso de Verificación* 🕵️‍♀️\n\n@${m.sender.split("@")[0]}\n${confirm}\n\n> _(El código OTP es personal y de un solo uso.)_`
