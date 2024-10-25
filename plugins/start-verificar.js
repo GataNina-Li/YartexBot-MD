@@ -25,14 +25,15 @@ if (!Reg.test(text)) {
 
 const edadesMayores = await generarEdades(21, 60)
 const edadesMenores = await generarEdades(12, 20)
-const sections1 = {
+/*const sections1 = {
 title: `🔢 Datos Aleatorios`, 
 highlight_label: "Popular",
 rows: [{
 title: "🎲 Edad Aleatoria", 
 description: `Elige ${edadRandom} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${edadRandom}`
-}]}
+}]
+}
 
 const sections2 = {
 title: `❇️ Registro dinámico`, 
@@ -60,7 +61,45 @@ description: `Elige ${age} como tu edad.`,
 id: `${usedPrefix + command} ${nombre}.${age}`
 }))
 } 
-const sections = [sections1, sections2, sections3, sections4]
+const sections = [sections1, sections2, sections3, sections4]*/
+const sections = [
+{
+title: `🔢 Datos Aleatorios`,
+highlight_label: "Popular",
+rows: [{
+title: "🎲 Edad Aleatoria",
+description: `Elige ${edadRandom} como tu edad.`,
+id: `${usedPrefix + command} ${nombre}.${edadRandom}`
+}]
+},
+{
+title: `❇️ Registro dinámico`,
+highlight_label: "Recomendado",
+rows: [{
+header: "Registro dinámico",
+title: "💫 Nombre y edad Aleatorios",
+description: `Nombre: ${await generarNombreRandom()}\nEdad: ${edadRandom}`,
+id: `${usedPrefix + command} ${await generarNombreRandom()}.${edadRandom}`
+}]
+},
+{
+title: `🧓 Mayor de Edad`, highlight_label: "Popular",
+rows: edadesMayores.map(age => ({
+title: `${age} Años`,
+description: `Elige ${age} como tu edad.`,
+id: `${usedPrefix + command} ${nombre}.${age}`
+}))
+},
+{
+title: `👶 Menor de Edad`,
+rows: edadesMenores.map(age => ({
+title: `${age} Años`,
+description: `Elige ${age} como tu edad.`,
+id: `${usedPrefix + command} ${nombre}.${age}`
+}))
+}  
+]
+
 //const list = {
 //text: "Por favor elige tu edad en los botones de abajo...",
 //footer: formatoIncorrecto + '\n\n' + wm2,
