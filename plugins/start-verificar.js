@@ -85,18 +85,13 @@ user.registered ? '' : conn.sendMessage(m.sender, { delete: msg.key })
 }, 30000)
 m.isGroup ? await conn.reply(m.chat, "📨 El formulario de verificación se ha enviado a tu chat privado. ¡Revísalo!", m) : ''
 } catch (e) {
-user.name = ""
-user.age = 0
-user.registered = false
-user.OTP = "" 
 console.error(e)
-await conn.reply(m.chat, "⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.", m)
+await conn.reply(m.chat, "*⚠️ Ocurrió un error al enviar el formulario de verificación. Intenta de nuevo más tarde.*", m)
 }
 handler.before = async function (m, { conn }) {
 let isVerified = m.quoted && m.quoted.id == msg.key.id && m.text == otp
 if (isVerified) {
-pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => null) || yartexImg.getRandom()
-console.log(pp)
+pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => yartexImg.getRandom())
 user.name = name
 user.age = age
 user.registered = true
