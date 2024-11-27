@@ -9,5 +9,5 @@ console.log(e)
 await conn.reply(m.chat, m.quoted?.text, m)
 }}
 
-handler.command = /^((sw|status)(dl|download)|(dl|download)(sw|status))$/i
+handler.command = /^((sw|status|descargar|historia)(dl|download)|(dl|download)(sw|status|descargar|historia))$/i
 export default handler
