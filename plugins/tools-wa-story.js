@@ -29,7 +29,26 @@ await conn.reply(m.chat, `Se descargaron ${userStories.length} historias del usu
 } catch (e) {
 console.error(e)
 await conn.reply(m.chat, "Hubo un error al descargar las historias.", m)
+
+function loadMessage(jid, id = null) {
+    let message = null;
+    if (jid && !id) {
+      id = jid;
+      const filter = (m) => m.key?.id == id;
+      const messageFind = Object.entries(messages).find(([, msgs]) => {
+        return msgs.find(filter);
+      });
+      message = messageFind?.[1]?.find(filter);
+    } else {
+      jid = jid?.decodeJid?.();
+      if (!(jid in messages)) return null;
+      message = messages[jid].find((m) => m.key.id == id);
+    }
+    return message ? message : null;
+  }
 }}
 handler.command = /^(allhistorias)$/i
 export default handler
+
+
 
