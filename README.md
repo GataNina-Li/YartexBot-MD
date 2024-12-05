@@ -97,7 +97,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ***
 
 ### ☁️ SKY ULTRA PLUS
-<a href="https://dash.corinplus.com"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
+<a href="https://dash.corinplus.com"><img src="https://qu.ax/wbJoB.png" height="125px"></a>
 ### Información sobre Sky
 - **Dashboard:** [`Aquí`](https://dash.skyultraplus.com)
 - **Panel:** [`Aquí`](https://panel.skyultraplus.com)
@@ -124,6 +124,18 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://telegra.ph/file/1ff9729ad4e18c319bd50.jpg"></details>
 
+***
+
+### 🎇 Hosting Py
+<a href="https://dahs.hostingpy.shop/"><img src="https://files.catbox.moe/lr92z2.jpg" height="130px"></a>
+
+- **Dashboard:** [`Aquí`](https://dahs.hostingpy.shop/)
+- **Panel:** [`Aquí`](https://panel.hostingpy.shop/)
+- **Registrarse:** [`Aquí`](https://dahs.hostingpy.shop/register?ref=GataDios)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
+- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/HT9YFbWTuqO0DQrq6Xxhvx)
+- **Contacto:** [`AdrianOficial`](https://wa.me/595976126756)
+  
 ***
 
 ### 🍄 INSTALACIÓN POR CODE SPACE
