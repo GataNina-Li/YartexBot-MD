@@ -70,7 +70,7 @@ console.log(e)
 }}
 handler.help = ['menu']
 handler.tags = ['bot']
-handler.command = /^(menu33)$/i
+handler.command = /^(win1)$/i
 handler.register = true
 
 export default handler
