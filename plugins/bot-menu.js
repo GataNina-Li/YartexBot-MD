@@ -61,30 +61,6 @@ yartexImg.getRandom(),
 [[null, null]],
 [[]],
 [[]]
-], [ // CARRUSEL 2
-'Descripción de Carrusel 2',
-'Footer de Carrusel 2',
-random1(),
-[['Botón1', usedPrefix + 'menu'] /* etc... */],
-[[]],
-[[]],
-[[]]
-], [ // CARRUSEL 3
-'Descripción de Carrusel 3',
-'Footer de Carrusel 3',
-random1(),
-[['Botón1', usedPrefix + 'menu'] /* etc... */],
-[[]],
-[[]],
-[[]]
-], [ // CARRUSEL 4
-'Descripción de Carrusel 4',
-'Footer de Carrusel 4',
-random1(),
-[['Botón1', usedPrefix + 'menu'] /* etc... */],
-[[]],
-[[]],
-[[]]
 ]] /* etc... */
 await conn.sendCarousel(m.chat, 'Texto', 'Footer', 'Titulo de Carrusel', messages, m)     
   
@@ -94,7 +70,7 @@ console.log(e)
 }}
 handler.help = ['menu']
 handler.tags = ['bot']
-handler.command = /^(menu)$/i
+handler.command = /^(menu33)$/i
 handler.register = true
 
 export default handler
