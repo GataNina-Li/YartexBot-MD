@@ -1,9 +1,9 @@
 <div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Oswald&weight=300&size=37&duration=3000&pause=100&color=AD46FF&background=601D6E00&center=true&vCenter=true&repeat=true&random=FALSO&width=660&height=90&lines=CuriosityBot-MD+%C2%A1evolucion%C3%B3!;Ahora+se+llama+YartexBot-MD;Un+bot+con+tem%C3%A1tica+Yaoi+hecho+por+fans+para+fans." alt="Typing SVG"/></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Lato&weight=19000&size=14&pause=1000&width=435&lines=%E2%9C%A8+%C2%A1El+equipo+de+YartexBot+te+desea+una+feliz+navidad!" alt="Typing SVG"/></a>
 </div>
 
 <p align="center">
-<img src="https://telegra.ph/file/3f00e26dcd5dcd09a68a1.jpg" alt="CuriosityBot-MD" width="600"/>
+<img src="https://qu.ax/UsZaq.png" alt="CuriosityBot-MD" width="1000"/>
 </p>
 
 <p align="center">
