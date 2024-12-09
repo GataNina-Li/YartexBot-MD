@@ -441,8 +441,8 @@ await conn.sendMessage(m.chat, { image: { url: yartexNavidad.getRandom() }, capt
 //await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: fkontak })
 }
 }
-//handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
-handler.command = ['help', 'menucompleto', 'allmenu'] 
+handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
+//handler.command = ['help', 'menucompleto', 'allmenu'] 
 handler.register = true
 export default handler
 
