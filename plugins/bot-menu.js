@@ -12,6 +12,7 @@ import ct from 'countries-and-timezones'
 import moment from 'moment-timezone'
 import translate from '@vitalets/google-translate-api'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
+import { platform } from 'process'
 
 var handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
 
