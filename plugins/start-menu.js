@@ -437,7 +437,8 @@ await conn.sendMessage(m.chat, { text: menu, mentions: [m.sender], contextInfo: 
 let newImg = await cropImageToSquare(editMenu.personalizado)
 await conn.sendMessage(m.chat, { image: newImg, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
 } else {
-await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: fkontak })
+await conn.sendMessage(m.chat, { image: { url: yartexNavidad.getRandom() }, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: editMenu.verificado ? fkontak : m })
+//await conn.sendMessage(m.chat, { video: { url: yartexVid.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender], contextInfo: contextInfo }, { quoted: fkontak })
 }
 }
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
