@@ -90,7 +90,7 @@ let botVid12 = 'https://telegra.ph/file/1c5f62544f7278899a9be.mp4' //bl
 global.yartexVid = [botVid1, botVid2, botVid3, botVid4, botVid5, botVid6, botVid7, botVid8, botVid9, botVid10, botVid11, botVid12]
 
 // versión de navidad
-global.yartexNavidad = ['https://qu.ax/UsZaq.png', 'https://qu.ax/rGvHH.png', 'https://qu.ax/vyHLe.png']
+global.yartexNavidad = ['https://qu.ax/UsZaq.png', 'https://qu.ax/rGvHH.png', 'https://qu.ax/vyHLe.png', 'https://qu.ax/pSeNy.jpg', 'https://qu.ax/xSOyA.jpg', 'https://qu.ax/hjNwc.jpg', 'https://qu.ax/yKVhD.jpg']
   
 //Enlaces
 global.yt = 'https://youtube.com/@gatadios'
