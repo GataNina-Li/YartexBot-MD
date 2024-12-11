@@ -159,6 +159,14 @@ console.info = () => {}
 console.debug = () => {} 
 ['log', 'warn', 'error'].forEach(methodName => redefineConsoleMethod(methodName, filterStrings))
 
+// Verificar si se debe reintentar enviar un mensaje
+const shouldRetryMessage = (msgKey) => {
+const retryCount = msgRetryCounterCache.get(msgKey.id) || 0
+if (retryCount >= 3) return false // Máximo 3 intentos
+msgRetryCounterCache.set(msgKey.id, retryCount + 1)
+return true
+}
+
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
@@ -178,9 +186,21 @@ return msg?.message || ""
 },
 msgRetryCounterCache, // Resolver mensajes en espera
 msgRetryCounterMap, // Determinar si se debe volver a intentar enviar un mensaje o no
-defaultQueryTimeoutMs: undefined,
+defaultQueryTimeoutMs: 30000,
 version,  
 }
+
+// reintentar mensajes fallidos
+const retryMessage = async (conn, messageKey) => {
+const retryAllowed = shouldRetryMessage(messageKey)
+if (retryAllowed) {
+const message = await store.loadMessage(messageKey.remoteJid, messageKey.id)
+if (message) {
+await conn.relayMessage(messageKey.remoteJid, message.message, { messageId: messageKey.id })
+console.log('Mensaje reenviado:', message.message)
+}} else {
+console.error('No se pudo entregar el mensaje después de varios intentos:', messageKey.id)
+}}
 
 global.conn = makeWASocket(connectionOptions)
 if (!fs.existsSync(`./${authFile}/creds.json`)) {
