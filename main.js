@@ -179,10 +179,23 @@ keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ l
 markOnlineOnConnect: true, 
 generateHighQualityLinkPreview: true, 
 syncFullHistory: true,
+//getMessage: async (clave) => {
+//let jid = jidNormalizedUser(clave.remoteJid)
+//let msg = await store.loadMessage(jid, clave.id)
+//return msg?.message || ""
+//},
 getMessage: async (clave) => {
-let jid = jidNormalizedUser(clave.remoteJid)
-let msg = await store.loadMessage(jid, clave.id)
-return msg?.message || ""
+    try {
+        let jid = jidNormalizedUser(clave.remoteJid)
+        let msg = await store.loadMessage(jid, clave.id)
+        return msg?.message || ""
+    } catch (e) {
+        console.error(`Error al cargar mensaje de ${clave.remoteJid}:`, e.message)
+        if (e.message.includes("Bad MAC")) {
+            console.warn("Se detectó un problema con las claves de sesión. Podría ser necesario resincronizar.")
+        }
+        return null
+    }
 },
 msgRetryCounterCache, // Resolver mensajes en espera
 msgRetryCounterMap, // Determinar si se debe volver a intentar enviar un mensaje o no
