@@ -168,7 +168,7 @@ return true
 }
 
 const connectionOptions = {
-logger: pino({ level: 'debug' }),
+logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
 browser: opcion == '1' ? ['YartexBot-MD', 'Edge', '2.0.0'] : methodCodeQR ? ['YartexBot-MD', 'Edge', '2.0.0'] : ['Ubuntu', 'Edge', '110.0.1587.56'],
