@@ -1,9 +1,8 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1' 
 import './config.js' 
-import './store.js'
 import { createRequire } from 'module'
 import path, { join } from 'path'
-import {fileURLToPath, pathToFileURL} from 'url'
+import { fileURLToPath, pathToFileURL } from 'url'
 import { platform } from 'process'
 import * as ws from 'ws'
 import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch } from 'fs'
@@ -39,17 +38,17 @@ protoType()
 serialize()
 
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
-  return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString();
+return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString();
 }; global.__dirname = function dirname(pathURL) {
-  return path.dirname(global.__filename(pathURL, true));
+return path.dirname(global.__filename(pathURL, true));
 }; global.__require = function require(dir = import.meta.url) {
-  return createRequire(dir);
+return createRequire(dir);
 };
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? {[apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
 global.timestamp = { start: new Date }
 
-const __dirname = global.__dirname(import.meta.url);
+const __dirname = global.__dirname(import.meta.url)
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
 global.prefix = new RegExp('^[' + (opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®&.\\-.@').replace(/[|\\{}()[\]^$+*.\-\^]/g, '\\$&') + ']');
@@ -83,8 +82,6 @@ global.db.chain = chain(global.db.data);
 };
 loadDatabase();
 
-/* ------------------------------------------------*/
-
 global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')));
 global.loadChatgptDB = async function loadChatgptDB() {
 if (global.chatgpt.READ) {
@@ -106,8 +103,6 @@ users: {},
 global.chatgpt.chain = lodash.chain(global.chatgpt.data);
 };
 loadChatgptDB();
-
-/* ------------------------------------------------*/
 
 global.authFile = `YartexBotSession`
 global.authFileJB = `YartexJadiBot`
