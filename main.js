@@ -202,6 +202,16 @@ console.log('Mensaje reenviado:', message.message)
 console.error('No se pudo entregar el mensaje después de varios intentos:', messageKey.id)
 }}
 
+const syncPendingMessages = async (conn) => {
+const chats = await sock.fetchChats()
+for (const chat of chats) {
+if (chat.unreadCount > 0) {
+const messages = await conn.loadMessages(chat.id, chat.unreadCount)
+messages.forEach(msg => {
+console.log('Sincronizando mensaje pendiente:', msg.message?.conversation)
+})
+}}}
+
 global.conn = makeWASocket(connectionOptions)
 if (!fs.existsSync(`./${authFile}/creds.json`)) {
 if (opcion === '2' || methodCode) {
