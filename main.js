@@ -155,15 +155,9 @@ const filterStrings = [
 "RGVjcnlwdGVkIG1lc3NhZ2U=" // "Decrypted message" 
 ]
 
-console.info = () => {} 
-console.debug = () => {} 
-console.warn = (message) => {  
-if (message.includes('Bad MAC')) {
-return
-}
-console.warn(message)
-}
-['log', 'warn', 'error'].forEach(methodName => redefineConsoleMethod(methodName, filterStrings))
+//console.info = () => {} 
+//console.debug = () => {} 
+//['log', 'warn', 'error'].forEach(methodName => redefineConsoleMethod(methodName, filterStrings))
 
 // Verificar si se debe reintentar enviar un mensaje
 const shouldRetryMessage = (msgKey) => {
