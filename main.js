@@ -157,6 +157,12 @@ const filterStrings = [
 
 console.info = () => {} 
 console.debug = () => {} 
+console.warn = (message) => {  
+if (message.includes('Bad MAC')) {
+return
+}
+console.warn(message)
+}
 ['log', 'warn', 'error'].forEach(methodName => redefineConsoleMethod(methodName, filterStrings))
 
 // Verificar si se debe reintentar enviar un mensaje
