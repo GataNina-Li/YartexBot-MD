@@ -191,45 +191,22 @@ syncFullHistory: true,
 //return msg?.message || ""
 //},
 getMessage: async (clave) => {
-    try {
-        let jid = jidNormalizedUser(clave.remoteJid)
-        let msg = await store.loadMessage(jid, clave.id)
-        return msg?.message || ""
-    } catch (e) {
-        console.error(`Error al cargar mensaje de ${clave.remoteJid}:`, e.message)
-        if (e.message.includes("Bad MAC")) {
-            console.warn("Se detectó un problema con las claves de sesión. Podría ser necesario resincronizar.")
-        }
-        return null
-    }
-},
+try {
+let jid = jidNormalizedUser(clave.remoteJid)
+let msg = await store.loadMessage(jid, clave.id)
+return msg?.message || ""
+} catch (e) {
+console.error(`Error al cargar mensaje de ${clave.remoteJid}:`, e.message)
+if (e.message.includes("Bad MAC")) {
+console.warn("Se detectó un problema con las claves de sesión. Podría ser necesario resincronizar.")
+}
+return null
+}},
 msgRetryCounterCache, // Resolver mensajes en espera
 msgRetryCounterMap, // Determinar si se debe volver a intentar enviar un mensaje o no
 defaultQueryTimeoutMs: 30000,
 version,  
 }
-
-// reintentar mensajes fallidos
-const retryMessage = async (conn, messageKey) => {
-const retryAllowed = shouldRetryMessage(messageKey)
-if (retryAllowed) {
-const message = await store.loadMessage(messageKey.remoteJid, messageKey.id)
-if (message) {
-await conn.relayMessage(messageKey.remoteJid, message.message, { messageId: messageKey.id })
-console.log('Mensaje reenviado:', message.message)
-}} else {
-console.error('No se pudo entregar el mensaje después de varios intentos:', messageKey.id)
-}}
-
-const syncPendingMessages = async (conn) => {
-const chats = await sock.fetchChats()
-for (const chat of chats) {
-if (chat.unreadCount > 0) {
-const messages = await conn.loadMessages(chat.id, chat.unreadCount)
-messages.forEach(msg => {
-console.log('Sincronizando mensaje pendiente:', msg.message?.conversation)
-})
-}}}
 
 global.conn = makeWASocket(connectionOptions)
 if (!fs.existsSync(`./${authFile}/creds.json`)) {
