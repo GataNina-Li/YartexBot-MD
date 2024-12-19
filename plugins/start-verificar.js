@@ -16,9 +16,10 @@ let nombre = await conn.getName(m.sender) || await generarNombreRandom()
 const edadRandom = _.random(10, 60)
 const formatoIncorrecto = `⚠️ *¡Verifica el formato de uso!*\n\n📌 Usa el comando de esta manera:\n*${usedPrefix + command} nombre.edad*\n\n📝 Ejemplo:\n*${usedPrefix + command}* ${nombre}.${edadRandom}`
 if (!Reg.test(text)) { 
-const edadesMayores = await generarEdades(18, 60)
-const edadesMenores = await generarEdades(10, 17)
-const sections = [
+return await conn.reply(m.chat, `${dis}\`Uso correcto del comando:\`\n*${usedPrefix + command}* nombre.edad\n\n🩷 *Ejemplo:*\n*${usedPrefix + command}* GataDios.20`, m)
+//const edadesMayores = await generarEdades(18, 60)
+//const edadesMenores = await generarEdades(10, 17)
+/*const sections = [
 {
 title: `🔢 Datos Aleatorios`,
 highlight_label: "Popular",
@@ -56,9 +57,9 @@ id: `${usedPrefix + command} ${nombre}.${age}`
 ]
 if (/ios|web|desktop|unknown/gi.test(dispositivo)) {
 return await conn.reply(m.chat, formatoIncorrecto + '\n\n' + wm2, m)
-} else {
-return await conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _También puedes usar el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
-}
+} else {*/
+//return await conn.sendButton(m.chat, formatoIncorrecto + '\n\n> _También puedes usar el botón de abajo..._\n', wm.trim(), null, null, null, null, [['Completar registro', sections]], m)
+
 }  
 [, name, , age] = text.match(Reg)
 if (!name) return conn.reply(m.chat, `🫠 *No hemos econtrado su nombre, intente de nuevo.*`, m)
