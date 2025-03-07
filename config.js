@@ -226,3 +226,21 @@ watchFile(file, () => { unwatchFile(file)
 console.log(chalk.yellow('Se actualizo el archivo config.js'))
 import(`${file}?update=${Date.now()}`)
 })
+
+// IDs de canales
+global.ch = {
+ch1: '120363336642332098@newsletter',
+ch2: '120363160031023229@newsletter',
+ch3: '120363169294281316@newsletter',
+ch4: '120363203805910750@newsletter',
+ch5: '120363302472386010@newsletter',
+ch6: '120363301598733462@newsletter',
+ch7: '120363190430436554@newsletter',
+ch8: '120363374372683775@newsletter', 
+ch9: '120363167110224268@newsletter',
+ch10: '120363323882134704@newsletter',
+ch11: '120363370415738881@newsletter',
+ch12: '120363385983031660@newsletter',
+ch13: '120363343811229130@newsletter',
+ch14: '120363305941657414@newsletter',
+}
