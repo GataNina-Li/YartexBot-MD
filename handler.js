@@ -265,6 +265,8 @@ const isRAdmin = user?.admin == 'superadmin' || false // Creador o admin princip
 const isAdmin = isRAdmin || user?.admin == 'admin' || false // Admins
 const isBotAdmin = bot?.admin || false // Si el bot es admin
 
+if ((m.id.startsWith('NJX-') || (m.id.startsWith('BAE5') && m.id.length === 16) || (m.id.startsWith('B24E') && m.id.length === 20) || m.id.startsWith('FizzxyTheGreat-') || m.id.startsWith('Lyru-'))) return
+
 const ___dirname = path.join(path.dirname(fileURLToPath(import.meta.url)), './plugins')
 for (let name in global.plugins) {
 let plugin = global.plugins[name]
