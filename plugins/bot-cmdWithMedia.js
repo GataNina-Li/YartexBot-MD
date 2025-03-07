@@ -12,7 +12,7 @@ let messages = await generateWAMessage(m.chat, { text: text, mentions: mentioned
 userJid: this.user.id,
 quoted: m.quoted && m.quoted.fakeObj
 })
-messages.key.fromMe = areJidsSameUser(m.sender, this.user.id)
+messages.key.fromMe = m.isBaileys || (m.sender === m.conn?.user?.jid)
 messages.key.id = m.key.id
 messages.pushName = m.pushName
 if (m.isGroup) messages.participant = m.sender
