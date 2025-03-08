@@ -17,7 +17,6 @@ const { title, thumbnail, timestamp, views, ago, url, author } = videoInfo;
 if (!title || !thumbnail || !timestamp || !views || !ago || !url || !author) {
 return m.reply('La información del archivo no se pudo generar.');
 }
-const vistas = formatViews(views);
 const canal = author.name ? author.name : 'Desconocido';
 let additionalText = ''
 if (command === 'play') {
@@ -31,7 +30,10 @@ ${title || 'Desconocido'}
 ${timestamp || 'Desconocido'}
 
 *∘ Autor*
-${author} 
+${author}
+
+*∘ Vistas*
+${views}
 
 *∘ Canal*
 ${canal}
