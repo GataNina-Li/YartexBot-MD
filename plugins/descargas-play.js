@@ -41,8 +41,7 @@ ${url || 'Desconocido'}
 *Enviando ${additionalText}*
 ⏰ Espere un momento`;
 const thumb = (await conn.getFile(thumbnail))?.data;
-const YA = { contextInfo: { externalAdReply: { title: `${title || 'Desconocido'}`, body: wm, mediaType: 1, previewType: 0, mediaUrl: url, sourceUrl: url, thumbnail: thumb, renderLargerThumbnail: true, }, }, };
-await conn.reply(m.chat, infoMessage, m, YA);
+await conn.sendMessage(m.chat, { text: infoMessage, contextInfo: { externalAdReply: { title: title, body: wm, thumbnail: thumb, mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}} , { quoted: m })
 if (command === 'play') {
 try {
 const api = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
