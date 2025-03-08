@@ -4,7 +4,7 @@ const handler = async (m, {conn, text, args, command, usedPrefix}) => {
 if (!text) conn.reply(m.chat, `✨ Te faltó el enlace de instagram.\nEjemplo: *${usedPrefix + command} https://www.instagram.com/p/CCoI4DQBGVQ/?igshid=YmMyMTA2M2Y=*`, m);
 try {
 m.reply('🚀 Descargando su archivo de instagram..');
-let res = await fetch(`https://api.siputzx.my.id/api/d/igdl?url=${args[0]}`);
+const res = await fetch(`https://api.siputzx.my.id/api/d/igdl?url=${args[0]}`);
 const data = await res.json();
 const fileType = data.data[0].url.includes('.webp') ? 'image' : 'video'; 
 const downloadUrl = data.data[0].url;
@@ -67,7 +67,7 @@ const shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${a
 const txt1 = `🍧 *URL:* ${shortUrl1}\n\n${wm}`.trim();
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m);
 } catch (e) {
-m.reply(`🚩 Ocurrió un error inesperado: ${e}`);
+conn.sendMessage(m.chat, {text: `🚩 Ocurrió un error inesperado: ${e}`, { quoted: m });
 console.log(e)
 }}}}}}}}
 handler.help = ['instagram <link ig>']
