@@ -67,7 +67,7 @@ const shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${a
 const txt1 = `🍧 *URL:* ${shortUrl1}\n\n${wm}`.trim();
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m);
 } catch (e) {
-conn.reply(m.chat, `🚩 Ocurrió un error inesperado: ${e}`, m, fake)
+m.reply(`🚩 Ocurrió un error inesperado: ${e}`);
 console.log(e)
 }}}}}}}}
 handler.help = ['instagram <link ig>']
