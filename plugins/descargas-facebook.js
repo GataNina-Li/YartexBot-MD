@@ -1,85 +1,88 @@
-import fetch from 'node-fetch'
-import { facebook } from '@xct007/frieren-scraper'
-
-var handler = async (m, { conn, args, command, usedPrefix, text }) => {
-
-let vid
-const isCommand7 = /^(facebook|fb|facebookdl|fbdl)$/i.test(command)
-
-async function reportError(e) {
-await conn.reply(m.chat, `🚩 *Ocurrió un fallo*`, m, fake, )
-console.log(`🚩 ERROR EN: ${usedPrefix + command} ⚠️\n`)
-console.log(e)
+import fg from 'api-dylux';
+import fetch from 'node-fetch';
+import axios from 'axios';
+const handler = async (m, {conn, text, args, command, usedPrefix}) => {
+let user = global.db.data.users[m.sender]
+if (!text) {
+return conn.reply(m.chat, `🎌 *Ingrese un enlace de facebook*\n\nEjemplo, !fb https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`, m, fake)
 }
-  
-switch (true) {   
-case isCommand7:
-if (!text) return conn.reply(m.chat, `🎌 *Ingrese un enlace de facebook*\n\nEjemplo, !fb https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`, m, fake, )
-if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) return conn.reply(m.chat, '🎌 *No es un enlace válido*', m, fake, )
-await conn.reply(m.chat, '⏰ Espere un momento', m, fake, )
-m.react(done)
-let messageType = checkMessageType(args[0])
-let message = ''
-switch (messageType) {
-case 'groups':
-message = 'Vídeo de grupo de facebook 🚀'
-break
-case 'reel':
-message = 'Vídeo de reels de facebook 🚀'
-break
-case 'stories':
-message = 'Vídeo de historias de facebook 🚀'
-break
-case 'posts':
-message = 'Vídeo de publicaciones de facebook 🚀'
-break
-default:
-message = 'Vídeo de facebook 🚀'
-break
+if (!args[0].match(/www.facebook.com|fb.watch/g)) {
+return conn.reply(m.chat, `🚩 El enlace enviado no es un enlace de Facebook.`, m, fake)
 }
+let contenido = `🚩 *Video de facebook.*`
+await m.react('⏱️')
 try {
-let res = await fetch(`https://api.lolhuman.xyz/api/facebook?apikey=BrunoSobrino&url=${args[0]}`)
-let _json = await res.json()
-vid = _json.result[0]
-if (vid == '' || !vid || vid == null) vid = _json.result[1]
-await conn.sendFile(m.chat, vid, 'error.mp4', `*${message}*`, m)
-} catch (error1) {
+const api = await fetch(`https://api.neoxr.eu/api/fb?url=${args}&apikey=GataDios`);
+const response = await api.json();
+if (response.status && Array.isArray(response.data)) {
+const videoHD = response.data.find(video => video.quality === "HD")?.url;
+const videoSD = response.data.find(video => video.quality === "SD")?.url;
+const videoUrl = videoHD || videoSD;
+await conn.sendFile(m.chat, videoUrl, 'video.mp4', contenido, m, null, fake);
+m.react('✅');
+}} catch {   
 try {
-const d2ata = await facebook.v1(args[0])
-let r2es = ''
-if (d2ata.urls && d2ata.urls.length > 0) {
-r2es = `${d2ata.urls[0]?.hd || d2ata.urls[1]?.sd || ''}`
-}
-await conn.sendFile(m.chat, r2es, 'error.mp4', `*${message}*`, m)
-} catch (error2) {
+const api = await fetch(`https://api.agatz.xyz/api/facebook?url=${args}`);
+const data = await api.json();
+const videoUrl = data.data.hd || data.data.sd; 
+const imageUrl = data.data.thumbnail; 
+if (videoUrl && videoUrl.endsWith('.mp4')) {
+await conn.sendFile(m.chat, videoUrl, 'video.mp4', `${wm}`, m, null, fake);
+m.react('✅');
+} else if (imageUrl && (imageUrl.endsWith('.jpg') || imageUrl.endsWith('.png'))) {
+await conn.sendFile(m.chat, imageUrl, 'thumbnail.jpg', contenido, m, null, fake);
+m.react('✅');
+}} catch {   
 try {
-var get = await fetch(`https://api.botcahx.live/api/dowloader/fbdown?url=${args[0]}&apikey=QaepQXxR`)
-var js = await get.json()
-await conn.sendFile(m.chat, js.result.HD, 'error.mp4', `*${message}*`, m)
-} catch (e) {
-reportError(e)}
-}}}
-
-}
-handler.help = ['fb']
-handler.tags = ['descargas']
-handler.command = /^(facebook|fb|facebookdl|fbdl)$/i
-
-handler.register = true
-handler.diamond = true
-
+const apiUrl = `https://api.dorratz.com/fbvideo?url=${args}`;
+const response = await fetch(apiUrl);
+const data = await response.json();
+if (data.result) {
+const hdUrl = data.result.hd;
+const sdUrl = data.result.sd;
+const audioUrl = data.result.audio;        
+const downloadUrl = hdUrl || sdUrl; 
+await conn.sendFile(m.chat, downloadUrl, `error.mp4`, contenido, m)
+}} catch {   
+try {
+const apiUrl = `delirius-apiofc.vercel.app/download/facebook?url=${args}`;
+const apiResponse = await fetch(apiUrl);
+const delius = await apiResponse.json();
+if (!delius || !delius.urls || delius.urls.length === 0) return m.react("❌")
+const downloadUrl = delius.urls[0].hd || delius.urls[0].sd;
+if (!downloadUrl) return m.react("❌");
+await conn.sendFile(m.chat, downloadUrl, `error.mp4`, contenido, m)
+} catch {   
+try {
+const ress = await fg.fbdl(args[0]);
+const urll = await ress.data[0].url;
+await conn.sendFile(m.chat, urll, `error.mp4`, contenido, m)
+m.react(`✅`)                
+} catch (e) {   
+console.log(e) 
+}}}}}}
+handler.command = /^(facebook|fb|facebookdl|fbdl|facebook1|fb1|facebookdl1|fbdl1|facebook2|fb2|facebookdl2|fbdl2)$/i
+handler.limit = 3
 export default handler
-  
-function checkMessageType(url) {
-if (url.includes('www.facebook.com')) {
-if (url.includes('/groups/')) {
-return 'groups'
-} else if (url.includes('/reel/')) {
-return 'reel'
-} else if (url.includes('/stories/')) {
-return 'stories'
-} else if (url.includes('/posts/')) {
-return 'posts'
-}}
-return 'default'
-}
+
+async function igeh(url_media) {
+return new Promise(async (resolve, reject)=>{
+const BASE_URL = 'https://instasupersave.com/';
+try {
+const resp = await axios(BASE_URL);
+const cookie = resp.headers['set-cookie']; // obtener cookie de la solicitud
+const session = cookie[0].split(';')[0].replace('XSRF-TOKEN=', '').replace('%3D', '');
+const config = {method: 'post', url: `${BASE_URL}api/convert`, headers: {'origin': 'https://instasupersave.com', 'referer': 'https://instasupersave.com/pt/', 'sec-fetch-dest': 'empty', 'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52', 'x-xsrf-token': session, 'Content-Type': 'application/json', 'Cookie': `XSRF-TOKEN=${session}; instasupersave_session=${session}`}, data: {url: url_media}};
+axios(config).then(function(response) {
+const ig = [];
+if (Array.isArray(response.data)) {
+response.data.forEach((post) => {
+ig.push(post.sd === undefined ? post.thumb : post.sd.url);
+})} else {
+ig.push(response.data.url[0].url)}
+resolve({results_number: ig.length, url_list: ig});
+}).catch(function(error) {
+reject(error.message)});
+} catch (e) {
+reject(e.message);
+}})}
