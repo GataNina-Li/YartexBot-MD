@@ -1,10 +1,12 @@
 import fetch from 'node-fetch';
 import axios from 'axios';
-const handler = async (m, {conn, args, command, usedPrefix}) => {
-if (!args[0]) conn.reply(m.chat, `✨ Te faltó el enlace de instagram.\nEjemplo: *${usedPrefix + command} https://www.instagram.com/p/CCoI4DQBGVQ/?igshid=YmMyMTA2M2Y=*`, m, fake);
+const handler = async (m, {conn, text, command, usedPrefix}) => {
+if (!text) {
+conn.reply(m.chat, `✨ Te faltó el enlace de instagram.\nEjemplo: *${usedPrefix + command} https://www.instagram.com/p/CCoI4DQBGVQ/?igshid=YmMyMTA2M2Y=*`, m, fake);
+}
 try {
 await conn.reply(m.chat, '🚀 Descargando su archivo de instagram..', m, fake);
-let res = await fetch(`https://api.siputzx.my.id/api/d/igdl?url=${args}`);
+let res = await fetch(`https://api.siputzx.my.id/api/d/igdl?url=${text}`);
 const data = await res.json();
 const fileType = data.data[0].url.includes('.webp') ? 'image' : 'video'; 
 const downloadUrl = data.data[0].url;
@@ -15,7 +17,7 @@ await conn.sendFile(m.chat, downloadUrl, 'ig.mp4', `${wm}`, m, null, fake);
 }
 } catch {   
 try {
-const apiUrl = `delirius-apiofc.vercel.app/download/instagram?url=${encodeURIComponent(args[0])}`;
+const apiUrl = `delirius-apiofc.vercel.app/download/instagram?url=${text}`;
 const apiResponse = await fetch(apiUrl);
 const delius = await apiResponse.json();
 if (!delius || !delius.data || delius.data.length === 0) return m.react("❌");
@@ -30,7 +32,7 @@ await conn.sendFile(m.chat, downloadUrl, 'ig.mp4', `${wm}`, m, null, fake);
 return m.react("❌"); 
 }} catch {   
 try {
-const apiUrll = `https://api.betabotz.org/api/download/igdowloader?url=${encodeURIComponent(args[0])}&apikey=bot-secx3`;
+const apiUrll = `https://api.betabotz.org/api/download/igdowloader?url=${text}&apikey=bot-secx3`;
 const responsel = await axios.get(apiUrll);
 const resultl = responsel.data;
 for (const item of resultl.message) {
@@ -40,30 +42,30 @@ conn.sendFile(m.chat, item._url, null, tXXxt, m);
 await new Promise((resolve) => setTimeout(resolve, 10000));
 }} catch {    
 try {
-const datTa = await instagram.v1(args[0]);
+const datTa = await instagram.v1(text);
 for (const urRRl of datTa) {
-const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${text}`)).text();
 const tXXxt = `🍧 *URL:* ${shortUrRRl}\n\n${wm}`.trim();
 conn.sendFile(m.chat, urRRl.url, 'error.mp4', tXXxt, m);
 await new Promise((resolve) => setTimeout(resolve, 10000));
 }} catch {
 try {
-const resultss = await instagramGetUrl(args[0]).url_list[0];
-const shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const resultss = await instagramGetUrl(text).url_list[0];
+const shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${text}`)).text();
 const txt2 = `🍧 *URL:* ${shortUrl2}\n\n${wm}`.trim();
 await conn.sendFile(m.chat, resultss, 'error.mp4', txt2, m);
 } catch {
 try {
-const resultssss = await instagramdl(args[0]);
-const shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const resultssss = await instagramdl(text);
+const shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${text}`)).text();
 const txt4 = `🍧 *URL:* ${shortUrl3}\n\n${wm}`.trim();
 for (const {url} of resultssss) await conn.sendFile(m.chat, url, 'error.mp4', txt4, m);
 } catch {
 try {
-const human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeysapi}&url=${args[0]}`);
+const human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeysapi}&url=${text}`);
 const json = await human.json();
 const videoig = json.result;
-const shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${text}`)).text();
 const txt1 = `🍧 *URL:* ${shortUrl1}\n\n${wm}`.trim();
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m);
 } catch (e) {
