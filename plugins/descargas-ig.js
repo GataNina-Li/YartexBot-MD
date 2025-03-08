@@ -2,8 +2,8 @@ import fetch from 'node-fetch';
 import axios from 'axios';
 const handler = async (m, {conn, args, command, usedPrefix}) => {
 if (!args[0]) conn.reply(m.chat, `✨ Te faltó el enlace de instagram.\nEjemplo: *${usedPrefix + command} https://www.instagram.com/p/CCoI4DQBGVQ/?igshid=YmMyMTA2M2Y=*`, m, fake);
-await conn.reply(m.chat, '🚀 Descargando su archivo de instagram..', m, fake)
 try {
+await conn.reply(m.chat, '🚀 Descargando su archivo de instagram..', m, fake);
 let res = await fetch(`https://api.siputzx.my.id/api/d/igdl?url=${args}`);
 const data = await res.json();
 const fileType = data.data[0].url.includes('.webp') ? 'image' : 'video'; 
