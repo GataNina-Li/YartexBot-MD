@@ -58,7 +58,8 @@ const ress = await fg.fbdl(args[0]);
 const urll = await ress.data[0].url;
 await conn.sendFile(m.chat, urll, `error.mp4`, contenido, m)
 m.react(`✅`)                
-} catch (e) {   
+} catch (e) {  
+m.reply('❌') 
 console.log(e) 
 }}}}}}
 handler.command = /^(facebook|fb|facebookdl|fbdl|facebook1|fb1|facebookdl1|fbdl1|facebook2|fb2|facebookdl2|fbdl2)$/i
