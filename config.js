@@ -31,18 +31,14 @@ global.suittag = ['5214531287294']
 global.mods = []
 global.prems = []
 
-//Solo desarrolladores aprobados
-global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['5492215034412'], ['5214434703586'], ['595976126756']]
-
-//Aqui encuentras los nombres del bot 
+global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['5492215034412'], ['5214434703586'], ['595976126756'], ['573012482597']]
+ 
 global.packname = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨'
 global.author = 'ɢᴀᴛᴀ ᴅɪᴏs 🫶'
 global.wm = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ | ɢᴀᴛᴀ ᴅɪᴏs 🫶'
 global.wm2 = '                   ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨\n> *♡º°‘¨ һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs ¨‘°º♡*'
 global.des = 'һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs.'
 
-
-//Las Versiones Y Entre Otros
 global.vs = 'V2'
 global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
@@ -50,16 +46,13 @@ global.lenguaje = 'Español'
 global.menudi = ['⛶','❏','⫹⫺']
 global.dev = 'GataNina-Li'
 global.devnum = '+593 96 826 3524'
-
-// Diseños 
+ 
 global.dis = ':⁖֟⊱┈֟፝❥ '
 global.cen1 = '✧──⭒─⊹ '
 global.cen2 = ' ⊹─⭒──✧'
 
-// Random
 global.random1 = getRandomImageBoys
 
-//Imagenes
 global.imagen1 = fs.readFileSync('./storage/logos/Menu1.jpg')
 global.imagen2 = fs.readFileSync('./storage/logos/Menu2.jpg')
 global.imagen3 = fs.readFileSync('./storage/logos/Menu3.jpg')
@@ -90,10 +83,8 @@ let botVid11 = 'https://telegra.ph/file/a3485e1c3b115ba186b45.mp4' //bl
 let botVid12 = 'https://telegra.ph/file/1c5f62544f7278899a9be.mp4' //bl
 global.yartexVid = [botVid1, botVid2, botVid3, botVid4, botVid5, botVid6, botVid7, botVid8, botVid9, botVid10, botVid11, botVid12]
 
-// versión de navidad
 global.yartexNavidad = ['https://qu.ax/UsZaq.png', 'https://qu.ax/rGvHH.png', 'https://qu.ax/vyHLe.png', 'https://qu.ax/pSeNy.jpg', 'https://qu.ax/xSOyA.jpg', 'https://qu.ax/hjNwc.jpg', 'https://qu.ax/yKVhD.jpg']
   
-//Enlaces
 global.yt = 'https://youtube.com/@gatadios'
 global.ig = 'https://instagram.com/gata_dios'
 global.md = 'https://github.com/GataNina-Li/YartexBot-MD'
@@ -104,7 +95,6 @@ global.group = 'https://chat.whatsapp.com/EfWlxyVXlZ7AWVJ6sjJvyI' //Grupo ofc
 global.channel = 'https://whatsapp.com/channel/0029VabS4KD8KMqeVXXmkG1D'
 global.linkSity = [yt, ig, md, paypal, git, channel, email]
 
-//Raíz
 global.raiz = './'
 global.aniD = 'sessions/'
 global.dirP = raiz//+aniD
@@ -115,22 +105,18 @@ global.media = raiz+'media/'
 global.jadibts = join(__dirname, 'jadibts/')
 global.raiz = './storage/logos/Menu1.jpg'
 
-//Reacciones De Comandos.!
 global.rwait = '⏰'
 global.done = '✅'
 global.error = '❌'
 
-//Cargando
 global.wait = '*■□□□□ 20%*'
 global.waitt = '*■■■□□ 60%*'
 global.waittt = '*■■■■□ 90%*'
 global.waitttt = '*■■■■■ 100%*'
 
-//fake
 global.fsizedoc = '999999'
 global.fpagedoc = '9999'
 
-//Apis
 global.keysZens = ['LuOlangNgentot', 'c2459db922', '37CC845916', '6fb0eff124', 'hdiiofficial', 'fiktod', 'BF39D349845E', '675e34de8a', '0b917b905e6f']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
@@ -191,7 +177,6 @@ global.APIKeys = {
 'https://anabotofc.herokuapp.com/': 'AnaBot'
 }
 
-//Rpg
 global.multiplier = 200 // Cuanto más alto, más difícil subir de nivel
 
 global.rpg = {
@@ -227,7 +212,6 @@ console.log(chalk.yellow('Se actualizo el archivo config.js'))
 import(`${file}?update=${Date.now()}`)
 })
 
-// IDs de canales
 global.ch = {
 ch1: '120363336642332098@newsletter',
 ch2: '120363160031023229@newsletter',
