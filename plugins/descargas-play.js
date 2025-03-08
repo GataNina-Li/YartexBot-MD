@@ -1,4 +1,83 @@
-import fetch from 'node-fetch'
+import fetch from "node-fetch";
+import yts from 'yt-search';
+import axios from "axios";
+const handler = async (m, { conn, text, usedPrefix, command }) => {
+if (!text) return conn.reply(m.chat, `🎌 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} New West - Those Eyes`,  m, fake)
+try {
+m.react(rwait)
+const search = await yts(text);
+if (!search.all || search.all.length === 0) {
+return m.reply('No se encontraron resultados para tu búsqueda.');
+}
+const videoInfo = search.all[0];
+if (!videoInfo) {
+return m.reply('No se pudo obtener información del video.');
+}
+const { title, thumbnail, timestamp, views, ago, url, author } = videoInfo;
+if (!title || !thumbnail || !timestamp || !views || !ago || !url || !author) {
+return m.reply('La información del archivo no se pudo generar.');
+}
+const vistas = formatViews(views);
+const canal = author.name ? author.name : 'Desconocido';
+let additionalText = ''
+if (command === 'play') {
+additionalText = 'audio'
+} else if (command === 'play2') {
+additionalText = 'video'}
+const infoMessage = `*∘ Título*
+${title || 'Desconocido'}
+
+*∘ Duración* 
+${timestamp || 'Desconocido'}
+
+*∘ Autor*
+${author} 
+
+*∘ Canal*
+${canal}
+
+*∘ Enlace*
+${url || 'Desconocido'}
+
+*Enviando ${additionalText}*
+⏰ Espere un momento`;
+const thumb = (await conn.getFile(thumbnail))?.data;
+const yartex = { contextInfo: { externalAdReply: { title: `${title || 'Desconocido'}`, body: wm, mediaType: 1, previewType: 0, mediaUrl: url, sourceUrl: url, thumbnail: thumb, renderLargerThumbnail: true, }, }, };
+await conn.reply(m.chat, infoMessage, m, yartex);
+if (command === 'play') {
+try {
+const api = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
+const result = api.data.url;
+if (!result) throw new Error('El enlace de audio no se generó correctamente.');
+await conn.sendMessage(m.chat, { audio: { url: result }, fileName: `${api.data.filename}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m });
+} catch (e) {
+console.error('Error al enviar el audio:', e.message);
+return conn.reply(m.chat, 'No se pudo enviar el audio, intente nuevamente mas tarde.', m);
+}
+} else if (command === 'play2') {
+try {
+const response = await fetch(`https://api.neoxr.eu/api/youtube?url=${url}&type=video&quality=480p&apikey=GataDios`);
+const json = await response.json();
+if (!json.data || !json.data.url) throw new Error('El enlace de video no se generó correctamente.');
+await conn.sendMessage(m.chat, { video: { url: json.data.url }, fileName: json.data.filename, mimetype: 'video/mp4', caption: wm, thumbnail: json.thumbnail }, { quoted: m });
+} catch (e) {
+console.error('Error al enviar el video:', e.message);
+return conn.reply(m.chat, 'No se pudo enviar el video, intente nuevamente mas tarde.', m);
+}
+} else {
+return conn.reply(m.chat, 'No disponible', m);
+}
+} catch (error) {
+return m.reply(`❌ Ocurrió un error: ${error.message}`);
+}};
+
+handler.help = ['play', 'play2'];
+handler.tags = ['descargas'];
+handler.command = /^play2?$/i;
+
+export default handler;
+
+/*import fetch from 'node-fetch'
 import yts from 'yt-search'
 import ytdl from 'ytdl-core'
 import axios from 'axios'
@@ -213,4 +292,4 @@ let url = []
 for (let i = 0; i < result.length; i++) { url.push(result[i].url) }
 let random = url[0]
 let getVideo = await ytMp4(random)
-resolve(getVideo)}).catch(reject)})}
+resolve(getVideo)}).catch(reject)})}*/
