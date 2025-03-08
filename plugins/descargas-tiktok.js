@@ -1,7 +1,7 @@
 const handler = async (m, { conn, text }) => {
 
 if (!text) return conn.reply(m.chat, `✨ Ingrese un enlace de tiktok\nEjemplo: *${usedPrefix + command} https://vm.tiktok.com/ZM6n8r8Dk*`, m);
-m.react(rwait)
+m.react(rwait);
 const isUrl = /https:\/\/(vt\.tiktok\.com|vm\.tiktok\.com)/gi.test(text);
 if (!isUrl) {
 return conn.reply(m.chat, '🚩 El enlace enviado no es un enlace de tiktok.', m);
