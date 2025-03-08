@@ -25,7 +25,7 @@ m.react(error);
 console.error('Error:', e);
 }};
 function createCaption(creator) {
-return `🍧 *Usuario* ${creator || 'No disponible'}\n\n${wm}`;
+return `🍧 *Usuario:* ${creator || 'No disponible'}\n\n${wm}`;
 }
 
 handler.help = ['tiktok'];
