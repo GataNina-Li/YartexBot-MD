@@ -18,8 +18,10 @@ const { title, author, like, comment, repro, share, download } = json.data;
 const videoUrl = videoData.hd;
 const caption = createCaption(title, author?.nickname, like, comment, repro, share, download);
 await conn.sendMessage(m.chat, { video: { url: videoUrl }, caption }, { quoted: m });
+m.react(done);
 } catch (e) {
 conn.reply(m.chat, `❗ *Error:* ${e.message}`, m);
+m.react(error);
 console.error('Error:', e);
 }};
 function createCaption(creator) {
