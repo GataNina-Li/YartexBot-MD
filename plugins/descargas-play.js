@@ -54,7 +54,7 @@ return conn.reply(m.chat, 'No se pudo enviar el audio, intente nuevamente mas ta
 }
 } else if (command === 'play2') {
 try {
-const response = await fetch(`https://api.neoxr.eu/api/youtube?url=${url}&type=video&quality=720p&apikey=GataDios`);
+const response = await fetch(`https://api.neoxr.eu/api/youtube?url=${url}&type=video&quality=480p&apikey=GataDios`);
 const json = await response.json();
 if (!json.data || !json.data.url) throw new Error('El enlace de video no se generó correctamente.');
 await conn.sendMessage(m.chat, { video: { url: json.data.url }, fileName: json.data.filename, mimetype: 'video/mp4', caption: wm, thumbnail: json.thumbnail }, { quoted: m });
