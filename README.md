@@ -126,19 +126,18 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ***
 
-### 🎇 Hosting Py
-<a href="https://dahs.hostingpy.shop/"><img src="https://files.catbox.moe/lr92z2.jpg" height="130px"></a>
+### 🎇 EDRACLOUD HOST
+<a href="https://test.crxsmods.site"><img src="https://qu.ax/pXdEg.jpg" height="130px"></a>
 
-- **Dashboard:** [`Aquí`](https://dahs.hostingpy.shop/)
-- **Panel:** [`Aquí`](https://panel.hostingpy.shop/)
-- **Registrarse:** [`Aquí`](https://dahs.hostingpy.shop/register?ref=GataDios)
+- **Página:** [`Aquí`](https://test.crxsmods.site)
+- **Apk:** [`Aquí`](https://www.mediafire.com/file/6fqf72hfh06e4k4/EdraCloud)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
 - **Comunidad:** [`Aquí`](https://chat.whatsapp.com/HT9YFbWTuqO0DQrq6Xxhvx)
-- **Contacto:** [`AdrianOficial`](https://wa.me/595976126756)
+- **Contacto:** [`Adrian`](https://wa.me/595976126756)
 
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://i.imgur.com/lhqwdHT.png"></details>
+- [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://i.imgur.com/jD7AT0x.png"></details>
+
 ***
-
 ### 🍄 INSTALACIÓN POR CODE SPACE
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 
