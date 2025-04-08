@@ -1,7 +1,7 @@
 # Código desarrollado por @gata_dios 
   # * Al bifurcar este repositorio, dejen los créditos a todos los creadores de cada código por favor. ♥
 #!/data/data/com.termux/files/usr/bin/bash 
-BOT_DIR="YartexBot-MD"  
+BOT_DIR="꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂"  
 BOT_REPO="https://github.com/GataNina-Li/$BOT_DIR"
 DB_FILE="database.json"
 
