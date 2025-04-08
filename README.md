@@ -1,3 +1,4 @@
+꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂
 <div align="center">
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Lato&weight=19000&size=14&pause=1000&width=435&lines=%E2%9C%A8+%C2%A1El+equipo+de+YartexBot+te+desea+una+feliz+navidad!" alt="Typing SVG"/></a>
 </div>
@@ -105,7 +106,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 - **Estado de servicios:** [`Aquí`](https://estado.skyultraplus.com)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0)
 - **Comunidad:** [`Aquí`](https://chat.whatsapp.com/E6iWpvGuJ8zJNPbN3zOr0D)
-- **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
+- **Contacto(s):** [`victor bot Dios`](https://59894243071) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
 - **Discord:** [`SkyUltraPlus`](https://discord.gg/6saUm5cw)
   
 ***
@@ -122,7 +123,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 - **Dashboard:** [`Dash`](https://dash.boxmineworld.com)
 - **Panel:** [`Aquí`](https://panel.boxmineworld.com)
 - **Dudas sobre el Host:** [`Discord`](https://discord.gg/84qsr4v) _(Preguntar por Vicemi)_
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va71C1q2UPBOICnxu83r)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VbAEza0LSmbjWpKh1L2f)
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://telegra.ph/file/1ff9729ad4e18c319bd50.jpg"></details>
 
@@ -133,9 +134,9 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 - **Página:** [`Aquí`](https://test.crxsmods.site)
 - **Apk:** [`Aquí`](https://www.mediafire.com/file/6fqf72hfh06e4k4/EdraCloud)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VbAEza0LSmbjWpKh1L2f)
 - **Comunidad:** [`Aquí`](https://chat.whatsapp.com/HT9YFbWTuqO0DQrq6Xxhvx)
-- **Contacto:** [`Adrian`](https://wa.me/595976126756)
+- **Contacto:** [`Adrian`](https://wa.me/59894243071)
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://i.imgur.com/jD7AT0x.png"></details>
 
@@ -183,3 +184,5 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ### EDITORA Y PROPIETARIA
 <a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png" width="100" height="100" alt="GataNina-Li"/></a>
+
+YartexBot-MD ꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂ 

@@ -1,16 +1,16 @@
 var handler = async (m, { conn, usedPrefix, command}) => {
 
-let reglas = `🐱 *Respeta las reglas de YartexBot*\n
+let reglas = `🐱 *Respeta las reglas de ꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂*\n
 ⬡ No llamar
 ⬡ No hacer spam
 ⬡ Contacta al creador si es necesario
 ⬡ Pedir permiso para añadir el bot a un grupo
 
-🚩 *Si no cumples con las reglas del bot, seras bloqueado.*
+🚩 *Si no cumples con las reglas del bot, seras bloqueado. por el dueño del bot ꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂*
 
-*Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de YartexBot.*
+*Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de ꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂.*
 
-https://github.com/GataNina-Li/YartexBot-MD`.trim()
+https://github.com/VICTOREMANUEL2022/YartexBot-MD-V-CTOR-BOT-MD-/tree/patch-1`.trim()
 await conn.reply(m.chat, reglas, m, fake, )
 
 }
