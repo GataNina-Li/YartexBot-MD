@@ -15,27 +15,27 @@ global.__filename = function filename(pathURL = import.meta.url, rmPrefix = plat
 const __dirname = global.__dirname(import.meta.url)
 
 global.owner = [
-['5493873687620', '✨ YartexBot-MD', true],
-['593968263524'],
-['5214434703586'],
-['595976126756'],
-['593968585383'],
-['50492280729'],
-['573012482597']]
+['59894243071', '✨ ꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂ ', true],
+[''],
+[''],
+[''],
+[''],
+[''],
+['']]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
 //Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
 global.botNumberCode = '' //Ejemplo: +59309090909
 global.confirmCode = ''
 
-global.suittag = ['5214531287294']
+global.suittag = ['59894243071']
 global.mods = []
 global.prems = []
 
-global.isdev = [['542215034412'], ['593968263524'], ['573012482597'], ['5492215034412'], ['5214434703586'], ['595976126756'], ['573012482597']]
+global.isdev = [['59894243071'], ['59894243071'], ['], [''], [''], [''], ['']]
  
-global.packname = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨'
-global.author = 'ɢᴀᴛᴀ ᴅɪᴏs 🫶'
+global.packname = '꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂ ✨'
+global.author = '꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂ 🫶'
 global.wm = 'ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ | ɢᴀᴛᴀ ᴅɪᴏs 🫶'
 global.wm2 = '                   ʏᴀʀᴛᴇx ʙᴏᴛ ᴍᴅ ✨\n> *♡º°‘¨ һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs ¨‘°º♡*'
 global.des = 'һᥱᥴһ᥆ ⍴᥆r 𝖿ᥲᥒs ⍴ᥲrᥲ 𝖿ᥲᥒs.'
@@ -45,8 +45,8 @@ global.library = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
 global.lenguaje = 'Español'
 global.menudi = ['⛶','❏','⫹⫺']
-global.dev = 'GataNina-Li'
-global.devnum = '+593 96 826 3524'
+global.dev = '꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂-Li'
+global.devnum = '+59894243071'
  
 global.dis = ':⁖֟⊱┈֟፝❥ '
 global.cen1 = '✧──⭒─⊹ '
@@ -84,7 +84,7 @@ let botVid11 = 'https://telegra.ph/file/a3485e1c3b115ba186b45.mp4' //bl
 let botVid12 = 'https://telegra.ph/file/1c5f62544f7278899a9be.mp4' //bl
 global.yartexVid = [botVid1, botVid2, botVid3, botVid4, botVid5, botVid6, botVid7, botVid8, botVid9, botVid10, botVid11, botVid12]
 
-global.yartexNavidad = ['https://qu.ax/UsZaq.png', 'https://qu.ax/rGvHH.png', 'https://qu.ax/vyHLe.png', 'https://qu.ax/pSeNy.jpg', 'https://qu.ax/xSOyA.jpg', 'https://qu.ax/hjNwc.jpg', 'https://qu.ax/yKVhD.jpg']
+global.]
   
 global.yt = 'https://youtube.com/@gatadios'
 global.ig = 'https://instagram.com/gata_dios'
