@@ -1,9 +1,9 @@
 {
-"name": "YartexBot-MD",
+"name": "꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂",
 "description": "Bot de WhatsApp con tematica Yaoi/Bl hecho por fans para fans.",
-"repository": "https://github.com/GataNina-Li/YartexBot-MD",
+"repository": "https://https://github.com/VICTOREMANUEL2022/YartexBot-MD-V-CTOR-BOT-MD-/tree/patch-1",
 "logo": "https://telegra.ph/file/3f00e26dcd5dcd09a68a1.jpg",
-"keywords": ["bot", "whatsapp", "whatsapp-bot", "boyslove", "yartex-bot-md", "yaoi"],
+"keywords": ["bot", "whatsapp", "whatsapp-bot", "boyslove", "꧁𓊈𒆜VÍCTOR BOT-MD 𒆜𓊉꧂-md", "yaoi"],
 "buildpacks": [
 { "url": "heroku/nodejs" },
 { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" },
