@@ -110,41 +110,6 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
   
 ***
 
-### 📦⛏️ BOXMINE HOST 
-[![YouTube](https://img.shields.io/badge/BoxMine_Host-World-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@boxminehost)
-
-> Tutorial para activar **YartexBot-MD** en un servidor reconocido y para todos.
-
-<a href="https://boxmineworld.com"><img src="https://i.imgur.com/allAyd4.png" height="125px"></a>
-### BoxMine World
-- **Pagina Oficial:** [`Boxmineworld`](https://boxmineworld.com)
-- **Tutorial - Crear cuenta en la Dashboard:** [`Dashboard`](https://www.youtube.com/watch?v=ZAwBLuNmIlI)
-- **Dashboard:** [`Dash`](https://dash.boxmineworld.com)
-- **Panel:** [`Aquí`](https://panel.boxmineworld.com)
-- **Dudas sobre el Host:** [`Discord`](https://discord.gg/84qsr4v) _(Preguntar por Vicemi)_
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va71C1q2UPBOICnxu83r)
-
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://telegra.ph/file/1ff9729ad4e18c319bd50.jpg"></details>
-
-***
-
-### 🎇 EDRACLOUD HOST
-<a href="https://test.crxsmods.site"><img src="https://qu.ax/pXdEg.jpg" height="130px"></a>
-
-- **Página:** [`Aquí`](https://test.crxsmods.site)
-- **Apk:** [`Aquí`](https://www.mediafire.com/file/6fqf72hfh06e4k4/EdraCloud)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
-- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/HT9YFbWTuqO0DQrq6Xxhvx)
-- **Contacto:** [`Adrian`](https://wa.me/595976126756)
-
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - YartexBot-MD**</summary><img src="https://i.imgur.com/jD7AT0x.png"></details>
-
-***
-### 🍄 INSTALACIÓN POR CODE SPACE
-[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
-
-***
-
 <a href="https://github.com/GataNina-Li" target="_blank"> <img src="https://i.imgur.com/7rUKH0w.png" alt="YartexBot-MD" width="150"/> </a> 
 ### 🌻 ACTIVAR EN REPLIT
 [![Run on Repl.it](https://repl.it/badge/github/AzamiJs/CuriosityBot-MD)](https://repl.it/github/GataNina-Li/YartexBot-MD) 
